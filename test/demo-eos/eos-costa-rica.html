@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+        <!-- Scroll -->
+        <script src="js/smooth-scroll.min.js"></script>
+        <script>
+            smoothScroll.init({
+                selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+                selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
+                speed: 2000, // Integer. How fast to complete the scroll in milliseconds
+                easing: 'easeInOutCubic', // Easing pattern to use
+                offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+                callback: function ( anchor, toggle ) {} // Function to run after scrolling
+            });
+        </script>
+        <script src="js/butterfly-2.js"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	handleComplete();
+}
+function handleComplete() {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	exportRoot = new lib.butterfly2();
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	function makeResponsive(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==2) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';				
+			canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;		
+		}
+	}
+	makeResponsive(false,'both',false,1);	
+	fnStartAnimation();
+}
+</script>
+        
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all">
+        <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+        
+
+    </head>
+    <body data-smooth-scroll-offset="77" onload="init();">
+        <div class="nav-container">
+            <div class="via-1526883962065" via="via-1526883962065" vio="Nav">
+                <div class="bar bar--sm visible-xs">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-3 col-md-2">
+                                <a href="index.html"> <img class="logo logo-dark" alt="logo" src="img/logo-dark.png"> <img class="logo logo-light" alt="logo" src="img/eosWhite-graphic8.png"> </a>
+                            </div>
+                            <div class="col-9 col-md-10 text-right">
+                                <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm"> <i class="icon icon--sm stack-interface stack-menu"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav id="menu1" class="bar bar-1 hidden-xs bg--dark" data-scroll-class="100px:pos-fixed">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-1 col-md-2 hidden-xs">
+                                <div class="bar__module">
+                                    <a href="#home"> <img class="logo logo-dark" alt="logo" src="img/logo-dark.png"> <img class="logo logo-light" alt="logo" src="img/eosWhite-graphic8.png"> </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
+                                <div class="bar__module">
+                                    <ul class="menu-horizontal text-left">
+
+                                        <li class="dropdown"> <span class="dropdown__trigger">
+                                        Who we are
+                                    </span>
+                                            <div class="dropdown__container">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="dropdown__content col-lg-2">
+                                                            <ul class="menu-vertical">
+                                                                <li> <a data-scroll href="#mission">Mission</a> </li>
+                                                                <li> <a data-scroll href="#values">Our Values</a> </li>
+                                                                 <li> <a data-scroll href="#pledges">Our Pledge</a> </li>
+                                                                 <li> <a data-scroll href="#team">Our team</a> </li>
+                                                                <li> <a data-scroll href="#criteria">More criteria</a> </li>
+                                                                 
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                        
+
+                                        
+                                        
+                                         <li class="dropdown"> <span class="dropdown__trigger">
+                                        Tech Specs
+                                    </span>
+                                            <div class="dropdown__container">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="dropdown__content col-lg-2">
+                                                            <ul class="menu-vertical">
+
+
+                                                                <li> <a data-scroll href="#networkr">Network Redundancy</a> </li>
+                                                                <li> <a data-scroll href="#roadmap">Technical Roadmap</a> </li>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown"> <span class="dropdown__trigger">
+                                        Location
+                                    </span>
+                                            <div class="dropdown__container">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="dropdown__content col-lg-2">
+                                                            <ul class="menu-vertical">
+                                                                <li> <a data-scroll href="#infrastructure">Infrastructure</a> </li>
+
+                                                                <li> <a data-scroll href="#political">Political Environment</a> </li>
+                                                                <li> <a data-scroll href="#reinvestment">Reinvestment</adata-scroll></a> </li>
+                                                                <li> <a data-scroll href="#dividends">Dividends</adata-scroll></a> </li>
+
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                    <li> <a data-scroll href="#subscribe">
+                                        Subscribe
+                                    </a> </li>
+                                        
+                                
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="main-container">
+            <a id="home" class="in-page-link"></a>
+            <section class="cover imagebg text-center height-90 section--ken-burns" data-overlay="7">
+                <div class="background-image-holder background--top"> <img alt="background" src="img/landing-EOS.jpg"> </div>
+                <div class="container pos-vertical-center">
+                    <div class="row">
+                        <div class="col-md-8">
+                            
+                            
+                            <div id="animation_container" style="background-color:rgba(0, 0, 0, 0.00); margin: auto; width:600px; height:200px">
+		<canvas id="canvas" width="900" height="400" style=" background-color:rgba(0, 0, 0, 0.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:600px; height:200px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
+                            <h3><b>
+					<br></b>
+                                <p><b>EOS Costa Rica:&nbsp;</b>Announcing Our Block Producer Candidacy </p>
+                            </h3>
+                            <a class="btn type--uppercase btn--primary" href="#mission"> <span class="btn__text">
+						Find out&nbsp; more</span> </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <a id="intro" class="in-page-link"></a>
+            <a id="mision" class="in-page-link"></a>
+            <section class="imagebg feature-large-7 switchable switchable--switch parallax" data-overlay="3" id="mission">
+                <div class="background-image-holder"> <img alt="background" src="img/eosWhite-graphic6.jpg"> </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 col-lg-5">
+                            <div class="boxed boxed--lg border--round bg--white row justify-content-center" style="background: rgba(255,255,255, 0.8);">
+                                <div class="col-lg-10 col-md-12">
+                                    <h3>Mission</h3>
+                                    <p class="lead"> We challenge ourselves to provide the EOS platform with a strong geographical and political diversity by running the most robust EOS Block Producer possible from Costa Rica. We pledge to leverage our talent, experience, and sustainable internet resources to meet such an important challenge. </p>
+                                    <hr class="short"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                                                                         
+            <a id="values" class="in-page-link"></a>
+            <style>
+                .row-flex {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                .content {
+                    height: 100%;
+
+                }
+            </style>
+            <section class="space--xs" id="values">
+                <div class="container">
+                    <h2>Our Values</h2>
+                    <div class="row row-flex">
+                        <div class="col-md-4 boxed">
+                            <div class="content boxed boxed--border">
+                                <i class="icon icon-Notepad" style="color:#60bbd3;"></i>
+                                <h2>Education</h2>
+                                <hr>
+                                <p> Our philosophy has always been that knowledge and learning is key to what we do. Continuous training and building our human talent is the reason why we are the most competitive alternative for data center services in Costa Rica. </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 boxed">
+                            <div class="content boxed boxed--border">
+                                <i class="icon icon-Bow-5"></i>
+                                <h2>Loyalty</h2>
+                                <hr>
+                                <p>We are truly a global company serving the world from Costa Rica. We believe that our unique local relationships and reputation exponentially increase the viability of the EOS network. We recognize everyone's unique talents and seek to build loyalty by empowering our workforce</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 boxed">
+                            <div class="content boxed boxed--border">
+                                <i class="icon icon-Archery"></i>
+                                <h2>Resilience</h2>
+                                <hr>
+                                <p> We are constantly in motion and have a proven history of evolving as technology improves. We value being nimble and efficient with our resources which allows us to quickly adopt and drive new innovations. </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 boxed">
+                            <div class="content boxed boxed--border">
+                                <i class="icon icon-Bird"></i>
+                                <h2>Liberty</h2>
+                                <hr>
+                                <p>We firmly believe that our history in Costa Rica, the longest lasting free democracy in Central America, shapes our philosophy of life, liberty and property.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 boxed">
+                            <div class="content boxed boxed--border">
+                                <i class="icon icon-Angel"></i>
+                                <h2>Tolerance</h2>
+                                <hr>
+                                <p> We work towards the flourishing of our community allowing all its members the right to Education, Entrepreneurship and Opportunity. </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 boxed">
+                            <div class="content boxed boxed--border">
+                                <i class="icon icon-Life-Safer"></i>
+                                <h2>Prudence</h2>
+                                <hr>
+                                <p> We are committed to safeguarding the future of our community and put that above short term interests. </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 boxed">
+                            <div class="content boxed boxed--border">
+                                <i class="icon icon-Butterfly"></i>
+                                <h2>Accountability </h2>
+                                <hr>
+                                <p> We firmly believe in taking full responsibility for the consequences of our actions and encourage accountability from our stakeholders. </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 boxed">
+                            <div class="content boxed boxed--border">
+                                <i class="icon icon-Left--Right3"></i>
+                                <h2>Equality</h2>
+                                <hr>
+                                <p>We will work for and defend a governance model where benefits are distributed according to merit regardless of race, gender, religion or political ideology and for the overall benefit of our community. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <a id="pledge" class="in-page-link"></a>
+            <a id="network" class="in-page-link"></a>
+            <a id="political" class="in-page-link"></a>
+            <section class="text-center imagebg section--ken-burns" data-overlay="7" id="pledges">
+                <div class="background-image-holder"> <img alt="background" src="img/hero-costarica.jpg"> </div>
+                <div class="container">
+                    <div class="row boxed" style="padding: 80px 0;">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="cta">
+                                <h1 class="h2">Our Pledge to the EOS Network</h1><p class="lead"><br>EOS Costa Rica pledges to:</p>
+                                <p><ul style="list-style-type: circle; text-align: left;"> <li>Provide the highest-standard network infrastructure possible to the&nbsp; ecosystem.</li><li> Be self-funded and secure the investment needed to ensure a competitive EOS Block Producer.</li> <li>Allocate block rewards to EOS educational and development initiatives. <li>Sponsor projects and dApps for community-led projects and developers.</li><li>Be transparent and open on the allocation of block rewards.<li>Actively participate in the governance of the blockchain with an open and positive attitude.</li> <li>Respect and defend the constitution, fair elections, community vigilance and arbitration mechanisms</li> </ul> <span style="color:#2ccfe7">Our Stable Political Environment, our Geographical Location, and our Access to Clean Energy are our unique contributions to the EOS network.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           <!-- Network Redundancy -->
+            <a id="netwprk" class="in-page-link"></a>
+            <section  id="networkr">
+                <div class="container">
+                    <h1 class="h2">Network Redundancy</h1>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 boxed">
+                            <p > Fiber optic connections reach Costa Rica on both Pacific and Caribbean coasts via three submarine cables that provide the majority of bandwidth to Costa Rica. Access to all three backbones, ARCOS-1, MAYA-1, and Pan American Crossing (PAC) provides real time failover and redundancy at our facility. Additionally all 6 Central American nations are interconnected via a terrestrial fiber optic network (REDCA). Direct connections to all upstream carriers (Columbus Networks, Sprint, Level 3 Communications and XO Communications) insure that no single point of failure is present in the network. The network employs BGP to assure all traffic reaches its destination if one connection fails. Communication to international connections is made fully redundant and supported in two locations, our main building in San Jose and the Teleport in Calle Blancos, approximately 7 kms away. The EOS network will benefit from this infrastructure, which includes private peering network connections to major Internet carriers. These private peering arrangements allow the network to quickly and efficiently exchange packets of data with every major backbone carrier in a one-to-one environment. </p>
+                            <h5>An additional point</h5>
+                            <p> The CRIX network connects most of Costa Rica’s Data Centers with fiber optic cable. We will leverage this infrastructure to further decentralize our EOS cluster platform among several different data center locations across Costa Rica. </p>
+
+                        </div>
+                        <div class="col-md-6 boxed">
+                            <img alt="Image" src="img/eosWhite-graphic7.png">
+                        </div>
+                        <blockquote> “ All 6 Central American nations are interconnected via a terrestrial fiber optic network” </blockquote>
+                    </div>
+
+                </div>
+            </section>
+            <!-- End Network Redundancy -->
+
+            <a id="political" class="in-page-link"></a>
+            <section class="imagebg space--xs parallax" data-overlay="5">
+                <div class="background-image-holder"> <img alt="background" src="img/hero-1.jpg"> </div>
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-md-12">
+                            <h2>Political Environment</h2>
+                            <p> Costa Rica has excellent infrastructure, a stable political framework, a flexible corporate structure coupled with a clear legal jurisdiction that we believe are perfect for the censorship-resistant network features of the EOS network.</p>
+                            <p> Costa Rica stands for peace and liberty, characteristics that are internationally recognized and the cornerstones of the country. </p>
+                            </br>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="boxed boxed--lg boxed--border bg--secondary"> <img alt="image" src="img/eosWhite-graphic2.png" class="border--round">
+                                <h5><br><em>Source: <a href="https://www.cinde.org/en">CINDE</a> based on data from IMF, INEC, MEP</em><br></h5>
+                            </div>
+                            <div class="boxed boxed--lg boxed--border bg--secondary"> <img alt="image" src="img/eosWhite-graphic3.png" class="border--round">
+                                <h5><em><br>Source: World Bank, The Worldwide Governance Indicators, 2016.</em><br><em>Score: between 1-100</em></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <a id="infrastructure" class="in-page-link"></a>
+            <section>
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-md-11">
+                            <h2>Infrastructure Overview</h2>
+                            <p> We are doing our part by reducing our carbon footprint to an absolute minimum. Costa Rica leads the world in achieving carbon neutrality, expected by 2030. Costa Rica is already producing more than 90% of its energy from renewable sources. </p>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="boxed boxed--lg boxed--border bg--secondary"> <img alt="image" src="img/eosWhite-graphic4.png" class="border--round">
+                                <p><em>Source: <a href="https://www.cinde.org/en">CINDE</a></em></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg--dark space--sm" id="reinvestment">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-md-4">
+                            <h2>Community Reinvestment</h2>
+                            <p> Costa Rica is committed to investing where it matters most with a public education policy that is free and mandatory since 1870. Costa Rica stands out for its high educational standards and outstanding productivity levels and we intend to replicate those values for the local EOS community. We have reached out to the communities in Panama and Guatemala in order to combine efforts and build the most significant EOS cluster in Central America. </p>
+                            <p> We pledge to reinvest our block rewards following the same formula that has made our country a ideal business environment -- invest in a educational system for EOS developers, fund EOS startups that focus on innovation and partner with local Universities to increase research and development in the EOS ecosystem. </p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="boxed boxed--lg boxed--border bg--secondary"> <img alt="image" src="img/eosWhite-graphic5.png" class="border--round">
+                                <h5><em><br></em>
+                                    <p><em>Source: World Bank, The Worldwide Governance Indicators, 2016.&nbsp;</em><em>Score: between 1-100</em></p>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="text-center bg--secondary">
+                <div class="container">
+                      <h2>Check Mark Criteria (from EOS Go)</h2>
+                    <style>
+                        .col-md-4.no-bg div.boxed {
+                            background: none;
+                        }
+                    </style>
+                    <div class="row row-flex">
+                        <div class="col-md-4 no-bg">
+                            <div class="content boxed text-block">
+                                <i class="icon color--dark icon-Globe icon--lg"></i>
+                                <h4>Online Presence</h4>
+                                <p><strong>Website URL:</strong> www.eoscostarica.com<br><strong>Steemit:</strong> @eos-costarica<br><strong>Twitter:</strong> @EOSCostaRica<br><strong>Telegram:</strong> https://t.me/eoscostarica<br><br><br><br><br></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 no-bg">
+                            <div class="content boxed text-block">
+                                <i class="icon color--dark icon-Full-Screen2 icon--lg"></i>
+                                <h4>Expansion Plan<br></h4>
+                                <p>We will install redundant redundant infrastructure in a secondary location, Guatuso Data Center, El Guarco de Cartago, Costa Rica, 20km from the primary datacenter. We will subsequently begin to install a third clustered node within Costa Rica in order to provide not just redundancy but extra geographical diversification for the EOS ecosystem.<br><br>All three Data Centers will be interconnected through a Internet Exchange Point (IEP) CRIX<br><br></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 no-bg">
+                            <div class="content boxed text-block">
+                                <i class="icon color--dark icon-Astronaut icon--lg"></i>
+                                <h4>ID information</h4>
+                                <p><strong>Official block producer candidate name:</strong> EOS Costa Rica<br><strong>Legal Name:</strong> Sistemas Edenia Internacional S.A.<br><strong>Location of company headquarters:</strong> #501 Trifami, Avenida 1, Calle 2, San José, Costa Rica, 1000<br><br></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 no-bg">
+                            <div class="content boxed text-block">
+                                <i class="icon icon--lg icon-Server color--dark"></i>
+                                <h4>Type of servers</h4>
+                                <p>EOS Costa Rica will deploy bare metal nodes and storage devices to create a secure and redundant environment for the EOS network. This allows for full control over the infrastructure, with no dependency on third party hardware providers. Our team has demonstrated experience in systems engineering skills required for this project.. We will actively adapt to network conditions and add redundancy as needed<br><br></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 no-bg">
+                            <div class="content boxed text-block">
+                                <i class="icon color--dark icon-Compass-4 icon--lg"></i>
+                                <h4>Current location of servers<br></h4>
+                                <p>EOS Costa Rica has installed an EOS Block Producer node in San José, Costa Rica.<br><strong>Exact Address:</strong> San José, Avenida 5, Calle 1<br><strong>Coordinates (Lat./Long)</strong> lat=9.936377, lon=-84.078155<br><strong>Date Built:</strong> 1988<br><br></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 no-bg">
+                            <div class="content boxed text-block">
+                                <i class="icon color--dark icon-Butterfly icon--lg"></i>
+                                <h4>Testnet<br></h4>
+                                <p>Currently running Block Producer node in EOS Jungle registered as account “morpho” .</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Team -->
+            <style>
+                .team-img {
+                    margin: 0 27px 0 0;
+                    float: left;
+                }
+                h3.title  {
+                    font-weight: 800;
+                    margin: 0;
+                }
+
+            </style>
+            <section class="switchable feature-large bg--dark" id="team">
+                <div class="container">
+
+                    <h2>Our Team</h2>
+                    <div class="row boxed">
+                        <div class="col-md-12 content">
+                            <img alt="Image" class="border--round team-img" src="img/rodrigo.png">
+                            <h3 class="title">Rodrigo Fernandez</h3>
+                            <p class="job-title">Founder and Technical Lead</p>
+                            <ul class="social-list list-inline list--hover">
+                                <li class="list-inline-item"><a href="mailto:bp@eosio.cr"><i class="socicon socicon-mail icon icon--xs"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/rodrigo-fernandez-57b8b72a/"><i class="socicon socicon-linkedin icon icon--xs"></i></a></li>
+                            </ul>
+                            <p>Rodrigo graduated from Tulane University in 1973 with a BS in Mechanical Engineering. He started Computer Programing using Fortran IV in IBM framework during his years at Tulane and fell in love with computers. In 1987 he founded a software development company Sistemas Edenia Internacional. In early 2013, he discovered Bitcoin and was heavily bitten by the "Crypto worm". The company is now running 2 BTC full nodes, DASH nodes, Stellar and Gridcoin nodes. Edenia also ran a Steem witness for over 3 months starting in 2016 and has had a Bitshares account since 2015. After using BitShares and Steem, Rodrigo gained lots of respect for Dan Larimer as a outstanding software engineer and thus his attraction to Mr Larimer’s latest project EOS.</p>
+                        </div>
+                    </div>
+                    <div class="row boxed">
+                        <div class="col-md-12 content">
+                            <img alt="Image" class="border--round team-img" src="img/Daniel-Rojas.png">
+                            <h3 class="title">Daniel Rojas</h3>
+                            <p class="job-title">Community Relations</p>
+                            <ul class="social-list list-inline list--hover">
+                                <li class="list-inline-item"><a href="mailto:bp@eosio.cr"><i class="socicon socicon-mail icon icon--xs"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/daniel-rojas-46191426/"><i class="socicon socicon-linkedin icon icon--xs"></i></a></li>
+                            </ul>
+                            <p>Daniel graduated from Universidad Latina in 2011 with a BS in Electronic Engineering. He worked for National Instruments Costa Rica from 2011 to 2017 helping engineers and scientists tackle challenges with LabVIEW, data acquisition and drive the technical close of Radio Frequency sales opportunities. He heard about Bitcoin in early 2016 and began learning about it every single day. He downloaded several wallets and began playing with them and exploring whole ecosystem. In early 2017 he started the Comunidad Bitcoin Meetup, where he delivered monthly talks about Bitcoin, mining, wallets and security.In late 2017, he quit his job at NI to go all-in on crypto, with his main focus to boost cryptocurrency adoption through education. </p>
+                        </div>
+                    </div>
+                    <div class="row boxed">
+                        <div class="col-md-12 content">
+                            <img alt="Image" class="border--round team-img" src="img/xvi.png">
+                            <h3 class="title">Xavier Fernandez</h3>
+                            <p class="job-title">Senior Developer</p>
+                            <ul class="social-list list-inline list--hover">
+                                <li class="list-inline-item"><a href="mailto:bp@eosio.cr"><i class="socicon socicon-mail icon icon--xs"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/xaviercr/"><i class="socicon socicon-linkedin icon icon--xs"></i></a></li>
+                            </ul>
+                            <p> Xavier graduated from the University of Costa Rica with a degree in Business Administration. Xavier has spent over 5 years working as a full stack developer and currently collaborates with all business stakeholders, as well as manages and optimizes hosting platforms to ensure expected availability and performance levels. He leads the developers, manages staging and production environments including data transfer, backup / recovery plans and deploys launch ready web applications. He also contributes to strategic planning, including business plan & tactics development. More recently, Xavier is vital to the implementation of nodes to supporting open and decentralized blockchain networks like EOS.</p>
+                        </div>
+                    </div>
+                    <div class="row boxed">
+                        <div class="col-md-12 content">
+                            <img alt="Image" class="border--round team-img" src="img/RONALD.png">
+                            <h3 class="title">Ronald Gallo </h3>
+                            <p class="job-title">Systems Administrator</p>
+                            <ul class="social-list list-inline list--hover">
+                                <li class="list-inline-item"><a href="mailto:bp@eosio.cr"><i class="socicon socicon-mail icon icon--xs"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/rodrigo-fernandez-57b8b72a/"><i class="socicon socicon-linkedin icon icon--xs"></i></a></li>
+                            </ul>
+                            <p>Ronald holds a degree in Computer Science form the university of San Jose, and multiple certifications including Cisco. He is able to resolve issues when a problem is escalated by the NOC Techs. He solves problems that are outside the scope of the NOC, becoming the second line of defense when a problem is spotted. When new infrastructure or design is planned by the team it is Ronald that oversees the plan. Other work includes routine and non-routine maintenance as well as emergency repairs to keep the infrastructure running smoothly. As our main systems administrator, Ronald also provides support for large-scale customer implementations.</p>
+                        </div>
+                    </div>
+                    <div class="row boxed">
+                        <div class="col-md-12 content">
+                            <img alt="Image" class="border--round team-img" src="img/gabo.jpg">
+                            <h3 class="title">Gabriel “Gabo” Esquivel</h3>
+                            <p class="job-title">Open Source Software Leade</p>
+                            <ul class="social-list list-inline list--hover">
+                                <li class="list-inline-item"><a href="mailto:bp@eosio.cr"><i class="socicon socicon-mail icon icon--xs"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/gaboesquivel/"><i class="socicon socicon-linkedin icon icon--xs"></i></a></li>
+                            </ul>
+                            <p>Gabo is a proponent of open source technology stacks and decentralized applications (DApps). He believes that blockchain will have a cornerstone role in our society to build better, more efficient, fair, accountable and transparent organizations, communities and economies. He leads software engineering teams and also loves coding, particularly in JavaScript (Node.js, React) and more recently smart contracts for Ethereum and EOS. He co-founded BlockchainCR, a community hub for knowledge sharing, promoting and studying blockchain technologies.He is an EOS enthusiast and open source contributor to EOS Costa Rica.</p>
+                        </div>
+                    </div>
+                    <div class="row boxed">
+                        <div class="col-md-12 content">
+                            <img alt="Image" class="border--round team-img" src="img/julio.png">
+                            <h3 class="title">Julio Madrigal</h3>
+                            <p class="job-title">Service Technician</p>
+                            <ul class="social-list list-inline list--hover">
+                                <li class="list-inline-item"><a href="mailto:bp@eosio.cr"><i class="socicon socicon-mail icon icon--xs"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/rodrigo-fernandez-57b8b72a/"><i class="socicon socicon-linkedin icon icon--xs"></i></a></li>
+                            </ul>
+                            <p> Julio has been with CR Servers for 16 years now and is responsible for managed services, and hardware support. He also works on-site for customer solutions such as administration and basic architecture.</p>
+                        </div>
+                    </div>
+                    <div class="row boxed">
+                        <div class="col-md-12 content">
+                            <img alt="Image" class="border--round team-img" src="img/edgar.png">
+                            <h3 class="title">Edgar Fernandez</h3>
+                            <p class="job-title">Financial Resources</p>
+                            <ul class="social-list list-inline list--hover">
+                                <li class="list-inline-item"><a href="mailto:bp@eosio.cr"><i class="socicon socicon-mail icon icon--xs"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/edgarafernandez/"><i class="socicon socicon-linkedin icon icon--xs"></i></a></li>
+                            </ul>
+                            <p> Edgar joined EOS Costa Rica from Bank of America Merrill Lynch where he was a Vice President based in New York. He led coverage of corporate clients in Latin America ex-Brazil and Mexico with a focus on Central America & the Caribbean. Previously, Edgar was a Vice President at Barclays covering institutional investors in Emerging Markets. Edgar holds a B.S. in Commerce from the University of Virginia with a concentration in Finance and Accounting. He is an avid “fintecher” with a special focus on the application of blockchain technology in finance. He has a vested interest in developing the entrepreneurial spirit and driving the use of technology to develop decentralized networks.</p>
+                        </div>
+                    </div>
+                    <div class="row boxed">
+                        <div class="col-md-12 content">
+                            <img alt="Image" class="border--round team-img" src="img/alejandro.jpg">
+                            <h3 class="title">Alejandro Patterson</h3>
+                            <p class="job-title">Developer Engagement</p>
+                            <ul class="social-list list-inline list--hover">
+                                <li class="list-inline-item"><a href="mailto:bp@eosio.cr"><i class="socicon socicon-mail icon icon--xs"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/alexpatterson/"><i class="socicon socicon-linkedin icon icon--xs"></i></a></li>
+                            </ul>
+                            <p> Over the last 10 years, Alex developed his entrepreneurial and business skills through a series of ventures, relationships, failures and successes. He is currently responsible for Lean Product Development helping us understand developer needs more intimately and ultimately join the EOS ecosystem.</p>
+                        </div>
+                    </div>
+                    <div class="row boxed">
+                        <div class="col-md-12 content">
+                            <img alt="Image" class="border--round team-img" src="img/rodolfo.png">
+                            <h3 class="title">Rodolfo Përez</h3>
+                            <p class="job-title">Creative Director </p>
+                            <ul class="social-list list-inline list--hover">
+                                <li class="list-inline-item"><a href="mailto:bp@eosio.cr"><i class="socicon socicon-mail icon icon--xs"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/rodolfo-eduardo-p%C3%A9rez-nava-73442164/"><i class="socicon socicon-linkedin icon icon--xs"></i></a></li>
+                            </ul>
+                            <p> Rodolfo joined EOS Costa Rica as the Creative Director in 2017. He is responsible for the marketing, communication and business development efforts. He directs media relations, branding, advertising and website development. He manages and oversees sponsorships, events, charitable contributions, marketing training and more. He has more than 16 years of experience in the digital marketing industry. Prior to joining the EOS Costa Rica he was an Art Director of one of the biggest digital agencies in Latin America.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Section Team -->
+         
+            <section class="switchable feature-large bg--dark" style="background-color:#60bbd3; padding-top: 60px;">
+                <div class="container">
+                    <div class="row justify-content-around">
+                        <div class="col-md-6"> <img alt="Image" class="border--round box-shadow-wide" src="img/eosWhite-graphic10.jpg" style="padding-top:40px;"> </div>
+                        <div class="col-md-6 col-lg-5">
+                            <div class="switchable__text">
+                                <h2>Listing of Telegram and node names for community testnet participation</h2>
+                                <p class="lead"><a href="https://t.me/eoscostarica" target="_blank">Telegram: https://t.me/eoscostarica</a>a><br>We are in the EOS Jungle Testnet under <a href="http://dev.cryptolions.io/#" style="color:#e72ce0" target="_blank">“junglemorpho”</a>, please see screenshot on the right:</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="switchable feature-large feature-large-13 switchable--switch"  id="roadmap">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-md-6"> <img alt="Image" class="border--round box-shadow-wide" src="img/eosWhite-graphic11.jpg"> </div>
+                        <div class="col-md-6 col-lg-5">
+                            <div class="switchable__text">
+                                <h2> Roadmap on values, community project timeline, finances and transparency.</h2>
+                                <p class="lead"> We reiterate our values available at the beginning of this website that will drive our decision making around financing, transparency and community projects. We are already active in communicating with the community by way of your steemit blog (@eos-costarica) and our twitter handle (@eoscostarica) providing updates and encouraging discourse before funds are allocated and distributed.We also intend to hold block rewards in escrow until the community has demonstrated their support for proposals on our social media outlets. Our goal is to work towards the successful governance of the blockchain and be held accountable by holders, developers and the community in general. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="switchable feature-large feature-large-13"  id="dividends">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-md-6"> <img alt="Image" class="border--round box-shadow-wide" src="img/eosfly.png"> </div>
+                        <div class="col-lg-5 col-md-8">
+                            <div class="switchable__text">
+                                <h2>Position on Dividends</h2>
+                                <p class="lead"> We will reinvest 100% of the block reward back into the EOS network, adding value not just for us as block producers , but for the EOS network in the Central American region. Our goal is to attain this healthy balance between internal investment and external investment in the EOS ecosystem. It is important to cover our operating costs , attract and retain the best talent , and maintain a reserve buffer to face any price volatility.We will disclose the projected and actual percentages of funds allocated to the following expense categories: </p>
+                                <div class="text-block">
+                                    <h5>Inward Facing Activities</h5>
+
+
+
+
+
+
+                                    <p> <ul style="list-style-type: circle;"> <li>Server Hardware</li><li>Connectivity Infrastructure</li><li>DAPP development seed capital fundingMarketing (social media , promotionals, event planning, public relations)</li> <li>Staff training (technical and non technical skills)</li>
+                                    <li>Staff Compensation</li>
+                                    <li>Office Rental (community space and classroom)</li>
+                                    <li>Reserve Buffer</li>
+                                    
+                                    </ul> </p>
+                                </div>
+                              <div class="text-block">
+                                    <h5>Outbound Activities</h5>
+                                    <p> <ul style="list-style-type: circle;"> <li>Community Education (hosting workshops, meetups, classes)</li><li>Promoting EOS to existing businesses (events, conferences, trade shows)</li><li>DAPP development seed capital fundingMarketing (social media , promotionals, event planning, public relations)</li> <li>Lobbying (as members of the Costa Rican and central american Fintech associations)</li></ul> </p>
+                                </div>
+                                <div class="text-block">
+                                    <p>We will not be paying dividends or engage in vote buying. We have published our Pledge at the beginning of this website and look forward to community feedback on how we can improve and be held accountable.<br><br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div id="form-messages" style="background: yellowgreen;line-height: 65px;font-size: 19px;text-align: center;color: white;font-weight: 800;"></div>
+           
+
+   <section class="space--md bg--secondary" id="criteria">    
+                <div class="container">
+                    <style>
+                        .fa-file-pdf {
+                            font-size: 60px;
+                            font-weight: lighter!important;
+                            color: #4791f4;
+                        }
+                        .fa-file-pdf span {
+                            font-size: 22px;
+                            padding-top: 6px;
+                            margin: 0 0 0 35px;
+                            float: right;
+                            font-family: 'Roboto';
+                            font-weight: 300;
+                        }
+                        .tech-roadmap {
+                            border-top: 1px solid #4791f4;
+                            padding: 10px 5px;
+                            border-bottom: 1px solid #4791f4;
+                            width: 285px;
+                        }
+                        .clr {clear: both}
+                    </style>
+                    <div class="row">
+                        <div class="col-md-6">
+                            </div>
+                        <div class="col-md-6">
+                            <a href="documents/EOS-costaRica-document-tech.pdf" target="_blank">
+                                <div class="tech-roadmap">
+                                <i class="far fa-file-pdf"><span>Download <br /> Technical Roadmap</span></i>
+                            </div>
+                                </a>
+                        </div>
+                    </div>
+
+
+                    <div class="clr"></div>
+                    <h2> More criteria</h2>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            
+                        
+                            <div class="feature">
+                                <h4>The current hardware characteristics<br>for this node are:<br></h4>
+                                <p> 4 x CPU 24 cores (48 threads) @ 1.87GHz<br>64 GB RAM2 TB <br>SSD Storage </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <h4>The current hardware characteristics<br>for this node are:<br></h4>
+                                <p> 4 x CPU 24 cores (48 threads) @ 1.87GHz<br>64 GB RAM2 TB <br>SSD Storage </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <h4>Estimated scaling plan for hardware immediately after June 3, 2018 if electedEOS Costa Rica will employ two identical servers, 1 as backup, with the following specifications:<br></h4>
+                                <p>HP DL360 Gen 10 server.<br>2 x CPU 28 cores (total 56 Cores and 112 threads) @ 2.50 GHz<br>1.5TB DDR4–2666mhz RAM Memory<br>8TB in Raid 6 configuration<br>10GB/25GB PCI fibre network card</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <h4>Community benefit project outline, only for projects expected to be public by June 3, 2018<br></h4>
+                                <p>We pledge to reinvest our block rewards following the same formula that has made our country a ideal business environment -- invest in a educational system for EOS developers, fund EOS startups that focus on innovation and partner with local educators to increase research and development in the EOS ecosystem.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div >
+                                <h4>Community benefit project outline, only for projects expected to be public by June 3, 2018<br></h4>
+                                <p>EOS-specific educational courses to be held in in Edenia’s blockchain labs concept. Our plan is to bootstrap courses into a future EOS Academy<br>EOS fund with resources allocated to fund developers and EOS dApps. This will be under the established Edenia Incubator and will hold quarterly calls published on our social media platforms<br>EOS partnership with the largest technical University in the country to promote research in the EOS ecosystem<br>EOS Scholarship for high performing developers and systems engineers to begin or continue their studies and give back to the EOS community<br>EOS-specific political fund that would provide resources to community leaders to work with policy makers and regulators to ensure a favorable environment for technology in Costa Rica</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<footer class="footer-6 unpad--bottom bg--dark" id="subscribe">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                            <h6 class="type--uppercase">About Us</h6>
+                            <p> EOS Costa Rica is an initiative of Sistemas Edenia Internacional S.A. (EDENIA), a Costa Rican IT company founded in 1987 as the country’s first BBS service.  </p>
+                            
+                            <a  class="btn btn--secondary type--uppercase" href="https://steemit.com/@eos-costarica/feed"  target="_blank" >go to steemit</a>
+                        </div>
+                        <div class="col-sm-6 col-md-5">
+                            <h6 class="type--uppercase">Recent Updates</h6>
+                                                       <div class="tweets-feed tweets-feed-2" data-feed-name="EOSCostaRica" data-amount="2"></div>
+
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <h6 class="type--uppercase">Newsletter</h6>
+                           
+                       
+                            
+                            
+                                <form class="row" id="ajax-contact" method="post" action="mailer.php"> <input class="validate-required validate-email" type="email" id="email" name="email" required placeholder="Email Address"> <button  class="btn btn--primary type--uppercase" type="submit">Subscribe</button>
+                               <div style="position: absolute; left: -5000px" aria-hidden="true"> <input type="text" name="b_77142ece814d3cff52058a51f_f300c9cce8" tabindex="-1" value=""> </div>
+                            </form>
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__lower text-center-xs">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6"> <span class="type--fine-print">© <span class="update-year"></span> EOS COSTA RICA — All Rights Reserved</span>
+                            </div>
+                            <div class="col-sm-6 text-right text-center-xs">
+                                <ul class="social-list list-inline">
+                                    <li><a href="#"><i class="socicon socicon-twitter icon icon--xs"></i></a></li>
+                                    <li><a href="#"><i class="socicon socicon-instagram icon icon--xs"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+
+        </div>
+
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/app.js"></script>
+<script src="js/twitterfetcher.min.js"></script>
+        <script src="js/scripts.js"></script>
+
+    </body>
+
+</html>

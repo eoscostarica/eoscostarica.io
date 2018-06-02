@@ -1,0 +1,12 @@
+/*! Place your custom styles here */
+
+img.logo.logo-light{ width:200%; }
+
+img.logo.logo-light{  max-height:300px;}
+
+img.logo{ width:10%; }
+img.logo{  max-height:100px;}
+
+i.icon {
+    color: #60bbd3!important;
+}
