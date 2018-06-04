@@ -36,8 +36,8 @@
         "longitude": -84.078155
       },
       "is_producer": false,
-      "p2p_endpoint": "node1.eosio.cr:9876",
-      "api_endpoint": "http://node1.eosio.cr:8888",
+      "p2p_endpoint": "",
+      "api_endpoint": "",
       "ssl_endpoint": ""
     },
     {
