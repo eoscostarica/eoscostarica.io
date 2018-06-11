@@ -1,5 +1,5 @@
 {
-  "producer_account_name": "eoscostarica",
+  "producer_account_name": "costaricaeos",
   "producer_public_key": "EOS7phU8qE6nPCfpkCQ2T3HmRwGg6z4v61RTLvPBBVmPWmPisZoWY",
   "org": {
     "candidate_name": "EOS Costa Rica",
@@ -31,26 +31,26 @@
     {
       "location": {
         "name": "San José",
-        "country": "Costa Rica",
-        "latitude": 9.936377,
-        "longitude": -84.078155
-      },
-      "is_producer": false,
-      "p2p_endpoint": "",
-      "api_endpoint": "",
-      "ssl_endpoint": ""
-    },
-    {
-      "location": {
-        "name": "San José",
-        "country": "Costa Rica",
+        "country": "CR",
         "latitude": 9.936377,
         "longitude": -84.078155
       },
       "is_producer": true,
-      "p2p_endpoint": "",
-      "api_endpoint": "",
-      "ssl_endpoint": ""
+      "p2p_endpoint": "p2p.eosio.cr:1976",
+      "api_endpoint": "https://api.eosio.cr",
+      "ssl_endpoint": "https://api.eosio.cr"
+    },
+    {
+      "location": {
+        "name": "San José",
+        "country": "CR",
+        "latitude": 9.936377,
+        "longitude": -84.078155
+      },
+      "is_producer": true,
+      "p2p_endpoint": "p2p.eosio.cr:5418",
+      "api_endpoint": "https://api.eosio.cr",
+      "ssl_endpoint": "https://api.eosio.cr"
     }
   ]
 }
