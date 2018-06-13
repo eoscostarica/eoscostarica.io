@@ -10,3 +10,16 @@ img.logo{  max-height:100px;}
 i.icon {
     color: #60bbd3!important;
 }
+
+div.content.boxed.boxed--border > h2 {
+	font-size: 	1.7em;
+	line-height: 24px;
+	margin-left: 2px;
+	float: left;
+}
+
+div.content.boxed.boxed--border > i {
+	padding: 0, 10px, 10px 0; 
+	font-size: 1.8em;
+	float: left;
+}
