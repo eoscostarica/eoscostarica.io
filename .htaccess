@@ -3,3 +3,4 @@
 	ModPagespeed off
 </IfModule>
 
+Redirect 301 /discord https://discord.gg/M6UPJm
