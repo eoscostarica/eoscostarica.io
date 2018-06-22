@@ -249,6 +249,58 @@ body {
 .float-right {
   float: right;
 }
+
+/* Poner aqui CSS Personalizado para no usar CCS inlne */
+ul.list-circle{
+  list-style-type: circle;
+  text-align: left;
+}
+.icon-social-list {
+  margin-top: 10px;
+}
+.icon-social-list i {
+  font-size: 25px;
+  margin: 0 5px;
+
+  color: #fcfcfc!important;
+}
+.icon-social-list i:hover {
+  color: #60bbd3!important;
+
+}
+p.tweet a {
+  text-decoration: none!important;
+  color: #60bbd3!important;
+}
+p.tweet a:hover {
+  text-decoration: underline!important;
+
+}
+.tweet-url ul li p a span {
+  color: #60bbd3!important;
+}
+.tweet-url ul li p a {
+  color: #60bbd3!important;
+}
+
+
+.copyR {
+  color: #fcfcfc!important;
+}
+
+.mB-10 {margin-bottom: 10px;}
+.mB-20 {margin-bottom: 20px;}
+.mB-30 {margin-bottom: 30px;}
+.mB-40 {margin-bottom: 40px;}
+.mB-50 {margin-bottom: 50px!important;}
+.mB-60 {margin-bottom: 60px;}
+
+.OwnDisc {
+  float:left; margin-right: 10px;
+}
+/* End CSS */
+
+
 @media all and (max-width: 767px) {
   .float-left,
   .float-right {
