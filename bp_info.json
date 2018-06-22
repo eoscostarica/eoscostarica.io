@@ -5,13 +5,14 @@
     "candidate_name": "EOS Costa Rica",
     "website": "https://eoscostarica.io",
     "code_of_conduct":"https://steemit.com/eos/@eos-costarica/eos-costa-rica-announcing-our-block-producer-candidacy",
+    "email":"bp@eosio.cr",
     "branding":{
       "logo_256":"https://eoscostarica.io/assets/eos-CostaRica-256x256.png",
       "logo_1024":"https://eoscostarica.io/assets/eos-CostaRica-1024x1024.png",
       "logo_svg":"https://eoscostarica.io/assets/eos-CostaRica-vectors.svg"
     },
     "location": {
-      "name": "San José",
+      "name": "San Jose",
       "country": "CR",
       "latitude": 9.936377,
       "longitude": -84.078155
@@ -19,30 +20,31 @@
     "social": {
       "steemit": "eos-costarica",
       "twitter": "EOSCostaRica",
-      "github":"eoscostarica",
       "youtube": "",
       "facebook": "",
+      "github": "eoscostarica",
       "reddit": "",
       "keybase": "eoscostarica",
-      "telegram": "eoscr"
+      "telegram": "eoscr",
+      "wechat":""
     }
   },
   "nodes": [
     {
       "location": {
-        "name": "San José",
+        "name": "San Jose",
         "country": "CR",
         "latitude": 9.936377,
         "longitude": -84.078155
       },
-      "is_producer": true,
+      "is_producer": false,
       "p2p_endpoint": "p2p.eosio.cr:1976",
       "api_endpoint": "",
       "ssl_endpoint": "https://api.eosio.cr"
     },
     {
       "location": {
-        "name": "San José",
+        "name": "San Jose",
         "country": "CR",
         "latitude": 9.936377,
         "longitude": -84.078155

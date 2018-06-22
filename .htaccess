@@ -1,6 +1,7 @@
-
 <IfModule pagespeed_module>
 	ModPagespeed off
 </IfModule>
 
-Redirect 301 /discord https://discord.gg/M6UPJm
+Header set Access-Control-Allow-Origin "*"
+
+Redirect 301 /discord https://discord.gg/bBpQHym
