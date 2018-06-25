@@ -28,3 +28,29 @@ div.content.boxed.boxed--border > i {
 	text-decoration: none;
 	font-weight: bold;
 }
+.shadowed-text {
+	text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.62);
+}
+.activities-list {
+	font-size: 16px;
+}
+
+.code-of-conduct-list {
+	font-size: 14px;
+	letter-spacing: 1px; 
+	text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.75);
+	line-height: 36px;
+}
+
+.pledge-list {
+	font-size: 17px;
+	letter-spacing: 1px; 
+	text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.75);
+	line-height: 36px;
+}
+
+.team-list {
+	margin-bottom: 0.2em;	
+}
+
+
