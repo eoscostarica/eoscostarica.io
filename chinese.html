@@ -1,7 +1,19 @@
 <!doctype html>
 <html lang="Zh-hant">
     <head>
+        <meta charset="utf-8">
+        <title>EOS Costa Rica - Block Producer Candidate</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all">
+        <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
         <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
         <!-- Scroll -->
         <script src="js/smooth-scroll.min.js"></script>
@@ -128,19 +140,7 @@
             }
         </script>
         <!-- End Butterfly Alone -->
-        
-        <meta charset="utf-8">
-        <title>EOS Costa Rica - Block Producer Candidate</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all">
-        <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
-        
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173987-66"></script>
         <script>
@@ -152,127 +152,104 @@
         </script>
 
     </head>
-    <body data-smooth-scroll-offset="77" onload="init();">
-        <div class="nav-container">
-            <div class="via-1526883962065" via="via-1526883962065" vio="Nav">
-                <div class="bar bar--sm visible-xs">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-3 col-md-2">
-                                <a href="index.html"> <img class="logo logo-dark" alt="logo" src="img/eosWhite-graphic8.png"> <img class="logo logo-light" alt="logo" src="img/eosWhite-graphic8.png"> </a>
-                            </div>
-                            <div class="col-9 col-md-10 text-right">
-                                <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm"> <i class="icon icon--sm stack-interface stack-menu"></i> </a>
-                            </div>
+<body data-smooth-scroll-offset="77" onload="init();">
+
+<!-- Top bar -->
+<div class="nav-container">
+    <div class="via-1526883962065" via="via-1526883962065" vio="Nav">
+        <div class="bar bar--sm visible-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-md-2">
+                        <a href="index.html"> <img class="logo logo-dark" alt="logo" src="img/eosWhite-graphic8.png"> <img class="logo logo-light" alt="logo" src="img/eosWhite-graphic8.png"> </a>
+                    </div>
+                    <div class="col-9 col-md-10 text-right">
+                        <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm"> <i class="icon icon--sm stack-interface stack-menu"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="menu1" class="bar bar-1 hidden-xs bg--dark" data-scroll-class="100px:pos-fixed">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-1 col-md-2 hidden-xs">
+                        <div class="bar__module">
+                            <a href="#home"> <img class="logo logo-dark" alt="logo" src="img/logo-dark.png"> <img class="logo logo-light" alt="logo" src="img/eosWhite-graphic8.png"> </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
+                        <div class="bar__module">
+                            <ul class="menu-horizontal text-left">
+
+                                <li class="dropdown"> <span class="dropdown__trigger">
+                                我们
+                            </span>
+                                    <div class="dropdown__container">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="dropdown__content col-lg-2">
+                                                    <ul class="menu-vertical">
+                                                        <li> <a data-scroll href="#mission">使命</a> </li>
+                                                        <li> <a data-scroll href="#values">我 们 的 价 值 观</a> </li>
+                                                        <li> <a data-scroll href="#pledges">我们的誓言</a> </li>
+                                                        <li> <a data-scroll href="#team">我 们 团 队</a> </li>
+                                                        <li> <a data-scroll href="#criteria">标准</a> </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                 <li class="dropdown"> <span class="dropdown__trigger">
+                                技 术 规 格
+                            </span>
+                                    <div class="dropdown__container">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="dropdown__content col-lg-2">
+                                                    <ul class="menu-vertical">
+                                                        <li> <a data-scroll href="#networkr">网络冗余</a> </li>
+                                                        <li> <a data-scroll href="#roadmap">技术路线</a> </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown"> <span class="dropdown__trigger">
+                                位置
+                            </span>
+                                    <div class="dropdown__container">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="dropdown__content col-lg-2">
+                                                    <ul class="menu-vertical">
+                                                        <li> <a data-scroll href="#infrastructure">基础设施</a> </li>
+                                                        <li> <a data-scroll href="#political">政治环境</a> </li>
+                                                        <li> <a data-scroll href="#reinvestment">再投 资</adata-scroll></a> </li>
+                                                        <li> <a data-scroll href="#dividends">股息</adata-scroll></a> </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            <li> <a data-scroll href="#subscribe">
+                                订阅
+                            </a> </li>
+                                <li class="lan-html"><a href="spanish.html">Español</a></li>|
+                                <li class="lan-html"><a href="index.html">English</a></li>
+                                <!-- End Languajes -->
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <nav id="menu1" class="bar bar-1 hidden-xs bg--dark" data-scroll-class="100px:pos-fixed">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-1 col-md-2 hidden-xs">
-                                <div class="bar__module">
-                                    <a href="#home"> <img class="logo logo-dark" alt="logo" src="img/logo-dark.png"> <img class="logo logo-light" alt="logo" src="img/eosWhite-graphic8.png"> </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
-                                <div class="bar__module">
-                                    <ul class="menu-horizontal text-left">
-
-                                        <li class="dropdown"> <span class="dropdown__trigger">
-                                        我们
-                                    </span>
-                                            <div class="dropdown__container">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="dropdown__content col-lg-2">
-                                                            <ul class="menu-vertical">
-                                                                <li> <a data-scroll href="#mission">使命</a> </li>
-                                                                <li> <a data-scroll href="#values">我 们 的 价 值 观</a> </li>
-                                                                 <li> <a data-scroll href="#pledges"我们的誓言</a> </li>
-                                                                 <li> <a data-scroll href="#team">我 们 团 队</a> </li>
-                                                                <li> <a data-scroll href="#criteria">标准</a> </li>
-                                                                 
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                        
-
-                                        
-                                        
-                                         <li class="dropdown"> <span class="dropdown__trigger">
-                                        技 术 规 格
-                                    </span>
-                                            <div class="dropdown__container">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="dropdown__content col-lg-2">
-                                                            <ul class="menu-vertical">
-
-
-                                                                <li> <a data-scroll href="#networkr">网络冗余</a> </li>
-                                                                <li> <a data-scroll href="#roadmap">技术路线</a> </li>
-                                                                
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="dropdown"> <span class="dropdown__trigger">
-                                        位置
-                                    </span>
-                                            <div class="dropdown__container">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="dropdown__content col-lg-2">
-                                                            <ul class="menu-vertical">
-                                                                <li> <a data-scroll href="#infrastructure">基础设施</a> </li>
-
-                                                                <li> <a data-scroll href="#political">政治环境</a> </li>
-                                                                <li> <a data-scroll href="#reinvestment">再投 资</adata-scroll></a> </li>
-                                                                <li> <a data-scroll href="#dividends">股息</adata-scroll></a> </li>
-
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                    <li> <a data-scroll href="#subscribe">
-
-                                        订阅
-                                    </a> </li>
-
-                                    	<!-- Languajes -->
-										<style>
-											li.lan-html {
-											margin: 0 5px!important;
-											padding: 0!important;
-											}
-											.lan-html a {
-												color: #60bbd3!important;
-											}
-										</style>
-
-                                        <li class="lan-html"><a href="spanish.html">Español</a></li>|
-                                        <li class="lan-html"><a href="index.html">English</a></li>
-                                		<!-- End Languajes -->
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
             </div>
-        </div>
+        </nav>
+    </div>
+</div>
+
         <div class="main-container">
             <a id="home" class="in-page-link"></a>
             <section class="cover imagebg text-center height-90 section--ken-burns" data-overlay="7">
@@ -966,9 +943,6 @@ Edenia从2016年开始也经历了3个月的Steem见证，并且自2015年以来
                     </div>
                 </div>
             </footer>
-
-
-
         </div>
 
         <script src="js/jquery-3.1.1.min.js"></script>
