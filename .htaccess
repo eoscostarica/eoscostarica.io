@@ -6,5 +6,4 @@ Header set Access-Control-Allow-Origin "*"
 
 Redirect 301 /discord https://discord.gg/bBpQHym
 
-Redirect 301 /assets https://eoscostarica.io/assets.html
 Redirect 301 /logo https://eoscostarica.io/assets.html
