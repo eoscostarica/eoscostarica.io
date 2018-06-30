@@ -34,7 +34,7 @@ This is currently rently a static HTML site, we are looking into implementing st
 ## Contribute
 Please look through our [open issues](https://github.com/eoscostarica/eoscostarica.io/issues) we are all about open source.
 
-See [the contribute file](contribute.md)!
+See [the contribute file](CONTRIBUTING.md)!
 
 PRs accepted.
 
