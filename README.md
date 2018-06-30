@@ -15,7 +15,7 @@
 
 <p align="center">
 	<a href="https://eoscostarica.io">
-		<img src="https://eoscostarica.io/img/eoscolors-transparent.png" width="300">
+		<img src="https://github.com/eoscostarica/assets/blob/master/logos/eoscolors-transparent.png" width="300">
 	</a>
 </p>
 
