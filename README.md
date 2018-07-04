@@ -21,8 +21,7 @@
 
 # EOS Costa Rica Website - Block Producer Candidate
 
-
-> This is our block producer website [eoscostarica.io](https://eoscostarica.io)
+This is our block producer website [eoscostarica.io](https://eoscostarica.io)
 
 EOS Costa Rica provides infrastructure to the EOS network enabling the responsible development of decentralized applications that will enhance our society. We challenge ourselves to run the most robust, self-funded, bare metal Block Producer possible from Costa Rica improving geographical and political diversity. We pledge to leverage our talent, experience, and sustainable resources to meet such an important challenge.
 
@@ -35,6 +34,7 @@ This is currently rently a static HTML site, we are looking into implementing st
 Please look through our [open issues](https://github.com/eoscostarica/eoscostarica.io/issues) we are all about open source.
 
 See [the contribute file](CONTRIBUTING.md)!
+
 
 PRs accepted.
 

@@ -781,43 +781,46 @@
         <section class="space--md bg--secondary" id="roadmap">    
             <div class="container">
                 <div class="clr"></div>
-                <h2> Bare Metal Servers Specs</h2>
+                <h2>Bare Metal Servers Specs</h2>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="feature">
-                            <p>Our team has demonstrated experience and skills required for running and maintaining a secure and reliable Block Producer running 24/7 in Costa Rica. The following is an outline of or technical specifications. We will actively adapt to network conditions and add redundancy as needed.</p>
-                            <p><b>Hardware for our current primary and secondary block producer nodes : </b>
+                            <p>Our team has decades of experience managing servers and encompasses all the technical skills required to operate an EOS Block Producer 24/7 from Costa Rica. We are constantly thinking of ways to improve our infrastructure and have outlined the following technical roadmap, we will actively adapt our roadmap to network conditions and add capacity / redundancy as needed.</p>
+                           
+                            <h4>Primary and secondary block producer nodes :</h4>
                                 <ul class="list-circle">
                                     <li><b>4 x CPU 24 cores</b> (48 threads) @ 1.87GHz</li>
                                     <li><b>512 GB RAM</b></li>
                                     <li><b>8TB SSD Storage</b> in RAID 5</li>
                                     <li><b>100 MBps uplink</b></li>
                                 </ul>
-                                <p>We want to ensure that EOS scales as smoothly as possible and so improving our hardware is our main priority to handle a large number of transactions and have redundant equipment ready to go at a moments notice. We envision the following scaling plan for hardware:</p>
-                                <ul class="list-circle">
-                                    <li><b>2 x CPU 28 cores</b> (total 56 Cores and 112 threads) @ 2.50 GHz</li>
-                                    <li><b>1.5TB GB RAM </b> DDR4–2666mhz </li>
-                                    <li><b>8TB SSD Storage</b> in RAID 5</li>
-                                    <li><b>1GBs uplink</b></li>
-                                </ul>
-                            </div>
+                            
+                            <p>We want to do our part to ensure the EOS network scales as smoothly as possible. We will allocate block rewards towards improving our hardware as one of our initial priorities in order to handle a large number of transactions and have redundant equipment ready to go at a moments notice. We envision the following scaling plan for hardware:</p>
+                            <ul class="list-circle">
+                                <li><b>2 x CPU 28 cores</b> (total 56 Cores and 112 threads) @ 2.50 GHz</li>
+                                <li><b>1.5TB GB RAM </b> DDR4–2666mhz </li>
+                                <li><b>8TB SSD Storage</b> in RAID 5</li>
+                                <li><b>1GBs uplink</b></li>
+                            </ul>
                         </div>
-                        <div class="col-md-6">
-                            <div class="feature">
-                                <a href="documents/EOS-costaRica-document-tech.pdf" target="_blank">
-                                    <div class="tech-roadmap">
-                                        <i class="far fa-file-pdf"><span>Download <br /> Technical Road map</span></i>
-                                    </div>
-                                </a>
-                                <br/>
-                                <h4>Load Balanced Full Nodes</h4>
-                                <br/>
-                                <p>We have already launched three additional load-balanced full nodes as part of our initial setup to shield our primary and secondary producer nodes and respond in a timely manner to requests coming from users in our region.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature">
+                            <br/>
+                            <a href="documents/EOS-costaRica-document-tech.pdf" target="_blank">
+                                <div class="tech-roadmap">
+                                    <i class="far fa-file-pdf"><span>Download <br /> Technical Road map</span></i>
+                                </div>
+                            </a>
+                            <br/><br/>
 
-                                <p>In addition to hosting files, block producers are expected to run API nodes that are able to query the blockchain database state on behalf of applications. These services make it vital for applications to get the information they need without having to run and maintain their own scalable hosting services.</p>
-                                <p>We look forward to the EOS token holder's support in order to continue with the deployment of full nodes to serve the demand of Dapps in Panama, El Salvador, Guatemala, Honduras and Nicaragua, in that chronological order.</p>
-                                <p>We believe running full nodes in different regions, can greatly help to reduce the load on block producing nodes by handling additional tasks that developers need.</p>
-                            </div>
+                            <h4>Load Balanced Full Nodes :</h4>
+                            <p style="max-width: none;">We have provisioned two servers as load-balanced full nodes with our initial hardware setup to shield our producer nodes and respond in a timely manner to requests coming from users in our region. The number of nodes can be easily increased as demand increases.</p>
+
+                            <p>In addition to providing reliable API endpoints used to query the EOS blockchain we plan to allow users to host files and query application databases. These services will become vital for applications to get the information they need without having to run and maintain their own scalable hosting services.</p>
+                            <p>We look forward to the EOS token holder's support in order to continue with the deployment of full nodes to serve the demand of Dapps in Panama, El Salvador, Guatemala, Honduras and Nicaragua, in that chronological order.</p>
+                            <p>We believe running full nodes in different countries in our region will significantly improve the resilience and responsiveness of EOS dApps used by millions of users in Central and South America.</p>
+
                         </div>
 
                         <div class="col-md-12">
