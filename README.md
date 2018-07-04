@@ -15,14 +15,13 @@
 
 <p align="center">
 	<a href="https://eoscostarica.io">
-		<img src="https://eoscostarica.io/img/eoscolors-transparent.png" width="300">
+		<img src="https://github.com/eoscostarica/assets/blob/master/logos/eoscolors-transparent.png" width="300">
 	</a>
 </p>
 
 # EOS Costa Rica Website - Block Producer Candidate
 
-
-> This is our block producer website
+This is our block producer website [eoscostarica.io](https://eoscostarica.io)
 
 EOS Costa Rica provides infrastructure to the EOS network enabling the responsible development of decentralized applications that will enhance our society. We challenge ourselves to run the most robust, self-funded, bare metal Block Producer possible from Costa Rica improving geographical and political diversity. We pledge to leverage our talent, experience, and sustainable resources to meet such an important challenge.
 
@@ -34,7 +33,8 @@ This is currently rently a static HTML site, we are looking into implementing st
 ## Contribute
 Please look through our [open issues](https://github.com/eoscostarica/eoscostarica.io/issues) we are all about open source.
 
-See [the contribute file](contribute.md)!
+See [the contribute file](CONTRIBUTING.md)!
+
 
 PRs accepted.
 
