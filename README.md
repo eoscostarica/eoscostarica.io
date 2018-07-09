@@ -31,7 +31,8 @@ This is currently rently a static HTML site, we are looking into implementing st
 
 ### Node.js Static Server
 
-Install node.js v8 ( carbon ) on your machine we recommend using [nvm](https://github.com/creationix/nvm) and [avn](https://github.com/wbyoung/avn) to [manage multiple your version on your computer](https://gaboesquivel.com/blog/2015/automatic-node.js-version-switching/).
+Install node.js v8 ( carbon ) on your machine.   
+We recommend using [nvm](https://github.com/creationix/nvm) and [avn](https://github.com/wbyoung/avn) to [manage multiple versions of nodejs on your computer](https://gaboesquivel.com/blog/2015/automatic-node.js-version-switching/).
 
 Clone and Install npm dependencies
 
