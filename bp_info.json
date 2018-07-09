@@ -38,8 +38,9 @@
         "latitude":9.936377,
         "longitude":-84.078155
       },
-      "is_producer":false,
+      "node_type":"full",
       "p2p_endpoint":"p2p.eosio.cr:1976",
+      "bnet_endpoint":"p2p.eosio.cr:20747",
       "api_endpoint":"",
       "ssl_endpoint":"https://api.eosio.cr"
     },
@@ -50,8 +51,22 @@
         "latitude":9.936377,
         "longitude":-84.078155
       },
-      "is_producer":true,
+      "node_type":"full",
       "p2p_endpoint":"p2p.eosio.cr:5418",
+      "bnet_endpoint":"p2p.eosio.cr:23881",
+      "api_endpoint":"",
+      "ssl_endpoint":""
+    },
+    {
+      "location":{
+        "name":"San Jose",
+        "country":"CR",
+        "latitude":9.936377,
+        "longitude":-84.078155
+      },
+      "node_type":"producer",
+      "p2p_endpoint":"",
+      "bnet_endpoint":"",
       "api_endpoint":"",
       "ssl_endpoint":""
     }
