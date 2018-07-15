@@ -1,11 +1,14 @@
+Header set Access-Control-Allow-Origin "*"
+
 <IfModule pagespeed_module>
 	ModPagespeed off
 </IfModule>
 
-Header set Access-Control-Allow-Origin "*"
+RewriteEngine on
+RewriteBase /
+rewriteCond %{HTTPS} !on
+rewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
 Redirect 301 /discord https://discord.gg/bBpQHym
-
 Redirect 301 /logo https://eoscostarica.io/assets.html
-
 Redirect 301 /youtube https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ
