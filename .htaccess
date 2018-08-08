@@ -4,10 +4,10 @@ Header set Access-Control-Allow-Origin "*"
 	ModPagespeed off
 </IfModule>
 
-RewriteEngine on
-RewriteBase /
-rewriteCond %{HTTPS} !on
-rewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+#RewriteEngine on
+#RewriteBase /
+#rewriteCond %{HTTPS} !on
+#rewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
 Redirect 301 /discord https://discord.gg/bBpQHym
 Redirect 301 /logo https://eoscostarica.io/assets.html
