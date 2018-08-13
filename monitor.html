@@ -23,6 +23,12 @@
 
         gtag(‘config’, ‘UA-173987-66’);
     </script>
+    <script type="text/javascript">
+      function resizeIframe(obj){
+         obj.style.height = 0;
+         obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+      }
+    </script>
 </head>
 <body data-smooth-scroll-offset="77">
 
@@ -110,7 +116,7 @@
                                         </div>
                                     </li>
                                     <li><a data-scroll href="index.html#subscribe">Subscribe</a></li>
-                                <!-- Languajes
+                                
                                 <style>
                                     li.lan-html {
                                         margin: 0 5px!important;
@@ -122,7 +128,7 @@
                                 </style>
                                 <li class="lan-html"><a href="spanish.html">Español</a></li>|
                                 <li class="lan-html"><a href="chinese.html">繁</a></li>
-                                End Languajes -->
+                                
                             </ul>
                         </div>
                     </div>
@@ -141,25 +147,9 @@
         </div>
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <h2>Code of Conduct</h2>
-                    <p class="lead">EOS Costa Rica pledges to: </p>
-                    <ul class="code-of-conduct-list list-circle">
-                        <li>Provide the <b>highest-standard bare metal infrastructure</b> possible to the EOS ecosystem.</li>
-                        <li>Be <b>self-funded</b> and secure the investment needed to ensure a competitive EOS Block Producer.</li>
-                        <li>Allocate block rewards to <b>EOS educational and development initiatives</b>.</li>
-                        <li>Sponsor projects and dApps for <b>community-led projects</b> and developers.</li>
-                        <li>Be <b>transparent and open</b> on the allocation of block rewards.</li>
-                        <li>Actively <b>participate in the governance</b> of the blockchain with an open and <b>positive attitude</b>.</li>
-                        <li><b>Respect and defend the constitution, fair elections, community vigilance and arbitration mechanisms.</b></li>
-                    </ul>
-                    <a class="btn" href="index.html" /><i class="fa fa-chevron-left"></i> Back</a>
-                </div>
-                <div class="col-md-4">
-                    <div class="boxed boxed--lg boxed--border bg--secondary">
-                        <img alt="image" src="img/code-of-Conduct-1.jpg" class="border--round">
-                         <p> We challenge ourselves to provide the EOS platform with a strong geographical and political diversity by running the most robust EOS Block Producer possible from Costa Rica. We pledge to leverage our talent, experience, and sustainable internet resources to meet such an important challenge. </p>
-                    </div>
+                    <iframe src="http://monitor.eosio.cr" allowtransparency="true" height="860">
                 </div>
             </div>
         </div>

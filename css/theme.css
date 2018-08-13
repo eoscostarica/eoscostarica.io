@@ -351,25 +351,48 @@ h3.title  {
   color: white;
   font-weight: 800;
 }
-.fa-file-pdf {
-  font-size: 60px;
-  font-weight: lighter!important;
-  color: #4791f4;
+
+i.fa-file-pdf{
+  font-size: 14px;
+  padding: 0 0 0 10px;
 }
-.fa-file-pdf span {
-  font-size: 22px;
-  padding-top: 6px;
-  margin: 0 0 0 35px;
-  float: right;
+span.docDate {
+  font-size: 12px;
+  margin: 0 0 0 5px;
+  float: left;
+  font-family: 'Roboto';
+  font-weight: 300;
+  color:#2E2E2E;
+}
+
+span.docTitle {
+  font-size: 14px;
+  margin: 0 0 0 15px;
+  float: left;
   font-family: 'Roboto';
   font-weight: 300;
 }
-.tech-roadmap {
-  border-top: 1px solid #4791f4;
-  padding: 10px 5px;
-  border-bottom: 1px solid #4791f4;
-  width: 300px;
+
+a.monitorLink {
+  text-decoration: none;
 }
+a.monitorLink:hover {
+  text-decoration: underline;
+}
+
+.tech-roadmap {
+  border-top: 1px solid #62C1E0;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.tech-roadmap:hover {
+  background: #F9F9F9;
+}
+.tech-roadmap.last {
+  border-bottom: 1px solid #62C1E0;
+}
+
 .clr {clear: both}
 .col-md-4.no-bg div.boxed {
   background: none;

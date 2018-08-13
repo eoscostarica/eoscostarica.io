@@ -62,4 +62,21 @@ div.content.boxed.boxed--border > i {
   box-shadow: rgba(0, 0, 0, 0.4) 2px 3px 10px;
 }
 
+.docLinks a {
+}
+
+.docLinks a:hover {
+	text-decoration: underline;
+}
+
+a.learnLink {
+	font-size:15px;
+	text-decoration:underline;
+	font-weight: lighter; 
+}
+
+a.learnLink:hover {
+	font-size:15px;
+	font-weight: normal;
+}
 
