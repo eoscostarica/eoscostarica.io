@@ -1,20 +1,33 @@
 {
-  "name": "eoscostarica.io",
-  "version": "0.0.1",
-  "description": "EOS Costa Rica Block Producer Website",
-  "main": "index.js",
+  "name": "eoscostarica-io",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server"
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "serve": "docusaurus serve"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eoscostarica/eoscostarica.io.git"
+  "dependencies": {
+    "@docusaurus/core": "^2.0.0-alpha.61",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.61",
+    "@mdx-js/react": "^1.5.8",
+    "clsx": "^1.1.1",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   },
-  "author": "EOS Costa Rica (https://eoscostarica.io)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/eoscostarica/eoscostarica.io/issues"
-  },
-  "homepage": "https://github.com/eoscostarica/eoscostarica.io#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
