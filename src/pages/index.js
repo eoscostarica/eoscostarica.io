@@ -113,6 +113,9 @@ const Home = () => {
         <section className={styles.whatWeDoBox}>
           <div className={styles.whatWeDoBoxLeft}>
             <h1>What We Do</h1>
+            <div className={styles.mobileSvgIcon}>
+              <WhatWeDoSvg />
+            </div>
             <Accordion
               title="Software Development"
               content={`Our value proposition is to develop blockchain-based software to solve real-life problems. We have experience working with large global enterprises and SMEs, government entities and NGOs, and open-source projects across many industries. We adapt to our clients’ budgets and needs, without compromising thought leadership or quality. Our team is technology agnostic but specializes in the open-source blockchain technology EOSIO, launched by leading company block.one. `}
@@ -226,7 +229,7 @@ const Home = () => {
             </div>
             <img src="../../static/img/team.png" alt="EOS CR LOGO" />
           </div>
-          <div className={styles.knowRowBox}>
+          <div className={clsx(styles.knowRowBox, styles.colReverse)}>
             <img src="../../static/img/company.png" alt="EOS CR LOGO" />
             <div>
               <h3>The company</h3>
@@ -261,7 +264,7 @@ const Home = () => {
         </section>
         <section className={styles.knowEOSCRBox}>
           <h1>Some of Our Projects</h1>
-          <div className={styles.knowRowBox}>
+          <div className={clsx(styles.knowRowBox, styles.colReverse)}>
             <img src="../../static/img/latamlink2.png" alt="EOS CR LOGO" />
             <div>
               <h3>LatamLink</h3>
@@ -273,7 +276,7 @@ const Home = () => {
               </span>
             </div>
           </div>
-          <div className={styles.knowRowBox}>
+          <div className={clsx(styles.knowRowBox, styles.colReverse)}>
             <img src="../../static/img/lifebank.png" alt="EOS CR LOGO" />
 
             <div>
@@ -287,7 +290,7 @@ const Home = () => {
               </span>
             </div>
           </div>
-          <div className={styles.knowRowBox}>
+          <div className={clsx(styles.knowRowBox, styles.colReverse)}>
             <img src="../../static/img/smartgate.png" alt="EOS CR LOGO" />
 
             <div>
@@ -314,12 +317,12 @@ const Home = () => {
           </span>
           <form>
             <div>
-              <input type="text" />
-              <input type="text" />
+              <input type="text" placeholder="First Name" />
+              <input type="text" placeholder="Last Name" />
             </div>
-            <input type="text" />
-            <input type="text" />
-            <textarea rows="4" cols="50" />
+            <input type="text" placeholder="Professional Email Address" />
+            <input type="text" placeholder="Company Name" />
+            <textarea rows="4" placeholder="Additional Comments" />
           </form>
         </section>
       </main>

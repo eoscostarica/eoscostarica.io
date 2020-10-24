@@ -7,13 +7,7 @@
 
 /* You can override the default Infima variables here. */
 
-
-html {
-  border: solid 3px red;
-}
-
 :root {
-  display: flex;
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
