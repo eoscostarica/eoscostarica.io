@@ -71,8 +71,6 @@ const NavbarMenu = () => {
 
       content.current.style.height = "75px";
     } else {
-      console.log('ELSE al scroll < 50')
-
       const transformValue = `scale(1, 1)`;
 
       logo.current.style.WebkitTransform = transformValue;
