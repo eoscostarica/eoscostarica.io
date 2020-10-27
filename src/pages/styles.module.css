@@ -71,6 +71,14 @@
   align-items: center;
 }
 
+.secondaryBG {
+  background-color: #f1f1f1;
+}
+
+.secondaryBG h1 {
+  color: #000000 !important;
+}
+
 .knowEOSCRBox {
   background-color: #ffffff;
   display: flex;
@@ -391,7 +399,7 @@
     justify-content: space-around;
     flex-direction: row;
   }
-  
+
   .enterpriceInfoBox {
     width: 50%;
   }
@@ -412,7 +420,7 @@
     width: 50%;
     display: flex;
   }
-  
+
   .industryBox {
     padding: 4rem 15rem;
   }
@@ -420,31 +428,31 @@
   .industryBox .industryTitleBox {
     margin: 2rem 0;
   }
-  
+
   .industryBox .industryColWrapper {
     padding: 3rem 0;
     flex-direction: row;
   }
-  
+
   .industryBox .industryColWrapper .industryColBox {
     width: 30%;
   }
-  
+
   .industryColBox .svgBox {
     padding-bottom: 3rem;
     height: 488px;
   }
-  
+
   .industryColBox .svgBox svg {
     width: 85%;
   }
-  
+
   .inquiresBox {
     height: 300px;
     flex-direction: row;
     padding: 0 15rem;
   }
-  
+
   .knowEOSCRBox {
     flex-direction: column;
     padding: 4rem 15rem;
@@ -453,32 +461,32 @@
   .knowEOSCRBox h1 {
     margin-bottom: 3rem;
   }
-  
+
   .knowEOSCRBox .knowRowBox {
     margin-top: 2rem;
     flex-direction: row;
   }
-  
+
   .knowRowBox div {
     width: 50%;
   }
-  
+
   .knowEOSCRBox .colReverse {
     flex-direction: row;
   }
-  
+
   .knowRowBox img {
     margin-top: 0rem;
     width: 40%;
   }
-  
+
   .linkProjectBox {
     background-color: #f1f1f1;
     display: flex;
     padding: 4rem 15rem;
     justify-content: space-between;
   }
-  
+
   .contactUsBox {
     padding: 4rem 15rem;
   }
@@ -502,7 +510,7 @@
   ##Screen = B/w 1025px to 1280px
 */
 
-@media (min-width: 769px) and (max-width: 1280px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .mainContainer h1 {
     font-size: 48px;
   }
@@ -524,7 +532,7 @@
     padding: 12rem 3rem 2rem 3rem;
     margin-bottom: 1rem;
   }
-  
+
   .enterpriceBox {
     padding: 2rem 3rem;
   }
@@ -534,7 +542,7 @@
     justify-content: space-around;
     flex-direction: row;
   }
-  
+
   .enterpriceInfoBox {
     width: 50%;
   }
@@ -555,7 +563,7 @@
     width: 50%;
     display: flex;
   }
-  
+
   .industryBox {
     padding: 4rem 3rem;
   }
@@ -563,31 +571,31 @@
   .industryBox .industryTitleBox {
     margin: 2rem 0;
   }
-  
+
   .industryBox .industryColWrapper {
     padding: 3rem 0;
     flex-direction: row;
   }
-  
+
   .industryBox .industryColWrapper .industryColBox {
     width: 30%;
   }
-  
+
   .industryColBox .svgBox {
     padding-bottom: 3rem;
     height: 288px;
   }
-  
+
   .industryColBox .svgBox svg {
     width: 75%;
   }
-  
+
   .inquiresBox {
     height: 300px;
     flex-direction: row;
     padding: 0 3rem;
   }
-  
+
   .knowEOSCRBox {
     flex-direction: column;
     padding: 4rem 3rem;
@@ -596,32 +604,32 @@
   .knowEOSCRBox h1 {
     margin-bottom: 3rem;
   }
-  
+
   .knowEOSCRBox .knowRowBox {
     margin-top: 2rem;
     flex-direction: row;
   }
-  
+
   .knowRowBox div {
     width: 50%;
   }
-  
+
   .knowEOSCRBox .colReverse {
     flex-direction: row;
   }
-  
+
   .knowRowBox img {
     margin-top: 0rem;
     width: 40%;
   }
-  
+
   .linkProjectBox {
     background-color: #f1f1f1;
     display: flex;
     padding: 4rem 3rem;
     justify-content: space-between;
   }
-  
+
   .contactUsBox {
     padding: 4rem 3rem;
   }
@@ -633,54 +641,5 @@
 
   .contactUsBox div input[type="text"] {
     width: 48%;
-  }
-
-  .mainButton {
-    width: 254px;
-  }
-}
-
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (max-width: 768px) {
-  .whatWeDoBox {
-    flex-direction: row;
-  }
-
-  .whatWeDoBox .mobileSvgIcon {
-    display: none;
-  }
-
-  .whatWeDoBox .whatWeDoBoxLeft {
-    width: 50%;
-  }
-  .whatWeDoBox .whatWeDoBoxRight {
-    width: 50%;
-    display: flex;
-  }
-
-  .industryColBox .svgBox svg {
-    width: 50%;
-  }
-
-  .inquiresBox {
-    height: 250px;
-    flex-direction: row;
-  }
-
-  .contactUsBox div {
-    justify-content: space-between;
-    flex-direction: row;
-  }
-
-  .contactUsBox div input[type="text"] {
-    width: 48%;
-  }
-
-  .mainButton {
-    width: 254px;
   }
 }
