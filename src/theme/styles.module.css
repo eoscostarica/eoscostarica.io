@@ -39,6 +39,7 @@
 .customMenu .boxLeft {
   width: 100%;
 }
+
 .customMenu .boxRight {
   width: 50%;
   padding-top: 1rem;
@@ -138,27 +139,78 @@
   display: block;
   padding: 20px;
 }
+
 .menuSideBar ul {
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
 }
+
 .menuSideBar ul li {
   font-size: 16px;
 }
+
 .menuSideBar ul li:hover {
   cursor: pointer;
 }
 
-@-webkit-keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    left: 20%;
+.footerContent {
+  background-color: #000000;
+  height: 300px;
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.footerContent .socialCol {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footerContent .socialCol > div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3rem;
+}
+
+.footerContent img {
+  width: 200px;
+}
+
+.footerContent h2 {
+  font-size: 14px;
+  line-height: 1.14;
+  color: #ffffff;
+}
+
+.companyLocation {
+  font-size: 14px;
+  line-height: 1.14;
+  color: #ffffff;
+}
+
+.companySocial {
+  font-size: 16px;
+  line-height: 1.44;
+}
+
+@media (min-width: 1281px) {
+  .footerContent {
+    padding: 4rem 15rem;
   }
-  100% {
-    opacity: 1;
-    left: 0;
+
+  .customMenu ul {
+    width: 500px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .footerContent {
+    padding: 4rem 3rem;
   }
 }
 
@@ -185,5 +237,17 @@
 
   .customMenu ul {
     width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .footerContent {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footerContent > div {
+    width: 30%;
   }
 }

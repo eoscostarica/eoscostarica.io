@@ -305,7 +305,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className={styles.inquiresBox}>
+        <section className={clsx(styles.inquiresBox, styles.secondaryBG)}>
           <h1>Start working with us and implement blockchain technology.</h1>
           <button className={styles.mainButton}>Call To Action</button>
         </section>
