@@ -13,20 +13,59 @@ const Footer = () => {
         <h2>FOLLOW US</h2>
         <div className={styles.socialCol}>
           <div>
-            <span className={clsx(styles.companySocial, styles.companyLocation)}>Twitter</span>
-            <span className={clsx(styles.companySocial, styles.companyLocation)}>Facebook</span>
-            <span className={clsx(styles.companySocial, styles.companyLocation)}>LinkedIn</span>
+            <a
+              href="https://twitter.com/EOSCostaRica"
+              target="_blank"
+              className={clsx(styles.companySocial, styles.companyLocation)}
+            >
+              Twitter
+            </a>
+            <a
+              href="https://www.facebook.com/costaricaeos"
+              target="_blank"
+              className={clsx(styles.companySocial, styles.companyLocation)}
+            >
+              Facebook
+            </a>
+            <a
+              href="https://www.linkedin.com/company/eoscostarica/"
+              target="_blank"
+              className={clsx(styles.companySocial, styles.companyLocation)}
+            >
+              LinkedIn
+            </a>
           </div>
           <div>
-            <span className={clsx(styles.companySocial, styles.companyLocation)}>Medium</span>
-            <span className={clsx(styles.companySocial, styles.companyLocation)}>Telegram</span>
-            <span className={clsx(styles.companySocial, styles.companyLocation)}>Instagram</span>
+            <a
+              href="https://medium.com/@eoscostarica"
+              target="_blank"
+              className={clsx(styles.companySocial, styles.companyLocation)}
+            >
+              Medium
+            </a>
+            <a
+              href="https://t.me/eoscr"
+              target="_blank"
+              className={clsx(styles.companySocial, styles.companyLocation)}
+            >
+              Telegram
+            </a>
+            <a
+              href="https://www.instagram.com/eoscostarica/"
+              target="_blank"
+              className={clsx(styles.companySocial, styles.companyLocation)}
+            >
+              Instagram
+            </a>
           </div>
         </div>
       </div>
       <div>
         <span className={styles.companyLocation}>
-          Edificio Trifami, 5th floor San José, <strong><i>Costa Rica</i></strong>
+          Edificio Trifami, 5th floor San José,{" "}
+          <strong>
+            <i>Costa Rica</i>
+          </strong>
         </span>
       </div>
     </div>
