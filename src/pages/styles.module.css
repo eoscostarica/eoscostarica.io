@@ -242,6 +242,13 @@
   margin-top: 1rem;
 }
 
+.linkProjectBox {
+  background-color: #f1f1f1;
+  display: flex;
+  padding: 2rem 1rem;
+  justify-content: space-between;
+}
+
 .linkProjectBox img {
   width: 20%;
 }
