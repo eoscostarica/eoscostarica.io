@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
-import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
@@ -36,8 +34,17 @@ const Accordion = ({ content, title }) => {
 };
 
 const Home = () => {
-  const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
+  const [formData, setFormData] = useState({
+    name: "",
+    lastname: "",
+    email: "",
+    companyName: "",
+    comments: "",
+  });
+
+  const handleOnChange = (key) => (event) => {
+    setFormData({ ...formData, [key]: event.target.value });
+  };
 
   return (
     <Layout>
@@ -257,10 +264,10 @@ const Home = () => {
           </div>
         </section>
         <section className={styles.linkProjectBox}>
-          <img src="../../static/img/latamlink.png" alt="EOS CR LOGO" />
-          <img src="../../static/img/edenia.png" alt="EOS CR LOGO" />
-          <img src="../../static/img/eossurf.png" alt="EOS CR LOGO" />
-          <img src="../../static/img/ticobc.png" alt="EOS CR LOGO" />
+          <img alt="LatamLink" src={useBaseUrl("img/Group47.svg")} />
+          <img alt="Edenia" src={useBaseUrl("img/Group17.svg")} />
+          <img alt="Eossurf" src={useBaseUrl("img/Group11.svg")} />
+          <img alt="Ticoblockchain" src={useBaseUrl("img/Group55.svg")} />
         </section>
         <section className={styles.knowEOSCRBox}>
           <h1>Some of Our Projects</h1>
@@ -317,12 +324,37 @@ const Home = () => {
           </span>
           <form>
             <div>
-              <input type="text" placeholder="First Name" />
-              <input type="text" placeholder="Last Name" />
+              <input
+                type="text"
+                placeholder="First Name"
+                onChange={handleOnChange("name")}
+                value={formData.name}
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                onChange={handleOnChange("lastname")}
+                value={formData.lastname}
+              />
             </div>
-            <input type="text" placeholder="Professional Email Address" />
-            <input type="text" placeholder="Company Name" />
-            <textarea rows="4" placeholder="Additional Comments" />
+            <input
+              type="text"
+              placeholder="Professional Email Address"
+              onChange={handleOnChange("email")}
+              value={formData.email}
+            />
+            <input
+              type="text"
+              placeholder="Company Name"
+              onChange={handleOnChange("companyName")}
+              value={formData.companyName}
+            />
+            <textarea
+              rows="4"
+              placeholder="Additional Comments"
+              onChange={handleOnChange("comments")}
+              value={formData.comments}
+            />
           </form>
         </section>
       </main>
