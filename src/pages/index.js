@@ -63,7 +63,6 @@ const Home = () => {
           </span>
           <button className={styles.mainButton}>Call To Action</button>
         </section>
-
         <section className={styles.enterpriceBox}>
           <div className={styles.enterpriceTitleBox}>
             <h1>What Enterprise</h1>
@@ -116,7 +115,6 @@ const Home = () => {
             <button className={styles.mainButton}>Call To Action</button>
           </div>
         </section>
-
         <section className={styles.whatWeDoBox}>
           <div className={styles.whatWeDoBoxLeft}>
             <h1>What We Do</h1>
@@ -326,12 +324,14 @@ const Home = () => {
             <div>
               <input
                 type="text"
+                className={styles.textField}
                 placeholder="First Name"
                 onChange={handleOnChange("name")}
                 value={formData.name}
               />
               <input
                 type="text"
+                className={styles.textField}
                 placeholder="Last Name"
                 onChange={handleOnChange("lastname")}
                 value={formData.lastname}
@@ -339,17 +339,20 @@ const Home = () => {
             </div>
             <input
               type="text"
+              className={styles.textField}
               placeholder="Professional Email Address"
               onChange={handleOnChange("email")}
               value={formData.email}
             />
             <input
               type="text"
+              className={styles.textField}
               placeholder="Company Name"
               onChange={handleOnChange("companyName")}
               value={formData.companyName}
             />
             <textarea
+              className={styles.textareaField}
               rows="4"
               placeholder="Additional Comments"
               onChange={handleOnChange("comments")}

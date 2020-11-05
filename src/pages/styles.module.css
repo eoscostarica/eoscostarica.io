@@ -1,3 +1,17 @@
+.textField {
+  height: 55px;
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+
+.textareaField {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+}
+
 .mainContainer h1 {
   margin-bottom: 0px;
   font-size: 38px;
@@ -6,24 +20,11 @@
   color: #000000;
 }
 
-.mainContainer input[type="text"] {
-  height: 55px;
-  font-size: 20px;
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 10px;
-}
 .mainContainer h3 {
   line-height: 1.44;
   color: #000000;
   font-size: 20px;
   font-weight: bold;
-}
-
-.mainContainer textarea {
-  width: 100%;
-  font-size: 20px;
-  padding: 10px;
 }
 
 .topBox {
@@ -269,7 +270,7 @@
   flex-direction: column;
 }
 
-.contactUsBox div input[type="text"] {
+.contactUsBox div .textField {
   width: 100%;
 }
 
@@ -503,7 +504,7 @@
     flex-direction: row;
   }
 
-  .contactUsBox div input[type="text"] {
+  .contactUsBox div .textField {
     width: 48%;
   }
 
@@ -522,7 +523,7 @@
     font-size: 48px;
   }
 
-  .mainContainer input[type="text"] {
+  .textField {
     font-size: 25px;
     margin-bottom: 2rem;
     padding: 10px;
@@ -531,7 +532,7 @@
     font-size: 24px;
   }
 
-  .mainContainer textarea {
+  .textareaField {
     font-size: 20px;
   }
 
