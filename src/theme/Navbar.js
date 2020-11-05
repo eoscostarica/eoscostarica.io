@@ -21,7 +21,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           onClick={(event) => event.stopPropagation()}
         >
           <div className={styles.imgBox}>
-            <img src="../../static/img/eoscr-logo.png" alt="EOS CR LOGO" />
+            <img src={useBaseUrl("img/eoscr-logo.png")} alt="EOS CR LOGO" />
           </div>
           <ul>
             <li>
@@ -49,7 +49,8 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 const NavbarMenu = () => {
   const logo = useRef(0);
   const content = useRef(0);
-  const pathname = window.location.pathname;
+  const pathname =
+    typeof window !== "undefined" ? window.location.pathname : "/";
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const [isOpen, setIsOpen] = useState(false);
 
@@ -124,7 +125,7 @@ const NavbarMenu = () => {
       <div className={styles.boxLeft}>
         <img
           ref={logo}
-          src="../../static/img/eoscr-logo.png"
+          src={useBaseUrl("img/eoscr-logo.png")}
           alt="EOS CR LOGO"
         />
       </div>
