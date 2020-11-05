@@ -234,10 +234,10 @@ const Home = () => {
                 careers in rural regions.
               </span>
             </div>
-            <img src="../../static/img/team.png" alt="EOS CR LOGO" />
+            <img src={useBaseUrl("img/team.png")} alt="team" />
           </div>
           <div className={clsx(styles.knowRowBox, styles.colReverse)}>
-            <img src="../../static/img/company.png" alt="EOS CR LOGO" />
+            <img src={useBaseUrl("img/company.png")} alt="company" />
             <div>
               <h3>The company</h3>
               <span>
@@ -260,7 +260,7 @@ const Home = () => {
                 careers in rural regions.
               </span>
             </div>
-            <img src="../../static/img/technology.png" alt="EOS CR LOGO" />
+            <img src={useBaseUrl("img/technology.png")} alt="technology" />
           </div>
         </section>
         <section className={styles.linkProjectBox}>
@@ -272,7 +272,7 @@ const Home = () => {
         <section className={styles.knowEOSCRBox}>
           <h1>Some of Our Projects</h1>
           <div className={clsx(styles.knowRowBox, styles.colReverse)}>
-            <img src="../../static/img/latamlink2.png" alt="EOS CR LOGO" />
+            <img src={useBaseUrl("img/latamlink2.png")} alt="latamlink" />
             <div>
               <h3>LatamLink</h3>
               <span>
@@ -284,7 +284,7 @@ const Home = () => {
             </div>
           </div>
           <div className={clsx(styles.knowRowBox, styles.colReverse)}>
-            <img src="../../static/img/lifebank.png" alt="EOS CR LOGO" />
+            <img src={useBaseUrl("img/lifebank.png")} alt="lifebank" />
 
             <div>
               <h3>Lifebank</h3>
@@ -298,7 +298,7 @@ const Home = () => {
             </div>
           </div>
           <div className={clsx(styles.knowRowBox, styles.colReverse)}>
-            <img src="../../static/img/smartgate.png" alt="EOS CR LOGO" />
+            <img src={useBaseUrl("img/smartgate.png")} alt="smartgate" />
 
             <div>
               <h3>SMARTGATE</h3>
