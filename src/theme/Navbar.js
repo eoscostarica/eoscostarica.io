@@ -103,7 +103,7 @@ const NavbarMenu = () => {
       return;
     }
 
-    if (!isMobile && pathname !== '/') {
+    if (!isMobile && pathname !== '/' && pathname !== '/services') {
       const transformValue = `scale(0.4, 0.4)`;
 
       logo.current.style.WebkitTransform = transformValue;
