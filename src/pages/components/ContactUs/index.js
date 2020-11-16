@@ -64,6 +64,11 @@ const ContactUs = () => {
               value={formData.comments}
             />
           </form>
+          <span className={styles.contactUsMessage}>
+            We will only keep your information to reply to your message and not
+            be using it for any other purposes.
+          </span>
+          <button className={styles.mainButton}>Send</button>
         </div>
       </div>
     </section>
