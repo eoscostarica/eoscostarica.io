@@ -1,3 +1,7 @@
+.noMarginTop {
+  margin-top: 0 !important;
+}
+
 .textField {
   height: 55px;
   font-size: 20px;
