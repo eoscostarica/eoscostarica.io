@@ -1,15 +1,14 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-const ContactUsForm = lazy(() => import("./components/ContactUs"));
-const Accordion = lazy(() => import("./components/Accordion"));
-const WhatWeDoSvg = lazy(() => import("./SvgComponents/WhatWeDo"));
-const Industry1Svg = lazy(() => import("./SvgComponents/Industry1"));
-const Industry2Svg = lazy(() => import("./SvgComponents/Industry2"));
-const Industry3Svg = lazy(() => import("./SvgComponents/Industry3"));
-
+import ContactUsForm from "./components/ContactUs";
+import Accordion from "./components/Accordion";
+import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
+import Industry1Svg from "./SvgComponents/Industry1";
+import Industry2Svg from "./SvgComponents/Industry2";
+import Industry3Svg from "./SvgComponents/Industry3";
 import styles from "./styles.module.css";
 
 const Home = () => {
@@ -17,7 +16,7 @@ const Home = () => {
     <Layout>
       <main className={styles.mainContainer}>
         <section className={clsx(styles.sectionGray, styles.topBox)}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className="row">
               <div className={styles.titleBox}>
                 <h1>Enterprise Blockchain</h1>
@@ -34,7 +33,7 @@ const Home = () => {
           </div>
         </section>
         <section className={clsx(styles.sectionWhite, styles.enterpriceBox)}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className="row">
               <div className={styles.enterpriceTitleBox}>
                 <h1>What Enterprise</h1>
@@ -94,7 +93,7 @@ const Home = () => {
           </div>
         </section>
         <section className={clsx(styles.sectionGray, styles.whatWeDoBox)}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className="row">
               <div className={styles.whatWeDoBoxLeft}>
                 <h1>What We Do</h1>
@@ -105,41 +104,36 @@ const Home = () => {
                   and get the conversation started!
                 </span>
                 <div className={styles.mobileSvgIcon}>
-                  <Suspense fallback={<div>Loading...</div>}>
-                    <WhatWeDoSvg />
-                  </Suspense>
+                  <WhatWeDoSvg />
                 </div>
-                <Suspense fallback={<div>Loading...</div>}>
-                  <Accordion
-                    title="Software Development"
-                    content={`Our value proposition is to develop blockchain-based software to solve real-life problems. We have experience working with large global enterprises and SMEs, government entities and NGOs, and open-source projects across many industries. We adapt to our clients’ budgets and needs, without compromising thought leadership or quality. Our team is technology agnostic but specializes in the open-source blockchain technology EOSIO, launched by leading company block.one. `}
-                  />
-                  <Accordion
-                    title="Blockchain Infrastructure"
-                    content={`Lorem ipsum dolor sit amet, 
+
+                <Accordion
+                  title="Software Development"
+                  content={`Our value proposition is to develop blockchain-based software to solve real-life problems. We have experience working with large global enterprises and SMEs, government entities and NGOs, and open-source projects across many industries. We adapt to our clients’ budgets and needs, without compromising thought leadership or quality. Our team is technology agnostic but specializes in the open-source blockchain technology EOSIO, launched by leading company block.one. `}
+                />
+                <Accordion
+                  title="Blockchain Infrastructure"
+                  content={`Lorem ipsum dolor sit amet, 
                    consectetur adipiscing elit, 
                    sed do eiusmod tempor incididunt 
                    ut labore et dolore magna aliq`}
-                  />
-                  <Accordion
-                    title="Education and Training"
-                    content={`Lorem ipsum dolor sit amet, 
+                />
+                <Accordion
+                  title="Education and Training"
+                  content={`Lorem ipsum dolor sit amet, 
                    consectetur adipiscing elit, 
                    sed do eiusmod tempor incididunt 
                    ut labore et dolore magna aliq`}
-                  />
-                </Suspense>
+                />
               </div>
               <div className={styles.whatWeDoBoxRight}>
-                <Suspense fallback={<div>Loading...</div>}>
-                  <WhatWeDoSvg />
-                </Suspense>
+                <WhatWeDoSvg />
               </div>
             </div>
           </div>
         </section>
         <section className={styles.industryBox}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className="row">
               <div className={styles.industryTitleBox}>
                 <h1>Industries to Deploy Enterprise Blockchain</h1>
@@ -154,9 +148,7 @@ const Home = () => {
                 <div className={styles.industryColBox}>
                   <div>
                     <div className={styles.svgBox}>
-                      <Suspense fallback={<div>Loading...</div>}>
-                        <Industry1Svg />
-                      </Suspense>
+                      <Industry1Svg />
                     </div>
                     <h3>Payments and Transfers</h3>
                     <span>
@@ -170,9 +162,7 @@ const Home = () => {
                 <div className={styles.industryColBox}>
                   <div>
                     <div className={styles.svgBox}>
-                      <Suspense fallback={<div>Loading...</div>}>
-                        <Industry2Svg />
-                      </Suspense>
+                      <Industry2Svg />
                     </div>
                     <h3>Logistics and Supply Chain</h3>
                     <span>
@@ -186,9 +176,7 @@ const Home = () => {
                 <div className={styles.industryColBox}>
                   <div>
                     <div className={styles.svgBox}>
-                      <Suspense fallback={<div>Loading...</div>}>
-                        <Industry3Svg />
-                      </Suspense>
+                      <Industry3Svg />
                     </div>
                     <h3>Healthcare and Insurance</h3>
                     <span>
@@ -213,7 +201,7 @@ const Home = () => {
           </div>
         </section>
         <section className={styles.inquiresBox}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className={clsx("row", styles.messageBox)}>
               <h1>Do you have inquiries about blockchain?</h1>
               <button className={styles.mainButton}>Contact us</button>
@@ -221,7 +209,7 @@ const Home = () => {
           </div>
         </section>
         <section className={clsx(styles.sectionWhite, styles.knowEOSCRBox)}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className="row">
               <h1>Get to Know EOS Costa Rica</h1>
               <span>
@@ -308,7 +296,7 @@ const Home = () => {
         </section>
 
         <section className={clsx(styles.sectionGray, styles.linkProjectBox)}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className={clsx("row", styles.flexContent)}>
               <img alt="LatamLink" src={useBaseUrl("img/Group47.svg")} />
               <img alt="Edenia" src={useBaseUrl("img/Group17.svg")} />
@@ -318,7 +306,7 @@ const Home = () => {
           </div>
         </section>
         <section className={styles.knowEOSCRBox}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className="row">
               <h1>Some of Our Projects</h1>
               <div className={clsx(styles.knowRowBox, styles.colReverse)}>
@@ -396,7 +384,7 @@ const Home = () => {
           </div>
         </section>
         <section className={clsx(styles.inquiresBox, styles.secondaryBG)}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className={clsx("row", styles.messageBox)}>
               <h1>
                 Start working with us and implement blockchain technology.
@@ -405,9 +393,8 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <Suspense fallback={<div>Loading...</div>}>
-          <ContactUsForm />
-        </Suspense>
+
+        <ContactUsForm />
       </main>
     </Layout>
   );

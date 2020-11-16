@@ -1,11 +1,10 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-const ContactUsForm = lazy(() => import("./components/ContactUs"));
-const Accordion = lazy(() => import("./components/Accordion"));
-
+import ContactUsForm from "./components/ContactUs";
+import Accordion from "./components/Accordion";
 import styles from "./styles.module.css";
 
 const ServicePage = () => {
@@ -13,7 +12,7 @@ const ServicePage = () => {
     <Layout>
       <main className={styles.mainContainer}>
         <section className={clsx(styles.sectionGray, styles.topBox)}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className="row">
               <div className={styles.titleBox}>
                 <h1>Custom-made</h1>
@@ -37,7 +36,7 @@ const ServicePage = () => {
             styles.mainBG
           )}
         >
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className={clsx("row", styles.flexContent)}>
               <picture>
                 <source
@@ -77,7 +76,7 @@ const ServicePage = () => {
         </section>
 
         <section className={clsx(styles.sectionGray, styles.knowEOSCRBox)}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className="row">
               <h1>Blockchain Development Services</h1>
               <span>
@@ -96,37 +95,31 @@ const ServicePage = () => {
                 transaction-related costs. Learn more about enterprise
                 blockchain:
               </span>
-              <Suspense fallback={<div>Loading...</div>}>
-                <div className={styles.colBox}>
-                  <Accordion
-                    title="Boosted efficiency"
-                    content="Smart contracts can help you process transactions quickly, with added efficiency compared to cloud platforms, and less costly by reducing administrative fees by cutting the middleman."
-                  />
-                  <Accordion
-                    title="Improved security"
-                    content="The immutability and encryption capabilities of blockchain can reduce data manipulation, human error, and cyber frauds. Blockchains use hash functions – created by a mathematical function that transforms input data into code lines – that make blockchains difficult to hack."
-                  />
-                </div>
-              </Suspense>
-
-              <Suspense fallback={<div>Loading...</div>}>
-                <div className={styles.colBox}>
-                  <Accordion
-                    title="Added transparency"
-                    content="Blockchain enables a transparent and near real-time registry of data that can improve the trust and traceability of processes, such as in supply chain or insurance claims processing."
-                  />
-                  <Accordion
-                    title="Enhanced auditability"
-                    content="A permissioned blockchain allows an organization to control accesses and authorizations across the network, increasing accountability among the team, and facilitating auditability by external parties."
-                  />
-                </div>
-              </Suspense>
+              <div className={styles.colBox}>
+                <Accordion
+                  title="Boosted efficiency"
+                  content="Smart contracts can help you process transactions quickly, with added efficiency compared to cloud platforms, and less costly by reducing administrative fees by cutting the middleman."
+                />
+                <Accordion
+                  title="Improved security"
+                  content="The immutability and encryption capabilities of blockchain can reduce data manipulation, human error, and cyber frauds. Blockchains use hash functions – created by a mathematical function that transforms input data into code lines – that make blockchains difficult to hack."
+                />
+              </div>
+              <div className={styles.colBox}>
+                <Accordion
+                  title="Added transparency"
+                  content="Blockchain enables a transparent and near real-time registry of data that can improve the trust and traceability of processes, such as in supply chain or insurance claims processing."
+                />
+                <Accordion
+                  title="Enhanced auditability"
+                  content="A permissioned blockchain allows an organization to control accesses and authorizations across the network, increasing accountability among the team, and facilitating auditability by external parties."
+                />
+              </div>
             </div>
           </div>
         </section>
-
         <section className={styles.inquiresBox}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className={clsx("row", styles.messageBox)}>
               <h1>
                 Do you still have questions on how to integrate blockchain into
@@ -138,7 +131,7 @@ const ServicePage = () => {
         </section>
 
         <section className={clsx(styles.sectionWhite, styles.enterpriceBox)}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className="row">
               <div className={clsx(styles.enterpriceTitleBox, styles.titleH1)}>
                 <h2 className={styles.titleH1}>A Solution-based Approach</h2>
@@ -209,7 +202,7 @@ const ServicePage = () => {
           </div>
         </section>
         <section className={styles.inquiresBox}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className={clsx("row", styles.messageBox)}>
               <h1>
                 Do you want to learn more about our blockchain development
@@ -226,7 +219,7 @@ const ServicePage = () => {
             styles.flexColumn
           )}
         >
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className="row">
               <div className={clsx(styles.enterpriceTitleBox, styles.titleH1)}>
                 <h1>Blockchain Infrastructure</h1>
@@ -302,60 +295,55 @@ const ServicePage = () => {
                       src={useBaseUrl("img/default-image.webp")}
                     />
                   </picture>
-                  <Suspense fallback={<div>Loading...</div>}>
-                    <div className={styles.accordionBox}>
-                      <Accordion
-                        title="Network interconnectivity"
-                        content="Costa Rica has shores in both the Pacific and Atlantic oceans and connects three submarine fiber optic cables – ARCOS-1, MAYA-1, and Pan American Crossing (PAC) – that provide the majority of the bandwidth in the country. This interconnection provides real-time fail-over and redundancy to our infrastructure. Costa Rica is part of the six Central American nations interconnected via a terrestrial fiber-optic network (REDCA). Additionally, having direct connections to all upstream carriers allows the country’s network to prevent single-point failures."
-                      />
-                      <Accordion
-                        title="Stable political framework"
-                        content="Costa Rica is a country that values Human Rights, Peace, and Democracy. The country is one of the most stable and longest-lasting Democracies in America. Costa Rica abolished its army in 1948 to promote education and wellbeing and stands out on equality and innovation. Moreover, the Inter-American Institute of Human Rights based its headquarters in San José."
-                      />
-                      <Accordion
-                        title="Environmental awareness"
-                        content="Despite being a small country, Costa Rica houses more than 4% of the world’s biodiversity. The country’s leaders have been promoting ecology and sustainable development. Leading by example, more than 26% of its territory comprises of protected areas and National Parks."
-                      />
-                    </div>
-                  </Suspense>
+
+                  <div className={styles.accordionBox}>
+                    <Accordion
+                      title="Network interconnectivity"
+                      content="Costa Rica has shores in both the Pacific and Atlantic oceans and connects three submarine fiber optic cables – ARCOS-1, MAYA-1, and Pan American Crossing (PAC) – that provide the majority of the bandwidth in the country. This interconnection provides real-time fail-over and redundancy to our infrastructure. Costa Rica is part of the six Central American nations interconnected via a terrestrial fiber-optic network (REDCA). Additionally, having direct connections to all upstream carriers allows the country’s network to prevent single-point failures."
+                    />
+                    <Accordion
+                      title="Stable political framework"
+                      content="Costa Rica is a country that values Human Rights, Peace, and Democracy. The country is one of the most stable and longest-lasting Democracies in America. Costa Rica abolished its army in 1948 to promote education and wellbeing and stands out on equality and innovation. Moreover, the Inter-American Institute of Human Rights based its headquarters in San José."
+                    />
+                    <Accordion
+                      title="Environmental awareness"
+                      content="Despite being a small country, Costa Rica houses more than 4% of the world’s biodiversity. The country’s leaders have been promoting ecology and sustainable development. Leading by example, more than 26% of its territory comprises of protected areas and National Parks."
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-
         <section className={styles.inquiresBox}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className={clsx("row", styles.messageBox)}>
               <h1>Start leveraging the power of blockchain infrastructures.</h1>
               <button className={styles.mainButton}>Contact us</button>
             </div>
           </div>
         </section>
-
         <section className={clsx(styles.sectionWhite, styles.enterpriceBox)}>
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className="row">
               <div className={styles.enterpriceTitleBox}>
                 <h1>Education and Training</h1>
 
                 <div className={styles.colBox}>
-                  <Suspense fallback={<div>Loading...</div>}>
-                    <div>
-                      <Accordion
-                        title="Executive Workshops"
-                        content="We know that innovative technologies, such as blockchain, may have a steep learning curve. So, we offer workshops on blockchain and EOSIO technology to C-suite executives and teams that want to keep up to date and learn more about blockchain and enterprise use cases. These workshops include multimodal content such as videos, lectures, and use cases. Download the course information here."
-                      />
-                      <Accordion
-                        title="Training for Developers"
-                        content="We also provide training and education resources for new talents that wish to kickstart their career in blockchain and in the EOSIO protocol. We have assembled a web portal that includes learning materials and guides for developers. Check them out here. Also, ask us about our training courses for companies and teams."
-                      />
-                      <Accordion
-                        title="Community Building"
-                        content="We help promote the blockchain and EOSIO ecosystems by hosting and attending community activities. We also speak about blockchain and participate in events related to technology and innovation. Every year, we host a team-building event called EOSurf that takes our operations to the beach for several days to switch computers and code for surf and yoga lessons."
-                      />
-                    </div>
-                  </Suspense>
+                  <div>
+                    <Accordion
+                      title="Executive Workshops"
+                      content="We know that innovative technologies, such as blockchain, may have a steep learning curve. So, we offer workshops on blockchain and EOSIO technology to C-suite executives and teams that want to keep up to date and learn more about blockchain and enterprise use cases. These workshops include multimodal content such as videos, lectures, and use cases. Download the course information here."
+                    />
+                    <Accordion
+                      title="Training for Developers"
+                      content="We also provide training and education resources for new talents that wish to kickstart their career in blockchain and in the EOSIO protocol. We have assembled a web portal that includes learning materials and guides for developers. Check them out here. Also, ask us about our training courses for companies and teams."
+                    />
+                    <Accordion
+                      title="Community Building"
+                      content="We help promote the blockchain and EOSIO ecosystems by hosting and attending community activities. We also speak about blockchain and participate in events related to technology and innovation. Every year, we host a team-building event called EOSurf that takes our operations to the beach for several days to switch computers and code for surf and yoga lessons."
+                    />
+                  </div>
                   <picture>
                     <source
                       className={styles.defaultImg}
@@ -372,7 +360,6 @@ const ServicePage = () => {
             </div>
           </div>
         </section>
-
         <section
           className={clsx(
             styles.sectionGray,
@@ -380,15 +367,21 @@ const ServicePage = () => {
             styles.flexColumn
           )}
         >
-          <div className="container">
+          <div className={clsx("container", styles.noMarginTop)}>
             <div className="row">
-              <div className={clsx(styles.enterpriceTitleBox, styles.deplyblockchainBox)}>
-                <h1 className={styles.titleH1}>How Can Your Industry Deploy Blockchain?</h1>
+              <div
+                className={clsx(
+                  styles.enterpriceTitleBox,
+                  styles.deplyblockchainBox
+                )}
+              >
+                <h1 className={styles.titleH1}>
+                  How Can Your Industry Deploy Blockchain?
+                </h1>
                 <span>
                   Blockchain technology has the capabilities to transform many
                   industries, including:
                 </span>
-
                 <div className={styles.contentDefaultImg}>
                   <picture>
                     <source
@@ -432,9 +425,7 @@ const ServicePage = () => {
             </div>
           </div>
         </section>
-        <Suspense fallback={<div>Loading...</div>}>
-          <ContactUsForm />
-        </Suspense>
+        <ContactUsForm />
       </main>
     </Layout>
   );
