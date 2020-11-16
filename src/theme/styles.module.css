@@ -196,7 +196,6 @@
 @media (min-width: 769px) {
   .customMenu {
     align-items: flex-start;
-    /* font-size: 90px; */
     height: 75px;
     box-shadow: none;
     padding-Top: 1rem;
