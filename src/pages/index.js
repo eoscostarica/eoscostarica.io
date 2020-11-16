@@ -1,14 +1,15 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-import ContactUsForm from "./components/ContactUs";
-import Accordion from "./components/Accordion";
-import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
-import Industry1Svg from "./SvgComponents/Industry1";
-import Industry2Svg from "./SvgComponents/Industry2";
-import Industry3Svg from "./SvgComponents/Industry3";
+const ContactUsForm = lazy(() => import("./components/ContactUs"));
+const Accordion = lazy(() => import("./components/Accordion"));
+const WhatWeDoSvg = lazy(() => import("./SvgComponents/WhatWeDo"));
+const Industry1Svg = lazy(() => import("./SvgComponents/Industry1"));
+const Industry2Svg = lazy(() => import("./SvgComponents/Industry2"));
+const Industry3Svg = lazy(() => import("./SvgComponents/Industry3"));
+
 import styles from "./styles.module.css";
 
 const Home = () => {
@@ -28,7 +29,7 @@ const Home = () => {
                 boost efficiency, and reduce costs. Start transforming your
                 organization by leveraging enterprise blockchain networks.
               </span>
-              <button className={styles.mainButton}>Call To Action</button>
+              <button className={styles.mainButton}>Learn more</button>
             </div>
           </div>
         </section>
@@ -37,7 +38,7 @@ const Home = () => {
             <div className="row">
               <div className={styles.enterpriceTitleBox}>
                 <h1>What Enterprise</h1>
-                <h1>Blockchain Can DoYour Needs</h1>
+                <h1>Blockchain Can Do</h1>
               </div>
               <div className={styles.colBox}>
                 <div className={styles.enterpriceInfoBox}>
@@ -84,7 +85,10 @@ const Home = () => {
                 </div>
               </div>
               <div className={styles.btnBox}>
-                <button className={styles.mainButton}>Call To Action</button>
+                <span>
+                  Learn more about how blockchain can improve your operations.
+                </span>
+                <button className={styles.mainButton}>Read more here</button>
               </div>
             </div>
           </div>
@@ -94,30 +98,42 @@ const Home = () => {
             <div className="row">
               <div className={styles.whatWeDoBoxLeft}>
                 <h1>What We Do</h1>
+                <span>
+                  We make the most of enterprise blockchain technology and
+                  design solutions for the real world. Our team offers services
+                  tailored to our clients’ needs and expectations. Contact us
+                  and get the conversation started!
+                </span>
                 <div className={styles.mobileSvgIcon}>
-                  <WhatWeDoSvg />
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <WhatWeDoSvg />
+                  </Suspense>
                 </div>
-                <Accordion
-                  title="Software Development"
-                  content={`Our value proposition is to develop blockchain-based software to solve real-life problems. We have experience working with large global enterprises and SMEs, government entities and NGOs, and open-source projects across many industries. We adapt to our clients’ budgets and needs, without compromising thought leadership or quality. Our team is technology agnostic but specializes in the open-source blockchain technology EOSIO, launched by leading company block.one. `}
-                />
-                <Accordion
-                  title="Blockchain Infrastructure"
-                  content={`Lorem ipsum dolor sit amet, 
+                <Suspense fallback={<div>Loading...</div>}>
+                  <Accordion
+                    title="Software Development"
+                    content={`Our value proposition is to develop blockchain-based software to solve real-life problems. We have experience working with large global enterprises and SMEs, government entities and NGOs, and open-source projects across many industries. We adapt to our clients’ budgets and needs, without compromising thought leadership or quality. Our team is technology agnostic but specializes in the open-source blockchain technology EOSIO, launched by leading company block.one. `}
+                  />
+                  <Accordion
+                    title="Blockchain Infrastructure"
+                    content={`Lorem ipsum dolor sit amet, 
                    consectetur adipiscing elit, 
                    sed do eiusmod tempor incididunt 
                    ut labore et dolore magna aliq`}
-                />
-                <Accordion
-                  title="Education and Training"
-                  content={`Lorem ipsum dolor sit amet, 
+                  />
+                  <Accordion
+                    title="Education and Training"
+                    content={`Lorem ipsum dolor sit amet, 
                    consectetur adipiscing elit, 
                    sed do eiusmod tempor incididunt 
                    ut labore et dolore magna aliq`}
-                />
+                  />
+                </Suspense>
               </div>
               <div className={styles.whatWeDoBoxRight}>
-                <WhatWeDoSvg />
+                <Suspense fallback={<div>Loading...</div>}>
+                  <WhatWeDoSvg />
+                </Suspense>
               </div>
             </div>
           </div>
@@ -126,8 +142,7 @@ const Home = () => {
           <div className="container">
             <div className="row">
               <div className={styles.industryTitleBox}>
-                <h1>Industries to Deploy</h1>
-                <h1>Enterprise Blockchain</h1>
+                <h1>Industries to Deploy Enterprise Blockchain</h1>
               </div>
               <span>
                 Blockchain can transform and remodel countless industries. The
@@ -139,7 +154,9 @@ const Home = () => {
                 <div className={styles.industryColBox}>
                   <div>
                     <div className={styles.svgBox}>
-                      <Industry1Svg />
+                      <Suspense fallback={<div>Loading...</div>}>
+                        <Industry1Svg />
+                      </Suspense>
                     </div>
                     <h3>Payments and Transfers</h3>
                     <span>
@@ -148,12 +165,14 @@ const Home = () => {
                       real-time auditing.
                     </span>
                   </div>
-                  <button className={styles.mainButton}>Call To Action</button>
+                  <button className={styles.mainButton}>Read more</button>
                 </div>
                 <div className={styles.industryColBox}>
                   <div>
                     <div className={styles.svgBox}>
-                      <Industry2Svg />
+                      <Suspense fallback={<div>Loading...</div>}>
+                        <Industry2Svg />
+                      </Suspense>
                     </div>
                     <h3>Logistics and Supply Chain</h3>
                     <span>
@@ -162,12 +181,14 @@ const Home = () => {
                       real-time auditing.
                     </span>
                   </div>
-                  <button className={styles.mainButton}>Call To Action</button>
+                  <button className={styles.mainButton}>Read more</button>
                 </div>
                 <div className={styles.industryColBox}>
                   <div>
                     <div className={styles.svgBox}>
-                      <Industry3Svg />
+                      <Suspense fallback={<div>Loading...</div>}>
+                        <Industry3Svg />
+                      </Suspense>
                     </div>
                     <h3>Healthcare and Insurance</h3>
                     <span>
@@ -176,7 +197,7 @@ const Home = () => {
                       ideal solution for registering sensitive information.
                     </span>
                   </div>
-                  <button className={styles.mainButton}>Call To Action</button>
+                  <button className={styles.mainButton}>Read more</button>
                 </div>
               </div>
               <span>
@@ -195,7 +216,7 @@ const Home = () => {
           <div className="container">
             <div className={clsx("row", styles.messageBox)}>
               <h1>Do you have inquiries about blockchain?</h1>
-              <button className={styles.mainButton}>Call To Action</button>
+              <button className={styles.mainButton}>Contact us</button>
             </div>
           </div>
         </section>
@@ -222,10 +243,30 @@ const Home = () => {
                     regions.
                   </span>
                 </div>
-                <img src={useBaseUrl("img/team.png")} alt="team" />
+                <picture>
+                  <source
+                    className={styles.knowEOSCRImg}
+                    srcSet={useBaseUrl("img/team.jp2")}
+                    type="image/jp2"
+                  />
+                  <img
+                    className={styles.knowEOSCRImg}
+                    src={useBaseUrl("img/team.webp")}
+                  />
+                </picture>
               </div>
               <div className={clsx(styles.knowRowBox, styles.colReverse)}>
-                <img src={useBaseUrl("img/company.png")} alt="company" />
+                <picture>
+                  <source
+                    className={styles.knowEOSCRImg}
+                    srcSet={useBaseUrl("img/company.jp2")}
+                    type="image/jp2"
+                  />
+                  <img
+                    className={styles.knowEOSCRImg}
+                    src={useBaseUrl("img/company.webp")}
+                  />
+                </picture>
                 <div>
                   <h3>The company</h3>
                   <span>
@@ -250,7 +291,17 @@ const Home = () => {
                     regions.
                   </span>
                 </div>
-                <img src={useBaseUrl("img/technology.png")} alt="technology" />
+                <picture>
+                  <source
+                    className={styles.knowEOSCRImg}
+                    srcSet={useBaseUrl("img/technology.jp2")}
+                    type="image/jp2"
+                  />
+                  <img
+                    className={styles.knowEOSCRImg}
+                    src={useBaseUrl("img/technology.webp")}
+                  />
+                </picture>
               </div>
             </div>
           </div>
@@ -271,7 +322,17 @@ const Home = () => {
             <div className="row">
               <h1>Some of Our Projects</h1>
               <div className={clsx(styles.knowRowBox, styles.colReverse)}>
-                <img src={useBaseUrl("img/latamlink2.png")} alt="latamlink" />
+                <picture>
+                  <source
+                    className={styles.knowEOSCRProjectImg}
+                    srcSet={useBaseUrl("img/latamlink2.jp2")}
+                    type="image/jp2"
+                  />
+                  <img
+                    className={styles.knowEOSCRProjectImg}
+                    src={useBaseUrl("img/latamlink2.webp")}
+                  />
+                </picture>
                 <div>
                   <h3>LatamLink</h3>
                   <span>
@@ -284,8 +345,17 @@ const Home = () => {
                 </div>
               </div>
               <div className={clsx(styles.knowRowBox, styles.colReverse)}>
-                <img src={useBaseUrl("img/lifebank.png")} alt="lifebank" />
-
+                <picture>
+                  <source
+                    className={styles.knowEOSCRProjectImg}
+                    srcSet={useBaseUrl("img/lifebank.jp2")}
+                    type="image/jp2"
+                  />
+                  <img
+                    className={styles.knowEOSCRProjectImg}
+                    src={useBaseUrl("img/lifebank.webp")}
+                  />
+                </picture>
                 <div>
                   <h3>Lifebank</h3>
                   <span>
@@ -299,8 +369,17 @@ const Home = () => {
                 </div>
               </div>
               <div className={clsx(styles.knowRowBox, styles.colReverse)}>
-                <img src={useBaseUrl("img/smartgate.png")} alt="smartgate" />
-
+                <picture>
+                  <source
+                    className={styles.knowEOSCRProjectImg}
+                    srcSet={useBaseUrl("img/smartgate.jp2")}
+                    type="image/jp2"
+                  />
+                  <img
+                    className={styles.knowEOSCRProjectImg}
+                    src={useBaseUrl("img/smartgate.webp")}
+                  />
+                </picture>
                 <div>
                   <h3>SMARTGATE</h3>
                   <span>
@@ -322,11 +401,13 @@ const Home = () => {
               <h1>
                 Start working with us and implement blockchain technology.
               </h1>
-              <button className={styles.mainButton}>Call To Action</button>
+              <button className={styles.mainButton}>Contact us</button>
             </div>
           </div>
         </section>
-        <ContactUsForm />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ContactUsForm />
+        </Suspense>
       </main>
     </Layout>
   );

@@ -14,6 +14,30 @@
 
 .defaultImg {
   width: 300px;
+  height: 300px;
+  max-width: 300px;
+  margin: 1rem 0;
+}
+
+.accordionBox {
+  width: 100%;
+}
+
+.defaultImgCarousel {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.knowEOSCRImg {
+  margin-top: 1rem;
+  width: 100%;
+  height: 214px;
+}
+
+.knowEOSCRProjectImg {
+  margin-top: 1rem;
+  width: 100%;
+  height: 169px;
 }
 
 .mainContainer h1 {
@@ -22,6 +46,10 @@
   font-weight: 500;
   line-height: 1;
   color: #000000;
+}
+
+.mainContainer h2 {
+  margin: 1rem 0;
 }
 
 .mainContainer h3 {
@@ -52,9 +80,12 @@
   flex-direction: column;
 }
 
-.flexContent {
-  justify-content: space-between;
+.deplyblockchainBox {
+  width: 100%;
+}
 
+.flexContent {
+  justify-content: space-between !important;
 }
 
 .topBox {
@@ -132,11 +163,16 @@
   padding: 1rem;
 }
 
-.enterpriceBox .btnBox {
+.btnBox {
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   width: 100%;
-  padding: 3rem 0;
+  padding: 2rem 0;
+}
+
+.btnBox span {
+  margin-bottom: 1rem;
 }
 
 .enterpriceTitleBox {
@@ -152,6 +188,7 @@
 .contentDefaultImg {
   display: flex;
   justify-content: space-between;
+  margin: 1rem 0;
 }
 
 .colBox h3 {
@@ -232,6 +269,10 @@
   margin-bottom: 1rem;
 }
 
+.titleH1 {
+  margin-bottom: 1rem !important;
+}
+
 .knowEOSCRBox .knowRowBox {
   display: flex;
   justify-content: space-between;
@@ -248,11 +289,6 @@
 
 .knowEOSCRBox .colReverse {
   flex-direction: column-reverse;
-}
-
-.knowRowBox img {
-  width: 100%;
-  margin-top: 1rem;
 }
 
 .linkProjectBox {
@@ -278,8 +314,8 @@
 }
 
 .mainButton {
-  width: 80%;
-  height: 80px;
+  width: 180px;
+  height: 60px;
   border: solid 1px #979797;
   background-color: #5484b3;
   font-size: 21px;
@@ -290,22 +326,27 @@
   cursor: pointer;
 }
 
+.contactUsMessage {
+  margin: 1rem 0;
+  font-style: italic;
+}
+
 /* Accordion Style Start */
 .arrowUp {
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 21px solid #5484b3;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 14px solid #5484b3;
   margin-left: 1rem;
 }
 
 .arrowDown {
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 21px solid #5484b3;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 14px solid #5484b3;
   margin-left: 1rem;
 }
 
@@ -398,7 +439,7 @@
   }
 
   .topBox {
-    padding: 12rem 15rem 2rem 15rem;
+    padding: 8rem 15rem 2rem 15rem;
   }
 
   .enterpriceBox {
@@ -471,6 +512,7 @@
 
   .messageBox {
     flex-direction: row;
+    align-items: center;
   }
 
   .knowEOSCRBox {
@@ -495,9 +537,16 @@
     flex-direction: row;
   }
 
-  .knowRowBox img {
+  .knowEOSCRImg {
     margin-top: 0rem;
-    width: 40%;
+    width: 450px;
+    height: 293px;
+  }
+
+  .knowEOSCRProjectImg {
+    margin-top: 1rem;
+    width: 430px;
+    height: 225px;
   }
 
   .linkProjectBox {
@@ -517,8 +566,19 @@
     width: 48%;
   }
 
-  .mainButton {
-    width: 254px;
+  .btnBox {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .btnBox span {
+    margin-bottom: 0;
+    margin-right: 1rem;
+    width: 350px;
+  }
+
+  .accordionBox {
+    width: 375px;
   }
 }
 
@@ -546,7 +606,7 @@
   }
 
   .topBox {
-    padding: 12rem 3rem 2rem 3rem;
+    padding: 7rem 3rem 2rem 3rem;
     margin-bottom: 1rem;
   }
 
@@ -618,12 +678,9 @@
     width: 60%;
   }
 
-  .inquiresBox button {
-    width: 40%;
-  }
-
   .messageBox {
     flex-direction: row;
+    align-items: center;
   }
 
   .knowEOSCRBox {
@@ -648,9 +705,15 @@
     flex-direction: row;
   }
 
-  .knowRowBox img {
+  .knowEOSCRImg {
     margin-top: 0rem;
-    width: 40%;
+    width: 318px;
+    height: 226px;
+  }
+  .knowEOSCRProjectImg {
+    margin-top: 1rem;
+    width: 306px;
+    height: 175px;
   }
 
   .contactUsBox {
@@ -664,5 +727,20 @@
 
   .contactUsBox .completeName input[type="text"] {
     width: 48%;
+  }
+
+  .btnBox {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .btnBox span {
+    margin-bottom: 0;
+    margin-right: 1rem;
+    width: 300px;
+  }
+
+  .accordionBox {
+    width: 375px;
   }
 }
