@@ -34,7 +34,13 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               <a href={useBaseUrl("/about")}>About</a>
             </li>
             <li>
-              <a href={useBaseUrl("/bp")}>Bp</a>
+              <a href={useBaseUrl("/industries")}>Industries</a>
+            </li>
+            <li>
+              <a href={useBaseUrl("/projects")}>Projects</a>
+            </li>
+            <li>
+              <a href={useBaseUrl("/block-producer")}>Bp</a>
             </li>
             <li>
               <a href={useBaseUrl("/blog")}>Blog</a>
@@ -94,12 +100,32 @@ const NavbarMenu = () => {
           </li>
           <li>
             <a
-              href={useBaseUrl("/bp")}
+              href={useBaseUrl("/block-producer")}
               className={clsx({
-                [styles.selected]: pathname.includes("/bp"),
+                [styles.selected]: pathname.includes("/block-producer"),
               })}
             >
               BP
+            </a>
+          </li>
+          <li>
+            <a
+              href={useBaseUrl("/industries")}
+              className={clsx({
+                [styles.selected]: pathname.includes("/industries"),
+              })}
+            >
+              Industries
+            </a>
+          </li>
+          <li>
+            <a
+              href={useBaseUrl("/projects")}
+              className={clsx({
+                [styles.selected]: pathname.includes("/projects"),
+              })}
+            >
+              Projects
             </a>
           </li>
           <li>
