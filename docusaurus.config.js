@@ -30,4 +30,7 @@ module.exports = {
       },
     ],
   ],
+    googleAnalytics: {
+      trackingID: "UA-173987-66",
+    },
 };
