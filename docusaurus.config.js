@@ -1,12 +1,12 @@
 module.exports = {
-  title: 'EOS Costa Rica',
+  title: 'EOSIO Enterprise Blockchain Development Services -  EOS Costa Rica',
   tagline: '',
-  url: 'https://github.com/eoscostarica',
+  url: 'https://eoscostarica.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
-  organizationName: 'https://github.com/eoscostarica/eoscostarica.io',
-  projectName: 'eoscostarica',
+  organizationName: 'eoscostarica',
+  projectName: 'eoscostarica.io',
   presets: [
     [
       '@docusaurus/preset-classic',
