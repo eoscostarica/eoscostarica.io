@@ -21,9 +21,8 @@ const Home = () => {
           boxStyle={styles.noMarginTop}
         >
           <div className={styles.titleBox}>
-            <h1>Enterprise Blockchain</h1>
-            <h1>Solutions That</h1>
-            <h1>Fit Your Needs</h1>
+            <h1>Enterprise Blockchain Solutions</h1>
+            <h1>That Fit Your Needs</h1>
           </div>
           <span>
             Deploy EOSIO blockchain technology to improve transparency, boost
@@ -65,19 +64,20 @@ const Home = () => {
             <div className={styles.enterpriceInfoBox}>
               <h3>Enhance security and trust</h3>
               <span>
-                A blockchain registers transactions in chronological order,
-                enabling full traceability of data that can be accessed in near
-                real-time. These registries are immutable, meaning they cannot
-                be altered, thus offering higher transparency in processes.
+                Blockchain’s encryption capabilities offer new layers of
+                privacy and security for registering data. A blockchain is
+                decentralized, so ledgers are shared by a network of computers, 
+                minimizing cyberattacks, enabling better management of authorizations,
+              and increasing trust among parties.
               </span>
             </div>
             <div className={styles.enterpriceInfoBox}>
               <h3>Integrate with other technologies</h3>
               <span>
-                A blockchain registers transactions in chronological order,
-                enabling full traceability of data that can be accessed in near
-                real-time. These registries are immutable, meaning they cannot
-                be altered, thus offering higher transparency in processes.
+                We define blockchain as a fundamental technology that can
+                leverage other techs from the industry 4.0. For instance,
+                machine learning, robotics, and VR can integrate blockchain 
+                into their solutions to record large amounts of data. 
               </span>
             </div>
           </div>
@@ -110,17 +110,11 @@ const Home = () => {
             />
             <Accordion
               title="Blockchain Infrastructure"
-              content={`Lorem ipsum dolor sit amet, 
-                   consectetur adipiscing elit, 
-                   sed do eiusmod tempor incididunt 
-                   ut labore et dolore magna aliq`}
+              content={`We offer top-grade infrastructure for blockchain networks and API endpoints from our datacenter in San José, Costa Rica. Costa Rica is a country with high political stability and a long-lasting democracy. Our strategic location in the middle of the American continent offers convenient network interconnectivity. We also configure, host, and maintain blockchain nodes available for private and public networks with 24/7 monitoring and uptime. Read more about this. `}
             />
             <Accordion
               title="Education and Training"
-              content={`Lorem ipsum dolor sit amet, 
-                   consectetur adipiscing elit, 
-                   sed do eiusmod tempor incididunt 
-                   ut labore et dolore magna aliq`}
+              content={`In today’s world, new technologies are leading the way to transform many industries. We offer workshops on blockchain and EOSIO to C-suite executives and teams that want to keep up to date and learn more about what is blockchain and enterprise use cases. We also provide training and education resources for new talents that wish to kickstart their career in blockchain.`}
             />
           </div>
           <div className={styles.whatWeDoBoxRight}>
@@ -147,9 +141,10 @@ const Home = () => {
                 </div>
                 <h3>Payments and Transfers</h3>
                 <span>
-                  Blockchain enables an efficient and secure way to register
-                  transactions that can facilitate payments and offer near
-                  real-time auditing.
+                  Blockchain enables an efficient and secure way
+                  to register transactions that can facilitate
+                  payments and offer near real-time auditing
+                  with encryption to reduce data breaches.
                 </span>
               </div>
               <button className={styles.mainButton}>Read more</button>
@@ -161,9 +156,11 @@ const Home = () => {
                 </div>
                 <h3>Logistics and Supply Chain</h3>
                 <span>
-                  Blockchain enables an efficient and secure way to register
-                  transactions that can facilitate payments and offer near
-                  real-time auditing.
+                   In an industry that involves dozens of
+                   stakeholders, the capabilities of blockchain 
+                   and smart contracts for traceability,
+                   authorizations management, and automation can make a 
+                   great ally. 
                 </span>
               </div>
               <button className={styles.mainButton}>Read more</button>
@@ -173,11 +170,12 @@ const Home = () => {
                 <div className={clsx(styles.svgBox, styles.svgBoxHeight)}>
                   <Industry3Svg />
                 </div>
-                <h3>Healthcare and Insurance</h3>
+                <h3>Gaming</h3>
                 <span>
-                  Smart contracts can automate insurance claims, and encryption
-                  can reduce data breaches, making blockchain an ideal solution
-                  for registering sensitive information.
+                   Blockchain enables a better way to transfer, valorize, 
+                   and collect digital in-game assets. Also, its capabilities 
+                   to increase security and offer a more efficient way for 
+                   transactions can level-up online gaming.
                 </span>
               </div>
               <button className={styles.mainButton}>Read more</button>
@@ -207,8 +205,8 @@ const Home = () => {
         >
           <h1>Get to Know EOS Costa Rica</h1>
           <span>
-            EOS Costa Rica is a spinoff of a company with over three decades of
-            developing technologies. We develop blockchain-based solutions
+            EOS Costa Rica is a spinoff of a company with over three decades
+            of developing technologies. We develop blockchain-based solutions
             deploying the EOSIO protocol, provide blockchain infrastructures,
             and offer training and workshops. Let’s get the conversation
             started!
@@ -251,11 +249,13 @@ const Home = () => {
             <div>
               <h3>The company</h3>
               <span>
-                We have assembled a Latin American team with a problem-solving
-                mindset and expertise in their knowledge areas. We operate as a
-                distributed team in an Agile environment and make a concerted
-                effort to hire talent outside of urban areas to support tech
-                careers in rural regions.
+                During the 1980s, we developed the first BBS in the country, a
+                precursor to the internet. After decades of offering internet
+                infrastructure, hosting, and development services, we began
+                providing infrastructure for public blockchain networks. We were
+                there during the genesis of the EOS Mainnet and started
+                deploying the EOSIO protocol since its launch, accruing
+                decades of experience with innovative technologies. 
               </span>
             </div>
           </div>
@@ -263,11 +263,12 @@ const Home = () => {
             <div>
               <h3>The technology</h3>
               <span>
-                We have assembled a Latin American team with a problem-solving
-                mindset and expertise in their knowledge areas. We operate as a
-                distributed team in an Agile environment and make a concerted
-                effort to hire talent outside of urban areas to support tech
-                careers in rural regions.
+                We focus on deploying EOSIO technology, an open-source
+                protocol launched in 2018 by leading tech company
+                block.one. EOSIO is powered by the native token EOS and offers
+                improved scalability due to its high transaction speed, flexibility
+                in public and private networks, and energy efficiency compared
+                to other blockchains, making it a more eco-friendly option.
               </span>
             </div>
             <picture>
@@ -298,6 +299,10 @@ const Home = () => {
           boxStyle={styles.noMarginTop}
         >
           <h1>Some of Our Projects</h1>
+             <span>
+            Get to know some of our latest projects deploying the EOSIO
+            blockchain protocol. Visit the full list here.
+          </span>
           <div className={clsx(styles.knowRowBox, styles.colReverse)}>
             <picture>
               <source
@@ -335,11 +340,10 @@ const Home = () => {
             <div>
               <h3>Lifebank</h3>
               <span>
-                We have assembled a Latin American team with a problem-solving
-                mindset and expertise in their knowledge areas. We operate as a
-                distributed team in an Agile environment and make a concerted
-                effort to hire talent outside of urban areas to support tech
-                careers in rural regions.
+                An open-source blockchain-based app that incentivizes blood donations by
+                creating a virtuous circle of value between donors, blood banks, and local
+                businesses, leveraged by a token economy. Winner of the “Coding for 
+                Change” challenge by block.one. Read more. 
               </span>
             </div>
           </div>
@@ -358,11 +362,9 @@ const Home = () => {
             <div>
               <h3>SMARTGATE</h3>
               <span>
-                We have assembled a Latin American team with a problem-solving
-                mindset and expertise in their knowledge areas. We operate as a
-                distributed team in an Agile environment and make a concerted
-                effort to hire talent outside of urban areas to support tech
-                careers in rural regions.
+                A blockchain-based platform that provides solutions for in-out gate activity
+                for the container industry and real-time transmission of relevant data required for
+                proper interchange in port logistics. Read more.
               </span>
             </div>
           </div>
