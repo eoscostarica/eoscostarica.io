@@ -3,10 +3,10 @@
 	"org": {
 		"candidate_name": "EOSCostaRica",
 		"website": "https://eoscostarica.io",
-		"code_of_conduct": "https://eoscostarica.io/en/transparency/#code_of_conduct",
-		"ownership_disclosure": "https://eoscostarica.io/en/transparency/#ownership_disclosure",
+		"code_of_conduct": "https://eoscostarica.io/block-producer/#code-of-conduct",
+		"ownership_disclosure": "https://eoscostarica.io/block-producer/#ownership-disclosure",
 		"email": "bp@eosio.cr",
-		"github_user": ["edgar-eoscostarica", "adriexnet", "tetogomez", "kecoco16", "murillojorge", "danazkari", "justincast", "kuronosec", "xavier506"],
+		"github_user": ["edgar-eoscostarica", "adriexnet", "tetogomez", "kecoco16", "murillojorge", "justincast", "kuronosec", "xavier506"],
 		"chain_resources": "",
 		"other_resources": ["https://evodex.io", "https://eosrate.io", "https://guide.eoscostarica.io", "https://guias.eoscostarica.io"],
 		"branding": {
