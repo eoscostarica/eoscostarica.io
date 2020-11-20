@@ -30,7 +30,9 @@ module.exports = {
       },
     ],
   ],
+  themeConfig: {
     googleAnalytics: {
       trackingID: "UA-173987-66",
-    },
+    }
+  }
 };
