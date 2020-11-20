@@ -24,7 +24,7 @@ const About = () => {
         >
           <div className={styles.titleBox}>
             <h1>
-              EOS Costa Rica Develops Blockchain - based Enterprise Solutions
+              EOS Costa Rica Develops Blockchain-based Enterprise Solutions
             </h1>
           </div>
           <span>
@@ -101,7 +101,7 @@ const About = () => {
                     blockchain nodes and networks that can meet your
                     organization's requirements and needs.
                   </span>
-                  <br />
+                  <br /><br />
                   <span>
                     We offer workshops to C-suite executives and teams. We also
                     provide training for new talents and promote the region's
