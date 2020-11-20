@@ -3,14 +3,13 @@ import clsx from "clsx";
 
 import styles from '../../styles.module.css'
 
-const Accordion = ({ content, title }) => {
+const Accordion = ({ content, title, titleStyle }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={styles.accordion}>
-      <div>
         <div className={styles.title} onClick={() => setIsOpen(!isOpen)}>
-          <span className={styles.titleText}>{title}</span>
+          <span className={clsx(styles.titleText, titleStyle)}>{title}</span>
           <div className={isOpen ? styles.arrowUp : styles.arrowDown} />
         </div>
         <div className={clsx(styles.content, { [styles.contentOpen]: isOpen })}>
@@ -22,7 +21,6 @@ const Accordion = ({ content, title }) => {
             {content}
           </div>
         </div>
-      </div>
     </div>
   );
 };

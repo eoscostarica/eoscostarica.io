@@ -156,12 +156,12 @@ const OurProjects = () => (
                 <picture>
                   <source
                     className={styles.defaultImg}
-                    srcSet={useBaseUrl("img/default-image.jp2")}
+                    srcSet={useBaseUrl("img/eosrate.jp2")}
                     type="image/jp2"
                   />
                   <img
                     className={styles.defaultImg}
-                    src={useBaseUrl("img/default-image.webp")}
+                    src={useBaseUrl("img/eosrate.webp")}
                   />
                 </picture>
               </div>
