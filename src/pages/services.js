@@ -78,10 +78,14 @@ const ServicePage = () => {
         >
           <h1>Blockchain Development Services</h1>
           <span>
-            Leverage blockchain technology. Our team will help you embrace the
-            power of this innovative technology. We have years of experience
-            integrating enterprise blockchain solutions and developing
-            infrastructure for business environments.
+            Explore the possibilities that blockchain technology offers. Boost your 
+            operations with increased transparency, security, and traceability. We
+            have experience working with large global enterprises and SMEs,
+            government entities and NGOs, and open-source projects. Our team is
+            technology agnostic and will guide you to find the ideal solution. We
+            specialize in the open-source blockchain protocol EOSIO, for its
+            adaptability to any industry in both the private and public sectors. Visit
+            our industries page to learn more.
           </span>
           <h2>Enterprise Blockchain</h2>
           <span>
