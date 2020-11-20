@@ -142,7 +142,7 @@ const Home = () => {
           <div className={styles.industryColWrapper}>
             <div className={styles.industryColBox}>
               <div>
-                <div className={styles.svgBox}>
+                <div className={clsx(styles.svgBox, styles.svgBoxHeight)}>
                   <Industry1Svg />
                 </div>
                 <h3>Payments and Transfers</h3>
@@ -156,7 +156,7 @@ const Home = () => {
             </div>
             <div className={styles.industryColBox}>
               <div>
-                <div className={styles.svgBox}>
+                <div className={clsx(styles.svgBox, styles.svgBoxHeight)}>
                   <Industry2Svg />
                 </div>
                 <h3>Logistics and Supply Chain</h3>
@@ -170,7 +170,7 @@ const Home = () => {
             </div>
             <div className={styles.industryColBox}>
               <div>
-                <div className={styles.svgBox}>
+                <div className={clsx(styles.svgBox, styles.svgBoxHeight)}>
                   <Industry3Svg />
                 </div>
                 <h3>Healthcare and Insurance</h3>
