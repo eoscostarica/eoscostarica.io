@@ -134,7 +134,7 @@ const BlockProducer = () => (
           <h1>Block Producer Information</h1>
         </div>
         <div className={styles.sectionWhite}>
-          <h3 className={styles.titleH1}>Code of conduct</h3>
+          <h3 className={styles.titleH1} id="code-of-conduct">Code of conduct</h3>
           <h4>EOS Costa Rica pledges to:</h4>
 
           <span>
@@ -160,7 +160,7 @@ const BlockProducer = () => (
             vigilance, and arbitration mechanisms.
           </span>
         </div>
-        <h3 className={styles.titleH1}>Ownership disclosure</h3>
+        <h3 className={styles.titleH1} id="ownership-disclosure">Ownership disclosure</h3>
         <span>
           According to the Block Producer Agreement and values that have
           represented us since the beginning of our campaign, EOS Costa Rica
