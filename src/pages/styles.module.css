@@ -447,13 +447,11 @@
   z-index: 1000;
   margin-top: -30px;
   text-align: left;
-  /* transition: all 200ms cubic-bezier(0.6, -0.28, 0.735, 0.045); */
 }
 
 .contentOpen {
   margin-top: 0px;
   height: auto;
-  /* transition: all 350ms cubic-bezier(0.08, 1.09, 0.32, 1.275); */
 }
 
 .contentText {
@@ -461,7 +459,6 @@
   visibility: hidden;
   opacity: 0;
   overflow: auto;
-  /* transition: all 0.2s ease-in; */
   font-size: 16px;
   line-height: 1.44;
   color: #000000;
@@ -470,7 +467,6 @@
 .contentTextOpen {
   visibility: visible;
   opacity: 1;
-  /* transition: all 0.8s ease-in; */
 }
 
 .arrowWrapper {
