@@ -110,7 +110,7 @@ const Industries = () => (
         <div className={styles.enterpriceTitleBox}>
           <h1>Blockchain in More Industries</h1>
         </div>
-        <div className={styles.colBox}>
+        <div className={clsx(styles.colBox)}>
           <Accordion
             title="Asset Managementy"
             content="Blockchain technology enables an immutable and secure way to tokenize and manage tangible and intangible assets. Some opportunities include innovative liquidity options and reduced management costs."
@@ -181,7 +181,7 @@ const Industries = () => (
         </div>
         <div className={styles.enterpriceTitleBox}>
           <div className={clsx(styles.colBox, styles.flexContent)}>
-            <div>
+            <div className={styles.flexBox}>
               <div>
                 <h3>Privacy and transparency</h3>
                 <span>
@@ -214,17 +214,11 @@ const Industries = () => (
                 </span>
               </div>
             </div>
-            <picture>
-              <source
-                className={styles.defaultImg}
-                srcSet={useBaseUrl("img/default-image.jp2")}
-                type="image/jp2"
-              />
-              <img
-                className={styles.defaultImg}
-                src={useBaseUrl("img/default-image.webp")}
-              />
-            </picture>
+            <img
+              className={styles.defaultImg}
+              alt="eoscr-logo"
+              src={useBaseUrl("img/eoscr.svg")}
+            />
           </div>
         </div>
         <div className={styles.btnBox}>

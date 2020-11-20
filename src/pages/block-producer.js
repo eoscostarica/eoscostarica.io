@@ -30,7 +30,7 @@ const BlockProducer = () => (
         boxStyle={styles.noMarginTop}
       >
         <div className={styles.enterpriceTitleBox}>
-          <h1>Our Story</h1>
+          <h1 className={styles.titleH1}>Our Story</h1>
           <span>
             EOS Costa Rica is a company spinoff with over three decades of
             developing technologies in Costa Rica. During the 80s, we launched
@@ -39,7 +39,7 @@ const BlockProducer = () => (
             users on using email and browsing the web. Then, we started offering
             internet infrastructure, hosting, and development services.
           </span>
-          <br />
+          <h3 />
           <span>
             In 2013, we began providing infrastructure for public blockchain
             networks and learned first-hand how blockchains work. Then, in 2018
@@ -133,10 +133,9 @@ const BlockProducer = () => (
         <div className={styles.industryTitleBox}>
           <h1>Block Producer Information</h1>
         </div>
-        <div className={styles.sectionWhite}>
-          <h3 className={styles.titleH1} id="code-of-conduct">Code of conduct</h3>
+        <div className={clsx(styles.titleH1, styles.sectionWhite)}>
+          <h3 className={styles.titleH1}>Code of conduct</h3>
           <h4>EOS Costa Rica pledges to:</h4>
-
           <span>
             Provide the highest standard bare-metal infrastructure available to
             the EOS ecosystem.
@@ -191,12 +190,12 @@ const BlockProducer = () => (
                 <picture>
                   <source
                     className={styles.defaultImg}
-                    srcSet={useBaseUrl("img/default-image.jp2")}
+                    srcSet={useBaseUrl("img/lifebank.jp2")}
                     type="image/jp2"
                   />
                   <img
                     className={styles.defaultImg}
-                    src={useBaseUrl("img/default-image.webp")}
+                    src={useBaseUrl("img/lifebank.webp")}
                   />
                 </picture>
               </div>
@@ -215,12 +214,12 @@ const BlockProducer = () => (
                 <picture>
                   <source
                     className={styles.defaultImg}
-                    srcSet={useBaseUrl("img/default-image.jp2")}
+                    srcSet={useBaseUrl("img/eosrate.jp2")}
                     type="image/jp2"
                   />
                   <img
                     className={styles.defaultImg}
-                    src={useBaseUrl("img/default-image.webp")}
+                    src={useBaseUrl("img/eosrate.webp")}
                   />
                 </picture>
               </div>
@@ -324,19 +323,11 @@ const BlockProducer = () => (
             as the first in Latin America for gender equality.
           </span>
         </div>
-        <div className={styles.enterpriceTitleBox}>
-          <picture>
-            <source
-              className={styles.defaultImg}
-              srcSet={useBaseUrl("img/default-image.jp2")}
-              type="image/jp2"
-            />
-            <img
-              className={styles.defaultImg}
-              src={useBaseUrl("img/default-image.webp")}
-            />
-          </picture>
-        </div>
+        <img
+          className={styles.defaultImg}
+          alt="eoscr-logo"
+          src={useBaseUrl("img/eoscr.svg")}
+        />
       </ContentSection>
       <ContentSection
         sectionStyle={clsx(styles.sectionGray, styles.enterpriceBox)}
