@@ -41,34 +41,34 @@ const ServicePage = () => {
           <picture>
             <source
               className={styles.defaultImgCarousel}
-              srcSet={useBaseUrl("img/default-image.jp2")}
+              srcSet={useBaseUrl("img/developmentServices.jp2")}
               type="image/jp2"
             />
             <img
               className={styles.defaultImgCarousel}
-              src={useBaseUrl("img/default-image.webp")}
+              src={useBaseUrl("img/developmentServices.webp")}
             />
           </picture>
           <picture>
             <source
               className={styles.defaultImgCarousel}
-              srcSet={useBaseUrl("img/default-image.jp2")}
+              srcSet={useBaseUrl("img/blockchainInfrastructure.jp2")}
               type="image/jp2"
             />
             <img
               className={styles.defaultImgCarousel}
-              src={useBaseUrl("img/default-image.webp")}
+              src={useBaseUrl("img/blockchainInfrastructure.webp")}
             />
           </picture>
           <picture>
             <source
               className={styles.defaultImgCarousel}
-              srcSet={useBaseUrl("img/default-image.jp2")}
+              srcSet={useBaseUrl("img/educationTraining.jp2")}
               type="image/jp2"
             />
             <img
               className={styles.defaultImgCarousel}
-              src={useBaseUrl("img/default-image.webp")}
+              src={useBaseUrl("img/educationTraining.webp")}
             />
           </picture>
         </ContentSection>
@@ -280,12 +280,12 @@ const ServicePage = () => {
               <picture>
                 <source
                   className={styles.defaultImg}
-                  srcSet={useBaseUrl("img/default-image.jp2")}
+                  srcSet={useBaseUrl("img/cr.jp2")}
                   type="image/jp2"
                 />
                 <img
                   className={styles.defaultImg}
-                  src={useBaseUrl("img/default-image.webp")}
+                  src={useBaseUrl("img/cr.webp")}
                 />
               </picture>
 
@@ -338,12 +338,12 @@ const ServicePage = () => {
               <picture>
                 <source
                   className={styles.defaultImg}
-                  srcSet={useBaseUrl("img/default-image.jp2")}
+                  srcSet={useBaseUrl("img/education.jp2")}
                   type="image/jp2"
                 />
                 <img
                   className={styles.defaultImg}
-                  src={useBaseUrl("img/default-image.webp")}
+                  src={useBaseUrl("img/education.webp")}
                 />
               </picture>
             </div>
@@ -374,34 +374,34 @@ const ServicePage = () => {
               <picture>
                 <source
                   className={styles.defaultImgCarousel}
-                  srcSet={useBaseUrl("img/default-image.jp2")}
+                  srcSet={useBaseUrl("img/payments.jp2")}
                   type="image/jp2"
                 />
                 <img
                   className={styles.defaultImgCarousel}
-                  src={useBaseUrl("img/default-image.webp")}
+                  src={useBaseUrl("img/payments.webp")}
                 />
               </picture>
               <picture>
                 <source
                   className={styles.defaultImgCarousel}
-                  srcSet={useBaseUrl("img/default-image.jp2")}
+                  srcSet={useBaseUrl("img/logistics.jp2")}
                   type="image/jp2"
                 />
                 <img
                   className={styles.defaultImgCarousel}
-                  src={useBaseUrl("img/default-image.webp")}
+                  src={useBaseUrl("img/logistics.webp")}
                 />
               </picture>
               <picture>
                 <source
                   className={styles.defaultImgCarousel}
-                  srcSet={useBaseUrl("img/default-image.jp2")}
+                  srcSet={useBaseUrl("img/gaming.jp2")}
                   type="image/jp2"
                 />
                 <img
                   className={styles.defaultImgCarousel}
-                  src={useBaseUrl("img/default-image.webp")}
+                  src={useBaseUrl("img/gaming.webp")}
                 />
               </picture>
             </div>

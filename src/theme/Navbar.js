@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import { useMediaQuery } from "react-responsive";
 import clsx from "clsx";
@@ -31,10 +31,10 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
               <a href={useBaseUrl("/services")}>Services</a>
             </li>
             <li>
-              <a href={useBaseUrl("/about")}>About</a>
+              <a href={useBaseUrl("/industries")}>Industries</a>
             </li>
             <li>
-              <a href={useBaseUrl("/industries")}>Industries</a>
+              <a href={useBaseUrl("/about")}>About</a>
             </li>
             <li>
               <a href={useBaseUrl("/projects")}>Projects</a>
@@ -53,20 +53,21 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 };
 
 const NavbarMenu = () => {
-  const pathname =
-    typeof window !== "undefined" ? window.location.pathname : "/";
+  const [pathname, setPathname] = useState("/");
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    const pathname = window.location.pathname;
+
+    setPathname(pathname);
+  }, []);
+
   return (
-    <div className={styles.customMenu}
-    >
+    <div className={styles.customMenu}>
       {isMobile && <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />}
       <div className={styles.boxLeft}>
-        <img
-          src={useBaseUrl("img/eoscr-logo.png")}
-          alt="EOS CR LOGO"
-        />
+        <img src={useBaseUrl("img/eoscr-logo.png")} alt="EOS CR LOGO" />
       </div>
       <div className={styles.boxRight}>
         <ul>
@@ -90,26 +91,6 @@ const NavbarMenu = () => {
           </li>
           <li>
             <a
-              href={useBaseUrl("/about")}
-              className={clsx({
-                [styles.selected]: pathname.includes("/about"),
-              })}
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href={useBaseUrl("/block-producer")}
-              className={clsx({
-                [styles.selected]: pathname.includes("/block-producer"),
-              })}
-            >
-              BP
-            </a>
-          </li>
-          <li>
-            <a
               href={useBaseUrl("/industries")}
               className={clsx({
                 [styles.selected]: pathname.includes("/industries"),
@@ -120,12 +101,32 @@ const NavbarMenu = () => {
           </li>
           <li>
             <a
+              href={useBaseUrl("/about")}
+              className={clsx({
+                [styles.selected]: pathname.includes("/about"),
+              })}
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
               href={useBaseUrl("/projects")}
               className={clsx({
                 [styles.selected]: pathname.includes("/projects"),
               })}
             >
               Projects
+            </a>
+          </li>
+          <li>
+            <a
+              href={useBaseUrl("/block-producer")}
+              className={clsx({
+                [styles.selected]: pathname.includes("/block-producer"),
+              })}
+            >
+              BP
             </a>
           </li>
           <li>

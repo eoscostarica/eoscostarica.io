@@ -159,7 +159,9 @@ const BlockProducer = () => (
             vigilance, and arbitration mechanisms.
           </span>
         </div>
-        <h3 className={styles.titleH1} id="ownership-disclosure">Ownership disclosure</h3>
+        <h3 className={styles.titleH1} id="ownership-disclosure">
+          Ownership disclosure
+        </h3>
         <span>
           According to the Block Producer Agreement and values that have
           represented us since the beginning of our campaign, EOS Costa Rica
@@ -237,12 +239,12 @@ const BlockProducer = () => (
                 <picture>
                   <source
                     className={styles.defaultImg}
-                    srcSet={useBaseUrl("img/default-image.jp2")}
+                    srcSet={useBaseUrl("img/dashboard.jp2")}
                     type="image/jp2"
                   />
                   <img
                     className={styles.defaultImg}
-                    src={useBaseUrl("img/default-image.webp")}
+                    src={useBaseUrl("img/dashboard.webp")}
                   />
                 </picture>
               </div>
@@ -380,14 +382,55 @@ const BlockProducer = () => (
             </span>
           </div>
         </div>
-        <div className={styles.enterpriceTitleBox}>
-          <picture>
-            <source
-              srcSet={useBaseUrl("img/default-image.jp2")}
-              type="image/jp2"
-            />
-            <img src={useBaseUrl("img/default-image.webp")} />
-          </picture>
+        <div className={styles.boxWrapper}>
+          <div className={styles.colBox}>
+            <picture>
+              <source
+                className={styles.defaultImg}
+                srcSet={useBaseUrl("img/blog.jp2")}
+                type="image/jp2"
+              />
+              <img
+                className={styles.defaultImg}
+                src={useBaseUrl("img/blog.webp")}
+              />
+            </picture>
+            <picture>
+              <source
+                className={styles.defaultImg}
+                srcSet={useBaseUrl("img/press.jp2")}
+                type="image/jp2"
+              />
+              <img
+                className={styles.defaultImg}
+                src={useBaseUrl("img/press.webp")}
+              />
+            </picture>
+          </div>
+          <div className={styles.colBox}>
+            <picture>
+              <source
+                className={styles.defaultImg}
+                srcSet={useBaseUrl("img/portal.jp2")}
+                type="image/jp2"
+              />
+              <img
+                className={styles.defaultImg}
+                src={useBaseUrl("img/portal.webp")}
+              />
+            </picture>
+            <picture>
+              <source
+                className={styles.defaultImg}
+                srcSet={useBaseUrl("img/github.jp2")}
+                type="image/jp2"
+              />
+              <img
+                className={styles.defaultImg}
+                src={useBaseUrl("img/github.webp")}
+              />
+            </picture>
+          </div>
         </div>
         <div className={styles.btnBox}>
           <span>Get to know more about our team!</span>
