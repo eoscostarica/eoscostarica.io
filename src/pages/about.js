@@ -285,11 +285,17 @@ const About = () => {
                 <div className={styles.industryColBox}>
                   <div>
                     <div className={styles.svgBox}>
-                      <img
-                        src={useBaseUrl("img/luisDiego.gif")}
-                        alt="this slowpoke moves"
-                        className={styles.teamImg}
-                      />
+                    <picture>
+                        <source
+                          className={styles.teamImg}
+                          srcSet={useBaseUrl("img/luisdiego.jp2")}
+                          type="image/jp2"
+                        />
+                        <img
+                          className={styles.teamImg}
+                          src={useBaseUrl("img/luisdiego.webp")}
+                        />
+                      </picture>
                     </div>
                     <h3>Luis Diego Rojas</h3>
                     <span>Communications and Content Strategist</span>
@@ -299,11 +305,17 @@ const About = () => {
                 <div className={styles.industryColBox}>
                   <div>
                     <div className={styles.svgBox}>
-                      <img
-                        src={useBaseUrl("img/rodolfo.gif")}
-                        alt="this slowpoke moves"
-                        className={styles.teamImg}
-                      />
+                    <picture>
+                        <source
+                          className={styles.teamImg}
+                          srcSet={useBaseUrl("img/rodolfo.jp2")}
+                          type="image/jp2"
+                        />
+                        <img
+                          className={styles.teamImg}
+                          src={useBaseUrl("img/rodolfo.webp")}
+                        />
+                      </picture>
                     </div>
                     <h3>Rodolfo Perez</h3>
                     <span>Art Director & Brand Manager</span>
@@ -322,11 +334,17 @@ const About = () => {
                   <div className={styles.industryColBox}>
                     <div>
                       <div className={styles.svgBox}>
-                        <img
-                          src={useBaseUrl("img/adriel.gif")}
-                          alt="this slowpoke moves"
+                      <picture>
+                        <source
                           className={styles.teamImg}
+                          srcSet={useBaseUrl("img/adriel.jp2")}
+                          type="image/jp2"
                         />
+                        <img
+                          className={styles.teamImg}
+                          src={useBaseUrl("img/adriel.webp")}
+                        />
+                      </picture>
                       </div>
                       <h3>Adriel Díaz</h3>
                       <span>Full Stack Developer</span>
@@ -336,11 +354,17 @@ const About = () => {
                   <div className={styles.industryColBox}>
                     <div>
                       <div className={styles.svgBox}>
-                        <img
-                          src={useBaseUrl("img/allan.gif")}
-                          alt="this slowpoke moves"
+                      <picture>
+                        <source
                           className={styles.teamImg}
+                          srcSet={useBaseUrl("img/allan.jp2")}
+                          type="image/jp2"
                         />
+                        <img
+                          className={styles.teamImg}
+                          src={useBaseUrl("img/allan.webp")}
+                        />
+                      </picture>
                       </div>
                       <h3>Allan Salazar</h3>
                       <span>Network Engineer</span>
@@ -392,11 +416,17 @@ const About = () => {
                   <div className={styles.industryColBox}>
                     <div>
                       <div className={styles.svgBox}>
-                        <img
-                          src={useBaseUrl("img/chris.gif")}
-                          alt="this slowpoke moves"
+                      <picture>
+                        <source
                           className={styles.teamImg}
+                          srcSet={useBaseUrl("img/cris.jp2")}
+                          type="image/jp2"
                         />
+                        <img
+                          className={styles.teamImg}
+                          src={useBaseUrl("img/cris.webp")}
+                        />
+                      </picture>
                       </div>
                       <h3>Cristian Castro</h3>
                       <span>C++ Developer</span>
@@ -426,11 +456,17 @@ const About = () => {
                   <div className={styles.industryColBox}>
                     <div>
                       <div className={styles.svgBox}>
-                        <img
-                          src={useBaseUrl("img/jorge.gif")}
-                          alt="this slowpoke moves"
+                      <picture>
+                        <source
                           className={styles.teamImg}
+                          srcSet={useBaseUrl("img/jorge.jp2")}
+                          type="image/jp2"
                         />
+                        <img
+                          className={styles.teamImg}
+                          src={useBaseUrl("img/jorge.webp")}
+                        />
+                      </picture>
                       </div>
                       <h3>Jorge Murillo</h3>
                       <span>Sr. UX Designer</span>
@@ -465,12 +501,12 @@ const About = () => {
                         <picture>
                           <source
                             className={styles.teamImg}
-                            srcSet={useBaseUrl("img/pp-default.jp2")}
+                            srcSet={useBaseUrl("img/kevin.jp2")}
                             type="image/jp2"
                           />
                           <img
                             className={styles.teamImg}
-                            src={useBaseUrl("img/pp-default.webp")}
+                            src={useBaseUrl("img/kevin.webp")}
                           />
                         </picture>
                       </div>
@@ -502,11 +538,17 @@ const About = () => {
                   <div className={styles.industryColBox}>
                     <div>
                       <div className={styles.svgBox}>
-                        <img
-                          src={useBaseUrl("img/teto.gif")}
-                          alt="this slowpoke moves"
+                      <picture>
+                        <source
                           className={styles.teamImg}
+                          srcSet={useBaseUrl("img/teto.jp2")}
+                          type="image/jp2"
                         />
+                        <img
+                          className={styles.teamImg}
+                          src={useBaseUrl("img/teto.webp")}
+                        />
+                      </picture>
                       </div>
                       <h3>Terencio Gómez</h3>
                       <span>Full Stack Developer</span>

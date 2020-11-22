@@ -35,12 +35,12 @@ const Industries = () => (
           <picture>
             <source
               className={styles.industriesImg}
-              srcSet={useBaseUrl("img/default-image.jp2")}
+              srcSet={useBaseUrl("img/payments.jp2")}
               type="image/jp2"
             />
             <img
               className={styles.industriesImg}
-              src={useBaseUrl("img/default-image.webp")}
+              src={useBaseUrl("img/payments.webp")}
             />
           </picture>
           <div>
@@ -59,12 +59,12 @@ const Industries = () => (
           <picture>
             <source
               className={styles.industriesImg}
-              srcSet={useBaseUrl("img/default-image.jp2")}
+              srcSet={useBaseUrl("img/logistics.jp2")}
               type="image/jp2"
             />
             <img
               className={styles.industriesImg}
-              src={useBaseUrl("img/default-image.webp")}
+              src={useBaseUrl("img/logistics.webp")}
             />
           </picture>
           <div>
@@ -83,12 +83,12 @@ const Industries = () => (
           <picture>
             <source
               className={styles.industriesImg}
-              srcSet={useBaseUrl("img/default-image.jp2")}
+              srcSet={useBaseUrl("img/gaming.jp2")}
               type="image/jp2"
             />
             <img
               className={styles.industriesImg}
-              src={useBaseUrl("img/default-image.webp")}
+              src={useBaseUrl("img/gaming.webp")}
             />
           </picture>
           <div>
@@ -214,11 +214,17 @@ const Industries = () => (
                 </span>
               </div>
             </div>
-            <img
-              className={styles.defaultImg}
-              alt="eoscr-logo"
-              src={useBaseUrl("img/eoscr.svg")}
+            <picture>
+            <source
+              className={styles.industriesImg}
+              srcSet={useBaseUrl("img/enterprise.jp2")}
+              type="image/jp2"
             />
+            <img
+              className={styles.industriesImg}
+              src={useBaseUrl("img/enterprise.webp")}
+            />
+          </picture>
           </div>
         </div>
         <div className={styles.btnBox}>
@@ -239,23 +245,23 @@ const Industries = () => (
             <picture>
               <source
                 className={styles.defaultImg}
-                srcSet={useBaseUrl("img/default-image.jp2")}
+                srcSet={useBaseUrl("img/blog.jp2")}
                 type="image/jp2"
               />
               <img
                 className={styles.defaultImg}
-                src={useBaseUrl("img/default-image.webp")}
+                src={useBaseUrl("img/blog.webp")}
               />
             </picture>
             <picture>
               <source
                 className={styles.defaultImg}
-                srcSet={useBaseUrl("img/default-image.jp2")}
+                srcSet={useBaseUrl("img/press.jp2")}
                 type="image/jp2"
               />
               <img
                 className={styles.defaultImg}
-                src={useBaseUrl("img/default-image.webp")}
+                src={useBaseUrl("img/press.webp")}
               />
             </picture>
           </div>
@@ -263,23 +269,23 @@ const Industries = () => (
             <picture>
               <source
                 className={styles.defaultImg}
-                srcSet={useBaseUrl("img/default-image.jp2")}
+                srcSet={useBaseUrl("img/portal.jp2")}
                 type="image/jp2"
               />
               <img
                 className={styles.defaultImg}
-                src={useBaseUrl("img/default-image.webp")}
+                src={useBaseUrl("img/portal.webp")}
               />
             </picture>
             <picture>
               <source
                 className={styles.defaultImg}
-                srcSet={useBaseUrl("img/default-image.jp2")}
+                srcSet={useBaseUrl("img/github.jp2")}
                 type="image/jp2"
               />
               <img
                 className={styles.defaultImg}
-                src={useBaseUrl("img/default-image.webp")}
+                src={useBaseUrl("img/github.webp")}
               />
             </picture>
           </div>

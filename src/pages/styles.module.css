@@ -32,6 +32,10 @@
   width: 100%;
 }
 
+.boxWrapper {
+  width: 100%;
+}
+
 .flexBox {
   width: 100%;
 }
@@ -50,8 +54,7 @@
 }
 
 .defaultImgCarousel {
-  width: 200px !important;
-  height: 200px !important;
+  width: 100% !important;
 }
 
 .knowEOSCRImg {
@@ -643,6 +646,11 @@
   .contentDefaultImg {
     flex-direction: row;
   }
+
+  .defaultImgCarousel {
+    width: 200px !important;
+    height: 200px !important;
+  }
 }
 
 /* 
@@ -830,5 +838,10 @@
   .defaultImg {
     width: 150px;
     height: 150px;
+  }
+
+  .defaultImgCarousel {
+    width: 200px !important;
+    height: 200px !important;
   }
 }

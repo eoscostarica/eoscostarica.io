@@ -110,12 +110,12 @@ const OurProjects = () => (
                 <picture>
                   <source
                     className={styles.defaultImg}
-                    srcSet={useBaseUrl("img/default-image.jp2")}
+                    srcSet={useBaseUrl("img/forum.jp2")}
                     type="image/jp2"
                   />
                   <img
                     className={styles.defaultImg}
-                    src={useBaseUrl("img/default-image.webp")}
+                    src={useBaseUrl("img/forum.webp")}
                   />
                 </picture>
               </div>
@@ -133,12 +133,12 @@ const OurProjects = () => (
                 <picture>
                   <source
                     className={styles.defaultImg}
-                    srcSet={useBaseUrl("img/default-image.jp2")}
+                    srcSet={useBaseUrl("img/fundation.jp2")}
                     type="image/jp2"
                   />
                   <img
                     className={styles.defaultImg}
-                    src={useBaseUrl("img/default-image.webp")}
+                    src={useBaseUrl("img/fundation.webp")}
                   />
                 </picture>
               </div>
@@ -156,12 +156,12 @@ const OurProjects = () => (
                 <picture>
                   <source
                     className={styles.defaultImg}
-                    srcSet={useBaseUrl("img/eosrate.jp2")}
+                    srcSet={useBaseUrl("img/eosratecr.jp2")}
                     type="image/jp2"
                   />
                   <img
                     className={styles.defaultImg}
-                    src={useBaseUrl("img/eosrate.webp")}
+                    src={useBaseUrl("img/eosratecr.webp")}
                   />
                 </picture>
               </div>
@@ -181,12 +181,12 @@ const OurProjects = () => (
                 <picture>
                   <source
                     className={styles.defaultImg}
-                    srcSet={useBaseUrl("img/default-image.jp2")}
+                    srcSet={useBaseUrl("img/dashboard.jp2")}
                     type="image/jp2"
                   />
                   <img
                     className={styles.defaultImg}
-                    src={useBaseUrl("img/default-image.webp")}
+                    src={useBaseUrl("img/dashboard.webp")}
                   />
                 </picture>
               </div>
@@ -204,12 +204,12 @@ const OurProjects = () => (
                 <picture>
                   <source
                     className={styles.defaultImg}
-                    srcSet={useBaseUrl("img/default-image.jp2")}
+                    srcSet={useBaseUrl("img/evodex.jp2")}
                     type="image/jp2"
                   />
                   <img
                     className={styles.defaultImg}
-                    src={useBaseUrl("img/default-image.webp")}
+                    src={useBaseUrl("img/evodex.webp")}
                   />
                 </picture>
               </div>
@@ -227,12 +227,12 @@ const OurProjects = () => (
                 <picture>
                   <source
                     className={styles.defaultImg}
-                    srcSet={useBaseUrl("img/default-image.jp2")}
+                    srcSet={useBaseUrl("img/enterpriseproject.jp2")}
                     type="image/jp2"
                   />
                   <img
                     className={styles.defaultImg}
-                    src={useBaseUrl("img/default-image.webp")}
+                    src={useBaseUrl("img/enterpriseproject.webp")}
                   />
                 </picture>
               </div>
@@ -252,12 +252,12 @@ const OurProjects = () => (
                 <picture>
                   <source
                     className={styles.defaultImg}
-                    srcSet={useBaseUrl("img/default-image.jp2")}
+                    srcSet={useBaseUrl("img/notario.jp2")}
                     type="image/jp2"
                   />
                   <img
                     className={styles.defaultImg}
-                    src={useBaseUrl("img/default-image.webp")}
+                    src={useBaseUrl("img/notario.webp")}
                   />
                 </picture>
               </div>
