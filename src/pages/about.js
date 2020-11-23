@@ -212,6 +212,7 @@ const About = () => {
           <Accordion
             titleStyle={styles.teamTitle}
             title="Management Team"
+            useMaxWidth
             content={
               <div className={clsx(styles.teamBox, styles.boxSpaceBetween)}>
                 <div className={styles.industryColBox}>
@@ -280,6 +281,7 @@ const About = () => {
           <Accordion
             titleStyle={styles.teamTitle}
             title="Marketing and Sales"
+            useMaxWidth
             content={
               <div className={styles.teamBox}>
                 <div className={styles.industryColBox}>
@@ -328,6 +330,7 @@ const About = () => {
           <Accordion
             titleStyle={styles.teamTitle}
             title="Development and Design"
+            useMaxWidth
             content={
               <>
                 <div className={clsx(styles.teamBox, styles.boxSpaceBetween)}>

@@ -53,7 +53,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 };
 
 const NavbarMenu = () => {
-  const [pathname, setPathname] = useState("/");
+  const [pathname, setPathname] = useState("");
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const [isOpen, setIsOpen] = useState(false);
 
