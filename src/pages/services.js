@@ -26,7 +26,9 @@ const ServicePage = () => {
             integrating enterprise blockchain solutions and developing
             infrastructure for business environments.
           </span>
-          <button className={styles.mainButton}>Learn more</button>
+          <a className={styles.mainButton} href={useBaseUrl("/about")}>
+            Learn more
+          </a>
         </ContentSection>
 
         <ContentSection
@@ -78,14 +80,20 @@ const ServicePage = () => {
         >
           <h1>Blockchain Development Services</h1>
           <span>
-            Explore the possibilities that blockchain technology offers. Boost your 
-            operations with increased transparency, security, and traceability. We
-            have experience working with large global enterprises and SMEs,
-            government entities and NGOs, and open-source projects. Our team is
-            technology agnostic and will guide you to find the ideal solution. We
-            specialize in the open-source blockchain protocol EOSIO, for its
-            adaptability to any industry in both the private and public sectors. Visit
-            our industries page to learn more.
+            Explore the possibilities that blockchain technology offers. Boost
+            your operations with increased transparency, security, and
+            traceability. We have experience working with large global
+            enterprises and SMEs, government entities and NGOs, and open-source
+            projects. Our team is technology agnostic and will guide you to find
+            the ideal solution. We specialize in the open-source blockchain
+            protocol{" "}
+            <a href="https://eos.io/" target="_blank">
+              EOSIO
+            </a>
+            , for its adaptability to any industry in both the private and
+            public sectors. Visit our{" "}
+            <a href={useBaseUrl("/industries")}>industries page</a> to learn
+            more
           </span>
           <h2>Enterprise Blockchain</h2>
           <span>
@@ -126,7 +134,9 @@ const ServicePage = () => {
             Do you still have questions on how to integrate blockchain into your
             operations?
           </h1>
-          <button className={styles.mainButton}>Contact us</button>
+          <a href="#contactUs" className={styles.mainButton}>
+            Contact us
+          </a>
         </ContentSection>
         <ContentSection
           sectionStyle={clsx(styles.sectionWhite, styles.enterpriceBox)}
@@ -204,7 +214,9 @@ const ServicePage = () => {
           <h1>
             Do you want to learn more about our blockchain development process?
           </h1>
-          <button className={styles.mainButton}>Contact us</button>
+          <a href="#contactUs" className={styles.mainButton}>
+            Contact us
+          </a>
         </ContentSection>
         <ContentSection
           sectionStyle={clsx(
@@ -277,14 +289,14 @@ const ServicePage = () => {
               country may add to your infrastructure:
             </span>
             <div className={clsx(styles.colBox, styles.flexContent)}>
-              <picture>
+              <picture className={styles.flexBox}>
                 <source
-                  className={styles.defaultImg}
+                  className={styles.mapLocation}
                   srcSet={useBaseUrl("img/cr.jp2")}
                   type="image/jp2"
                 />
                 <img
-                  className={styles.defaultImg}
+                  className={styles.mapLocation}
                   src={useBaseUrl("img/cr.webp")}
                 />
               </picture>
@@ -312,7 +324,9 @@ const ServicePage = () => {
           childrenWrapperStyle={styles.messageBox}
         >
           <h1>Start leveraging the power of blockchain infrastructures.</h1>
-          <button className={styles.mainButton}>Contact us</button>
+          <a href="#contactUs" className={styles.mainButton}>
+            Contact us
+          </a>
         </ContentSection>
         <ContentSection
           sectionStyle={clsx(styles.sectionWhite, styles.enterpriceBox)}
@@ -321,7 +335,7 @@ const ServicePage = () => {
           <div className={styles.enterpriceTitleBox}>
             <h1>Education and Training</h1>
             <div className={styles.colBox}>
-              <div>
+              <div className={styles.flexBox}>
                 <Accordion
                   title="Executive Workshops"
                   content="We know that innovative technologies, such as blockchain, may have a steep learning curve. So, we offer workshops on blockchain and EOSIO technology to C-suite executives and teams that want to keep up to date and learn more about blockchain and enterprise use cases. These workshops include multimodal content such as videos, lectures, and use cases. Download the course information here."
@@ -335,14 +349,14 @@ const ServicePage = () => {
                   content="We help promote the blockchain and EOSIO ecosystems by hosting and attending community activities. We also speak about blockchain and participate in events related to technology and innovation. Every year, we host a team-building event called EOSurf that takes our operations to the beach for several days to switch computers and code for surf and yoga lessons."
                 />
               </div>
-              <picture>
+              <picture className={clsx(styles.flexBox, styles.teamBox)}>
                 <source
-                  className={styles.defaultImg}
+                  className={styles.educationImg}
                   srcSet={useBaseUrl("img/education.jp2")}
                   type="image/jp2"
                 />
                 <img
-                  className={styles.defaultImg}
+                  className={styles.educationImg}
                   src={useBaseUrl("img/education.webp")}
                 />
               </picture>
@@ -406,8 +420,8 @@ const ServicePage = () => {
               </picture>
             </div>
             <span>
-              Learn more about other industries that blockchain is transforming.
-              Read more.
+              Learn more about other industries that blockchain is transforming.{" "}
+              <a href={useBaseUrl("/industries")}>Read more.</a>
             </span>
           </div>
         </ContentSection>

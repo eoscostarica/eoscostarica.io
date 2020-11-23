@@ -24,16 +24,21 @@
 }
 
 .industriesImg {
-  width: 250px;
-  height: 300px;
+  width: 100%;
+  margin: 1rem 0;
 }
 
 .accordionBox {
   width: 100%;
 }
 
-.boxWrapper {
+.mapLocation {
   width: 100%;
+  margin: 1rem 0;
+}
+
+.boxWrapper {
+  width: 100% !important;
 }
 
 .flexBox {
@@ -42,6 +47,7 @@
 
 .teamBox {
   display: flex;
+  flex-direction: column;
 }
 
 .boxSpaceBetween {
@@ -78,6 +84,11 @@
 }
 
 .mainContainer h2 {
+  margin: 1rem 0;
+}
+
+.educationImg {
+  width: 100%;
   margin: 1rem 0;
 }
 
@@ -289,7 +300,7 @@
   width: 75%;
 }
 
-.industryColBox button {
+.industryColBox .mainButton {
   margin-top: 3rem;
 }
 
@@ -354,10 +365,14 @@
   background-color: #5484b3;
   font-size: 21px;
   color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mainButton:hover {
   cursor: pointer;
+  text-decoration: none;
 }
 
 .contactUsMessage {
@@ -632,10 +647,11 @@
   }
 
   .accordionBox {
-    width: 375px;
+    width: 575px;
   }
 
-  .title {
+  .title,
+  .content {
     width: 70%;
   }
 
@@ -648,8 +664,17 @@
   }
 
   .defaultImgCarousel {
-    width: 200px !important;
+    width: 267px !important;
     height: 200px !important;
+  }
+
+  .industriesImg {
+    width: 450px;
+    height: 300px;
+  }
+
+  .teamBox {
+    flex-direction: row;
   }
 }
 
@@ -823,7 +848,8 @@
     width: 375px;
   }
 
-  .title {
+  .title,
+  .content {
     width: 70%;
   }
 
@@ -841,7 +867,21 @@
   }
 
   .defaultImgCarousel {
-    width: 200px !important;
+    width: 230px !important;
     height: 200px !important;
+  }
+
+  .mapLocation {
+    width: 65%;
+    margin: 1rem 0;
+  }
+
+  .industriesImg {
+    width: 300px;
+    height: 300px;
+  }
+
+  .teamBox {
+    flex-direction: row;
   }
 }

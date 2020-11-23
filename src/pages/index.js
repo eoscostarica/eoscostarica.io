@@ -7,9 +7,6 @@ import ContactUsForm from "./components/ContactUs";
 import Accordion from "./components/Accordion";
 import ContentSection from "./components/ContentSection";
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
-import Industry1Svg from "./SvgComponents/Industry1";
-import Industry2Svg from "./SvgComponents/Industry2";
-import Industry3Svg from "./SvgComponents/Industry3";
 import styles from "./styles.module.css";
 
 const Home = () => {
@@ -29,7 +26,9 @@ const Home = () => {
             efficiency, and reduce costs. Start transforming your organization
             by leveraging enterprise blockchain networks.
           </span>
-          <button className={styles.mainButton}>Learn more</button>
+          <a className={styles.mainButton} href={useBaseUrl("/services")}>
+            Learn more
+          </a>
         </ContentSection>
         <ContentSection
           sectionStyle={clsx(styles.sectionWhite, styles.enterpriceBox)}
@@ -64,11 +63,11 @@ const Home = () => {
             <div className={styles.enterpriceInfoBox}>
               <h3>Enhance security and trust</h3>
               <span>
-                Blockchain’s encryption capabilities offer new layers of
-                privacy and security for registering data. A blockchain is
-                decentralized, so ledgers are shared by a network of computers, 
-                minimizing cyberattacks, enabling better management of authorizations,
-              and increasing trust among parties.
+                Blockchain’s encryption capabilities offer new layers of privacy
+                and security for registering data. A blockchain is
+                decentralized, so ledgers are shared by a network of computers,
+                minimizing cyberattacks, enabling better management of
+                authorizations, and increasing trust among parties.
               </span>
             </div>
             <div className={styles.enterpriceInfoBox}>
@@ -76,8 +75,8 @@ const Home = () => {
               <span>
                 We define blockchain as a fundamental technology that can
                 leverage other techs from the industry 4.0. For instance,
-                machine learning, robotics, and VR can integrate blockchain 
-                into their solutions to record large amounts of data. 
+                machine learning, robotics, and VR can integrate blockchain into
+                their solutions to record large amounts of data.
               </span>
             </div>
           </div>
@@ -85,7 +84,9 @@ const Home = () => {
             <span>
               Learn more about how blockchain can improve your operations.
             </span>
-            <button className={styles.mainButton}>Read more here</button>
+            <a className={styles.mainButton} href={useBaseUrl("/industries")}>
+              Read more here
+            </a>
           </div>
         </ContentSection>
         <ContentSection
@@ -97,8 +98,9 @@ const Home = () => {
             <span>
               We make the most of enterprise blockchain technology and design
               solutions for the real world. Our team offers services tailored to
-              our clients’ needs and expectations. Contact us and get the
-              conversation started!
+              our clients’ needs and expectations.{" "}
+              <a href="#contactUs">Contact us</a> and get the conversation
+              started!
             </span>
             <div className={styles.mobileSvgIcon}>
               <WhatWeDoSvg />
@@ -137,48 +139,76 @@ const Home = () => {
             <div className={styles.industryColBox}>
               <div>
                 <div className={clsx(styles.svgBox, styles.svgBoxHeight)}>
-                  <Industry1Svg />
+                  <picture>
+                    <source
+                      className={styles.defaultImgCarousel}
+                      srcSet={useBaseUrl("img/payments.jp2")}
+                      type="image/jp2"
+                    />
+                    <img
+                      className={styles.defaultImgCarousel}
+                      src={useBaseUrl("img/payments.webp")}
+                    />
+                  </picture>
                 </div>
                 <h3>Payments and Transfers</h3>
                 <span>
-                  Blockchain enables an efficient and secure way
-                  to register transactions that can facilitate
-                  payments and offer near real-time auditing
-                  with encryption to reduce data breaches.
+                  Blockchain enables an efficient and secure way to register
+                  transactions that can facilitate payments and offer near
+                  real-time auditing with encryption to reduce data breaches.
                 </span>
               </div>
-              <button className={styles.mainButton}>Read more</button>
+              {/* <button className={styles.mainButton}>Read more</button> */}
             </div>
             <div className={styles.industryColBox}>
               <div>
                 <div className={clsx(styles.svgBox, styles.svgBoxHeight)}>
-                  <Industry2Svg />
+                  <picture>
+                    <source
+                      className={styles.defaultImgCarousel}
+                      srcSet={useBaseUrl("img/logistics.jp2")}
+                      type="image/jp2"
+                    />
+                    <img
+                      className={styles.defaultImgCarousel}
+                      src={useBaseUrl("img/logistics.webp")}
+                    />
+                  </picture>
                 </div>
                 <h3>Logistics and Supply Chain</h3>
                 <span>
-                   In an industry that involves dozens of
-                   stakeholders, the capabilities of blockchain 
-                   and smart contracts for traceability,
-                   authorizations management, and automation can make a 
-                   great ally. 
+                  In an industry that involves dozens of stakeholders, the
+                  capabilities of blockchain and smart contracts for
+                  traceability, authorizations management, and automation can
+                  make a great ally.
                 </span>
               </div>
-              <button className={styles.mainButton}>Read more</button>
+              {/* <button className={styles.mainButton}>Read more</button> */}
             </div>
             <div className={styles.industryColBox}>
               <div>
                 <div className={clsx(styles.svgBox, styles.svgBoxHeight)}>
-                  <Industry3Svg />
+                  <picture>
+                    <source
+                      className={styles.defaultImgCarousel}
+                      srcSet={useBaseUrl("img/gaming.jp2")}
+                      type="image/jp2"
+                    />
+                    <img
+                      className={styles.defaultImgCarousel}
+                      src={useBaseUrl("img/gaming.webp")}
+                    />
+                  </picture>
                 </div>
                 <h3>Gaming</h3>
                 <span>
-                   Blockchain enables a better way to transfer, valorize, 
-                   and collect digital in-game assets. Also, its capabilities 
-                   to increase security and offer a more efficient way for 
-                   transactions can level-up online gaming.
+                  Blockchain enables a better way to transfer, valorize, and
+                  collect digital in-game assets. Also, its capabilities to
+                  increase security and offer a more efficient way for
+                  transactions can level-up online gaming.
                 </span>
               </div>
-              <button className={styles.mainButton}>Read more</button>
+              {/* <button className={styles.mainButton}>Read more</button> */}
             </div>
           </div>
           <span>
@@ -187,8 +217,9 @@ const Home = () => {
             can boost efficiency, security, and trust when recording
             transactions, registering data and managing digital assets. Also, it
             can automate and facilitate processes, reducing costs and
-            inefficiencies. Discover more industries that can leverage their
-            operations on blockchain technology.
+            inefficiencies.{" "}
+            <a href={useBaseUrl("/industries")}>Discover more industries</a>{" "}
+            that can leverage their operations on blockchain technology.
           </span>
         </ContentSection>
         <ContentSection
@@ -197,7 +228,9 @@ const Home = () => {
           childrenWrapperStyle={styles.messageBox}
         >
           <h1>Do you have inquiries about blockchain?</h1>
-          <button className={styles.mainButton}>Contact us</button>
+          <a href="#contactUs" className={styles.mainButton}>
+            Contact us
+          </a>
         </ContentSection>
         <ContentSection
           sectionStyle={clsx(styles.sectionWhite, styles.knowEOSCRBox)}
@@ -205,12 +238,16 @@ const Home = () => {
         >
           <h1>Get to Know EOS Costa Rica</h1>
           <span>
-            EOS Costa Rica is a spinoff of a company with over three decades
-            of developing technologies. We develop blockchain-based solutions
-            deploying the EOSIO protocol, provide blockchain infrastructures,
-            and offer training and workshops. Let’s get the conversation
-            started!
+            EOS Costa Rica is a spinoff of a company with over three decades of
+            developing technologies. We develop blockchain-based solutions
+            deploying the{" "}
+            <a href="https://eos.io/" target="_blank">
+              EOSIO
+            </a>{" "}
+            protocol, provide blockchain infrastructures, and offer training and
+            workshops.
           </span>
+          <a href="#contactUs">Let’s get the conversation started!</a>
           <div className={styles.knowRowBox}>
             <div>
               <h3>The Team</h3>
@@ -254,8 +291,12 @@ const Home = () => {
                 infrastructure, hosting, and development services, we began
                 providing infrastructure for public blockchain networks. We were
                 there during the genesis of the EOS Mainnet and started
-                deploying the EOSIO protocol since its launch, accruing
-                decades of experience with innovative technologies. 
+                deploying the{" "}
+                <a href="https://eos.io/" target="_blank">
+                  EOSIO
+                </a>{" "}
+                protocol since its launch, accruing decades of experience with
+                innovative technologies.
               </span>
             </div>
           </div>
@@ -263,12 +304,22 @@ const Home = () => {
             <div>
               <h3>The technology</h3>
               <span>
-                We focus on deploying EOSIO technology, an open-source
-                protocol launched in 2018 by leading tech company
-                block.one. EOSIO is powered by the native token EOS and offers
-                improved scalability due to its high transaction speed, flexibility
-                in public and private networks, and energy efficiency compared
-                to other blockchains, making it a more eco-friendly option.
+                We focus on deploying{" "}
+                <a href="https://eos.io/" target="_blank">
+                  EOSIO
+                </a>{" "}
+                technology, an open-source protocol launched in 2018 by leading
+                tech company{" "}
+                <a href="https://block.one/" target="_blank">
+                  block.one.
+                </a>{" "}
+                <a href="https://eos.io/" target="_blank">
+                  EOSIO
+                </a>{" "}
+                is powered by the native token EOS and offers improved
+                scalability due to its high transaction speed, flexibility in
+                public and private networks, and energy efficiency compared to
+                other blockchains, making it a more eco-friendly option.
               </span>
             </div>
             <picture>
@@ -299,9 +350,10 @@ const Home = () => {
           boxStyle={styles.noMarginTop}
         >
           <h1>Some of Our Projects</h1>
-             <span>
+          <span>
             Get to know some of our latest projects deploying the EOSIO
-            blockchain protocol. Visit the full list here.
+            blockchain protocol.{" "}
+            <a href={useBaseUrl("/projects")}>Visit the full list here.</a>
           </span>
           <div className={clsx(styles.knowRowBox, styles.colReverse)}>
             <picture>
@@ -320,9 +372,16 @@ const Home = () => {
               <span>
                 We are part of this voluntary regional alliance, led by Latin
                 American technology companies to offer an EOSIO-based testnet to
-                the LACChain initiative, a program to accelerate the development
-                of the blockchain ecosystem in the region. Read more.
+                the{" "}
+                <a href="https://www.lacchain.net/" target="_blank">
+                  LACChain
+                </a>{" "}
+                initiative, a program to accelerate the development of the
+                blockchain ecosystem in the region.
               </span>
+              <a href="https://latamlink.io/" target="_blank">
+                Read more.
+              </a>
             </div>
           </div>
           <div className={clsx(styles.knowRowBox, styles.colReverse)}>
@@ -340,11 +399,24 @@ const Home = () => {
             <div>
               <h3>Lifebank</h3>
               <span>
-                An open-source blockchain-based app that incentivizes blood donations by
-                creating a virtuous circle of value between donors, blood banks, and local
-                businesses, leveraged by a token economy. Winner of the “Coding for 
-                Change” challenge by block.one. Read more. 
+                An open-source blockchain-based app that incentivizes blood
+                donations by creating a virtuous circle of value between donors,
+                blood banks, and local businesses, leveraged by a token economy.
+                Winner of the{" "}
+                <a
+                  href="https://eos.io/news/winner-of-coding-for-change- virtual-hackathon-lifebank/"
+                  target="_blank"
+                >
+                  “Coding for Change”
+                </a>{" "}
+                challenge by{" "}
+                <a href="https://block.one/" target="_blank">
+                  block.one.
+                </a>
               </span>
+              <a href=" https://lifebank.io/" target="_blank">
+                Read more.
+              </a>
             </div>
           </div>
           <div className={clsx(styles.knowRowBox, styles.colReverse)}>
@@ -362,10 +434,14 @@ const Home = () => {
             <div>
               <h3>SMARTGATE</h3>
               <span>
-                A blockchain-based platform that provides solutions for in-out gate activity
-                for the container industry and real-time transmission of relevant data required for
-                proper interchange in port logistics. Read more.
+                A blockchain-based platform that provides solutions for in-out
+                gate activity for the container industry and real-time
+                transmission of relevant data required for proper interchange in
+                port logistics.
               </span>
+              <a href="https://smartgate.tech/" target="_blank">
+                Read more.
+              </a>
             </div>
           </div>
         </ContentSection>
@@ -375,7 +451,9 @@ const Home = () => {
           childrenWrapperStyle={styles.messageBox}
         >
           <h1>Start working with us and implement blockchain technology.</h1>
-          <button className={styles.mainButton}>Contact us</button>
+          <a href="#contactUs" className={styles.mainButton}>
+            Contact us
+          </a>
         </ContentSection>
         <ContactUsForm />
       </main>
