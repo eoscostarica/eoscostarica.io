@@ -61,7 +61,7 @@ In particular, smart contracts are codes programmed to execute automatically and
 Some use cases of blockchain are:
 
 *   **Enterprise data solutions:** Chile’s [Comisión Nacional de Energía](https://energiaabierta.cl/blockchain/que-es-blockchain/) (National Energy Commission) launched a blockchain-based platform to keep registries of costs and price data.
-*   **Food traceability:** Walmart started using blockchain to track perishable goods across the supply chain. [Read more about blockchain in logistics here](https://eoscostarica.io/blockchain-in-logistics/). 
+*   **Food traceability:** Walmart started using blockchain to track perishable goods across the supply chain. [Read more about blockchain in logistics here](https://eoscostarica.io/blog/blockchain-logistics/). 
 *   **Government and open data:** Dubai aims to become the first government in the world [to run entirely on blockchain](https://www.forbes.com/sites/suparnadutt/2017/12/18/dubai-sets-sights-on-becoming-the-worlds-first-blockchain-powered-government/#4e4ad0d5454b). 
 
 ## **Contact Us to Learn More About Blockchain.**
@@ -88,6 +88,6 @@ A blockchain acts as a distributed ledger of information shared by a network of 
 Some use cases of this technology are:
 
 1.  Securely and privately registering enterprise data. [Check this out here](https://medium.com/@eoscostarica/how-to-choose-an-enterprise-blockchain-platform-7c3665994ad6?source=your_stories_page---------------------------). 
-2.  Improving traceability across supply chains. [Read more here.](https://eoscostarica.io/blockchain-in-logistics/)
+2.  Improving traceability across supply chains. [Read more here.](https://eoscostarica.io/blog/blockchain-logistics/)
 3.  Increasing transparency and efficiency in governments and displaying open data.
 
