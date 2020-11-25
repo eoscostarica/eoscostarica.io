@@ -24,7 +24,7 @@ Overall, the complexity of logistics represents a very fertile ground of opportu
 
 ## **What Is Blockchain?**
 
-A blockchain consists of an immutable record of data that acts as a decentralized ledger shared by a cluster of computers or “nodes,” which securely registers transactions in “blocks” of data. The nodes that participate in the network will validate the transaction through a consensus mechanism. Once they approve the transaction, the block appends to the blockchain. 
+A [blockchain consists of an immutable record of data](https://eoscostarica.io/blog/what-is-blockchain) that acts as a decentralized ledger shared by a cluster of computers or “nodes,” which securely registers transactions in “blocks” of data. The nodes that participate in the network will validate the transaction through a consensus mechanism. Once they approve the transaction, the block appends to the blockchain. 
 
 To sum up, the immutability features of blockchain guarantee that no person can manipulate the data. This data is stored as an encrypted sequence of transactions that can be tracked nearly in real-time. Blockchain allows a user to track all these transactions, meaning it becomes a valuable feature to trace things across a logistics chain. 
 
@@ -89,7 +89,7 @@ Overall, there is currently a blue ocean of opportunities for blockchain technol
 
 ## TL;DR
 
-The logistics industry involves a very complex operation that needs to manage multiple people and entities. Blockchain is an immutable and decentralized record of data that offers traceability and automatization of transactions. Specifically, blockchain can leverage logistics and supply chain by:
+The logistics industry involves a very complex operation that needs to manage multiple people and entities. [Blockchain is an immutable and decentralized record of data](https://eoscostarica.io/blog/what-is-blockchain) that offers traceability and automatization of transactions. Specifically, blockchain can leverage logistics and supply chain by:
 
 1.  **Increasing transparency and traceability:** Involving a large number of stakeholders with unstandardized procedures and low levels of transparency can lead to a lack of trust and friction among parties. Blockchain allows users to grant authorizations to have complete visibility across the process, facilitating traceability of goods (from the factory to its destination).
 2.  **Leaner and more optimized logistics process:** When the process relies on multiple stakeholders, technology adoption will most likely be disparate. Blockchain can provide an unfragmented and streamlined platform that replaces pen and paper and increase lean communication and processing of packages.
