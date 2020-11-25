@@ -32,7 +32,9 @@ const About = () => {
             Unleash the power of blockchain technology with the help of our
             agile team.
           </span>
-          <button className={styles.mainButton}>Contact us</button>
+          <a className={styles.mainButton} href="#contactUs">
+            Contact us
+          </a>
         </ContentSection>
         <ContentSection
           sectionStyle={clsx(styles.sectionWhite, styles.enterpriceBox)}
@@ -101,7 +103,8 @@ const About = () => {
                     blockchain nodes and networks that can meet your
                     organization's requirements and needs.
                   </span>
-                  <br /><br />
+                  <br />
+                  <br />
                   <span>
                     We offer workshops to C-suite executives and teams. We also
                     provide training for new talents and promote the region's
@@ -287,7 +290,7 @@ const About = () => {
                 <div className={styles.industryColBox}>
                   <div>
                     <div className={styles.svgBox}>
-                    <picture>
+                      <picture>
                         <source
                           className={styles.teamImg}
                           srcSet={useBaseUrl("img/luisdiego.jp2")}
@@ -307,7 +310,7 @@ const About = () => {
                 <div className={styles.industryColBox}>
                   <div>
                     <div className={styles.svgBox}>
-                    <picture>
+                      <picture>
                         <source
                           className={styles.teamImg}
                           srcSet={useBaseUrl("img/rodolfo.jp2")}
@@ -337,17 +340,17 @@ const About = () => {
                   <div className={styles.industryColBox}>
                     <div>
                       <div className={styles.svgBox}>
-                      <picture>
-                        <source
-                          className={styles.teamImg}
-                          srcSet={useBaseUrl("img/adriel.jp2")}
-                          type="image/jp2"
-                        />
-                        <img
-                          className={styles.teamImg}
-                          src={useBaseUrl("img/adriel.webp")}
-                        />
-                      </picture>
+                        <picture>
+                          <source
+                            className={styles.teamImg}
+                            srcSet={useBaseUrl("img/adriel.jp2")}
+                            type="image/jp2"
+                          />
+                          <img
+                            className={styles.teamImg}
+                            src={useBaseUrl("img/adriel.webp")}
+                          />
+                        </picture>
                       </div>
                       <h3>Adriel Díaz</h3>
                       <span>Full Stack Developer</span>
@@ -357,17 +360,17 @@ const About = () => {
                   <div className={styles.industryColBox}>
                     <div>
                       <div className={styles.svgBox}>
-                      <picture>
-                        <source
-                          className={styles.teamImg}
-                          srcSet={useBaseUrl("img/allan.jp2")}
-                          type="image/jp2"
-                        />
-                        <img
-                          className={styles.teamImg}
-                          src={useBaseUrl("img/allan.webp")}
-                        />
-                      </picture>
+                        <picture>
+                          <source
+                            className={styles.teamImg}
+                            srcSet={useBaseUrl("img/allan.jp2")}
+                            type="image/jp2"
+                          />
+                          <img
+                            className={styles.teamImg}
+                            src={useBaseUrl("img/allan.webp")}
+                          />
+                        </picture>
                       </div>
                       <h3>Allan Salazar</h3>
                       <span>Network Engineer</span>
@@ -419,17 +422,17 @@ const About = () => {
                   <div className={styles.industryColBox}>
                     <div>
                       <div className={styles.svgBox}>
-                      <picture>
-                        <source
-                          className={styles.teamImg}
-                          srcSet={useBaseUrl("img/cris.jp2")}
-                          type="image/jp2"
-                        />
-                        <img
-                          className={styles.teamImg}
-                          src={useBaseUrl("img/cris.webp")}
-                        />
-                      </picture>
+                        <picture>
+                          <source
+                            className={styles.teamImg}
+                            srcSet={useBaseUrl("img/cris.jp2")}
+                            type="image/jp2"
+                          />
+                          <img
+                            className={styles.teamImg}
+                            src={useBaseUrl("img/cris.webp")}
+                          />
+                        </picture>
                       </div>
                       <h3>Cristian Castro</h3>
                       <span>C++ Developer</span>
@@ -459,17 +462,17 @@ const About = () => {
                   <div className={styles.industryColBox}>
                     <div>
                       <div className={styles.svgBox}>
-                      <picture>
-                        <source
-                          className={styles.teamImg}
-                          srcSet={useBaseUrl("img/jorge.jp2")}
-                          type="image/jp2"
-                        />
-                        <img
-                          className={styles.teamImg}
-                          src={useBaseUrl("img/jorge.webp")}
-                        />
-                      </picture>
+                        <picture>
+                          <source
+                            className={styles.teamImg}
+                            srcSet={useBaseUrl("img/jorge.jp2")}
+                            type="image/jp2"
+                          />
+                          <img
+                            className={styles.teamImg}
+                            src={useBaseUrl("img/jorge.webp")}
+                          />
+                        </picture>
                       </div>
                       <h3>Jorge Murillo</h3>
                       <span>Sr. UX Designer</span>
@@ -541,17 +544,17 @@ const About = () => {
                   <div className={styles.industryColBox}>
                     <div>
                       <div className={styles.svgBox}>
-                      <picture>
-                        <source
-                          className={styles.teamImg}
-                          srcSet={useBaseUrl("img/teto.jp2")}
-                          type="image/jp2"
-                        />
-                        <img
-                          className={styles.teamImg}
-                          src={useBaseUrl("img/teto.webp")}
-                        />
-                      </picture>
+                        <picture>
+                          <source
+                            className={styles.teamImg}
+                            srcSet={useBaseUrl("img/teto.jp2")}
+                            type="image/jp2"
+                          />
+                          <img
+                            className={styles.teamImg}
+                            src={useBaseUrl("img/teto.webp")}
+                          />
+                        </picture>
                       </div>
                       <h3>Terencio Gómez</h3>
                       <span>Full Stack Developer</span>
@@ -657,7 +660,9 @@ const About = () => {
           </div>
           <div className={styles.btnBox}>
             <span>We can help you explore EOSIO technology.</span>
-            <button className={styles.mainButton}>Contact us</button>
+            <a className={styles.mainButton} href="#contactUs">
+              Contact us
+            </a>
           </div>
         </ContentSection>
         <ContentSection
@@ -691,7 +696,13 @@ const About = () => {
                   ecosystem.
                 </span>
               </div>
-              <button className={styles.mainButton}>Read more</button>
+              <a
+                className={styles.mainButton}
+                href="https://latamlink.io/"
+                target="_blank"
+              >
+                Read more
+              </a>
             </div>
             <div className={styles.industryColBox}>
               <div>
@@ -717,7 +728,13 @@ const About = () => {
                   block.one.
                 </span>
               </div>
-              <button className={styles.mainButton}>Read more</button>
+              <a
+                className={styles.mainButton}
+                href="https://lifebank.io/"
+                target="_blank"
+              >
+                Read more
+              </a>
             </div>
             <div className={styles.industryColBox}>
               <div>
@@ -742,7 +759,13 @@ const About = () => {
                   in port logistics.
                 </span>
               </div>
-              <button className={styles.mainButton}>Read more</button>
+              <a
+                className={styles.mainButton}
+                href="https://smartgate.tech/"
+                target="_blank"
+              >
+                Read more
+              </a>
             </div>
           </div>
           <div className={styles.btnBox}>

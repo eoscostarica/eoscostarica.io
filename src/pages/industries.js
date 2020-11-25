@@ -25,7 +25,9 @@ const Industries = () => (
           These are some use cases of enterprise blockchain in different
           sectors, such as financial, supply chain, gaming, and healthcare.
         </span>
-        <button className={styles.mainButton}>Contact us</button>
+        <a className={styles.mainButton} href="#contactUs">
+          Contact us
+        </a>
       </ContentSection>
       <ContentSection
         sectionStyle={clsx(styles.sectionWhite, styles.knowEOSCRBox)}
@@ -113,56 +115,124 @@ const Industries = () => (
         <div className={clsx(styles.colBox)}>
           <Accordion
             title="Asset Managementy"
-            content="Blockchain technology enables an immutable and secure way to tokenize and manage tangible and intangible assets. Some opportunities include innovative liquidity options and reduced management costs."
+            content={
+              <span>
+                Blockchain technology enables an immutable and secure way to
+                tokenize and manage tangible and intangible assets. Some
+                opportunities include innovative liquidity options and reduced
+                management costs.
+              </span>
+            }
           />
 
           <Accordion
             title="Decentralized Finance"
-            content="Also known as DeFi, decentralized finance leverages blockchain technology to explore new liquidity opportunities for citizens. Our team is part of evodex, an open-source DeFi app."
+            content={
+              <span>
+                Also known as DeFi, decentralized finance leverages blockchain
+                technology to explore new liquidity opportunities for citizens.
+                Our team is part of evodex, an open-source DeFi app.
+              </span>
+            }
           />
         </div>
         <div className={styles.colBox}>
           <Accordion
             title="Digital Identity"
-            content="Blockchain allows an immutable, transparent, and secure system to manage digital identities that can interconnect with IoT, biometrics, and enterprise management systems."
+            content={
+              <span>
+                Blockchain allows an immutable, transparent, and secure system
+                to manage digital identities that can interconnect with IoT,
+                biometrics, and enterprise management systems.
+              </span>
+            }
           />
 
           <Accordion
             title="Energy"
-            content="Blockchain offers an efficient and transparent way to improve the operations, distribution, and data management for energy companies. Decentralized networks may help promote sustainable and private energy generation alternatives."
+            content={
+              <span>
+                Blockchain offers an efficient and transparent way to improve
+                the operations, distribution, and data management for energy
+                companies. Decentralized networks may help promote sustainable
+                and private energy generation alternatives.
+              </span>
+            }
           />
         </div>
         <div className={styles.colBox}>
           <Accordion
             title="Media and Entertainment"
-            content="The blockchain’s capabilities to securely and immutably store registries can help reduce piracy and disputes. Also, blockchain can protect IP and improve traceability of payments and content distribution."
+            content={
+              <span>
+                The blockchain’s capabilities to securely and immutably store
+                registries can help reduce piracy and disputes. Also, blockchain
+                can protect IP and improve traceability of payments and content
+                distribution.
+              </span>
+            }
           />
 
           <Accordion
             title="Government"
-            content="Government institutions can deploy blockchain technology to leverage its transparency and immutability features to increase trust between the public sector and the citizens. It also allows a cost-efficient way to register data and accountability."
+            content={
+              <span>
+                Government institutions can deploy blockchain technology to
+                leverage its transparency and immutability features to increase
+                trust between the public sector and the citizens. It also allows
+                a cost-efficient way to register data and accountability.
+              </span>
+            }
           />
         </div>
         <div className={styles.colBox}>
           <Accordion
             title="Healthcare and Insurance"
-            content="Blockchain technology offers improved efficiency, traceability, and security to store medical and other sensitive data from patients. Smart contracts help reduce costs for insurance claims processing."
+            content={
+              <span>
+                Blockchain technology offers improved efficiency, traceability,
+                and security to store medical and other sensitive data from
+                patients. Smart contracts help reduce costs for insurance claims
+                processing.
+              </span>
+            }
           />
 
           <Accordion
             title="Legal Tech"
-            content="Smart contracts are computer codes that can execute automatically and autonomously according to the contract terms. These may transform legal processes by adding transparency, efficiency, and immutable registries."
+            content={
+              <span>
+                Smart contracts are computer codes that can execute
+                automatically and autonomously according to the contract terms.
+                These may transform legal processes by adding transparency,
+                efficiency, and immutable registries.
+              </span>
+            }
           />
         </div>
         <div className={styles.colBox}>
           <Accordion
             title="Real Estate"
-            content="Leverage real estate investments with blockchain technology by creating new business models. Blockchain helps integrate digital assets for liquidity and streamline investor relations and portfolio management."
+            content={
+              <span>
+                Leverage real estate investments with blockchain technology by
+                creating new business models. Blockchain helps integrate digital
+                assets for liquidity and streamline investor relations and
+                portfolio management.
+              </span>
+            }
           />
 
           <Accordion
             title="Sports"
-            content="Blockchain in sports offers a great way to increase fan engagement, promote active participation in decision-making, and monetize through new streams such as player content and collectibles."
+            content={
+              <span>
+                Blockchain in sports offers a great way to increase fan
+                engagement, promote active participation in decision-making, and
+                monetize through new streams such as player content and
+                collectibles.
+              </span>
+            }
           />
         </div>
       </ContentSection>
@@ -215,27 +285,35 @@ const Industries = () => (
               </div>
             </div>
             <picture>
-            <source
-              className={styles.industriesImg}
-              srcSet={useBaseUrl("img/enterprise.jp2")}
-              type="image/jp2"
-            />
-            <img
-              className={styles.industriesImg}
-              src={useBaseUrl("img/enterprise.webp")}
-            />
-          </picture>
+              <source
+                className={styles.industriesImg}
+                srcSet={useBaseUrl("img/enterprise.jp2")}
+                type="image/jp2"
+              />
+              <img
+                className={styles.industriesImg}
+                src={useBaseUrl("img/enterprise.webp")}
+              />
+            </picture>
           </div>
         </div>
         <div className={styles.btnBox}>
-          <button className={styles.mainButton}>Contact us</button>
+          <a className={styles.mainButton} href="#contactUs">
+            Contact us
+          </a>
         </div>
       </ContentSection>
       <ContentSection
         sectionStyle={clsx(styles.sectionGray, styles.enterpriceBox)}
         boxStyle={styles.noMarginTop}
       >
-        <div className={clsx(styles.enterpriceTitleBox, styles.titleH1)}>
+        <div
+          className={clsx(
+            styles.enterpriceTitleBox,
+            styles.titleH1,
+            styles.deplyblockchainBox
+          )}
+        >
           <h1 className={styles.titleH1}>Additional Resources</h1>
           <span>
             Find more interesting reads and resources to continue learning about
@@ -244,23 +322,23 @@ const Industries = () => (
           <div className={styles.colBox}>
             <picture>
               <source
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 srcSet={useBaseUrl("img/blog.jp2")}
                 type="image/jp2"
               />
               <img
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 src={useBaseUrl("img/blog.webp")}
               />
             </picture>
             <picture>
               <source
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 srcSet={useBaseUrl("img/press.jp2")}
                 type="image/jp2"
               />
               <img
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 src={useBaseUrl("img/press.webp")}
               />
             </picture>
@@ -268,23 +346,23 @@ const Industries = () => (
           <div className={styles.colBox}>
             <picture>
               <source
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 srcSet={useBaseUrl("img/portal.jp2")}
                 type="image/jp2"
               />
               <img
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 src={useBaseUrl("img/portal.webp")}
               />
             </picture>
             <picture>
               <source
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 srcSet={useBaseUrl("img/github.jp2")}
                 type="image/jp2"
               />
               <img
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 src={useBaseUrl("img/github.webp")}
               />
             </picture>
