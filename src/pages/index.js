@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
@@ -10,6 +10,16 @@ import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
 import styles from "./styles.module.css";
 
 const Home = () => {
+  const [accordionState, setAccordionState] = useState();
+
+  useEffect(() => {
+    setAccordionState({
+      development: false,
+      infrastructure: false,
+      education: false,
+    });
+  }, []);
+
   return (
     <Layout>
       <main className={styles.mainContainer}>
@@ -108,15 +118,47 @@ const Home = () => {
 
             <Accordion
               title="Software Development"
-              content={`Our value proposition is to develop blockchain-based software to solve real-life problems. We have experience working with large global enterprises and SMEs, government entities and NGOs, and open-source projects across many industries. We adapt to our clients’ budgets and needs, without compromising thought leadership or quality. Our team is technology agnostic but specializes in the open-source blockchain technology EOSIO, launched by leading company block.one. `}
+              content={
+                <span>
+                  Our value proposition is to develop blockchain-based software
+                  to solve real-life problems. We have experience working with
+                  large global enterprises and SMEs, government entities and
+                  NGOs, and open-source projects across many industries. We
+                  adapt to our clients’ budgets and needs, without compromising
+                  thought leadership or quality. Our team is technology agnostic
+                  but specializes in the open-source blockchain technology
+                  EOSIO, launched by leading company block.one.
+                </span>
+              }
             />
             <Accordion
               title="Blockchain Infrastructure"
-              content={`We offer top-grade infrastructure for blockchain networks and API endpoints from our datacenter in San José, Costa Rica. Costa Rica is a country with high political stability and a long-lasting democracy. Our strategic location in the middle of the American continent offers convenient network interconnectivity. We also configure, host, and maintain blockchain nodes available for private and public networks with 24/7 monitoring and uptime. Read more about this. `}
+              content={
+                <span>
+                  We offer top-grade infrastructure for blockchain networks and
+                  API endpoints from our datacenter in San José, Costa Rica.
+                  Costa Rica is a country with high political stability and a
+                  long-lasting democracy. Our strategic location in the middle
+                  of the American continent offers convenient network
+                  interconnectivity. We also configure, host, and maintain
+                  blockchain nodes available for private and public networks
+                  with 24/7 monitoring and uptime. Read more about this.
+                </span>
+              }
             />
             <Accordion
               title="Education and Training"
-              content={`In today’s world, new technologies are leading the way to transform many industries. We offer workshops on blockchain and EOSIO to C-suite executives and teams that want to keep up to date and learn more about what is blockchain and enterprise use cases. We also provide training and education resources for new talents that wish to kickstart their career in blockchain.`}
+              content={
+                <span>
+                  In today’s world, new technologies are leading the way to
+                  transform many industries. We offer workshops on blockchain
+                  and EOSIO to C-suite executives and teams that want to keep up
+                  to date and learn more about what is blockchain and enterprise
+                  use cases. We also provide training and education resources
+                  for new talents that wish to kickstart their career in
+                  blockchain.
+                </span>
+              }
             />
           </div>
           <div className={styles.whatWeDoBoxRight}>

@@ -4,7 +4,6 @@ import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
 import ContactUsForm from "./components/ContactUs";
-import Accordion from "./components/Accordion";
 import ContentSection from "./components/ContentSection";
 import styles from "./styles.module.css";
 
@@ -20,7 +19,9 @@ const OurProjects = () => (
           <h1>Enterprise Blockchain Use Cases</h1>
         </div>
         <span>Get to Know Our Latest Projects</span>
-        <button className={styles.mainButton}>Contact us</button>
+        <a className={styles.mainButton} href="#contactUs">
+          Contact us
+        </a>
       </ContentSection>
       <ContentSection
         sectionStyle={styles.knowEOSCRBox}
@@ -46,7 +47,13 @@ const OurProjects = () => (
               the LACChain initiative, a program to accelerate the development
               of the blockchain ecosystem in the region.
             </span>
-            <button className={styles.mainButton}>Read more</button>
+            <a
+              className={styles.mainButton}
+              href="https://latamlink.io/"
+              target="_blank"
+            >
+              Read more
+            </a>
           </div>
         </div>
         <div className={clsx(styles.knowRowBox, styles.colReverse)}>
@@ -69,7 +76,13 @@ const OurProjects = () => (
               blood banks, and local businesses, leveraged by a token economy.
               Winner of the "Coding for Change" challenge by block.one.
             </span>
-            <button className={styles.mainButton}>Read more</button>
+            <a
+              className={styles.mainButton}
+              href="https://lifebank.io/"
+              target="_blank"
+            >
+              Read more
+            </a>
           </div>
         </div>
         <div className={clsx(styles.knowRowBox, styles.colReverse)}>
@@ -92,7 +105,13 @@ const OurProjects = () => (
               transmission of relevant data required for proper interchange in
               port logistics
             </span>
-            <button className={styles.mainButton}>Read more</button>
+            <a
+              className={styles.mainButton}
+              href="https://smartgate.tech/"
+              target="_blank"
+            >
+              Read more
+            </a>
           </div>
         </div>
       </ContentSection>

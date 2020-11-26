@@ -107,21 +107,50 @@ const ServicePage = () => {
           <div className={styles.colBox}>
             <Accordion
               title="Boosted efficiency"
-              content="Smart contracts can help you process transactions quickly, with added efficiency compared to cloud platforms, and less costly by reducing administrative fees by cutting the middleman."
+              content={
+                <span>
+                  Smart contracts can help you process transactions quickly,
+                  with added efficiency compared to cloud platforms, and less
+                  costly by reducing administrative fees by cutting the
+                  middleman.
+                </span>
+              }
             />
             <Accordion
               title="Improved security"
-              content="The immutability and encryption capabilities of blockchain can reduce data manipulation, human error, and cyber frauds. Blockchains use hash functions – created by a mathematical function that transforms input data into code lines – that make blockchains difficult to hack."
+              content={
+                <span>
+                  The immutability and encryption capabilities of blockchain can
+                  reduce data manipulation, human error, and cyber frauds.
+                  Blockchains use hash functions – created by a mathematical
+                  function that transforms input data into code lines – that
+                  make blockchains difficult to hack.
+                </span>
+              }
             />
           </div>
           <div className={styles.colBox}>
             <Accordion
               title="Added transparency"
-              content="Blockchain enables a transparent and near real-time registry of data that can improve the trust and traceability of processes, such as in supply chain or insurance claims processing."
+              content={
+                <span>
+                  Blockchain enables a transparent and near real-time registry
+                  of data that can improve the trust and traceability of
+                  processes, such as in supply chain or insurance claims
+                  processing.
+                </span>
+              }
             />
             <Accordion
               title="Enhanced auditability"
-              content="A permissioned blockchain allows an organization to control accesses and authorizations across the network, increasing accountability among the team, and facilitating auditability by external parties."
+              content={
+                <span>
+                  A permissioned blockchain allows an organization to control
+                  accesses and authorizations across the network, increasing
+                  accountability among the team, and facilitating auditability
+                  by external parties.
+                </span>
+              }
             />
           </div>
         </ContentSection>
@@ -304,15 +333,46 @@ const ServicePage = () => {
               <div className={styles.accordionBox}>
                 <Accordion
                   title="Network interconnectivity"
-                  content="Costa Rica has shores in both the Pacific and Atlantic oceans and connects three submarine fiber optic cables – ARCOS-1, MAYA-1, and Pan American Crossing (PAC) – that provide the majority of the bandwidth in the country. This interconnection provides real-time fail-over and redundancy to our infrastructure. Costa Rica is part of the six Central American nations interconnected via a terrestrial fiber-optic network (REDCA). Additionally, having direct connections to all upstream carriers allows the country’s network to prevent single-point failures."
+                  content={
+                    <span>
+                      Costa Rica has shores in both the Pacific and Atlantic
+                      oceans and connects three submarine fiber optic cables –
+                      ARCOS-1, MAYA-1, and Pan American Crossing (PAC) – that
+                      provide the majority of the bandwidth in the country. This
+                      interconnection provides real-time fail-over and
+                      redundancy to our infrastructure. Costa Rica is part of
+                      the six Central American nations interconnected via a
+                      terrestrial fiber-optic network (REDCA). Additionally,
+                      having direct connections to all upstream carriers allows
+                      the country’s network to prevent single-point failures.
+                    </span>
+                  }
                 />
                 <Accordion
                   title="Stable political framework"
-                  content="Costa Rica is a country that values Human Rights, Peace, and Democracy. The country is one of the most stable and longest-lasting Democracies in America. Costa Rica abolished its army in 1948 to promote education and wellbeing and stands out on equality and innovation. Moreover, the Inter-American Institute of Human Rights based its headquarters in San José."
+                  content={
+                    <span>
+                      Costa Rica is a country that values Human Rights, Peace,
+                      and Democracy. The country is one of the most stable and
+                      longest-lasting Democracies in America. Costa Rica
+                      abolished its army in 1948 to promote education and
+                      wellbeing and stands out on equality and innovation.
+                      Moreover, the Inter-American Institute of Human Rights
+                      based its headquarters in San José.
+                    </span>
+                  }
                 />
                 <Accordion
                   title="Environmental awareness"
-                  content="Despite being a small country, Costa Rica houses more than 4% of the world’s biodiversity. The country’s leaders have been promoting ecology and sustainable development. Leading by example, more than 26% of its territory comprises of protected areas and National Parks."
+                  content={
+                    <span>
+                      Despite being a small country, Costa Rica houses more than
+                      4% of the world’s biodiversity. The country’s leaders have
+                      been promoting ecology and sustainable development.
+                      Leading by example, more than 26% of its territory
+                      comprises of protected areas and National Parks.
+                    </span>
+                  }
                 />
               </div>
             </div>
@@ -338,15 +398,44 @@ const ServicePage = () => {
               <div className={styles.flexBox}>
                 <Accordion
                   title="Executive Workshops"
-                  content="We know that innovative technologies, such as blockchain, may have a steep learning curve. So, we offer workshops on blockchain and EOSIO technology to C-suite executives and teams that want to keep up to date and learn more about blockchain and enterprise use cases. These workshops include multimodal content such as videos, lectures, and use cases. Download the course information here."
+                  content={
+                    <span>
+                      We know that innovative technologies, such as blockchain,
+                      may have a steep learning curve. So, we offer workshops on
+                      blockchain and EOSIO technology to C-suite executives and
+                      teams that want to keep up to date and learn more about
+                      blockchain and enterprise use cases. These workshops
+                      include multimodal content such as videos, lectures, and
+                      use cases. Download the course information here.
+                    </span>
+                  }
                 />
                 <Accordion
                   title="Training for Developers"
-                  content="We also provide training and education resources for new talents that wish to kickstart their career in blockchain and in the EOSIO protocol. We have assembled a web portal that includes learning materials and guides for developers. Check them out here. Also, ask us about our training courses for companies and teams."
+                  content={
+                    <span>
+                      We also provide training and education resources for new
+                      talents that wish to kickstart their career in blockchain
+                      and in the EOSIO protocol. We have assembled a web portal
+                      that includes learning materials and guides for
+                      developers. Check them out here. Also, ask us about our
+                      training courses for companies and teams.
+                    </span>
+                  }
                 />
                 <Accordion
                   title="Community Building"
-                  content="We help promote the blockchain and EOSIO ecosystems by hosting and attending community activities. We also speak about blockchain and participate in events related to technology and innovation. Every year, we host a team-building event called EOSurf that takes our operations to the beach for several days to switch computers and code for surf and yoga lessons."
+                  content={
+                    <span>
+                      We help promote the blockchain and EOSIO ecosystems by
+                      hosting and attending community activities. We also speak
+                      about blockchain and participate in events related to
+                      technology and innovation. Every year, we host a
+                      team-building event called EOSurf that takes our
+                      operations to the beach for several days to switch
+                      computers and code for surf and yoga lessons.
+                    </span>
+                  }
                 />
               </div>
               <picture className={clsx(styles.flexBox, styles.teamBox)}>

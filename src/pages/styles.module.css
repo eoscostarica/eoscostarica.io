@@ -50,6 +50,11 @@
   flex-direction: column;
 }
 
+.flexImgBox {
+  width: 100%;
+  margin: 1rem 0;
+}
+
 .boxSpaceBetween {
   justify-content: space-between;
 }
@@ -883,5 +888,12 @@
 
   .teamBox {
     flex-direction: row;
+  }
+
+  .flexImgBox {
+    width: 300px;
+    height: 300px;
+    max-width: 300px;
+    margin: 1rem 0;
   }
 }

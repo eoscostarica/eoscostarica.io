@@ -4,7 +4,6 @@ import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
 import ContactUsForm from "./components/ContactUs";
-import Accordion from "./components/Accordion";
 import ContentSection from "./components/ContentSection";
 import styles from "./styles.module.css";
 
@@ -23,7 +22,7 @@ const BlockProducer = () => (
           Learn more about how we help to develop the EOSIO blockchain ecosystem
           worldwide.
         </span>
-        <button className={styles.mainButton}>Connect with us</button>
+        <a className={styles.mainButton} href="#contactUs">Connect with us</a>
       </ContentSection>
       <ContentSection
         sectionStyle={clsx(styles.sectionWhite, styles.enterpriceBox)}
@@ -386,23 +385,23 @@ const BlockProducer = () => (
           <div className={styles.colBox}>
             <picture>
               <source
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 srcSet={useBaseUrl("img/blog.jp2")}
                 type="image/jp2"
               />
               <img
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 src={useBaseUrl("img/blog.webp")}
               />
             </picture>
             <picture>
               <source
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 srcSet={useBaseUrl("img/press.jp2")}
                 type="image/jp2"
               />
               <img
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 src={useBaseUrl("img/press.webp")}
               />
             </picture>
@@ -410,23 +409,23 @@ const BlockProducer = () => (
           <div className={styles.colBox}>
             <picture>
               <source
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 srcSet={useBaseUrl("img/portal.jp2")}
                 type="image/jp2"
               />
               <img
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 src={useBaseUrl("img/portal.webp")}
               />
             </picture>
             <picture>
               <source
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 srcSet={useBaseUrl("img/github.jp2")}
                 type="image/jp2"
               />
               <img
-                className={styles.defaultImg}
+                className={styles.flexImgBox}
                 src={useBaseUrl("img/github.webp")}
               />
             </picture>
