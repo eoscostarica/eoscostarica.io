@@ -1,0 +1,64 @@
+{
+	"producer_account_name": "costaricaeos",
+	"org": {
+		"candidate_name": "EOSCostaRica",
+		"website": "https://eoscostarica.io",
+		"code_of_conduct": "https://eoscostarica.io/block-producer/#code-of-conduct",
+		"ownership_disclosure": "https://eoscostarica.io/block-producer/#ownership-disclosure",
+		"email": "bp@eosio.cr",
+		"github_user": ["edgar-eoscostarica", "adriexnet", "tetogomez", "kecoco16", "murillojorge", "justincast", "kuronosec", "xavier506", "ldrojas"],
+		"chain_resources": "",
+		"other_resources": ["https://evodex.io", "https://eosrate.io", "https://guide.eoscostarica.io", "https://guias.eoscostarica.io"],
+		"branding": {
+			"logo_256": "https://eoscostarica.io/img/eos-CostaRica-256x256.png",
+			"logo_1024": "https://eoscostarica.io/img/eos-CostaRica-1024x1024.png",
+			"logo_svg": "https://eoscostarica.io/img/eos-CostaRica-vectors.svg"
+		},
+		"location": {
+			"name": "SanJose",
+			"country": "CR",
+			"latitude": 9.936377,
+			"longitude": -84.078155
+		},
+		"social": {
+			"hive": "eos-costarica",
+			"twitter": "EOSCostaRica",
+			"youtube": "channel/UCvYinCH3O1iKpi-_dNfQAGQ",
+			"facebook": "costaricaeos",
+			"github": "eoscostarica",
+			"reddit": "eoscostarica",
+			"keybase": "eoscostarica",
+			"telegram": "eoscr",
+			"wechat": ""
+		}
+	},
+	"nodes": [{
+		"node_type": "query",
+		"location": {
+			"name": "SanJose",
+			"country": "CR",
+			"latitude": 9.936377,
+			"longitude": -84.078155
+		},
+		"api_endpoint": "http://api.eosio.cr",
+		"ssl_endpoint": "https://api.eosio.cr",
+		"features": ["chain-api"]
+	}, {
+		"node_type": "seed",
+		"location": {
+			"name": "SanJose",
+			"country": "CR",
+			"latitude": 9.936377,
+			"longitude": -84.078155
+		},
+		"p2p_endpoint": "p2p.eosio.cr:9876"
+	}, {
+		"node_type": "producer",
+		"location": {
+			"name": "SanJose",
+			"country": "CR",
+			"latitude": 9.936377,
+			"longitude": -84.078155
+		}
+	}]
+}
