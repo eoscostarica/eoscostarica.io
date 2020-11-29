@@ -1,37 +1,899 @@
-/* stylelint-disable docusaurus/copyright-header */
-
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.noMarginTop {
+  margin-top: 0 !important;
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.textField {
+  height: 55px;
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 10px;
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.textareaField {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
 }
 
-.features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
+.defaultImg {
+  width: 300px;
+  height: 300px;
+  max-width: 300px;
+  margin: 1rem 0;
+}
+
+.industriesImg {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.accordionBox {
   width: 100%;
 }
 
-.featureImage {
-  height: 200px;
-  width: 200px;
+.mapLocation {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.boxWrapper {
+  width: 100% !important;
+}
+
+.flexBox {
+  width: 100%;
+}
+
+.teamBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexImgBox {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.boxSpaceBetween {
+  justify-content: space-between;
+}
+
+.teamImg {
+  width: 250px;
+  height: 300px;
+}
+
+.defaultImgCarousel {
+  width: 100% !important;
+}
+
+.knowEOSCRImg {
+  margin-top: 1rem;
+  width: 100%;
+  height: 214px;
+}
+
+.knowEOSCRProjectImg {
+  margin-top: 1rem;
+  width: 100%;
+  height: 169px;
+}
+
+.mainContainer h1 {
+  margin-bottom: 0px;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1;
+  color: #000000;
+}
+
+.mainContainer h2 {
+  margin: 1rem 0;
+}
+
+.educationImg {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.mainContainer h3 {
+  line-height: 1.44;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.teamTitle {
+  font-size: 20px !important;
+}
+
+.mainContainer span {
+  font-size: 16px;
+  line-height: 1.44;
+  color: #000000;
+}
+
+.sectionGray {
+  background-color: #f1f1f1;
+  display: flex;
+}
+
+.sectionWhite {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.flexColumn {
+  flex-direction: column;
+}
+
+.deplyblockchainBox {
+  width: 100%;
+}
+
+.flexContent {
+  justify-content: space-between !important;
+}
+
+.topBox {
+  padding: 5rem 1rem 2rem 1rem;
+  text-align: left;
+}
+
+.topBox span {
+  line-height: 1.25;
+  margin-bottom: 2rem;
+}
+
+.titleBox {
+  margin-bottom: 3rem;
+}
+
+.titleBox h1 {
+  font-size: 45px;
+  line-height: 1.23;
+}
+
+.enterpriceBox {
+  padding: 1rem;
+  text-align: left;
+}
+
+.enterpriceInfoBox {
+  width: 100%;
+  padding-right: 10%;
+  text-align: left;
+}
+
+.whatWeDoBox {
+  padding: 2rem 1rem;
+}
+
+.industryBox {
+  padding: 1rem;
+}
+
+.inquiresBox {
+  background-color: #000000;
+  padding: 1rem;
+}
+
+.messageBox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.secondaryBG {
+  background-color: #f1f1f1;
+}
+
+.mainBG {
+  background-color: #ffffff;
+}
+
+.secondaryBG h1 {
+  color: #000000 !important;
+}
+
+.knowEOSCRBox {
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.linkProjectBox {
+  padding: 4rem 3rem;
+  justify-content: space-between;
+}
+
+.contactUsBox {
+  padding: 1rem;
+}
+
+.btnBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.btnBox span {
+  margin-bottom: 1rem;
+}
+
+.enterpriceTitleBox {
+  margin: 2rem 0;
+}
+
+.colBox {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.contentDefaultImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.colBox h3 {
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.whatWeDoBox .whatWeDoBoxLeft {
+  width: 100%;
+}
+
+.whatWeDoBox .whatWeDoBoxLeft h1 {
+  margin-bottom: 2rem;
+}
+
+.whatWeDoBox .whatWeDoBoxRight {
+  display: none;
+}
+
+.whatWeDoBox .whatWeDoBoxRight svg {
+  width: 100%;
+}
+
+.whatWeDoBox .mobileSvgIcon {
+  display: flex;
+  width: 100%;
+}
+
+.whatWeDoBox .mobileSvgIcon svg {
+  width: 100%;
+}
+
+.industryBox .industryTitleBox {
+  margin: 1rem 0;
+}
+
+.industryBox span {
+  line-height: 1.25;
+}
+
+.industryBox .industryColWrapper {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.industryColBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 1rem;
+  justify-content: space-between;
+}
+
+.industryColBox .svgBox {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.industryColBox .svgBox svg {
+  width: 75%;
+}
+
+.industryColBox .mainButton {
+  margin-top: 3rem;
+}
+
+.inquiresBox h1 {
+  line-height: 1.08;
+  color: #ffffff;
+  padding-bottom: 1rem;
+}
+
+.knowEOSCRBox h1 {
+  margin-bottom: 1rem;
+}
+
+.titleH1 {
+  margin-bottom: 1rem !important;
+}
+
+.knowEOSCRBox .knowRowBox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+.knowRowBox div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.knowEOSCRBox .colReverse {
+  flex-direction: column-reverse;
+}
+
+.linkProjectBox {
+  padding: 2rem 1rem;
+}
+
+.linkProjectBox img {
+  width: 20%;
+}
+
+.contactUsBox h1 {
+  margin-bottom: 1rem;
+}
+
+.contactUsBox .completeName {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactUsBox .completeName .textField {
+  width: 100%;
+}
+
+.mainButton {
+  width: 180px;
+  height: 60px;
+  border: solid 1px #979797;
+  background-color: #5484b3;
+  font-size: 21px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainButton:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.contactUsMessage {
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+.arrowRight {
+  width: 0;
+  height: 0;
+  border-left: 14px solid #5484b3;
+  border-right: 8px solid transparent;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  margin-left: 1rem;
+}
+
+.arrowLeft {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 14px solid #5484b3;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  margin-right: 1rem;
+}
+
+/* Accordion Style Start */
+.arrowUp {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 14px solid #5484b3;
+  margin-left: 1rem;
+}
+
+.arrowDown {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 14px solid #5484b3;
+  margin-left: 1rem;
+}
+
+.accordion {
+  width: 100%;
+  background-color: transparent;
+  margin-top: 3rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+  color: #000000;
+  letter-spacing: 1px;
+  text-align: left;
+  line-height: 2;
+  position: relative;
+  z-index: 2000;
+  margin-top: 2px;
+  transition: all 0.2s ease-in;
+  justify-content: space-between;
+}
+
+.titleText {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 0.96;
+  text-align: justify;
+  color: #000000;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+.content {
+  height: 30px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  z-index: 1000;
+  margin-top: -30px;
+  text-align: left;
+}
+
+.contentOpen {
+  margin-top: 0px;
+  height: auto;
+}
+
+.contentText {
+  padding: 0px;
+  visibility: hidden;
+  opacity: 0;
+  overflow: auto;
+  font-size: 16px;
+  line-height: 1.44;
+  color: #000000;
+}
+
+.contentTextOpen {
+  visibility: visible;
+  opacity: 1;
+}
+
+.arrowWrapper {
+  position: absolute;
+  margin-left: 375px;
+}
+
+/* Accordion Style End */
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  .titleBox h1 {
+    font-size: 60px;
+  }
+
+  .topBox {
+    padding: 8rem 15rem 2rem 15rem;
+  }
+
+  .enterpriceBox {
+    padding: 2rem 15rem;
+  }
+
+  .colBox {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  .enterpriceInfoBox {
+    width: 50%;
+  }
+
+  .whatWeDoBox {
+    padding: 4rem 15rem;
+    flex-direction: row;
+  }
+
+  .whatWeDoBox .mobileSvgIcon {
+    display: none;
+  }
+
+  .whatWeDoBox .whatWeDoBoxLeft {
+    width: 50%;
+  }
+  .whatWeDoBox .whatWeDoBoxRight {
+    width: 50%;
+    display: flex;
+  }
+
+  .industryBox {
+    padding: 4rem 15rem;
+  }
+
+  .industryBox .industryTitleBox {
+    margin: 2rem 0;
+  }
+
+  .industryBox .industryColWrapper {
+    padding: 3rem 0;
+    flex-direction: row;
+  }
+
+  .industryColBox {
+    width: 30%;
+  }
+
+  .industryColBox .svgBox {
+    padding-bottom: 3rem;
+  }
+
+  .industryColBox .svgBoxHeight {
+    height: 488px;
+  }
+
+  .industryColBox .svgBox svg {
+    width: 85%;
+  }
+
+  .inquiresBox {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    padding: 0 3rem;
+  }
+
+  .inquiresBox h1 {
+    width: 60%;
+  }
+
+  .messageBox {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .knowEOSCRBox {
+    flex-direction: column;
+    padding: 4rem 15rem;
+  }
+
+  .knowEOSCRBox h1 {
+    margin-bottom: 3rem;
+  }
+
+  .knowEOSCRBox .knowRowBox {
+    margin-top: 2rem;
+    flex-direction: row;
+  }
+
+  .knowRowBox div {
+    width: 50%;
+  }
+
+  .knowEOSCRBox .colReverse {
+    flex-direction: row;
+  }
+
+  .knowEOSCRImg {
+    margin-top: 0rem;
+    width: 450px;
+    height: 293px;
+  }
+
+  .knowEOSCRProjectImg {
+    margin-top: 1rem;
+    width: 430px;
+    height: 225px;
+  }
+
+  .linkProjectBox {
+    padding: 4rem 15rem;
+  }
+
+  .contactUsBox {
+    padding: 4rem 15rem;
+  }
+
+  .contactUsBox .completeName {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .contactUsBox .completeName .textField {
+    width: 48%;
+  }
+
+  .btnBox {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .btnBox span {
+    margin-bottom: 0;
+    margin-right: 1rem;
+    width: 350px;
+  }
+
+  .accordionBox {
+    width: 575px;
+  }
+
+  .title,
+  .content {
+    width: 70%;
+  }
+
+  .flexBox {
+    width: 50%;
+  }
+
+  .contentDefaultImg {
+    flex-direction: row;
+  }
+
+  .defaultImgCarousel {
+    width: 267px !important;
+    height: 200px !important;
+  }
+
+  .industriesImg {
+    width: 450px;
+    height: 300px;
+  }
+
+  .teamBox {
+    flex-direction: row;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .mainContainer h1 {
+    font-size: 48px;
+  }
+
+  .textField {
+    font-size: 25px;
+    margin-bottom: 2rem;
+    padding: 10px;
+  }
+
+  .mainContainer h3 {
+    font-size: 24px;
+  }
+
+  .teamTitle {
+    font-size: 24px !important;
+  }
+
+  .textareaField {
+    font-size: 20px;
+  }
+
+  .topBox {
+    padding: 7rem 3rem 2rem 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .enterpriceBox {
+    padding: 2rem 3rem;
+  }
+
+  .colBox {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  .enterpriceInfoBox {
+    width: 50%;
+  }
+
+  .whatWeDoBox {
+    padding: 4rem 3rem;
+    flex-direction: row;
+  }
+
+  .whatWeDoBox .mobileSvgIcon {
+    display: none;
+  }
+
+  .whatWeDoBox .whatWeDoBoxLeft {
+    width: 50%;
+  }
+  .whatWeDoBox .whatWeDoBoxRight {
+    width: 50%;
+    display: flex;
+  }
+
+  .industryBox {
+    padding: 4rem 3rem;
+  }
+
+  .industryBox .industryTitleBox {
+    margin: 2rem 0;
+  }
+
+  .industryBox .industryColWrapper {
+    padding: 3rem 0;
+    flex-direction: row;
+  }
+
+  .industryColBox {
+    width: 30%;
+  }
+
+  .industryColBox .svgBox {
+    padding-bottom: 3rem;
+  }
+
+  .industryColBox .svgBoxHeight {
+    height: 288px;
+  }
+
+  .industryColBox .svgBox svg {
+    width: 75%;
+  }
+
+  .inquiresBox {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    padding: 0 3rem;
+  }
+
+  .inquiresBox h1 {
+    width: 60%;
+  }
+
+  .messageBox {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .knowEOSCRBox {
+    flex-direction: column;
+    padding: 4rem 3rem;
+  }
+
+  .knowEOSCRBox h1 {
+    margin-bottom: 3rem;
+  }
+
+  .knowEOSCRBox .knowRowBox {
+    margin-top: 2rem;
+    flex-direction: row;
+  }
+
+  .knowRowBox div {
+    width: 50%;
+  }
+
+  .knowEOSCRBox .colReverse {
+    flex-direction: row;
+  }
+
+  .knowEOSCRImg {
+    margin-top: 0rem;
+    width: 318px;
+    height: 226px;
+  }
+  .knowEOSCRProjectImg {
+    margin-top: 1rem;
+    width: 306px;
+    height: 175px;
+  }
+
+  .contactUsBox {
+    padding: 4rem 3rem;
+  }
+
+  .contactUsBox .completeName {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .contactUsBox .completeName input[type="text"] {
+    width: 48%;
+  }
+
+  .btnBox {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .btnBox span {
+    margin-bottom: 0;
+    margin-right: 1rem;
+    width: 300px;
+  }
+
+  .accordionBox {
+    width: 375px;
+  }
+
+  .title,
+  .content {
+    width: 70%;
+  }
+
+  .flexBox {
+    width: 50%;
+  }
+
+  .contentDefaultImg {
+    flex-direction: row;
+  }
+
+  .defaultImg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .defaultImgCarousel {
+    width: 230px !important;
+    height: 200px !important;
+  }
+
+  .mapLocation {
+    width: 65%;
+    margin: 1rem 0;
+  }
+
+  .industriesImg {
+    width: 300px;
+    height: 300px;
+  }
+
+  .teamBox {
+    flex-direction: row;
+  }
+
+  .flexImgBox {
+    width: 300px;
+    height: 300px;
+    max-width: 300px;
+    margin: 1rem 0;
+  }
 }
