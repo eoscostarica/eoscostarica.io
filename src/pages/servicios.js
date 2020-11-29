@@ -27,7 +27,7 @@ const ServicePage = () => {
             empresariales y desarrollando infraestructura para fines
             empresariales.
           </span>
-          <a className={styles.mainButton} href={useBaseUrl("/about")}>
+          <a className={styles.mainButton} href={useBaseUrl("/acerca")}>
             Aprenda más
           </a>
         </ContentSection>
@@ -94,7 +94,7 @@ const ServicePage = () => {
             </a>
             , por su adaptabilidad a cualquier industria en sectores público y
             privado. Visite nuestra{" "}
-            <a href={useBaseUrl("/industries")}>página de industrias</a>
+            <a href={useBaseUrl("/industrias")}>página de industrias</a>
             para conocer más.
           </span>
           <h2>Blockchain empresarial</h2>
@@ -524,7 +524,7 @@ const ServicePage = () => {
             </div>
             <span>
               Aprenda más sobre cómo otras industrias se están transformando con
-              blockchain. <a href={useBaseUrl("/industries")}>Lea aquí.</a>
+              blockchain. <a href={useBaseUrl("/industrias")}>Lea aquí.</a>
             </span>
           </div>
         </ContentSection>
