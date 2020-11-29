@@ -36,7 +36,7 @@ const Home = () => {
             Comience a transformar su organización con el poder de redes
             blockchain empresariales.
           </span>
-          <a className={styles.mainButton} href={useBaseUrl("/services")}>
+          <a className={styles.mainButton} href={useBaseUrl("/servicios")}>
             Aprenda más
           </a>
         </ContentSection>
@@ -102,7 +102,7 @@ const Home = () => {
             <span>
               Lea más sobre cómo blockchain puede mejorar sus operaciones.
             </span>
-            <a className={styles.mainButton} href={useBaseUrl("/industries")}>
+            <a className={styles.mainButton} href={useBaseUrl("/industrias")}>
               Lea más aquí
             </a>
           </div>
@@ -271,7 +271,7 @@ const Home = () => {
             aumentar la eficiencia, seguridad y confianza al registrar
             transacciones y datos y administrar activos digitales. Además, puede
             automatizar y facilitar procesos, y reducir costos e ineficiencias.
-            <a href={useBaseUrl("/industries")}>Descubra más industrias</a> que
+            <a href={useBaseUrl("/industrias")}>Descubra más industrias</a> que
             pueden impulsar sus operaciones con tecnología blockchain.
           </span>
         </ContentSection>
@@ -404,7 +404,7 @@ const Home = () => {
           <span>
             Conozca algunos de nuestros proyectos recientes implementando el
             protocolo blockchain EOSIO.
-            <a href={useBaseUrl("/projects")}>Vea la lista completa aquí.</a>
+            <a href={useBaseUrl("/proyectos")}>Vea la lista completa aquí.</a>
           </span>
           <div className={clsx(styles.knowRowBox, styles.colReverse)}>
             <picture>

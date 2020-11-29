@@ -25,22 +25,22 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           </div>
           <ul>
             <li>
-              <a href={useBaseUrl("/")}>Home</a>
+              <a href={useBaseUrl("/")}>Inicio</a>
             </li>
             <li>
-              <a href={useBaseUrl("/services")}>Services</a>
+              <a href={useBaseUrl("/servicios")}>Servicios</a>
             </li>
             <li>
-              <a href={useBaseUrl("/industries")}>Industries</a>
+              <a href={useBaseUrl("/industrias")}>Industrias</a>
             </li>
             <li>
-              <a href={useBaseUrl("/about")}>About</a>
+              <a href={useBaseUrl("/acerca")}>Acerca</a>
             </li>
             <li>
-              <a href={useBaseUrl("/projects")}>Projects</a>
+              <a href={useBaseUrl("/proyectos")}>Proyectos</a>
             </li>
             <li>
-              <a href={useBaseUrl("/block-producer")}>Bp</a>
+              <a href={useBaseUrl("/block-producer")}>BP</a>
             </li>
             <li>
               <a href={useBaseUrl("/blog")}>Blog</a>
@@ -76,47 +76,47 @@ const NavbarMenu = () => {
               href={useBaseUrl("/")}
               className={clsx({ [styles.selected]: pathname === "/" })}
             >
-              Home
+              Inicio
             </a>
           </li>
           <li>
             <a
-              href={useBaseUrl("/services")}
+              href={useBaseUrl("/servicios")}
               className={clsx({
-                [styles.selected]: pathname.includes("/services"),
+                [styles.selected]: pathname.includes("/servicios"),
               })}
             >
-              Services
+              Servicios
             </a>
           </li>
           <li>
             <a
-              href={useBaseUrl("/industries")}
+              href={useBaseUrl("/industrias")}
               className={clsx({
-                [styles.selected]: pathname.includes("/industries"),
+                [styles.selected]: pathname.includes("/industrias"),
               })}
             >
-              Industries
+              Industrias
             </a>
           </li>
           <li>
             <a
-              href={useBaseUrl("/about")}
+              href={useBaseUrl("/acerca")}
               className={clsx({
-                [styles.selected]: pathname.includes("/about"),
+                [styles.selected]: pathname.includes("/acerca"),
               })}
             >
-              About
+              Acerca
             </a>
           </li>
           <li>
             <a
-              href={useBaseUrl("/projects")}
+              href={useBaseUrl("/proyectos")}
               className={clsx({
-                [styles.selected]: pathname.includes("/projects"),
+                [styles.selected]: pathname.includes("/proyectos"),
               })}
             >
-              Projects
+              Proyectos
             </a>
           </li>
           <li>
