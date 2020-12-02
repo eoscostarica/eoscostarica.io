@@ -16,11 +16,11 @@ const OurProjects = () => (
         childrenWrapperStyle={styles.flexColumn}
       >
         <div className={styles.titleBox}>
-          <h1>Enterprise Blockchain Use Cases</h1>
+          <h1>Casos de uso de blockchain empresarial</h1>
         </div>
-        <span>Get to Know Our Latest Projects</span>
+        <span>Conozca nuestros proyectos más recientes.</span>
         <a className={styles.mainButton} href="#contactUs">
-          Contact us
+          Contáctenos
         </a>
       </ContentSection>
       <ContentSection
@@ -42,17 +42,17 @@ const OurProjects = () => (
           <div>
             <h3>LatamLink</h3>
             <span className={styles.titleH1}>
-              We are part of this voluntary regional alliance, led by Latin
-              American technology companies to offer an EOSIO-based testnet to
-              the LACChain initiative, a program to accelerate the development
-              of the blockchain ecosystem in the region.
+              Somos parte de una alianza regional, liderada por compañías
+              tecnológicas de Latinoamérica para ofrecer un testnet basado en
+              EOSIO a la iniciativa LACChain, un programa para acelerar el
+              desarrollo del ecosistema blockchain de la región.
             </span>
             <a
               className={styles.mainButton}
               href="https://latamlink.io/"
               target="_blank"
             >
-              Read more
+              Leer más
             </a>
           </div>
         </div>
@@ -71,17 +71,18 @@ const OurProjects = () => (
           <div>
             <h3>Lifebank</h3>
             <span className={styles.titleH1}>
-              An open-source blockchain-based app that incentivizes blood
-              donations by creating a virtuous circle of value between donors,
-              blood banks, and local businesses, leveraged by a token economy.
-              Winner of the "Coding for Change" challenge by block.one.
+              Una app de código abierto basada en blockchain para incentivar las
+              donaciones de sangre al crear un círculo virtuoso de valor entre
+              donantes, bancos de sangre y negocios locales, e impulsada por una
+              economía interna de tokens. Proyecto ganador de la competencia
+              “Coding for Change” de block.one.
             </span>
             <a
               className={styles.mainButton}
               href="https://lifebank.io/"
               target="_blank"
             >
-              Read more
+              Leer más
             </a>
           </div>
         </div>
@@ -100,17 +101,17 @@ const OurProjects = () => (
           <div>
             <h3>SMARTGATE</h3>
             <span className={styles.titleH1}>
-              A blockchain-based platform that provides solutions for in-out
-              gate activity for the container industry and real-time
-              transmission of relevant data required for proper interchange in
-              port logistics
+              Una plataforma basada en blockchain que brinda soluciones para
+              entradas y salidas de puertos para la industria de logística de
+              contenedores y transmisión en tiempo real de datos requeridos para
+              el intercambio de carga.
             </span>
             <a
               className={styles.mainButton}
               href="https://smartgate.tech/"
               target="_blank"
             >
-              Read more
+              Leer más
             </a>
           </div>
         </div>
@@ -120,7 +121,7 @@ const OurProjects = () => (
         boxStyle={styles.noMarginTop}
       >
         <div className={styles.industryTitleBox}>
-          <h1>Other Projects</h1>
+          <h1>Otros proyectos</h1>
         </div>
         <div className={styles.industryColWrapper}>
           <div className={styles.industryColBox}>
@@ -140,9 +141,9 @@ const OurProjects = () => (
               </div>
               <h3>Enterprise EOSIO Forum</h3>
               <span>
-                We are part of the Enterprise EOSIO Forum, a community-driven
-                initiative to discuss enterprise blockchain solutions deploying
-                EOSIO technology.
+                Somos parte del Enterprise EOSIO Forum, una iniciativa de la
+                comunidad para discutir sobre soluciones empresariales en
+                blockchain implementando la tecnología EOSIO.
               </span>
             </div>
           </div>
@@ -163,9 +164,10 @@ const OurProjects = () => (
               </div>
               <h3>EOS Foundation</h3>
               <span>
-                We are part of the EOS Foundation proof of concept. It is an
-                autonomous, decentralized, non-profit organization that will
-                enable self-representation and promotion of the EOS community.
+                Somos parte de la prueba de concepto de EOS Foundation, una
+                organización sin fines de lucro, autónoma y descentralizada, que
+                permitiría la auto- representación y promoción de la comunidad
+                de EOS.
               </span>
             </div>
           </div>
@@ -186,9 +188,10 @@ const OurProjects = () => (
               </div>
               <h3>EOS Rate</h3>
               <span>
-                EOS Rate is an open- source app that allows EOS token holders to
-                access a rating system and voting portal for block producers and
-                proxies in the EOS blockchain.
+                EOS Rate es una app de código abierto que permite a titulares de
+                tokens EOS acceder a un sistema de calificaciones y portal de
+                votación para productores de bloques y proxies en la blockchain
+                EOS.
               </span>
             </div>
           </div>
@@ -211,9 +214,9 @@ const OurProjects = () => (
               </div>
               <h3>EOSIO Dashboard</h3>
               <span>
-                The EOSIO Dashboard is an open-source project that allows users
-                to visualize the rewards distribution along the EOS network to
-                seek accountability and transparency.
+                EOSIO Dashboard es un proyecto de código abierto que permite a
+                usuarios visualizar la distribución de recompensas en la red EOS
+                en la búsqueda de rendición de cuentas y transparencia.
               </span>
             </div>
           </div>
@@ -234,9 +237,10 @@ const OurProjects = () => (
               </div>
               <h3>Evodex</h3>
               <span>
-                Evodex is the front-end user interface for a liquidity pool
-                protocol where users vote on the pool liquidity fees and pay
-                zero gas. We were in charge of UX and front-end design.
+                Evodex es la interfaz front- end para un protocolo de pool de
+                liquidez en el que los usuarios votan por las tarifas de
+                liquidez y no pagan por gas. Nuestro equipo estuvo a cargo del
+                UX y el diseño front-end.
               </span>
             </div>
           </div>
@@ -255,11 +259,11 @@ const OurProjects = () => (
                   />
                 </picture>
               </div>
-              <h3>Undisclosed enterprise project</h3>
+              <h3>Proyecto empresarial privado</h3>
               <span>
-                We developed an app for a US-based client in the accounting and
-                tax industry for improved traceability of intercompany
-                transactions.
+                Desarrollamos una app para un cliente estadounidense en la
+                industria de contabilidad y finanzas para mejorar la
+                trazabilidad de transacciones intercompañía.
               </span>
             </div>
           </div>
@@ -282,8 +286,9 @@ const OurProjects = () => (
               </div>
               <h3>Notario Digital</h3>
               <span>
-                Notario Digital is an open- source project that generates a hash
-                of any file to register it immutably on an EOSIO network.
+                Notario Digital es un proyecto de código abierto que genera un
+                hash de cualquier documento para registrarlo de forma inmutable
+                en una red EOSIO.
               </span>
             </div>
           </div>

@@ -19,33 +19,36 @@ const BlockProducer = () => (
           <h1>EOS Block Producer</h1>
         </div>
         <span>
-          Learn more about how we help to develop the EOSIO blockchain ecosystem
-          worldwide.
+          Lea más sore cómo ayudamos a desarrollar el ecosistema blockchain
+          EOSIO en el mundo.
         </span>
-        <a className={styles.mainButton} href="#contactUs">Connect with us</a>
+        <a className={styles.mainButton} href="#contactUs">
+          Conéctese con nosotros
+        </a>
       </ContentSection>
       <ContentSection
         sectionStyle={clsx(styles.sectionWhite, styles.enterpriceBox)}
         boxStyle={styles.noMarginTop}
       >
         <div className={styles.enterpriceTitleBox}>
-          <h1 className={styles.titleH1}>Our Story</h1>
+          <h1 className={styles.titleH1}>Nuestra historia</h1>
           <span>
-            EOS Costa Rica is a company spinoff with over three decades of
-            developing technologies in Costa Rica. During the 80s, we launched
-            the first BBS (bulletin board service) in the country, a precursor
-            to the internet. Later on, the company shifted to educating new
-            users on using email and browsing the web. Then, we started offering
-            internet infrastructure, hosting, and development services.
+            EOS Costa Rica es un spinoff de una compañía con más de tres décadas
+            desarrollando tecnologías en Costa Rica. Durante la década de los
+            80, lanzamos el primer BBS (bulletin board service) del país, un
+            precursor de la internet. Luego, la compañía pasó a educar a nuevos
+            usuarios en el uso del email y navegar en la web. Más adelante,
+            comenzamos a ofrecer infraestructura de internet, hospedaje y
+            servicios de desarrollo.
           </span>
           <h3 />
           <span>
-            In 2013, we began providing infrastructure for public blockchain
-            networks and learned first-hand how blockchains work. Then, in 2018
-            when EOSIO was launched, we investigated the advantages of this
-            technology and started learning how to deploy it in the real world.
-            We were there during the genesis of the EOS Mainnet and will
-            continue to be there throughout its growth.
+            En 2013, empezamos a brindar infraestructura para redes blockchain
+            públicas y aprendimos de primera mano cómo funciona la tecnología.
+            En 2018 cuando fue lanzado EOSIO, investigamos las ventajas de esta
+            tecnología y comenzamos a aprender cómo implementarla en el mundo
+            real. Estuvimos allí durante el nacimiento de la EOS Mainnet y
+            continuaremos durante su crecimiento.
           </span>
         </div>
       </ContentSection>
@@ -54,73 +57,74 @@ const BlockProducer = () => (
         boxStyle={styles.noMarginTop}
       >
         <div className={styles.enterpriceTitleBox}>
-          <h1>Our Values</h1>
+          <h1>Nuestros valores</h1>
         </div>
         <div className={styles.colBox}>
           <div className={styles.enterpriceInfoBox}>
-            <h3>Ongoing education</h3>
+            <h3>Educación constante</h3>
             <span>
-              We believe that continuous training and building human talent is
-              crucial to developing a robust ecosystem.
+              Creemos que el entrenamiento continuo y el desarrollo de talento
+              humano son cruciales para desarrollar un ecosistema robusto.
             </span>
           </div>
           <div className={styles.enterpriceInfoBox}>
-            <h3>Loyalty</h3>
+            <h3>Lealtad</h3>
             <span>
-              We recognize and acknowledge everyone’s unique talents and seek to
-              build loyalty by empowering the EOSIO community.
-            </span>
-          </div>
-        </div>
-        <div className={styles.colBox}>
-          <div className={styles.enterpriceInfoBox}>
-            <h3>Resilience</h3>
-            <span>
-              Our team evolves alongside technology. We strive to be as nimble
-              and efficient as possible, which lets us quickly adapt and
-              implement the newest innovations.
-            </span>
-          </div>
-          <div className={styles.enterpriceInfoBox}>
-            <h3>Liberty</h3>
-            <span>
-              We defend individual sovereignty among the EOS community,
-              replicating Costa Rica’s premise of freedom and peace as the
-              lengthiest democracy in Latin America.
+              Reconocemos los talentos únicos de cada persona y buscamos
+              construir lealtad al empoderar a la comunidad EOSIO.
             </span>
           </div>
         </div>
         <div className={styles.colBox}>
           <div className={styles.enterpriceInfoBox}>
-            <h3>Tolerance</h3>
+            <h3>Resiliencia</h3>
             <span>
-              Our team advocates for the rights of education, entrepreneurship,
-              and opportunities for all the members in our community as a way to
-              develop the ecosystem.
+              Nuestro equipo evoluciona de la mano de la tecnología. Buscamos
+              agilidad y eficiencia, lo que nos permite adaptarnos rápidamente e
+              implementar las últimas innovaciones.
             </span>
           </div>
           <div className={styles.enterpriceInfoBox}>
-            <h3>Prudence</h3>
+            <h3>Libertad</h3>
             <span>
-              We commit to safeguard our community’s future and take calculated
-              risks that will bring us further to our long term goals.
+              Defendemos la soberanía individual dentro de la comunidad EOS,
+              replicando la premisa de Costa Rica de libertad y paz como la
+              democracia más longeva de Latinoamérica.
             </span>
           </div>
         </div>
         <div className={styles.colBox}>
           <div className={styles.enterpriceInfoBox}>
-            <h3>Accountability</h3>
+            <h3>Tolerancia</h3>
             <span>
-              We firmly believe and encourage taking full accountability from
-              our team members and stakeholders. We value transparency and
-              responsibility.
+              Nuestro equipo aboga por los derechos a la educación,
+              emprendimiento y oportunidades para todos los miembros de la
+              comunidad como forma de desarrollar el ecosistema.
             </span>
           </div>
           <div className={styles.enterpriceInfoBox}>
-            <h3>Equality</h3>
+            <h3>Prudencia</h3>
             <span>
-              We endorse and defend a governance model guided by merit
-              principles for our community’s benefit.
+              Nos comprometemos a salvaguardar el futuro de la comunidad y
+              tomamos riesgos calculados que nos acercan cada vez más a nuestras
+              metas de largo plazo.
+            </span>
+          </div>
+        </div>
+        <div className={styles.colBox}>
+          <div className={styles.enterpriceInfoBox}>
+            <h3>Rendición de cuentas</h3>
+            <span>
+              Creemos firmemente e incentivamos tomar completa responsabilidad a
+              los miembros del equipo y partes interesadas. Valoramos la
+              transparencia y rendición de cuentas.
+            </span>
+          </div>
+          <div className={styles.enterpriceInfoBox}>
+            <h3>Equidad</h3>
+            <span>
+              Avalamos y defendemos un modelo de gobernanza guiados por
+              principios de méritos para beneficios de nuestra comunidad.
             </span>
           </div>
         </div>
@@ -130,47 +134,54 @@ const BlockProducer = () => (
         boxStyle={styles.noMarginTop}
       >
         <div className={styles.industryTitleBox}>
-          <h1>Block Producer Information</h1>
+          <h1>Información de block producer</h1>
         </div>
         <div className={clsx(styles.titleH1, styles.sectionWhite)}>
-          <h3 className={styles.titleH1}>Code of conduct</h3>
-          <h4>EOS Costa Rica pledges to:</h4>
+          <h3 className={styles.titleH1}>Código de conducta</h3>
+          <h4>EOS Costa Rica se compromete a:</h4>
           <span>
-            Provide the highest standard bare-metal infrastructure available to
-            the EOS ecosystem.
+            Brindar la infraestructura bare-metal con los más altos estándares
+            disponible para el ecosistema EOS.
           </span>
           <span>
-            Become an economically sustainable and highly competitive EOS Block
-            Producer.
+            Llegar a ser un EOS Block Producer económicamente sostenible y
+            altamente competitivo.
           </span>
           <span>
-            Allocate block rewards to EOS educational and development
-            initiatives. Sponsor dApps and projects for community-led
-            developments.
+            Asignar recompensas de bloque a iniciativas EOS de educación y
+            desarrollo.
           </span>
           <span>
-            Be totally transparent and open when allocating block rewards.
-            Actively participate in the blockchain governance with an open and
-            positive attitude.
+            Patrocinar dApps y desarrollo de proyectos liderados por la
+            comunidad.
           </span>
           <span>
-            Respect and defend the constitution, fair elections, community
-            vigilance, and arbitration mechanisms.
+            Ser totalmente transparentes y abiertos al asignar recompensas de
+            bloques.
+          </span>
+          <span>
+            Participar activamente en la gobernanza de la blockchain con una
+            actitud abierta y positiva.
+          </span>
+          <span>
+            Respetar y defender la constitución, elecciones justas, vigilancia
+            de la comunidad y mecanismos de arbitraje.
           </span>
         </div>
         <h3 className={styles.titleH1} id="ownership-disclosure">
-          Ownership disclosure
+          Revelación de propiedad
         </h3>
         <span>
-          According to the Block Producer Agreement and values that have
-          represented us since the beginning of our campaign, EOS Costa Rica
-          hereby commits to disclose all beneficial owners of our organization
-          and encourages other BP candidates to abide by the Agreement. Whereas
-          EOS Costa Rica is a community-led initiative involving various
-          stakeholders, including but not limited to: developers, security
-          engineers, community managers, system administrators, and financial
-          staff, the Block Producer Keys are ultimately owned and controlled by
-          Sistemas Edenia Internacional, S.A.
+          De acuerdo al Acuerdo de Block Producer y los valores que nos han
+          representado desde el inicio de la campaña, EOS Costa Rica se
+          compromete a revelar los beneficiarios finales de nuestra organización
+          e incentiva a otros candidatos BP a acatar dicho Acuerdo. Considerando
+          que EOS Costa Rica es una iniciativa liderada por la comunidad
+          involucrando a varias partes interesadas, incluyendo pero no limitado
+          a: desarrolladores, ingenieros de seguridad, gestores de comunidad,
+          administradores de sistema y personal financiero, las llaves de Block
+          Producer son propiedad y controladas por Sistemas Edenia
+          Internacional, S.A.
         </span>
       </ContentSection>
       <ContentSection
@@ -178,11 +189,12 @@ const BlockProducer = () => (
         boxStyle={styles.noMarginTop}
       >
         <div className={styles.industryTitleBox}>
-          <h1>Open-source Projects</h1>
+          <h1>Proyectos open-source</h1>
         </div>
         <span>
-          Find out more about some open-source we are developing. Feel free to
-          look over our Github profile for more details!
+          Descubra más sobre algunos proyectos open-source que estamos
+          desarrollando. ¡También puede entrar a nuestro perfil de GitHub para
+          más detalles!
         </span>
         <div className={styles.industryColWrapper}>
           <div className={styles.industryColBox}>
@@ -202,10 +214,11 @@ const BlockProducer = () => (
               </div>
               <h3>Lifebank</h3>
               <span>
-                An open-source blockchain-based app that incentivizes blood
-                donations by creating a virtuous circle of value between donors,
-                blood banks, and local businesses, leveraged by a token economy.
-                Winner of the "Coding for Change" challenge by block.one.
+                Una app de código abierto basada en blockchain para incentivar
+                las donaciones de sangre al crear un círculo virtuoso de valor
+                entre donantes, bancos de sangre y negocios locales, e impulsada
+                por una economía interna de tokens. Proyecto ganador de la
+                competencia “Coding for Change” de block.one.
               </span>
             </div>
           </div>
@@ -226,9 +239,10 @@ const BlockProducer = () => (
               </div>
               <h3>EOS Rate</h3>
               <span>
-                EOS Rate is an open- source app that allows EOS token holders to
-                access a rating system and voting portal for block producers and
-                proxies in the EOS blockchain.
+                EOS Rate es una app de código abierto que permite a titulares de
+                tokens EOS acceder a un sistema de calificaciones y portal de
+                votación para productores de bloques y proxies en la blockchain
+                EOS.
               </span>
             </div>
           </div>
@@ -249,17 +263,17 @@ const BlockProducer = () => (
               </div>
               <h3>EOSIO Dashboard</h3>
               <span>
-                The EOSIO Dashboard is an open-source project that allows users
-                to visualize the rewards distribution along the EOS network to
-                seek accountability and transparency.
+                EOSIO Dashboard es un proyecto de código abierto que permite a
+                usuarios visualizar la distribución de recompensas en la red EOS
+                en la búsqueda de rendición de cuentas y transparencia.
               </span>
             </div>
           </div>
         </div>
         <div className={styles.btnBox}>
           <span>
-            Follow us on our profiles. We’re continually looking for open-source
-            collaborations!
+            Síganos en redes sociales. ¡Constantemente estamos en búsqueda de
+            colaboraciones open-source!
           </span>
         </div>
       </ContentSection>
@@ -268,60 +282,64 @@ const BlockProducer = () => (
         boxStyle={styles.noMarginTop}
       >
         <div className={clsx(styles.enterpriceTitleBox, styles.titleH1)}>
-          <h1 className={styles.titleH1}>Why Costa Rica?</h1>
+          <h1 className={styles.titleH1}>¿Por qué Costa Rica?</h1>
           <span>
-            We are the first EOS block producer candidate in Central America and
-            one of the few in Latin America. We believe that Costa Rica’s
-            features can be an excellent asset for aggregating diversity to the
-            EOS network, be it for its political stability, absence of an army,
-            or respect to Human Rights. Additionally, its technical
-            infrastructure, stable political framework, flexible corporate
-            structure, and defined jurisdiction makes it an opportunistic
-            network available for the censorship-resistant EOS.
+            Somos los primeros candidatos a Block Producer en Centroamérica y
+            uno de los pocos en Latinoamérica. Creemos que las características
+            de Costa Rica brindan una ventaja al agregar diversidad a la red de
+            EOS, ya sea por la estabilidad política del país, la ausencia de
+            ejército o el respeto a los Derechos Humanos. Adicionalmente, su
+            infraestructura técnica, marco político estable, estructura
+            corporativa flexible y jurisdicción definida representa
+            oportunidades para la red EOS, que es reconocida como una red
+            resistente a la censura.
           </span>
         </div>
         <div className={styles.colBox}>
           <div className={styles.enterpriceInfoBox}>
-            <h3>Liberty and Peace</h3>
+            <h3>Libertad y Paz</h3>
             <span>
-              Costa Rica is one of the most stable and longest-lasting
-              Democracies in America. It abolished its army in 1948 to promote
-              education and wellbeing and stands out on equality and innovation.
+              Costa Rica es una de las Democracias más estables y longevas de
+              América. El país abolió su ejército en 1948 para promover la
+              educación y el bienestar, y sobresale en cuanto a equidad e
+              innovación.
             </span>
           </div>
           <div className={styles.enterpriceInfoBox}>
-            <h3>Human Rights</h3>
+            <h3>Derechos Humanos</h3>
             <span>
-              Costa Rica is founded on respect to Human Rights, and even the
-              Inter-American Institute of Human Rights based its headquarters in
-              San José.
+              Costa Rica se fundó bajo la premisa de respeto a los Derechos
+              Humanos. Incluso, la capital San José es sede central del
+              Instituto Interamericano de Derechos Humanos.
             </span>
           </div>
         </div>
 
         <div className={styles.colBox}>
           <div className={styles.enterpriceInfoBox}>
-            <h3>Ecology</h3>
+            <h3>Ecología</h3>
             <span>
-              Costa Rica promotes sustainable development and houses more than
-              4% of the world’s biodiversity, where more than 26% of its
-              territory comprises of protected areas and National Parks.
+              Costa Rica promueve el desarrollo sostenible y alberga a más del
+              4% de la biodiversidad del planeta. Además, 26% del territorio
+              nacional lo componen áreas protegidas y Parques Nacionales.
             </span>
           </div>
           <div className={styles.enterpriceInfoBox}>
-            <h3>Strategic location</h3>
+            <h3>Ubicación estratégica</h3>
             <span>
-              Costa Rica is conveniently located in the middle of the Americas.
-              The country connects three submarine fiber optic cables, providing
-              real-time fail- over and redundancy to our infrastructure.
+              Costa Rica está convenientemente ubicada en el medio del
+              continente americano. El país conecta tres cables submarinos de
+              fibra óptica, los cuales brindan la mayoría del ancho de banda del
+              país.
             </span>
           </div>
         </div>
         <div className={styles.enterpriceInfoBox}>
-          <h3>Equality</h3>
+          <h3>Equidad</h3>
           <span>
-            Costa Ricans value equality for all. For instance, the country ranks
-            as the first in Latin America for gender equality.
+            La población costarricense valora la equidad. Por ejemplo, el país
+            se ubica en el primer puesto de Latinoamérica en cuanto a equidad de
+            género.
           </span>
         </div>
         <img
@@ -335,49 +353,51 @@ const BlockProducer = () => (
         boxStyle={styles.noMarginTop}
       >
         <div className={clsx(styles.enterpriceTitleBox, styles.titleH1)}>
-          <h1 className={styles.titleH1}>Vote for Us as Block Producers</h1>
+          <h1 className={styles.titleH1}>
+            Vote por nosotros como Block Producers
+          </h1>
         </div>
         <div className={styles.colBox}>
           <div className={styles.enterpriceInfoBox}>
-            <h3>Experience as integrators</h3>
+            <h3>Experiencia como integradores</h3>
             <span>
-              We focus on building strong relationships with strategic partners
-              and the enterprise sector. We constantly seek new business
-              opportunities and strive to educate executives in both the public
-              and private sectors about the EOSIO protocol and blockchain
-              technology.
+              Nos enfocamos en construir relaciones con aliados estratégicos y
+              el sector empresarial. Constantemente buscamos nuevas
+              oportunidades de negocio y procuramos educar a ejecutivos en
+              sectores público y privado sobre el protocolo EOSIO y la
+              tecnología blockchain.
             </span>
           </div>
           <div className={styles.enterpriceInfoBox}>
-            <h3>Reason 2</h3>
+            <h3>Equipo ganador</h3>
             <span>
-              We strive to recruit the best candidates. We have assembled a
-              Latin American team with a problem-solving mindset and expertise
-              in their areas of knowledge. Our team operates in an Agile
-              environment that encourages participation, self- accountability,
-              and innovation.
+              Buscamos reclutar a los mejores candidatos. Hemos armado un equipo
+              latinoamericano con mentalidad de resolución de problemas y amplia
+              experiencia en sus distintas áreas. Nuestro equipo opera en un
+              ambiente Agile que incentiva la participación, rendición de
+              cuentas y la innovación.
             </span>
           </div>
         </div>
 
         <div className={styles.colBox}>
           <div className={styles.enterpriceInfoBox}>
-            <h3>Great open-source projects</h3>
+            <h3>Grandes proyectos open- source</h3>
             <span>
-              We develop and support open- source projects such as EOS Rate,
-              LatamLink, Lifebank, EOSIO Dashboard, and many more that strive to
-              push the EOSIO ecosystem forward. These projects are built by
-              talented developers and professionals that believe in the benefits
-              of the network.
+              Desarrollamos y apoyamos proyectos open-source como EOS Rate,
+              LatamLink, Lifebank, EOSIO Dashboard y otros con el fin de
+              impulsar el ecosistema EOSIO. Estos proyectos han sido creados por
+              desarrolladores y profesionales talentosos que creen en los
+              beneficios de la red.
             </span>
           </div>
           <div className={styles.enterpriceInfoBox}>
-            <h3>Strong community building</h3>
+            <h3>Desarrollo de comunidad</h3>
             <span>
-              We are part of local and global ecosystems to promote EOSIO
-              adoption. We attend events such as the EOS Conferences, events by
-              Block.one, and take an active part in the community’s digital
-              conversations.
+              Somos parte de los ecosistemas locales y globales para promover la
+              adopción de EOSIO. Asistimos a eventos como las EOS Conferences,
+              eventos organizados por Block.one, y somos activos en las
+              conversaciones de la comunidad digital.
             </span>
           </div>
         </div>
@@ -432,8 +452,8 @@ const BlockProducer = () => (
           </div>
         </div>
         <div className={styles.btnBox}>
-          <span>Get to know more about our team!</span>
-          <button className={styles.mainButton}>Read more</button>
+          <span>¡Conozca más sobre el equipo!</span>
+          <button className={styles.mainButton}>Leer más</button>
         </div>
       </ContentSection>
       <ContactUsForm />

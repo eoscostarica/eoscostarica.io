@@ -212,10 +212,11 @@ const About = () => {
         >
           <h1>Conozca al equipo</h1>
           <span className={styles.titleH1}>
-            We have assembled a Latin American team with a problem-solving
-            mindset and expertise in their areas of knowledge. Our distributed
-            team operates in an Agile environment that encourages participation,
-            self- accountability, and innovation. Get to know us!
+            Nuestro equipo latinoamericano cuenta con una mentalidad de
+            resolución de problemas y experiencia relevante en sus áreas de
+            conocimiento. Trabajando de manera distribuida, nuestro equipo opera
+            en un ambiente Agile que incentiva la participación, rendición de
+            cuentas y la innovación. ¡Conózcanos!
           </span>
           <Accordion
             titleStyle={styles.teamTitle}
@@ -239,9 +240,9 @@ const About = () => {
                       </picture>
                     </div>
                     <h3>Rodrigo Fernández</h3>
-                    <span>Founder, Chairman & Chief Strategist</span>
+                    <span>Fundador, Director y Jefe de Estrategia</span>
                   </div>
-                  <button className={styles.mainButton}>Read more</button>
+                  <button className={styles.mainButton}>Leer más</button>
                 </div>
                 <div className={styles.industryColBox}>
                   <div>
@@ -259,9 +260,9 @@ const About = () => {
                       </picture>
                     </div>
                     <h3>Edgar Fernández</h3>
-                    <span>Co-founder & Finance and Enterprise</span>
+                    <span>Co-fundador & Finanzas y administración</span>
                   </div>
-                  <button className={styles.mainButton}>Read more</button>
+                  <button className={styles.mainButton}>Leer más</button>
                 </div>
                 <div className={styles.industryColBox}>
                   <div>
@@ -279,9 +280,9 @@ const About = () => {
                       </picture>
                     </div>
                     <h3>Xavier Fernández</h3>
-                    <span>Co-founder & Tech Lead</span>
+                    <span>Co-fundador & Tech Lead</span>
                   </div>
-                  <button className={styles.mainButton}>Read more</button>
+                  <button className={styles.mainButton}>Leer más</button>
                 </div>
               </div>
             }
@@ -308,9 +309,9 @@ const About = () => {
                       </picture>
                     </div>
                     <h3>Luis Diego Rojas</h3>
-                    <span>Communications and Content Strategist</span>
+                    <span>Estrategia de comunicaciones y contenido</span>
                   </div>
-                  <button className={styles.mainButton}>Read more</button>
+                  <button className={styles.mainButton}>Leer más</button>
                 </div>
                 <div className={styles.industryColBox}>
                   <div>
@@ -328,9 +329,9 @@ const About = () => {
                       </picture>
                     </div>
                     <h3>Rodolfo Perez</h3>
-                    <span>Art Director & Brand Manager</span>
+                    <span>Director de arte y gerente de marca</span>
                   </div>
-                  <button className={styles.mainButton}>Read more</button>
+                  <button className={styles.mainButton}>Leer más</button>
                 </div>
               </div>
             }
@@ -358,9 +359,9 @@ const About = () => {
                         </picture>
                       </div>
                       <h3>Adriel Díaz</h3>
-                      <span>Full Stack Developer</span>
+                      <span>Desarrollador Full Stack</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={styles.mainButton}>Leer más</button>
                   </div>
                   <div className={styles.industryColBox}>
                     <div>
@@ -378,9 +379,9 @@ const About = () => {
                         </picture>
                       </div>
                       <h3>Allan Salazar</h3>
-                      <span>Network Engineer</span>
+                      <span>Ingeniero de redes</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={styles.mainButton}>Leer más</button>
                   </div>
                   <div className={styles.industryColBox}>
                     <div>
@@ -398,9 +399,9 @@ const About = () => {
                         </picture>
                       </div>
                       <h3>Andrés Gomez</h3>
-                      <span>Cybersecurity Developer</span>
+                      <span>Desarrollador de ciberseguridad</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={styles.mainButton}>Leer más</button>
                   </div>
                   <div className={styles.industryColBox}>
                     <div>
@@ -418,9 +419,9 @@ const About = () => {
                         </picture>
                       </div>
                       <h3>Angelo Castro</h3>
-                      <span>Intern</span>
+                      <span>Practicante</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={styles.mainButton}>Leer más</button>
                   </div>
                 </div>
                 <div className={clsx(styles.teamBox, styles.boxSpaceBetween)}>
@@ -440,9 +441,9 @@ const About = () => {
                         </picture>
                       </div>
                       <h3>Cristian Castro</h3>
-                      <span>C++ Developer</span>
+                      <span>Desarrollador C++</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={styles.mainButton}>Leer más</button>
                   </div>
                   <div className={styles.industryColBox}>
                     <div>
@@ -460,9 +461,9 @@ const About = () => {
                         </picture>
                       </div>
                       <h3>Jean Vega</h3>
-                      <span>Intern</span>
+                      <span>Practicante</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={styles.mainButton}>Leer más</button>
                   </div>
                   <div className={styles.industryColBox}>
                     <div>
@@ -480,9 +481,9 @@ const About = () => {
                         </picture>
                       </div>
                       <h3>Jorge Murillo</h3>
-                      <span>Sr. UX Designer</span>
+                      <span>Diseñador UX Sr.</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={styles.mainButton}>Leer más</button>
                   </div>
                   <div className={styles.industryColBox}>
                     <div>
@@ -500,9 +501,9 @@ const About = () => {
                         </picture>
                       </div>
                       <h3>Justin Castillo</h3>
-                      <span>Intern</span>
+                      <span>Practicante</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={styles.mainButton}>Leer más</button>
                   </div>
                 </div>
                 <div className={clsx(styles.teamBox, styles.boxSpaceBetween)}>
@@ -522,9 +523,9 @@ const About = () => {
                         </picture>
                       </div>
                       <h3>Kevin Castillo</h3>
-                      <span>Full Stack Developer</span>
+                      <span>Desarrollador Full Stack</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={styles.mainButton}>Leer más</button>
                   </div>
                   <div className={styles.industryColBox}>
                     <div>
@@ -542,9 +543,9 @@ const About = () => {
                         </picture>
                       </div>
                       <h3>Ronald Gallo</h3>
-                      <span>Network Administrator</span>
+                      <span>Administrador de red</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={styles.mainButton}>Leer más</button>
                   </div>
                   <div className={styles.industryColBox}>
                     <div>
@@ -562,9 +563,9 @@ const About = () => {
                         </picture>
                       </div>
                       <h3>Terencio Gómez</h3>
-                      <span>Full Stack Developer</span>
+                      <span>Desarrollador Full Stack</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={styles.mainButton}>Leer más</button>
                   </div>
                   <div className={styles.industryColBox}>
                     <div>
@@ -582,9 +583,9 @@ const About = () => {
                         </picture>
                       </div>
                       <h3>Victor Julio Madrigal</h3>
-                      <span>Web Developer</span>
+                      <span>Desarrollador web</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={styles.mainButton}>Leer más</button>
                   </div>
                 </div>
               </>
@@ -596,77 +597,81 @@ const About = () => {
           boxStyle={styles.noMarginTop}
         >
           <div className={clsx(styles.enterpriceTitleBox, styles.titleH1)}>
-            <h1 className={styles.titleH1}>Work with Us</h1>
-            <span>There are currently no positions to display.</span>
+            <h1 className={styles.titleH1}>Trabaje con nosotros</h1>
+            <span>En este momento no hay posiciones disponibles.</span>
           </div>
           <div className={clsx(styles.enterpriceTitleBox, styles.titleH1)}>
-            <h1 className={styles.titleH1}>The Technology</h1>
+            <h1 className={styles.titleH1}>La tecnología</h1>
             <span>
-              Our team specializes in the blockchain protocol EOSIO, launched by
-              block.one in 2018, as an open-source blockchain technology that
-              deploys a consensus model known as Delegated Proof-of-Stake
-              (DPoS). In DPoS, computers do not compete over computational power
-              to solve algorithms. The following are some key features of EOSIO:
+              Nuestro equipo se especializa en el protocolo blockchain EOSIO,
+              lanzado por block.one en 2018, como una tecnología blockchain de
+              código abierto que implementa un modelo de consenso conocido como
+              Delegated Proof-of-Stake (DPoS). En DPoS, las compradores no
+              compiten por poder computacional para resolver algoritmos. Las
+              siguientes son algunas características principales de EOSIO:
             </span>
           </div>
           <div className={styles.colBox}>
             <div className={styles.enterpriceInfoBox}>
-              <h3>Scalability</h3>
+              <h3>Escalabilidad</h3>
               <span>
-                EOSIO deploys the DPoS mechanism to achieve higher throughput
-                and efficiency, becoming the blockchain protocol with the
-                largest number of transactions per second at 4,000 on its public
-                blockchain. In contrast, the average in other blockchain systems
-                is 15-20 transactions per second.
+                EOSIO implementa el mecanismo DPoS para alcanzar mayor
+                rendimiento y eficiencia, llegando a ser el protocolo blockchain
+                con el mayor número de transacciones por segundo con 4.000 en su
+                red pública. En contraste, el promedio en otros sistemas
+                blockchain es de 15-20 transacciones por segundo.
               </span>
             </div>
             <div className={styles.enterpriceInfoBox}>
-              <h3>Flexibility</h3>
+              <h3>Flexibilidad</h3>
               <span>
-                EOSIO enables adaptability for public and private networks and
-                can be customized according to the business requirements. This
-                blockchain technology offers low latency, meaning that a user
-                won't have to wait for a long time for a transaction to be
-                complete, ensuring a better user experience.
+                EOSIO permite adaptabilidad para redes públicas y privadas, y
+                puede ser hecha a la medida de acuerdo a los requisitos del
+                equipo. Esta tecnología blockchain ofrece baja latencia, lo que
+                quiere decir que un usuario no tendrá que esperar mucho tiempo
+                para que una transacción se complete, resultando en una mejor
+                experiencia de usuario.
               </span>
             </div>
           </div>
 
           <div className={styles.colBox}>
             <div className={styles.enterpriceInfoBox}>
-              <h3>Cost-effective</h3>
+              <h3>Costo eficiente</h3>
               <span>
-                EOSIO offers a flexible and favorable cost model that eliminates
-                the need for transaction fees. This model is ideal for
-                developers who seek a solution with low operation costs and
-                still offers an experience free to the user.
+                EOSIO ofrece un modelo de costos flexible y favorable que
+                elimina la necesidad de tarifas por transacciones. Este modelo
+                es ideal para desarrolladores que buscan una solución con bajos
+                costos operativos pero que aun así ofrezca una experiencia
+                gratuita para el usuario.
               </span>
             </div>
             <div className={styles.enterpriceInfoBox}>
-              <h3>Eco-friendly</h3>
+              <h3>Eco-amigable</h3>
               <span>
-                The DPoS mechanism enables a sustainable blockchain solution
-                requiring less electricity to run nodes and confirm
-                transactions. For example, EOSIO is 66,000 times more
-                energy-efficient than Bitcoin and 17,000 times more
-                energy-efficient than Ethereum.
+                El mecanismo de consenso DPoS permite una solución blockchain
+                sostenible que requiere menos electricidad para correr nodos y
+                confirmar transacciones. Por ejemplo, EOSIO es 66.000 veces más
+                eficiente en energía que Bitcoin y 17.000 veces más eficiente en
+                energía que Ethereum.
               </span>
             </div>
           </div>
           <div className={styles.enterpriceTitleBox}>
-            <h2>Faster adoption</h2>
+            <h2>Rápida adopción</h2>
             <span>
-              Developers build smart contracts in EOSIO using C++, a general-
-              purpose programming language with widespread adoption, thus
-              eliminating the need to learn new languages to begin deploying the
-              technology. Also, there are many learning resources available
-              online and a dynamic support community.
+              Los desarrolladores de contratos inteligentes en EOSIO usan C++,
+              un lenguaje de programación general con amplia adopción, lo que
+              elimina la necesidad de aprender nuevos lenguajes para empezar a
+              implementar la tecnología. Además, existen varios recursos de
+              aprendizaje disponibles en línea y una comunidad de apoyo
+              dinámica.
             </span>
           </div>
           <div className={styles.btnBox}>
-            <span>We can help you explore EOSIO technology.</span>
+            <span>Le ayudamos a explorar la tecnología EOSIO.</span>
             <a className={styles.mainButton} href="#contactUs">
-              Contact us
+              Contáctenos
             </a>
           </div>
         </ContentSection>
@@ -675,7 +680,7 @@ const About = () => {
           boxStyle={styles.noMarginTop}
         >
           <div className={styles.industryTitleBox}>
-            <h1>Our Projects</h1>
+            <h1>Nuestros proyectos</h1>
           </div>
           <div className={styles.industryColWrapper}>
             <div className={styles.industryColBox}>
@@ -695,10 +700,10 @@ const About = () => {
                 </div>
                 <h3>LatamLink</h3>
                 <span>
-                  We are part of this voluntary regional alliance to offer an
-                  EOSIO-based testnet to the LACChain initiative, a program to
-                  accelerate the development of the region's blockchain
-                  ecosystem.
+                  Somos parte de una alianza regional, liderada por compañías
+                  tecnológicas de Latinoamérica para ofrecer un testnet basado
+                  en EOSIO a la iniciativa LACChain, un programa para acelerar
+                  el desarrollo del ecosistema blockchain de la región.
                 </span>
               </div>
               <a
@@ -706,7 +711,7 @@ const About = () => {
                 href="https://latamlink.io/"
                 target="_blank"
               >
-                Read more
+                Leer más
               </a>
             </div>
             <div className={styles.industryColBox}>
@@ -726,11 +731,11 @@ const About = () => {
                 </div>
                 <h3>Lifebank</h3>
                 <span>
-                  An open-source blockchain-based app that incentivizes blood
-                  donations by creating a virtuous circle of value between
-                  donors, blood banks, and local businesses, leveraged by a
-                  token economy. Winner of the "Coding for Change" challenge by
-                  block.one.
+                  Una app de código abierto basada en blockchain para incentivar
+                  las donaciones de sangre al crear un círculo virtuoso de valor
+                  entre donantes, bancos de sangre y negocios locales, e
+                  impulsada por una economía interna de tokens. Proyecto ganador
+                  de la competencia “Coding for Change” de block.one.
                 </span>
               </div>
               <a
@@ -738,7 +743,7 @@ const About = () => {
                 href="https://lifebank.io/"
                 target="_blank"
               >
-                Read more
+                Leer más
               </a>
             </div>
             <div className={styles.industryColBox}>
@@ -758,10 +763,10 @@ const About = () => {
                 </div>
                 <h3>SMARTGATE</h3>
                 <span>
-                  A blockchain-based platform that provides solutions for in-out
-                  gate activity for the container industry and real-time
-                  transmission of relevant data required for proper interchange
-                  in port logistics.
+                  Una plataforma basada en blockchain que brinda soluciones para
+                  entradas y salidas de puertos para la industria de logística
+                  de contenedores y transmisión en tiempos real de datos
+                  requeridos para el intercambio de carga.
                 </span>
               </div>
               <a
@@ -769,13 +774,14 @@ const About = () => {
                 href="https://smartgate.tech/"
                 target="_blank"
               >
-                Read more
+                Leer más
               </a>
             </div>
           </div>
           <div className={styles.btnBox}>
             <span>
-              Check out more of our latest projects <strong>here.</strong>
+              Puede ver más de nuestros proyectos más recientes{" "}
+              <strong>aquí.</strong>
             </span>
           </div>
         </ContentSection>

@@ -57,7 +57,7 @@
 
 .customMenu ul li a:hover {
   cursor: pointer;
-  border-bottom: 7px solid #5484b3;
+  border-bottom: 1px solid #5484b3;
   text-decoration: none;
 }
 
@@ -183,6 +183,10 @@
   .customMenu ul {
     width: 500px !important;
   }
+
+  .customMenu .boxRight {
+    width: 50% !important;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1280px) {
@@ -205,7 +209,14 @@
   }
 
   .customMenu .boxRight {
+    width: 70%;
     display: flex;
+  }
+
+  .customMenu ul li a:hover {
+    cursor: pointer;
+    border-bottom: 7px solid #5484b3;
+    text-decoration: none;
   }
 
   .customMenu .boxLeft img {
