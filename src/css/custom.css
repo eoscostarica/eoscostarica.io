@@ -25,6 +25,6 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-.container {
+.container, .margin-vert--lg {
   margin-top: 6rem !important;
 }

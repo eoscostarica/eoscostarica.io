@@ -205,11 +205,11 @@
   }
 
   .customMenu .boxLeft {
-    width: 50%;
+    width: 160px;
   }
 
   .customMenu .boxRight {
-    width: 70%;
+    width: 560px;
     display: flex;
   }
 
