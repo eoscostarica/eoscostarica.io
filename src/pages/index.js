@@ -394,7 +394,7 @@ const Home = () => {
           <h1>Some of Our Projects</h1>
           <span>
             Get to know some of our latest projects deploying the EOSIO
-            blockchain protocol.{" "}
+            blockchain protocol.
             <a href={useBaseUrl("/projects")}>Visit the full list here.</a>
           </span>
           <div className={clsx(styles.knowRowBox, styles.colReverse)}>
