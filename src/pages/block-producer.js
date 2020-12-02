@@ -23,7 +23,7 @@ const BlockProducer = () => (
           EOSIO en el mundo.
         </span>
         <a className={styles.mainButton} href="#contactUs">
-          Conéctese con nosotros
+          Contáctenos
         </a>
       </ContentSection>
       <ContentSection
