@@ -83,7 +83,7 @@
 }
 
 .mainContainer h1 {
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-size: 38px;
   font-weight: 500;
   line-height: 1;
@@ -140,7 +140,7 @@
 }
 
 .topBox {
-  padding: 5rem 1rem 2rem 1rem;
+  padding: 5rem 1rem 2rem;
   text-align: left;
 }
 
@@ -475,12 +475,12 @@
 }
 
 .contentOpen {
-  margin-top: 0px;
+  margin-top: 0;
   height: auto;
 }
 
 .contentText {
-  padding: 0px;
+  padding: 0;
   visibility: hidden;
   opacity: 0;
   overflow: auto;
@@ -501,7 +501,7 @@
 
 /* Accordion Style End */
 
-/* 
+/*
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
 */
@@ -512,7 +512,7 @@
   }
 
   .topBox {
-    padding: 8rem 15rem 2rem 15rem;
+    padding: 8rem 15rem 2rem;
   }
 
   .enterpriceBox {
@@ -614,7 +614,7 @@
   }
 
   .knowEOSCRImg {
-    margin-top: 0rem;
+    margin-top: 0;
     width: 450px;
     height: 293px;
   }
@@ -685,7 +685,7 @@
   }
 }
 
-/* 
+/*
   ##Device = Laptops, Desktops
   ##Screen = B/w 1025px to 1280px
 */
@@ -714,7 +714,7 @@
   }
 
   .topBox {
-    padding: 7rem 3rem 2rem 3rem;
+    padding: 7rem 3rem 2rem;
     margin-bottom: 1rem;
   }
 
@@ -817,7 +817,7 @@
   }
 
   .knowEOSCRImg {
-    margin-top: 0rem;
+    margin-top: 0;
     width: 318px;
     height: 226px;
   }
