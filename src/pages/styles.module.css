@@ -2,6 +2,10 @@
   margin-top: 0 !important;
 }
 
+.noPadding {
+  padding: 0 !important;
+}
+
 .textField {
   height: 55px;
   font-size: 20px;
@@ -16,6 +20,39 @@
   font-size: 20px;
   padding: 10px;
   font-family: sans-serif;
+}
+
+.inquiresBG {
+  background-image: url("../../static/img/eosnodes.gif");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 800px;
+  height: 500px !important;
+  align-items: flex-start !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.topBox {
+  /* padding: 5rem 1rem 2rem 1rem; */
+  text-align: left;
+  background-image: url("../../static/img/blureoslogo.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.topBox span {
+  line-height: 1.25;
+  margin-bottom: 2rem;
+}
+
+.titleBox {
+  margin-bottom: 3rem;
+}
+
+.titleBox h1 {
+  font-size: 45px;
+  line-height: 1.23;
 }
 
 .defaultImg {
@@ -139,27 +176,8 @@
   justify-content: space-between !important;
 }
 
-.topBox {
-  padding: 5rem 1rem 2rem;
-  text-align: left;
-}
-
-.topBox span {
-  line-height: 1.25;
-  margin-bottom: 2rem;
-}
-
-.titleBox {
-  margin-bottom: 3rem;
-}
-
-.titleBox h1 {
-  font-size: 45px;
-  line-height: 1.23;
-}
-
 .enterpriceBox {
-  padding: 1rem;
+  /* padding: 1rem; */
   text-align: left;
 }
 
@@ -169,13 +187,13 @@
   text-align: left;
 }
 
-.whatWeDoBox {
+/* .whatWeDoBox {
   padding: 2rem 1rem;
-}
+} */
 
-.industryBox {
+/* .industryBox {
   padding: 1rem;
-}
+} */
 
 .inquiresBox {
   background-color: #000000;
@@ -206,8 +224,18 @@
 }
 
 .linkProjectBox {
-  padding: 4rem 3rem;
-  justify-content: space-between;
+  padding: 4rem 3rem !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent
+    radial-gradient(closest-side at 50% 0%, #ffffff 0%, #f4f4f3 100%) 0% 0%
+    no-repeat padding-box;
+  border: 1px solid #979797;
+  opacity: 1;
+  background-image: url("../../static/img/blureoslogo.png");
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .contactUsBox {
@@ -249,6 +277,7 @@
 }
 
 .whatWeDoBox .whatWeDoBoxLeft {
+  padding-top: 2rem;
   width: 100%;
 }
 
@@ -347,8 +376,21 @@
   padding: 2rem 1rem;
 }
 
-.linkProjectBox img {
-  width: 20%;
+.linkProjectBox div {
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.linkProjectBox .ticoBC {
+  width: 80px;
+}
+
+.linkProjectBox .latamLink {
+  width: 130px;
+}
+.linkProjectBox .edenia {
+  width: 120px;
 }
 
 .contactUsBox h1 {
@@ -512,11 +554,11 @@
   }
 
   .topBox {
-    padding: 8rem 15rem 2rem;
+    padding: 15rem 3rem 2rem;
   }
 
   .enterpriceBox {
-    padding: 2rem 15rem;
+    padding: 3rem;
   }
 
   .colBox {
@@ -530,7 +572,8 @@
   }
 
   .whatWeDoBox {
-    padding: 4rem 15rem;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
     flex-direction: row;
   }
 
@@ -547,7 +590,7 @@
   }
 
   .industryBox {
-    padding: 4rem 15rem;
+    padding: 3rem;
   }
 
   .industryBox .industryTitleBox {
@@ -585,6 +628,9 @@
   .inquiresBox h1 {
     width: 60%;
   }
+  .inquiresBG h1 {
+    width: 25% !important;
+  }
 
   .messageBox {
     flex-direction: row;
@@ -593,7 +639,7 @@
 
   .knowEOSCRBox {
     flex-direction: column;
-    padding: 4rem 15rem;
+    padding: 2rem;
   }
 
   .knowEOSCRBox h1 {
@@ -626,11 +672,22 @@
   }
 
   .linkProjectBox {
-    padding: 4rem 15rem;
+    padding: 4rem 15rem !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent
+      radial-gradient(closest-side at 50% 0%, #ffffff 0%, #f4f4f3 100%) 0% 0%
+      no-repeat padding-box;
+    border: 1px solid #979797;
+    opacity: 1;
+    background-image: url("../../static/img/blureoslogo.png");
+    background-repeat: no-repeat;
+    background-position: right;
   }
 
   .contactUsBox {
-    padding: 4rem 15rem;
+    padding: 3rem;
   }
 
   .contactUsBox .completeName {
@@ -714,7 +771,7 @@
   }
 
   .topBox {
-    padding: 7rem 3rem 2rem;
+    padding: 15rem 3rem 2rem;
     margin-bottom: 1rem;
   }
 
@@ -733,7 +790,9 @@
   }
 
   .whatWeDoBox {
-    padding: 4rem 3rem;
+    padding-left: 3rem;
+    /* padding-top: 3rem; */
+    padding-bottom: 3rem;
     flex-direction: row;
   }
 
@@ -789,6 +848,10 @@
     width: 60%;
   }
 
+  .inquiresBG h1 {
+    width: 25% !important;
+  }
+
   .messageBox {
     flex-direction: row;
     align-items: center;
@@ -796,7 +859,7 @@
 
   .knowEOSCRBox {
     flex-direction: column;
-    padding: 4rem 3rem;
+    padding: 3rem;
   }
 
   .knowEOSCRBox h1 {
@@ -828,7 +891,7 @@
   }
 
   .contactUsBox {
-    padding: 4rem 3rem;
+    padding: 3rem;
   }
 
   .contactUsBox .completeName {
