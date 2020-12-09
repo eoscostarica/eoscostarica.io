@@ -60,7 +60,7 @@ const PATHS = [
     strokeDashoffset: -98,
     height: 40,
     width: 53,
-    path: "/blog",
+    path: "/blog/",
     label: "Blog",
   },
 ];
@@ -99,7 +99,7 @@ const NavbarMenu = () => {
   const logo = useRef(0);
   const content = useRef(0);
   const [pathname, setPathname] = useState("");
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLaguage = () => {
@@ -107,7 +107,7 @@ const NavbarMenu = () => {
   };
 
   const handleScroll = () => {
-    const { matches } = window.matchMedia("(max-width: 768px)");
+    const { matches } = window.matchMedia("(max-width: 1024px)");
 
     if (matches) return;
 
@@ -134,13 +134,26 @@ const NavbarMenu = () => {
 
       content.current.style.height = "150px";
       content.current.style.background = "none";
-
     }
   };
 
   useLayoutEffect(() => {
     const pathname = window.location.pathname;
-    window.addEventListener("scroll", handleScroll);
+
+    if (pathname === "/blog/") {
+      const transformValue = `scale(0.4, 0.4)`;
+
+      logo.current.style.WebkitTransform = transformValue;
+      logo.current.style.MozTransform = transformValue;
+      logo.current.style.OTransform = transformValue;
+      logo.current.style.transform = transformValue;
+
+      content.current.style.height = "75px";
+      content.current.style.background = "#fff";
+      content.current.style.paddingLeft = "0px";
+    } else {
+      window.addEventListener("scroll", handleScroll);
+    }
 
     setPathname(pathname);
 

@@ -5,7 +5,6 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 
 import ContactUsForm from "./components/ContactUs";
 import Accordion from "./components/Accordion";
-import ContentSection from "./components/ContentSection";
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
 import styles from "./styles.module.css";
 
@@ -26,6 +25,11 @@ const Home = () => {
         <div className={clsx("container", styles.noPadding)}>
           <section className={clsx(styles.sectionGray, styles.topBox)}>
             <div>
+              <img
+                className={styles.logoMobile}
+                src={useBaseUrl("img/eoscr-logo.png")}
+                alt="EOS CR LOGO"
+              />
               <div className={styles.titleBox}>
                 <h1>Enterprise Blockchain</h1>
                 <h1>Solutions That</h1>
@@ -36,9 +40,11 @@ const Home = () => {
                 boost efficiency, and reduce costs. Start transforming your
                 organization by leveraging enterprise blockchain networks.
               </span>
-              <a className={styles.mainButton} href={useBaseUrl("/services")}>
-                Learn more
-              </a>
+              <div className={styles.btnTop}>
+                <a className={styles.mainButton} href={useBaseUrl("/services")}>
+                  Learn More
+                </a>
+              </div>
             </div>
           </section>
           <section className={clsx(styles.sectionWhite, styles.enterpriceBox)}>
@@ -162,7 +168,7 @@ const Home = () => {
               <img src={useBaseUrl("img/cubes.svg")} />
             </div>
           </section>
-          <section className={styles.industryBox}>
+          <section className={clsx(styles.sectionWhite, styles.industryBox)}>
             <div className={styles.industryTitleBox}>
               <h1>Industries to Deploy Enterprise Blockchain</h1>
             </div>
@@ -175,17 +181,6 @@ const Home = () => {
               <div className={styles.industryColBox}>
                 <div>
                   <div className={clsx(styles.svgBox, styles.svgBoxHeight)}>
-                    {/* <picture>
-                      <source
-                        className={styles.defaultImgCarousel}
-                        srcSet={useBaseUrl("img/payments.jp2")}
-                        type="image/jp2"
-                      />
-                      <img
-                        className={styles.defaultImgCarousel}
-                        src={useBaseUrl("img/payments.webp")}
-                      />
-                    </picture> */}
                     <img src={useBaseUrl("img/payments.svg")} />
                   </div>
                   <h3>Payments and Transfers</h3>
@@ -199,17 +194,6 @@ const Home = () => {
               <div className={styles.industryColBox}>
                 <div>
                   <div className={clsx(styles.svgBox, styles.svgBoxHeight)}>
-                    {/* <picture>
-                      <source
-                        className={styles.defaultImgCarousel}
-                        srcSet={useBaseUrl("img/logistics.jp2")}
-                        type="image/jp2"
-                      />
-                      <img
-                        className={styles.defaultImgCarousel}
-                        src={useBaseUrl("img/logistics.webp")}
-                      />
-                    </picture> */}
                     <img src={useBaseUrl("img/logistics.svg")} />
                   </div>
                   <h3>Logistics and Supply Chain</h3>
@@ -224,17 +208,6 @@ const Home = () => {
               <div className={styles.industryColBox}>
                 <div>
                   <div className={clsx(styles.svgBox, styles.svgBoxHeight)}>
-                    {/* <picture>
-                      <source
-                        className={styles.defaultImgCarousel}
-                        srcSet={useBaseUrl("img/gaming.jp2")}
-                        type="image/jp2"
-                      />
-                      <img
-                        className={styles.defaultImgCarousel}
-                        src={useBaseUrl("img/gaming.webp")}
-                      />
-                    </picture> */}
                     <img src={useBaseUrl("img/gaming.svg")} />
                   </div>
                   <h3>Gaming</h3>
@@ -277,7 +250,11 @@ const Home = () => {
               protocol, provide blockchain infrastructures, and offer training
               and workshops.
             </span>
-            <a href="#contactUs">Let’s get the conversation started!</a>
+            <strong>
+              <i>
+                <a href="#contactUs">Let’s get the conversation started!</a>
+              </i>
+            </strong>
             <div className={styles.knowRowBox}>
               <div>
                 <h3>The Team</h3>
@@ -390,7 +367,7 @@ const Home = () => {
               />
             </div>
           </section>
-          <section className={styles.knowEOSCRBox}>
+          <section className={clsx(styles.sectionWhite, styles.knowEOSCRBox)}>
             <h1>Some of Our Projects</h1>
             <span>
               Get to know some of our latest projects deploying the EOSIO
