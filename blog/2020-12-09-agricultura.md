@@ -64,6 +64,7 @@ El manejo de finanzas, contabilidad e información administrativa puede ser un d
 *   LinkedIn: https://www.linkedin.com/company/eoscostarica/
 *   Medium: medium/@eoscostarica
 
+
 ## Resumen
 
 La tecnología blockchain ofrece mayor seguridad, transparencia, privacidad, trazabilidad y eficiencia a compañías y organizaciones. 
