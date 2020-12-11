@@ -92,7 +92,7 @@ Blockchain in video games is an exciting endeavor that is only getting started. 
 
 ** Follow us on social media:**
 
-*   Website: https://eoscostarica.io/home/
+*   Website: https://eoscostarica.io
 *   Twitter: https://twitter.com/eoscostarica
 *   Telegram: https://t.me/eoscr
 *   Facebook: https://www.facebook.com/costaricaeos/
