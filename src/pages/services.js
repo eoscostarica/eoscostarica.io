@@ -30,9 +30,9 @@ const ServicePage = () => {
                 developing infrastructure for business environments.
               </span>
               <div className={styles.btnTop}>
-                <a className={styles.mainButton} href={useBaseUrl("/about")}>
-                  Learn more
-                </a>
+                <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                  <a href={useBaseUrl("/about")}>Contact us</a>
+                </button>
               </div>
             </div>
           </section>
@@ -159,9 +159,9 @@ const ServicePage = () => {
               Do you still have questions on how to integrate blockchain into
               your operations?
             </h1>
-            <a href="#contactUs" className={styles.mainButton}>
-              Contact us
-            </a>
+            <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+              <a href="#contactUs">Contact us</a>
+            </button>
           </section>
           <section className={clsx(styles.sectionWhite, styles.enterpriceBox)}>
             <div className={clsx(styles.enterpriceTitleBox, styles.titleH1)}>
@@ -234,9 +234,9 @@ const ServicePage = () => {
               Do you want to learn more about our blockchain development
               process?
             </h1>
-            <a href="#contactUs" className={styles.mainButton}>
-              Contact us
-            </a>
+            <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+              <a href="#contactUs">Contact us</a>
+            </button>
           </section>
           <section
             className={clsx(
@@ -372,9 +372,9 @@ const ServicePage = () => {
           </section>
           <section className={styles.inquiresBox}>
             <h1>Start leveraging the power of blockchain infrastructures.</h1>
-            <a href="#contactUs" className={styles.mainButton}>
-              Contact us
-            </a>
+            <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+              <a href="#contactUs">Contact us</a>
+            </button>
           </section>
           <section className={clsx(styles.sectionWhite, styles.enterpriceBox)}>
             <div className={styles.enterpriceTitleBox}>

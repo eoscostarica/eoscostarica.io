@@ -23,7 +23,14 @@ const Home = () => {
     <Layout>
       <main className={styles.mainContainer}>
         <div className={clsx("container", styles.noPadding)}>
-          <section className={clsx(styles.sectionGray, styles.topBox)}>
+          <section
+            className={clsx(
+              styles.sectionGray,
+              styles.topBox,
+              styles.parallax,
+              styles.test
+            )}
+          >
             <div>
               <img
                 className={styles.logoMobile}
@@ -41,9 +48,9 @@ const Home = () => {
                 organization by leveraging enterprise blockchain networks.
               </span>
               <div className={styles.btnTop}>
-                <a className={styles.mainButton} href={useBaseUrl("/services")}>
-                  Learn More
-                </a>
+                <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                  <a href={useBaseUrl("/services")}>Learn More</a>
+                </button>
               </div>
             </div>
           </section>
@@ -99,9 +106,12 @@ const Home = () => {
               <span>
                 Learn more about how blockchain can improve your operations.
               </span>
-              <a className={styles.mainButton} href={useBaseUrl("/industries")}>
+              {/* <a className={styles.mainButton} href={useBaseUrl("/industries")}>
                 Read more here
-              </a>
+              </a> */}
+              <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                <a href={useBaseUrl("/industries")}>Read More Here</a>
+              </button>
             </div>
           </section>
           <section className={clsx(styles.sectionGray, styles.whatWeDoBox)}>
@@ -234,9 +244,12 @@ const Home = () => {
 
           <section className={clsx(styles.inquiresBox, styles.inquiresBG)}>
             <h1>Do you have inquiries about blockchain?</h1>
-            <a href="#contactUs" className={styles.mainButton}>
+            {/* <a href="#contactUs" className={styles.mainButton}>
               Contact us
-            </a>
+            </a> */}
+            <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+              <a href="#contactUs">Contact us</a>
+            </button>
           </section>
           <section className={clsx(styles.sectionWhite, styles.knowEOSCRBox)}>
             <h1>Get to Know EOS Costa Rica</h1>
@@ -466,9 +479,9 @@ const Home = () => {
           </section>
           <section className={clsx(styles.inquiresBox, styles.secondaryBG)}>
             <h1>Start working with us and implement blockchain technology.</h1>
-            <a href="#contactUs" className={styles.mainButton}>
-              Contact us
-            </a>
+            <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+              <a href="#contactUs">Contact us</a>
+            </button>
           </section>
           <ContactUsForm />
         </div>

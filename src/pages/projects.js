@@ -10,7 +10,13 @@ const OurProjects = () => (
   <Layout>
     <main className={styles.mainContainer}>
       <div className={clsx("container", styles.noPadding)}>
-        <section className={clsx(styles.sectionGray, styles.topBox, styles.projectsTopBox)}>
+        <section
+          className={clsx(
+            styles.sectionGray,
+            styles.topBox,
+            styles.projectsTopBox
+          )}
+        >
           <div>
             <img
               className={styles.logoMobile}
@@ -22,9 +28,9 @@ const OurProjects = () => (
             </div>
             <span>Get to Know Our Latest Projects</span>
             <div className={styles.btnTop}>
-              <a className={styles.mainButton} href="#contactUs">
-                Contact us
-              </a>
+              <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                <a href="#contactUs">Contact us</a>
+              </button>
             </div>
           </div>
         </section>
@@ -49,13 +55,11 @@ const OurProjects = () => (
                 the LACChain initiative, a program to accelerate the development
                 of the blockchain ecosystem in the region.
               </span>
-              <a
-                className={styles.mainButton}
-                href="https://latamlink.io/"
-                target="_blank"
-              >
-                Read more
-              </a>
+              <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                <a href="https://latamlink.io/" target="_blank">
+                  Read More
+                </a>
+              </button>
             </div>
           </div>
           <div className={clsx(styles.knowRowBox, styles.colReverse)}>
@@ -78,13 +82,11 @@ const OurProjects = () => (
                 blood banks, and local businesses, leveraged by a token economy.
                 Winner of the "Coding for Change" challenge by block.one.
               </span>
-              <a
-                className={styles.mainButton}
-                href="https://lifebank.io/"
-                target="_blank"
-              >
-                Read more
-              </a>
+              <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                <a href="https://lifebank.io/" target="_blank">
+                  Read More
+                </a>
+              </button>
             </div>
           </div>
           <div className={clsx(styles.knowRowBox, styles.colReverse)}>
@@ -107,13 +109,11 @@ const OurProjects = () => (
                 transmission of relevant data required for proper interchange in
                 port logistics
               </span>
-              <a
-                className={styles.mainButton}
-                href="https://smartgate.tech/"
-                target="_blank"
-              >
-                Read more
-              </a>
+              <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                <a href="https://smartgate.tech/" target="_blank">
+                  Read More
+                </a>
+              </button>
             </div>
           </div>
         </section>

@@ -68,7 +68,7 @@ const ContactUs = () => {
             We will only keep your information to reply to your message and not
             be using it for any other purposes.
           </span>
-          <button className={styles.mainButton}>Send</button>
+          <button className={styles.secondaryButton}>Send</button>
         </div>
       </div>
     </section>

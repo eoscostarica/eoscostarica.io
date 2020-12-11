@@ -10,7 +10,9 @@ const BlockProducer = () => (
   <Layout>
     <main className={styles.mainContainer}>
       <div className={clsx("container", styles.noPadding)}>
-        <section className={clsx(styles.sectionGray, styles.topBox, styles.bpTopBox)}>
+        <section
+          className={clsx(styles.sectionGray, styles.topBox, styles.bpTopBox)}
+        >
           <div>
             <img
               className={styles.logoMobile}
@@ -25,9 +27,9 @@ const BlockProducer = () => (
               ecosystem worldwide.
             </span>
             <div className={styles.btnTop}>
-              <a className={styles.mainButton} href="#contactUs">
-                Connect with us
-              </a>
+              <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                <a href="#contactUs">Connect with us</a>
+              </button>
             </div>
           </div>
         </section>
@@ -54,7 +56,13 @@ const BlockProducer = () => (
             </span>
           </div>
         </section>
-        <section className={clsx(styles.sectionGray, styles.enterpriceBox, styles.flexColumn)}>
+        <section
+          className={clsx(
+            styles.sectionGray,
+            styles.enterpriceBox,
+            styles.flexColumn
+          )}
+        >
           <div className={styles.enterpriceTitleBox}>
             <h1>Our Values</h1>
           </div>
@@ -173,7 +181,13 @@ const BlockProducer = () => (
             controlled by Sistemas Edenia Internacional, S.A.
           </span>
         </section>
-        <section className={clsx(styles.sectionGray, styles.industryBox, styles.flexColumn)}>
+        <section
+          className={clsx(
+            styles.sectionGray,
+            styles.industryBox,
+            styles.flexColumn
+          )}
+        >
           <div className={styles.industryTitleBox}>
             <h1>Open-source Projects</h1>
           </div>
@@ -327,7 +341,13 @@ const BlockProducer = () => (
             src={useBaseUrl("img/eoscr.svg")}
           />
         </section>
-        <section className={clsx(styles.sectionGray, styles.enterpriceBox, styles.flexColumn)}>
+        <section
+          className={clsx(
+            styles.sectionGray,
+            styles.enterpriceBox,
+            styles.flexColumn
+          )}
+        >
           <div className={clsx(styles.enterpriceTitleBox, styles.titleH1)}>
             <h1 className={styles.titleH1}>Vote for Us as Block Producers</h1>
           </div>
@@ -426,7 +446,9 @@ const BlockProducer = () => (
           </div>
           <div className={styles.btnBox}>
             <span>Get to know more about our team!</span>
-            <button className={styles.mainButton}>Read more</button>
+            <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+              <a>Read More</a>
+            </button>
           </div>
         </section>
         <ContactUsForm />

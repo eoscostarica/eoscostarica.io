@@ -6,6 +6,18 @@
   margin-right: 5px;
 }
 
+.language {
+  position: absolute;
+  right: 35px;
+  top: 5px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.language a:hover {
+  cursor: pointer;
+}
+
 .shape {
   fill: transparent;
   stroke: #5484b3;
@@ -49,7 +61,6 @@
 
 .customMenu .boxRight {
   width: 50%;
-  padding-top: 1rem;
   display: none;
 }
 
@@ -192,91 +203,6 @@
   line-height: 1.44;
 }
 
-.languageSwitcher {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 30px;
-  -webkit-transform: translateY(10%);
-  -moz-transform: translateY(10%);
-  -ms-transform: translateY(10%);
-  -o-transform: translateY(10%);
-  transform: translateY(10%);
-  -webkit-transition: transform 0.17s cubic-bezier(0.26, 0.48, 0.08, 0.9);
-  -moz-transition: transform 0.17s cubic-bezier(0.26, 0.48, 0.08, 0.9);
-  -ms-transition: transform 0.17s cubic-bezier(0.26, 0.48, 0.08, 0.9);
-  -o-transition: transform 0.17s cubic-bezier(0.26, 0.48, 0.08, 0.9);
-  transition: transform 0.17s cubic-bezier(0.26, 0.48, 0.08, 0.9);
-}
-
-.selectEs,
-.selectEn {
-  position: absolute;
-  font-size: 16px;
-  top: 5px;
-}
-.selectEs {
-  left: 5px;
-  color: #f1f1f1;
-}
-.selectEn {
-  right: 2px;
-  color: #000;
-}
-
-.languageSwitcher:hover {
-  cursor: pointer;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 60px;
-  background-color: #5484b3;
-  box-shadow: 0 3px 30px rgba(30, 52, 112, 0.1);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 30px;
-  width: 30px;
-  left: 0;
-  bottom: 0;
-  background-color: #f1f1f1;
-  box-shadow: 0 3px 30px rgba(30, 52, 112, 0.1);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #5484b3;
-}
-
-input:focus + .slider {
-  box-shadow: none;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(30px);
-  -ms-transform: translateX(30px);
-  transform: translateX(30px);
-}
-
-.slider.round {
-  border-radius: 30px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
 @media only screen and (min-width: 1025px) {
   .footerContent {
     padding: 4rem 3rem;
@@ -286,7 +212,7 @@ input:checked + .slider:before {
     align-items: flex-start;
     height: 75px;
     box-shadow: none;
-    padding-top: 1rem;
+    padding-top: 20px;
     padding-left: 3rem;
     justify-content: space-between;
   }
@@ -302,7 +228,7 @@ input:checked + .slider:before {
   }
 
   .customMenu .boxLeft img {
-    height: 130px;
+    height: 117px;
     width: 330px;
   }
 

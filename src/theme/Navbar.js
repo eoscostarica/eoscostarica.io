@@ -102,10 +102,6 @@ const NavbarMenu = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleLaguage = () => {
-    window.open("https://es.eoscostarica.io/", "_blank");
-  };
-
   const handleScroll = () => {
     const { matches } = window.matchMedia("(max-width: 1024px)");
 
@@ -123,7 +119,7 @@ const NavbarMenu = () => {
       logo.current.style.transform = transformValue;
 
       content.current.style.height = "75px";
-      content.current.style.background = "#fff";
+      content.current.style.backgroundColor = "rgba(255, 255, 255, 0.95)";
     } else {
       const transformValue = `scale(1, 1)`;
 
@@ -149,10 +145,11 @@ const NavbarMenu = () => {
       logo.current.style.transform = transformValue;
 
       content.current.style.height = "75px";
-      content.current.style.background = "#fff";
+      content.current.style.background = "rgba(255, 255, 255, 0.95)";
       content.current.style.paddingLeft = "0px";
     } else {
       window.addEventListener("scroll", handleScroll);
+      content.current.style.background = "none";
     }
 
     setPathname(pathname);
@@ -171,6 +168,17 @@ const NavbarMenu = () => {
             alt="EOS CR LOGO"
           />
         </div>
+        {!isMobile && (
+          <div className={styles.language}>
+            <a href="https://es.eoscostarica.io/" target="_blank">
+              Español
+            </a>
+            <span>{" / "}</span>
+            <strong>
+              <a>English</a>
+            </strong>
+          </div>
+        )}
         <div className={styles.boxRight}>
           <ul>
             {PATHS.map((item) => (
@@ -195,7 +203,7 @@ const NavbarMenu = () => {
               </li>
             ))}
             <li>
-              <div className={styles.languageWrapper}>
+              {/* <div className={styles.languageWrapper}>
                 <label className={styles.languageSwitcher}>
                   <input type="checkbox" checked readOnly />
                   <span className={clsx(styles.slider, styles.round)}></span>
@@ -209,7 +217,7 @@ const NavbarMenu = () => {
                     EN
                   </span>
                 </label>
-              </div>
+              </div> */}
             </li>
           </ul>
         </div>

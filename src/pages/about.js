@@ -42,9 +42,9 @@ const About = () => {
                 our agile team.
               </span>
               <div className={styles.btnTop}>
-                <a className={styles.mainButton} href="#contactUs">
-                  Contact us
-                </a>
+                <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                  <a href="#contactUs">Learn More</a>
+                </button>
               </div>
             </div>
           </section>
@@ -243,7 +243,9 @@ const About = () => {
                       <h3>Rodrigo Fernández</h3>
                       <span>Founder, Chairman & Chief Strategist</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                      <a>Read More</a>
+                    </button>
                   </div>
                   <div className={styles.industryColBox}>
                     <div>
@@ -263,7 +265,9 @@ const About = () => {
                       <h3>Edgar Fernández</h3>
                       <span>Co-founder & Finance and Enterprise</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                      <a>Read More</a>
+                    </button>
                   </div>
                   <div className={styles.industryColBox}>
                     <div>
@@ -283,7 +287,9 @@ const About = () => {
                       <h3>Xavier Fernández</h3>
                       <span>Co-founder & Tech Lead</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                      <a>Read More</a>
+                    </button>
                   </div>
                 </div>
               }
@@ -312,7 +318,9 @@ const About = () => {
                       <h3>Luis Diego Rojas</h3>
                       <span>Communications and Content Strategist</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                      <a>Read More</a>
+                    </button>
                   </div>
                   <div className={styles.industryColBox}>
                     <div>
@@ -332,7 +340,9 @@ const About = () => {
                       <h3>Rodolfo Perez</h3>
                       <span>Art Director & Brand Manager</span>
                     </div>
-                    <button className={styles.mainButton}>Read more</button>
+                    <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                      <a>Read More</a>
+                    </button>
                   </div>
                 </div>
               }
@@ -362,7 +372,10 @@ const About = () => {
                         <h3>Adriel Díaz</h3>
                         <span>Full Stack Developer</span>
                       </div>
-                      <button className={styles.mainButton}>Read more</button>
+
+                      <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                        <a>Read More</a>
+                      </button>
                     </div>
                     <div className={styles.industryColBox}>
                       <div>
@@ -382,7 +395,10 @@ const About = () => {
                         <h3>Allan Salazar</h3>
                         <span>Network Engineer</span>
                       </div>
-                      <button className={styles.mainButton}>Read more</button>
+
+                      <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                        <a>Read More</a>
+                      </button>
                     </div>
                     <div className={styles.industryColBox}>
                       <div>
@@ -402,7 +418,10 @@ const About = () => {
                         <h3>Andrés Gomez</h3>
                         <span>Cybersecurity Developer</span>
                       </div>
-                      <button className={styles.mainButton}>Read more</button>
+
+                      <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                        <a>Read More</a>
+                      </button>
                     </div>
                     <div className={styles.industryColBox}>
                       <div>
@@ -422,7 +441,10 @@ const About = () => {
                         <h3>Angelo Castro</h3>
                         <span>Intern</span>
                       </div>
-                      <button className={styles.mainButton}>Read more</button>
+
+                      <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                        <a>Read More</a>
+                      </button>
                     </div>
                   </div>
                   <div className={clsx(styles.teamBox, styles.boxSpaceBetween)}>
@@ -444,7 +466,10 @@ const About = () => {
                         <h3>Cristian Castro</h3>
                         <span>C++ Developer</span>
                       </div>
-                      <button className={styles.mainButton}>Read more</button>
+
+                      <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                        <a>Read More</a>
+                      </button>
                     </div>
                     <div className={styles.industryColBox}>
                       <div>
@@ -464,7 +489,10 @@ const About = () => {
                         <h3>Jean Vega</h3>
                         <span>Intern</span>
                       </div>
-                      <button className={styles.mainButton}>Read more</button>
+
+                      <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                        <a>Read More</a>
+                      </button>
                     </div>
                     <div className={styles.industryColBox}>
                       <div>
@@ -484,7 +512,10 @@ const About = () => {
                         <h3>Jorge Murillo</h3>
                         <span>Sr. UX Designer</span>
                       </div>
-                      <button className={styles.mainButton}>Read more</button>
+
+                      <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                        <a>Read More</a>
+                      </button>
                     </div>
                     <div className={styles.industryColBox}>
                       <div>
@@ -504,7 +535,10 @@ const About = () => {
                         <h3>Justin Castillo</h3>
                         <span>Intern</span>
                       </div>
-                      <button className={styles.mainButton}>Read more</button>
+
+                      <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                        <a>Read More</a>
+                      </button>
                     </div>
                   </div>
                   <div className={clsx(styles.teamBox, styles.boxSpaceBetween)}>
@@ -526,7 +560,10 @@ const About = () => {
                         <h3>Kevin Castillo</h3>
                         <span>Full Stack Developer</span>
                       </div>
-                      <button className={styles.mainButton}>Read more</button>
+
+                      <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                        <a>Read More</a>
+                      </button>
                     </div>
                     <div className={styles.industryColBox}>
                       <div>
@@ -546,7 +583,10 @@ const About = () => {
                         <h3>Ronald Gallo</h3>
                         <span>Network Administrator</span>
                       </div>
-                      <button className={styles.mainButton}>Read more</button>
+
+                      <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                        <a>Read More</a>
+                      </button>
                     </div>
                     <div className={styles.industryColBox}>
                       <div>
@@ -566,7 +606,10 @@ const About = () => {
                         <h3>Terencio Gómez</h3>
                         <span>Full Stack Developer</span>
                       </div>
-                      <button className={styles.mainButton}>Read more</button>
+
+                      <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                        <a>Read More</a>
+                      </button>
                     </div>
                     <div className={styles.industryColBox}>
                       <div>
@@ -586,7 +629,10 @@ const About = () => {
                         <h3>Victor Julio Madrigal</h3>
                         <span>Web Developer</span>
                       </div>
-                      <button className={styles.mainButton}>Read more</button>
+
+                      <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                        <a>Read More</a>
+                      </button>
                     </div>
                   </div>
                 </>
@@ -665,9 +711,12 @@ const About = () => {
             </div>
             <div className={styles.btnBox}>
               <span>We can help you explore EOSIO technology.</span>
-              <a className={styles.mainButton} href="#contactUs">
+              {/* <a className={styles.mainButton} href="#contactUs">
                 Contact us
-              </a>
+              </a> */}
+              <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                <a href="#contactUs">Contact us</a>
+              </button>
             </div>
           </section>
           <section
@@ -704,13 +753,18 @@ const About = () => {
                     ecosystem.
                   </span>
                 </div>
-                <a
+                {/* <a
                   className={styles.mainButton}
                   href="https://latamlink.io/"
                   target="_blank"
                 >
                   Read more
-                </a>
+                </a> */}
+                <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                  <a href="https://latamlink.io/" target="_blank">
+                    Read More
+                  </a>
+                </button>
               </div>
               <div className={clsx(styles.industryColBox, styles.noPaddingTop)}>
                 <div>
@@ -736,13 +790,19 @@ const About = () => {
                     by block.one.
                   </span>
                 </div>
-                <a
+                {/* <a
                   className={styles.mainButton}
                   href="https://lifebank.io/"
                   target="_blank"
                 >
                   Read more
-                </a>
+                </a> */}
+
+                <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                  <a href="https://lifebank.io/" target="_blank">
+                    Read More
+                  </a>
+                </button>
               </div>
               <div className={clsx(styles.industryColBox, styles.noPaddingTop)}>
                 <div>
@@ -767,13 +827,18 @@ const About = () => {
                     interchange in port logistics.
                   </span>
                 </div>
-                <a
+                {/* <a
                   className={styles.mainButton}
                   href="https://smartgate.tech/"
                   target="_blank"
                 >
                   Read more
-                </a>
+                </a> */}
+                <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                  <a href="https://smartgate.tech/" target="_blank">
+                    Read More
+                  </a>
+                </button>
               </div>
             </div>
             <div className={styles.btnBox}>

@@ -36,9 +36,9 @@ const Industries = () => (
               healthcare.
             </span>
             <div className={styles.btnTop}>
-              <a className={styles.mainButton} href="#contactUs">
-                Contact us
-              </a>
+              <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                <a href="#contactUs">Contact us</a>
+              </button>
             </div>
           </div>
         </section>
@@ -64,7 +64,9 @@ const Industries = () => (
                 such as new liquidity solutions and microloans management, and
                 improved payment structures.
               </span>
-              <button className={styles.mainButton}>Read more</button>
+              <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                <a>Read More</a>
+              </button>
             </div>
           </div>
           <div className={clsx(styles.knowRowBox, styles.colReverse)}>
@@ -88,7 +90,9 @@ const Industries = () => (
                 AI, to create comprehensive solutions and streamline processes
                 in the logistics and supply chain industry.
               </span>
-              <button className={styles.mainButton}>Read more</button>
+              <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                <a>Read More</a>
+              </button>
             </div>
           </div>
           <div className={clsx(styles.knowRowBox, styles.colReverse)}>
@@ -111,7 +115,9 @@ const Industries = () => (
                 capabilities to increase security and offer a more efficient way
                 for transactions can level-up online gaming.
               </span>
-              <button className={styles.mainButton}>Read more</button>
+              <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+                <a>Read More</a>
+              </button>
             </div>
           </div>
         </section>
@@ -303,9 +309,9 @@ const Industries = () => (
             </div>
           </div>
           <div className={styles.btnBox}>
-            <a className={styles.mainButton} href="#contactUs">
-              Contact us
-            </a>
+            <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
+              <a href="#contactUs">Contact us</a>
+            </button>
           </div>
         </section>
         <section className={clsx(styles.sectionGray, styles.enterpriceBox)}>
