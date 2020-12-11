@@ -33,7 +33,7 @@ Cada bloque contendrá los siguientes datos:
 
 Para entender mejor cómo funciona, se puede comparar este libro de cuentas (o “ledger” en inglés) descentralizado con un juego de dominó, en el que los nodos son cada uno de los jugadores. Todos los jugadores tienen visibilidad sobre lo que está pasando en el tablero y saben que existe una serie de reglas a seguir. Por ejemplo, una persona no puede saltarse su turno sin permiso o colocar una ficha de dominó donde no corresponde, porque los demás jugadores pueden inmediatamente restringirle esa jugada–esa es la responsabilidad de los nodos. 
 
-![How does blockchain work](/img/blog/que-es-blockchain/proceso.png)
+![How does blockchain work](/img/blog/que-es-blockchain/como-funciona.png)
 
 La tecnología blockchain permite una descentralización en los registros. En particular, blockchain permite la ejecución automática y autónoma de transacciones, lo que quiere decir que ahora los usuarios pueden administrar sus transacciones de forma directa y segura, sin necesidad de intermediarios. ¿Cómo? Los nodos deberán verificar que todos los jugadores en el tablero (ya sea de manera anónima o con identidades conocidas) están jugando según las reglas. A esto se le conoce como “consenso.”
 
@@ -41,7 +41,7 @@ Por ejemplo, una compañía de logística puede elegir asignar sus computadoras 
 
 Al usar blockchain, los usuarios mantienen su anonimato, o bien, utilizan un pseudónimo, y los registros que generan (que son los bloques) se encuentran cifrados para proteger su privacidad y seguridad. Cualquier solicitud de transacción que realice alguno de los usuarios; sea, por ejemplo, enviar criptomonedas, generar un registro contable o agregar datos a su expediente médico, debe ser verificada y validada por los nodos.
 
-![How does blockchain work](/img/blog/que-es-blockchain/como-funciona.png)
+![How does blockchain work](/img/blog/que-es-blockchain/proceso.png)
 
 
 De vuelta al ejemplo de dominó, podemos decir que es como si un jugador decidiera que va a colocar una ficha de dominó en el tablero y, al momento de colocarla, el resto de los jugadores se taparan los ojos para no ver quién jugó; al finalizar su turno, todos los jugadores abren los ojos para validar la nueva ficha.
