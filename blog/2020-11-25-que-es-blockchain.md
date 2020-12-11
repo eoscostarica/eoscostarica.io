@@ -8,7 +8,7 @@ author_image_url: https://avatars0.githubusercontent.com/u/29232417?s=400&u=032f
 tags: [eosio, blockchain]
 ---
 
-![¿Qué es blockchain?](/img/blog/what-is-blockchain/What-Is-Blockchain.jpg)
+![¿Qué es blockchain?](/img/blog/que-es-blockchain/blockchain-cover.jpg)
 
 ## **What is Blockchain?**
 
