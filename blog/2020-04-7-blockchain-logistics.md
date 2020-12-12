@@ -80,7 +80,7 @@ Overall, there is currently a blue ocean of opportunities for blockchain technol
 
 ** Follow us on social media:**
 
-*   Website: https://eoscostarica.io/home/
+*   Website:https://eoscostarica.io
 *   Twitter: https://twitter.com/eoscostarica
 *   Telegram: https://t.me/eoscr
 *   Facebook: https://www.facebook.com/costaricaeos/
