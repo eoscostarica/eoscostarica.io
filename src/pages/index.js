@@ -3,7 +3,6 @@ import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-import ContactUsForm from "./components/ContactUs";
 import Accordion from "./components/Accordion";
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
 import styles from "./styles.module.css";
@@ -483,7 +482,6 @@ const Home = () => {
               <a href="#contactUs">Contact us</a>
             </button>
           </section>
-          <ContactUsForm />
         </div>
       </main>
     </Layout>

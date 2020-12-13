@@ -3,7 +3,6 @@ import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-import ContactUsForm from "./components/ContactUs";
 import Accordion from "./components/Accordion";
 import styles from "./styles.module.css";
 
@@ -499,7 +498,6 @@ const ServicePage = () => {
               </span>
             </div>
           </section>
-          <ContactUsForm />
         </div>
       </main>
     </Layout>

@@ -3,7 +3,6 @@ import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-import ContactUsForm from "./components/ContactUs";
 import styles from "./styles.module.css";
 
 const BlockProducer = () => (
@@ -451,7 +450,6 @@ const BlockProducer = () => (
             </button>
           </div>
         </section>
-        <ContactUsForm />
       </div>
     </main>
   </Layout>

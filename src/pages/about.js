@@ -5,7 +5,6 @@ import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import ItemsCarousel from "react-items-carousel";
 
-import ContactUsForm from "./components/ContactUs";
 import Accordion from "./components/Accordion";
 
 import styles from "./styles.module.css";
@@ -711,9 +710,6 @@ const About = () => {
             </div>
             <div className={styles.btnBox}>
               <span>We can help you explore EOSIO technology.</span>
-              {/* <a className={styles.mainButton} href="#contactUs">
-                Contact us
-              </a> */}
               <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
                 <a href="#contactUs">Contact us</a>
               </button>
@@ -753,13 +749,6 @@ const About = () => {
                     ecosystem.
                   </span>
                 </div>
-                {/* <a
-                  className={styles.mainButton}
-                  href="https://latamlink.io/"
-                  target="_blank"
-                >
-                  Read more
-                </a> */}
                 <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
                   <a href="https://latamlink.io/" target="_blank">
                     Read More
@@ -790,14 +779,6 @@ const About = () => {
                     by block.one.
                   </span>
                 </div>
-                {/* <a
-                  className={styles.mainButton}
-                  href="https://lifebank.io/"
-                  target="_blank"
-                >
-                  Read more
-                </a> */}
-
                 <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
                   <a href="https://lifebank.io/" target="_blank">
                     Read More
@@ -827,13 +808,6 @@ const About = () => {
                     interchange in port logistics.
                   </span>
                 </div>
-                {/* <a
-                  className={styles.mainButton}
-                  href="https://smartgate.tech/"
-                  target="_blank"
-                >
-                  Read more
-                </a> */}
                 <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
                   <a href="https://smartgate.tech/" target="_blank">
                     Read More
@@ -847,7 +821,6 @@ const About = () => {
               </span>
             </div>
           </section>
-          <ContactUsForm />
         </div>
       </main>
     </Layout>

@@ -3,7 +3,6 @@ import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-import ContactUsForm from "./components/ContactUs";
 import styles from "./styles.module.css";
 
 const OurProjects = () => (
@@ -294,7 +293,6 @@ const OurProjects = () => (
             </div>
           </div>
         </section>
-        <ContactUsForm />
       </div>
     </main>
   </Layout>
