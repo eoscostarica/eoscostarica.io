@@ -330,12 +330,12 @@
 }
 
 .whatWeDoBox {
-  padding-top: 0rem !important;
+  padding-top: 0 !important;
   padding-bottom: 2rem;
 }
 
 .industryBox {
-  padding-top: 0rem !important;
+  padding-top: 0 !important;
   padding-bottom: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1053,7 +1053,7 @@
   }
 
   .knowRowBox div h3 {
-    margin: 0rem 0 1rem 0;
+    margin: 0rem 0 1rem;
   }
 
   .knowEOSCRBox .colReverse {
