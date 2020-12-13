@@ -75,7 +75,6 @@
   height: 35px;
   display: flex;
   justify-content: space-between;
-  padding: 0px;
   width: 50%;
 }
 
@@ -201,6 +200,21 @@
 .companySocial {
   font-size: 16px;
   line-height: 1.44;
+}
+
+.contactUsLink {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  color: #ffffff;
+}
+
+.footerContent a:hover {
+  color: #ffffff;
+}
+
+.contactusLinkWrapper {
+  margin-bottom: 5px;
 }
 
 @media only screen and (min-width: 1025px) {

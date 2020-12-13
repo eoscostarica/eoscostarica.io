@@ -18,7 +18,7 @@ const ContactUs = () => {
 
   return (
     <section className={clsx(styles.sectionWhite, styles.contactUsBox)}>
-      <div className={clsx("container", styles.noMarginTop)} id="contactUs">
+      <div className="container">
         <div className={clsx("row", styles.flexColumn)}>
           <h1>Contact</h1>
           <span>
