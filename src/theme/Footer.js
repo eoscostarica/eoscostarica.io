@@ -10,6 +10,11 @@ const Footer = () => (
       <img src={useBaseUrl("img/logo-white.png")} alt="EOS CR LOGO" />
     </div>
     <div>
+      <div className={styles.contactusLinkWrapper}>
+        <a className={styles.contactUsLink} href={useBaseUrl("/contact-us")}>
+          CONTACT US
+        </a>
+      </div>
       <h2>FOLLOW US</h2>
       <div className={styles.socialCol}>
         <div>

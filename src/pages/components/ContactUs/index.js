@@ -18,7 +18,7 @@ const ContactUs = () => {
 
   return (
     <section className={clsx(styles.sectionWhite, styles.contactUsBox)}>
-      <div className={clsx("container", styles.noMarginTop)} id="contactUs">
+      <div className="container">
         <div className={clsx("row", styles.flexColumn)}>
           <h1>Contact</h1>
           <span>
@@ -68,7 +68,7 @@ const ContactUs = () => {
             We will only keep your information to reply to your message and not
             be using it for any other purposes.
           </span>
-          <button className={styles.mainButton}>Send</button>
+          <button className={styles.secondaryButton}>Send</button>
         </div>
       </div>
     </section>
