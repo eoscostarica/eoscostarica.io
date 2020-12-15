@@ -20,7 +20,7 @@ const PATHS = [
     strokeDashoffset: -128,
     height: 40,
     width: 83,
-    path: "/services",
+    path: "/services/",
     label: "Services",
   },
   {
@@ -28,7 +28,7 @@ const PATHS = [
     strokeDashoffset: -138,
     height: 40,
     width: 93,
-    path: "/industries",
+    path: "/industries/",
     label: "Industries",
   },
   {
@@ -36,7 +36,7 @@ const PATHS = [
     strokeDashoffset: -118,
     height: 40,
     width: 68,
-    path: "/about",
+    path: "/about/",
     label: "About",
   },
   {
@@ -44,7 +44,7 @@ const PATHS = [
     strokeDashoffset: -126,
     height: 40,
     width: 80,
-    path: "/projects",
+    path: "/projects/",
     label: "Projects",
   },
   {
@@ -52,7 +52,7 @@ const PATHS = [
     strokeDashoffset: -85,
     height: 40,
     width: 40,
-    path: "/block-producer",
+    path: "/block-producer/",
     label: "Bp",
   },
   {
