@@ -159,7 +159,7 @@ const ServicePage = () => {
               your operations?
             </h1>
             <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
-              <a href="#contactUs">Contact us</a>
+              <a href={useBaseUrl("/contact-us")}>Contact us</a>
             </button>
           </section>
           <section className={clsx(styles.sectionWhite, styles.enterpriceBox)}>
@@ -234,7 +234,7 @@ const ServicePage = () => {
               process?
             </h1>
             <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
-              <a href="#contactUs">Contact us</a>
+              <a href={useBaseUrl("/contact-us")}>Contact us</a>
             </button>
           </section>
           <section
@@ -372,7 +372,7 @@ const ServicePage = () => {
           <section className={styles.inquiresBox}>
             <h1>Start leveraging the power of blockchain infrastructures.</h1>
             <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
-              <a href="#contactUs">Contact us</a>
+              <a href={useBaseUrl("/contact-us")}>Contact us</a>
             </button>
           </section>
           <section className={clsx(styles.sectionWhite, styles.enterpriceBox)}>

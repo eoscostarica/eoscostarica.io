@@ -42,7 +42,7 @@ const About = () => {
               </span>
               <div className={styles.btnTop}>
                 <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
-                  <a href="#contactUs">Learn More</a>
+                  <a href={useBaseUrl("/contact-us")}>Learn More</a>
                 </button>
               </div>
             </div>
@@ -711,7 +711,7 @@ const About = () => {
             <div className={styles.btnBox}>
               <span>We can help you explore EOSIO technology.</span>
               <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
-                <a href="#contactUs">Contact us</a>
+                <a href={useBaseUrl("/contact-us")}>Contact us</a>
               </button>
             </div>
           </section>

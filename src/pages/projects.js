@@ -28,7 +28,7 @@ const OurProjects = () => (
             <span>Get to Know Our Latest Projects</span>
             <div className={styles.btnTop}>
               <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
-                <a href="#contactUs">Contact us</a>
+                <a href={useBaseUrl("/contact-us")}>Contact us</a>
               </button>
             </div>
           </div>

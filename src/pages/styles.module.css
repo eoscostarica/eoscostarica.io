@@ -111,6 +111,34 @@
   font-family: sans-serif;
 }
 
+.textFieldError {
+  border: 1px solid red;
+}
+
+.textFieldError::placeholder {
+  color: red;
+  opacity: 1;
+}
+
+.textFieldError :-ms-input-placeholder {
+  color: red;
+}
+
+.textFieldError ::-ms-input-placeholder {
+  color: red;
+}
+
+.socialMediaBox {
+  display: flex;
+  margin: 2rem 0;
+  flex-direction: column;
+}
+
+.socialMediaBox a {
+  font-size: 20px;
+  color: #629cd5;
+}
+
 .textareaField {
   width: 100%;
   font-size: 20px;
@@ -680,6 +708,12 @@
     text-align: left;
   }
 
+  .socialMediaBox {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
   .flexColumn {
     align-items: unset;
   }
@@ -943,6 +977,12 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   .mainContainer h1 {
     font-size: 48px;
+  }
+
+  .socialMediaBox {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 
   .projectsTopBox {
