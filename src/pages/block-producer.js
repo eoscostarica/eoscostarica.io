@@ -27,7 +27,7 @@ const BlockProducer = () => (
             </span>
             <div className={styles.btnTop}>
               <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
-                <a href="#contactUs">Connect with us</a>
+                <a href={useBaseUrl("/contact-us")}>Connect with us</a>
               </button>
             </div>
           </div>

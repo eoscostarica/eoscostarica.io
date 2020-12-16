@@ -105,9 +105,6 @@ const Home = () => {
               <span>
                 Learn more about how blockchain can improve your operations.
               </span>
-              {/* <a className={styles.mainButton} href={useBaseUrl("/industries")}>
-                Read more here
-              </a> */}
               <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
                 <a href={useBaseUrl("/industries")}>Read More Here</a>
               </button>
@@ -120,7 +117,7 @@ const Home = () => {
                 We make the most of enterprise blockchain technology and design
                 solutions for the real world. Our team offers services tailored
                 to our clients’ needs and expectations.{" "}
-                <a href="#contactUs">Contact us</a> and get the conversation
+                <a href={useBaseUrl("/contact-us")}>Contact us</a> and get the conversation
                 started!
               </span>
               <div className={styles.mobileSvgIcon}>
@@ -243,11 +240,8 @@ const Home = () => {
 
           <section className={clsx(styles.inquiresBox, styles.inquiresBG)}>
             <h1>Do you have inquiries about blockchain?</h1>
-            {/* <a href="#contactUs" className={styles.mainButton}>
-              Contact us
-            </a> */}
             <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
-              <a href="#contactUs">Contact us</a>
+              <a href={useBaseUrl("/contact-us")}>Contact us</a>
             </button>
           </section>
           <section className={clsx(styles.sectionWhite, styles.knowEOSCRBox)}>
@@ -264,7 +258,7 @@ const Home = () => {
             </span>
             <strong>
               <i>
-                <a href="#contactUs">Let’s get the conversation started!</a>
+                <a href={useBaseUrl("/contact-us")}>Let’s get the conversation started!</a>
               </i>
             </strong>
             <div className={styles.knowRowBox}>
@@ -479,7 +473,7 @@ const Home = () => {
           <section className={clsx(styles.inquiresBox, styles.secondaryBG)}>
             <h1>Start working with us and implement blockchain technology.</h1>
             <button className={clsx(styles.mainBtn, styles.bubbleUp)}>
-              <a href="#contactUs">Contact us</a>
+              <a href={useBaseUrl("/contact-us")}>Contact us</a>
             </button>
           </section>
         </div>
