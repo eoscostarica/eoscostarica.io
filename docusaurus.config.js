@@ -27,6 +27,7 @@ module.exports = {
     ],
   ],
   themeConfig: {
+    footer: {},
     googleAnalytics: {
       trackingID: "UA-173987-66",
     }
