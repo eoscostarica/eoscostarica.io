@@ -32,8 +32,10 @@ const ServicePage = () => {
                 developing infrastructure for business environments.
               </Typography>
               <Box className={styles.btnTop}>
-                <Button className={clsx(styles.mainBtn, styles.bubbleUp)}>
-                  <a href={useBaseUrl("/about")}>Contact us</a>
+                <Button 
+                  className={clsx(styles.mainBtn, styles.bubbleUp)}
+                  href={useBaseUrl("/about")}>
+                    Contact us
                 </Button>
               </Box>
             </Box>
@@ -161,8 +163,10 @@ const ServicePage = () => {
               Do you still have questions on how to integrate blockchain into
               your operations?
             </Typography>
-            <Button className={clsx(styles.mainBtn, styles.bubbleUp)}>
-              <a href={useBaseUrl("/contact-us")}>Contact us</a>
+            <Button 
+              className={clsx(styles.mainBtn, styles.bubbleUp)}
+              href={useBaseUrl("/contact-us")}>
+                Contact us
             </Button>
           </Box>
           <Box className={clsx(styles.sectionWhite, styles.enterpriceBox)}>
@@ -236,8 +240,10 @@ const ServicePage = () => {
               Do you want to learn more about our blockchain development
               process?
             </Typography>
-            <Button className={clsx(styles.mainBtn, styles.bubbleUp)}>
-              <a href={useBaseUrl("/contact-us")}>Contact us</a>
+            <Button 
+              className={clsx(styles.mainBtn, styles.bubbleUp)}
+              href={useBaseUrl("/contact-us")}>
+                Contact us
             </Button>
           </Box>
           <Box
@@ -374,8 +380,10 @@ const ServicePage = () => {
           </Box>
           <Box className={styles.inquiresBox}>
             <Typography variant="h1">Start leveraging the power of blockchain infrastructures.</Typography>
-            <Button className={clsx(styles.mainBtn, styles.bubbleUp)}>
-              <a href={useBaseUrl("/contact-us")}>Contact us</a>
+            <Button 
+              className={clsx(styles.mainBtn, styles.bubbleUp)}
+              href={useBaseUrl("/contact-us")}>
+                Contact us
             </Button>
           </Box>
           <Box className={clsx(styles.sectionWhite, styles.enterpriceBox)}>
