@@ -181,12 +181,13 @@ const NavbarMenu = () => {
   const classes = useStyles()
   const [isOpen, setIsOpen] = useState(false);
   const isBlog = location.pathname.substring(0,6) === '/blog/'
-  const useTransparentBG =  trigger 
   const [pathname, setPathname] = useState("");
   const trigger = useScrollTrigger({
     target: window || undefined,
     disableHysteresis: true
   })
+
+  const useTransparentBG =  trigger 
 
   useLayoutEffect(() => {
     const pathname = window.location.pathname;
