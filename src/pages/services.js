@@ -10,14 +10,16 @@ import Theme from '../theme/index'
 
 import Accordion from "./components/Accordion";
 import styles from "./styles.module.css";
+import useStyles from "./styles.module.js"
 
 const ServicePage = () => {
+  const classes = useStyles()
   return (
     <Layout>
       <ThemeProvider theme={Theme}>
         <Box className={styles.mainContainer}>
           <Box className={clsx("container", styles.noPadding)}>
-            <Box className={clsx(styles.sectionGray, styles.topBox)}>
+            <Box className={clsx(styles.topBox)}>
               <Box>
                 <img
                   className={styles.logoMobile}
@@ -25,8 +27,8 @@ const ServicePage = () => {
                   alt="EOS CR LOGO"
                 />
                 <Box className={styles.titleBox}>
-                  <Typography variant="h2">Custom-made</Typography>
-                  <Typography variant="h2">Blockchain Solutions</Typography>
+                  <Typography variant='h1'>Custom-made</Typography>
+                  <Typography variant="h1">Blockchain Solutions</Typography>
                 </Box>
                 <Typography variant="body1">
                   Leverage blockchain technology. Our team will help you embrace
@@ -34,9 +36,9 @@ const ServicePage = () => {
                   experience integrating enterprise blockchain solutions and
                   developing infrastructure for business environments.
                 </Typography>
-                <Box className={styles.btnTop}>
-                  <Button 
-                    className={clsx(styles.mainBtn, styles.bubbleUp)}
+                <Box>
+                  <Button
+                    className={classes.buttonPrimary}
                     href={useBaseUrl("/about")}>
                       Contact us
                   </Button>
@@ -85,7 +87,7 @@ const ServicePage = () => {
               </picture>
             </Box>
             <Box className={clsx(styles.sectionGray, styles.knowEOSCRBox)}>
-              <Typography variant="h1">Blockchain Development Services</Typography>
+              <Typography variant="h2">Blockchain Development Services</Typography>
               <Typography variant="body1">
                 Explore the possibilities that blockchain technology offers. Boost
                 your operations with increased transparency, security, and
@@ -162,19 +164,19 @@ const ServicePage = () => {
               </Box>
             </Box>
             <Box className={styles.inquiresBox}>
-              <Typography variant="h1">
+              <Typography variant="h2" className={classes.white}>
                 Do you still have questions on how to integrate blockchain into
                 your operations?
               </Typography>
-              <Button 
-                className={clsx(styles.mainBtn, styles.bubbleUp)}
+              <Button
+                className={classes.buttonPrimary}
                 href={useBaseUrl("/contact-us")}>
                   Contact us
               </Button>
             </Box>
             <Box className={clsx(styles.sectionWhite, styles.enterpriceBox)}>
-              <Box className={clsx(styles.enterpriceTitleBox, styles.titleH1)}>
-                <Typography variant="h3" className={styles.titleH1}>A Solution-based Approach</Typography>
+              <Box className={clsx(styles.enterpriceTitleBox)}>
+                <Typography variant="h3">A Solution-based Approach</Typography>
                 <Typography variant="body1">
                   EOS Costa Rica leverages a cross-functional team that follows an
                   Agile methodology. We seek efficiency and collaboration and
@@ -239,12 +241,12 @@ const ServicePage = () => {
               </Box>
             </Box>
             <Box className={styles.inquiresBox}>
-              <Typography variant="h1">
+              <Typography variant="h2" className={classes.white}>
                 Do you want to learn more about our blockchain development
                 process?
               </Typography>
               <Button 
-                className={clsx(styles.mainBtn, styles.bubbleUp)}
+                className={classes.buttonPrimary}
                 href={useBaseUrl("/contact-us")}>
                   Contact us
               </Button>
@@ -256,8 +258,8 @@ const ServicePage = () => {
                 styles.flexColumn
               )}
             >
-              <Box className={clsx(styles.enterpriceTitleBox, styles.titleH1)}>
-                <Typography variant="h1">Blockchain Infrastructure</Typography>
+              <Box className={clsx(styles.enterpriceTitleBox)}>
+                <Typography variant="h2">Blockchain Infrastructure</Typography>
                 <Typography variant="h3">Top-notch Blockchain Infrastructure</Typography>
                 <Typography variant="body1">
                   Blockchains operate as decentralized peer-to-peer networks where
@@ -382,16 +384,16 @@ const ServicePage = () => {
               </Box>
             </Box>
             <Box className={styles.inquiresBox}>
-              <Typography variant="h1">Start leveraging the power of blockchain infrastructures.</Typography>
+              <Typography variant="h2" className={classes.white}>Start leveraging the power of blockchain infrastructures.</Typography>
               <Button 
-                className={clsx(styles.mainBtn, styles.bubbleUp)}
+                className={classes.buttonPrimary}
                 href={useBaseUrl("/contact-us")}>
                   Contact us
               </Button>
             </Box>
             <Box className={clsx(styles.sectionWhite, styles.enterpriceBox)}>
               <Box className={styles.enterpriceTitleBox}>
-                <Typography variant="h1">Education and Training</Typography>
+                <Typography variant="h2">Education and Training</Typography>
                 <Box className={styles.colBox}>
                   <Box className={styles.flexBox}>
                     <Accordion
@@ -464,7 +466,7 @@ const ServicePage = () => {
                   styles.deplyblockchainBox
                 )}
               >
-                <Typography variant="h1" className={styles.titleH1}>
+                <Typography variant="h2">
                   How Can Your Industry Deploy Blockchain?
                 </Typography>
                 <Typography variant="body1">
