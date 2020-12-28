@@ -87,8 +87,8 @@ const useStyles = makeStyles({
     margin: '0 auto',
     paddingTop: '40px',
     paddingBottom: '40px',
-    paddingLeft:"10vw",
-    paddingRight:"10vw",
+    paddingLeft:"15vw",
+    paddingRight:"15vw",
   },
   menuWrapperScroll:{
     backgroundColor:'rgba(255, 255, 255, 0.95)',
@@ -199,7 +199,7 @@ const NavbarMenu = () => {
   }
 
   return (
-    <Box  className={clsx(classes.menuWrapper, { [classes.menuWrapperScroll]: useTransparentBG})}>
+    <Box  className={clsx(classes.menuWrapper, { [classes.menuWrapperScroll]: useTransparentBG})} style={{zIndex:3000}}>
       {isMobile && 
       <>
         <IconButton onClick={handlerDrawer} className={classes.btnDrawer}>
