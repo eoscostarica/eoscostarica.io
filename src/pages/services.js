@@ -47,7 +47,6 @@ const ServicePage = () => {
             </Box>
             <Box
               className={clsx(
-                styles.sectionGray,
                 styles.serviceSecondSection,
                 styles.mainBG
               )}
@@ -86,7 +85,7 @@ const ServicePage = () => {
                 />
               </picture>
             </Box>
-            <Box className={clsx(styles.sectionGray, styles.knowEOSCRBox)}>
+            <Box className={clsx(styles.knowEOSCRBox)}>
               <Typography variant="h2">Blockchain Development Services</Typography>
               <Typography variant="body1">
                 Explore the possibilities that blockchain technology offers. Boost
@@ -455,7 +454,6 @@ const ServicePage = () => {
             </Box>
             <Box
               className={clsx(
-                styles.sectionGray,
                 styles.enterpriceBox,
                 styles.flexColumn
               )}
