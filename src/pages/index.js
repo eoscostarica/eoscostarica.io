@@ -1,25 +1,265 @@
 import React, { useState, useEffect } from "react";
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Parallax, Background } from 'react-parallax';
+import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-import Accordion from "./components/Accordion";
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
+//import Accordion from "./components/Accordion";
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
 import styles from "./styles.module.css";
 
+
+
+const useStyles = makeStyles((theme) => ({
+  container:{
+    width:'100%',
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  containerGray:{
+    width:'100%',
+    display: 'flex',
+    justifyContent: 'center',
+    backgroundColor: '#f1f1f1',
+  },
+  content:{
+    width:"960px",
+    display: 'flex',
+  },
+
+  bgParallax:{
+    width:'100vw',
+    display:'flex',
+    justifyContent:'flex-end',
+    //height:'780px'
+  },
+  imgParallax:{
+    zIndex:1,
+    height:'780px',
+    width:"100vw",
+    backgroundImage:'url("../../static/img/blureoslogo.png")',
+    backgroundRepeat:'no-repeat',
+    backgroundPosition: 'right center',
+    [theme.breakpoints.down('sm')]: {
+      backgroundColor: '#f1f1f1',
+      backgroundImage:'none',
+    },
+  },
+  sectionHero:{
+    width:"1100px",
+    height:' 780px',
+    paddingTop:"250px",
+    [theme.breakpoints.down('sm')]: {
+      paddingTop:"100px",
+    },
+  },
+  logoMobile:{
+    marginBottom: '2rem',
+    display: 'none',
+    [theme.breakpoints.down('sm')]: {
+      display: 'block',
+    },
+  },
+  section:{
+    width:"1100px",
+  },
+  sectionGray:{
+    width:"1100px",
+
+  },
+  accordion:{
+    backgroundColor: '#f1f1f1',
+    border:'none',
+    margin: 0,
+    padding:0,
+    boxShadow:'none',
+  },
+  accordionPadding:{
+    padding:0
+  }
+
+}))
+
 const Home = () => {
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"))
+  const classes = useStyles()
   const [accordionState, setAccordionState] = useState();
 
-  useEffect(() => {
-    setAccordionState({
-      development: false,
-      infrastructure: false,
-      education: false,
-    });
-  }, []);
+  const [test, setTest] = useState(false);
 
+  const [expanded, setExpanded] = useState('panel_SoftDev');
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+  
+  useEffect(() => {
+    handleChange('panel_SoftDev')
+  }, []);
+ 
   return (
     <Layout>
+      <Parallax strength={800}>
+        <Background className={classes.bgParallax}>
+            <Box className={classes.imgParallax} />
+        </Background>
+        <Box className={classes.container}>
+          <Box className={classes.sectionHero}>
+            <Box>
+              <img
+                  className={classes.logoMobile}
+                  src={useBaseUrl("img/eoscr-logo.png")}
+                  alt="EOS CR LOGO"
+                />
+            </Box>
+            <Box className={styles.titleBox}>
+                  <Typography variant="h1">Enterprise Blockchain Solutions</Typography>
+                  <Typography variant="h1">That Fit Your Needs</Typography>
+            </Box>
+            <Typography>Deploy EOSIO blockchain technology to improve transparency, boost efficiency, and reduce costs.</Typography>
+            <Typography>Start transforming your organization by leveraging enterprise blockchain networks.</Typography>
+            <Button variant="contained" color="primary" href={useBaseUrl("/services")} >Learn More</Button>
+          </Box>
+        </Box>
+        <Box className={classes.container}>
+          <Box className={classes.section}>
+            <Box className={styles.titleBox}>
+                <Typography variant="h2">What Enterprise</Typography>
+                <Typography variant="h2">Blockchain Can Do?</Typography>
+            </Box>
+            <Grid container spacing={10}>
+              <Grid item xs={12} md={6}>
+                <Typography variant="h3">Improve transparency and traceability</Typography>
+                <Typography>
+                  A blockchain registers transactions in chronological order,
+                  enabling full traceability of data that can be accessed in
+                  near real-time. These registries are immutable, meaning they
+                  cannot be altered, thus offering higher transparency in
+                  processes.
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Typography variant="h3">Boost efficiency and reduce costs</Typography>
+                <Typography>
+                  Smart contracts in blockchain technology allow improved
+                  efficiency for operations. A smart contract is a protocol that
+                  executes automatically and autonomously according to its
+                  terms, cutting the middleman and reducing paperwork and
+                  transaction costs.
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Typography variant="h3">Enhance security and trust</Typography>
+                <Typography>
+                  Blockchain’s encryption capabilities offer new layers of
+                  privacy and security for registering data. A blockchain is
+                  decentralized, so ledgers are shared by a network of
+                  computers, minimizing cyberattacks, enabling better management
+                  of authorizations, and increasing trust among parties.
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Typography variant="h3">Integrate with other technologies</Typography>
+                <Typography>
+                  We define blockchain as a fundamental technology that can
+                  leverage other techs from the industry 4.0. For instance,
+                  machine learning, robotics, and VR can integrate blockchain
+                  into their solutions to record large amounts of data.
+                </Typography>
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
+      </Parallax>
+      <Box className={classes.containerGray}>
+        <Box className={classes.section}>
+        <Grid container spacing={10}>
+          <Grid item md={6}>
+            <Typography  variant="h3">What We Do</Typography>
+            <Typography>
+              We make the most of enterprise blockchain technology and design
+              solutions for the real world. Our team offers services tailored
+              to our clients’ needs and expectations.{" "}
+              <a href={useBaseUrl("/contact-us")}>Contact us</a> and get the conversation
+              started!
+            </Typography>
+            <Box>
+              <Accordion square expanded={expanded === 'panel_SoftDev'}  onChange={handleChange('panel_SoftDev')} className={classes.accordion} >
+                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <Typography  variant="h4">Software Development</Typography>
+                </AccordionSummary>
+                <AccordionDetails className={classes.accordionPadding}>
+                  <Typography>
+                    Our value proposition is to develop blockchain-based
+                    software to solve real-life problems. We have experience
+                    working with large global enterprises and SMEs, government
+                    entities and NGOs, and open-source projects across many
+                    industries. We adapt to our clients’ budgets and needs,
+                    without compromising thought leadership or quality. Our team
+                    is technology agnostic but specializes in the open-source
+                    blockchain technology EOSIO, launched by leading company
+                    block.one.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion square expanded={expanded === 'panel_BlockInfrac'}  onChange={handleChange('panel_BlockInfrac')} className={classes.accordion} >
+                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <Typography  variant="h4">Blockchain Infrastructure</Typography>
+                </AccordionSummary>
+                <AccordionDetails className={classes.accordionPadding}>
+                  <Typography>
+                    We offer top-grade infrastructure for blockchain networks
+                    and API endpoints from our datacenter in San José, Costa
+                    Rica. Costa Rica is a country with high political stability
+                    and a long-lasting democracy. Our strategic location in the
+                    middle of the American continent offers convenient network
+                    interconnectivity. We also configure, host, and maintain
+                    blockchain nodes available for private and public networks
+                    with 24/7 monitoring and uptime. Read more about this.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion square expanded={expanded === 'panel_Education'}  onChange={handleChange('panel_Education')} className={classes.accordion} >
+                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <Typography  variant="h4">Education and Training</Typography>
+                </AccordionSummary>
+                <AccordionDetails className={classes.accordionPadding}>
+                  <Typography>
+                    In today’s world, new technologies are leading the way to
+                    transform many industries. We offer workshops on blockchain
+                    and EOSIO to C-suite executives and teams that want to keep
+                    up to date and learn more about what is blockchain and
+                    enterprise use cases. We also provide training and education
+                    resources for new talents that wish to kickstart their
+                    career in blockchain.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </Box>
+          </Grid>
+          <Grid item md={6}>
+            <WhatWeDoSvg />
+          </Grid>
+        </Grid>
+        </Box>
+      </Box>
+     
+    </Layout>
+
+    /*
+     <Layout>
       <main className={styles.mainContainer}>
         <div className={clsx("container", styles.noPadding)}>
           <section
@@ -479,6 +719,7 @@ const Home = () => {
         </div>
       </main>
     </Layout>
+    */
   );
 };
 
