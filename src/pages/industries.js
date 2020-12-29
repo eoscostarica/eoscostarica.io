@@ -6,11 +6,11 @@ import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { ThemeProvider } from '@material-ui/core/styles';
-import Theme from '../theme/index'
+import Theme from '../theme/index';
 
 import Accordion from "./components/Accordion";
 import styles from "./styles.module.css";
-import useStyles from "./styles.module.js"
+import useStyles from "./styles.module.js";
 
 const Industries = () => {
   const classes = useStyles()

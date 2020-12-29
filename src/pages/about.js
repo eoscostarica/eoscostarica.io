@@ -27,7 +27,6 @@ const About = () => {
           <Box className={clsx("container", styles.noPadding)}>
             <Box
               className={clsx(
-                styles.sectionGray,
                 styles.topBox,
                 styles.aboutTopBox
               )}
