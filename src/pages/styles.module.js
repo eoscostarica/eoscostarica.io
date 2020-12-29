@@ -9,7 +9,7 @@ import { makeStyles } from '@material-ui/core/styles'
         color: '#ffffff',
         '&:hover': {
           backgroundColor: '#757575',
-          color: '#FFF'
+          color: '#ffffff'
         }
     },
     buttonSecondary: {
