@@ -89,7 +89,7 @@ import { makeStyles } from '@material-ui/core/styles'
         backgroundColor: '#5484b3',
         fontSize: '21px',
         color: '#ffffff',
-        borderRadius:'0px'
+        borderRadius:'0px',
         '&:hover': {
           backgroundColor: '#757575',
           color: '#ffffff'
