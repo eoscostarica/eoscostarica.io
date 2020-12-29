@@ -64,10 +64,11 @@ export default {
     fontWeight: 'normal',
     fontStretch: 'normal',
     fontStyle: 'normal',
-    color: palette.text.primary,
+    color: 'palette.text.primary',
     fontSize: '19px',
     letterSpacing: '-0.05px',
-    lineHeight: '22px'
+    lineHeight: '25px',
+    textAlign:'justify'
   },
   body2: {
     color: palette.text.primary,
