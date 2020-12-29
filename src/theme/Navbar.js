@@ -73,25 +73,30 @@ const PATHS = [
 ];
 
 const useStyles = makeStyles({
-  menuWrapper:{
+  navBar:{
+    zIndex:3000,
+    width:'100%',
+    position: 'fixed',
     display: 'flex',
+    justifyContent: 'center',
     backgroundColor:'rgba(255, 255, 255, 0)',
-    justifyContent: 'flex-start',
+  },
+  navBarScroll:{
+    backgroundColor:'rgba(255, 255, 255, 0.95)',
+  },
+  menuWrapper:{
+    width:"1100px",
+    display: 'flex',
+    
     alignItems: 'center',
     fontWeight: 'bold',
-    position: 'fixed',
     top: 0,
-    width: '100%',
     transition: '0.2s',
     height: '60px',
     margin: '0 auto',
     paddingTop: '40px',
     paddingBottom: '40px',
-    paddingLeft:"10vw",
-    paddingRight:"10vw",
-  },
-  menuWrapperScroll:{
-    backgroundColor:'rgba(255, 255, 255, 0.95)',
+
   },
   boxLeft:{
     width:"100%",
@@ -177,7 +182,7 @@ const useStyles = makeStyles({
 
 const NavbarMenu = () => {
   const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   const classes = useStyles()
   const [isOpen, setIsOpen] = useState(false);
   const isBlog = location.pathname.substring(0,6) === '/blog/'
@@ -199,72 +204,74 @@ const NavbarMenu = () => {
   }
 
   return (
-    <Box  className={clsx(classes.menuWrapper, { [classes.menuWrapperScroll]: useTransparentBG})}>
-      {isMobile && 
-      <>
-        <IconButton onClick={handlerDrawer} className={classes.btnDrawer}>
-          <MenuIcon  fontSize="large"/>
-        </IconButton>
-        <Drawer anchor={'left'} open={isOpen} onClose={handlerDrawer} >
-          <Box className={classes.drawerContent}>
-              <img
-                className={classes.imgDrawer}
-                src={useBaseUrl("img/eoscr-logo.png")}
-                alt="EOS CR LOGO"
-              />
-            <Divider />
-            <List>
-              {PATHS.map((item) => (
-                 <Link href={useBaseUrl(item.path)} key={item.label} className={classes.linkItem} >
-                    <ListItem button>{item.label}</ListItem>
-                </Link>
-              ))}
-            </List>
-          </Box>
-        </Drawer>
-      </>}
-      {!isMobile && 
+    <Box  className={clsx(classes.navBar, { [classes.navBarScroll]: useTransparentBG})} >
+      <Box className={classes.menuWrapper}>
+        {isMobile && 
         <>
-          <Box className={classes.boxLeft}>
-            <Box  className={classes.imgBox}>
-            <img
-                className={!isBlog? clsx(classes.img, {[classes.imgScroll]: useTransparentBG})  : classes.imgScroll}
-                src={useBaseUrl("img/eoscr-logo.png")}
-                alt="EOS CR LOGO"
-              />
+          <IconButton onClick={handlerDrawer} className={classes.btnDrawer}>
+            <MenuIcon  fontSize="large"/>
+          </IconButton>
+          <Drawer anchor={'left'} open={isOpen} onClose={handlerDrawer} >
+            <Box className={classes.drawerContent}>
+                <img
+                  className={classes.imgDrawer}
+                  src={useBaseUrl("img/eoscr-logo.png")}
+                  alt="EOS CR LOGO"
+                />
+              <Divider />
+              <List>
+                {PATHS.map((item) => (
+                  <Link href={useBaseUrl(item.path)} key={item.label} className={classes.linkItem} >
+                      <ListItem button>{item.label}</ListItem>
+                  </Link>
+                ))}
+              </List>
             </Box>
-          </Box>
-          <Box className={classes.boxRight}>
-            {!isMobile && (
-                <Box className={classes.boxLanguages}>
-                  <Link href="https://es.eoscostarica.io/" color="inherit" target="_blank" >Español</Link>
-                  <span>{" / "}</span>
-                  <Link href="" color="inherit">English</Link>
-                </Box>
-              )}
-              {PATHS.map((item) => (
-                <Link href={useBaseUrl(item.path)} key={item.label}>
-                  <Box className={classes.svgWrapper}>
-                    <svg height={item.height} width={item.width}>
-                      <text x="10" y="25" fill="#000000" className={classes.textItem}>
-                        {item.label}
-                      </text>
-                      <rect
-                        className={classes.shape}
-                        strokeDasharray={item.strokeDasharray}
-                        height={item.height}
-                        width={item.width}
-                        strokeDashoffset={item.strokeDashoffset}
-                        strokeWidth={pathname === item.path ? 12 : 0}
-                      />
-                    </svg>
+          </Drawer>
+        </>}
+        {!isMobile && 
+          <>
+            <Box className={classes.boxLeft}>
+              <Box  className={classes.imgBox}>
+              <img
+                  className={!isBlog? clsx(classes.img, {[classes.imgScroll]: useTransparentBG})  : classes.imgScroll}
+                  src={useBaseUrl("img/eoscr-logo.png")}
+                  alt="EOS CR LOGO"
+                />
+              </Box>
+            </Box>
+            <Box className={classes.boxRight}>
+              {!isMobile && (
+                  <Box className={classes.boxLanguages}>
+                    <Link href="https://es.eoscostarica.io/" color="inherit" target="_blank" >Español</Link>
+                    <span>{" / "}</span>
+                    <Link href="" color="inherit">English</Link>
                   </Box>
-                </Link>
-              ))}
-          </Box>
-        </>
-      }
-    </Box>
+                )}
+                {PATHS.map((item) => (
+                  <Link href={useBaseUrl(item.path)} key={item.label}>
+                    <Box className={classes.svgWrapper}>
+                      <svg height={item.height} width={item.width}>
+                        <text x="10" y="25" fill="#000000" className={classes.textItem}>
+                          {item.label}
+                        </text>
+                        <rect
+                          className={classes.shape}
+                          strokeDasharray={item.strokeDasharray}
+                          height={item.height}
+                          width={item.width}
+                          strokeDashoffset={item.strokeDashoffset}
+                          strokeWidth={pathname === item.path ? 12 : 0}
+                        />
+                      </svg>
+                    </Box>
+                  </Link>
+                ))}
+            </Box>
+          </>
+        }
+      </Box>
+    </Box> 
   );
 };
 
