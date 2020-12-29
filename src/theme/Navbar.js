@@ -85,7 +85,7 @@ const useStyles = makeStyles({
     backgroundColor:'rgba(255, 255, 255, 0.95)',
   },
   menuWrapper:{
-    width:"960px",
+    width:"1100px",
     display: 'flex',
     
     alignItems: 'center',
