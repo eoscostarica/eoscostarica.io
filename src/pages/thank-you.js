@@ -2,26 +2,28 @@ import React from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import Box from '@material-ui/core/Box'
+import Typography from '@material-ui/core/Typography';
 
 import styles from "./styles.module.css";
 
 const ThankYou = () => (
   <Layout>
-    <main className={styles.mainContainer}>
-      <div className={clsx("container", styles.noPadding)}>
-        <section className={clsx(styles.sectionWhite, styles.contactUsBox)}>
-          <div className="container">
-            <div className={clsx("row", styles.flexColumn)}>
-              <h1>Thank you for contacting us</h1>
-              <span>
+    <Box className={styles.mainContainer}>
+      <Box className={clsx("container", styles.noPadding)}>
+        <Box className={clsx(styles.sectionWhite, styles.contactUsBox)}>
+          <Box className="container">
+            <Box className={clsx("row", styles.flexColumn)}>
+              <Typography variant="h2">Thank you for contacting us</Typography>
+              <Typography variant="body1">
                 We will contact you shortly. Your contact information will only
                 be used to reply to your message.
-              </span>
+              </Typography>
               <br></br>
-              <span>
+              <Typography variant="body1">
                 In the meantime, follow us on social media for more updates:
-              </span>
-              <div className={styles.socialMediaBox}>
+              </Typography>
+              <Box className={styles.socialMediaBox}>
                 {/* <ul>
                   <li> */}
                     <a
@@ -84,11 +86,11 @@ const ThankYou = () => (
                     </a>
                   {/* </li>
                 </ul> */}
-              </div>
-              <span>
+              </Box>
+              <Typography variant="body1">
                 If you wish to receive updates directly into your inbox, please
                 subscribe to our newsletter:
-              </span>
+              </Typography>
               <br></br>
               <iframe
                 src="https://eoscostarica.substack.com/embed"
@@ -98,11 +100,11 @@ const ThankYou = () => (
                 frameBorder="0"
                 scrolling="no"
               ></iframe>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   </Layout>
 );
 
