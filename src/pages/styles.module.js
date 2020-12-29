@@ -90,6 +90,10 @@ import { makeStyles } from '@material-ui/core/styles'
         fontSize: '21px',
         color: '#ffffff',
         borderRadius:'0px'
+        '&:hover': {
+          backgroundColor: '#757575',
+          color: '#ffffff'
+        }
     },
     buttonSecondary: {
         width: '198px',
