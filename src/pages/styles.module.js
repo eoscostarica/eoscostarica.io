@@ -124,12 +124,9 @@ import { makeStyles } from '@material-ui/core/styles'
     },
 
     /**home */
-<<<<<<< HEAD
     mainContainer:{
       overflowX:'hidden'
     },
-=======
->>>>>>> master
     container:{
       width:'100%',
       display: 'flex',
@@ -205,7 +202,6 @@ import { makeStyles } from '@material-ui/core/styles'
     section:{
       paddingBottom:'140px',
       width:"1100px",
-<<<<<<< HEAD
       [theme.breakpoints.down('sm')]: {
         width:"100%",
       },
@@ -215,17 +211,11 @@ import { makeStyles } from '@material-ui/core/styles'
       [theme.breakpoints.down('sm')]: {
         width:"100%",
       },
-=======
-    },
-    sectionNoPadding:{
-      width:"1100px",
->>>>>>> master
     },
     sectionPadding:{
       paddingTop:'140px',
       paddingBottom:'140px',
       width:"1100px",
-<<<<<<< HEAD
       [theme.breakpoints.down('sm')]: {
         width:"100%",
       },
@@ -238,13 +228,6 @@ import { makeStyles } from '@material-ui/core/styles'
     },
     accordion:{
       width:'100%',
-=======
-    },
-    accordionBox:{
-      marginTop: '3rem',
-    },
-    accordion:{
->>>>>>> master
       backgroundColor: '#f1f1f1',
       border:'none',
       margin: 0,
@@ -253,11 +236,8 @@ import { makeStyles } from '@material-ui/core/styles'
       marginBottom:'10px',
       "&.MuiAccordion-root:before": {
         backgroundColor: '#f1f1f1',
-<<<<<<< HEAD
         margin: 0,
         padding:0,
-=======
->>>>>>> master
       }
     },
     accordionPadding:{
