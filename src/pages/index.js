@@ -37,32 +37,49 @@ const Home = () => {
   const HeroSection = () => {
     return (
       <Box className={classes.container}>
+        {!isMobile && 
           <Box className={classes.sectionHero}>
-            <Box>
+          <Box className={classes.titleBox}>
+              <Typography className={classes.h1}>Enterprise Blockchain Solutions</Typography>
+              <Typography className={classes.h1}>That Fit Your Needs</Typography>
+          </Box>
+          <Typography className={classes.body1} >Deploy EOSIO blockchain technology to improve transparency, boost efficiency, and reduce costs.</Typography>
+          <Typography className={classes.body1} >Start transforming your organization by leveraging enterprise blockchain networks.</Typography>
+          <Box className={classes.buttonBox}>
+            <Button className={classes.buttonPrimary} href={useBaseUrl("/services")} >Learn More</Button>
+          </Box>
+        </Box>
+        }
+        {isMobile && 
+          <Box className={classes.sectionHeroMobile}>
+            <Box className={classes.logoMobileBox}>
               <img
                   className={classes.logoMobile}
                   src={useBaseUrl("img/eoscr-logo.png")}
                   alt="EOS CR LOGO"
                 />
             </Box>
-            <Box className={classes.titleBox}>
-                <Typography className={classes.h1}>Enterprise Blockchain Solutions</Typography>
-                <Typography className={classes.h1}>That Fit Your Needs</Typography>
-            </Box>
-            <Typography className={classes.body1} >Deploy EOSIO blockchain technology to improve transparency, boost efficiency, and reduce costs.</Typography>
-            <Typography className={classes.body1} >Start transforming your organization by leveraging enterprise blockchain networks.</Typography>
-            <Box className={classes.buttonBox}>
-              <Button className={classes.buttonPrimary} href={useBaseUrl("/services")} >Learn More</Button>
-            </Box>
+          <Box className={classes.titleBox}>
+              <Typography className={classes.h1}>Enterprise Blockchain </Typography>
+              <Typography className={classes.h1}>Solutions That</Typography>
+              <Typography className={classes.h1}>Fit Your Needs</Typography>
+          </Box>
+          <Typography className={classes.body1} >Deploy EOSIO blockchain technology to improve transparency, boost efficiency, and reduce costs.</Typography>
+          <br/>
+          <Typography className={classes.body1} >Start transforming your organization by leveraging enterprise blockchain networks.</Typography>
+          <Box className={classes.buttonBoxMobile}>
+            <Button className={classes.buttonPrimary} href={useBaseUrl("/services")} >Learn More</Button>
           </Box>
         </Box>
+      }
+      </Box>
     )
   } 
 
   const BlockchainCanDo = () => {
     return (
       <Box className={classes.container}>
-          <Box className={classes.section}>
+          <Box className={clsx(classes.section,{[classes.sectionPadding] : isMobile})}>
             <Box className={classes.titleBox}>
                 <Typography className={classes.h2}>What Enterprise</Typography>
                 <Typography className={classes.h2}>Blockchain Can Do?</Typography>
@@ -281,20 +298,27 @@ const Home = () => {
       <Box  className={classes.containerBlack}>
         <Box className={classes.sectionNoPadding}>
           <Grid container spacing={5}>
-            <Grid item md={6}>
+            {isMobile &&
+                <Grid item xs={12} md={6}>
+                  <img src={useBaseUrl("img/eosnodes.gif")} />
+                </Grid>
+            }
+            <Grid item xs={12} md={6}>
               <Box className={classes.inquiereBox}>
-                <Box>
+                <Box style={{width:'100%'}}>
                   <Typography className={clsx(classes.h2, classes.white)}>Do you have inquiries</Typography>
                   <Typography className={clsx(classes.h2, classes.white)}>about blockchain?</Typography>
-                  <Box style={{marginTop:"50px"}}>
+                  <Box className={classes.buttonBox}>
                     <Button className={classes.buttonPrimary} href={useBaseUrl("/contact-us")} >Contact us</Button>
                   </Box>
                 </Box>
               </Box>
             </Grid>
-            <Grid item md={6}>
-              <img src={useBaseUrl("img/eosnodes.gif")} />
-            </Grid>
+            {!isMobile &&
+              <Grid item md={6}>
+                <img src={useBaseUrl("img/eosnodes.gif")} />
+              </Grid>
+            }
           </Grid>
         </Box>
       </Box>
@@ -318,11 +342,14 @@ const Home = () => {
             protocol, provide blockchain infrastructures, and offer training
             and workshops.
           </Typography>
+          <br/>
+          <Typography className={classes.body1}>
           <strong>
             <i>
               <a href={useBaseUrl("/contact-us")}>Let’s get the conversation started!</a>
             </i>
           </strong>
+          </Typography>
           <Box className={classes.spacingBox}>
             <Box className={classes.spacingBox}>
               <Grid container spacing={5}>
@@ -350,14 +377,16 @@ const Home = () => {
             </Box>
             <Box className={classes.spacingBox}>
               <Grid container spacing={5}>
-                <Grid item md={6}>
-                  <Box className={classes.imgBoxLeft}>
-                    <img
-                      className={classes.imgKnow}
-                      src={useBaseUrl("img/company.webp")}
-                    />
-                  </Box>  
-                </Grid>
+                {!isMobile && 
+                  <Grid item md={6}>
+                    <Box className={classes.imgBoxLeft}>
+                      <img
+                        className={classes.imgKnow}
+                        src={useBaseUrl("img/company.webp")}
+                      />
+                    </Box>  
+                  </Grid>
+                }
                 <Grid item md={6}>
                   <Box className={classes.h3Box}>
                     <Typography className={classes.h3}>The company</Typography>
@@ -376,6 +405,16 @@ const Home = () => {
                     innovative technologies.
                   </Typography>
                 </Grid>
+                {isMobile && 
+                  <Grid item md={6}>
+                    <Box className={classes.imgBoxLeft}>
+                      <img
+                        className={classes.imgKnow}
+                        src={useBaseUrl("img/company.webp")}
+                      />
+                    </Box>  
+                  </Grid>
+                }
               </Grid>
             </Box>
             <Box className={classes.spacingBox}>
@@ -421,15 +460,15 @@ const Home = () => {
 
   const WeAreOneGroup = () => {
     return (
-      <Box className={classes.container}>
-        <Box className={classes.sectionPadding}>
+      <Box className={clsx(classes.container,{[classes.containerGray] : isMobile, [classes.containerWithBackground] : isMobile})}>
+        <Box className={classes.sectionPadding} >
           <Box className={classes.h3Box}>
             <Typography className={classes.h3} style={{textAlign:'center'}}>We Are One Group</Typography>
           </Box>
-          <Box>
+          <Box className={clsx({[classes.spacingBox] : isMobile})}>
             <Grid container>
               <Grid item xs={12} md={3}>
-                <Box className={classes.imgBox}>
+                <Box className={classes.imgBoxLogos}>
                   <img
                     alt="LatamLink"
                     src={useBaseUrl("img/Group47.svg")}
@@ -437,7 +476,7 @@ const Home = () => {
                 </Box>
               </Grid>
               <Grid item xs={12} md={3}>
-                <Box className={classes.imgBox}>
+                <Box className={classes.imgBoxLogos}>
                   <img
                     alt="Edenia"
                     src={useBaseUrl("img/Group17.svg")}
@@ -445,7 +484,7 @@ const Home = () => {
                 </Box>
               </Grid>
               <Grid item xs={12} md={3}>
-                <Box className={classes.imgBox}>
+                <Box className={classes.imgBoxLogos}>
                   <img
                     alt="Eossurf"
                     src={useBaseUrl("img/Group11.svg")}
@@ -453,7 +492,7 @@ const Home = () => {
                 </Box>
               </Grid>
               <Grid item xs={12} md={3}>
-                <Box className={classes.imgBox}>
+                <Box className={classes.imgBoxLogos}>
                   <img
                     alt="Ticoblockchain"
                     src={useBaseUrl("img/Group55.svg")}
@@ -570,8 +609,8 @@ const Home = () => {
                     transmission of relevant data required for proper interchange
                     in port logistics.
                   </Typography>
-                  <Typography style={{color: '#42B9D1'}} >
-                    <a href="https://smartgate.tech/" style={{color: '#5484b3'}}  target="_blank">
+                  <Typography className={classes.body1} >
+                    <a href="https://smartgate.tech/" target="_blank">
                       Read more.
                     </a>
                   </Typography>
@@ -597,7 +636,7 @@ const Home = () => {
                 </Box>
             </Grid>
             <Grid item xs={12} md={4}>
-              <Box style={{marginTop:"40px"}}>
+              <Box className={classes.buttonBox}>
                   <Button className={classes.buttonPrimary} href={useBaseUrl("/contact-us")} >Contact us</Button>
                 </Box>
             </Grid>

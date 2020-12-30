@@ -11,7 +11,11 @@ import { makeStyles } from '@material-ui/core/styles'
       letterSpacing: '-0.24px',
       lineHeight: '60px',
       [theme.breakpoints.down('sm')]: {
-        fontSize: '50px',
+        lineHeight: '40px',
+        fontSize: '30px',
+        textAlign:'center',
+        paddingLeft: '5vw',
+        paddingRight: '5vw'
       },
     },
     h2: {
@@ -22,7 +26,11 @@ import { makeStyles } from '@material-ui/core/styles'
       letterSpacing: '-0.24px',
       lineHeight: '44px',
       [theme.breakpoints.down('sm')]: {
+        lineHeight: '35px',
         fontSize: '30px',
+        textAlign:'center',
+        paddingLeft: '5vw',
+        paddingRight: '5vw'
       },
     },
     h3: {
@@ -31,7 +39,11 @@ import { makeStyles } from '@material-ui/core/styles'
       letterSpacing: '-0.06px',
       lineHeight: '9px',
       [theme.breakpoints.down('sm')]: {
+        lineHeight: '25px',
         fontSize: '20px',
+        textAlign:'center',
+        paddingLeft: '5vw',
+        paddingRight: '5vw'
       },
     },
     h4: {
@@ -41,6 +53,9 @@ import { makeStyles } from '@material-ui/core/styles'
       lineHeight: '24px',
       [theme.breakpoints.down('sm')]: {
         fontSize: '10px',
+        textAlign:'center',
+        paddingLeft: '5vw',
+        paddingRight: '5vw'
       },
     },
     h5: {
@@ -73,7 +88,11 @@ import { makeStyles } from '@material-ui/core/styles'
       fontSize: '19px',
       letterSpacing: '-0.05px',
       lineHeight: '25px',
-      textAlign:'justify'
+      textAlign:'justify',
+      [theme.breakpoints.down('sm')]: {
+        paddingLeft: '5vw',
+        paddingRight: '5vw'
+      },
     },
     body2: {
       fontSize: '12px',
@@ -144,8 +163,14 @@ import { makeStyles } from '@material-ui/core/styles'
       justifyContent: 'center',
       backgroundColor: 'black',
     },
+    containerWithBackground:{
+      backgroundImage:'url("../../static/img/blureoslogo.png")',
+      backgroundRepeat:'no-repeat',
+      backgroundPosition: 'right center',
+      backgroundSize:'100%'
+    },
     content:{
-      width:"960px",
+      width:'960px',
       display: 'flex',
     },
     bgParallax:{
@@ -165,14 +190,14 @@ import { makeStyles } from '@material-ui/core/styles'
     imgParallax:{
       zIndex:1,
       height:'100%',
-      width:"100vw",
+      width:'100vw',
       backgroundImage:'url("../../static/img/blureoslogo.png")',
       backgroundRepeat:'no-repeat',
       backgroundPosition: 'right bottom',
       [theme.breakpoints.down('sm')]: {
         backgroundColor: '#f1f1f1',
         backgroundImage:'none',
-      },
+      }
     },
     titleBox:{
       marginBottom: '3rem',
@@ -183,47 +208,67 @@ import { makeStyles } from '@material-ui/core/styles'
     buttonBox:{
       marginTop: '3rem',
       marginBottom: '3rem',
+      [theme.breakpoints.down('sm')]: {
+        width: '100%',
+        display:'flex',
+        justifyContent: 'center'
+      }
+    },
+    buttonBoxMobile:{
+      width: '100%',
+      position: 'absolute',
+      bottom:-30,
+      display:'flex',
+      justifyContent: 'center',
     },
     sectionHero:{
-      width:"1100px",
+      width:'1100px',
       height:' 780px',
-      paddingTop:"250px",
-      [theme.breakpoints.down('sm')]: {
-        paddingTop:"100px",
-      },
+      paddingTop:'250px',
+    },
+    sectionHeroMobile:{
+      position: 'relative',
+      paddingTop:'100px',
+      paddingBottom:'80px',
+      width:'100%',
+      backgroundColor: '#f1f1f1'
+    },
+    logoMobileBox:{
+      width:'100%',
+      display: 'flex',
+      justifyContent: 'center',
     },
     logoMobile:{
       marginBottom: '2rem',
-      display: 'none',
-      [theme.breakpoints.down('sm')]: {
-        display: 'block',
-      },
+      width:'90%'
     },
     section:{
       paddingBottom:'140px',
-      width:"1100px",
+      width:'1100px',
       [theme.breakpoints.down('sm')]: {
-        width:"100%",
+        width:'100%',
       },
     },
     sectionNoPadding:{
-      width:"1100px",
+      width:'1100px',
       [theme.breakpoints.down('sm')]: {
-        width:"100%",
+        width:'100%',
       },
     },
     sectionPadding:{
       paddingTop:'140px',
       paddingBottom:'140px',
-      width:"1100px",
+      width:'1100px',
       [theme.breakpoints.down('sm')]: {
-        width:"100%",
+        width:'100%',
+        paddingTop:'80px',
+        paddingBottom:'80px',
       },
     },
     accordionBox:{
       marginTop: '3rem',
       [theme.breakpoints.down('sm')]: {
-        width:"95%",
+        width:'95%',
       },
     },
     accordion:{
@@ -234,7 +279,7 @@ import { makeStyles } from '@material-ui/core/styles'
       padding:0,
       boxShadow:'none',
       marginBottom:'10px',
-      "&.MuiAccordion-root:before": {
+      '&.MuiAccordion-root:before': {
         backgroundColor: '#f1f1f1',
         margin: 0,
         padding:0,
@@ -249,6 +294,15 @@ import { makeStyles } from '@material-ui/core/styles'
       height: '288px',
       paddingBottom: '3rem',
     },
+    imgBoxLogos:{
+      display:'flex',
+      justifyContent:'center',
+      height: '288px',
+      paddingBottom: '3rem',
+      [theme.breakpoints.down('sm')]: {
+        height: '120px',
+      },
+    },
     spacingBox:{
       marginTop: '3rem',
       marginBottom: '3rem',
@@ -261,6 +315,9 @@ import { makeStyles } from '@material-ui/core/styles'
       display:'flex',
       alignItems:'center', 
       height:'500px',
+      [theme.breakpoints.down('sm')]: {
+        height: 'auto',
+      },
     },
     imgBoxRight:{
       display:'flex',
@@ -271,13 +328,17 @@ import { makeStyles } from '@material-ui/core/styles'
       justifyContent:'flex-start',
     },
     imgKnow:{
-      width:"90%"
+      width:'90%',
+      [theme.breakpoints.down('sm')]: {
+        width:'100%',
+      },
     },
     imgProjects:{
-      width:"85%"
+      width:'85%',
+      [theme.breakpoints.down('sm')]: {
+        width:'100%',
+      },
     }
-
-
   }))
   
   export default useStyles
