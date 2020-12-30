@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Parallax, Background } from 'react-parallax';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { useTheme } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from "@material-ui/core/Typography";
@@ -16,14 +14,14 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
 import useStyles from "./styles.module.js"
-
+import Logistic from './Animations/Logistic'
+import Payments from './Animations/Payments'
+import Games from './Animations/Games'
 
 
 const Home = () => {
   const classes = useStyles()
   const [expanded, setExpanded] = useState('panel_SoftDev');
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -32,11 +30,14 @@ const Home = () => {
   useEffect(() => {
     handleChange('panel_SoftDev')
   }, []);
-
-
-  const HeroSection = () => {
-    return (
-      <Box className={classes.container}>
+ 
+  return (
+    <Layout>
+      <Parallax strength={800}>
+        <Background className={classes.bgParallax}>
+            <Box className={classes.imgParallax} />
+        </Background>
+        <Box className={classes.container}>
           <Box className={classes.sectionHero}>
             <Box>
               <img
@@ -56,12 +57,7 @@ const Home = () => {
             </Box>
           </Box>
         </Box>
-    )
-  } 
-
-  const BlockchainCanDo = () => {
-    return (
-      <Box className={classes.container}>
+        <Box className={classes.container}>
           <Box className={classes.section}>
             <Box className={classes.titleBox}>
                 <Typography className={classes.h2}>What Enterprise</Typography>
@@ -72,7 +68,7 @@ const Home = () => {
                 <Box className={classes.h3Box}>
                   <Typography className={classes.h3}>Improve transparency and traceability</Typography>
                 </Box>
-                <Typography  className={classes.body1}>
+                <Typography>
                   A blockchain registers transactions in chronological order,
                   enabling full traceability of data that can be accessed in
                   near real-time. These registries are immutable, meaning they
@@ -84,7 +80,7 @@ const Home = () => {
                 <Box className={classes.h3Box}>
                   <Typography className={classes.h3}>Boost efficiency and reduce costs</Typography>
                 </Box>
-                <Typography  className={classes.body1}>
+                <Typography>
                   Smart contracts in blockchain technology allow improved
                   efficiency for operations. A smart contract is a protocol that
                   executes automatically and autonomously according to its
@@ -96,7 +92,7 @@ const Home = () => {
                 <Box className={classes.h3Box}>
                   <Typography className={classes.h3}>Enhance security and trust</Typography>
                 </Box>
-                <Typography  className={classes.body1}>
+                <Typography>
                   Blockchain’s encryption capabilities offer new layers of
                   privacy and security for registering data. A blockchain is
                   decentralized, so ledgers are shared by a network of
@@ -108,7 +104,7 @@ const Home = () => {
                 <Box className={classes.h3Box}>
                   <Typography className={classes.h3}>Integrate with other technologies</Typography>
                 </Box>
-                <Typography  className={classes.body1}>
+                <Typography>
                   We define blockchain as a fundamental technology that can
                   leverage other techs from the industry 4.0. For instance,
                   machine learning, robotics, and VR can integrate blockchain
@@ -118,19 +114,15 @@ const Home = () => {
             </Grid>
           </Box>
         </Box>
-    )
-  }
-
-  const WhatWeDo = () => {
-    return (
+      </Parallax>
       <Box className={classes.containerGray}>
         <Box className={classes.sectionPadding}>
         <Grid container spacing={5}>
-          <Grid item xs={12} md={6}>
+          <Grid item md={6}>
             <Box className={classes.titleBox}>
               <Typography  className={classes.h2}>What We Do</Typography>
             </Box>
-            <Typography  className={classes.body1}>
+            <Typography>
               We make the most of enterprise blockchain technology and design
               solutions for the real world. Our team offers services tailored
               to our clients’ needs and expectations.{" "}
@@ -143,7 +135,7 @@ const Home = () => {
                   <Typography  className={classes.h3}>Software Development</Typography>
                 </AccordionSummary>
                 <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
+                  <Typography>
                     Our value proposition is to develop blockchain-based
                     software to solve real-life problems. We have experience
                     working with large global enterprises and SMEs, government
@@ -161,7 +153,7 @@ const Home = () => {
                   <Typography  className={classes.h3}>Blockchain Infrastructure</Typography>
                 </AccordionSummary>
                 <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
+                  <Typography>
                     We offer top-grade infrastructure for blockchain networks
                     and API endpoints from our datacenter in San José, Costa
                     Rica. Costa Rica is a country with high political stability
@@ -178,7 +170,7 @@ const Home = () => {
                   <Typography  className={classes.h3}>Education and Training</Typography>
                 </AccordionSummary>
                 <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
+                  <Typography>
                     In today’s world, new technologies are leading the way to
                     transform many industries. We offer workshops on blockchain
                     and EOSIO to C-suite executives and teams that want to keep
@@ -191,27 +183,20 @@ const Home = () => {
               </Accordion>
             </Box>
           </Grid>
-          {!isMobile && 
-            <Grid item  md={6}>
-              <Box style={{paddingLeft:'50px'}}>
-                <WhatWeDoSvg />
-              </Box>  
-            </Grid>
-          }
+          <Grid item md={6}>
+            <Box style={{paddingLeft:'50px'}}>
+              <WhatWeDoSvg />
+            </Box>  
+          </Grid>
         </Grid>
         </Box>
       </Box>
-    )
-  }
-
-  const EnterpriseBlockchain = () => {
-    return (
       <Box className={classes.container}>
         <Box className={classes.sectionPadding}>
           <Box className={classes.titleBox}>
             <Typography className={classes.h2}>Industries to Deploy Enterprise Blockchain</Typography>
           </Box>
-          <Typography className={classes.body1}>
+          <Typography>
             Blockchain can transform and remodel countless industries. The
             possibilities are endless. Do you still don’t know how blockchain
             can impact your operations? Contact us so we can guide you!
@@ -225,7 +210,7 @@ const Home = () => {
                 <Box className={classes.h3Box}>
                   <Typography className={classes.h3}>Payments and Transfers</Typography>
                 </Box>
-                <Typography className={classes.body1}>
+                <Typography>
                   Blockchain enables an efficient and secure way to register
                   transactions that can facilitate payments and offer near
                   real-time auditing with encryption to reduce data breaches.
@@ -238,7 +223,7 @@ const Home = () => {
                 <Box className={classes.h3Box}>
                   <Typography className={classes.h3}>Logistics and Supply Chain</Typography>
                 </Box>
-                <Typography className={classes.body1}>
+                <Typography>
                   In an industry that involves dozens of stakeholders, the
                   capabilities of blockchain and smart contracts for
                   traceability, authorizations management, and automation can
@@ -252,7 +237,7 @@ const Home = () => {
                 <Box className={classes.h3Box}>
                   <Typography className={classes.h3}>Gaming</Typography>
                 </Box>
-                <Typography className={classes.body1}>
+                <Typography>
                   Blockchain enables a better way to transfer, valorize, and
                   collect digital in-game assets. Also, its capabilities to
                   increase security and offer a more efficient way for
@@ -261,7 +246,7 @@ const Home = () => {
               </Grid>
             </Grid>
           </Box>
-          <Typography className={classes.body1}>
+          <Typography>
             The features of blockchain make it a fundamental technology,
             meaning it can adapt to other technologies and most industries.
             Blockchain can boost efficiency, security, and trust when
@@ -273,11 +258,6 @@ const Home = () => {
           </Typography>
         </Box>
       </Box>
-    )
-  }
-
-  const Inquieres = () => {
-    return (
       <Box  className={classes.containerBlack}>
         <Box className={classes.sectionNoPadding}>
           <Grid container spacing={5}>
@@ -298,17 +278,14 @@ const Home = () => {
           </Grid>
         </Box>
       </Box>
-    )
-  }
-
-  const GetToKnow = () => {
-    return (
+      
+      <Parallax strength={800}>
       <Box className={classes.container}>
         <Box className={classes.sectionPadding}>
           <Box className={classes.titleBox}>
             <Typography className={classes.h2}>Get to Know EOS Costa Rica</Typography>
           </Box>
-          <Typography className={classes.body1}>
+          <Typography>
             EOS Costa Rica is a spinoff of a company with over three decades
             of developing technologies. We develop blockchain-based solutions
             deploying the{" "}
@@ -330,7 +307,7 @@ const Home = () => {
                   <Box className={classes.h3Box}>
                     <Typography className={classes.h3}>The Team</Typography>
                   </Box>
-                  <Typography className={classes.body1}>
+                  <Typography>
                       We have assembled a Latin American team with a problem-solving
                       mindset and expertise in their knowledge areas. We operate as
                       a distributed team in an Agile environment and make a
@@ -362,7 +339,7 @@ const Home = () => {
                   <Box className={classes.h3Box}>
                     <Typography className={classes.h3}>The company</Typography>
                   </Box>
-                  <Typography className={classes.body1}>
+                  <Typography>
                     During the 1980s, we developed the first BBS in the country, a
                     precursor to the internet. After decades of offering internet
                     infrastructure, hosting, and development services, we began
@@ -379,12 +356,12 @@ const Home = () => {
               </Grid>
             </Box>
             <Box className={classes.spacingBox}>
-              <Grid container spacing={5} >
+              <Grid container spacing={5}>
                 <Grid item md={6}>
                   <Box className={classes.h3Box}>
                     <Typography className={classes.h3}>The technology</Typography>
                   </Box>
-                  <Typography className={classes.body1}>
+                  <Typography>
                     We focus on deploying{" "}
                     <a href="https://eos.io/" target="_blank">
                       EOSIO
@@ -416,11 +393,6 @@ const Home = () => {
           </Box>
         </Box>
       </Box> 
-    )
-  }
-
-  const WeAreOneGroup = () => {
-    return (
       <Box className={classes.container}>
         <Box className={classes.sectionPadding}>
           <Box className={classes.h3Box}>
@@ -428,7 +400,7 @@ const Home = () => {
           </Box>
           <Box>
             <Grid container>
-              <Grid item xs={12} md={3}>
+              <Grid item md={3}>
                 <Box className={classes.imgBox}>
                   <img
                     alt="LatamLink"
@@ -436,7 +408,7 @@ const Home = () => {
                   />
                 </Box>
               </Grid>
-              <Grid item xs={12} md={3}>
+              <Grid item md={3}>
                 <Box className={classes.imgBox}>
                   <img
                     alt="Edenia"
@@ -444,7 +416,7 @@ const Home = () => {
                   />
                 </Box>
               </Grid>
-              <Grid item xs={12} md={3}>
+              <Grid item md={3}>
                 <Box className={classes.imgBox}>
                   <img
                     alt="Eossurf"
@@ -452,7 +424,7 @@ const Home = () => {
                   />
                 </Box>
               </Grid>
-              <Grid item xs={12} md={3}>
+              <Grid item md={3}>
                 <Box className={classes.imgBox}>
                   <img
                     alt="Ticoblockchain"
@@ -464,11 +436,9 @@ const Home = () => {
           </Box>
         </Box>
       </Box>
-    )
-  }
-
-  const SomeProjects = () => {
-    return (
+      <Background className={classes.bgParallaxSecondary}>
+          <Box className={classes.imgParallax} />
+      </Background>
       <Box className={classes.container}>
         <Box className={classes.sectionPadding}>
           <Box className={classes.titleBox}>
@@ -581,72 +551,25 @@ const Home = () => {
           </Box>
         </Box>
       </Box>
-    )
-  }
-
-  const ContactUs = () => {
-    return (
+      </Parallax>
       <Box className={classes.containerGray}>
         <Box className={classes.sectionPadding}>
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={8}>
+        <Grid container spacing={5}>
+            <Grid item md={8}>
                 <Box>
                   <Typography className={classes.h2}>Start working with us</Typography>
                   <Typography className={classes.h2}>and implement</Typography>
                   <Typography className={classes.h2}>blockchain technology.</Typography>
                 </Box>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid item md={4}>
               <Box style={{marginTop:"40px"}}>
                   <Button className={classes.buttonPrimary} href={useBaseUrl("/contact-us")} >Contact us</Button>
                 </Box>
             </Grid>
           </Grid>
+
         </Box>
-      </Box>
-    )
-  }
- 
-  return (
-    <Layout>
-      <Box className={classes.mainContainer}>
-        {!isMobile && 
-          <Parallax strength={800}>
-            <Background className={classes.bgParallax}>
-                <Box className={classes.imgParallax} />
-            </Background>
-            <HeroSection />
-            <BlockchainCanDo />
-          </Parallax>
-        }
-        {isMobile && 
-          <>
-            <HeroSection />
-            <BlockchainCanDo />
-          </>
-        } 
-        <WhatWeDo />
-        <EnterpriseBlockchain />
-        <Inquieres />
-        {!isMobile && 
-        <Parallax strength={800}>
-          <GetToKnow />
-          <WeAreOneGroup />
-          <Background className={classes.bgParallaxSecondary}>
-              <Box className={classes.imgParallax} />
-          </Background>
-          <SomeProjects />
-        </Parallax>
-        }
-        {isMobile && 
-          <>
-            
-            <GetToKnow />
-            <WeAreOneGroup />
-            <SomeProjects />
-          </>
-        } 
-        <ContactUs />
       </Box>
     </Layout>
   );

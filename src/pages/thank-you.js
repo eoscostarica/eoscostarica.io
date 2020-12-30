@@ -1,7 +1,6 @@
 import React from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
-import useBaseUrl from "@docusaurus/useBaseUrl";
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography';
 import { ThemeProvider } from '@material-ui/core/styles';
