@@ -9,7 +9,10 @@ import { makeStyles } from '@material-ui/core/styles'
       fontStyle: 'normal',
       fontSize: '60px',
       letterSpacing: '-0.24px',
-      lineHeight: '60px'
+      lineHeight: '60px',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '50px',
+      },
     },
     h2: {
       fontWeight: 'bold',
@@ -17,19 +20,28 @@ import { makeStyles } from '@material-ui/core/styles'
       fontStyle: 'normal',
       fontSize: '40px',
       letterSpacing: '-0.24px',
-      lineHeight: '44px'
+      lineHeight: '44px',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '30px',
+      },
     },
     h3: {
       fontWeight: 'bold',
       fontSize: '24px',
       letterSpacing: '-0.06px',
-      lineHeight: '28px'
+      lineHeight: '9px',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '20px',
+      },
     },
     h4: {
       fontWeight: 'bold',
       fontSize: '20px',
       letterSpacing: '-0.06px',
-      lineHeight: '24px'
+      lineHeight: '24px',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '10px',
+      },
     },
     h5: {
       fontWeight: 'normal',
@@ -112,6 +124,9 @@ import { makeStyles } from '@material-ui/core/styles'
     },
 
     /**home */
+    mainContainer:{
+      overflowX:'hidden'
+    },
     container:{
       width:'100%',
       display: 'flex',
@@ -187,19 +202,32 @@ import { makeStyles } from '@material-ui/core/styles'
     section:{
       paddingBottom:'140px',
       width:"1100px",
+      [theme.breakpoints.down('sm')]: {
+        width:"100%",
+      },
     },
     sectionNoPadding:{
       width:"1100px",
+      [theme.breakpoints.down('sm')]: {
+        width:"100%",
+      },
     },
     sectionPadding:{
       paddingTop:'140px',
       paddingBottom:'140px',
       width:"1100px",
+      [theme.breakpoints.down('sm')]: {
+        width:"100%",
+      },
     },
     accordionBox:{
       marginTop: '3rem',
+      [theme.breakpoints.down('sm')]: {
+        width:"95%",
+      },
     },
     accordion:{
+      width:'100%',
       backgroundColor: '#f1f1f1',
       border:'none',
       margin: 0,
@@ -208,6 +236,8 @@ import { makeStyles } from '@material-ui/core/styles'
       marginBottom:'10px',
       "&.MuiAccordion-root:before": {
         backgroundColor: '#f1f1f1',
+        margin: 0,
+        padding:0,
       }
     },
     accordionPadding:{
