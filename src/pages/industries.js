@@ -40,7 +40,7 @@ const Industries = () => {
                     healthcare.
                   </Typography>
                 <Box className={classes.buttonBox}>
-                  <Button className={classes.buttonPrimary} href={useBaseUrl("/about")}>
+                  <Button className={classes.buttonPrimary} href={useBaseUrl("/contact-us")}>
                     Contact us
                   </Button>
                 </Box>
@@ -69,7 +69,7 @@ const Industries = () => {
                   such as new liquidity solutions and microloans management, and
                   improved payment structures.
                 </Typography>
-                <a className={classes.principalColor} target="_blank">
+                <a className={classes.a} target="_blank">
                   Read More
                 </a>
               </Box>
@@ -95,7 +95,7 @@ const Industries = () => {
                   AI, to create comprehensive solutions and streamline processes
                   in the logistics and supply chain industry.
                 </Typography>
-                <a className={classes.principalColor} target="_blank">
+                <a className={classes.a} target="_blank">
                   Read More
                 </a>
               </Box>
@@ -120,7 +120,7 @@ const Industries = () => {
                   capabilities to increase security and offer a more efficient way
                   for transactions can level-up online gaming.
                 </Typography>
-                <a className={classes.principalColor} target="_blank">
+                <a className={classes.a} target="_blank">
                   Read More
                 </a>
               </Box>

@@ -34,7 +34,7 @@ const ServicePage = () => {
                   developing infrastructure for business environments.
                 </Typography>
               <Box className={classes.buttonBox}>
-                <Button className={classes.buttonPrimary} href={useBaseUrl("/about")}>
+                <Button className={classes.buttonPrimary} href={useBaseUrl("/contact-us")}>
                   Contact us
                 </Button>
               </Box>
@@ -93,12 +93,12 @@ const ServicePage = () => {
                 open-source projects. Our team is technology agnostic and will
                 guide you to find the ideal solution. We specialize in the
                 open-source blockchain protocol{" "}
-                <a className={classes.principalColor} href="https://eos.io/" target="_blank">
+                <a className={classes.a} href="https://eos.io/" target="_blank">
                   EOSIO
                 </a>
                 , for its adaptability to any industry in both the private and
                 public sectors. Visit our{" "}
-                <a className={classes.principalColor} href={useBaseUrl("/industries")}>industries page</a> to learn
+                <a className={classes.a} href={useBaseUrl("/industries")}>industries page</a> to learn
                 more
               </Typography>
               <br></br>
@@ -537,7 +537,7 @@ const ServicePage = () => {
                 </Box>
                 <Typography className={classes.body1}>
                   Learn more about other industries that blockchain is
-                  transforming. <a className={classes.principalColor} href={useBaseUrl("/industries")}>Read more.</a>
+                  transforming. <a className={classes.a} href={useBaseUrl("/industries")}>Read more.</a>
                 </Typography>
               </Box>
             </Box>
