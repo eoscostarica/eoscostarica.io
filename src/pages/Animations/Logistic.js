@@ -11,8 +11,6 @@ const Logistic = () => {
 
   return (
     <Lottie
-    //style = {{backgroundColor: '#0000ff', transform: 'scale(0.8)'}}
-    //style = {{backgroundColor: '#0000ff'}}
       options={defaultOptions}
     />   
   );
