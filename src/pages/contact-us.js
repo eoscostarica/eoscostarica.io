@@ -1,7 +1,6 @@
 import React from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
-import useBaseUrl from "@docusaurus/useBaseUrl";
 import Box from '@material-ui/core/Box'
 
 import ContactUsForm from "./components/ContactUs";

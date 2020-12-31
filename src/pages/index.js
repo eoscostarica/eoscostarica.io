@@ -358,7 +358,7 @@ const Home = () => {
                     <Typography className={classes.h3}>The Team</Typography>
                   </Box>
                   <Typography className={classes.body1}>
-                      We have assembled a Latin American team with a problem-solving
+                      We have assembled a Latin American team with a problem-solving
                       mindset and expertise in their knowledge areas. We operate as
                       a distributed team in an Agile environment and make a
                       concerted effort to hire talent outside of urban areas to

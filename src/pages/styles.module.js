@@ -291,8 +291,9 @@ import { makeStyles } from '@material-ui/core/styles'
     imgBox:{
       display:'flex',
       justifyContent:'center',
-      height: '288px',
-      paddingBottom: '3rem',
+      height: '350px',
+      marginBottom: '3rem',
+      //backgroundColor: '#000000'
     },
     imgBoxLogos:{
       display:'flex',
