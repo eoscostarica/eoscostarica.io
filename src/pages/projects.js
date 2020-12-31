@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 import styles from "./styles.module.css";
-import useStyles from "./styles.module.js";
+import useStyles from "../css/styles.js"
 
 const OurProjects = () => {
   const classes = useStyles()

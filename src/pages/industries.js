@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 import Accordion from "./components/Accordion";
 import styles from "./styles.module.css";
-import useStyles from "./styles.module.js";
+import useStyles from "../css/styles.js"
 
 const Industries = () => {
   const classes = useStyles()

@@ -15,7 +15,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 
 import styles from "./styles.module.css";
-import useStyles from "./styles.module.js"
+import useStyles from "../css/styles.js"
 
 const About = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
