@@ -141,6 +141,9 @@ import { makeStyles } from '@material-ui/core/styles'
     white: {
         color: '#FFFFFF'
     },
+    principalColor: {
+      color: '#5484b3'
+  },
 
     /**home */
     mainContainer:{
@@ -155,7 +158,6 @@ import { makeStyles } from '@material-ui/core/styles'
       width:'100%',
       display: 'flex',
       justifyContent: 'center',
-      backgroundColor: '#f1f1f1',
     },
     containerBlack:{
       width:'100%',
