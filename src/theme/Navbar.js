@@ -51,7 +51,7 @@ const PATHS = [
 
 const useStyles = makeStyles({
   navBar:{
-    zIndex:3000,
+    zIndex:1000,
     width:'100%',
     position: 'fixed',
     display: 'flex',
