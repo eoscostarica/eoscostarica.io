@@ -9,7 +9,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import Theme from '../theme/index';
 
 import styles from "./styles.module.css";
-import useStyles from "./styles.module.js";
+import useStyles from "../css/styles.js"
 
 const BlockProducer = () => {
   const classes = useStyles()

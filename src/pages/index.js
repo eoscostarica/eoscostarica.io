@@ -15,7 +15,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
-import useStyles from "./styles.module.js"
+import useStyles from "../css/styles.js"
 
 
 
