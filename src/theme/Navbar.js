@@ -12,69 +12,46 @@ import MenuIcon from '@material-ui/icons/Menu';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
+import Typography from "@material-ui/core/Typography";
 
 const PATHS = [
   {
-    strokeDasharray: "47 400",
-    strokeDashoffset: -110,
-    height: 40,
-    width: 63,
     path: "/",
     label: "Home",
   },
   {
-    strokeDasharray: "70 400",
-    strokeDashoffset: -128,
-    height: 40,
-    width: 83,
     path: "/services/",
     label: "Services",
   },
   {
-    strokeDasharray: "80 400",
-    strokeDashoffset: -138,
-    height: 40,
-    width: 93,
     path: "/industries/",
     label: "Industries",
   },
   {
-    strokeDasharray: "50 400",
-    strokeDashoffset: -118,
-    height: 40,
-    width: 68,
     path: "/about/",
     label: "About",
   },
   {
-    strokeDasharray: "66 400",
-    strokeDashoffset: -126,
-    height: 40,
-    width: 80,
     path: "/projects/",
     label: "Projects",
   },
   {
-    strokeDasharray: "27 400",
-    strokeDashoffset: -85,
-    height: 40,
-    width: 40,
     path: "/block-producer/",
     label: "Bp",
   },
   {
-    strokeDasharray: "40 400",
-    strokeDashoffset: -98,
-    height: 40,
-    width: 53,
     path: "/blog/",
     label: "Blog",
+  },
+  {
+    path: "/contact-us/",
+    label: "Contact",
   },
 ];
 
 const useStyles = makeStyles({
   navBar:{
-    zIndex:3000,
+    zIndex:1000,
     width:'100%',
     position: 'fixed',
     display: 'flex',
@@ -150,16 +127,46 @@ const useStyles = makeStyles({
     marginRight: '5px',
     
   },
-  shape: {
-    fill: 'transparent',
-    stroke: '#5484b3',
-    transition: '1s all ease',
-    '&:hover': {
-      strokeDasharray: "50 0",
-      strokeWidth:' 3px',
-      strokeDashoffset: 0,
-      stroke: '#5484b3',
+  link: {
+    position: 'relative',
+    marginLeft:'15px',
+    color: "black",
+    fontWeight:'bold',
+    '&:after': {
+      content: '""',
+      position: 'absolute',
+      width: 0,
+      height: '5px',
+      display: 'block',
+      marginTop: '5px',
+      left: 0,
+      right:' 100%',
+      transitionProperty: 'left right',
+      transitionDuration:' 0.3s',
+      transitionTimingFunction: 'ease-out',
+    },
+    '&:hover::after': {
+      width: '100%',
+      right: 0,
+      background: '#5484b3',
     }
+  },
+  linkActive:{
+    position: 'relative',
+    marginLeft:'15px',
+    color: "black",
+    fontWeight:'bold',
+    '&:after': {
+      content: '""',
+      position: 'absolute',
+      height: '5px',
+      display: 'block',
+      marginTop: '5px',
+      left: 0,
+      right:' 100%',
+      width: '100%',
+      background: '#5484b3',
+    },
   },
   btnDrawer:{
     position: 'absolute',
@@ -250,20 +257,8 @@ const NavbarMenu = () => {
                 )}
                 {PATHS.map((item) => (
                   <Link href={useBaseUrl(item.path)} key={item.label}>
-                    <Box className={classes.svgWrapper}>
-                      <svg height={item.height} width={item.width}>
-                        <text x="10" y="25" fill="#000000" className={classes.textItem}>
-                          {item.label}
-                        </text>
-                        <rect
-                          className={classes.shape}
-                          strokeDasharray={item.strokeDasharray}
-                          height={item.height}
-                          width={item.width}
-                          strokeDashoffset={item.strokeDashoffset}
-                          strokeWidth={pathname === item.path ? 12 : 0}
-                        />
-                      </svg>
+                    <Box className={classes.svgWrapper}>  
+                      <Typography className={clsx(classes.link,{[classes.linkActive] : pathname === item.path})}>{item.label}</Typography>                  
                     </Box>
                   </Link>
                 ))}
