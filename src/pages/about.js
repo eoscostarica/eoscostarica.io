@@ -13,7 +13,7 @@ import Theme from '../theme/index'
 import Accordion from "./components/Accordion";
 
 import styles from "./styles.module.css";
-import useStyles from "./styles.module.js"
+import useStyles from "../css/styles.js"
 
 const About = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });

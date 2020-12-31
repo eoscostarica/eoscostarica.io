@@ -13,6 +13,7 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import Typography from "@material-ui/core/Typography";
+import { useLocation } from 'react-router-dom';
 
 const PATHS = [
   {
@@ -192,10 +193,10 @@ const NavbarMenu = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   const classes = useStyles()
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
   const isBlog = location.pathname.substring(0,6) === '/blog/'
   const [pathname, setPathname] = useState("");
   const trigger = useScrollTrigger({
-    target: window || undefined,
     disableHysteresis: true
   })
 
