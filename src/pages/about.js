@@ -248,7 +248,7 @@ const About = () => {
               and innovation. Get to know us!
             </Typography>
             <Box className={classes.accordionBox}>
-            <Accordion square expanded={expanded === 'panel_ManagementTeam'}  onChange={handleChange('panel_ManagementTeam')} className={classes.accordion} >
+              <Accordion square expanded={expanded === 'panel_ManagementTeam'} style={{backgroundColor:'#ffffff'}} onChange={handleChange('panel_ManagementTeam')} className={classes.accordion} >
                 <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
                   <Typography  className={classes.h3}>Management Team</Typography>
                 </AccordionSummary>
@@ -323,7 +323,7 @@ const About = () => {
                   </Box>
                 </AccordionDetails>
               </Accordion>
-              <Accordion square expanded={expanded === 'panel_MarketingSales'}  onChange={handleChange('panel_MarketingSales')} className={classes.accordion} >
+              <Accordion square expanded={expanded === 'panel_MarketingSales'} style={{backgroundColor:'#ffffff'}} onChange={handleChange('panel_MarketingSales')} className={classes.accordion} >
                 <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
                   <Typography  className={classes.h3}>Marketing and Sales</Typography>
                 </AccordionSummary>
@@ -376,7 +376,7 @@ const About = () => {
                   </Box>
                 </AccordionDetails>
               </Accordion>
-              <Accordion square expanded={expanded === 'panel_DevelopmentDesign'}  onChange={handleChange('panel_DevelopmentDesign')} className={classes.accordion} >
+              <Accordion square expanded={expanded === 'panel_DevelopmentDesign'} style={{backgroundColor:'#ffffff'}} onChange={handleChange('panel_DevelopmentDesign')} className={classes.accordion} >
                 <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
                   <Typography  className={classes.h3}>Development and Design</Typography>
                 </AccordionSummary>

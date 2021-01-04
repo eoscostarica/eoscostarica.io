@@ -149,6 +149,10 @@ import { makeStyles } from '@material-ui/core/styles'
     mainContainer:{
       overflowX:'hidden'
     },
+    paper: {
+      height: 300,
+      width: 400,
+    },
     container:{
       width:'100%',
       display: 'flex',
