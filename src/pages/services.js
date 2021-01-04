@@ -1,17 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Grid from '@material-ui/core/Grid';
+import { useMediaQuery } from "react-responsive";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
 
-import Accordion from "./components/Accordion";
 import styles from "./styles.module.css";
 import useStyles from "../css/styles.js"
 
 const ServicePage = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const [activeItemIndex, setActiveItemIndex] = useState(0);
   const classes = useStyles()
+  const [expanded, setExpanded] = useState('panel_AssetManagementy');
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+  
+  useEffect(() => {
+    handleChange('panel_AssetManagementy')
+  }, []);
+
   return (
     <Layout>
         <Box className={styles.mainContainer}>
@@ -101,9 +118,9 @@ const ServicePage = () => {
                 <a className={classes.a} href={useBaseUrl("/industries")}>industries page</a> to learn
                 more
               </Typography>
-              <br></br>
-              <br></br>
-              <br></br>
+              <br/>
+              <br/>
+              <br/>
               <Box className={classes.h3Box}>
                 <Typography className={classes.h3}>Enterprise Blockchain</Typography>
               </Box>
@@ -115,21 +132,36 @@ const ServicePage = () => {
                 improved efficiency and can reduce transaction-related costs.
                 Learn more about enterprise blockchain:
               </Typography>
+              <br/>
               <Box className={styles.colBox}>
-                <Accordion
-                  title="Boosted efficiency"
-                  content={
+                <Accordion 
+                  square expanded={expanded === 'panel_BoostedEfficiency'}
+                  style={{backgroundColor:'#ffffff', marginRight:'20px'}}
+                  onChange={handleChange('panel_BoostedEfficiency')}
+                  className={classes.accordion}
+                >
+                  <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <Typography  className={classes.h3}>Boosted efficiency</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails className={classes.accordionPadding}>
                     <Typography className={classes.body1}>
                       Smart contracts can help you process transactions quickly,
                       with added efficiency compared to cloud platforms, and less
                       costly by reducing administrative fees by cutting the
                       middleman.
                     </Typography>
-                  }
-                />
-                <Accordion
-                  title="Improved security"
-                  content={
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion 
+                  square expanded={expanded === 'panel_BoostedEfficiency'}
+                  style={{backgroundColor:'#ffffff', marginLeft: '20px'}}
+                  onChange={handleChange('panel_BoostedEfficiency')}
+                  className={classes.accordion}
+                >
+                  <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <Typography  className={classes.h3}>Improved security</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails className={classes.accordionPadding}>
                     <Typography className={classes.body1}>
                       The immutability and encryption capabilities of blockchain
                       can reduce data manipulation, human error, and cyber frauds.
@@ -137,32 +169,47 @@ const ServicePage = () => {
                       function that transforms input data into code lines – that
                       make blockchains difficult to hack.
                     </Typography>
-                  }
-                />
+                  </AccordionDetails>
+                </Accordion>
               </Box>
+              <br/>
               <Box className={styles.colBox}>
                 <Accordion
-                  title="Added transparency"
-                  content={
+                  square expanded={expanded === 'panel_transparency'}
+                  style={{backgroundColor:'#ffffff', marginRight:'20px'}}
+                  onChange={handleChange('panel_transparency')}
+                  className={classes.accordion}
+                >
+                  <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <Typography  className={classes.h3}>Added transparency</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails className={classes.accordionPadding}>
                     <Typography className={classes.body1}>
                       Blockchain enables a transparent and near real-time registry
                       of data that can improve the trust and traceability of
                       processes, such as in supply chain or insurance claims
                       processing.
                     </Typography>
-                  }
-                />
+                  </AccordionDetails>
+                </Accordion>
                 <Accordion
-                  title="Enhanced auditability"
-                  content={
+                  square expanded={expanded === 'panel_transparency'}
+                  style={{backgroundColor:'#ffffff', marginLeft: '20px'}}
+                  onChange={handleChange('panel_transparency')}
+                  className={classes.accordion}
+                >
+                  <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <Typography  className={classes.h3}>Enhanced auditability</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails className={classes.accordionPadding}>
                     <Typography className={classes.body1}>
                       A permissioned blockchain allows an organization to control
                       accesses and authorizations across the network, increasing
                       accountability among the team, and facilitating auditability
                       by external parties.
                     </Typography>
-                  }
-                />
+                  </AccordionDetails>
+                </Accordion>
               </Box>
             </Box>
             <Box className={styles.inquiresBox}>
@@ -363,8 +410,15 @@ const ServicePage = () => {
 
                   <Box className={styles.accordionBox}>
                     <Accordion
-                      title="Network interconnectivity"
-                      content={
+                      square
+                      expanded={expanded === 'panel_interconnectivity'}
+                      onChange={handleChange('panel_interconnectivity')}
+                      className={classes.accordion}
+                    >
+                      <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                        <Typography  className={classes.h3}>Network interconnectivity</Typography>
+                      </AccordionSummary>
+                      <AccordionDetails className={classes.accordionPadding}>
                         <Typography className={classes.body1}>
                           Costa Rica has shores in both the Pacific and Atlantic
                           oceans and connects three submarine fiber optic cables –
@@ -378,11 +432,18 @@ const ServicePage = () => {
                           allows the country’s network to prevent single-point
                           failures.
                         </Typography>
-                      }
-                    />
+                      </AccordionDetails>
+                    </Accordion>
                     <Accordion
-                      title="Stable political framework"
-                      content={
+                      square
+                      expanded={expanded === 'panel_framework'}
+                      onChange={handleChange('panel_framework')}
+                      className={classes.accordion}
+                    >
+                      <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                        <Typography  className={classes.h3}>Stable political framework</Typography>
+                      </AccordionSummary>
+                      <AccordionDetails className={classes.accordionPadding}>
                         <Typography className={classes.body1}>
                           Costa Rica is a country that values Human Rights, Peace,
                           and Democracy. The country is one of the most stable and
@@ -392,11 +453,18 @@ const ServicePage = () => {
                           Moreover, the Inter-American Institute of Human Rights
                           based its headquarters in San José.
                         </Typography>
-                      }
-                    />
+                      </AccordionDetails>
+                    </Accordion>
                     <Accordion
-                      title="Environmental awareness"
-                      content={
+                      square
+                      expanded={expanded === 'panel_awareness'}
+                      onChange={handleChange('panel_awareness')}
+                      className={classes.accordion}
+                    >
+                      <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                        <Typography  className={classes.h3}>Environmental awareness</Typography>
+                      </AccordionSummary>
+                      <AccordionDetails className={classes.accordionPadding}>
                         <Typography className={classes.body1}>
                           Despite being a small country, Costa Rica houses more
                           than 4% of the world’s biodiversity. The country’s
@@ -405,8 +473,8 @@ const ServicePage = () => {
                           territory comprises of protected areas and National
                           Parks.
                         </Typography>
-                      }
-                    />
+                      </AccordionDetails>
+                    </Accordion>
                   </Box>
                 </Box>
               </Box>
@@ -422,9 +490,16 @@ const ServicePage = () => {
                 <Typography className={classes.h2}>Education and Training</Typography>
                 <Box className={styles.colBox}>
                   <Box className={styles.flexBox}>
-                    <Accordion
-                      title="Executive Workshops"
-                      content={
+                  <Accordion 
+                    square
+                    expanded={expanded === 'panel_Workshops'}
+                    style={{backgroundColor:'#ffffff'}}
+                    onChange={handleChange('panel_Workshops')} 
+                    className={classes.accordion} >
+                      <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                        <Typography  className={classes.h3}>Executive Workshops</Typography>
+                      </AccordionSummary>
+                      <AccordionDetails className={classes.accordionPadding}>
                         <Typography className={classes.body1}>
                           We know that innovative technologies, such as
                           blockchain, may have a steep learning curve. So, we
@@ -433,13 +508,21 @@ const ServicePage = () => {
                           date and learn more about blockchain and enterprise use
                           cases. These workshops include multimodal content such
                           as videos, lectures, and use cases. Download the course
-                          information here.
+                          information here
                         </Typography>
-                      }
-                    />
+                      </AccordionDetails>
+                    </Accordion>
                     <Accordion
-                      title="Training for Developers"
-                      content={
+                      square
+                      expanded={expanded === 'panel_Developers'}
+                      style={{backgroundColor:'#ffffff'}}
+                      onChange={handleChange('panel_Developers')}
+                      className={classes.accordion}
+                    >
+                      <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                        <Typography  className={classes.h3}>Training for Developers</Typography>
+                      </AccordionSummary>
+                      <AccordionDetails className={classes.accordionPadding}>
                         <Typography className={classes.body1}>
                           We also provide training and education resources for new
                           talents that wish to kickstart their career in
@@ -448,11 +531,19 @@ const ServicePage = () => {
                           for developers. Check them out here. Also, ask us about
                           our training courses for companies and teams.
                         </Typography>
-                      }
-                    />
+                      </AccordionDetails>
+                    </Accordion>
                     <Accordion
-                      title="Community Building"
-                      content={
+                      square
+                      expanded={expanded === 'panel_Building'}
+                      style={{backgroundColor:'#ffffff'}}
+                      onChange={handleChange('panel_Building')}
+                      className={classes.accordion}
+                    >
+                      <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                        <Typography  className={classes.h3}>Community Building</Typography>
+                      </AccordionSummary>
+                      <AccordionDetails className={classes.accordionPadding}>
                         <Typography className={classes.body1}>
                           We help promote the blockchain and EOSIO ecosystems by
                           hosting and attending community activities. We also
@@ -462,8 +553,8 @@ const ServicePage = () => {
                           operations to the beach for several days to switch
                           computers and code for surf and yoga lessons.
                         </Typography>
-                      }
-                    />
+                      </AccordionDetails>
+                    </Accordion>
                   </Box>
                   <picture className={clsx(styles.flexBox, styles.teamBox)}>
                     <source
