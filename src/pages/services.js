@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+<<<<<<< HEAD
 import { Parallax, Background } from 'react-parallax';
+=======
+>>>>>>> 462648ff5ddb11db51ca36f616d611df2687eb0f
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from '@material-ui/core/Grid';
 import { useMediaQuery } from "react-responsive";
