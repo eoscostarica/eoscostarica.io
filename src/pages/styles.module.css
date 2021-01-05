@@ -287,6 +287,7 @@
 .teamBox {
   display: flex;
   flex-direction: column;
+  margin-left: 80px;
 }
 
 .flexImgBox {
@@ -296,6 +297,7 @@
 
 .boxSpaceBetween {
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .teamImg {
@@ -629,6 +631,10 @@
   width: 100%;
   background-color: transparent;
   margin-top: 3rem;
+}
+
+.marginRigth {
+ margin-right: 40px;
 }
 
 .title {
