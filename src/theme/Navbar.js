@@ -15,7 +15,6 @@ import ListItem from '@material-ui/core/ListItem';
 import Typography from "@material-ui/core/Typography";
 import { useLocation } from 'react-router-dom';
 
-import useStyles from "../css/styles.js"
 
 const PATHS = [
   {
@@ -55,7 +54,6 @@ const PATHS = [
 const NavbarMenu = () => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-  const classes = useStyles()
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isBlog = location.pathname.substring(0,6) === '/blog/'
@@ -76,25 +74,27 @@ const NavbarMenu = () => {
   }
 
   return (
-    <Box  className={clsx(classes.navBar, { [classes.navBarScroll]: useTransparentBG})} >
-      <Box className={classes.menuWrapper}>
+    <Box  className={clsx("navBar", { ["navBarScroll"]: useTransparentBG})} >
+      <Box className={"menuWrapper"}>
         {isMobile && 
         <>
-          <IconButton onClick={handlerDrawer} className={classes.btnDrawer}>
-            <MenuIcon  fontSize="large"/>
-          </IconButton>
+          <Box  className={["btnDrawer"]}>
+            <IconButton onClick={handlerDrawer}>
+              <MenuIcon  fontSize="large"/>
+            </IconButton>
+          </Box>
           <Drawer anchor={'left'} open={isOpen} onClose={handlerDrawer} >
-            <Box className={classes.drawerContent}>
+            <Box className={"drawerContent"}>
                 <img
-                  className={classes.imgDrawer}
+                  className={"imgDrawer"}
                   src={useBaseUrl("img/eoscr-logo.png")}
                   alt="EOS CR LOGO"
                 />
               <Divider />
               <List>
                 {PATHS.map((item) => (
-                  <Link href={useBaseUrl(item.path)} key={item.label} className={classes.linkItem} >
-                      <ListItem button>{item.label}</ListItem>
+                  <Link href={useBaseUrl(item.path)} key={item.label} style={{textDecoration: 'none'}}>
+                      <ListItem button><span className={"linkItem"}>{item.label}</span></ListItem>
                   </Link>
                 ))}
               </List>
@@ -103,18 +103,18 @@ const NavbarMenu = () => {
         </>}
         {!isMobile && 
           <>
-            <Box className={classes.boxLeft}>
-              <Box  className={classes.imgLogoBox}>
+            <Box className={"boxLeft"}>
+              <Box  className={"imgLogoBox"}>
               <img
-                  className={!isBlog? clsx(classes.imgLogo, {[classes.imgLogoScroll]: useTransparentBG})  : classes.imgLogoScroll}
+                  className={!isBlog? clsx("imgLogo", {["imgLogoScroll"]: useTransparentBG})  : "imgLogoScroll"}
                   src={useBaseUrl("img/eoscr-logo.png")}
                   alt="EOS CR LOGO"
                 />
               </Box>
             </Box>
-            <Box className={classes.boxRight}>
+            <Box className={"boxRight"}>
               {!isMobile && (
-                  <Box className={classes.boxLanguages}>
+                  <Box className={"boxLanguages"}>
                     <Link href="https://es.eoscostarica.io/" color="inherit" target="_blank" >Español</Link>
                     <span>{" / "}</span>
                     <Link href="" color="inherit">English</Link>
@@ -122,8 +122,8 @@ const NavbarMenu = () => {
                 )}
                 {PATHS.map((item) => (
                   <Link href={useBaseUrl(item.path)} key={item.label}>
-                    <Box className={classes.svgWrapper}>  
-                      <Typography className={clsx(classes.link,{[classes.linkActive] : pathname === item.path})}>{item.label}</Typography>                  
+                    <Box className={"svgWrapper"}>  
+                      <h5 className={clsx("link",{["linkActive"] : pathname === item.path})}>{item.label}</h5>                  
                     </Box>
                   </Link>
                 ))}
