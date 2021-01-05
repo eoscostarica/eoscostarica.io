@@ -91,7 +91,7 @@ const ServicePage = () => {
     return (
       <Box className={classes.container}>
         <Box className={clsx(classes.section,{[classes.sectionPadding] : isMobile})}>
-          <picture style={{marginLeft:'70px'}}>
+          <picture className={classes.pictureStyle}>
             <source
               className={styles.defaultImgCarousel}
               srcSet={useBaseUrl("img/developmentServices.jp2")}
@@ -102,7 +102,7 @@ const ServicePage = () => {
               src={useBaseUrl("img/developmentServices.webp")}
             />
           </picture>
-          <picture style={{marginLeft:'70px'}}>
+          <picture className={classes.pictureStyle}>
             <source
               className={styles.defaultImgCarousel}
               srcSet={useBaseUrl("img/blockchainInfrastructure.jp2")}
@@ -113,7 +113,7 @@ const ServicePage = () => {
               src={useBaseUrl("img/blockchainInfrastructure.webp")}
             />
           </picture>
-          <picture style={{marginLeft:'70px'}}>
+          <picture className={classes.pictureStyle}>
             <source
               className={styles.defaultImgCarousel}
               srcSet={useBaseUrl("img/educationTraining.jp2")}
@@ -644,7 +644,7 @@ const ServicePage = () => {
                   </AccordionDetails>
                 </Accordion>
               </Box>
-              <picture className={clsx(styles.flexBox, styles.teamBox)}>
+              <picture className={clsx(classes.flexBox, classes.teamBox)}>
                 <source
                   className={styles.educationImg}
                   srcSet={useBaseUrl("img/education.jp2")}
@@ -743,7 +743,7 @@ const ServicePage = () => {
             <HeroSection />
             <BlockchainDev />
           </>
-        } 
+        }
         <DoYouStill />
         <ASolution />
         <DoYouWant />

@@ -221,6 +221,26 @@ import { makeStyles } from '@material-ui/core/styles'
         justifyContent: 'center'
       }
     },
+    pictureStyle:{
+      marginLeft:'70px',
+      [theme.breakpoints.down('sm')]: {
+        marginLeft:'0px',
+      }
+    },
+    flexBox: {
+      width: '70%',
+      [theme.breakpoints.down('sm')]: {
+        width: '100%'
+      }
+    },
+    teamBox: {
+      display: 'flex',
+      flexDirection: 'column',
+      marginLeft: '80px',
+      [theme.breakpoints.down('sm')]: {
+        marginLeft:'0px'
+      }
+    },
     buttonBoxMobile:{
       width: '100%',
       position: 'absolute',
