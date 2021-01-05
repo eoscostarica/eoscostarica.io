@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import clsx from "clsx";
 
 import styles from "../../styles.module.css";
+import useStyles from "../../../css/styles.js"
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +20,7 @@ const ContactUs = () => {
     lastname: false,
     email: false,
   });
+  const classes = useStyles()
 
   const handleOnChange = (key) => (event) => {
     setFormData({ ...formData, [key]: event.target.value });
@@ -48,16 +53,17 @@ const ContactUs = () => {
   };
 
   return (
-    <section className={clsx(styles.sectionWhite, styles.contactUsBox)}>
-      <div className="container">
-        <div className={clsx("row", styles.flexColumn)}>
-          <h1>Contact</h1>
-          <span>
+    <Box className={clsx(styles.sectionWhite, styles.contactUsBox)}>
+      <Box className="container">
+        <Box className={clsx("row", styles.flexColumn)}>
+          <Typography className={classes.h1}> Contact </Typography>
+          <br/>
+          <Typography className={classes.body1}>
             Let’s get the conversation started. Ask us how we can help you
             implement blockchain technology into your organization.
-          </span>
+          </Typography>
           <form>
-            <div className={styles.completeName}>
+            <Box className={styles.completeName}>
               <input
                 type="text"
                 className={clsx(styles.textField, {
@@ -76,7 +82,7 @@ const ContactUs = () => {
                 onChange={handleOnChange("lastname")}
                 value={formData.lastname}
               />
-            </div>
+            </Box>
             <input
               type="text"
               className={clsx(styles.textField, {
@@ -101,16 +107,18 @@ const ContactUs = () => {
               value={formData.comments}
             />
           </form>
-          <span className={styles.contactUsMessage}>
+          <br/>
+          <Typography className={styles.contactUsMessage}>
             We will only keep your information to reply to your message and not
             be using it for any other purposes.
-          </span>
-          <button className={styles.secondaryButton} onClick={handleSendMail}>
+          </Typography>
+          <br/>
+          <Button className={classes.buttonPrimary} onClick={handleSendMail}>
             Send
-          </button>
-        </div>
-      </div>
-    </section>
+          </Button>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 

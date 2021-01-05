@@ -37,7 +37,7 @@ import { makeStyles } from '@material-ui/core/styles'
       fontWeight: 'bold',
       fontSize: '24px',
       letterSpacing: '-0.06px',
-      lineHeight: '9px',
+      lineHeight: '24px',
       [theme.breakpoints.down('sm')]: {
         lineHeight: '25px',
         fontSize: '20px',
@@ -141,10 +141,17 @@ import { makeStyles } from '@material-ui/core/styles'
     white: {
         color: '#FFFFFF'
     },
-
+    a: {
+      color: '#5484b3',
+      fontSize: '19px'
+    },
     /**home */
     mainContainer:{
       overflowX:'hidden'
+    },
+    paper: {
+      height: 300,
+      width: 400,
     },
     container:{
       width:'100%',
@@ -269,7 +276,7 @@ import { makeStyles } from '@material-ui/core/styles'
       marginTop: '3rem',
       [theme.breakpoints.down('sm')]: {
         width:'95%',
-      },
+      }
     },
     accordion:{
       width:'100%',

@@ -11,8 +11,6 @@ const Games = () => {
 
   return (
     <Lottie
-    //style = {{backgroundColor: '#0000ff',transform: 'scale(1.2)'}}
-    //style = {{backgroundColor: '#0000ff'}}
     options={defaultOptions}
     />        
   );
