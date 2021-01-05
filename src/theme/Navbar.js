@@ -78,7 +78,7 @@ const NavbarMenu = () => {
       <Box className={"menuWrapper"}>
         {isMobile && 
         <>
-          <Box  className={["btnDrawer"]}>
+          <Box  className={"btnDrawer"}>
             <IconButton onClick={handlerDrawer}>
               <MenuIcon  fontSize="large"/>
             </IconButton>
