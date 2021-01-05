@@ -488,6 +488,7 @@ const ServicePage = () => {
             <Box className={clsx(styles.sectionWhite, styles.enterpriceBox)}>
               <Box className={styles.enterpriceTitleBox}>
                 <Typography className={classes.h2}>Education and Training</Typography>
+                <br/>
                 <Box className={styles.colBox}>
                   <Box className={styles.flexBox}>
                   <Accordion 
