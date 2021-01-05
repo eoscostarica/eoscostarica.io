@@ -645,7 +645,7 @@ const Home = () => {
       </Box>
     )
   }
- 
+
   return (
     <Layout>
       <Box className={classes.mainContainer}>

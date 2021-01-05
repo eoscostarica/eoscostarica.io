@@ -364,7 +364,7 @@ import { makeStyles } from '@material-ui/core/styles'
       backgroundColor: 'black',
     },
     containerWithBackground:{
-      backgroundImage:'url("../../static/img/blureoslogo.png")',
+      backgroundImage:'url("https://eoscostarica.io/img/blureoslogo.png")',
       backgroundRepeat:'no-repeat',
       backgroundPosition: 'right center',
       backgroundSize:'100%'
@@ -391,7 +391,7 @@ import { makeStyles } from '@material-ui/core/styles'
       zIndex:1,
       height:'100%',
       width:'100vw',
-      backgroundImage:'url("../../static/img/blureoslogo.png")',
+      backgroundImage:'url("https://eoscostarica.io/img/blureoslogo.png")',
       backgroundRepeat:'no-repeat',
       backgroundPosition: 'right bottom',
       [theme.breakpoints.down('sm')]: {
