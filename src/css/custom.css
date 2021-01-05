@@ -1,6 +1,5 @@
 /*Navbar*/
 
-
 .navBar {
   z-index: 1000;
   width: 100%;
@@ -121,7 +120,6 @@
   
 }
 
-
 .linkActive {
   display: inline;
   position: relative;
@@ -169,5 +167,82 @@
   text-decoration: none;
 }
 
+/*Footer*/
+
+.footer{
+  width: "100%";
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  overflow-x: hidden;
+} 
+
+.footerContent{
+  width: 1100px;
+  display: flex;
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.footerLogoBox{
+  display: flex;
+  justify-content: center;
+}
+
+.boxTitle{
+  margin-bottom: 2rem;
+}
+
+.h3Footer{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: -0.06px;
+}
+
+.body1Footer{
+  color: white;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 19px;
+  letter-spacing: -0.05px;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.linkFooter{
+  color: white;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 19px;
+  letter-spacing: -0.05px;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.linkFooter:hover{
+  color: #5484b3;
+  text-decoration: none;
+}
 
 
+
+@media only screen and (max-width: 600px) {
+  .footerLogo {
+    width: 80%;
+  }
+
+  .h3Footer{
+    text-align: center;
+  }
+
+  .body1Footer{
+    text-align: center;
+  }
+
+  .linkFooter{
+    text-align: center;
+  }
+}

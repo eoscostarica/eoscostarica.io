@@ -12,74 +12,80 @@ const Footer = () => {
   const classes = useStyles()
 
   return (
-    <Box className={classes.footer}>
-      <Box className={classes.footerContent}>
+    <Box className={"footer"}>
+      <Box className={"footerContent"}>
         <Grid container spacing={5}>
           <Grid item xs={12} md={3}>
-            <Box className={classes.footerLogoBox}>
-              <img src={useBaseUrl("img/logo-white.png")} alt="EOS CR LOGO" className={classes.footerLogo} />
+            <Box className={"footerLogoBox"}>
+              <img src={useBaseUrl("img/logo-white.png")} alt="EOS CR LOGO" className={"footerLogo"} />
             </Box>
           </Grid>
           <Grid item xs={12} md={2}/>
           <Grid item xs={12} md={4}>
-            <Box className={classes.boxTitle}>
-              <Typography className={classes.h3Footer}>FOLLOW US</Typography>
+            <Box className={"boxTitle"}>
+              <h3 className={"h3Footer"}>FOLLOW US</h3>
             </Box>
             <Box>
               <Grid container>
                 <Grid item xs={12} md={6}>
-                  <Typography className={classes.body1Footer}> 
+                  <Typography className={"body1Footer"}> 
                     <Link 
-                      className={classes.linkFooter}
+                      className={"linkFooter"}
                       href="https://twitter.com/EOSCostaRica"
                       target="_blank"
+                      style={{color:'white'}}
                     > 
                       Twitter
                     </Link>
                   </Typography>
-                  <Typography className={classes.body1Footer} > 
+                  <Typography className={"body1Footer"} > 
                     <Link 
-                      className={classes.linkFooter}
+                      className={"linkFooter"}
                       href="https://www.facebook.com/costaricaeos"
                       target="_blank"
+                      style={{color:'white'}}
                     > 
                       Facebook
                     </Link>
                   </Typography>
-                  <Typography className={classes.body1Footer} > 
+                  <Typography className={"body1Footer"} > 
                     <Link 
-                      className={classes.linkFooter}
+                      className={"linkFooter"}
                       href="https://www.linkedin.com/company/eoscostarica/"
                       target="_blank"
+                      style={{color:'white'}}
                     > 
                       LinkedIn
                     </Link>
                   </Typography>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                <Typography className={classes.body1Footer}> 
+                <Typography  className={"body1Footer"}> 
                     <Link 
-                      className={classes.linkFooter}
+                      className={"linkFooter"}
                       href="https://medium.com/@eoscostarica"
                       target="_blank"
+                      style={{color:'white'}}
                     > 
                       Medium
                     </Link>
                   </Typography>
-                  <Typography className={classes.body1Footer}> 
+                  <Typography  className={"body1Footer"}> 
                     <Link 
-                      className={classes.linkFooter}
+                      className={"linkFooter"}
                       href="https://t.me/eoscr"
                       target="_blank"
+                      style={{color:'white'}}
                     > 
                       Telegram
                     </Link>
                   </Typography>
-                  <Typography className={classes.body1Footer}> 
+                  <Typography  className={"body1Footer"}> 
                     <Link 
-                      className={classes.linkFooter}
+                      className={"linkFooter"}
                       href="https://www.instagram.com/eoscostarica/"
                       target="_blank"
+                      style={{color:'white'}}
                     > 
                       Instagram
                     </Link>
@@ -89,8 +95,8 @@ const Footer = () => {
             </Box>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Typography className={classes.body1Footer}>Edificio Trifami, 5th floor</Typography>
-            <Typography className={classes.body1Footer}>San José, <strong><i>Costa Rica</i></strong></Typography>
+            <Typography  className={"body1Footer"}>Edificio Trifami, 5th floor</Typography>
+            <Typography  className={"body1Footer"}>San José, <strong><i>Costa Rica</i></strong></Typography>
           </Grid>
         </Grid>
       </Box>
