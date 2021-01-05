@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Parallax, Background } from 'react-parallax';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from '@material-ui/core/Grid';
 import { useMediaQuery } from "react-responsive";
@@ -28,6 +29,62 @@ const Industries = () => {
   useEffect(() => {
     handleChange('panel_AssetManagementy')
   }, []);
+
+  const HeroSection = () => {
+    return (
+      <Box className={classes.container}>
+        {!isMobile && 
+          <Box className={classes.sectionHero}>
+          <Box className={classes.titleBox}>
+            <Typography className={classes.h1}>Blockchain Solutions</Typography>
+            <Typography className={classes.h1}>by Industry</Typography>
+          </Box>
+          <Typography className={classes.body1} >
+            Organizations and companies in many industries deploy blockchain
+            technology to solve significant problems and improve their
+            operations. These are some use cases of enterprise blockchain in
+            different sectors, such as financial, supply chain, gaming, and
+            healthcare.
+          </Typography>
+          <Box className={classes.buttonBox}>
+            <Button className={classes.buttonPrimary} href={useBaseUrl("/contact-us")}>
+              Contact us
+            </Button>
+          </Box>
+        </Box>
+        }
+        {isMobile && 
+          <Box className={classes.sectionHeroMobile}>
+            <Box className={classes.logoMobileBox}>
+              <img
+                  className={classes.logoMobile}
+                  src={useBaseUrl("img/eoscr-logo.png")}
+                  alt="EOS CR LOGO"
+                />
+            </Box>
+          <Box className={classes.titleBox}>
+            <Typography className={classes.h1}>Custom-made</Typography>
+            <Typography className={classes.h1}>Blockchain Solutions</Typography>
+          </Box>
+          <Typography className={classes.body1} >
+            Leverage blockchain technology. Our team will help you embrace
+            the power of this innovative technology.
+          </Typography>
+          <br/>
+          <Typography className={classes.body1} >
+            We have years of experience integrating enterprise blockchain solutions and
+            developing infrastructure for business environments..
+          </Typography>
+          <Box className={classes.buttonBoxMobile}>
+            <Button className={classes.buttonPrimary} href={useBaseUrl("/contact-us")}>
+              Contact us
+            </Button>
+          </Box>
+        </Box>
+      }
+      </Box>
+    )
+  }
 
   return (
     <Layout>

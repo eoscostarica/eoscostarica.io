@@ -85,7 +85,7 @@ const ServicePage = () => {
       }
       </Box>
     )
-  } 
+  }
 
   const BlockchainDev = () => {
     return (
