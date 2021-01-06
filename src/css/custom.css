@@ -1,5 +1,115 @@
-/*Navbar*/
 
+/*Typographys*/
+@font-face {
+  font-family: "CustomFont";
+  src: url("../../static/fonts/GothamPro.woff2") format("woff2");
+}
+
+h1 {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 60px;
+  letter-spacing: -0.24px;
+  line-height: 60px;
+}
+
+h2 {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 40px;
+  letter-spacing: -0.24px;
+  line-height: 44px;
+}
+
+h3 {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 24px;
+  letter-spacing: -0.06px;
+  line-height: 9px;
+}
+
+h4 {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: -0.06px;
+  line-height: 24px;
+}
+
+h5{
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: -0.05px;
+  line-height: 24px;
+}
+
+h6{
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: -0.05px;
+  line-height: 24px;
+}
+
+p{
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 19px;
+  letter-spacing: -0.05px;
+  line-height: 25px;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+a{
+  color: #5484b3;
+}
+
+.button{
+  font-size: 14px;
+}
+
+.white{
+  color: white;
+}
+
+.buttonPrimary{
+  width: auto;
+  height: 60px;
+  background-color: #5484b3;
+  font-size: 21px;
+  color: white;
+  border-radius: 0px;
+}
+
+.buttonPrimary:hover{
+  background-color: #757575;
+}
+
+
+.buttonSecondary{
+  width: auto;
+  height: 60px;
+  background-color: transparent;
+  font-size: 21px;
+  color: white;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  border: solid 1px #5484b3;
+  color: #5484b3;
+}
+
+/*Navbar*/
 .navBar {
   z-index: 1000;
   width: 100%;
@@ -227,7 +337,201 @@
   text-decoration: none;
 }
 
+/*Home*/
 
+.mainContainer{
+  overflow-x: hidden;
+}
+
+.container{
+  width: 100%;
+  /*display: flex;*/
+  justify-content: center;
+}
+
+.containerGray{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f1f1f1;
+}
+
+.containerBlack{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+.containerWithBackground{
+  background-image: url("../../static/img/blureoslogo.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 100%;
+}
+
+.content{
+  width: 960px;
+  display: flex;
+}
+
+.bgParallax{
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 780px;
+}
+
+.bgParallaxSecondary{
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 2000px;
+}
+
+.imgParallax{
+  z-index: 1;
+  height: 100%;
+  width: 100vw;
+  background-image: url("../../static/img/blureoslogo.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.titleBox{
+  margin-bottom: 3rem;
+}
+
+.h3Box{
+  margin-bottom: 2rem;
+}
+
+.buttonBox{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.buttonBoxMobile{
+  width: "100";
+  position: absolute;
+  bottom: -30px;
+  display: flex;
+  justify-content: center;
+}
+
+.sectionHero{
+  width: 1100px;
+  height: 780px;
+  padding-top: 250px;
+}
+
+.sectionHeroMobile{
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.logoMobileBox{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logoMobile{
+  margin-bottom: 2em;
+  width: 90%;
+}
+
+.section{
+  padding-bottom: 140px;
+  width: 100%;
+}
+
+.sectionNoPadding{
+  width: 1100px;
+}
+
+.sectionPadding{
+  padding-top: 140px;
+  padding-bottom: 140px;
+  width: 1100px;
+}
+
+.accordionBox{
+  margin-top: 3rem;
+}
+
+.accordion{
+  width: 100%;
+  background-color: #f1f1f1;
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  margin-bottom: 10px;
+}
+
+.MuiAccordion-root::before{
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+.accordionPadding{
+  padding: 0;
+}
+
+.imgBox{
+  display: flex;
+  justify-content: center;
+  height: 350px;
+  margin-bottom: 3rem;
+}
+
+.imgBoxLogos{
+  display: flex;
+  justify-content: center;
+  height: 288;
+  margin-bottom: 3rem;
+}
+
+.spacingBox{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.doubleSpacingBox{
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.inquiereBox{
+  display: flex;
+  align-items: center;
+  height: 500px;
+}
+
+.imgBoxRight{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imgBoxLeft{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.imgKnow{
+  width: 90%;
+}
+
+.imgProjects{
+  width: 85%;
+}
 
 @media only screen and (max-width: 600px) {
   .footerLogo {
@@ -244,5 +548,83 @@
 
   .linkFooter{
     text-align: center;
+  }
+
+  .buttonBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section{
+    width: 100%;
+  }
+
+  .sectionNoPadding{
+    width: 100%;
+  }
+  
+  .sectionPadding{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    width: 100%;
+  }
+
+  .accordionBox{
+    width: 90%;
+  }
+
+  .imgBoxLogos{
+    height: 120px;
+  }
+
+  .inquiereBox{
+    height: auto;
+  }
+
+  .imgKnow{
+    width: 100%;
+  }
+  
+  .imgProjects{
+    width: 100%;
+  }
+
+  h1{
+    line-height: 40px;
+    font-size: 35;
+    text-align: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  h2{
+    line-height: 40px;
+    font-size: 30;
+    text-align: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  h3{
+    line-height: 25px;
+    font-size: 25;
+    text-align: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  h4{
+    line-height: 25px;
+    font-size: 20;
+    text-align: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  p{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 15;
   }
 }
