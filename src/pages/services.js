@@ -48,8 +48,14 @@ const ServicePage = () => {
             developing infrastructure for business environments..
           </Typography>
           <Box className={classes.buttonBox}>
-            <Button className={classes.buttonPrimary} href={useBaseUrl("/contact-us")}>
-              Contact us
+            <Button className={classes.buttonSecondary} href={useBaseUrl("/contact-us")}>
+              Development Services
+            </Button>
+            <Button className={classes.buttonSecondary} href={useBaseUrl("/contact-us")}>
+              Blockchain Infrastructure
+            </Button>
+            <Button className={classes.buttonSecondary} href={useBaseUrl("/contact-us")}>
+              Education and Training
             </Button>
           </Box>
         </Box>
@@ -125,6 +131,10 @@ const ServicePage = () => {
             />
           </picture>
           <Box className={clsx(styles.knowEOSCRBox)}>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             <Box className={classes.titleBox}>
               <Typography className={classes.h2}>Blockchain Development Services</Typography>
             </Box>
