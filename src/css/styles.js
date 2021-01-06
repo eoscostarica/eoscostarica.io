@@ -37,7 +37,7 @@ import { makeStyles } from '@material-ui/core/styles'
       fontWeight: 'bold',
       fontSize: '24px',
       letterSpacing: '-0.06px',
-      lineHeight: '9px',
+      lineHeight: '24px',
       [theme.breakpoints.down('sm')]: {
         lineHeight: '25px',
         fontSize: '20px',
@@ -115,28 +115,34 @@ import { makeStyles } from '@material-ui/core/styles'
       textTransform: 'uppercase'
     },
     buttonPrimary: {
-        width: '198px',
-        height: '60px',
-        backgroundColor: '#5484b3',
-        fontSize: '21px',
-        color: '#ffffff',
-        borderRadius:'0px',
-        '&:hover': {
-          backgroundColor: '#757575',
-          color: '#ffffff'
-        }
+      width: '198px',
+      height: '60px',
+      backgroundColor: '#5484b3',
+      fontSize: '21px',
+      color: '#ffffff',
+      borderRadius:'0px',
+      '&:hover': {
+        backgroundColor: '#757575',
+        color: '#ffffff'
+      }
     },
     buttonSecondary: {
-        width: '198px',
-        height: '60px',
-        backgroundColor: 'transparent',
-        fontSize: '21px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        border: 'none',
-        border: 'solid 1px #979797',
-        color: '#000000'
+      width: '272px',
+      height: '95px',
+      backgroundColor: 'transparent',
+      fontWeight: 'bold',
+      fontSize: '21px',
+      color: '#5484b3',
+      borderRadius:'0px',
+      textAlign: 'center',
+      lineHeight: '22px',
+      textTransform: 'none',
+      border: '2px solid #5484b3',
+      opacity: '1',
+      '&:hover': {
+        backgroundColor: '#E0E0E0',
+        color: '#5484b3'
+      },
     },
     white: {
         color: '#FFFFFF'
@@ -346,6 +352,10 @@ import { makeStyles } from '@material-ui/core/styles'
     mainContainer:{
       overflowX:'hidden'
     },
+    paper: {
+      height: 300,
+      width: 400,
+    },
     container:{
       width:'100%',
       display: 'flex',
@@ -414,6 +424,33 @@ import { makeStyles } from '@material-ui/core/styles'
         justifyContent: 'center'
       }
     },
+    pictureStyle:{
+      marginLeft:'70px',
+      [theme.breakpoints.down('sm')]: {
+        marginLeft:'0px',
+      }
+    },
+    flexBox: {
+      width: '70%',
+      [theme.breakpoints.down('sm')]: {
+        width: '100%'
+      }
+    },
+    teamBox: {
+      display: 'flex',
+      flexDirection: 'column',
+      marginLeft: '80px',
+      [theme.breakpoints.down('sm')]: {
+        marginLeft:'0px'
+      }
+    },
+    knowEOSCRBox: {
+      flexDirection: 'column',
+      paddingBottom: '2rem',
+      display: 'flex',
+      justifyContent: 'space-between',
+      flexDirection: 'column-reverse'
+    },
     buttonBoxMobile:{
       width: '100%',
       position: 'absolute',
@@ -469,7 +506,7 @@ import { makeStyles } from '@material-ui/core/styles'
       marginTop: '3rem',
       [theme.breakpoints.down('sm')]: {
         width:'95%',
-      },
+      }
     },
     accordion:{
       width:'100%',

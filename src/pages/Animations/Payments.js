@@ -11,8 +11,6 @@ const Payments = () => {
 
   return (
     <Lottie
-    //style = {{backgroundColor: '#0000ff', transform: 'scale(0.7)'}}
-    //style = {{backgroundColor: '#0000ff'}}
     options={defaultOptions}
     />
   );
