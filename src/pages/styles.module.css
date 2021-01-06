@@ -287,6 +287,7 @@
 .teamBox {
   display: flex;
   flex-direction: column;
+  margin-left: 80px;
 }
 
 .flexImgBox {
@@ -296,6 +297,7 @@
 
 .boxSpaceBetween {
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .teamImg {
@@ -394,8 +396,6 @@
 .knowEOSCRBox {
   flex-direction: column;
   padding-bottom: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .linkProjectBox {
@@ -631,6 +631,10 @@
   margin-top: 3rem;
 }
 
+.marginRigth {
+ margin-right: 40px;
+}
+
 .title {
   display: flex;
   align-items: center;
@@ -844,7 +848,6 @@
 
   .knowEOSCRBox {
     flex-direction: column;
-    padding: 7rem 3rem 3rem !important;
   }
 
   /*.knowEOSCRBox h1 {
