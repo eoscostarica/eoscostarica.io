@@ -396,8 +396,6 @@
 .knowEOSCRBox {
   flex-direction: column;
   padding-bottom: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .linkProjectBox {
@@ -850,7 +848,6 @@
 
   .knowEOSCRBox {
     flex-direction: column;
-    padding: 7rem 3rem 3rem !important;
   }
 
   /*.knowEOSCRBox h1 {

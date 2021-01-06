@@ -17,8 +17,6 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
 import useStyles from "../css/styles.js"
 
-
-
 const Home = () => {
   const classes = useStyles()
   const [expanded, setExpanded] = useState('panel_SoftDev');
@@ -32,7 +30,6 @@ const Home = () => {
   useEffect(() => {
     handleChange('panel_SoftDev')
   }, []);
-
 
   const HeroSection = () => {
     return (

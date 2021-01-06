@@ -115,28 +115,34 @@ import { makeStyles } from '@material-ui/core/styles'
       textTransform: 'uppercase'
     },
     buttonPrimary: {
-        width: '198px',
-        height: '60px',
-        backgroundColor: '#5484b3',
-        fontSize: '21px',
-        color: '#ffffff',
-        borderRadius:'0px',
-        '&:hover': {
-          backgroundColor: '#757575',
-          color: '#ffffff'
-        }
+      width: '198px',
+      height: '60px',
+      backgroundColor: '#5484b3',
+      fontSize: '21px',
+      color: '#ffffff',
+      borderRadius:'0px',
+      '&:hover': {
+        backgroundColor: '#757575',
+        color: '#ffffff'
+      }
     },
     buttonSecondary: {
-        width: '198px',
-        height: '60px',
-        backgroundColor: 'transparent',
-        fontSize: '21px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        border: 'none',
-        border: 'solid 1px #979797',
-        color: '#000000'
+      width: '272px',
+      height: '95px',
+      backgroundColor: 'transparent',
+      fontWeight: 'bold',
+      fontSize: '21px',
+      color: '#5484b3',
+      borderRadius:'0px',
+      textAlign: 'center',
+      lineHeight: '22px',
+      textTransform: 'none',
+      border: '2px solid #5484b3',
+      opacity: '1',
+      '&:hover': {
+        backgroundColor: '#E0E0E0',
+        color: '#5484b3'
+      },
     },
     white: {
         color: '#FFFFFF'
@@ -220,6 +226,33 @@ import { makeStyles } from '@material-ui/core/styles'
         display:'flex',
         justifyContent: 'center'
       }
+    },
+    pictureStyle:{
+      marginLeft:'70px',
+      [theme.breakpoints.down('sm')]: {
+        marginLeft:'0px',
+      }
+    },
+    flexBox: {
+      width: '70%',
+      [theme.breakpoints.down('sm')]: {
+        width: '100%'
+      }
+    },
+    teamBox: {
+      display: 'flex',
+      flexDirection: 'column',
+      marginLeft: '80px',
+      [theme.breakpoints.down('sm')]: {
+        marginLeft:'0px'
+      }
+    },
+    knowEOSCRBox: {
+      flexDirection: 'column',
+      paddingBottom: '2rem',
+      display: 'flex',
+      justifyContent: 'space-between',
+      flexDirection: 'column-reverse'
     },
     buttonBoxMobile:{
       width: '100%',
