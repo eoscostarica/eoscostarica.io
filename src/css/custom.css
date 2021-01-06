@@ -1,11 +1,89 @@
 
-/*Typographys*/
+/*Fonts*/
 @font-face {
-  font-family: "CustomFont";
-  src: url("../../static/fonts/GothamPro.woff2") format("woff2");
+  font-family: "Gotham";
+  font-weight: normal;
+  src: url("../../static/fonts/GothamPro-Medium.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Gotham";
+  font-weight: bold;
+  src: url("../../static/fonts/GothamPro-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham";
+  font-weight: lighter;
+  src: url("../../static/fonts/GothamPro-Light.woff2") format("woff2");
+}
+
+
+/*blog*/
+.blog-wrapper{
+  margin-top: 50px;
+}
+
+.blog-wrapper a {
+  color: #5484b3;
+}
+
+.blog-wrapper h1{
+  font-family: 'Gotham',Arial, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 35px;
+  letter-spacing: -0.24px;
+  line-height: 35px;
+}
+
+.blog-wrapper h2{
+  font-family: 'Gotham',Arial, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 30px;
+  letter-spacing: -0.24px;
+  line-height: 30px;
+}
+
+.blog-wrapper h3{
+  font-family: 'Gotham',Arial, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 25px;
+  letter-spacing: -0.24px;
+  line-height: 25px;
+}
+
+.blog-wrapper h4{
+  font-family: 'Gotham',Arial, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: -0.24px;
+  line-height: 20px;
+}
+
+.blog-wrapper p{
+  font-family: 'Gotham',Arial, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 19px;
+  letter-spacing: -0.05px;
+  line-height: 25px;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+/*Typographys*/
+
 h1 {
+  font-family: 'Gotham',Arial, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -15,24 +93,28 @@ h1 {
 }
 
 h2 {
+  font-family: 'Gotham',Arial, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   font-size: 40px;
   letter-spacing: -0.24px;
-  line-height: 44px;
+  line-height: 40px;
 }
 
 h3 {
+  font-family: 'Gotham',Arial, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   font-size: 24px;
   letter-spacing: -0.06px;
-  line-height: 9px;
+  line-height: 24px;
 }
 
 h4 {
+  font-family: 'Gotham',Arial, sans-serif;
+  font-family: 'Gotham';
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -42,6 +124,7 @@ h4 {
 }
 
 h5{
+  font-family: 'Gotham',Arial, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -51,6 +134,7 @@ h5{
 }
 
 h6{
+  font-family: 'Gotham',Arial, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -60,6 +144,7 @@ h6{
 }
 
 p{
+  font-family: 'Gotham',Arial, sans-serif;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -83,16 +168,19 @@ a{
 }
 
 .buttonPrimary{
+  font-family: 'Gotham',Arial, sans-serif;
   width: auto;
-  height: 60px;
+  padding: 20px;
   background-color: #5484b3;
   font-size: 21px;
   color: white;
+  border: none;
   border-radius: 0px;
+  cursor: pointer;
 }
 
 .buttonPrimary:hover{
-  background-color: #757575;
+  opacity:0.8;
 }
 
 
@@ -197,6 +285,7 @@ a{
 }
 
 .link {
+  font-family: 'Gotham',Arial, sans-serif;
   display: inline;
   position: relative;
   overflow: hidden;
@@ -304,6 +393,7 @@ a{
 }
 
 .h3Footer{
+  font-family: 'Gotham',Arial, sans-serif;
   color: white;
   font-weight: bold;
   font-size: 20px;
@@ -311,6 +401,7 @@ a{
 }
 
 .body1Footer{
+  font-family: 'Gotham',Arial, sans-serif;
   color: white;
   font-weight: normal;
   font-stretch: normal;
@@ -322,6 +413,7 @@ a{
 }
 
 .linkFooter{
+  font-family: 'Gotham',Arial, sans-serif;
   color: white;
   font-weight: normal;
   font-stretch: normal;
@@ -343,10 +435,10 @@ a{
   overflow-x: hidden;
 }
 
-.container{
+.containerSection{
   width: 100%;
-  /*display: flex;*/
   justify-content: center;
+  padding: 0px;
 }
 
 .containerGray{
@@ -414,7 +506,7 @@ a{
 }
 
 .buttonBoxMobile{
-  width: "100";
+  width: 100%;
   position: absolute;
   bottom: -30px;
   display: flex;
@@ -472,16 +564,11 @@ a{
   margin: 0;
   padding: 0;
   box-shadow: none;
-  margin-bottom: 10px;
 }
 
 .MuiAccordion-root::before{
   background-color: #f1f1f1;
   margin: 0;
-  padding: 0;
-}
-
-.accordionPadding{
   padding: 0;
 }
 
@@ -495,7 +582,7 @@ a{
 .imgBoxLogos{
   display: flex;
   justify-content: center;
-  height: 288;
+  height: 288px;
   margin-bottom: 3rem;
 }
 
@@ -591,24 +678,24 @@ a{
   }
 
   h1{
-    line-height: 40px;
-    font-size: 35;
+    line-height: 20px;
+    font-size: 30px;
     text-align: center;
     padding-left: 5vw;
     padding-right: 5vw;
   }
 
-  h2{
-    line-height: 40px;
-    font-size: 30;
+  .h2{
+    line-height: 20px;
+    font-size: 25px;
     text-align: center;
     padding-left: 5vw;
     padding-right: 5vw;
   }
 
   h3{
-    line-height: 25px;
-    font-size: 25;
+    line-height: 20px;
+    font-size: 20px;
     text-align: center;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -616,7 +703,7 @@ a{
 
   h4{
     line-height: 25px;
-    font-size: 20;
+    font-size: 15px;
     text-align: center;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -627,4 +714,50 @@ a{
     padding-right: 5vw;
     font-size: 15;
   }
+
+  /*blog*/
+.blog-wrapper{
+  margin-top: 50px;
+}
+
+.blog-wrapper a {
+  color: #5484b3;
+}
+
+.blog-wrapper h1{
+  font-size: 30px;
+  text-align: left;
+  padding: 0px;
+}
+
+.blog-wrapper h2{
+  font-size: 25px;
+  text-align: left;
+  padding: 0px;
+}
+
+.blog-wrapper h3{
+  font-size: 20px;
+  text-align: left;
+  padding: 0px;
+}
+
+.blog-wrapper h4{
+  font-size: 15px;
+  padding: 0px;
+  text-align: left;
+}
+
+.blog-wrapper p{
+  font-family: 'Gotham',Arial, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 15px;
+  letter-spacing: -0.05px;
+  line-height: 25px;
+  text-align: justify;
+  margin-bottom: 15px;
+  padding: 0;
+}
 }

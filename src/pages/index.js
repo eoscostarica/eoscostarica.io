@@ -46,7 +46,7 @@ const Home = () => {
           <p >Deploy EOSIO blockchain technology to improve transparency, boost efficiency, and reduce costs.</p>
           <p>Start transforming your organization by leveraging enterprise blockchain networks.</p>
           <Box className={"buttonBox"}>
-            <Button className={"buttonPrimary"} href={useBaseUrl("/services")} >Learn More</Button>
+            <button className={"buttonPrimary"} href={useBaseUrl("/services")}  >Learn More</button>
           </Box>
         </Box>
         }
@@ -68,7 +68,7 @@ const Home = () => {
           <br/>
           <p>Start transforming your organization by leveraging enterprise blockchain networks.</p>
           <Box className={"buttonBoxMobile"}>
-            <Button className={"buttonPrimary"} href={useBaseUrl("/services")} >Learn More</Button>
+            <button className={"buttonPrimary"} href={useBaseUrl("/services")} >Learn More</button>
           </Box>
         </Box>
       }
@@ -155,57 +155,63 @@ const Home = () => {
               started!
             </p>
             <Box className={"accordionBox"}>
-              <Accordion square expanded={expanded === 'panel_SoftDev'}  onChange={handleChange('panel_SoftDev')} className={"accordion"} >
-                <AccordionSummary className={"accordionPadding"} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3>Software Development</h3>
-                </AccordionSummary>
-                <AccordionDetails className={"accordionPadding"}>
-                  <p>
-                    Our value proposition is to develop blockchain-based
-                    software to solve real-life problems. We have experience
-                    working with large global enterprises and SMEs, government
-                    entities and NGOs, and open-source projects across many
-                    industries. We adapt to our clients’ budgets and needs,
-                    without compromising thought leadership or quality. Our team
-                    is technology agnostic but specializes in the open-source
-                    blockchain technology EOSIO, launched by leading company
-                    block.one.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion square expanded={expanded === 'panel_BlockInfrac'}  onChange={handleChange('panel_BlockInfrac')} className={"accordion"} >
-                <AccordionSummary className={"accordionPadding"} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3>Blockchain Infrastructure</h3>
-                </AccordionSummary>
-                <AccordionDetails className={"accordionPadding"}>
-                  <p>
-                    We offer top-grade infrastructure for blockchain networks
-                    and API endpoints from our datacenter in San José, Costa
-                    Rica. Costa Rica is a country with high political stability
-                    and a long-lasting democracy. Our strategic location in the
-                    middle of the American continent offers convenient network
-                    interconnectivity. We also configure, host, and maintain
-                    blockchain nodes available for private and public networks
-                    with 24/7 monitoring and uptime. Read more about this.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion square expanded={expanded === 'panel_Education'}  onChange={handleChange('panel_Education')} className={"accordion"}>
-                <AccordionSummary className={"accordionPadding"} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3>Education and Training</h3>
-                </AccordionSummary>
-                <AccordionDetails className={"accordionPadding"}>
-                  <p>
-                    In today’s world, new technologies are leading the way to
-                    transform many industries. We offer workshops on blockchain
-                    and EOSIO to C-suite executives and teams that want to keep
-                    up to date and learn more about what is blockchain and
-                    enterprise use cases. We also provide training and education
-                    resources for new talents that wish to kickstart their
-                    career in blockchain.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
+              <Box style={{marginBottom:'5px'}}>
+                <Accordion square expanded={expanded === 'panel_SoftDev'}  onChange={handleChange('panel_SoftDev')} className={"accordion"} style={{backgroundColor:'#f1f1f1',boxShadow:'none'}} >
+                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h3>Software Development</h3>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:0}}>
+                    <p>
+                      Our value proposition is to develop blockchain-based
+                      software to solve real-life problems. We have experience
+                      working with large global enterprises and SMEs, government
+                      entities and NGOs, and open-source projects across many
+                      industries. We adapt to our clients’ budgets and needs,
+                      without compromising thought leadership or quality. Our team
+                      is technology agnostic but specializes in the open-source
+                      blockchain technology EOSIO, launched by leading company
+                      block.one.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+              </Box>
+              <Box style={{marginBottom:'5px'}}>
+                <Accordion square expanded={expanded === 'panel_BlockInfrac'}  onChange={handleChange('panel_BlockInfrac')} className={"accordion"} style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}>
+                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h3>Blockchain Infrastructure</h3>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:0}}>
+                    <p>
+                      We offer top-grade infrastructure for blockchain networks
+                      and API endpoints from our datacenter in San José, Costa
+                      Rica. Costa Rica is a country with high political stability
+                      and a long-lasting democracy. Our strategic location in the
+                      middle of the American continent offers convenient network
+                      interconnectivity. We also configure, host, and maintain
+                      blockchain nodes available for private and public networks
+                      with 24/7 monitoring and uptime. Read more about this.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+              </Box>
+              <Box style={{marginBottom:'5px'}}>
+                <Accordion square expanded={expanded === 'panel_Education'}  onChange={handleChange('panel_Education')} className={"accordion"} style={{backgroundColor:'#f1f1f1',boxShadow:'none',borderColor:'s\\#f1f1f1'}}>
+                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h3>Education and Training</h3>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:0}}>
+                    <p>
+                      In today’s world, new technologies are leading the way to
+                      transform many industries. We offer workshops on blockchain
+                      and EOSIO to C-suite executives and teams that want to keep
+                      up to date and learn more about what is blockchain and
+                      enterprise use cases. We also provide training and education
+                      resources for new talents that wish to kickstart their
+                      career in blockchain.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+              </Box>
             </Box>
           </Grid>
           {!isMobile && 
@@ -309,7 +315,7 @@ const Home = () => {
                   <h2 className={"white"}>Do you have inquiries</h2>
                   <h2 className={"white"}>about blockchain?</h2>
                   <Box className={"buttonBox"}>
-                    <Button className={"buttonPrimary"} href={useBaseUrl("/contact-us")} >Contact us</Button>
+                    <button className={"buttonPrimary"} href={useBaseUrl("/contact-us")} >Contact us</button>
                   </Box>
                 </Box>
               </Box>
@@ -465,7 +471,7 @@ const Home = () => {
           <Box className={"h3Box"}>
             <h3 style={{textAlign:'center'}}>We Are One Group</h3>
           </Box>
-          <Box className={clsx({["spacingBox"] : isMobile})}>
+          <Box className={"spacingBox"}>
             <Grid container>
               <Grid item xs={12} md={3}>
                 <Box className={"imgBoxLogos"}>
@@ -637,7 +643,7 @@ const Home = () => {
             </Grid>
             <Grid item xs={12} md={4}>
               <Box className={"buttonBox"}>
-                  <Button className={"buttonPrimary"} href={useBaseUrl("/contact-us")} >Contact us</Button>
+                  <button className={"buttonPrimary"} href={useBaseUrl("/contact-us")} >Contact us</button>
                 </Box>
             </Grid>
           </Grid>
