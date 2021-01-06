@@ -13,6 +13,9 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
+import Payments from './Animations/Payments';
+import Logistic from './Animations/Logistic';
+import Games from './Animations/Games';
 
 const Home = () => {
   const [expanded, setExpanded] = useState('panel_SoftDev');
@@ -26,6 +29,16 @@ const Home = () => {
   useEffect(() => {
     handleChange('panel_SoftDev')
   }, []);
+
+  const handleScroll = () => {
+    alert("hola")
+    var heightBound = window.height * 0.8
+    console.log("heightBound", heightBound)
+    if (heightBound > window.scrollY) {
+        // Probably you want to load new cards?
+        alert("hola")
+    } 
+  }
 
   const HeroSection = () => {
     return (
@@ -236,7 +249,7 @@ const Home = () => {
             <Grid container spacing={5}>
               <Grid item md={4}>
                 <Box className={"imgBox"}>
-                  <img src={useBaseUrl("img/payments.svg")} />
+                  <Payments/>
                 </Box>
                 <Box className={"h3Box"}>
                   <h3>Payments and Transfers</h3>
@@ -249,7 +262,7 @@ const Home = () => {
               </Grid>
               <Grid item md={4}>
                 <Box className={"imgBox"}>
-                  <img src={useBaseUrl("img/logistics.svg")} />
+                  <Logistic/>
                 </Box>
                 <Box className={"h3Box"}>
                   <h3>Logistics and Supply Chain</h3>
@@ -263,7 +276,7 @@ const Home = () => {
               </Grid>
               <Grid item md={4}>
                 <Box className={"imgBox"}>
-                  <img src={useBaseUrl("img/gaming.svg")} />
+                  <Games/>
                 </Box>
                 <Box className={"h3Box"}>
                   <h3>Gaming</h3>
@@ -664,7 +677,9 @@ const Home = () => {
           </>
         } 
         <WhatWeDo />
-        <EnterpriseBlockchain />
+        <Box onMouseEnter={handleScroll}>
+          <EnterpriseBlockchain />
+        </Box>
         <Inquieres />
         {!isMobile && 
         <Parallax strength={800}>

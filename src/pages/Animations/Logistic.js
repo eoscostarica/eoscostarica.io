@@ -12,6 +12,9 @@ const Logistic = () => {
   return (
     <Lottie
       options={defaultOptions}
+      width='250px'
+      height='250px'
+      style={{marginTop:'115px'}}
     />   
   );
 }

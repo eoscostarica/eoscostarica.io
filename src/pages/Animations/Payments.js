@@ -12,6 +12,9 @@ const Payments = () => {
   return (
     <Lottie
     options={defaultOptions}
+    width='225px'
+    height='225px'
+    style={{marginTop:'110px'}}
     />
   );
 }
