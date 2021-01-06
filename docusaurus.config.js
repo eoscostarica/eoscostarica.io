@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = {
   title: 'EOSIO Enterprise Blockchain Development Services -  EOS Costa Rica',
   tagline: '',
@@ -7,6 +8,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'eoscostarica',
   projectName: 'eoscostarica.io',
+  plugins: [path.resolve(__dirname + "/plugins/", 'my-loaders')],
   presets: [
     [
       '@docusaurus/preset-classic',
