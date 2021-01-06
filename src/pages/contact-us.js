@@ -1,15 +1,15 @@
 import React from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import Box from '@material-ui/core/Box'
 
 import ContactUsForm from "./components/ContactUs";
 import styles from "./styles.module.css";
 
 const ContactUs = () => (
   <Layout>
-    <main className={styles.mainContainer}>
-      <div className={clsx("container", styles.noPadding)}>
+    <Box className={styles.mainContainer}>
+      <Box className={clsx("container", styles.noPadding)}>
         <ContactUsForm />
         <iframe
           src="https://eoscostarica.substack.com/embed"
@@ -19,8 +19,8 @@ const ContactUs = () => (
           frameBorder="0"
           scrolling="no"
         ></iframe>
-      </div>
-    </main>
+      </Box>
+    </Box>
   </Layout>
 );
 
