@@ -33,7 +33,7 @@ const Home = () => {
 
   const HeroSection = () => {
     return (
-      <Box className={"container"}>
+      <Box className={"containerSec"}>
         {!isMobile && 
           <Box className={"sectionHero"}>
           <Box className={"titleBox"}>
@@ -75,7 +75,7 @@ const Home = () => {
 
   const BlockchainCanDo = () => {
     return (
-      <Box className={"container"}>
+      <Box className={"containerSec"}>
           <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
             <Box className={"titleBox"}>
                 <h2>What Enterprise</h2>
@@ -226,7 +226,7 @@ const Home = () => {
 
   const EnterpriseBlockchain = () => {
     return (
-      <Box className={"container"}>
+      <Box className={"containerSec"}>
         <Box className={"sectionPadding"}>
           <Box className={"titleBox"}>
             <h2>Industries to Deploy Enterprise Blockchain</h2>
@@ -330,7 +330,7 @@ const Home = () => {
 
   const GetToKnow = () => {
     return (
-      <Box className={"container"}>
+      <Box className={"containerSec"}>
         <Box className={"sectionPadding"}>
           <Box className={"titleBox"}>
             <h2>Get to Know EOS Costa Rica</h2>
@@ -463,7 +463,7 @@ const Home = () => {
 
   const WeAreOneGroup = () => {
     return (
-      <Box className={clsx("container",{["containerGray"] : isMobile, ["containerWithBackground"] : isMobile})}>
+      <Box className={clsx("containerSec",{["containerGray"] : isMobile, ["containerWithBackground"] : isMobile})}>
         <Box className={"sectionPadding"} >
           <Box className={"h3Box"}>
             <h3 style={{textAlign:'center'}}>We Are One Group</h3>
@@ -511,7 +511,7 @@ const Home = () => {
 
   const SomeProjects = () => {
     return (
-      <Box className={"container"}>
+      <Box className={"containerSec"}>
         <Box className={"sectionPadding"}>
           <Box className={"titleBox"}>
               <h2 >Some of Our Projects</h2>
