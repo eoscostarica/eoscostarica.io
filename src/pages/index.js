@@ -4,8 +4,6 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
@@ -15,10 +13,8 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
-import useStyles from "../css/styles.js"
 
 const Home = () => {
-  const classes = useStyles()
   const [expanded, setExpanded] = useState('panel_SoftDev');
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
