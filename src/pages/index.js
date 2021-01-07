@@ -11,9 +11,7 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Lottie  from 'react-lottie';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import animationData from './Animations/games.json';
 import ScrollTrigger from 'react-scroll-trigger';
 
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
@@ -691,7 +689,7 @@ const Home = () => {
           </>
         } 
         <WhatWeDo />
-          <EnterpriseBlockchain />
+        <EnterpriseBlockchain />
         <Inquieres />
         {!isMobile && 
         <Parallax strength={800}>
