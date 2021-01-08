@@ -406,7 +406,7 @@ const ServicePage = () => {
           <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
               <Box className={"centerBox"}>
-                <img src="../../static/img/map.svg" />
+                <img src={useBaseUrl("/img/map.svg")}/>
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
@@ -504,7 +504,7 @@ const ServicePage = () => {
           </Box>
           {isMobile && 
             <Box className={"centerBox"}>
-              <img src="../../static/img/imgCubes/eos-education.svg" />
+              <img src={useBaseUrl("/img/imgCubes/eos-education.svg")}/>
            </Box>
           }
           <Box className={"spacingBox"}>
@@ -593,7 +593,7 @@ const ServicePage = () => {
               {!isMobile && 
                 <Grid item xs={12} md={6}>
                   <Box className={"centerBox"}>
-                    <img src="../../static/img/imgCubes/eos-education.svg" />
+                    <img  src={useBaseUrl("/img/imgCubes/eos-education.svg")}/>
                   </Box>
                 </Grid>
               } 
