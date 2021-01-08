@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from 'react-router-dom';
 import { Parallax, Background } from 'react-parallax';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
@@ -20,9 +21,17 @@ import Games from './Animations/Games';
 
 const Home = () => {
   const [expanded, setExpanded] = useState('panel_SoftDev');
+  const history = useHistory();
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   const [stateAnimation,setStateAnimation] = useState(false)
+
+  const handleScrollEnter = () => {
+    setStateAnimation(true)
+  }
+  const handleScrollExit = () => {
+    setStateAnimation(false)
+  }
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -31,14 +40,6 @@ const Home = () => {
   useEffect(() => {
     handleChange('panel_SoftDev')
   }, []);
-
-  const handleScrollEnter = () => {
-    setStateAnimation(true)
-  }
-
-  const handleScrollExit = () => {
-    setStateAnimation(false)
-  }
 
   const HeroSection = () => {
     return (
@@ -52,7 +53,7 @@ const Home = () => {
           <p >Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.</p>
           <p>Start transforming your organization by leveraging enterprise blockchain networks.</p>
           <Box className={"buttonBox"}>
-            <button className={"buttonPrimary"} href={useBaseUrl("/services")} >Check our services</button>
+            <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Check our services</button>
           </Box>
         </Box>
         }
@@ -74,7 +75,7 @@ const Home = () => {
           <br/>
           <p>Start transforming your organization by leveraging enterprise blockchain networks.</p>
           <Box className={"buttonBoxMobile"}>
-            <button className={"buttonPrimary"} href={useBaseUrl("/services")} >Learn More</button>
+            <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Learn More</button>
           </Box>
         </Box>
       }
@@ -88,7 +89,7 @@ const Home = () => {
           <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
             <Box className={"titleBox"}>
                 <h2>What Enterprise</h2>
-                <h2>Blockchain Can Do?</h2>
+                <h2>Blockchain Can Do</h2>
             </Box>
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
@@ -139,6 +140,22 @@ const Home = () => {
                 </p>
               </Grid>
             </Grid>
+            <Box className={"topSpacingBox"}>
+              <Grid container spacing={5}>
+                <Grid item xs={12} md={6}>
+                  </Grid>
+                  <Grid item xs={12} md={3}>
+                    <p>
+                      Learn more about how blockchain can improve your operations.
+                    </p>
+                  </Grid>
+                  <Grid item xs={12} md={3}>
+                    <Box className={"boxFlexEnd"}>
+                      <button className={"buttonSecondary"} style={{width:'100%'}} onClick={() => history.push("/contact-us/")} >Find Out How</button>
+                    </Box>
+                </Grid>
+              </Grid>
+            </Box>
           </Box>
         </Box>
     )
@@ -175,8 +192,8 @@ const Home = () => {
                       industries. We adapt to our clients’ budgets and needs,
                       without compromising thought leadership or quality. Our team
                       is technology agnostic but specializes in the open-source
-                      blockchain technology EOSIO, launched by leading company
-                      block.one.
+                      blockchain technology <a href={"https://eos.io/"} target="_blank">EOSIO</a>, launched by leading company
+                      <a href={"https://block.one/"} target="_blank"> block.one</a>.
                     </p>
                   </AccordionDetails>
                 </Accordion>
@@ -195,7 +212,7 @@ const Home = () => {
                       middle of the American continent offers convenient network
                       interconnectivity. We also configure, host, and maintain
                       blockchain nodes available for private and public networks
-                      with 24/7 monitoring and uptime. Read more about this.
+                      with 24/7 monitoring and uptime. <a href={useBaseUrl("/about")}> Read more about this</a>.
                     </p>
                   </AccordionDetails>
                 </Accordion>
@@ -243,7 +260,7 @@ const Home = () => {
           <p>
             Blockchain can transform and remodel countless industries. The
             possibilities are endless. Do you still don’t know how blockchain
-            can impact your operations? Contact us so we can guide you!
+            can impact your operations? <a href={useBaseUrl("/contact-us")}>Contact us</a> so we can guide you!
           </p>
             <Box className={"spacingBox"}>
                 <Grid container spacing={5}>
@@ -259,7 +276,11 @@ const Home = () => {
                     <p>
                       Blockchain enables an efficient and secure way to register
                       transactions that can facilitate payments and offer near
-                      real-time auditing with encryption to reduce data breaches.
+                      real-time auditing with encryption to reduce data breaches. 
+                      <a 
+                        href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
+                        target="_blank"
+                      > Read more </a>
                     </p>
                   </Grid>
                   <Grid item md={4}>
@@ -275,7 +296,8 @@ const Home = () => {
                       In an industry that involves dozens of stakeholders, the
                       capabilities of blockchain and smart contracts for
                       traceability, authorizations management, and automation can
-                      make a great ally.
+                      make a great ally. 
+                      <a href={"https://eoscostarica.io/blog/blockchain-logistics"}> Read more</a>
                     </p>
                   </Grid>
                   <Grid item md={4}>
@@ -291,7 +313,8 @@ const Home = () => {
                       Blockchain enables a better way to transfer, valorize, and
                       collect digital in-game assets. Also, its capabilities to
                       increase security and offer a more efficient way for
-                      transactions can level-up online gaming.
+                      transactions can level-up online gaming. 
+                      <a href={"https://eoscostarica.io/blog/gaming-blockchain"}> Read more</a>
                     </p>
                   </Grid>
                 </Grid>
@@ -303,7 +326,7 @@ const Home = () => {
             recording transactions, registering data and managing digital
             assets. Also, it can automate and facilitate processes, reducing
             costs and inefficiencies.{" "}
-            <a href={useBaseUrl("/industries")}>Discover more industries</a>{" "}
+            <a href={useBaseUrl("/industries")}>Discover more industries </a>
             that can leverage their operations on blockchain technology.
           </p>
         </Box>
@@ -327,7 +350,7 @@ const Home = () => {
                   <h2 className={"white"}>Do you have inquiries</h2>
                   <h2 className={"white"}>about blockchain?</h2>
                   <Box className={"buttonBox"}>
-                    <button className={"buttonPrimary"} href={useBaseUrl("/contact-us")} >Contact us</button>
+                    <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Drop us a line</button>
                   </Box>
                 </Box>
               </Box>
@@ -358,16 +381,10 @@ const Home = () => {
               EOSIO
             </a>{" "}
             protocol, provide blockchain infrastructures, and offer training
-            and workshops.
+            and workshops. <a href={useBaseUrl("/contact-us")}>Let’s get the conversation started!</a>
           </p>
           <br/>
-          <p>
-          <strong>
-            <i>
-              <a href={useBaseUrl("/contact-us")}>Let’s get the conversation started!</a>
-            </i>
-          </strong>
-          </p>
+          <br/>
           <Box className={"spacingBox"}>
             <Box className={"spacingBox"}>
               <Grid container spacing={5}>
@@ -381,6 +398,7 @@ const Home = () => {
                       a distributed team in an Agile environment and make a
                       concerted effort to hire talent outside of urban areas to
                       support tech careers in rural regions.
+                      <a href={"https://www.linkedin.com/company/eoscostarica/"} target="_blank"> Follow us on Linkedin.</a>
                   </p>
                 </Grid>
                 <Grid item md={6}>
@@ -421,6 +439,7 @@ const Home = () => {
                     </a>{" "}
                     protocol since its launch, accruing decades of experience with
                     innovative technologies.
+                    <a href={useBaseUrl("/about")} target="_blank"> Get to know us.</a>
                   </p>
                 </Grid>
                 {isMobile && 
@@ -445,16 +464,14 @@ const Home = () => {
                     We focus on deploying{" "}
                     <a href="https://eos.io/" target="_blank">
                       EOSIO
-                    </a>{" "}
-                    technology, an open-source protocol launched in 2018 by
+                    </a> technology, an open-source protocol launched in 2018 by
                     leading tech company{" "}
                     <a href="https://block.one/" target="_blank">
                       block.one.
                     </a>{" "}
                     <a href="https://eos.io/" target="_blank">
                       EOSIO
-                    </a>{" "}
-                    is powered by the native token EOS and offers improved
+                    </a> is powered by the native token EOS and offers improved
                     scalability due to its high transaction speed, flexibility in
                     public and private networks, and energy efficiency compared to
                     other blockchains, making it a more eco-friendly option.
@@ -534,7 +551,7 @@ const Home = () => {
           <p>
             Get to know some of our latest projects deploying the EOSIO
             blockchain protocol.
-            <a href={useBaseUrl("/projects")}>Visit the full list here.</a>
+            <a href={useBaseUrl("/projects")}> Visit the full list here.</a>
           </p>
           <Box className={"doubleSpacingBox"}>
             <Box className={"spacingBox"}>
@@ -655,8 +672,8 @@ const Home = () => {
             </Grid>
             <Grid item xs={12} md={4}>
               <Box className={"buttonBox"}>
-                  <button className={"buttonPrimary"} href={useBaseUrl("/contact-us")} >Contact us</button>
-                </Box>
+                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
+              </Box>
             </Grid>
           </Grid>
         </Box>

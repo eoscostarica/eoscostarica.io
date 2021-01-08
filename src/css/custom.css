@@ -184,18 +184,28 @@ a{
   opacity:0.8;
 }
 
-
 .buttonSecondary{
   width: auto;
-  height: 60px;
+  padding: 25px;
   background-color: transparent;
   font-size: 21px;
   color: white;
   border-radius: 0px;
   display: flex;
   justify-content: center;
-  border: solid 1px #5484b3;
-  color: #5484b3;
+  border: solid 2px #5484B3;
+  color: #5484B3;
+  cursor: pointer;
+}
+
+.boxFlexEnd{
+  display: flex;
+  justify-content:flex-end;
+}
+
+.buttonSecondary:hover{
+  color: white;
+  background-color: #5484B3;
 }
 
 /*Navbar*/
@@ -592,6 +602,10 @@ a{
 
 .spacingBox{
   margin-bottom: 3rem;
+}
+
+.topSpacingBox{
+  margin-top: 3rem;
 }
 
 .doubleSpacingBox{
