@@ -12,6 +12,7 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ScrollTrigger from 'react-scroll-trigger';
+import { useHistory } from 'react-router-dom';
 
 import DevelopmentServices from './SvgComponents/DevelopmentServices';
 import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure';
@@ -25,6 +26,7 @@ const ServicePage = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   const [expandedMap, setExpandedMap] = useState('panel_interconnectivity');
   const [expandedEducation, setExpandedEducation] = useState('panel_Workshops');
+  const history = useHistory();
 
   const [stateAnimation,setStateAnimation] = useState()
 
@@ -114,7 +116,7 @@ const ServicePage = () => {
             developing infrastructure for business environments..
           </p>
           <Box className={"buttonBoxMobile"}>
-            <button className={"buttonPrimary"} href={useBaseUrl("/about")}>
+            <button className={"buttonPrimary"} onClick={() => history.push("/about/")}>
               Get to Know Us
             </button>
           </Box>
@@ -629,7 +631,7 @@ const ServicePage = () => {
                       real-time auditing with encryption to reduce data breaches.
                     </p>
                     <p>
-                      <a>
+                      <a href="https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-a-great-idea-e384b298a4a8" target="_blank">
                         Learn more
                       </a>
                     </p>
@@ -650,7 +652,7 @@ const ServicePage = () => {
                       make a great ally.
                     </p>
                     <p>
-                      <a>
+                      <a href={useBaseUrl("/blog/blockchain-logistics")} target="_blank">
                         Learn more
                       </a>
                     </p>
@@ -671,7 +673,7 @@ const ServicePage = () => {
                       transactions can level-up online gaming.
                     </p>
                     <p>
-                      <a>
+                      <a href={useBaseUrl("/blog/gaming-blockchain")} target="_blank">
                         Learn more
                       </a>
                     </p>
