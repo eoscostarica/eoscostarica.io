@@ -1,6 +1,6 @@
 
 /*Fonts*/
-@font-face {
+/*@font-face {
   font-family: "Gotham";
   font-weight: normal;
   src: url("../../static/fonts/GothamPro-Medium.woff2") format("woff2");
@@ -17,6 +17,7 @@
   font-weight: lighter;
   src: url("../../static/fonts/GothamPro-Light.woff2") format("woff2");
 }
+*/
 
 
 /*blog*/
@@ -590,7 +591,6 @@ a{
 }
 
 .spacingBox{
-  margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
