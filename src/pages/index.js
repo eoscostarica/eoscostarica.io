@@ -257,11 +257,11 @@ const Home = () => {
           <Box className={"titleBox"}>
             <h2>Industries to Deploy Enterprise Blockchain</h2>
           </Box>
-          <p>
+          {/*<p>
             Blockchain can transform and remodel countless industries. The
             possibilities are endless. Do you still don’t know how blockchain
             can impact your operations? <a href={useBaseUrl("/contact-us")}>Contact us</a> so we can guide you!
-          </p>
+          </p>*/}
             <Box className={"spacingBox"}>
                 <Grid container spacing={5}>
                   <Grid item md={4}>
@@ -320,12 +320,6 @@ const Home = () => {
                 </Grid>
             </Box>
           <p>
-            The features of blockchain make it a fundamental technology,
-            meaning it can adapt to other technologies and most industries.
-            Blockchain can boost efficiency, security, and trust when
-            recording transactions, registering data and managing digital
-            assets. Also, it can automate and facilitate processes, reducing
-            costs and inefficiencies.{" "}
             <a href={useBaseUrl("/industries")}>Discover more industries </a>
             that can leverage their operations on blockchain technology.
           </p>
@@ -373,16 +367,6 @@ const Home = () => {
           <Box className={"titleBox"}>
             <h2>Get to Know EOS Costa Rica</h2>
           </Box>
-          <p>
-            EOS Costa Rica is a spinoff of a company with over three decades
-            of developing technologies. We develop blockchain-based solutions
-            deploying the{" "}
-            <a href="https://eos.io/" target="_blank">
-              EOSIO
-            </a>{" "}
-            protocol, provide blockchain infrastructures, and offer training
-            and workshops. <a href={useBaseUrl("/contact-us")}>Let’s get the conversation started!</a>
-          </p>
           <br/>
           <br/>
           <Box className={"spacingBox"}>
