@@ -8,28 +8,33 @@ import { useTheme } from '@material-ui/core/styles';
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
-
-import styles from "./styles.module.css";
-import useStyles from "../css/styles.js"
+import ScrollTrigger from 'react-scroll-trigger';
 
 import DevelopmentServices from './SvgComponents/DevelopmentServices';
 import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure';
-import Map from './SvgComponents/Map';
+import Payments from './Animations/Payments';
+import Logistic from './Animations/Logistic';
+import Games from './Animations/Games';
 
 
 const ServicePage = () => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-  const [activeItemIndex, setActiveItemIndex] = useState(0);
-  const classes = useStyles()
-  const [expanded, setExpanded] = useState('panel_AssetManagementy');
   const [expandedMap, setExpandedMap] = useState('panel_interconnectivity');
   const [expandedEducation, setExpandedEducation] = useState('panel_Workshops');
+
+  const [stateAnimation,setStateAnimation] = useState()
+
+  const handleScrollEnter = () => {
+    setStateAnimation(true)
+  }
+
+  const handleScrollExit = () => {
+    setStateAnimation(false)
+  }
 
   const refDevelopment = useRef(null)
   const refInfraestrcture = useRef(null)
@@ -40,10 +45,6 @@ const ServicePage = () => {
   const handleScrollEdu = () => refEducation.current.scrollIntoView({ behavior: 'smooth', block: "start", inline: "nearest" })  
 
 
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
-
   const handleChangeMap = (panel) => (event, newExpanded) => {
     setExpandedMap(newExpanded ? panel : false);
   };
@@ -52,10 +53,9 @@ const ServicePage = () => {
     setExpandedEducation(newExpanded ? panel : false);
   };
 
-  
-  
   useEffect(() => {
-    handleChange('panel_AssetManagementy')
+    handleChangeMap('panel_interconnectivity')
+    setExpandedEducation('panel_Workshops')
   }, []);
 
 
@@ -418,7 +418,7 @@ const ServicePage = () => {
                   className={"accordion"}
                 >
                   <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h3  className={classes.h3}>Network interconnectivity</h3>
+                    <h3 >Network interconnectivity</h3>
                   </AccordionSummary>
                   <AccordionDetails style={{padding:0}}>
                     <p>
@@ -518,7 +518,7 @@ const ServicePage = () => {
                       className={"accordion"}
                     >
                       <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                        <h3  className={classes.h3}>Executive Workshops</h3>
+                        <h3 >Executive Workshops</h3>
                       </AccordionSummary>
                       <AccordionDetails style={{padding:0}}>
                         <p >
@@ -602,13 +602,98 @@ const ServicePage = () => {
     )
   }
 
+  const IndustryBlockchain = () => {
+    return (
+      <Box className={"containerSec"}>
+        <Box className={"sectionPadding"}>
+          <Box className={"titleBox"}>
+            <h2>How Can Your Industry Deploy Blockchain?</h2>
+          </Box>
+          <p>
+            Blockchain technology has the capabilities to transform many industries, including:
+          </p>
+            <Box className={"spacingBox"}>
+                <Grid container spacing={5}>
+                  <Grid item md={4}>
+                    <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
+                      <Box className={"imgBox"}>
+                        <Payments state={stateAnimation}/>
+                      </Box>
+                    </ScrollTrigger>
+                    <Box className={"h3Box"}>
+                      <h3>Payments and Transfers</h3>
+                    </Box>
+                    <p>
+                      Blockchain enables an efficient and secure way to register
+                      transactions that can facilitate payments and offer near
+                      real-time auditing with encryption to reduce data breaches.
+                    </p>
+                    <p>
+                      <a>
+                        Learn more
+                      </a>
+                    </p>
+                  </Grid>
+                  <Grid item md={4}>
+                    <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
+                      <Box className={"imgBox"}>
+                        <Logistic state={stateAnimation}/>
+                      </Box>
+                    </ScrollTrigger>
+                    <Box className={"h3Box"}>
+                      <h3>Logistics and Supply Chain</h3>
+                    </Box>
+                    <p>
+                      In an industry that involves dozens of stakeholders, the
+                      capabilities of blockchain and smart contracts for
+                      traceability, authorizations management, and automation can
+                      make a great ally.
+                    </p>
+                    <p>
+                      <a>
+                        Learn more
+                      </a>
+                    </p>
+                  </Grid>
+                  <Grid item md={4}>
+                    <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
+                      <Box className={"imgBox"}>
+                        <Games state={stateAnimation}/>
+                      </Box>
+                    </ScrollTrigger>
+                      <Box className={"h3Box"}>
+                        <h3>Gaming</h3>
+                      </Box>
+                    <p>
+                      Blockchain enables a better way to transfer, valorize, and
+                      collect digital in-game assets. Also, its capabilities to
+                      increase security and offer a more efficient way for
+                      transactions can level-up online gaming.
+                    </p>
+                    <p>
+                      <a>
+                        Learn more
+                      </a>
+                    </p>
+                  </Grid>
+                </Grid>
+            </Box>
+            <p>
+              Learn more about other industries that blockchain is transforming. <a href={useBaseUrl("/industries")}>Read more.</a>
+            </p>
+        </Box>
+      </Box>
+    )
+  }
+
+
   return (
     <Layout>
-      <Box className={classes.mainContainer}>
+      <Box className={"mainContainer"}>
         {!isMobile && 
           <Parallax strength={800}>
-            <Background className={classes.bgParallax}>
-                <Box className={classes.imgParallax} />
+            <Background className={"bgParallax"}>
+                <Box className={"imgParallax"} />
             </Background>
             <HeroSection />
             <BlockchainDev />
@@ -622,7 +707,7 @@ const ServicePage = () => {
         }
         <BlockchainInfrastructure />
         <EducationTraining />
-
+        <IndustryBlockchain />
       </Box>
     </Layout>
   );
