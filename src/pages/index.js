@@ -11,7 +11,6 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import ScrollTrigger from 'react-scroll-trigger';
 
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
@@ -235,11 +234,6 @@ const Home = () => {
   }
 
   const EnterpriseBlockchain = () => {
-    const trigger = useScrollTrigger({
-      disableHysteresis: true,
-      threshold: 5000
-    })
-
     return (
       <Box className={"containerSec"}>
         <Box className={"sectionPadding"}>
