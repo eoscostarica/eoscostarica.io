@@ -76,7 +76,7 @@ const ServicePage = () => {
           </p>
           <p>
             We have years of experience integrating enterprise blockchain solutions and
-            developing infrastructure for business environments..
+            developing infrastructure for business environments.
           </p>
           <Box className={"doubleSpacingBox"}>
             <Grid container spacing={5}>
@@ -141,6 +141,7 @@ const ServicePage = () => {
           <Box>
             <Grid container>
               <Grid item xs={12} md={7}>
+              <Box className={"spacingBox"}>
                 <p>
                   Explore the possibilities that blockchain technology offers. Boost
                   your operations with increased transparency, security, and
@@ -157,6 +158,7 @@ const ServicePage = () => {
                   <a href={useBaseUrl("/industries")}>industries page</a> to learn
                   more
                 </p>
+                </Box>
                 <Box className={"spacingBox"}>
                   <Box className={"h3Box"}>
                     <h3 >Enterprise Blockchain</h3>
@@ -229,14 +231,16 @@ const ServicePage = () => {
                   <Box className={"h3Box"}>
                     <h3>A Solution-based Approach</h3>
                   </Box>
-                  <p>
-                    EOS Costa Rica leverages a cross-functional team that follows an
-                    Agile methodology. We seek efficiency and collaboration and
-                    prioritize the customer’s needs to develop solutions that add
-                    value to their end- users. Also, we adapt to our clients’
-                    budgets, without compromising thought leadership or quality.
-                    Learn more about our work style:
-                  </p>
+                  <Box className={"spacingBox"}>
+                    <p>
+                      EOS Costa Rica leverages a cross-functional team that follows an
+                      Agile methodology. We seek efficiency and collaboration and
+                      prioritize the customer’s needs to develop solutions that add
+                      value to their end- users. Also, we adapt to our clients’
+                      budgets, without compromising thought leadership or quality.
+                      Learn more about our work style:
+                    </p>
+                  </Box>
                 </Grid>
                 <Grid item xs={12} md={4}>
 
