@@ -36,10 +36,10 @@ const Home = () => {
               <h1>Enterprise Blockchain Solutions</h1>
               <h1>That Fit Your Needs</h1>
           </Box>
-          <p >Deploy EOSIO blockchain technology to improve transparency, boost efficiency, and reduce costs.</p>
+          <p >Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.</p>
           <p>Start transforming your organization by leveraging enterprise blockchain networks.</p>
           <Box className={"buttonBox"}>
-            <button className={"buttonPrimary"} href={useBaseUrl("/services")}  >Learn More</button>
+            <button className={"buttonPrimary"} href={useBaseUrl("/services")} >Check our services</button>
           </Box>
         </Box>
         }
@@ -83,7 +83,7 @@ const Home = () => {
                   <h3>Improve transparency and traceability</h3>
                 </Box>
                 <p>
-                  A blockchain registers transactions in chronological order,
+                  A <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain</a> registers transactions in chronological order,
                   enabling full traceability of data that can be accessed in
                   near real-time. These registries are immutable, meaning they
                   cannot be altered, thus offering higher transparency in
