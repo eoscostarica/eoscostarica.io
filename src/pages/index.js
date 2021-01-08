@@ -257,11 +257,6 @@ const Home = () => {
           <Box className={"titleBox"}>
             <h2>Industries to Deploy Enterprise Blockchain</h2>
           </Box>
-          {/*<p>
-            Blockchain can transform and remodel countless industries. The
-            possibilities are endless. Do you still don’t know how blockchain
-            can impact your operations? <a href={useBaseUrl("/contact-us")}>Contact us</a> so we can guide you!
-          </p>*/}
             <Box className={"spacingBox"}>
                 <Grid container spacing={5}>
                   <Grid item md={4}>
