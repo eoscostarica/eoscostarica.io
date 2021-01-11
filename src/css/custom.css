@@ -115,7 +115,6 @@ h3 {
 
 h4 {
   font-family: 'Gotham',Arial, sans-serif;
-  font-family: 'Gotham';
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -171,7 +170,7 @@ a{
 .buttonPrimary{
   font-family: 'Gotham',Arial, sans-serif;
   width: auto;
-  padding: 20px;
+  padding: 25px;
   background-color: #5484b3;
   font-size: 21px;
   color: white;
@@ -184,18 +183,23 @@ a{
   opacity:0.8;
 }
 
-
 .buttonSecondary{
   width: auto;
-  height: 60px;
+  padding: 25px;
   background-color: transparent;
   font-size: 21px;
   color: white;
   border-radius: 0px;
   display: flex;
   justify-content: center;
-  border: solid 1px #5484b3;
+  border: solid 2px #5484b3;
   color: #5484b3;
+  cursor: pointer;
+}
+
+.buttonSecondary:hover{
+  color: white;
+  background-color: #5484b3;
 }
 
 /*Navbar*/
@@ -384,7 +388,7 @@ a{
   padding-bottom: 140px;
 }
 
-.footerLogoBox{
+.buttonBoxMobile{
   display: flex;
   justify-content: center;
 }
@@ -440,7 +444,7 @@ a{
   max-width: var(--ifm-container-width);
   margin: 0 auto;
   display: flex;
-  width: 100%;
+  width: 1100px;
   justify-content: center;
   padding: 0px;
 }
@@ -562,9 +566,7 @@ a{
   width: 1100px;
 }
 
-.accordionBox{
-  margin-top: 3rem;
-}
+
 
 .accordion{
   width: 100%;
@@ -629,8 +631,14 @@ a{
 }
 
 
-/*contact*/
+/*services*/
 
+.centerBox{
+  display: flex;
+  justify-content: center;
+}
+
+/* Contact */
 .contactFormBox{
   margin-bottom: 3rem;
 }
@@ -638,6 +646,11 @@ a{
 @media only screen and (max-width: 960px) {
   .footerLogo {
     width: 80%;
+  }
+  
+  .footerLogoBox{
+    display: flex;
+    justify-content: center;
   }
 
   .h3Footer{
@@ -656,6 +669,10 @@ a{
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+
+  .containerSec{
+    width: 100%;
   }
 
   .section{
@@ -723,7 +740,7 @@ a{
 
   h4{
     line-height: 25px;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
     padding-left: 5vw;
     padding-right: 5vw;
