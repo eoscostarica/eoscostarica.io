@@ -531,6 +531,11 @@ a{
   background-color: #f1f1f1;
 }
 
+.sectionContact{
+  width: 1100px;
+  padding-top: 250px;
+}
+
 .logoMobileBox{
   width: 100%;
   display: flex;
@@ -623,6 +628,13 @@ a{
   width: 85%;
 }
 
+
+/*contact*/
+
+.contactFormBox{
+  margin-bottom: 3rem;
+}
+
 @media only screen and (max-width: 960px) {
   .footerLogo {
     width: 80%;
@@ -680,6 +692,11 @@ a{
     width: 100%;
   }
 
+  .contactFormBox{
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
   h1{
     line-height: 30px;
     font-size: 30px;
@@ -715,7 +732,7 @@ a{
   p{
     padding-left: 5vw;
     padding-right: 5vw;
-    font-size: 15;
+    font-size: 15px;
   }
 
   /*blog*/
