@@ -256,7 +256,7 @@ const Home = () => {
                   <Grid item md={4}>
                     <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
                       <Box className={"imgBox"}>
-                        <Payments state={stateAnimation}/>
+                        <img src={useBaseUrl("img/payments.svg")} />
                       </Box>
                     </ScrollTrigger>
                     <Box className={"h3Box"}>
@@ -271,7 +271,7 @@ const Home = () => {
                   <Grid item md={4}>
                     <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
                       <Box className={"imgBox"}>
-                        <Logistic state={stateAnimation}/>
+                        <img src={useBaseUrl("img/logistics.svg")} />
                       </Box>
                     </ScrollTrigger>
                     <Box className={"h3Box"}>
@@ -287,7 +287,7 @@ const Home = () => {
                   <Grid item md={4}>
                     <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
                       <Box className={"imgBox"}>
-                        <Games state={stateAnimation}/>
+                        <img src={useBaseUrl("img/gaming.svg")} />
                       </Box>
                     </ScrollTrigger>
                       <Box className={"h3Box"}>
