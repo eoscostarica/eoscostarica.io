@@ -7,20 +7,24 @@ import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Box from '@material-ui/core/Box'
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
+import ScrollTrigger from 'react-scroll-trigger';
 
 import styles from "./styles.module.css";
 import useStyles from "../css/styles.js"
+import Payments from './Animations/Payments';
+import Logistic from './Animations/Logistic';
+import Games from './Animations/Games';
 
 const Industries = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const classes = useStyles()
-  const [expanded, setExpanded] = useState('panel_AssetManagementy');
+  const [expanded, setExpanded] = useState();
+  const [stateAnimation,setStateAnimation] = useState(false)
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -30,53 +34,61 @@ const Industries = () => {
     handleChange('panel_AssetManagementy')
   }, []);
 
+  const handleScrollEnter = () => {
+    setStateAnimation(true)
+  }
+
+  const handleScrollExit = () => {
+    setStateAnimation(false)
+  }
+
   const HeroSection = () => {
     return (
-      <Box className={classes.container}>
+      <Box className={"containerSec"}>
         {!isMobile && 
-          <Box className={classes.sectionHero}>
-          <Box className={classes.titleBox}>
-            <Typography className={classes.h1}>Blockchain Solutions</Typography>
-            <Typography className={classes.h1}>by Industry</Typography>
+          <Box className={"sectionHero"}>
+          <Box className={"titleBox"}>
+            <h1 >Blockchain Solutions</h1>
+            <h1 >by Industry</h1>
           </Box>
-          <Typography className={classes.body1} >
+          <p >
             Organizations and companies in many industries deploy blockchain
             technology to solve significant problems and improve their
             operations. These are some use cases of enterprise blockchain in
             different sectors, such as financial, supply chain, gaming, and
             healthcare.
-          </Typography>
-          <Box className={classes.buttonBox}>
-            <Button className={classes.buttonPrimary} href={useBaseUrl("/contact-us")}>
+          </p>
+          <Box className={"buttonBox"}>
+            <button className={"buttonPrimary"} href={useBaseUrl("/contact-us")}>
               Contact us
-            </Button>
+            </button>
           </Box>
         </Box>
         }
         {isMobile && 
-          <Box className={classes.sectionHeroMobile}>
-            <Box className={classes.logoMobileBox}>
+          <Box className={"sectionHeroMobile"}>
+            <Box className={"logoMobileBox"}>
               <img
-                  className={classes.logoMobile}
+                  className={"logoMobile"}
                   src={useBaseUrl("img/eoscr-logo.png")}
                   alt="EOS CR LOGO"
                 />
             </Box>
-          <Box className={classes.titleBox}>
-            <Typography className={classes.h1}>Blockchain Solutions</Typography>
-            <Typography className={classes.h1}>by Industry</Typography>
+          <Box className={"titleBox"}>
+            <h1 >Blockchain Solutions</h1>
+            <h1 >by Industry</h1>
           </Box>
-          <Typography className={classes.body1} >
+          <p >
             Organizations and companies in many industries deploy blockchain
             technology to solve significant problems and improve their
             operations. These are some use cases of enterprise blockchain in
             different sectors, such as financial, supply chain, gaming, and
             healthcare.
-          </Typography>
-          <Box className={classes.buttonBoxMobile}>
-            <Button className={classes.buttonPrimary} href={useBaseUrl("/contact-us")}>
+          </p>
+          <Box className={"buttonBoxMobile"}>
+            <button className={"buttonPrimary"} href={useBaseUrl("/contact-us")}>
               Contact us
-            </Button>
+            </button>
           </Box>
         </Box>
       }
@@ -84,89 +96,82 @@ const Industries = () => {
     )
   }
 
-  const MoreIndustries = () => {
+  const PrincipalIndustries = () => {
     return (
-      <Box className={classes.container}>
-        <Box className={clsx(classes.section,{[classes.sectionPadding] : isMobile})}>
-          <Box className={clsx( styles.knowEOSCRBox)}>
-            <Box className={clsx(styles.knowRowBox, styles.colReverse)}>
-              <picture>
-                <source
-                  className={styles.industriesImg}
-                  srcSet={useBaseUrl("img/payments.jp2")}
-                  type="image/jp2"
-                />
-                <img
-                  className={styles.industriesImg}
-                  src={useBaseUrl("img/payments.webp")}
-                />
-              </picture>
-              <Box className={styles.industriesBlockSection}>
-                <Typography className={classes.body1}>
+      <Box className={"containerSec"}>
+        <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
+        <br/>
+          <Grid container spacing={5}>
+            <Grid item xs={12} md={4}>
+              <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
+                <Box className={"imgBox"}>
+                  <Payments state={stateAnimation}/>
+                </Box>
+              </ScrollTrigger>
+            </Grid>
+            <Grid item xs={12} md={8}>
+              <h2 style={{lineHeight: '26px'}}>Blockchain</h2>
+              <h2 style={{lineHeight: '26px'}}>Development</h2>
+              <h2 style={{lineHeight: '26px'}}>Services</h2>
+                <p style={{marginTop: '30px'}}>
                   Blockchain enables an efficient and secure way to register
                   transactions that can facilitate payments and offer near
                   real-time auditing with encryption to reduce data breaches.
                   Blockchain may also promote alternate financial applications,
                   such as new liquidity solutions and microloans management, and
                   improved payment structures.
-                </Typography>
+                </p>
+                <br/>
                 <a className={classes.a} target="_blank">
                   Read More
                 </a>
-              </Box>
-            </Box>
-            <Box className={clsx(styles.knowRowBox, styles.colReverse)}>
-              <picture>
-                <source
-                  className={styles.industriesImg}
-                  srcSet={useBaseUrl("img/logistics.jp2")}
-                  type="image/jp2"
-                />
-                <img
-                  className={styles.industriesImg}
-                  src={useBaseUrl("img/logistics.webp")}
-                />
-              </picture>
-              <Box className={styles.industriesBlockSection}>
-                <Typography className={classes.body1}>
-                  In an industry that involves dozens of stakeholders, the
-                  capabilities of blockchain and smart contracts for traceability,
-                  authorizations management, and automation can make a great ally.
-                  Blockchain can integrate different technologies, such as IoT and
-                  AI, to create comprehensive solutions and streamline processes
-                  in the logistics and supply chain industry.
-                </Typography>
-                <a className={classes.a} target="_blank">
-                  Read More
-                </a>
-              </Box>
-            </Box>
-            <Box className={clsx(styles.knowRowBox, styles.colReverse)}>
-              <picture>
-                <source
-                  className={styles.industriesImg}
-                  srcSet={useBaseUrl("img/gaming.jp2")}
-                  type="image/jp2"
-                />
-                <img
-                  className={styles.industriesImg}
-                  src={useBaseUrl("img/gaming.webp")}
-                />
-              </picture>
-              <Box className={styles.industriesBlockSection}>
-                <Typography className={classes.body1}>
-                  The gaming industry is booming—nearly 40% of the total world's
-                  population play video games. Blockchain enables a better way to
-                  transfer, valorize, and collect digital in-game assets. Its
-                  capabilities to increase security and offer a more efficient way
-                  for transactions can level-up online gaming.
-                </Typography>
-                <a className={classes.a} target="_blank">
-                  Read More
-                </a>
-              </Box>
-            </Box>
-          </Box>
+            </Grid>
+            <Grid style={{marginTop:'50px'}} item xs={12} md={4}>
+              <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
+                <Box className={"imgBox"}>
+                  <Logistic state={stateAnimation}/>
+                </Box>
+              </ScrollTrigger>
+            </Grid>
+            <Grid style={{marginTop:'50px'}} item xs={12} md={8}>
+              <h2 style={{lineHeight: '26px'}}>Logistics and</h2>
+              <h2 style={{lineHeight: '26px'}}>supply chain</h2>
+              <p style={{marginTop: '30px'}}>
+                In an industry that involves dozens of stakeholders, the
+                capabilities of blockchain and smart contracts for traceability,
+                authorizations management, and automation can make a great ally.
+                Blockchain can integrate different technologies, such as IoT and
+                AI, to create comprehensive solutions and streamline processes
+                in the logistics and supply chain industry.
+              </p>
+              <br/>
+              <a target="_blank">
+                Read More
+              </a>
+            </Grid>
+            <Grid style={{marginTop:'-40px'}} item xs={12} md={4}>
+              <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
+                <Box className={"imgBox"}>
+                  <Games state={stateAnimation}/>
+                </Box>
+              </ScrollTrigger>
+            </Grid>
+            <Grid style={{paddingTop:'110px'}} item xs={12} md={8}>
+              <h2 style={{lineHeight: '26px'}}>Gaming and</h2>
+              <h2 style={{lineHeight: '26px'}}>Esports</h2>
+              <p style={{marginTop: '30px'}}>
+                The gaming industry is booming—nearly 40% of the total world's
+                population play video games. Blockchain enables a better way to
+                transfer, valorize, and collect digital in-game assets. Its
+                capabilities to increase security and offer a more efficient way
+                for transactions can level-up online gaming.
+              </p>
+              <br/>
+              <a className={classes.a} target="_blank">
+                Read More
+              </a>
+            </Grid>
+          </Grid>
         </Box>
       </Box>
     )
@@ -174,154 +179,190 @@ const Industries = () => {
 
   const BlockchainMoreIndustries = () => {
     return (
-      <Box className={classes.container}>
-        <Box className={clsx(classes.section,{[classes.sectionPadding] : isMobile})}>
-          <Box className={styles.enterpriceTitleBox}>
-            <Typography className={classes.h2}>Blockchain in More Industries</Typography>
-          </Box>
-          <Box className={classes.accordionBox}>
-            <Grid 
-              direction="row"
-              justify="flex-start"
-              alignItems="center"
-            >
-              <Accordion square expanded={expanded === 'panel_AssetManagementy'} style={{backgroundColor:'#ffffff'}} onChange={handleChange('panel_AssetManagementy')} className={classes.accordion} >
-                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <Typography  className={classes.h3}>Asset Managementy</Typography>
+      <Box className={"containerSec"}>
+        <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <Grid container spacing={5}>
+            <Grid item xs={12} md={12}>
+              <h2>Blockchain in More Industries</h2>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Accordion 
+                square
+                expanded={expanded === 'panel_AssetManagementy'}
+                style={{boxShadow:'none'}}
+                onChange={handleChange('panel_AssetManagementy')}
+                className={"accordion"} >
+                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'0px'}}>Asset Managementy</h3>
                 </AccordionSummary>
-                <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
+                <AccordionDetails style={{padding:0}}>
+                  <p>
                     Blockchain technology enables an immutable and secure way to
                     tokenize and manage tangible and intangible assets. Some
                     opportunities include innovative liquidity options and reduced
                     management costs.
-                  </Typography>
+                  </p>
                 </AccordionDetails>
               </Accordion>
-              <Accordion square expanded={expanded === 'panel_Decentralized'} style={{backgroundColor:'#ffffff'}} onChange={handleChange('panel_Decentralized')} className={classes.accordion} >
-                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <Typography  className={classes.h3}>Decentralized Finance</Typography>
+              <Accordion 
+                square
+                expanded={expanded === 'panel_Decentralized'}
+                style={{boxShadow:'none'}}
+                onChange={handleChange('panel_Decentralized')}
+                className={"accordion"} >
+                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'1px'}}>Decentralized Finance</h3>
                 </AccordionSummary>
-                <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
+                <AccordionDetails style={{padding:0}}>
+                  <p>
                     Also known as DeFi, decentralized finance leverages blockchain
                     technology to explore new liquidity opportunities for
                     citizens. Our team is part of evodex, an open-source DeFi app.
-                  </Typography>
+                  </p>
                 </AccordionDetails>
               </Accordion>
-              <Accordion square expanded={expanded === 'panel_Identity'} style={{backgroundColor:'#ffffff'}} onChange={handleChange('panel_Identity')} className={classes.accordion} >
-                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <Typography  className={classes.h3}>Digital Identity</Typography>
+              <Accordion 
+                square
+                expanded={expanded === 'panel_Identity'}
+                style={{boxShadow:'none'}}
+                onChange={handleChange('panel_Identity')}
+                className={"accordion"} >
+                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'1px'}}>Digital Identity</h3>
                 </AccordionSummary>
-                <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
+                <AccordionDetails style={{padding:0}}>
+                  <p>
                     Blockchain allows an immutable, transparent, and secure system
                     to manage digital identities that can interconnect with IoT,
                     biometrics, and enterprise management systems.
-                  </Typography>
+                  </p>
                 </AccordionDetails>
               </Accordion>
-              <Accordion square expanded={expanded === 'panel_Energy'} style={{backgroundColor:'#ffffff'}} onChange={handleChange('panel_Energy')} className={classes.accordion} >
-                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <Typography  className={classes.h3}>Energy</Typography>
+              <Accordion
+                square
+                expanded={expanded === 'panel_Energy'}
+                style={{boxShadow:'none'}}
+                onChange={handleChange('panel_Energy')}
+                className={"accordion"} >
+                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'1px'}}>Energy</h3>
                 </AccordionSummary>
-                <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
+                <AccordionDetails style={{padding:0}}>
+                  <p>
                     Blockchain offers an efficient and transparent way to improve
                     the operations, distribution, and data management for energy
                     companies. Decentralized networks may help promote sustainable
                     and private energy generation alternatives.
-                  </Typography>
+                  </p>
                 </AccordionDetails>
               </Accordion>
-              <Accordion square expanded={expanded === 'panel_Entertainment'} style={{backgroundColor:'#ffffff'}} onChange={handleChange('panel_Entertainment')} className={classes.accordion} >
-                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <Typography  className={classes.h3}>Media and Entertainment</Typography>
+              <Accordion square expanded={expanded === 'panel_Tech'} style={{boxShadow:'none'}} onChange={handleChange('panel_Tech')} className={"accordion"} >
+                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'1px'}}>Legal Tech</h3>
                 </AccordionSummary>
-                <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
-                    The blockchain’s capabilities to securely and immutably store
-                    registries can help reduce piracy and disputes. Also,
-                    blockchain can protect IP and improve traceability of payments
-                    and content distribution.
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-            </Grid>
-            <Grid 
-              direction="row"
-              justify="flex-start"
-              alignItems="center"
-            >
-              <Accordion square expanded={expanded === 'panel_Government'} style={{backgroundColor:'#ffffff'}} onChange={handleChange('panel_Government')} className={classes.accordion} >
-              <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                <Typography  className={classes.h3}>Government</Typography>
-              </AccordionSummary>
-              <AccordionDetails className={classes.accordionPadding}>
-                <Typography className={classes.body1}>
-                  Government institutions can deploy blockchain technology to
-                  leverage its transparency and immutability features to
-                  increase trust between the public sector and the citizens. It
-                  also allows a cost-efficient way to register data and
-                  accountability.
-                </Typography>
-              </AccordionDetails>
-              </Accordion>
-              <Accordion square expanded={expanded === 'panel_Insurance'} style={{backgroundColor:'#ffffff'}} onChange={handleChange('panel_Insurance')} className={classes.accordion} >
-                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <Typography  className={classes.h3}>Healthcare and Insurance</Typography>
-                </AccordionSummary>
-                <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
-                    Blockchain technology offers improved efficiency,
-                    traceability, and security to store medical and other
-                    sensitive data from patients. Smart contracts help reduce
-                    costs for insurance claims processing.
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion square expanded={expanded === 'panel_Tech'} style={{backgroundColor:'#ffffff'}} onChange={handleChange('panel_Tech')} className={classes.accordion} >
-                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <Typography  className={classes.h3}>Legal Tech</Typography>
-                </AccordionSummary>
-                <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
+                <AccordionDetails style={{padding:0}}>
+                  <p>
                     Smart contracts are computer codes that can execute
                     automatically and autonomously according to the contract
                     terms. These may transform legal processes by adding
                     transparency, efficiency, and immutable registries.
-                  </Typography>
+                  </p>
                 </AccordionDetails>
               </Accordion>
-              <Accordion square expanded={expanded === 'panel_RealEstate'} style={{backgroundColor:'#ffffff'}} onChange={handleChange('panel_RealEstate')} className={classes.accordion} >
-                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <Typography  className={classes.h3}>Real Estate</Typography>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Accordion
+                square
+                expanded={expanded === 'panel_Government'}
+                style={{boxShadow:'none'}}
+                onChange={handleChange('panel_Government')}
+                className={"accordion"} >
+                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'1px'}}>Government</h3>
                 </AccordionSummary>
-                <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
+                <AccordionDetails style={{padding:0}}>
+                  <p>
+                    Government institutions can deploy blockchain technology to
+                    leverage its transparency and immutability features to
+                    increase trust between the public sector and the citizens. It
+                    also allows a cost-efficient way to register data and
+                    accountability.
+                  </p>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion square expanded={expanded === 'panel_Entertainment'} style={{boxShadow:'none'}} onChange={handleChange('panel_Entertainment')} className={"accordion"} >
+                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'1px'}}>Media and Entertainment</h3>
+                </AccordionSummary>
+                <AccordionDetails style={{padding:0}}>
+                  <p>
+                    The blockchain’s capabilities to securely and immutably store
+                    registries can help reduce piracy and disputes. Also,
+                    blockchain can protect IP and improve traceability of payments
+                    and content distribution.
+                  </p>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion
+                square
+                expanded={expanded === 'panel_Insurance'}
+                style={{boxShadow:'none'}}
+                onChange={handleChange('panel_Insurance')}
+                className={"accordion"} >
+                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <Typography  className={classes.h3}>Healthcare and Insurance</Typography>
+                </AccordionSummary>
+                <AccordionDetails style={{padding:0}}>
+                  <p>
+                    Blockchain technology offers improved efficiency,
+                    traceability, and security to store medical and other
+                    sensitive data from patients. Smart contracts help reduce
+                    costs for insurance claims processing.
+                  </p>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion 
+                square
+                expanded={expanded === 'panel_RealEstate'}
+                style={{boxShadow:'none'}}
+                onChange={handleChange('panel_RealEstate')}
+                className={"accordion"} >
+                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'1px'}}>Real Estate</h3>
+                </AccordionSummary>
+                <AccordionDetails style={{padding:0}}>
+                  <p>
                     Leverage real estate investments with blockchain technology by
                     creating new business models. Blockchain helps integrate
                     digital assets for liquidity and streamline investor relations
                     and portfolio management.
-                  </Typography>
+                  </p>
                 </AccordionDetails>
               </Accordion>
-              <Accordion square expanded={expanded === 'panel_Sports'} style={{backgroundColor:'#ffffff'}} onChange={handleChange('panel_Sports')} className={classes.accordion} >
-                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <Typography  className={classes.h3}>Sports</Typography>
+              <Accordion 
+                square 
+                expanded={expanded === 'panel_Sports'} 
+                style={{boxShadow:'none'}} 
+                onChange={handleChange('panel_Sports')} 
+                className={"accordion"} >
+                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'1px'}}>Sports</h3>
                 </AccordionSummary>
-                <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
+                <AccordionDetails style={{padding:0}}>
+                  <p>
                     Blockchain in sports offers a great way to increase fan
                     engagement, promote active participation in decision-making,
                     and monetize through new streams such as player content and
                     collectibles.
-                  </Typography>
+                  </p>
                 </AccordionDetails>
               </Accordion>
-            </Grid> 
-          </Box>
+            </Grid>
+          </Grid>
         </Box>
       </Box>
     )
@@ -329,84 +370,68 @@ const Industries = () => {
 
   const ChoosingEnterprise = () => {
     return (
-      <Box className={classes.container}>
-        <Box className={clsx(classes.section,{[classes.sectionPadding] : isMobile})}>
-          <Box className={classes.titleBox}>
-            <Typography className={classes.h2}>
+      <Box className={"containerSec"}>
+        <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
+          <Box className={"titleBox"}>
+            <h2>
               Choosing an Enterprise Blockchain
-            </Typography>
+            </h2>
           </Box>
-            <Typography className={classes.body1}>
+            <p>
               There are several enterprise blockchain platforms in the market
               with different characteristics and capabilities. The following is
               a list of some key features you must consider when choosing what
               blockchain platform is the most suitable for your organization:
-            </Typography>
-          <Box className={styles.enterpriceTitleBox}>
-            <Box className={clsx(styles.colBox, styles.flexContent)}>
-              <Box className={styles.flexBox}>
-                <Box>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Privacy and transparency</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    How are the blockchain’s security and confidentiality
-                    protocols different from others’, and how does it handle
-                    transparency?
-                  </Typography>
-                </Box>
-                <Box>
-                  <br></br>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Cost-efficiency</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    Would the organization see a significant reduction in costs
-                    by integrating smart contracts or simplifying the data
-                    sharing process?
-                  </Typography>
-                </Box>
-                <Box>
-                  <br></br>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Quick adoption</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    Can your team use their experience with programming
-                    languages, or do they need to learn a new one?
-                  </Typography>
-                </Box>
-                <Box>
-                <br></br>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Speed or throughput</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    How quickly does your solution need to be? Are you a
-                    high-frequency trading company, or can you afford longer
-                    block confirmation times?
-                  </Typography>
-                </Box>
+            </p>
+          <Grid style={{justifyContent:'flex-end'}} container spacing={5}>
+            <Grid item xs={12} md={4}>
+              <Box className={classes.h3Box}>
+                <h3>Privacy and transparency</h3>
               </Box>
-              <picture>
-                <source
-                  className={styles.industriesImg}
-                  srcSet={useBaseUrl("img/enterprise.jp2")}
-                  type="image/jp2"
-                />
-                <img
-                  className={styles.industriesImg}
-                  src={useBaseUrl("img/enterprise.webp")}
-                />
-              </picture>
-            </Box>
-          </Box>
+              <p>
+                How are the blockchain’s security and confidentiality
+                protocols different from others’, and how does it handle
+                transparency?
+              </p>
+            </Grid>
+            <Grid style={{justifyContent:'flex-end'}} item xs={12} md={4}>
+              <Box className={classes.h3Box}>
+                <h3>Cost-efficiency</h3>
+              </Box>
+              <p>
+                Would the organization see a significant reduction in costs
+                by integrating smart contracts or simplifying the data
+                sharing process?
+              </p>
+            </Grid>
+          </Grid>
+            <Grid container spacing={5}>
+              <Grid item xs={12} md={4}>
+                <Box className={classes.h3Box}>
+                  <h3>Quick adoption</h3>
+                </Box>
+                <p>
+                  Can your team use their experience with programming
+                  languages, or do they need to learn a new one?
+                </p>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Box className={classes.h3Box}>
+                  <h3>Speed or throughput</h3>
+                </Box>
+                <p>
+                  How quickly does your solution need to be? Are you a
+                  high-frequency trading company, or can you afford longer
+                  block confirmation times?
+                </p>
+              </Grid>
+            </Grid>
           <Box className={styles.btnBox}>
-            <Button 
-              className={classes.buttonPrimary}
+            <button 
+              className={"buttonPrimary"}
               href={useBaseUrl("/contact-us")}>
                 Contact us
-            </Button>
+            </button>
           </Box>
         </Box>
       </Box>
@@ -417,13 +442,13 @@ const Industries = () => {
     return (
       <Box className={classes.containerGray}>
         <Box className={classes.sectionPadding}>
-          <Box className={classes.titleBox}>
-            <Typography className={classes.h2}>Additional Resources</Typography>
+          <Box className={"titleBox"}>
+            <h2>Additional Resources</h2>
           </Box>
-          <Typography className={classes.body1}>
+          <p>
             Find more interesting reads and resources to continue learning
             about enterprise blockchain and EOSIO.
-          </Typography>
+          </p>
           <br></br>
           <Box className={styles.colBox}>
             <picture>
@@ -487,13 +512,13 @@ const Industries = () => {
                 <Box className={classes.imgParallax} />
             </Background>
             <HeroSection />
-            <MoreIndustries />
+            <PrincipalIndustries />
           </Parallax>
         }
         {isMobile && 
           <>
             <HeroSection />
-            <MoreIndustries />
+            <PrincipalIndustries />
           </>
         }
         
