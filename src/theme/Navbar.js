@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useState } from "react";
 import clsx from "clsx";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { useTheme } from '@material-ui/core/styles';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
@@ -14,6 +14,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import Typography from "@material-ui/core/Typography";
 import { useLocation } from 'react-router-dom';
+
 
 const PATHS = [
   {
@@ -50,148 +51,9 @@ const PATHS = [
   },
 ];
 
-const useStyles = makeStyles({
-  navBar:{
-    zIndex:1000,
-    width:'100%',
-    position: 'fixed',
-    display: 'flex',
-    justifyContent: 'center',
-    backgroundColor:'rgba(255, 255, 255, 0)',
-  },
-  navBarScroll:{
-    backgroundColor:'rgba(255, 255, 255, 0.95)',
-  },
-  menuWrapper:{
-    width:"1100px",
-    display: 'flex',
-    
-    alignItems: 'center',
-    fontWeight: 'bold',
-    top: 0,
-    transition: '0.2s',
-    height: '60px',
-    margin: '0 auto',
-    paddingTop: '40px',
-    paddingBottom: '40px',
-
-  },
-  boxLeft:{
-    width:"100%",
-    position: 'relative',
-    display: 'flex',
-  },
-  imgBox:{
-    position: 'absolute',
-    left: '0px',
-    top: '-20px',
-    width: '330px',
-  },
-  img:{
-    WebkitTransformOrigin: 'top left',
-    WebkitTransition:'all 0.26s',
-    WebkitTransform: 'scale(1, 1)',
-    MozTransform:'scale(1, 1)',
-    OTransform:'scale(1, 1)',
-    transform:'scale(1, 1)'
-  },
-  imgDrawer:{
-    padding: '10px',
-    width: '50%',
-  },
-  imgScroll:{
-    WebkitTransformOrigin: 'top left',
-    WebkitTransition:'all 0.26s',
-    WebkitTransform: 'scale(0.4, 0.4)',
-    MozTransform:'scale(0.4, 0.4)',
-    OTransform:'scale(0.4, 0.4)',
-    transform:'scale(0.4, 0.4)'
-  },
-  boxRight:{
-    width:"70%",
-    position: 'relative',
-    display: 'flex',
-    justifyContent: 'flex-end',
-  },
-  boxLanguages: {
-    position: 'absolute',
-    right: '5px',
-    top: '-15px',
-    fontSize:' 11px',
-    fontWeight: '500',
-  },
-  svgWrapper:{
-    marginTop: 0,
-    display: 'inline-block',
-    borderRadius: '3px',
-    marginLeft: '5px',
-    marginRight: '5px',
-    
-  },
-  link: {
-    position: 'relative',
-    marginLeft:'15px',
-    color: "black",
-    fontWeight:'bold',
-    '&:after': {
-      content: '""',
-      position: 'absolute',
-      width: 0,
-      height: '5px',
-      display: 'block',
-      marginTop: '5px',
-      left: 0,
-      right:' 100%',
-      transitionProperty: 'left right',
-      transitionDuration:' 0.3s',
-      transitionTimingFunction: 'ease-out',
-    },
-    '&:hover::after': {
-      width: '100%',
-      right: 0,
-      background: '#5484b3',
-    }
-  },
-  linkActive:{
-    position: 'relative',
-    marginLeft:'15px',
-    color: "black",
-    fontWeight:'bold',
-    '&:after': {
-      content: '""',
-      position: 'absolute',
-      height: '5px',
-      display: 'block',
-      marginTop: '5px',
-      left: 0,
-      right:' 100%',
-      width: '100%',
-      background: '#5484b3',
-    },
-  },
-  btnDrawer:{
-    position: 'absolute',
-    right: '10px',
-    top: '10px',
-    color: '#5484b3'
-  },
-  drawerContent:{
-    width: '60vw'
-  },
-  linkItem:{
-    color:'black',
-    textDecoration:'none',
-    fontWeight:'bold',
-    '&:focus, &:hover': {
-      textDecoration: 'none'
-    }
-  }
-});
-
 const NavbarMenu = () => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-  const classes = useStyles()
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isBlog = location.pathname.substring(0,6) === '/blog/'
@@ -212,25 +74,27 @@ const NavbarMenu = () => {
   }
 
   return (
-    <Box  className={clsx(classes.navBar, { [classes.navBarScroll]: useTransparentBG})} >
-      <Box className={classes.menuWrapper}>
+    <Box  className={clsx("navBar", { ["navBarScroll"]: useTransparentBG})} >
+      <Box className={"menuWrapper"}>
         {isMobile && 
         <>
-          <IconButton onClick={handlerDrawer} className={classes.btnDrawer}>
-            <MenuIcon  fontSize="large"/>
-          </IconButton>
+          <Box  className={"btnDrawer"}>
+            <IconButton onClick={handlerDrawer}>
+              <MenuIcon  fontSize="large"/>
+            </IconButton>
+          </Box>
           <Drawer anchor={'left'} open={isOpen} onClose={handlerDrawer} >
-            <Box className={classes.drawerContent}>
+            <Box className={"drawerContent"}>
                 <img
-                  className={classes.imgDrawer}
+                  className={"imgDrawer"}
                   src={useBaseUrl("img/eoscr-logo.png")}
                   alt="EOS CR LOGO"
                 />
               <Divider />
               <List>
                 {PATHS.map((item) => (
-                  <Link href={useBaseUrl(item.path)} key={item.label} className={classes.linkItem} >
-                      <ListItem button>{item.label}</ListItem>
+                  <Link href={useBaseUrl(item.path)} key={item.label} style={{textDecoration: 'none'}}>
+                      <ListItem button><span className={"linkItem"}>{item.label}</span></ListItem>
                   </Link>
                 ))}
               </List>
@@ -239,18 +103,18 @@ const NavbarMenu = () => {
         </>}
         {!isMobile && 
           <>
-            <Box className={classes.boxLeft}>
-              <Box  className={classes.imgBox}>
+            <Box className={"boxLeft"}>
+              <Box  className={"imgLogoBox"}>
               <img
-                  className={!isBlog? clsx(classes.img, {[classes.imgScroll]: useTransparentBG})  : classes.imgScroll}
+                  className={!isBlog? clsx("imgLogo", {["imgLogoScroll"]: useTransparentBG})  : "imgLogoScroll"}
                   src={useBaseUrl("img/eoscr-logo.png")}
                   alt="EOS CR LOGO"
                 />
               </Box>
             </Box>
-            <Box className={classes.boxRight}>
+            <Box className={"boxRight"}>
               {!isMobile && (
-                  <Box className={classes.boxLanguages}>
+                  <Box className={"boxLanguages"}>
                     <Link href="https://es.eoscostarica.io/" color="inherit" target="_blank" >Español</Link>
                     <span>{" / "}</span>
                     <Link href="" color="inherit">English</Link>
@@ -258,8 +122,8 @@ const NavbarMenu = () => {
                 )}
                 {PATHS.map((item) => (
                   <Link href={useBaseUrl(item.path)} key={item.label}>
-                    <Box className={classes.svgWrapper}>  
-                      <Typography className={clsx(classes.link,{[classes.linkActive] : pathname === item.path})}>{item.label}</Typography>                  
+                    <Box className={"svgWrapper"}>  
+                      <h5 className={clsx("link",{["linkActive"] : pathname === item.path})}>{item.label}</h5>                  
                     </Box>
                   </Link>
                 ))}
