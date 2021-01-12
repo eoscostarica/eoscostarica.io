@@ -220,10 +220,8 @@ a{
   font-weight: bold;
   top: 0;
   transition: 0.2s;
-  height: 60px;
+  height: 80px;
   margin: 0 auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
 
 .boxLeft {
@@ -235,7 +233,14 @@ a{
 .imgLogoBox{
   position: absolute;
   left: 0px;
-  top: -20px;
+  top: -25px;
+  width: 330px;
+}
+
+.imgLogoBoxMobile{
+  position: absolute;
+  left: 15px;
+  top: 18px;
   width: 330px;
 }
 
@@ -264,39 +269,169 @@ a{
 
 .boxRight{
   width: 70%;
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .boxLanguages{
+  z-index: 300;
   position: absolute;
-  right: 5px;
-  top: -15px;
+  right: 0px;
+  top: 5px;
   font-size: 11px;
   font-weight: 500;
 }
 
-.svgWrapper{
-  margin-top: 0;
+.switch {
+  position: relative;
   display: inline-block;
-  border-radius: 3px;
-  margin-left: 15px;
-  margin-right: 15px;
+  width: 28px;
+  height: 16px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+  background-color: #5484b3;
+  background-color: #5484b3;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #5484b3;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.boxMenuItems{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menuItem{
+  position: relative;
+  cursor: pointer;
+  margin-left: 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.menuItem:hover .dropDownMenu{
+  visibility: visible;
+}
+
+.menuItem:hover .dropDownMenu::after{
+  top: 0px;
+  right: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.menuItem:hover .menuItemDrop{
+  transition-delay:  0.3s;
+  opacity: 1;
+}
+
+.dropDownMenu{
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  top: 70px;
+  
+}
+
+.dropDownMenu:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0px;
+  height: 0%;
+  margin-top: -15px;
+  width: 0%;
+  bottom: 0px;
+  background:#5484b3;
+  transition-property: width height;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  font-weight: bold;
+}
+
+.paperDropDown{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.menuItemDrop{
+  color: white;
+  white-space: nowrap;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 25px;
+  opacity: 0;
+  transition: opacity .1s ease-in-out;
+  -moz-transition: opacity .1s ease-in-out;
+  -webkit-transition: opacity .1s ease-in-out;
+
+}
+
+.menuItemDrop:hover{
+  color: black;
+}
+
+.menuItemDropActive{
+  color: black;
 }
 
 .link {
   font-family: 'Gotham',Arial, sans-serif;
-  display: inline;
-  position: relative;
-  overflow: hidden;
   color: black;
+  margin: 0px;
   font-weight: bold;
   font-size: 16px;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.25;
   letter-spacing: normal;
+  white-space: nowrap
 }
 .link:after {
   content: "";
@@ -306,26 +441,21 @@ a{
   height: 5px;
   margin-top: 5px;
   width: 0;
-  bottom: -10px;
+  bottom: 20px;
   background:#5484b3;
   transition-property: width;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
   font-weight: bold;
 }
-.link:hover:after {
-  left: 0;
+
+.menuItem:hover .link:after {
+  left: 0px;
   right: auto;
   width: 100%;
-  
 }
 
-.linkActive {
-  display: inline;
-  position: relative;
-  overflow: hidden;
-  font-weight: bold;
-}
+
 .linkActive:after {
   content: "";
   position: absolute;
@@ -334,7 +464,7 @@ a{
   height: 5px;
   margin-top: 5px;
   width: 100%;
-  bottom: -10px;
+  bottom: 20px;
   background:#5484b3;
   transition-property: width;
   transition-duration: 0.3s;
@@ -349,7 +479,7 @@ a{
 }
 
 .drawerContent{
-  width: 60vw;
+  width: 45vw;
 }
 
 .linkItem{
