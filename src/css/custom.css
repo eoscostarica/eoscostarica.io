@@ -115,7 +115,6 @@ h3 {
 
 h4 {
   font-family: 'Gotham',Arial, sans-serif;
-  font-family: 'Gotham';
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -171,7 +170,7 @@ a{
 .buttonPrimary{
   font-family: 'Gotham',Arial, sans-serif;
   width: auto;
-  padding: 20px;
+  padding: 25px;
   background-color: #5484b3;
   font-size: 21px;
   color: white;
@@ -394,7 +393,7 @@ a{
   padding-bottom: 140px;
 }
 
-.footerLogoBox{
+.buttonBoxMobile{
   display: flex;
   justify-content: center;
 }
@@ -450,7 +449,7 @@ a{
   max-width: var(--ifm-container-width);
   margin: 0 auto;
   display: flex;
-  width: 100%;
+  width: 1100px;
   justify-content: center;
   padding: 0px;
 }
@@ -541,6 +540,11 @@ a{
   background-color: #f1f1f1;
 }
 
+.sectionContact{
+  width: 1100px;
+  padding-top: 250px;
+}
+
 .logoMobileBox{
   width: 100%;
   display: flex;
@@ -567,9 +571,7 @@ a{
   width: 1100px;
 }
 
-.accordionBox{
-  margin-top: 3rem;
-}
+
 
 .accordion{
   width: 100%;
@@ -637,9 +639,27 @@ a{
   width: 85%;
 }
 
+
+/*services*/
+
+.centerBox{
+  display: flex;
+  justify-content: center;
+}
+
+/* Contact */
+.contactFormBox{
+  margin-bottom: 3rem;
+}
+
 @media only screen and (max-width: 960px) {
   .footerLogo {
     width: 80%;
+  }
+  
+  .footerLogoBox{
+    display: flex;
+    justify-content: center;
   }
 
   .h3Footer{
@@ -658,6 +678,10 @@ a{
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+
+  .containerSec{
+    width: 100%;
   }
 
   .section{
@@ -694,6 +718,11 @@ a{
     width: 100%;
   }
 
+  .contactFormBox{
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
   h1{
     line-height: 30px;
     font-size: 30px;
@@ -720,7 +749,7 @@ a{
 
   h4{
     line-height: 25px;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -729,7 +758,7 @@ a{
   p{
     padding-left: 5vw;
     padding-right: 5vw;
-    font-size: 15;
+    font-size: 15px;
   }
 
   /*blog*/
