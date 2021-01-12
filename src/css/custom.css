@@ -197,6 +197,15 @@ a{
   cursor: pointer;
 }
 
+.gridButton{
+  display:flex;
+}
+
+.gridButton:hover{
+  cursor: pointer;
+  opacity: 0.5;
+}
+
 .boxFlexEnd{
   display: flex;
   justify-content:flex-end;

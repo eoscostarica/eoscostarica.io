@@ -379,6 +379,7 @@ const Industries = () => {
       <Box className={clsx("topSpacingBox","containerSec")}> 
         <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
           <br/>
+          <br/>
           <Box className={"titleBox"}>
             <h2>
               Choosing an Enterprise Blockchain
@@ -441,7 +442,7 @@ const Industries = () => {
               </Grid>
             </Grid>
             <Grid style={{justifyContent:'flex-end', height:'30px'}} container>
-              <Grid style={{ paddingTop:'80px'}} item xs={12} md={4}>
+              <Grid style={{ paddingTop:'110px'}} item xs={12} md={4}>
                 <button
                   className={"buttonPrimary"}
                   onClick={() => history.push("/contact-us/")}>
@@ -457,7 +458,7 @@ const Industries = () => {
 
   const AdditionalResources = () => {
     return (
-      <Box className={clsx("topSpacingBox","containerGray")}>
+      <Box className={clsx("containerSec")}>
         <Box className={"sectionPadding"}>
           <Box className={"titleBox"}>
             <h2>Additional Resources</h2>
@@ -472,32 +473,57 @@ const Industries = () => {
           </p>
           <br/>
           <Grid className={"topSpacingBox"} style={{justifyContent:'space-evenly'}} container>
-            <Grid onClick={() => history.push("/contact-us/")} style={{display:'flex'}} item xs={12} md={4}>
+            <Grid onClick={() => history.push("/block-producer/")} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/blog.svg")}/>
               <h3 style={{marginTop:'30px', marginLeft:'40px'}}>Blog</h3>
             </Grid>
-            <Grid style={{display:'flex'}} item xs={12} md={4}>
+            <Grid onClick = {() => location.href='https://guias.eoscostarica.io/'} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/press.svg")}/>
               <h3 style={{marginTop:'30px', marginLeft:'20px'}}>Press</h3>
             </Grid>
           </Grid>
           <br/>
           <Grid className={"topSpacingBox"} style={{justifyContent:'space-evenly'}} container>
-            <Grid style={{display:'flex'}} item xs={12} md={4}>
+            <Grid onClick = {() => location.href='https://guide.eoscostarica.io/'} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/decs.svg")}/>
               <h3 style={{marginTop:'30px', marginLeft:'20px'}}>Devs</h3>
               <h3 style={{marginTop:'60px', marginLeft:'-66px'}}>Portal</h3>
             </Grid>
-            <Grid style={{display:'flex'}} item xs={12} md={4}>
+            <Grid onClick={() => location.href='https://github.com/eoscostarica'} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/github-ours.svg")}/>
               <h3 style={{marginTop:'30px', marginLeft:'40px'}}>Our</h3>
               <h3 style={{marginTop:'60px', marginLeft:'-50px'}}>Github</h3>
+            </Grid>
+          </Grid>
+          <br/>
+        </Box>
+      </Box>
+    )
+  }
+
+  const ContactUs = () => {
+    return (
+      <Box className={"containerGray"}>
+        <Box className={"sectionPadding"}>
+          <Grid container spacing={5}>
+            <Grid item xs={12} md={8}>
+                <Box>
+                  <h2>Start working with us</h2>
+                  <h2>and implement</h2>
+                  <h2>blockchain technology.</h2>
+                </Box>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className={"buttonBox"}>
+                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
+              </Box>
             </Grid>
           </Grid>
         </Box>
       </Box>
     )
   }
+
 
   return (
     <Layout>
@@ -532,6 +558,7 @@ const Industries = () => {
             <AdditionalResources />
           </>
         } 
+        <ContactUs />
       </Box>
     </Layout>
   );
