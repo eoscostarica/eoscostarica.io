@@ -172,6 +172,8 @@ const Industries = () => {
               </a>
             </Grid>
           </Grid>
+          <br/>
+          <br/>
         </Box>
       </Box>
     )
@@ -179,13 +181,10 @@ const Industries = () => {
 
   const BlockchainMoreIndustries = () => {
     return (
-      <Box className={"containerSec"}>
-        <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
+      <Box className={"containerGray"}>
+        <Box className={clsx("sectionPadding")}>
           <br/>
-          <br/>
-          <br/>
-          <br/>
-          <Grid container spacing={5}>
+          <Grid className={"doubleSpacingBox"} container spacing={6}>
             <Grid item xs={12} md={12}>
               <h2>Blockchain in More Industries</h2>
             </Grid>
@@ -193,13 +192,13 @@ const Industries = () => {
               <Accordion 
                 square
                 expanded={expanded === 'panel_AssetManagementy'}
-                style={{boxShadow:'none'}}
+                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
                 onChange={handleChange('panel_AssetManagementy')}
                 className={"accordion"} >
-                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'0px'}}>Asset Managementy</h3>
+                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'2px'}}>Asset Managementy</h3>
                 </AccordionSummary>
-                <AccordionDetails style={{padding:0}}>
+                <AccordionDetails style={{padding:1}}>
                   <p>
                     Blockchain technology enables an immutable and secure way to
                     tokenize and manage tangible and intangible assets. Some
@@ -211,13 +210,13 @@ const Industries = () => {
               <Accordion 
                 square
                 expanded={expanded === 'panel_Decentralized'}
-                style={{boxShadow:'none'}}
+                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
                 onChange={handleChange('panel_Decentralized')}
                 className={"accordion"} >
-                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'1px'}}>Decentralized Finance</h3>
+                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'2px'}}>Decentralized Finance</h3>
                 </AccordionSummary>
-                <AccordionDetails style={{padding:0}}>
+                <AccordionDetails style={{padding:1}}>
                   <p>
                     Also known as DeFi, decentralized finance leverages blockchain
                     technology to explore new liquidity opportunities for
@@ -228,13 +227,13 @@ const Industries = () => {
               <Accordion 
                 square
                 expanded={expanded === 'panel_Identity'}
-                style={{boxShadow:'none'}}
+                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
                 onChange={handleChange('panel_Identity')}
                 className={"accordion"} >
-                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'1px'}}>Digital Identity</h3>
+                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'2px'}}>Digital Identity</h3>
                 </AccordionSummary>
-                <AccordionDetails style={{padding:0}}>
+                <AccordionDetails style={{padding:1}}>
                   <p>
                     Blockchain allows an immutable, transparent, and secure system
                     to manage digital identities that can interconnect with IoT,
@@ -245,13 +244,13 @@ const Industries = () => {
               <Accordion
                 square
                 expanded={expanded === 'panel_Energy'}
-                style={{boxShadow:'none'}}
+                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
                 onChange={handleChange('panel_Energy')}
                 className={"accordion"} >
-                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'1px'}}>Energy</h3>
+                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'2px'}}>Energy</h3>
                 </AccordionSummary>
-                <AccordionDetails style={{padding:0}}>
+                <AccordionDetails style={{padding:1}}>
                   <p>
                     Blockchain offers an efficient and transparent way to improve
                     the operations, distribution, and data management for energy
@@ -260,11 +259,11 @@ const Industries = () => {
                   </p>
                 </AccordionDetails>
               </Accordion>
-              <Accordion square expanded={expanded === 'panel_Tech'} style={{boxShadow:'none'}} onChange={handleChange('panel_Tech')} className={"accordion"} >
-                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'1px'}}>Legal Tech</h3>
+              <Accordion square expanded={expanded === 'panel_Tech'} style={{backgroundColor:'#f1f1f1',boxShadow:'none'}} onChange={handleChange('panel_Tech')} className={"accordion"} >
+                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'2px'}}>Legal Tech</h3>
                 </AccordionSummary>
-                <AccordionDetails style={{padding:0}}>
+                <AccordionDetails style={{padding:1}}>
                   <p>
                     Smart contracts are computer codes that can execute
                     automatically and autonomously according to the contract
@@ -278,13 +277,13 @@ const Industries = () => {
               <Accordion
                 square
                 expanded={expanded === 'panel_Government'}
-                style={{boxShadow:'none'}}
+                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
                 onChange={handleChange('panel_Government')}
                 className={"accordion"} >
-                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'1px'}}>Government</h3>
+                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'2px'}}>Government</h3>
                 </AccordionSummary>
-                <AccordionDetails style={{padding:0}}>
+                <AccordionDetails style={{padding:1}}>
                   <p>
                     Government institutions can deploy blockchain technology to
                     leverage its transparency and immutability features to
@@ -294,11 +293,11 @@ const Industries = () => {
                   </p>
                 </AccordionDetails>
               </Accordion>
-              <Accordion square expanded={expanded === 'panel_Entertainment'} style={{boxShadow:'none'}} onChange={handleChange('panel_Entertainment')} className={"accordion"} >
-                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'1px'}}>Media and Entertainment</h3>
+              <Accordion square expanded={expanded === 'panel_Entertainment'} style={{backgroundColor:'#f1f1f1',boxShadow:'none'}} onChange={handleChange('panel_Entertainment')} className={"accordion"} >
+                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'2px'}}>Media and Entertainment</h3>
                 </AccordionSummary>
-                <AccordionDetails style={{padding:0}}>
+                <AccordionDetails style={{padding:1}}>
                   <p>
                     The blockchain’s capabilities to securely and immutably store
                     registries can help reduce piracy and disputes. Also,
@@ -310,13 +309,13 @@ const Industries = () => {
               <Accordion
                 square
                 expanded={expanded === 'panel_Insurance'}
-                style={{boxShadow:'none'}}
+                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
                 onChange={handleChange('panel_Insurance')}
                 className={"accordion"} >
-                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <Typography  className={classes.h3}>Healthcare and Insurance</Typography>
+                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                <h3 style={{margin:'2px'}}>Healthcare and Insurance</h3>
                 </AccordionSummary>
-                <AccordionDetails style={{padding:0}}>
+                <AccordionDetails style={{padding:1}}>
                   <p>
                     Blockchain technology offers improved efficiency,
                     traceability, and security to store medical and other
@@ -328,13 +327,13 @@ const Industries = () => {
               <Accordion 
                 square
                 expanded={expanded === 'panel_RealEstate'}
-                style={{boxShadow:'none'}}
+                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
                 onChange={handleChange('panel_RealEstate')}
                 className={"accordion"} >
-                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'1px'}}>Real Estate</h3>
+                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'2px'}}>Real Estate</h3>
                 </AccordionSummary>
-                <AccordionDetails style={{padding:0}}>
+                <AccordionDetails style={{padding:1}}>
                   <p>
                     Leverage real estate investments with blockchain technology by
                     creating new business models. Blockchain helps integrate
@@ -346,13 +345,13 @@ const Industries = () => {
               <Accordion 
                 square 
                 expanded={expanded === 'panel_Sports'} 
-                style={{boxShadow:'none'}} 
+                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}} 
                 onChange={handleChange('panel_Sports')} 
                 className={"accordion"} >
-                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'1px'}}>Sports</h3>
+                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'2px'}}>Sports</h3>
                 </AccordionSummary>
-                <AccordionDetails style={{padding:0}}>
+                <AccordionDetails style={{padding:1}}>
                   <p>
                     Blockchain in sports offers a great way to increase fan
                     engagement, promote active participation in decision-making,
@@ -370,8 +369,9 @@ const Industries = () => {
 
   const ChoosingEnterprise = () => {
     return (
-      <Box className={"containerSec"}>
+      <Box className={clsx("topSpacingBox","containerSec")}> 
         <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
+          <br/>
           <Box className={"titleBox"}>
             <h2>
               Choosing an Enterprise Blockchain
@@ -383,16 +383,15 @@ const Industries = () => {
               a list of some key features you must consider when choosing what
               blockchain platform is the most suitable for your organization:
             </p>
-          <Box >
-            <Grid style={{justifyContent:'center'}} container spacing={5}>
+          <Box className={"doubleSpacingBox"}>
+            <Grid style={{justifyContent:'center'}} container spacing={10}>
               <Grid item xs={12} md={4}>
                 <Box className={"h3Box"}>
-                  <h3>Privacy and transparency</h3>
+                  <h3>Quick adoption</h3>
                 </Box>
-                <p>
-                  How are the blockchain’s security and confidentiality
-                  protocols different from others’, and how does it handle
-                  transparency?
+                <p className={"spacingBox"}>
+                  Can your team use their experience with programming
+                  languages, or do they need to learn a new one?
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
@@ -406,14 +405,16 @@ const Industries = () => {
                 </p>
               </Grid>
             </Grid>
-            <Grid style={{justifyContent:'center'}} container spacing={5}>
+            <Grid style={{justifyContent:'center'}} container spacing={10}>
               <Grid item xs={12} md={4}>
-                <Box className={"h3Box"}>
-                  <h3>Quick adoption</h3>
+              <Box className={"h3Box"}>
+                  <h3>Privacy and</h3>
+                  <h3>transparency</h3>
                 </Box>
                 <p>
-                  Can your team use their experience with programming
-                  languages, or do they need to learn a new one?
+                  How are the blockchain’s security and confidentiality
+                  protocols different from others’, and how does it handle
+                  transparency?
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
@@ -427,13 +428,15 @@ const Industries = () => {
                 </p>
               </Grid>
             </Grid>
-          </Box>
-          <Box className={styles.btnBox}>
-            <button 
-              className={"buttonPrimary"}
-              href={useBaseUrl("/contact-us")}>
-                Contact us
-            </button>
+            <Grid style={{justifyContent:'flex-end', height:'30px'}} container>
+              <Grid style={{ paddingTop:'80px'}} item xs={12} md={4}>
+                <button
+                  className={"buttonPrimary"}
+                  href={useBaseUrl("/contact-us")}>
+                    Contact us
+                </button>
+              </Grid>
+            </Grid>
           </Box>
         </Box>
       </Box>
