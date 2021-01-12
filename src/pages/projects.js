@@ -23,11 +23,11 @@ const OurProjects = () => {
           <Box className={"containerSec"}>
             <Box className={"sectionHero"}>
               <Box className={"titleBox"}>
-                  <h1>Website under construction</h1>
+                <h1>Page under construction</h1>
               </Box>
-              <p >We are making a lot of improvements and we be back soon.</p>
+              <p>We're still working on this page. Contact us and we'll let you know when we're ready.</p>
               <Box className={"buttonBox"}>
-                <button className={"buttonPrimary"} onClick={() => history.push("/")} >Home</button>
+                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
               </Box>
             </Box>
           </Box>
