@@ -11,14 +11,10 @@ import Grid from '@material-ui/core/Grid';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
-import ScrollTrigger from 'react-scroll-trigger';
 import { useHistory } from 'react-router-dom';
 
 import DevelopmentServices from './SvgComponents/DevelopmentServices';
 import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure';
-import Payments from './Animations/Payments';
-import Logistic from './Animations/Logistic';
-import Games from './Animations/Games';
 
 
 const ServicePage = () => {
@@ -27,16 +23,6 @@ const ServicePage = () => {
   const [expandedMap, setExpandedMap] = useState('panel_interconnectivity');
   const [expandedEducation, setExpandedEducation] = useState('panel_Workshops');
   const history = useHistory();
-
-  const [stateAnimation,setStateAnimation] = useState()
-
-  const handleScrollEnter = () => {
-    setStateAnimation(true)
-  }
-
-  const handleScrollExit = () => {
-    setStateAnimation(false)
-  }
 
   const refDevelopment = useRef(null)
   const refInfraestrcture = useRef(null)
@@ -113,7 +99,7 @@ const ServicePage = () => {
           <br/>
           <p>
             We have years of experience integrating enterprise blockchain solutions and
-            developing infrastructure for business environments..
+            developing infrastructure for business environments.
           </p>
           <Box className={"buttonBoxMobile"}>
             <button className={"buttonPrimary"} onClick={() => history.push("/about/")}>
@@ -156,7 +142,7 @@ const ServicePage = () => {
                   , for its adaptability to any industry in both the private and
                   public sectors. Visit our{" "}
                   <a href={useBaseUrl("/industries")}>industries page</a> to learn
-                  more
+                  more.
                 </p>
                 </Box>
                 <Box className={"spacingBox"}>
@@ -415,7 +401,6 @@ const ServicePage = () => {
             </Grid>
             <Grid item xs={12} md={6}>
             <Box>
-              <Box className={"accordionBox"}>
                 <Accordion
                   square
                   expanded={expandedMap === 'panel_interconnectivity'}
@@ -423,10 +408,10 @@ const ServicePage = () => {
                   style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
                   className={"accordion"}
                 >
-                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h3 >Network interconnectivity</h3>
+                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h3 style={{margin:'2px'}}>Network interconnectivity</h3>
                   </AccordionSummary>
-                  <AccordionDetails style={{padding:0}}>
+                  <AccordionDetails style={{padding:1}}>
                     <p>
                       Costa Rica has shores in both the Pacific and Atlantic
                       oceans and connects three submarine fiber optic cables –
@@ -442,8 +427,6 @@ const ServicePage = () => {
                     </p>
                   </AccordionDetails>
                 </Accordion>
-              </Box>
-              <Box className={"accordionBox"}>
                 <Accordion
                   square
                   expanded={expandedMap === 'panel_framework'}
@@ -451,10 +434,10 @@ const ServicePage = () => {
                   style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
                   className={"accordion"}
                 >
-                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h3 >Stable political framework</h3>
+                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h3 style={{margin:'2px'}}>Stable political framework</h3>
                   </AccordionSummary>
-                  <AccordionDetails style={{padding:0}}>
+                  <AccordionDetails style={{padding:1}}>
                     <p >
                       Costa Rica is a country that values Human Rights, Peace,
                       and Democracy. The country is one of the most stable and
@@ -466,8 +449,6 @@ const ServicePage = () => {
                     </p>
                   </AccordionDetails>
                 </Accordion>
-              </Box>
-              <Box className={"accordionBox"}>
                 <Accordion
                   square
                   expanded={expandedMap === 'panel_awareness'}
@@ -475,10 +456,10 @@ const ServicePage = () => {
                   style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
                   className={"accordion"}
                 >
-                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h3>Environmental awareness</h3>
+                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h3 style={{margin:'2px'}}>Environmental awareness</h3>
                   </AccordionSummary>
-                  <AccordionDetails style={{padding:0}}>
+                  <AccordionDetails style={{padding:1}}>
                     <p>
                       Despite being a small country, Costa Rica houses more
                       than 4% of the world’s biodiversity. The country’s
@@ -489,7 +470,6 @@ const ServicePage = () => {
                     </p>
                   </AccordionDetails>
                 </Accordion>
-              </Box>
               </Box>
             </Grid>
           </Grid>
@@ -515,83 +495,77 @@ const ServicePage = () => {
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
                 <Box>
-                  <Box className={"accordionBox"}>
-                    <Accordion
-                      square
-                      expanded={expandedEducation=== 'panel_Workshops'}
-                      onChange={handleChangeEducation('panel_Workshops')}
-                      style={{backgroundColor:'#ffffff',boxShadow:'none'}}
-                      className={"accordion"}
-                    >
-                      <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                        <h3 >Executive Workshops</h3>
-                      </AccordionSummary>
-                      <AccordionDetails style={{padding:0}}>
-                        <p >
-                        We know that innovative technologies, such as
-                        blockchain, may have a steep learning curve. So, we
-                        offer workshops on blockchain and EOSIO technology to
-                        C-suite executives and teams that want to keep up to
-                        date and learn more about blockchain and enterprise use
-                        cases.
-                        </p>
-                      </AccordionDetails>
-                    </Accordion>
-                  </Box>
-                  <Box className={"accordionBox"}>
-                    <Accordion
-                      square
-                      expanded={expandedEducation === 'panel_Developers'}
-                      onChange={handleChangeEducation('panel_Developers')}
-                      style={{backgroundColor:'#ffffff',boxShadow:'none'}}
-                      className={"accordion"}
-                    >
-                      <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                        <h3 >Training for Developers</h3>
-                      </AccordionSummary>
-                      <AccordionDetails style={{padding:0}}>
-                        <p >
-                        We also provide training and education resources for new
-                        talents that wish to kickstart their career in
-                        blockchain and in the EOSIO protocol. We have assembled
-                        a web portal that includes learning materials and guides
-                        for developers. Check them out {" "}  
-                        <a href="https://guide.eoscostarica.io/" target="_blank">
-                           here
-                        </a>. Also, <a href={useBaseUrl("/contact-us/")} target="_blank">
-                           ask us
-                        </a> about
-                        our training courses for companies and teams.
-                        </p>
-                      </AccordionDetails>
-                    </Accordion>
-                  </Box>
-                  <Box className={"accordionBox"}>
-                    <Accordion
-                      square
-                      expanded={expandedEducation === 'panel_Building'}
-                      onChange={handleChangeEducation('panel_Building')}
-                      style={{backgroundColor:'#ffffff',boxShadow:'none'}}
-                      className={"accordion"}
-                    >
-                      <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                        <h3>Community Building</h3>
-                      </AccordionSummary>
-                      <AccordionDetails style={{padding:0}}>
-                        <p>
-                        We help promote the blockchain and EOSIO ecosystems by
-                        hosting and attending community activities. We also
-                        speak about blockchain and participate in events related
-                        to technology and innovation. Every year, we host a
-                        team-building event called <a href="https://eosurf.com/" target="_blank">
-                           EOSurf
-                        </a> that takes our
-                        operations to the beach for several days to switch
-                        computers and code for surf and yoga lessons.
-                        </p>
-                      </AccordionDetails>
-                    </Accordion>
-                  </Box>
+                  <Accordion
+                    square
+                    expanded={expandedEducation=== 'panel_Workshops'}
+                    onChange={handleChangeEducation('panel_Workshops')}
+                    style={{backgroundColor:'#ffffff',boxShadow:'none'}}
+                    className={"accordion"}
+                  >
+                    <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                      <h3 style={{margin:'2px'}}>Executive Workshops</h3>
+                    </AccordionSummary>
+                    <AccordionDetails style={{padding:1}}>
+                      <p >
+                      We know that innovative technologies, such as
+                      blockchain, may have a steep learning curve. So, we
+                      offer workshops on blockchain and EOSIO technology to
+                      C-suite executives and teams that want to keep up to
+                      date and learn more about blockchain and enterprise use
+                      cases.
+                      </p>
+                    </AccordionDetails>
+                  </Accordion>
+                  <Accordion
+                    square
+                    expanded={expandedEducation === 'panel_Developers'}
+                    onChange={handleChangeEducation('panel_Developers')}
+                    style={{backgroundColor:'#ffffff',boxShadow:'none'}}
+                    className={"accordion"}
+                  >
+                    <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                      <h3 style={{margin:'2px'}}>Training for Developers</h3>
+                    </AccordionSummary>
+                    <AccordionDetails style={{padding:1}}>
+                      <p >
+                      We also provide training and education resources for new
+                      talents that wish to kickstart their career in
+                      blockchain and in the EOSIO protocol. We have assembled
+                      a web portal that includes learning materials and guides
+                      for developers. Check them out {" "}  
+                      <a href="https://guide.eoscostarica.io/" target="_blank">
+                          here
+                      </a>. Also, <a href={useBaseUrl("/contact-us/")} target="_blank">
+                          ask us
+                      </a> about
+                      our training courses for companies and teams.
+                      </p>
+                    </AccordionDetails>
+                  </Accordion>
+                  <Accordion
+                    square
+                    expanded={expandedEducation === 'panel_Building'}
+                    onChange={handleChangeEducation('panel_Building')}
+                    style={{backgroundColor:'#ffffff',boxShadow:'none'}}
+                    className={"accordion"}
+                  >
+                    <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                      <h3 style={{margin:'2px'}}>Community Building</h3>
+                    </AccordionSummary>
+                    <AccordionDetails style={{padding:1}}>
+                      <p>
+                      We help promote the blockchain and EOSIO ecosystems by
+                      hosting and attending community activities. We also
+                      speak about blockchain and participate in events related
+                      to technology and innovation. Every year, we host a
+                      team-building event called <a href="https://eosurf.com/" target="_blank">
+                          EOSurf
+                      </a> that takes our
+                      operations to the beach for several days to switch
+                      computers and code for surf and yoga lessons.
+                      </p>
+                    </AccordionDetails>
+                  </Accordion>
                 </Box>
               </Grid>
               {!isMobile && 
@@ -618,75 +592,69 @@ const ServicePage = () => {
           <p>
             Blockchain technology has the capabilities to transform many industries, including:
           </p>
-            <Box className={"spacingBox"}>
-                <Grid container spacing={5}>
-                  <Grid item md={4}>
-                    <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
-                      <Box className={"imgBox"}>
-                        <Payments state={stateAnimation}/>
-                      </Box>
-                    </ScrollTrigger>
-                    <Box className={"h3Box"}>
-                      <h3>Payments and Transfers</h3>
-                    </Box>
-                    <p>
-                      Blockchain enables an efficient and secure way to register
-                      transactions that can facilitate payments and offer near
-                      real-time auditing with encryption to reduce data breaches.
-                    </p>
-                    <p>
-                      <a href="https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-a-great-idea-e384b298a4a8" target="_blank">
-                        Learn more
-                      </a>
-                    </p>
-                  </Grid>
-                  <Grid item md={4}>
-                    <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
-                      <Box className={"imgBox"}>
-                        <Logistic state={stateAnimation}/>
-                      </Box>
-                    </ScrollTrigger>
-                    <Box className={"h3Box"}>
-                      <h3>Logistics and Supply Chain</h3>
-                    </Box>
-                    <p>
-                      In an industry that involves dozens of stakeholders, the
-                      capabilities of blockchain and smart contracts for
-                      traceability, authorizations management, and automation can
-                      make a great ally.
-                    </p>
-                    <p>
-                      <a href={useBaseUrl("/blog/blockchain-logistics")} target="_blank">
-                        Learn more
-                      </a>
-                    </p>
-                  </Grid>
-                  <Grid item md={4}>
-                    <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
-                      <Box className={"imgBox"}>
-                        <Games state={stateAnimation}/>
-                      </Box>
-                    </ScrollTrigger>
-                      <Box className={"h3Box"}>
-                        <h3>Gaming</h3>
-                      </Box>
-                    <p>
-                      Blockchain enables a better way to transfer, valorize, and
-                      collect digital in-game assets. Also, its capabilities to
-                      increase security and offer a more efficient way for
-                      transactions can level-up online gaming.
-                    </p>
-                    <p>
-                      <a href={useBaseUrl("/blog/gaming-blockchain")} target="_blank">
-                        Learn more
-                      </a>
-                    </p>
-                  </Grid>
-                </Grid>
-            </Box>
-            <p>
-              Learn more about other industries that blockchain is transforming. <a href={useBaseUrl("/industries")}>Read more.</a>
-            </p>
+          <Box className={"spacingBox"}>
+            <Grid container spacing={5}>
+              <Grid item md={4}>
+              <Box className={"imgBox"}>
+                  <img src={useBaseUrl("img/payments.svg")} />
+                </Box>
+                <Box className={"h3Box"}>
+                  <h3>Payments and Transfers</h3>
+                </Box>
+                <p>
+                  Blockchain enables an efficient and secure way to register
+                  transactions that can facilitate payments and offer near
+                  real-time auditing with encryption to reduce data breaches.
+                </p>
+                <p>
+                  <a href="https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-a-great-idea-e384b298a4a8" target="_blank">
+                    Learn more
+                  </a>
+                </p>
+              </Grid>
+              <Grid item md={4}>
+                <Box className={"imgBox"}>
+                  <img src={useBaseUrl("img/logistics.svg")} />
+                </Box>
+                <Box className={"h3Box"}>
+                  <h3>Logistics and Supply Chain</h3>
+                </Box>
+                <p>
+                  In an industry that involves dozens of stakeholders, the
+                  capabilities of blockchain and smart contracts for
+                  traceability, authorizations management, and automation can
+                  make a great ally.
+                </p>
+                <p>
+                  <a href={useBaseUrl("/blog/blockchain-logistics")} target="_blank">
+                    Learn more
+                  </a>
+                </p>
+              </Grid>
+              <Grid item md={4}>
+                  <Box className={"imgBox"}>
+                    <img src={useBaseUrl("img/gaming.svg")} />
+                  </Box>
+                  <Box className={"h3Box"}>
+                    <h3>Gaming</h3>
+                  </Box>
+                <p>
+                  Blockchain enables a better way to transfer, valorize, and
+                  collect digital in-game assets. Also, its capabilities to
+                  increase security and offer a more efficient way for
+                  transactions can level-up online gaming.
+                </p>
+                <p>
+                  <a href={useBaseUrl("/blog/gaming-blockchain")} target="_blank">
+                    Learn more
+                  </a>
+                </p>
+              </Grid>
+            </Grid>
+          </Box>
+          <p>
+            Learn more about other industries that blockchain is transforming. <a href={useBaseUrl("/industries")}>Read more.</a>
+          </p>
         </Box>
       </Box>
     )
