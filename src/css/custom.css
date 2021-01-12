@@ -176,7 +176,7 @@ a{
   font-size: 21px;
   color: white;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   cursor: pointer;
 }
 
@@ -190,8 +190,7 @@ a{
   height: 60px;
   background-color: transparent;
   font-size: 21px;
-  color: white;
-  border-radius: 0px;
+  border-radius: 0;
   display: flex;
   justify-content: center;
   border: solid 1px #5484b3;
@@ -232,7 +231,7 @@ a{
 
 .imgLogoBox{
   position: absolute;
-  left: 0px;
+  left: 0;
   top: -25px;
   width: 330px;
 }
@@ -274,7 +273,7 @@ a{
 .boxLanguages{
   z-index: 300;
   position: absolute;
-  right: 0px;
+  right: 0;
   top: 5px;
   font-size: 11px;
   font-weight: 500;
@@ -287,7 +286,7 @@ a{
   height: 16px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -336,8 +335,8 @@ input:checked + .slider:before {
 
 .boxMenuItems{
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: 0;
+  top: 0;
   height: 80px;
   display: flex;
   justify-content: flex-end;
@@ -358,7 +357,7 @@ input:checked + .slider:before {
 }
 
 .menuItem:hover .dropDownMenu::after{
-  top: 0px;
+  top: 0;
   right: auto;
   height: 100%;
   width: 100%;
@@ -381,11 +380,11 @@ input:checked + .slider:before {
   content: "";
   position: absolute;
   z-index: -1;
-  right: 0px;
+  right: 0;
   height: 0%;
   margin-top: -15px;
   width: 0%;
-  bottom: 0px;
+  bottom: 0;
   background:#5484b3;
   transition-property: width height;
   transition-duration: 0.3s;
@@ -424,7 +423,7 @@ input:checked + .slider:before {
 .link {
   font-family: 'Gotham',Arial, sans-serif;
   color: black;
-  margin: 0px;
+  margin: 0;
   font-weight: bold;
   font-size: 16px;
   font-stretch: normal;
@@ -437,7 +436,7 @@ input:checked + .slider:before {
   content: "";
   position: absolute;
   z-index: -1;
-  right: 0px;
+  right: 0;
   height: 5px;
   margin-top: 5px;
   width: 0;
@@ -450,7 +449,7 @@ input:checked + .slider:before {
 }
 
 .menuItem:hover .link:after {
-  left: 0px;
+  left: 0;
   right: auto;
   width: 100%;
 }
@@ -505,7 +504,7 @@ input:checked + .slider:before {
   justify-content: center;
   background-color: black;
   overflow-x: hidden;
-} 
+}
 
 .footerContent{
   width: 1100px;
@@ -572,7 +571,7 @@ input:checked + .slider:before {
   display: flex;
   width: 100%;
   justify-content: center;
-  padding: 0px;
+  padding: 0;
 }
 
 .containerGray{
@@ -860,24 +859,24 @@ input:checked + .slider:before {
   .blog-wrapper h1{
     font-size: 30px;
     text-align: left;
-    padding: 0px;
+    padding: 0;
   }
 
   .blog-wrapper h2{
     font-size: 25px;
     text-align: left;
-    padding: 0px;
+    padding: 0;
   }
 
   .blog-wrapper h3{
     font-size: 20px;
     text-align: left;
-    padding: 0px;
+    padding: 0;
   }
 
   .blog-wrapper h4{
     font-size: 15px;
-    padding: 0px;
+    padding: 0;
     text-align: left;
   }
 
