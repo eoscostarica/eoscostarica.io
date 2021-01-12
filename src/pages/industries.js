@@ -383,31 +383,32 @@ const Industries = () => {
               a list of some key features you must consider when choosing what
               blockchain platform is the most suitable for your organization:
             </p>
-          <Grid style={{justifyContent:'flex-end'}} container spacing={5}>
-            <Grid item xs={12} md={4}>
-              <Box className={classes.h3Box}>
-                <h3>Privacy and transparency</h3>
-              </Box>
-              <p>
-                How are the blockchain’s security and confidentiality
-                protocols different from others’, and how does it handle
-                transparency?
-              </p>
-            </Grid>
-            <Grid style={{justifyContent:'flex-end'}} item xs={12} md={4}>
-              <Box className={classes.h3Box}>
-                <h3>Cost-efficiency</h3>
-              </Box>
-              <p>
-                Would the organization see a significant reduction in costs
-                by integrating smart contracts or simplifying the data
-                sharing process?
-              </p>
-            </Grid>
-          </Grid>
-            <Grid container spacing={5}>
+          <Box >
+            <Grid style={{justifyContent:'center'}} container spacing={5}>
               <Grid item xs={12} md={4}>
-                <Box className={classes.h3Box}>
+                <Box className={"h3Box"}>
+                  <h3>Privacy and transparency</h3>
+                </Box>
+                <p>
+                  How are the blockchain’s security and confidentiality
+                  protocols different from others’, and how does it handle
+                  transparency?
+                </p>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Box className={"h3Box"}>
+                  <h3>Cost-efficiency</h3>
+                </Box>
+                <p>
+                  Would the organization see a significant reduction in costs
+                  by integrating smart contracts or simplifying the data
+                  sharing process?
+                </p>
+              </Grid>
+            </Grid>
+            <Grid style={{justifyContent:'center'}} container spacing={5}>
+              <Grid item xs={12} md={4}>
+                <Box className={"h3Box"}>
                   <h3>Quick adoption</h3>
                 </Box>
                 <p>
@@ -416,7 +417,7 @@ const Industries = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Box className={classes.h3Box}>
+                <Box className={"h3Box"}>
                   <h3>Speed or throughput</h3>
                 </Box>
                 <p>
@@ -426,6 +427,7 @@ const Industries = () => {
                 </p>
               </Grid>
             </Grid>
+          </Box>
           <Box className={styles.btnBox}>
             <button 
               className={"buttonPrimary"}
