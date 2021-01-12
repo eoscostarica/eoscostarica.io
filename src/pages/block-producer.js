@@ -1,6 +1,8 @@
 import React from "react";
+import { useHistory } from 'react-router-dom';
 import clsx from "clsx";
 import Layout from "@theme/Layout";
+import { Parallax, Background } from 'react-parallax';
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button';
@@ -12,8 +14,28 @@ import styles from "./styles.module.css";
 import useStyles from "../css/styles.js"
 
 const BlockProducer = () => {
+  const history = useHistory();
   const classes = useStyles()
   return(
+    <Layout>
+      <Parallax strength={800}>
+          <Background className={"bgParallax"}>
+              <Box className={"imgParallax"} />
+          </Background>
+          <Box className={"containerSec"}>
+            <Box className={"sectionHero"}>
+              <Box className={"titleBox"}>
+                  <h1>Website under construction</h1>
+              </Box>
+              <p >We are making a lot of improvements and we be back soon.</p>
+              <Box className={"buttonBox"}>
+                <button className={"buttonPrimary"} onClick={() => history.push("/")} >Home</button>
+              </Box>
+            </Box>
+          </Box>
+      </Parallax>
+    </Layout>
+    /*
     <Layout>
       <ThemeProvider theme={Theme}>
         <Box className={styles.mainContainer}>
@@ -528,6 +550,7 @@ const BlockProducer = () => {
         </Box>
       </ThemeProvider>
     </Layout>
+    */
   );
 };
 

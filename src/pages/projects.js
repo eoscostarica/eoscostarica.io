@@ -1,4 +1,6 @@
 import React from "react";
+import { useHistory } from 'react-router-dom';
+import { Parallax, Background } from 'react-parallax';
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
@@ -11,7 +13,27 @@ import useStyles from "../css/styles.js"
 
 const OurProjects = () => {
   const classes = useStyles()
+  const history = useHistory();
   return (
+    <Layout>
+      <Parallax strength={800}>
+          <Background className={"bgParallax"}>
+              <Box className={"imgParallax"} />
+          </Background>
+          <Box className={"containerSec"}>
+            <Box className={"sectionHero"}>
+              <Box className={"titleBox"}>
+                  <h1>Website under construction</h1>
+              </Box>
+              <p >We are making a lot of improvements and we be back soon.</p>
+              <Box className={"buttonBox"}>
+                <button className={"buttonPrimary"} onClick={() => history.push("/")} >Home</button>
+              </Box>
+            </Box>
+          </Box>
+      </Parallax>
+    </Layout>
+    /*
     <Layout>
       <Box className={styles.mainContainer}>
         <Box className={clsx("container", styles.noPadding)}>
@@ -320,6 +342,7 @@ const OurProjects = () => {
         </Box>
       </Box>
     </Layout>
+    */
   );
 };
 

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from 'react-router-dom';
+import { Parallax, Background } from 'react-parallax';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -22,6 +24,7 @@ const About = () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const classes = useStyles()
   const [expanded, setExpanded] = useState('panel_ManagementTeam');
+  const history = useHistory();
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -32,6 +35,25 @@ const About = () => {
   }, []);
 
   return (
+    <Layout>
+      <Parallax strength={800}>
+          <Background className={"bgParallax"}>
+              <Box className={"imgParallax"} />
+          </Background>
+          <Box className={"containerSec"}>
+            <Box className={"sectionHero"}>
+              <Box className={"titleBox"}>
+                  <h1>Website under construction</h1>
+              </Box>
+              <p >We are making a lot of improvements and we be back soon.</p>
+              <Box className={"buttonBox"}>
+                <button className={"buttonPrimary"} onClick={() => history.push("/")} >Home</button>
+              </Box>
+            </Box>
+          </Box>
+      </Parallax>
+    </Layout>
+    /*
     <Layout>
       <Box className={styles.mainContainer}>
         <Box className={clsx("container", styles.noPadding)}>
@@ -876,6 +898,7 @@ const About = () => {
       </Box>
     </Box>
   </Layout>
+  */
   );
 };
 
