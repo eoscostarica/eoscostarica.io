@@ -10,42 +10,61 @@ import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import Typography from "@material-ui/core/Typography";
 import { useLocation } from 'react-router-dom';
 
 
 const PATHS = [
   {
+    dropDown:false,
     path: "/",
     label: "Home",
   },
   {
-    path: "/services/",
-    label: "Services",
+    dropDown:true,
+    path: "/",
+    label: "About us",
+    subPaths: 
+    [
+      {
+        path: "/services/",
+        label: "Services",
+      },
+      /*{
+        path: "/the-company/",
+        label: "The company",
+      },
+      {
+        path: "/projects/",
+        label: "Projects",
+      },
+      {
+        path: "/block-producer/",
+        label: "Bp",
+      },
+      {
+        path: "/press/",
+        label: "Press",
+      },*/
+    ]
   },
   {
+    dropDown:false,
     path: "/industries/",
     label: "Industries",
   },
   {
-    path: "/about/",
-    label: "About",
+    dropDown:false,
+    path: "https://guide.eoscostarica.io/",
+    label: "Learning",
   },
   {
-    path: "/projects/",
-    label: "Projects",
-  },
-  {
-    path: "/block-producer/",
-    label: "Bp",
-  },
-  {
+    dropDown:false,
     path: "/blog/",
     label: "Blog",
   },
   {
+    dropDown:false,
     path: "/contact-us/",
     label: "Contact",
   },
@@ -62,8 +81,8 @@ const NavbarMenu = () => {
     disableHysteresis: true
   })
 
-  const useTransparentBG =  trigger 
-
+  const useTransparentBG =  trigger
+  
   useLayoutEffect(() => {
     const pathname = window.location.pathname;
     setPathname(pathname);
@@ -73,60 +92,111 @@ const NavbarMenu = () => {
     setIsOpen(!isOpen)
   }
 
+  const isCurrentPath = (subPaths) =>{
+    let res = false;
+    subPaths.map((item) => {
+      if(pathname === item.path) res=true
+    })
+    return res
+  }
+
   return (
     <Box  className={clsx("navBar", { ["navBarScroll"]: useTransparentBG})} >
       <Box className={"menuWrapper"}>
         {isMobile && 
-        <>
-          <Box  className={"btnDrawer"}>
-            <IconButton onClick={handlerDrawer}>
-              <MenuIcon  fontSize="large"/>
-            </IconButton>
-          </Box>
-          <Drawer anchor={'left'} open={isOpen} onClose={handlerDrawer} >
-            <Box className={"drawerContent"}>
-                <img
-                  className={"imgDrawer"}
-                  src={useBaseUrl("img/eoscr-logo.png")}
-                  alt="EOS CR LOGO"
-                />
-              <Divider />
-              <List>
-                {PATHS.map((item) => (
-                  <Link href={useBaseUrl(item.path)} key={item.label} style={{textDecoration: 'none'}}>
-                      <ListItem button><span className={"linkItem"}>{item.label}</span></ListItem>
-                  </Link>
-                ))}
-              </List>
+          <>
+          {useTransparentBG && 
+            <Box  className={"imgLogoBoxMobile"}>
+              <img
+                className={"imgLogoScroll"}
+                src={useBaseUrl("img/eoscr-logo.png")}
+                alt="EOS CR LOGO"
+              />
             </Box>
-          </Drawer>
-        </>}
+            }
+            <Box  className={"btnDrawer"}>
+              <IconButton onClick={handlerDrawer}>
+                <MenuIcon  fontSize="large"/>
+              </IconButton>
+            </Box>
+            <Drawer anchor={'right'} open={isOpen} onClose={handlerDrawer} >
+              <Box className={"drawerContent"}>
+                <List>
+                  {PATHS.map((item) => (
+                    <Box  key={item.label}>
+                      {item.dropDown && 
+                        <>
+                          {item.subPaths.map((subItem) => (
+                            <Link href={useBaseUrl(subItem.path)} key={subItem.label} style={{textDecoration: 'none'}}>
+                              <ListItem button><span className={"linkItem"}>{subItem.label}</span></ListItem>
+                          </Link>
+                          ))}
+                        </>
+                      }
+                      {!item.dropDown && 
+                        <Link href={useBaseUrl(item.path)} style={{textDecoration: 'none'}}>
+                            <ListItem button><span className={"linkItem"}>{item.label}</span></ListItem>
+                        </Link>
+                      } 
+                    </Box>
+                  ))}
+                </List>
+              </Box>
+            </Drawer>
+          </>}
         {!isMobile && 
           <>
             <Box className={"boxLeft"}>
               <Box  className={"imgLogoBox"}>
-              <img
-                  className={!isBlog? clsx("imgLogo", {["imgLogoScroll"]: useTransparentBG})  : "imgLogoScroll"}
+                <img
+                  className={isBlog? "imgLogoScroll" : clsx("imgLogo", {["imgLogoScroll"]: useTransparentBG})}
                   src={useBaseUrl("img/eoscr-logo.png")}
                   alt="EOS CR LOGO"
                 />
               </Box>
             </Box>
             <Box className={"boxRight"}>
-              {!isMobile && (
-                  <Box className={"boxLanguages"}>
-                    <Link href="https://es.eoscostarica.io/" color="inherit" target="_blank" >Español</Link>
-                    <span>{" / "}</span>
-                    <Link href="" color="inherit">English</Link>
-                  </Box>
-                )}
-                {PATHS.map((item) => (
-                  <Link href={useBaseUrl(item.path)} key={item.label}>
-                    <Box className={"svgWrapper"}>  
-                      <h5 className={clsx("link",{["linkActive"] : pathname === item.path})}>{item.label}</h5>                  
+                {/*!isMobile && (
+                    <Box className={"boxLanguages"}>
+                      <Grid component="label" container alignItems="center" spacing={1}>
+                        <Grid item>Español</Grid>
+                        <Grid item>
+                          <label className="switch">
+                            <input type="checkbox" checked onChange={() => window.open("https://es.eoscostarica.io/","_self")}/>
+                            <span className="slider round"></span>
+                          </label>
+                        </Grid>
+                        <Grid item>English</Grid>
+                      </Grid>
                     </Box>
-                  </Link>
-                ))}
+                )*/}
+                  <Box className={"boxMenuItems"}>
+                    {PATHS.map((item) => (
+                      <Box key={item.label}>
+                        {!item.dropDown && 
+                          <Link href={useBaseUrl(item.path)} key={item.label} style={{textDecoration:'none'}}>
+                            <Box className={"menuItem"}>  
+                              <h5 className={clsx("link",{["linkActive"] : pathname === item.path})}>{item.label}</h5>                  
+                            </Box>
+                          </Link>
+                        }
+                        {item.dropDown && 
+                          <Box className={"menuItem"}>  
+                            <h5 className={clsx("link",{["linkActive"] : isCurrentPath(item.subPaths)})}>{item.label}</h5>
+                            <Box className={"dropDownMenu"}>
+                                {item.subPaths.map((subItem) => (
+                                  <Link href={useBaseUrl(subItem.path)} key={subItem.label} style={{textDecoration:'none'}}>
+                                    <Box>  
+                                      <h5 className={clsx("menuItemDrop",{["menuItemDropActive"] : pathname === subItem.path})} >{subItem.label}</h5>                  
+                                    </Box>
+                                  </Link>
+                                ))}
+                            </Box>                    
+                          </Box>
+                        }
+                      </Box>
+                    ))}
+                </Box> 
             </Box>
           </>
         }
