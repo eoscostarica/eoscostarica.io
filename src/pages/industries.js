@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from 'react-router-dom';
 import { Parallax, Background } from 'react-parallax';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from '@material-ui/core/Grid';
@@ -7,13 +8,11 @@ import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Box from '@material-ui/core/Box'
-import Typography from '@material-ui/core/Typography';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ScrollTrigger from 'react-scroll-trigger';
 
-import styles from "./styles.module.css";
 import useStyles from "../css/styles.js"
 import Payments from './Animations/Payments';
 import Logistic from './Animations/Logistic';
@@ -21,7 +20,7 @@ import Games from './Animations/Games';
 
 const Industries = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
-  const [activeItemIndex, setActiveItemIndex] = useState(0);
+  const history = useHistory();
   const classes = useStyles()
   const [expanded, setExpanded] = useState();
   const [stateAnimation,setStateAnimation] = useState(false)
@@ -59,7 +58,7 @@ const Industries = () => {
             healthcare.
           </p>
           <Box className={"buttonBox"}>
-            <button className={"buttonPrimary"} href={useBaseUrl("/contact-us")}>
+            <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")}>
               Contact us
             </button>
           </Box>
@@ -110,9 +109,8 @@ const Industries = () => {
               </ScrollTrigger>
             </Grid>
             <Grid item xs={12} md={8}>
-              <h2 style={{lineHeight: '26px'}}>Blockchain</h2>
-              <h2 style={{lineHeight: '26px'}}>Development</h2>
-              <h2 style={{lineHeight: '26px'}}>Services</h2>
+              <h2 style={{lineHeight: '26px'}}>Payments and</h2>
+              <h2 style={{lineHeight: '26px'}}>Transfers</h2>
                 <p style={{marginTop: '30px'}}>
                   Blockchain enables an efficient and secure way to register
                   transactions that can facilitate payments and offer near
@@ -122,7 +120,10 @@ const Industries = () => {
                   improved payment structures.
                 </p>
                 <br/>
-                <a className={classes.a} target="_blank">
+                <a 
+                  href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
+                  target="_blank"
+                >
                   Read More
                 </a>
             </Grid>
@@ -145,7 +146,10 @@ const Industries = () => {
                 in the logistics and supply chain industry.
               </p>
               <br/>
-              <a target="_blank">
+              <a
+                href={"https://eoscostarica.io/blog/blockchain-logistics"} 
+                target="_blank"
+              >
                 Read More
               </a>
             </Grid>
@@ -167,7 +171,10 @@ const Industries = () => {
                 for transactions can level-up online gaming.
               </p>
               <br/>
-              <a className={classes.a} target="_blank">
+              <a 
+                href={"https://eoscostarica.io/blog/gaming-blockchain"}
+                target="_blank"
+              >
                 Read More
               </a>
             </Grid>
@@ -182,7 +189,7 @@ const Industries = () => {
   const BlockchainMoreIndustries = () => {
     return (
       <Box className={"containerGray"}>
-        <Box className={clsx("sectionPadding")}>
+        <Box className={"sectionPadding"}>
           <br/>
           <Grid className={"doubleSpacingBox"} container spacing={6}>
             <Grid item xs={12} md={12}>
@@ -378,7 +385,12 @@ const Industries = () => {
             </h2>
           </Box>
             <p>
-              There are several enterprise blockchain platforms in the market
+              There are several 
+              <a href={"https://eoscostarica.medium.com/how-to-choose-an-enterprise-blockchainplatform-7c3665994ad6"}
+                target="_blank"
+                > enterprise blockchain platforms
+              </a>{" "}
+              in the market
               with different characteristics and capabilities. The following is
               a list of some key features you must consider when choosing what
               blockchain platform is the most suitable for your organization:
@@ -432,8 +444,8 @@ const Industries = () => {
               <Grid style={{ paddingTop:'80px'}} item xs={12} md={4}>
                 <button
                   className={"buttonPrimary"}
-                  href={useBaseUrl("/contact-us")}>
-                    Contact us
+                  onClick={() => history.push("/contact-us/")}>
+                    Drop Us a Line
                 </button>
               </Grid>
             </Grid>
@@ -445,64 +457,43 @@ const Industries = () => {
 
   const AdditionalResources = () => {
     return (
-      <Box className={classes.containerGray}>
-        <Box className={classes.sectionPadding}>
+      <Box className={clsx("topSpacingBox","containerGray")}>
+        <Box className={"sectionPadding"}>
           <Box className={"titleBox"}>
             <h2>Additional Resources</h2>
           </Box>
           <p>
             Find more interesting reads and resources to continue learning
-            about enterprise blockchain and EOSIO.
+            about
+            <a href={"https://eoscostarica.medium.com/how-to-choose-an-enterprise-blockchainplatform-7c3665994ad6"}
+              target="_blank"
+              > enterprise blockchain</a> and
+              <a href={" https://eos.io/"} target="_blank"> EOSIO</a>.
           </p>
-          <br></br>
-          <Box className={styles.colBox}>
-            <picture>
-              <source
-                className={styles.flexImgBox}
-                srcSet={useBaseUrl("img/blog.jp2")}
-                type="image/jp2"
-              />
-              <img
-                className={styles.flexImgBox}
-                src={useBaseUrl("img/blog.webp")}
-              />
-            </picture>
-            <picture>
-              <source
-                className={styles.flexImgBox}
-                srcSet={useBaseUrl("img/press.jp2")}
-                type="image/jp2"
-              />
-              <img
-                className={styles.flexImgBox}
-                src={useBaseUrl("img/press.webp")}
-              />
-            </picture>
-          </Box>
-          <Box className={styles.colBox}>
-            <picture>
-              <source
-                className={styles.flexImgBox}
-                srcSet={useBaseUrl("img/portal.jp2")}
-                type="image/jp2"
-              />
-              <img
-                className={styles.flexImgBox}
-                src={useBaseUrl("img/portal.webp")}
-              />
-            </picture>
-            <picture>
-              <source
-                className={styles.flexImgBox}
-                srcSet={useBaseUrl("img/github.jp2")}
-                type="image/jp2"
-              />
-              <img
-                className={styles.flexImgBox}
-                src={useBaseUrl("img/github.webp")}
-              />
-            </picture>
-          </Box>
+          <br/>
+          <Grid className={"topSpacingBox"} style={{justifyContent:'space-evenly'}} container>
+            <Grid onClick={() => history.push("/contact-us/")} style={{display:'flex'}} item xs={12} md={4}>
+              <img srcSet={useBaseUrl("img/blog.svg")}/>
+              <h3 style={{marginTop:'30px', marginLeft:'40px'}}>Blog</h3>
+            </Grid>
+            <Grid style={{display:'flex'}} item xs={12} md={4}>
+              <img srcSet={useBaseUrl("img/press.svg")}/>
+              <h3 style={{marginTop:'30px', marginLeft:'20px'}}>Press</h3>
+            </Grid>
+          </Grid>
+          <br/>
+          <Grid className={"topSpacingBox"} style={{justifyContent:'space-evenly'}} container>
+            <Grid style={{display:'flex'}} item xs={12} md={4}>
+              <img srcSet={useBaseUrl("img/decs.svg")}/>
+              <h3 style={{marginTop:'30px', marginLeft:'20px'}}>Devs</h3>
+              <h3 style={{marginTop:'60px', marginLeft:'-66px'}}>Portal</h3>
+            </Grid>
+            <Grid style={{display:'flex'}} item xs={12} md={4}>
+              <img srcSet={useBaseUrl("img/github-ours.svg")}/>
+              <h3 style={{marginTop:'30px', marginLeft:'40px'}}>Our</h3>
+              <h3 style={{marginTop:'60px', marginLeft:'-50px'}}>Github</h3>
+            </Grid>
+          </Grid>
         </Box>
       </Box>
     )
