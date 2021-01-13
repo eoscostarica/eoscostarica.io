@@ -1011,11 +1011,7 @@ input:checked + .slider:before {
   }
 
   .paddingTopGrid{
-<<<<<<< HEAD
-    padding-top: 0
-=======
     padding-top: 0px
->>>>>>> 791d138c68db03f21cb4fa8891ee9f81f9fdd9ef
   }
 
   .readMoreMargin{
