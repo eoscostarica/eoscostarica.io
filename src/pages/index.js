@@ -12,19 +12,14 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ScrollTrigger from 'react-scroll-trigger';
 
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
-import Payments from './Animations/Payments';
-import Logistic from './Animations/Logistic';
-import Games from './Animations/Games';
 
 const Home = () => {
   const [expanded, setExpanded] = useState('panel_SoftDev');
   const history = useHistory();
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-  const [stateAnimation,setStateAnimation] = useState(false)
 
   const handleScrollEnter = () => {
     setStateAnimation(true)
@@ -260,11 +255,9 @@ const Home = () => {
             <Box className={"spacingBox"}>
                 <Grid container spacing={5}>
                   <Grid item md={4}>
-                    <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
-                      <Box className={"imgBox"}>
-                        <Payments state={stateAnimation}/>
-                      </Box>
-                    </ScrollTrigger>
+                    <Box className={"imgBox"}>
+                      <img src={useBaseUrl("img/payments.svg")} />
+                    </Box>
                     <Box className={"h3Box"}>
                       <h3>Payments and Transfers</h3>
                     </Box>
@@ -279,11 +272,9 @@ const Home = () => {
                     </p>
                   </Grid>
                   <Grid item md={4}>
-                    <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
-                      <Box className={"imgBox"}>
-                        <Logistic state={stateAnimation}/>
-                      </Box>
-                    </ScrollTrigger>
+                    <Box className={"imgBox"}>
+                      <img src={useBaseUrl("img/logistics.svg")} />
+                    </Box>
                     <Box className={"h3Box"}>
                       <h3>Logistics and Supply Chain</h3>
                     </Box>
@@ -296,14 +287,12 @@ const Home = () => {
                     </p>
                   </Grid>
                   <Grid item md={4}>
-                    <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
-                      <Box className={"imgBox"}>
-                        <Games state={stateAnimation}/>
-                      </Box>
-                    </ScrollTrigger>
-                      <Box className={"h3Box"}>
-                        <h3>Gaming</h3>
-                      </Box>
+                    <Box className={"imgBox"}>
+                      <img src={useBaseUrl("img/gaming.svg")} />
+                    </Box>
+                    <Box className={"h3Box"}>
+                      <h3>Gaming</h3>
+                    </Box>
                     <p>
                       Blockchain enables a better way to transfer, valorize, and
                       collect digital in-game assets. Also, its capabilities to
