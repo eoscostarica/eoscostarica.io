@@ -1011,7 +1011,7 @@ input:checked + .slider:before {
   }
 
   .paddingTopGrid{
-    padding-top: 0px
+    padding-top: 0
   }
 
   .readMoreMargin{
