@@ -18,8 +18,8 @@ const Games = ({
   return (
     <Lottie
       options={defaultOptions}
-      width='350px'
-      height='350px'
+      width='500px'
+      height='500px'
     />
   );
 }

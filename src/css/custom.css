@@ -108,7 +108,7 @@ h3 {
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  font-size: 24px;
+  font-size: 28px;
   letter-spacing: -0.06px;
   line-height: 24px;
 }
@@ -194,6 +194,15 @@ a{
   border: solid 2px #5484B3;
   color: #5484B3;
   cursor: pointer;
+}
+
+.gridButton{
+  display:flex;
+}
+
+.gridButton:hover{
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 .boxFlexEnd{
@@ -781,6 +790,43 @@ input:checked + .slider:before {
   margin-bottom: 3rem;
 }
 
+.titleDevs1{
+  margin-top: 30px;
+  margin-left: 20px
+}
+
+.titleDevs2{
+  margin-top: 60px;
+  margin-left: -66px
+}
+
+.titleBlog{
+  margin-top: 30px;
+  margin-left: 40px
+}
+
+.titleGit1{
+  margin-top:'30px';
+  margin-left:'40px'
+}
+
+.titleGit2{
+  margin-top:'60px';
+  margin-left:'-50px'
+}
+
+.topSpacingBoxIcons{
+  margin-top: 3rem;
+}
+
+.paddingTopGrid{
+  padding-top: 100px
+}
+
+.displayLine{
+  display: none
+}
+
 @media only screen and (max-width: 960px) {
   .footerLogo {
     width: 80%;
@@ -934,5 +980,56 @@ input:checked + .slider:before {
     text-align: justify;
     margin-bottom: 15px;
     padding: 0;
+  }
+
+  .titleDevs1{
+    margin-top: 25px;
+    margin-left: 20px
+  }
+
+  .titleDevs2{
+    margin-top: 45px;
+    margin-left: -84px
+  }
+
+  .titleBlog{
+    margin-left: 25px
+  }
+
+  .titleGit1{
+    margin-top: 30px;
+    margin-left: 36px
+  }
+
+  .titleGit2{
+    margin-top: 50px;
+    margin-left: -70px
+  }
+
+  .gridButton{
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .topSpacingBoxIcons{
+    margin-top: -10px;
+  }
+
+  .paddingTopGrid{
+    padding-top:0px
+  }
+
+  .readMoreMargin{
+    margin-left: 20px
+  }
+
+  .displayLine{
+    display: flex;
+    margin-top: -1.7px;
+  }
+
+  .marginTopAccordion
+  {
+    margin-top:-70px
   }
 }
