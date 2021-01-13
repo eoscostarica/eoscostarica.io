@@ -694,6 +694,10 @@ a{
   padding-top: 100px
 }
 
+.displayLine{
+  display: none
+}
+
 @media only screen and (max-width: 960px) {
   .footerLogo {
     width: 80%;
@@ -888,5 +892,15 @@ a{
 
   .readMoreMargin{
     margin-left: 20px
+  }
+
+  .displayLine{
+    display: flex;
+    margin-top: -1.7px;
+  }
+
+  .marginTopAccordion
+  {
+    margin-top:-70px
   }
 }

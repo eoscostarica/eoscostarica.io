@@ -280,6 +280,7 @@ const Industries = () => {
                   </p>
                 </AccordionDetails>
               </Accordion>
+              <hr className={"displayLine"}/>
             </Grid>
             <Grid item xs={12} md={6}>
               <Accordion
@@ -287,7 +288,7 @@ const Industries = () => {
                 expanded={expanded === 'panel_Government'}
                 style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
                 onChange={handleChange('panel_Government')}
-                className={"accordion"} >
+                className={clsx("accordion", "marginTopAccordion")} >
                 <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
                   <h3 style={{margin:'2px'}}>Government</h3>
                 </AccordionSummary>
@@ -376,7 +377,7 @@ const Industries = () => {
   }
 
   const ChoosingEnterprise = () => {
-    return (
+    return ( 
       <Box className={clsx("topSpacingBox","containerSec")}> 
         <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
           <br/>
