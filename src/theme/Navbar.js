@@ -30,11 +30,11 @@ const PATHS = [
         path: "/services/",
         label: "Services",
       },
-      /*{
+      {
         path: "/the-company/",
         label: "The company",
       },
-      {
+      /*{
         path: "/projects/",
         label: "Projects",
       },

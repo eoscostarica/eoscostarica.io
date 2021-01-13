@@ -19,7 +19,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import styles from "./styles.module.css";
 import useStyles from "../css/styles.js"
 
-const About = () => {
+const TheCompany = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const classes = useStyles()
@@ -34,25 +34,65 @@ const About = () => {
     handleChange('panel_ManagementTeam')
   }, []);
 
+
+  const HeroSection = () => {
+    return (
+      <Box className={"containerSec"}>
+        {!isMobile && 
+          <Box className={"sectionHero"}>
+          <Box className={"titleBox"}>
+            <h1>We Develop Enterprise</h1>
+            <h1>Blockchain Solutions</h1>
+          </Box>
+          <p >Years of experience developing innovative technologies speak for us. 
+            Unleash the power of blockchain technology with the help of our agile team.
+          </p>
+          <br/>
+          <a href="https://eoscostarica.io/blog/what-is-blockchain">Read more</a>
+        </Box>
+        }
+        {isMobile && 
+          <Box className={"sectionHeroMobile"}>
+            <Box className={"logoMobileBox"}>
+              <img
+                  className={"logoMobile"}
+                  src={useBaseUrl("img/eoscr-logo.png")}
+                  alt="EOS CR LOGO"
+                />
+            </Box>
+          <Box className={"titleBox"}>
+            <h1>We Develop Enterprise</h1>
+            <h1>Blockchain Solutions</h1>
+          </Box>
+          <p>Years of experience developing innovative technologies speak for us.</p>
+          <br/>
+          <p>Unleash the power of blockchain technology with the help of our agile team.</p>
+          <a href="https://eoscostarica.io/blog/what-is-blockchain">Read more</a>
+        </Box>
+      }
+      </Box>
+    )
+  } 
+
   return (
     <Layout>
-      <Parallax strength={800}>
-          <Background className={"bgParallax"}>
-              <Box className={"imgParallax"} />
-          </Background>
-          <Box className={"containerSec"}>
-            <Box className={"sectionHero"}>
-              <Box className={"titleBox"}>
-                  <h1>Page under construction</h1>
-              </Box>
-              <p>We're still working on this page. Contact us and we'll let you know when we're ready.</p>
-              <Box className={"buttonBox"}>
-                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
-              </Box>
-            </Box>
-          </Box>
-      </Parallax>
+      <Box className={"mainContainer"}>
+        {!isMobile && 
+          <Parallax strength={800}>
+            <Background className={"bgParallax"}>
+                <Box className={"imgParallax"} />
+            </Background>
+            <HeroSection />
+          </Parallax>
+        }
+        {isMobile && 
+          <>
+            <HeroSection />
+          </>
+        } 
+      </Box>
     </Layout>
+  );
     /*
     <Layout>
       <Box className={styles.mainContainer}>
@@ -899,7 +939,6 @@ const About = () => {
     </Box>
   </Layout>
   */
-  );
 };
 
-export default About;
+export default TheCompany;
