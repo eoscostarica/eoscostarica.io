@@ -531,11 +531,6 @@ input:checked + .slider:before {
   padding-bottom: 140px;
 }
 
-.buttonBoxMobile{
-  display: flex;
-  justify-content: center;
-}
-
 .boxTitle{
   margin-bottom: 2rem;
 }
@@ -1016,7 +1011,7 @@ input:checked + .slider:before {
   }
 
   .paddingTopGrid{
-    padding-top:0px
+    padding-top: 0px
   }
 
   .readMoreMargin{
