@@ -661,6 +661,39 @@ a{
   margin-bottom: 3rem;
 }
 
+.titleDevs1{
+  margin-top: 30px;
+  margin-left: 20px
+}
+
+.titleDevs2{
+  margin-top: 60px;
+  margin-left: -66px
+}
+
+.titleBlog{
+  margin-top: 30px;
+  margin-left: 40px
+}
+
+.titleGit1{
+  margin-top:'30px';
+  margin-left:'40px'
+}
+
+.titleGit2{
+  margin-top:'60px';
+  margin-left:'-50px'
+}
+
+.topSpacingBoxIcons{
+  margin-top: 3rem;
+}
+
+.paddingTopGrid{
+  padding-top: 100px
+}
+
 @media only screen and (max-width: 960px) {
   .footerLogo {
     width: 80%;
@@ -814,5 +847,46 @@ a{
     text-align: justify;
     margin-bottom: 15px;
     padding: 0;
+  }
+
+  .titleDevs1{
+    margin-top: 25px;
+    margin-left: 20px
+  }
+
+  .titleDevs2{
+    margin-top: 45px;
+    margin-left: -84px
+  }
+
+  .titleBlog{
+    margin-left: 25px
+  }
+
+  .titleGit1{
+    margin-top: 30px;
+    margin-left: 36px
+  }
+
+  .titleGit2{
+    margin-top: 50px;
+    margin-left: -70px
+  }
+
+  .gridButton{
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .topSpacingBoxIcons{
+    margin-top: -10px;
+  }
+
+  .paddingTopGrid{
+    padding-top:0px
+  }
+
+  .readMoreMargin{
+    margin-left: 20px
   }
 }

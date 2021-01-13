@@ -13,7 +13,6 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ScrollTrigger from 'react-scroll-trigger';
 
-import useStyles from "../css/styles.js"
 import Payments from './Animations/Payments';
 import Logistic from './Animations/Logistic';
 import Games from './Animations/Games';
@@ -21,7 +20,6 @@ import Games from './Animations/Games';
 const Industries = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const history = useHistory();
-  const classes = useStyles()
   const [expanded, setExpanded] = useState();
   const [stateAnimation,setStateAnimation] = useState(false)
 
@@ -111,21 +109,22 @@ const Industries = () => {
             <Grid item xs={12} md={8}>
               <h2 style={{lineHeight: '26px'}}>Payments and</h2>
               <h2 style={{lineHeight: '26px'}}>Transfers</h2>
-                <p style={{marginTop: '30px'}}>
-                  Blockchain enables an efficient and secure way to register
-                  transactions that can facilitate payments and offer near
-                  real-time auditing with encryption to reduce data breaches.
-                  Blockchain may also promote alternate financial applications,
-                  such as new liquidity solutions and microloans management, and
-                  improved payment structures.
-                </p>
-                <br/>
-                <a 
-                  href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
-                  target="_blank"
-                >
-                  Read More
-                </a>
+              <p style={{marginTop: '30px'}}>
+                Blockchain enables an efficient and secure way to register
+                transactions that can facilitate payments and offer near
+                real-time auditing with encryption to reduce data breaches.
+                Blockchain may also promote alternate financial applications,
+                such as new liquidity solutions and microloans management, and
+                improved payment structures.
+              </p>
+              <br/>
+              <a
+                className={"readMoreMargin"}
+                href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
+                target="_blank"
+              >
+                Read More
+              </a>
             </Grid>
             <Grid style={{marginTop:'50px'}} item xs={12} md={4}>
               <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
@@ -134,7 +133,7 @@ const Industries = () => {
                 </Box>
               </ScrollTrigger>
             </Grid>
-            <Grid style={{marginTop:'50px'}} item xs={12} md={8}>
+            <Grid item xs={12} md={8}>
               <h2 style={{lineHeight: '26px'}}>Logistics and</h2>
               <h2 style={{lineHeight: '26px'}}>supply chain</h2>
               <p style={{marginTop: '30px'}}>
@@ -147,6 +146,7 @@ const Industries = () => {
               </p>
               <br/>
               <a
+                className={"readMoreMargin"}
                 href={"https://eoscostarica.io/blog/blockchain-logistics"} 
                 target="_blank"
               >
@@ -171,7 +171,8 @@ const Industries = () => {
                 for transactions can level-up online gaming.
               </p>
               <br/>
-              <a 
+              <a
+                className={"readMoreMargin"} 
                 href={"https://eoscostarica.io/blog/gaming-blockchain"}
                 target="_blank"
               >
@@ -402,7 +403,7 @@ const Industries = () => {
                 <Box className={"h3Box"}>
                   <h3>Quick adoption</h3>
                 </Box>
-                <p className={"spacingBox"}>
+                <p >
                   Can your team use their experience with programming
                   languages, or do they need to learn a new one?
                 </p>
@@ -442,12 +443,14 @@ const Industries = () => {
               </Grid>
             </Grid>
             <Grid style={{justifyContent:'flex-end', height:'30px'}} container>
-              <Grid style={{ paddingTop:'110px'}} item xs={12} md={4}>
-                <button
-                  className={"buttonPrimary"}
-                  onClick={() => history.push("/contact-us/")}>
-                    Drop Us a Line
-                </button>
+              <Grid className={"paddingTopGrid"} item xs={12} md={4}>
+                <Box className={"buttonBox"}>
+                  <button
+                    className={"buttonPrimary"}
+                    onClick={() => history.push("/contact-us/")}>
+                      Drop Us a Line
+                  </button>
+                </Box>
               </Grid>
             </Grid>
           </Box>
@@ -458,7 +461,7 @@ const Industries = () => {
 
   const AdditionalResources = () => {
     return (
-      <Box className={clsx("containerSec")}>
+      <Box className={"containerSec"}>
         <Box className={"sectionPadding"}>
           <Box className={"titleBox"}>
             <h2>Additional Resources</h2>
@@ -472,10 +475,10 @@ const Industries = () => {
               <a href={" https://eos.io/"} target="_blank"> EOSIO</a>.
           </p>
           <br/>
-          <Grid className={"topSpacingBox"} style={{justifyContent:'space-evenly'}} container>
+          <Grid className={"topSpacingBoxIcons"} style={{justifyContent:'space-evenly'}} container>
             <Grid onClick={() => history.push("/block-producer/")} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/blog.svg")}/>
-              <h3 style={{marginTop:'30px', marginLeft:'40px'}}>Blog</h3>
+              <h3 className={"titleBlog"}>Blog</h3>
             </Grid>
             <Grid onClick = {() => location.href='https://guias.eoscostarica.io/'} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/press.svg")}/>
@@ -483,16 +486,16 @@ const Industries = () => {
             </Grid>
           </Grid>
           <br/>
-          <Grid className={"topSpacingBox"} style={{justifyContent:'space-evenly'}} container>
+          <Grid className={"topSpacingBoxIcons"} style={{justifyContent:'space-evenly'}} container>
             <Grid onClick = {() => location.href='https://guide.eoscostarica.io/'} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/decs.svg")}/>
-              <h3 style={{marginTop:'30px', marginLeft:'20px'}}>Devs</h3>
-              <h3 style={{marginTop:'60px', marginLeft:'-66px'}}>Portal</h3>
+              <h3 className={"titleDevs1"}>Devs</h3>
+              <h3 className={"titleDevs2"}>Portal</h3>
             </Grid>
             <Grid onClick={() => location.href='https://github.com/eoscostarica'} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/github-ours.svg")}/>
-              <h3 style={{marginTop:'30px', marginLeft:'40px'}}>Our</h3>
-              <h3 style={{marginTop:'60px', marginLeft:'-50px'}}>Github</h3>
+              <h3 className={"titleGit1"}>Our</h3>
+              <h3 className={"titleGit2"}>Github</h3>
             </Grid>
           </Grid>
           <br/>
@@ -527,11 +530,11 @@ const Industries = () => {
 
   return (
     <Layout>
-      <Box className={classes.mainContainer}>
+      <Box className={"mainContainer"}>
         {!isMobile && 
           <Parallax strength={800}>
-            <Background className={classes.bgParallax}>
-                <Box className={classes.imgParallax} />
+            <Background className={"bgParallax"}>
+                <Box className={"imgParallax"} />
             </Background>
             <HeroSection />
             <PrincipalIndustries />
