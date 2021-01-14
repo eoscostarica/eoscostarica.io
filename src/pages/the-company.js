@@ -72,7 +72,231 @@ const TheCompany = () => {
       }
       </Box>
     )
-  } 
+  }
+
+  const EOSCR = () => {
+    return (
+      <Box className={"containerSec"}>
+        <Box className={"sectionPadding"}>
+          <Box className={"spacingBox"}>
+            <Box className={"spacingBox"}>
+              <Grid container spacing={5}>
+                <Grid item md={6}>
+                  <Box className={"titleBox"}>
+                    <h2>Get to Know EOS Costa Rica</h2>
+                  </Box>
+                  <p className={"body1"}>
+                    EOS Costa Rica is part of a company with over 
+                    three decades of developing innovative technologies. 
+                    During the 80s, we launched the first BBS 
+                    (bulletin board service) in the country, 
+                    a precursor to the internet. Later on, 
+                    the company shifted to educating new users 
+                    on using the email and browsing the web! 
+                    Then, we started offering internet infrastructure, 
+                    hosting, and development services. In 2013, 
+                    we began providing infrastructure for public 
+                    blockchain networks and learned first-hand 
+                    how blockchains work. Then, in 2018 when 
+                    the EOSIO protocol was launched, we investigated 
+                    the advantages of this technology and started 
+                    learning how to deploy it in the real world. 
+                    Our presence grew during the genesis of the 
+                    EOS Mainnet and will continue to be there 
+                    throughout its growth.
+                  </p>
+                </Grid>
+                <Grid item md={6}>
+                  <Box className={"imgBoxRight"}>
+                    <img
+                      className={"imgKnow"}
+                      src={useBaseUrl("img/team.webp")}
+                    />
+                  </Box>  
+                </Grid>
+              </Grid>
+            </Box>
+            <Box className={"spacingBox"}>
+              <Grid container spacing={5}>
+                {!isMobile && 
+                  <Grid item md={6}>
+                    <Box className={"imgBoxLeft"}>
+                      <img
+                        className={"imgKnow"}
+                        src={useBaseUrl("img/company.webp")}
+                      />
+                    </Box>  
+                  </Grid>
+                }
+                <Grid item md={6}>
+                  <Box className={"titleBox"}>
+                    <h2>Our vision</h2>
+                  </Box>
+                  <p>
+                    We founded EOS Costa Rica two years ago — before the 
+                    release of EOS… and quickly realized this was a marathon, 
+                    not a sprint. We have experimented with different use 
+                    cases for EOSIO blockchain technology, especially 
+                    for enterprise use. Our team offers an agile and 
+                    lean approach to develop blockchain-based solutions 
+                    that allow innovation departments to quickly and 
+                    efficiently iterate and test proofs-of-concept with
+                    a restricted budget and schedule. This ability enables
+                    organizations to explore this technology’s benefits and 
+                    experience its potential in a controlled environment.
+                  </p>
+                </Grid>
+                {isMobile && 
+                  <Grid item md={6}>
+                    <Box className={"imgBoxLeft"}>
+                      <img
+                        className={"imgKnow"}
+                        src={useBaseUrl("img/company.webp")}
+                      />
+                    </Box>  
+                  </Grid>
+                }
+              </Grid>
+            </Box>
+            <Box className={"spacingBox"}>
+              <Grid container spacing={5} >
+                <Grid item xs={12} md={12}>
+                  <p>
+                    We can co-ideate and develop the ideal solution 
+                    that integrates blockchain technology into your 
+                    operations following an agile and lean approach 
+                    that will help you explore blockchain’s features 
+                    within a restricted budget and schedule. We 
+                    provide top-notch, ready-to-use blockchain 
+                    infrastructures. Also, we configure, host, 
+                    and maintain blockchain nodes and networks that 
+                    can meet your organization’s requirements and needs. 
+                    We offer workshops to C-suite executives and teams. 
+                    We also provide training for new talents and promote 
+                    the region’s blockchain ecosystem by participating 
+                    in events, seminars, and conferences.
+                  </p>
+                </Grid>
+              </Grid>
+            </Box>
+          </Box>
+        </Box>
+      </Box> 
+    )
+  }
+
+  const WeAreOneGroup = () => {
+    return (
+      <Box className={clsx("containerSec",{["containerGray"] : isMobile, ["containerWithBackground"] : isMobile})}>
+        <Box className={"sectionPadding"} >
+          <Box className={"h3Box"}>
+            <h3 style={{textAlign:'center'}}>We Are One Group</h3>
+          </Box>
+          <Box className={"spacingBox"}>
+            <Grid container>
+              <Grid item xs={12} md={3}>
+                <Box className={"imgBoxLogos"}>
+                  <img
+                    alt="LatamLink"
+                    src={useBaseUrl("img/Group47.svg")}
+                  />
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Box className={"imgBoxLogos"}>
+                  <img
+                    alt="Edenia"
+                    src={useBaseUrl("img/Group17.svg")}
+                  />
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Box className={"imgBoxLogos"}>
+                  <img
+                    alt="Eossurf"
+                    src={useBaseUrl("img/Group11.svg")}
+                  />
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Box className={"imgBoxLogos"}>
+                  <img
+                    alt="Ticoblockchain"
+                    src={useBaseUrl("img/Group55.svg")}
+                  />
+                </Box>
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
+      </Box>
+    )
+  }
+
+  const MeetTeam = () => {
+    return (
+      <Box className={"containerSec"}>
+        <Box className={"sectionPadding"}>
+          <Box className={"spacingBox"}>
+            <Box className={"spacingBox"}>
+              <Grid container spacing={5}>
+                <Grid item md={12}>
+                  <Box className={"titleBox"}>
+                    <h2>Meet the Team</h2>
+                  </Box>
+                  <p className={"body1"}>
+                    We have assembled a Latin American team with 
+                    a problem-solving mindset and expertise in 
+                    their areas of knowledge. Our distributed 
+                    team operates in an Agile environment that 
+                    encourages participation, self- accountability, 
+                    and innovation. Get to know us!
+                  </p>
+                </Grid>
+                <Grid item md={12}>
+                  <Box className={"teamImageBox"}>
+                    <img
+                      className={"littleImage"}
+                      src={useBaseUrl("img/rodrigo.webp")}
+                    />
+                    <img
+                      className={"littleImage"}
+                      src={useBaseUrl("img/rodrigo.webp")}
+                    />
+                    <img
+                      className={"littleImage"}
+                      src={useBaseUrl("img/rodrigo.webp")}
+                    />
+                     <img
+                      className={"littleImage"}
+                      src={useBaseUrl("img/rodrigo.webp")}
+                    />
+                     <img
+                      className={"littleImage"}
+                      src={useBaseUrl("img/rodrigo.webp")}
+                    />
+                     <img
+                      className={"littleImage"}
+                      src={useBaseUrl("img/rodrigo.webp")}
+                    />
+                     <img
+                      className={"littleImage"}
+                      src={useBaseUrl("img/rodrigo.webp")}
+                    />
+                  </Box>  
+                </Grid>
+                <Grid className={"boxFlexEnd"} item md={12}>
+                  <Box className={"buttonBox"}>
+                    <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Go to our crew page</button>
+                  </Box>
+                </Grid>
+              </Grid>
+            </Box>            
+          </Box>
+        </Box>
+      </Box> 
+    )
+  }
 
   return (
     <Layout>
@@ -83,13 +307,28 @@ const TheCompany = () => {
                 <Box className={"imgParallax"} />
             </Background>
             <HeroSection />
+            <EOSCR />
           </Parallax>
         }
         {isMobile && 
           <>
             <HeroSection />
           </>
-        } 
+        }
+        {!isMobile && 
+        <Parallax strength={800}>
+          <WeAreOneGroup />
+          <Background className={"bgParallaxSecondary"}>
+            <Box className={"imgParallax"} />
+          </Background>
+        </Parallax>
+        }
+        <MeetTeam />
+        {isMobile && 
+          <>
+            <WeAreOneGroup />
+          </>
+        }
       </Box>
     </Layout>
   );
