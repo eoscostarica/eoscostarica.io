@@ -776,6 +776,30 @@ input:checked + .slider:before {
   justify-content: center;
 }
 
+/*Team*/
+
+.avatarBox{
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  margin-bottom: 3rem;
+}
+
+.centerText{
+  text-align: center;
+}
+
+.nameText{
+  font-size: 22px;
+  text-align: center;
+}
+
+.socialMediaBox{
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
 /* Contact */
 .contactFormBox{
   margin-bottom: 3rem;
@@ -851,6 +875,12 @@ input:checked + .slider:before {
     padding-left: 5vw;
     padding-right: 5vw;
   }
+
+  .nameText{
+    font-size: 18px;
+    text-align: center;
+  }
+  
 
   h1{
     line-height: 30px;
