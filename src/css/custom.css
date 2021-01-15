@@ -26,7 +26,7 @@
 }
 
 .blog-wrapper a {
-  color: #5484b3;
+  color: #0091FF;
 }
 
 .blog-wrapper h1{
@@ -108,7 +108,7 @@ h3 {
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  font-size: 24px;
+  font-size: 28px;
   letter-spacing: -0.06px;
   line-height: 24px;
 }
@@ -156,7 +156,7 @@ p{
 }
 
 a{
-  color: #5484b3;
+  color: #0091FF;
 }
 
 .button{
@@ -175,7 +175,7 @@ a{
   font-size: 21px;
   color: white;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   cursor: pointer;
 }
 
@@ -188,18 +188,31 @@ a{
   padding: 25px;
   background-color: transparent;
   font-size: 21px;
-  color: white;
-  border-radius: 0px;
+  border-radius: 0;
   display: flex;
   justify-content: center;
-  border: solid 2px #5484b3;
-  color: #5484b3;
+  border: solid 2px #5484B3;
+  color: #5484B3;
   cursor: pointer;
+}
+
+.gridButton{
+  display:flex;
+}
+
+.gridButton:hover{
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.boxFlexEnd{
+  display: flex;
+  justify-content:flex-end;
 }
 
 .buttonSecondary:hover{
   color: white;
-  background-color: #5484b3;
+  background-color: #5484B3;
 }
 
 /*Navbar*/
@@ -224,10 +237,8 @@ a{
   font-weight: bold;
   top: 0;
   transition: 0.2s;
-  height: 60px;
+  height: 80px;
   margin: 0 auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
 }
 
 .boxLeft {
@@ -238,8 +249,15 @@ a{
 
 .imgLogoBox{
   position: absolute;
-  left: 0px;
-  top: -20px;
+  left: 0;
+  top: -25px;
+  width: 330px;
+}
+
+.imgLogoBoxMobile{
+  position: absolute;
+  left: 15px;
+  top: 18px;
   width: 330px;
 }
 
@@ -268,68 +286,193 @@ a{
 
 .boxRight{
   width: 70%;
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .boxLanguages{
+  z-index: 300;
   position: absolute;
-  right: 5px;
-  top: -15px;
+  right: 0;
+  top: 5px;
   font-size: 11px;
   font-weight: 500;
 }
 
-.svgWrapper{
-  margin-top: 0;
+.switch {
+  position: relative;
   display: inline-block;
-  border-radius: 3px;
-  margin-left: 15px;
-  margin-right: 15px;
+  width: 28px;
+  height: 16px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  background-color: #5484b3;
+  background-color: #5484b3;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #5484b3;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.boxMenuItems{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menuItem{
+  position: relative;
+  cursor: pointer;
+  margin-left: 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.menuItem:hover .dropDownMenu{
+  visibility: visible;
+}
+
+.menuItem:hover .dropDownMenu::after{
+  top: 0;
+  right: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.menuItem:hover .menuItemDrop{
+  transition-delay:  0.3s;
+  opacity: 1;
+}
+
+.dropDownMenu{
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  top: 70px;
+  
+}
+
+.dropDownMenu:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  height: 0%;
+  margin-top: -15px;
+  width: 0%;
+  bottom: 0;
+  background:#5484b3;
+  transition-property: width height;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  font-weight: bold;
+}
+
+.paperDropDown{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.menuItemDrop{
+  color: white;
+  white-space: nowrap;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 25px;
+  opacity: 0;
+  transition: opacity .1s ease-in-out;
+  -moz-transition: opacity .1s ease-in-out;
+  -webkit-transition: opacity .1s ease-in-out;
+
+}
+
+.menuItemDrop:hover{
+  color: black;
+}
+
+.menuItemDropActive{
+  color: black;
 }
 
 .link {
   font-family: 'Gotham',Arial, sans-serif;
-  display: inline;
-  position: relative;
-  overflow: hidden;
   color: black;
+  margin: 0;
   font-weight: bold;
   font-size: 16px;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.25;
   letter-spacing: normal;
+  white-space: nowrap
 }
 .link:after {
   content: "";
   position: absolute;
   z-index: -1;
-  right: 0px;
+  right: 0;
   height: 5px;
   margin-top: 5px;
   width: 0;
-  bottom: -10px;
+  bottom: 20px;
   background:#5484b3;
   transition-property: width;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
   font-weight: bold;
 }
-.link:hover:after {
+
+.menuItem:hover .link:after {
   left: 0;
   right: auto;
   width: 100%;
-  
 }
 
-.linkActive {
-  display: inline;
-  position: relative;
-  overflow: hidden;
-  font-weight: bold;
-}
+
 .linkActive:after {
   content: "";
   position: absolute;
@@ -338,7 +481,7 @@ a{
   height: 5px;
   margin-top: 5px;
   width: 100%;
-  bottom: -10px;
+  bottom: 20px;
   background:#5484b3;
   transition-property: width;
   transition-duration: 0.3s;
@@ -353,7 +496,7 @@ a{
 }
 
 .drawerContent{
-  width: 60vw;
+  width: 45vw;
 }
 
 .linkItem{
@@ -379,18 +522,13 @@ a{
   justify-content: center;
   background-color: black;
   overflow-x: hidden;
-} 
+}
 
 .footerContent{
   width: 1100px;
   display: flex;
   padding-top: 140px;
   padding-bottom: 140px;
-}
-
-.buttonBoxMobile{
-  display: flex;
-  justify-content: center;
 }
 
 .boxTitle{
@@ -446,7 +584,7 @@ a{
   display: flex;
   width: 1100px;
   justify-content: center;
-  padding: 0px;
+  padding: 0;
 }
 
 .containerGray{
@@ -601,6 +739,10 @@ a{
   margin-bottom: 3rem;
 }
 
+.topSpacingBox{
+  margin-top: 3rem;
+}
+
 .doubleSpacingBox{
   margin-top: 6rem;
   margin-bottom: 6rem;
@@ -641,6 +783,43 @@ a{
 /* Contact */
 .contactFormBox{
   margin-bottom: 3rem;
+}
+
+.titleDevs1{
+  margin-top: 30px;
+  margin-left: 20px
+}
+
+.titleDevs2{
+  margin-top: 60px;
+  margin-left: -66px
+}
+
+.titleBlog{
+  margin-top: 30px;
+  margin-left: 40px
+}
+
+.titleGit1{
+  margin-top:'30px';
+  margin-left:'40px'
+}
+
+.titleGit2{
+  margin-top:'60px';
+  margin-left:'-50px'
+}
+
+.topSpacingBoxIcons{
+  margin-top: 3rem;
+}
+
+.paddingTopGrid{
+  padding-top: 100px
+}
+
+.displayLine{
+  display: none
 }
 
 @media only screen and (max-width: 960px) {
@@ -764,24 +943,24 @@ a{
   .blog-wrapper h1{
     font-size: 30px;
     text-align: left;
-    padding: 0px;
+    padding: 0;
   }
 
   .blog-wrapper h2{
     font-size: 25px;
     text-align: left;
-    padding: 0px;
+    padding: 0;
   }
 
   .blog-wrapper h3{
     font-size: 20px;
     text-align: left;
-    padding: 0px;
+    padding: 0;
   }
 
   .blog-wrapper h4{
     font-size: 15px;
-    padding: 0px;
+    padding: 0;
     text-align: left;
   }
 
@@ -796,5 +975,56 @@ a{
     text-align: justify;
     margin-bottom: 15px;
     padding: 0;
+  }
+
+  .titleDevs1{
+    margin-top: 25px;
+    margin-left: 20px
+  }
+
+  .titleDevs2{
+    margin-top: 45px;
+    margin-left: -84px
+  }
+
+  .titleBlog{
+    margin-left: 25px
+  }
+
+  .titleGit1{
+    margin-top: 30px;
+    margin-left: 36px
+  }
+
+  .titleGit2{
+    margin-top: 50px;
+    margin-left: -70px
+  }
+
+  .gridButton{
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .topSpacingBoxIcons{
+    margin-top: -10px;
+  }
+
+  .paddingTopGrid{
+    padding-top: 0
+  }
+
+  .readMoreMargin{
+    margin-left: 20px
+  }
+
+  .displayLine{
+    display: flex;
+    margin-top: -1.7px;
+  }
+
+  .marginTopAccordion
+  {
+    margin-top:-70px
   }
 }
