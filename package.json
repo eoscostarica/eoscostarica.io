@@ -13,12 +13,20 @@
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.68",
     "@docusaurus/preset-classic": "^2.0.0-alpha.68",
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
     "@mdx-js/react": "^1.6.19",
     "clsx": "^1.1.1",
+    "lottie-ios": "3.1.8",
     "react": "^16.14.0",
     "react-dom": "^17.0.1",
+    "react-hubspot": "^1.0.4",
+    "react-hubspot-form": "^1.3.7",
     "react-items-carousel": "^2.8.0",
-    "react-responsive": "^8.1.0"
+    "react-lottie": "^1.2.3",
+    "react-parallax": "^3.1.2",
+    "react-responsive": "^8.1.0",
+    "react-scroll-trigger": "^0.6.10"
   },
   "browserslist": {
     "production": [
@@ -31,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.12.1"
   }
 }

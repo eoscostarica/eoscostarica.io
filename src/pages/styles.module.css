@@ -1,4 +1,4 @@
-.mainBtn {
+/*.mainBtn {
   width: 198px;
   height: 60px;
   background-color: #5484b3;
@@ -31,9 +31,9 @@
 .mainBtn.bubbleUp:hover,
 .mainBtn.bubbleUp.active {
   color: #fff;
-}
+}*/
 
-.bubbleUp,
+/*.bubbleUp,
 .bubbleUp:hover {
   -webkit-transition: color 0.5s ease-in-out;
   transition: color 0.5s ease-in-out;
@@ -71,9 +71,9 @@
 }
 .bubbleUp:disabled:hover::after {
   height: 0;
-}
+}*/
 
-.secondaryButton {
+/*.secondaryButton {
   width: 198px;
   height: 60px;
   border: solid 1px #979797;
@@ -88,7 +88,7 @@
 .secondaryButton:hover {
   cursor: pointer;
   text-decoration: none;
-}
+}*/
 
 .noMarginTop {
   margin-top: 0 !important;
@@ -166,7 +166,7 @@
   flex-direction: column;
 }
 
-.mainContainer h1 {
+/*.mainContainer h1 {
   margin-bottom: 0;
   font-weight: 500;
   line-height: 1.5;
@@ -188,17 +188,17 @@
   color: #000000;
   font-size: 25px;
   font-weight: bold;
-}
+}*/
 
 .teamTitle {
   font-size: 20px !important;
 }
 
-.mainContainer span {
+/*.mainContainer span {
   font-size: 18px;
   line-height: 1.44;
   color: #000000;
-}
+}*/
 
 .sectionGray {
   background-color: #f1f1f1;
@@ -228,9 +228,9 @@
   padding-bottom: 3rem !important;
 }
 
-.inquiresBG h1 {
+/*.inquiresBG h1 {
   line-height: 2.08;
-}
+}*/
 
 .topBox {
   height: 630px;
@@ -249,11 +249,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-}
-
-.topBox span {
-  line-height: 1.25;
-  margin-bottom: 2rem;
 }
 
 .titleBox {
@@ -292,6 +287,7 @@
 .teamBox {
   display: flex;
   flex-direction: column;
+  margin-left: 80px;
 }
 
 .flexImgBox {
@@ -301,6 +297,7 @@
 
 .boxSpaceBetween {
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .teamImg {
@@ -392,15 +389,13 @@
   background-color: #ffffff;
 }
 
-.secondaryBG h1 {
+/*.secondaryBG h1 {
   color: #000000 !important;
-}
+}*/
 
 .knowEOSCRBox {
   flex-direction: column;
   padding-bottom: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .linkProjectBox {
@@ -481,9 +476,9 @@
   width: 100%;
 }
 
-.whatWeDoBox .whatWeDoBoxLeft h1 {
+/*.whatWeDoBox .whatWeDoBoxLeft h1 {
   margin-bottom: 2rem;
-}
+}*/
 
 .whatWeDoBox .whatWeDoBoxRight {
   display: none;
@@ -541,7 +536,7 @@
   margin-top: 3rem;
 }
 
-.inquiresBox h1 {
+/*.inquiresBox h1 {
   line-height: 1.08;
   color: #ffffff;
   padding-bottom: 1rem;
@@ -553,7 +548,7 @@
 
 .titleH1 {
   margin-bottom: 1rem !important;
-}
+}*/
 
 .knowEOSCRBox .knowRowBox {
   display: flex;
@@ -569,9 +564,9 @@
   justify-content: center;
 }
 
-.knowRowBox div h3 {
+/*.knowRowBox div h3 {
   margin: 2rem 0;
-}
+}*/
 
 .knowEOSCRBox .colReverse {
   flex-direction: column;
@@ -591,9 +586,9 @@
   /* width: 120px; */
 }
 
-.contactUsBox h1 {
+/*.contactUsBox h1 {
   margin-bottom: 1rem;
-}
+}*/
 
 .contactUsBox .completeName {
   padding-top: 2rem;
@@ -634,6 +629,10 @@
   width: 100%;
   background-color: transparent;
   margin-top: 3rem;
+}
+
+.marginRigth {
+ margin-right: 40px;
 }
 
 .title {
@@ -723,15 +722,10 @@
     align-items: center;
   }
 
-  .mainContainer h1 {
+  /*.mainContainer h1 {
     line-height: 1.1;
     font-size: 48px;
-  }
-
-  .titleBox h1 {
-    font-size: 60px;
-    line-height: 1.1;
-  }
+  }*/
 
   .logoMobile {
     display: none;
@@ -823,10 +817,10 @@
     padding: 2rem 3rem;
   }
 
-  .inquiresBox h1 {
+  /*.inquiresBox h1 {
     width: 60%;
     margin: 2rem 0;
-  }
+  }*/
 
   .inquiresBG {
     background-position: right;
@@ -843,9 +837,9 @@
     width: 100%;
   }
 
-  .inquiresBG h1 {
+  /*.inquiresBG h1 {
     width: 45% !important;
-  }
+  }*/
 
   .messageBox {
     flex-direction: row;
@@ -854,12 +848,11 @@
 
   .knowEOSCRBox {
     flex-direction: column;
-    padding: 7rem 3rem 3rem !important;
   }
 
-  .knowEOSCRBox h1 {
+  /*.knowEOSCRBox h1 {
     margin-bottom: 3rem;
-  }
+  }*/
 
   .knowEOSCRBox .knowRowBox {
     margin-top: 5rem;
@@ -871,9 +864,9 @@
     justify-content: flex-start;
   }
 
-  .knowRowBox div h3 {
+  /*.knowRowBox div h3 {
     margin-top: 0;
-  }
+  }*/
 
   .knowEOSCRBox .colReverse {
     flex-direction: row;
@@ -975,9 +968,9 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .mainContainer h1 {
+  /*.mainContainer h1 {
     font-size: 48px;
-  }
+  }*/
 
   .socialMediaBox {
     width: 100%;
@@ -999,9 +992,9 @@
     padding: 10px;
   }
 
-  .mainContainer h3 {
+  /*.mainContainer h3 {
     font-size: 24px;
-  }
+  }*/
 
   .teamTitle {
     font-size: 24px !important;
@@ -1092,9 +1085,9 @@
     text-align: left;
   }
 
-  .knowRowBox div h3 {
+  /*.knowRowBox div h3 {
     margin: 0rem 0 1rem;
-  }
+  }*/
 
   .knowEOSCRBox .colReverse {
     flex-direction: row;
