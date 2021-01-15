@@ -26,9 +26,9 @@ const TheCompany = () => {
             Unleash the power of blockchain technology with the help of our agile team.
           </p>
           <br/>
-          <p >
-            <a href="https://eoscostarica.io/blog/what-is-blockchain">Read more</a>
-          </p>
+          <Box className={"buttonBox"}>
+            <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact Us</button>
+          </Box>
         </Box>
         }
         {isMobile && 
@@ -47,7 +47,9 @@ const TheCompany = () => {
           <p>Years of experience developing innovative technologies speak for us.</p>
           <br/>
           <p>Unleash the power of blockchain technology with the help of our agile team.</p>
-          <a className={"readMoreMargin"} href="https://eoscostarica.io/blog/what-is-blockchain">Read more</a>
+          <Box className={"buttonBoxMobile"}>
+            <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Learn More</button>
+          </Box>
         </Box>
       }
       </Box>
@@ -218,64 +220,74 @@ const TheCompany = () => {
       <Box className={"containerSec"}>
         <Box className={"sectionPadding"}>
           <Box className={"spacingBox"}>
-            <Box className={"spacingBox"}>
-              <Grid container spacing={1}>
-                <Grid item md={12}>
-                  <Box className={"titleBox"}>
-                    <h2>Meet the Team</h2>
-                  </Box>
-                  <p className={"body1"}>
-                    We have assembled a Latin American team with 
-                    a problem-solving mindset and expertise in 
-                    their areas of knowledge. Our distributed 
-                    team operates in an Agile environment that 
-                    encourages participation, self- accountability, 
-                    and innovation. Get to know us!
-                  </p>
-                </Grid>
-                <Grid item xs={6} md={2}>
+            <Grid container spacing={1}>
+              <Grid item md={12}>
+                <Box className={"titleBox"}>
+                  <h2>Meet the Team</h2>
+                </Box>
+                <p className={"body1"}>
+                  We have assembled a Latin American team with 
+                  a problem-solving mindset and expertise in 
+                  their areas of knowledge. Our distributed 
+                  team operates in an Agile environment that 
+                  encourages participation, self- accountability, 
+                  and innovation. Get to know us!
+                </p>
+              </Grid>
+              <Grid item xs={6} md={2}>
+                <Box className={"centerBox"}>
                   <img
                     className={"littleImage"}
                     src={useBaseUrl("img/rodrigo.webp")}
                   />
-                </Grid>
-                <Grid item xs={6} md={2}>
+                </Box>
+              </Grid>
+              <Grid item xs={6} md={2}>
+                <Box className={"centerBox"}>
                   <img
                     className={"littleImage"}
                     src={useBaseUrl("img/edgar.webp")}
                   />
-                </Grid>
-                <Grid item xs={6} md={2}>
+                </Box>
+              </Grid>
+              <Grid item xs={6} md={2}>
+                <Box className={"centerBox"}>
                   <img
                     className={"littleImage"}
                     src={useBaseUrl("img/xavier.webp")}
                   />
-                </Grid>
-                <Grid item xs={6} md={2}>
+                </Box>
+              </Grid>
+              <Grid item xs={6} md={2}>
+                <Box className={"centerBox"}>
                   <img
                     className={"littleImage"}
                     src={useBaseUrl("img/luisdiego.webp")}
                   />
-                </Grid>
-                <Grid item xs={6} md={2}>
+                </Box>
+              </Grid>
+              <Grid item xs={6} md={2}>
+                <Box className={"centerBox"}>
                   <img
                     className={"littleImage"}
                     src={useBaseUrl("img/rodolfo.webp")}
                   />
-                </Grid>
-                <Grid item xs={6} md={2}>
+                </Box>
+              </Grid>
+              <Grid item xs={6} md={2}>
+                <Box className={"centerBox"}>
                   <img
                     className={"littleImage"}
                     src={useBaseUrl("img/adriel.webp")}
                   />
-                </Grid>
-                <Grid className={"boxFlexEnd"} item xs={12} md={12}>
-                  <Box className={"buttonBox"}>
-                    <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Meet our team</button>
-                  </Box>
-                </Grid>
+                </Box>
               </Grid>
-            </Box>            
+              <Grid className={"boxFlexEnd"} item xs={12} md={12}>
+                <Box className={"buttonBox"}>
+                  <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Meet our team</button>
+                </Box>
+              </Grid>
+            </Grid>          
           </Box>
         </Box>
       </Box> 
@@ -284,7 +296,7 @@ const TheCompany = () => {
 
   const TheTechnology = () => {
     return ( 
-      <Box className={clsx("topSpacingBox","containerSec")}> 
+      <Box style={{marginTop:'-60px'}} className={"containerSec"}> 
         <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
           <br/>
           <br/>
@@ -386,9 +398,9 @@ const TheCompany = () => {
     )
   }
 
-  const SameOurProjects = () => {
+  const SomeOurProjects = () => {
     return ( 
-      <Box className={clsx("topSpacingBox","containerSec")}> 
+      <Box className={"containerSec"}> 
         <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
           <br/>
           <br/>
@@ -523,30 +535,23 @@ const TheCompany = () => {
             </Background>
             <HeroSection />
             <EOSCR />
+            <Background className={"bgParallaxSecondaryCompany"}>
+              <Box className={"imgParallax"} />
+            </Background>
+            <WeAreOneGroup />
+            <MeetTeam />
           </Parallax>
         }
         {isMobile && 
           <>
             <HeroSection />
-          </>
-        }
-        {!isMobile && 
-        <Parallax strength={800}>
-          <WeAreOneGroup />
-          <Background className={"bgParallaxSecondary"}>
-            <Box className={"imgParallax"} />
-          </Background>
-        </Parallax>
-        }
-        <MeetTeam />
-        <TheTechnology/>
-        <SameOurProjects/>
-        {isMobile && 
-          <>
-            <TheTechnology/>
+            <EOSCR />
             <WeAreOneGroup />
+            <MeetTeam />
           </>
         }
+        <TheTechnology/>
+        <SomeOurProjects/>
         <ContactUs />
       </Box>
     </Layout>

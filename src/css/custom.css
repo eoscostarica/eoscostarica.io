@@ -628,6 +628,14 @@ input:checked + .slider:before {
   height: 2000px;
 }
 
+.bgParallaxSecondaryCompany{
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 1650px;
+}
+
 .imgParallax{
   z-index: 1;
   height: 100%;
@@ -823,7 +831,7 @@ input:checked + .slider:before {
 
 .littleImage{
   width: 150px;
-  height: 150px;
+  height: 170px;
   flex: 0 0 auto;
   margin: 1px;
 }
