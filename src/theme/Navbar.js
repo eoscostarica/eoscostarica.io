@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useState } from "react";
 import clsx from "clsx";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { useTheme } from '@material-ui/core/styles';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
@@ -10,188 +10,69 @@ import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import Typography from "@material-ui/core/Typography";
 import { useLocation } from 'react-router-dom';
+
 
 const PATHS = [
   {
+    dropDown:false,
     path: "/",
     label: "Home",
   },
   {
-    path: "/services/",
-    label: "Services",
+    dropDown:true,
+    path: "/",
+    label: "About us",
+    subPaths: 
+    [
+      {
+        path: "/services/",
+        label: "Services",
+      },
+      /*{
+        path: "/the-company/",
+        label: "The company",
+      },
+      {
+        path: "/projects/",
+        label: "Projects",
+      },
+      {
+        path: "/block-producer/",
+        label: "Bp",
+      },
+      {
+        path: "/press/",
+        label: "Press",
+      },*/
+    ]
   },
   {
+    dropDown:false,
     path: "/industries/",
     label: "Industries",
   },
   {
-    path: "/about/",
-    label: "About",
+    dropDown:false,
+    path: "https://guide.eoscostarica.io/",
+    label: "Learning",
   },
   {
-    path: "/projects/",
-    label: "Projects",
-  },
-  {
-    path: "/block-producer/",
-    label: "Bp",
-  },
-  {
+    dropDown:false,
     path: "/blog/",
     label: "Blog",
   },
   {
+    dropDown:false,
     path: "/contact-us/",
     label: "Contact",
   },
 ];
 
-const useStyles = makeStyles({
-  navBar:{
-    zIndex:1000,
-    width:'100%',
-    position: 'fixed',
-    display: 'flex',
-    justifyContent: 'center',
-    backgroundColor:'rgba(255, 255, 255, 0)',
-  },
-  navBarScroll:{
-    backgroundColor:'rgba(255, 255, 255, 0.95)',
-  },
-  menuWrapper:{
-    width:"1100px",
-    display: 'flex',
-    
-    alignItems: 'center',
-    fontWeight: 'bold',
-    top: 0,
-    transition: '0.2s',
-    height: '60px',
-    margin: '0 auto',
-    paddingTop: '40px',
-    paddingBottom: '40px',
-
-  },
-  boxLeft:{
-    width:"100%",
-    position: 'relative',
-    display: 'flex',
-  },
-  imgBox:{
-    position: 'absolute',
-    left: '0px',
-    top: '-20px',
-    width: '330px',
-  },
-  img:{
-    WebkitTransformOrigin: 'top left',
-    WebkitTransition:'all 0.26s',
-    WebkitTransform: 'scale(1, 1)',
-    MozTransform:'scale(1, 1)',
-    OTransform:'scale(1, 1)',
-    transform:'scale(1, 1)'
-  },
-  imgDrawer:{
-    padding: '10px',
-    width: '50%',
-  },
-  imgScroll:{
-    WebkitTransformOrigin: 'top left',
-    WebkitTransition:'all 0.26s',
-    WebkitTransform: 'scale(0.4, 0.4)',
-    MozTransform:'scale(0.4, 0.4)',
-    OTransform:'scale(0.4, 0.4)',
-    transform:'scale(0.4, 0.4)'
-  },
-  boxRight:{
-    width:"70%",
-    position: 'relative',
-    display: 'flex',
-    justifyContent: 'flex-end',
-  },
-  boxLanguages: {
-    position: 'absolute',
-    right: '5px',
-    top: '-15px',
-    fontSize:' 11px',
-    fontWeight: '500',
-  },
-  svgWrapper:{
-    marginTop: 0,
-    display: 'inline-block',
-    borderRadius: '3px',
-    marginLeft: '5px',
-    marginRight: '5px',
-    
-  },
-  link: {
-    position: 'relative',
-    marginLeft:'15px',
-    color: "black",
-    fontWeight:'bold',
-    '&:after': {
-      content: '""',
-      position: 'absolute',
-      width: 0,
-      height: '5px',
-      display: 'block',
-      marginTop: '5px',
-      left: 0,
-      right:' 100%',
-      transitionProperty: 'left right',
-      transitionDuration:' 0.3s',
-      transitionTimingFunction: 'ease-out',
-    },
-    '&:hover::after': {
-      width: '100%',
-      right: 0,
-      background: '#5484b3',
-    }
-  },
-  linkActive:{
-    position: 'relative',
-    marginLeft:'15px',
-    color: "black",
-    fontWeight:'bold',
-    '&:after': {
-      content: '""',
-      position: 'absolute',
-      height: '5px',
-      display: 'block',
-      marginTop: '5px',
-      left: 0,
-      right:' 100%',
-      width: '100%',
-      background: '#5484b3',
-    },
-  },
-  btnDrawer:{
-    position: 'absolute',
-    right: '10px',
-    top: '10px',
-    color: '#5484b3'
-  },
-  drawerContent:{
-    width: '60vw'
-  },
-  linkItem:{
-    color:'black',
-    textDecoration:'none',
-    fontWeight:'bold',
-    '&:focus, &:hover': {
-      textDecoration: 'none'
-    }
-  }
-});
-
 const NavbarMenu = () => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-  const classes = useStyles()
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isBlog = location.pathname.substring(0,6) === '/blog/'
@@ -200,8 +81,8 @@ const NavbarMenu = () => {
     disableHysteresis: true
   })
 
-  const useTransparentBG =  trigger 
-
+  const useTransparentBG =  trigger
+  
   useLayoutEffect(() => {
     const pathname = window.location.pathname;
     setPathname(pathname);
@@ -211,58 +92,111 @@ const NavbarMenu = () => {
     setIsOpen(!isOpen)
   }
 
+  const isCurrentPath = (subPaths) =>{
+    let res = false;
+    subPaths.map((item) => {
+      if(pathname === item.path) res=true
+    })
+    return res
+  }
+
   return (
-    <Box  className={clsx(classes.navBar, { [classes.navBarScroll]: useTransparentBG})} >
-      <Box className={classes.menuWrapper}>
+    <Box  className={clsx("navBar", { ["navBarScroll"]: useTransparentBG})} >
+      <Box className={"menuWrapper"}>
         {isMobile && 
-        <>
-          <IconButton onClick={handlerDrawer} className={classes.btnDrawer}>
-            <MenuIcon  fontSize="large"/>
-          </IconButton>
-          <Drawer anchor={'left'} open={isOpen} onClose={handlerDrawer} >
-            <Box className={classes.drawerContent}>
-                <img
-                  className={classes.imgDrawer}
-                  src={useBaseUrl("img/eoscr-logo.png")}
-                  alt="EOS CR LOGO"
-                />
-              <Divider />
-              <List>
-                {PATHS.map((item) => (
-                  <Link href={useBaseUrl(item.path)} key={item.label} className={classes.linkItem} >
-                      <ListItem button>{item.label}</ListItem>
-                  </Link>
-                ))}
-              </List>
+          <>
+          {useTransparentBG && 
+            <Box  className={"imgLogoBoxMobile"}>
+              <img
+                className={"imgLogoScroll"}
+                src={useBaseUrl("img/eoscr-logo.png")}
+                alt="EOS CR LOGO"
+              />
             </Box>
-          </Drawer>
-        </>}
+            }
+            <Box  className={"btnDrawer"}>
+              <IconButton onClick={handlerDrawer}>
+                <MenuIcon  fontSize="large"/>
+              </IconButton>
+            </Box>
+            <Drawer anchor={'right'} open={isOpen} onClose={handlerDrawer} >
+              <Box className={"drawerContent"}>
+                <List>
+                  {PATHS.map((item) => (
+                    <Box  key={item.label}>
+                      {item.dropDown && 
+                        <>
+                          {item.subPaths.map((subItem) => (
+                            <Link href={useBaseUrl(subItem.path)} key={subItem.label} style={{textDecoration: 'none'}}>
+                              <ListItem button><span className={"linkItem"}>{subItem.label}</span></ListItem>
+                          </Link>
+                          ))}
+                        </>
+                      }
+                      {!item.dropDown && 
+                        <Link href={useBaseUrl(item.path)} style={{textDecoration: 'none'}}>
+                            <ListItem button><span className={"linkItem"}>{item.label}</span></ListItem>
+                        </Link>
+                      } 
+                    </Box>
+                  ))}
+                </List>
+              </Box>
+            </Drawer>
+          </>}
         {!isMobile && 
           <>
-            <Box className={classes.boxLeft}>
-              <Box  className={classes.imgBox}>
-              <img
-                  className={!isBlog? clsx(classes.img, {[classes.imgScroll]: useTransparentBG})  : classes.imgScroll}
+            <Box className={"boxLeft"}>
+              <Box  className={"imgLogoBox"}>
+                <img
+                  className={isBlog? "imgLogoScroll" : clsx("imgLogo", {["imgLogoScroll"]: useTransparentBG})}
                   src={useBaseUrl("img/eoscr-logo.png")}
                   alt="EOS CR LOGO"
                 />
               </Box>
             </Box>
-            <Box className={classes.boxRight}>
-              {!isMobile && (
-                  <Box className={classes.boxLanguages}>
-                    <Link href="https://es.eoscostarica.io/" color="inherit" target="_blank" >Español</Link>
-                    <span>{" / "}</span>
-                    <Link href="" color="inherit">English</Link>
-                  </Box>
-                )}
-                {PATHS.map((item) => (
-                  <Link href={useBaseUrl(item.path)} key={item.label}>
-                    <Box className={classes.svgWrapper}>  
-                      <Typography className={clsx(classes.link,{[classes.linkActive] : pathname === item.path})}>{item.label}</Typography>                  
+            <Box className={"boxRight"}>
+                {/*!isMobile && (
+                    <Box className={"boxLanguages"}>
+                      <Grid component="label" container alignItems="center" spacing={1}>
+                        <Grid item>Español</Grid>
+                        <Grid item>
+                          <label className="switch">
+                            <input type="checkbox" checked onChange={() => window.open("https://es.eoscostarica.io/","_self")}/>
+                            <span className="slider round"></span>
+                          </label>
+                        </Grid>
+                        <Grid item>English</Grid>
+                      </Grid>
                     </Box>
-                  </Link>
-                ))}
+                )*/}
+                  <Box className={"boxMenuItems"}>
+                    {PATHS.map((item) => (
+                      <Box key={item.label}>
+                        {!item.dropDown && 
+                          <Link href={useBaseUrl(item.path)} key={item.label} style={{textDecoration:'none'}}>
+                            <Box className={"menuItem"}>  
+                              <h5 className={clsx("link",{["linkActive"] : pathname === item.path})}>{item.label}</h5>                  
+                            </Box>
+                          </Link>
+                        }
+                        {item.dropDown && 
+                          <Box className={"menuItem"}>  
+                            <h5 className={clsx("link",{["linkActive"] : isCurrentPath(item.subPaths)})}>{item.label}</h5>
+                            <Box className={"dropDownMenu"}>
+                                {item.subPaths.map((subItem) => (
+                                  <Link href={useBaseUrl(subItem.path)} key={subItem.label} style={{textDecoration:'none'}}>
+                                    <Box>  
+                                      <h5 className={clsx("menuItemDrop",{["menuItemDropActive"] : pathname === subItem.path})} >{subItem.label}</h5>                  
+                                    </Box>
+                                  </Link>
+                                ))}
+                            </Box>                    
+                          </Box>
+                        }
+                      </Box>
+                    ))}
+                </Box> 
             </Box>
           </>
         }
