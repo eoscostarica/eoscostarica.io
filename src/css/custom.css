@@ -836,6 +836,15 @@ input:checked + .slider:before {
   margin: 1px;
 }
 
+.reduceMarginTop
+{
+  margin-top:-100px
+}
+
+.reduceDobleMarginTop
+{
+  margin-top:-200px
+}
 
 @media only screen and (max-width: 960px) {
   .footerLogo {
@@ -1046,5 +1055,15 @@ input:checked + .slider:before {
   .boxFlexEnd{
     display: flex;
     justify-content: center;
+  }
+
+  .reduceMarginTop
+  {
+    margin-top: 0
+  }
+
+  .reduceDobleMarginTop
+  {
+    margin-top: 0
   }
 }

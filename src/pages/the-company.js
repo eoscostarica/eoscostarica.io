@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useHistory } from 'react-router-dom';
 import { Parallax, Background } from 'react-parallax';
 
@@ -58,109 +58,107 @@ const TheCompany = () => {
 
   const EOSCR = () => {
     return (
-      <Box className={"containerSec"}>
+      <Box className={clsx("reduceMarginTop","containerSec")}>
         <Box className={"sectionPadding"}>
           <Box className={"spacingBox"}>
-            <Box className={"spacingBox"}>
-              <Grid container spacing={5}>
+            <Grid container spacing={5}>
+              <Grid item md={6}>
+                <Box className={"titleBox"}>
+                  <h2>Get to Know EOS Costa Rica</h2>
+                </Box>
+                <p className={"body1"}>
+                  EOS Costa Rica is part of a company with over 
+                  three decades of developing innovative technologies. 
+                  During the 80s, we launched the first BBS 
+                  (bulletin board service) in the country, 
+                  a precursor to the internet. Later on, 
+                  the company shifted to educating new users 
+                  on using the email and browsing the web! 
+                  Then, we started offering internet infrastructure, 
+                  hosting, and development services. In 2013, 
+                  we began providing infrastructure for public 
+                  blockchain networks and learned first-hand 
+                  how blockchains work. Then, in 2018 when 
+                  the EOSIO protocol was launched, we investigated 
+                  the advantages of this technology and started 
+                  learning how to deploy it in the real world. 
+                  Our presence grew during the genesis of the 
+                  EOS Mainnet and will continue to be there 
+                  throughout its growth.
+                </p>
+              </Grid>
+              <Grid item md={6}>
+                <Box className={"imgBoxRight"}>
+                  <img
+                    className={"imgKnow"}
+                    src={useBaseUrl("img/team.webp")}
+                  />
+                </Box>  
+              </Grid>
+            </Grid>
+          </Box>
+          <Box className={"spacingBox"}>
+            <Grid container spacing={5}>
+              {!isMobile && 
                 <Grid item md={6}>
-                  <Box className={"titleBox"}>
-                    <h2>Get to Know EOS Costa Rica</h2>
-                  </Box>
-                  <p className={"body1"}>
-                    EOS Costa Rica is part of a company with over 
-                    three decades of developing innovative technologies. 
-                    During the 80s, we launched the first BBS 
-                    (bulletin board service) in the country, 
-                    a precursor to the internet. Later on, 
-                    the company shifted to educating new users 
-                    on using the email and browsing the web! 
-                    Then, we started offering internet infrastructure, 
-                    hosting, and development services. In 2013, 
-                    we began providing infrastructure for public 
-                    blockchain networks and learned first-hand 
-                    how blockchains work. Then, in 2018 when 
-                    the EOSIO protocol was launched, we investigated 
-                    the advantages of this technology and started 
-                    learning how to deploy it in the real world. 
-                    Our presence grew during the genesis of the 
-                    EOS Mainnet and will continue to be there 
-                    throughout its growth.
-                  </p>
-                </Grid>
-                <Grid item md={6}>
-                  <Box className={"imgBoxRight"}>
+                  <Box className={"imgBoxLeft"}>
                     <img
                       className={"imgKnow"}
-                      src={useBaseUrl("img/team.webp")}
+                      src={useBaseUrl("img/company.webp")}
                     />
                   </Box>  
                 </Grid>
+              }
+              <Grid item md={6}>
+                <Box className={"titleBox"}>
+                  <h2>Our vision</h2>
+                </Box>
+                <p>
+                  We founded EOS Costa Rica two years ago — before the 
+                  release of EOS… and quickly realized this was a marathon, 
+                  not a sprint. We have experimented with different use 
+                  cases for EOSIO blockchain technology, especially 
+                  for enterprise use. Our team offers an agile and 
+                  lean approach to develop blockchain-based solutions 
+                  that allow innovation departments to quickly and 
+                  efficiently iterate and test proofs-of-concept with
+                  a restricted budget and schedule. This ability enables
+                  organizations to explore this technology’s benefits and 
+                  experience its potential in a controlled environment.
+                </p>
               </Grid>
-            </Box>
-            <Box className={"spacingBox"}>
-              <Grid container spacing={5}>
-                {!isMobile && 
-                  <Grid item md={6}>
-                    <Box className={"imgBoxLeft"}>
-                      <img
-                        className={"imgKnow"}
-                        src={useBaseUrl("img/company.webp")}
-                      />
-                    </Box>  
-                  </Grid>
-                }
+              {isMobile && 
                 <Grid item md={6}>
-                  <Box className={"titleBox"}>
-                    <h2>Our vision</h2>
-                  </Box>
-                  <p>
-                    We founded EOS Costa Rica two years ago — before the 
-                    release of EOS… and quickly realized this was a marathon, 
-                    not a sprint. We have experimented with different use 
-                    cases for EOSIO blockchain technology, especially 
-                    for enterprise use. Our team offers an agile and 
-                    lean approach to develop blockchain-based solutions 
-                    that allow innovation departments to quickly and 
-                    efficiently iterate and test proofs-of-concept with
-                    a restricted budget and schedule. This ability enables
-                    organizations to explore this technology’s benefits and 
-                    experience its potential in a controlled environment.
-                  </p>
+                  <Box className={"imgBoxLeft"}>
+                    <img
+                      className={"imgKnow"}
+                      src={useBaseUrl("img/company.webp")}
+                    />
+                  </Box>  
                 </Grid>
-                {isMobile && 
-                  <Grid item md={6}>
-                    <Box className={"imgBoxLeft"}>
-                      <img
-                        className={"imgKnow"}
-                        src={useBaseUrl("img/company.webp")}
-                      />
-                    </Box>  
-                  </Grid>
-                }
+              }
+            </Grid>
+          </Box>
+          <Box className={"spacingBox"}>
+            <Grid container spacing={5} >
+              <Grid item xs={12} md={12}>
+                <p>
+                  We can co-ideate and develop the ideal solution 
+                  that integrates blockchain technology into your 
+                  operations following an agile and lean approach 
+                  that will help you explore blockchain’s features 
+                  within a restricted budget and schedule. We 
+                  provide top-notch, ready-to-use blockchain 
+                  infrastructures. Also, we configure, host, 
+                  and maintain blockchain nodes and networks that 
+                  can meet your organization’s requirements and needs. 
+                  We offer workshops to C-suite executives and teams. 
+                  We also provide training for new talents and promote 
+                  the region’s blockchain ecosystem by participating 
+                  in events, seminars, and conferences.
+                </p>
               </Grid>
-            </Box>
-            <Box className={"spacingBox"}>
-              <Grid container spacing={5} >
-                <Grid item xs={12} md={12}>
-                  <p>
-                    We can co-ideate and develop the ideal solution 
-                    that integrates blockchain technology into your 
-                    operations following an agile and lean approach 
-                    that will help you explore blockchain’s features 
-                    within a restricted budget and schedule. We 
-                    provide top-notch, ready-to-use blockchain 
-                    infrastructures. Also, we configure, host, 
-                    and maintain blockchain nodes and networks that 
-                    can meet your organization’s requirements and needs. 
-                    We offer workshops to C-suite executives and teams. 
-                    We also provide training for new talents and promote 
-                    the region’s blockchain ecosystem by participating 
-                    in events, seminars, and conferences.
-                  </p>
-                </Grid>
-              </Grid>
-            </Box>
+            </Grid>
           </Box>
         </Box>
       </Box> 
@@ -169,7 +167,7 @@ const TheCompany = () => {
 
   const WeAreOneGroup = () => {
     return (
-      <Box className={clsx("containerSec",{["containerGray"] : isMobile, ["containerWithBackground"] : isMobile})}>
+      <Box className={clsx("containerSec","reduceMarginTop",{["containerGray"] : isMobile, ["containerWithBackground"] : isMobile})}>
         <Box className={"sectionPadding"} >
           <Box className={"h3Box"}>
             <h3 style={{textAlign:'center'}}>We Are One Group</h3>
@@ -217,7 +215,7 @@ const TheCompany = () => {
 
   const MeetTeam = () => {
     return (
-      <Box className={"containerSec"}>
+      <Box className={clsx("reduceDobleMarginTop","containerSec")}>
         <Box className={"sectionPadding"}>
           <Box className={"spacingBox"}>
             <Grid container spacing={1}>
@@ -296,7 +294,7 @@ const TheCompany = () => {
 
   const TheTechnology = () => {
     return ( 
-      <Box style={{marginTop:'-60px'}} className={"containerSec"}> 
+      <Box className={clsx("containerSec","reduceMarginTop")}> 
         <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
           <br/>
           <br/>
@@ -400,7 +398,7 @@ const TheCompany = () => {
 
   const SomeOurProjects = () => {
     return ( 
-      <Box className={"containerSec"}> 
+      <Box className={clsx("reduceMarginTop","containerSec")}> 
         <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
           <br/>
           <br/>
@@ -538,18 +536,16 @@ const TheCompany = () => {
             <Background className={"bgParallaxSecondaryCompany"}>
               <Box className={"imgParallax"} />
             </Background>
-            <WeAreOneGroup />
-            <MeetTeam />
           </Parallax>
         }
         {isMobile && 
           <>
             <HeroSection />
             <EOSCR />
-            <WeAreOneGroup />
-            <MeetTeam />
           </>
         }
+        <WeAreOneGroup />
+        <MeetTeam />
         <TheTechnology/>
         <SomeOurProjects/>
         <ContactUs />
