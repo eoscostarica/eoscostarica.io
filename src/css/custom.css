@@ -828,25 +828,6 @@ input:checked + .slider:before {
   margin: 1px;
 }
 
-.teamImageBox{
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: hidden;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.teamImageBox::-webkit-scrollbar {
-  height: 0.5em
-}
-
-.teamImageBox::-webkit-scrollbar-track {
-  background-color: rgba(0,0,0,.05)
-}
-
-.teamImageBox::-webkit-scrollbar-thumb {
-  border-radius: 10px
-}
 
 @media only screen and (max-width: 960px) {
   .footerLogo {
@@ -1052,5 +1033,10 @@ input:checked + .slider:before {
   .marginTopAccordion
   {
     margin-top:-70px
+  }
+
+  .boxFlexEnd{
+    display: flex;
+    justify-content: center;
   }
 }
