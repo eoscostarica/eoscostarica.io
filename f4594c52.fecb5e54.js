@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[53],{117:function(o){o.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"block-producers","name":"block producers","count":1,"permalink":"/blog/tags/block-producers"}')}}]);
