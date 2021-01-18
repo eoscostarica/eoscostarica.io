@@ -18,24 +18,21 @@ const ManagementTeam = [
     {
         img:"img/rodrigo.webp",
         name:"Rodrigo Fernández",
-        positionLine1:"Founder, Chairman",
-        positionLine2:"& Chief Strategist",
+        position:"Founder, Chairman & Chief Strategist",
         linkedIn:"https://www.linkedin.com/in/rodrigo-fernandez-57b8b72a/",
         twitter:"https://twitter.com/rjfescazu"
     },
     {
         img:"img/edgar.webp",
         name:"Edgar Fernández",
-        positionLine1:"Co-founder & ",
-        positionLine2:"Finance and Enterprise",
+        position:"Co-founder & Finance and Enterprise",
         linkedIn:"https://www.linkedin.com/in/edgarafernandez/",
         twitter:"https://twitter.com/fernane506"
     },
     {
         img:"img/xavier.webp",
         name:"Xavier Fernández",
-        positionLine1:"Co-founder & ",
-        positionLine2:"Tech Lead",
+        position:"Co-founder & Tech Lead",
         linkedIn:"https://www.linkedin.com/in/xaviercr/",
         twitter:"https://twitter.com/xaviercr"
     }
@@ -46,16 +43,14 @@ const MarketingSalesTeam = [
     {
         img:"img/luisdiego.webp",
         name:"Luis Diego Rojas",
-        positionLine1:"Communications and",
-        positionLine2:"Content Strategist",
+        position:"Communications and Content Strategist",
         linkedIn:"https://www.linkedin.com/in/ldrojas/",
         twitter:"https://twitter.com/ldrojas"
     },
     {
         img:"img/rodolfo.webp",
         name:"Rodolfo Perez",
-        positionLine1:"Art Director &",
-        positionLine2:"Brand Manager",
+        position:"Art Director & Brand Manager",
         linkedIn:"https://www.linkedin.com/in/rodolfo-eduardo-p%C3%ABrez-nava-73442164/",
         twitter:"https://twitter.com/monsieurRoaf"
     },
@@ -65,96 +60,84 @@ const DevelopTeam = [
     {
         img:"img/adriel.webp",
         name:"Adriel Diaz",
-        positionLine1:"Full Stack Developer",
-        positionLine2:"",
+        position:"Full Stack Developer",
         linkedIn:"https://www.linkedin.com/in/adriel-d%C3%ADaz-08226384/",
         twitter:""
     },
     {
         img:"img/allan.webp",
         name:"Allan Salazar",
-        positionLine1:"Network Engineer",
-        positionLine2:"",
+        position:"Network Engineer",
         linkedIn:"",
         twitter:""
     },
     {
         img:"",
         name:"Andrés Gomez",
-        positionLine1:"Cybersecurity Developer",
-        positionLine2:"",
+        position:"Cybersecurity Developer",
         linkedIn:"https://www.linkedin.com/in/andres-gomez-ramirez-bb7226156/",
         twitter:"https://twitter.com/kuronosec"
     },
     {
         img:"",
         name:"Angelo Castro",
-        positionLine1:"Intern",
-        positionLine2:"",
+        position:"Intern",
         linkedIn:"https://www.linkedin.com/in/angelo-castro-gamboa/",
         twitter:""
     },
     {
         img:"img/cris.webp",
         name:"Cristian Castro",
-        positionLine1:"C++ Developer",
-        positionLine2:"",
+        position:"C++ Developer",
         linkedIn:"https://www.linkedin.com/in/cristian-castro-95193a3a/",
         twitter:""
     },
     {
         img:"",
         name:"Jean Vega",
-        positionLine1:"Intern",
-        positionLine2:"",
+        position:"Intern",
         linkedIn:"https://www.linkedin.com/in/jeanvegad/",
         twitter:""
     },
     {
         img:"img/jorge.webp",
         name:"Jorge Murillo",
-        positionLine1:"Sr. UX Designer",
-        positionLine2:"",
+        position:"Sr. UX Designer",
         linkedIn:"https://www.linkedin.com/in/jmurilloux/",
         twitter:"https://twitter.com/Oquedo"
     },
     {
         img:"",
         name:"Justin Castillo",
-        positionLine1:"Intern",
-        positionLine2:"",
+        position:"Intern",
         linkedIn:"https://www.linkedin.com/in/jacv/",
         twitter:"https://twitter.com/_JustinCast"
     },
     {
         img:"img/kevin.webp",
         name:"Kevin Castillo",
-        positionLine1:"Full Stack Developer",
-        positionLine2:"",
+        position:"Full Stack Developer",
         linkedIn:"https://www.linkedin.com/in/kevin-castillo-mora/",
         twitter:""
     },
     {
         img:"img/ronald.webp",
         name:"Ronald Gallo",
-        positionLine1:"Network Administrator",
-        positionLine2:"",
+        position:"Network Administrator",
         linkedIn:"",
         twitter:""
     },
     {
         img:"img/teto.webp",
         name:"Terencio Gómez",
-        positionLine1:"Full Stack Developer",
-        positionLine2:"",
+        position:"Full Stack Developer",
         linkedIn:"https://www.linkedin.com/in/terencio-gomez-14784ba3/",
         twitter:""
     },
     {
         img:"img/julio.webp",
         name:"Victor Julio Madrigal",
-        positionLine1:"Web Developer",
-        positionLine2:"",
+        position:"Web Developer",
         linkedIn:"",
         twitter:""
     },
@@ -172,11 +155,7 @@ const Team = () => {
             {!isMobile && 
                 <Box className={"sectionHero"} style={{height:'auto'}}>
                     <Box className={"titleBox"}>
-                        <h1>Meet the Team</h1>
-                    </Box>
-                        <p>Get to know our team. We’re always looking for talent! Contact us to learn more about our open positions.</p>
-                    <Box className={"buttonBox"}>
-                        <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Send CV</button>
+                        <h1>Meet the Essence of Our Company</h1>
                     </Box>
                     <TeamSection />
                 </Box>
@@ -191,11 +170,7 @@ const Team = () => {
                     />
                 </Box>
               <Box className={"titleBox"}>
-                <h1>Meet the Team</h1>
-              </Box>
-                <p>Get to know our team. We’re always looking for talent! Contact us to learn more about our open positions.</p>
-              <Box className={"buttonBoxMobile"}>
-                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Send CV</button>
+                <h1>Meet the Essence of Our Company</h1>
               </Box>
             </Box>
           }
@@ -203,8 +178,34 @@ const Team = () => {
         )
     } 
 
-    const PersonCard = ({img, name, positionLine1,positionLine2,linkedIn, twitter}) => {
+    const PersonCard = ({img, name, position, linkedIn, twitter}) => {
         return(
+            <Grid container>
+                <Grid item xs={12} md={6}>
+                    <Box className={"avatarBox"}>
+                        <Avatar variant="square" style={{width:"200px", height:"250px"}} src={img}><PersonIcon style={{width:'40%',height:'40%'}}/></Avatar>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                <Box >
+                    <h3 className={"nameText"}>{name}</h3>
+                    <p className={"positionText"}>{position}</p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...
+                    </p>
+                </Box>
+                <Box className="socialMediaBox">
+                    {linkedIn && 
+                        <IconButton href={linkedIn} target="_blank"><LinkedInIcon style={{width:'25px',height:'25px', color:"#5484b3"}} /></IconButton>
+                    }
+                    {twitter && 
+                         <IconButton href={twitter} target="_blank"><TwitterIcon  style={{width:'25px',height:'25px', color:"#5484b3"}}/></IconButton>
+                    }
+                </Box>
+                </Grid>
+
+            </Grid>
+            /*
             <Box>
                 <Box className={"avatarBox"}>
                     <Avatar variant="square" style={{width:"250px", height:"250px"}} src={img}><PersonIcon style={{width:'40%',height:'40%'}}/></Avatar>
@@ -225,7 +226,7 @@ const Team = () => {
                          <IconButton href={twitter} target="_blank"><TwitterIcon  style={{width:'30px',height:'30px', color:"#5484b3"}}/></IconButton>
                     }
                 </Box>
-            </Box>
+            </Box>*/
         )
     }
 
@@ -235,17 +236,16 @@ const Team = () => {
                 <Box className={clsx("sectionNo",{["sectionPadding"] : isMobile})}>
                     <Box className={"doubleSpacingBox"}>
                         <Box className={"spacingBox"}>
-                            <h3>Management Team</h3>
+                            <h2>Management Team</h2>
                         </Box>
                         <Box>
                             <Grid container spacing={3}>
                                 {ManagementTeam.map((person) => (
-                                    <Grid item xs={12} md={4} key={person.name}>
+                                    <Grid item xs={12} md={6} key={person.name}>
                                         <PersonCard 
                                             img={useBaseUrl(person.img)}
                                             name={person.name}
-                                            positionLine1={person.positionLine1}
-                                            positionLine2={person.positionLine2}
+                                            position={person.position}
                                             linkedIn={person.linkedIn}
                                             twitter={person.twitter}
                                         />
@@ -256,17 +256,16 @@ const Team = () => {
                     </Box>
                     <Box className={"doubleSpacingBox"}>
                         <Box className={"spacingBox"}>
-                            <h3>Marketing and Sales</h3>
+                            <h2>Marketing and Sales</h2>
                         </Box>
                         <Box>
                             <Grid container spacing={3}>
                                 {MarketingSalesTeam.map((person) => (
-                                    <Grid item xs={12} md={4} key={person.name}>
+                                    <Grid item xs={12} md={6} key={person.name}>
                                         <PersonCard 
                                             img={useBaseUrl(person.img)}
                                             name={person.name}
-                                            positionLine1={person.positionLine1}
-                                            positionLine2={person.positionLine2}
+                                            position={person.position}
                                             linkedIn={person.linkedIn}
                                             twitter={person.twitter}
                                         />
@@ -277,17 +276,16 @@ const Team = () => {
                     </Box>
                     <Box className={"doubleSpacingBox"}>
                         <Box className={"spacingBox"}>
-                            <h3>Development and Design</h3>
+                            <h2>Development and Design</h2>
                         </Box>
                         <Box>
                             <Grid container spacing={5}>
                                 {DevelopTeam.map((person) => (
-                                    <Grid item xs={12} md={4} key={person.name}>
+                                    <Grid item xs={12} md={6} key={person.name}>
                                         <PersonCard 
                                             img={useBaseUrl(person.img)}
                                             name={person.name}
-                                            positionLine1={person.positionLine1}
-                                            positionLine2={person.positionLine2}
+                                            position={person.position}
                                             linkedIn={person.linkedIn}
                                             twitter={person.twitter}
                                         />

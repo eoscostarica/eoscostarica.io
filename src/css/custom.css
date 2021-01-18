@@ -522,11 +522,6 @@ input:checked + .slider:before {
   padding-bottom: 140px;
 }
 
-.buttonBoxMobile{
-  display: flex;
-  justify-content: center;
-}
-
 .boxTitle{
   margin-bottom: 2rem;
 }
@@ -786,17 +781,33 @@ input:checked + .slider:before {
 }
 
 .centerText{
-  text-align: center;
+  text-align: left;
+}
+
+.nameText{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 5px;
 }
 
 .nameText{
   font-size: 22px;
-  text-align: center;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.positionText{
+  text-align: left;
+  font-size: 18px;
+  color: #5484b3;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .socialMediaBox{
   display: flex;
-  justify-content: center;
+  justify-content: start;
   margin-top: 5px;
 }
 
@@ -877,9 +888,15 @@ input:checked + .slider:before {
   }
 
   .nameText{
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
   }
+
+  .positionText{
+    text-align: center;
+    font-size: 18px;
+  }
+  
   
 
   h1{
