@@ -849,6 +849,18 @@ input:checked + .slider:before {
   display: none
 }
 
+.imgBoxProjects{
+  display: flex;
+  justify-content: center
+}
+
+.imgProjectsSize{
+  height: 230px;
+  width: 230px;
+  margin-top: -40px
+}
+
+
 @media only screen and (max-width: 960px) {
   .footerLogo {
     width: 80%;

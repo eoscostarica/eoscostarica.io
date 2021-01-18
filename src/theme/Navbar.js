@@ -31,7 +31,7 @@ const PATHS = [
         path: "/services/",
         label: "Services",
       },
-      /*{
+      {
         path: "/the-company/",
         label: "The company",
       },
@@ -39,7 +39,7 @@ const PATHS = [
         path: "/projects/",
         label: "Projects",
       },
-      {
+      /*{
         path: "/block-producer/",
         label: "Bp",
       },

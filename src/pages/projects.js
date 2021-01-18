@@ -2,37 +2,281 @@ import React from "react";
 import { useHistory } from 'react-router-dom';
 import { Parallax, Background } from 'react-parallax';
 import clsx from "clsx";
+import Grid from '@material-ui/core/Grid';
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Box from '@material-ui/core/Box'
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-
-import styles from "./styles.module.css";
-import useStyles from "../css/styles.js"
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { Opacity } from "@material-ui/icons";
 
 const OurProjects = () => {
-  const classes = useStyles()
   const history = useHistory();
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+
+  const HeroSection = () => {
+    return (
+      <Box className={"containerSec"}>
+        {!isMobile && 
+          <Box className={"sectionHero"}>
+          <Box className={"titleBox"}>
+              <h1>Enterprise Blockchain</h1>
+              <h1>Use Cases</h1>
+          </Box>
+          <p >Years of experience developing innovative technologies speak for us. Unleash the power of blockchain technology with the help of our agile team.</p>
+        </Box>
+        }
+        {isMobile && 
+          <Box className={"sectionHeroMobile"}>
+            <Box className={"logoMobileBox"}>
+              <img
+                  className={"logoMobile"}
+                  src={useBaseUrl("img/eoscr-logo.png")}
+                  alt="EOS CR LOGO"
+                />
+            </Box>
+          <Box className={"titleBox"}>
+              <h1>Enterprise Blockchain </h1>
+              <h1>Use Cases</h1>
+          </Box>
+          <p >Years of experience developing innovative technologies speak for us.</p>
+          <br/>
+          <p>Unleash the power of blockchain technology with the help of our agile team.</p>
+        </Box>
+      }
+      </Box>
+    )
+  } 
+
+
+  const Projects = () => {
+    return (
+      <Box className={"containerSec"}>
+        <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
+          <Grid container spacing={5}>
+            <Grid item xs={12} md={6}>
+              <Box className={"imgBoxProjects"}>
+                <img
+                  className={"imgProjectsSize"}
+                  alt="LatamLink"
+                  src={useBaseUrl("img/Group47.svg")}
+                />
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box className={"h3Box"}>
+                <h3 >LatamLink</h3>
+              </Box>
+              <p>
+                We are part of this voluntary regional alliance, led by Latin
+                American technology companies to offer an EOSIO-based testnet to
+                the LACChain initiative, a program to accelerate the development
+                of the blockchain ecosystem in the region.
+              </p>
+            </Grid>
+            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)'}} item xs={12} md={6}>
+              <Box className={"imgBoxProjects"}>
+                <img
+                  className={"imgProjectsSize"}
+                  alt="LatamLink"
+                  src={useBaseUrl("img/Group47.svg")}
+                />
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)'}} item xs={12} md={6}>
+              <Box className={"h3Box"}>
+                <h3 >Lifebank</h3>
+              </Box>
+              <p>
+                An open-source blockchain-based app that incentivizes blood
+                donations by creating a virtuous circle of value between donors,
+                blood banks, and local businesses, leveraged by a token economy.
+                Winner of the "Coding for Change" challenge by block.one.
+              </p>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box className={"imgBoxProjects"}>
+                <img
+                  className={"imgProjectsSize"}
+                  alt="LatamLink"
+                  src={useBaseUrl("img/Group47.svg")}
+                />
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box className={"h3Box"}>
+                <h3 >SMARTGATE</h3>
+              </Box>
+              <p>
+                A blockchain-based platform that provides solutions for in-out
+                gate activity for the container industry and real-time
+                transmission of relevant data required for proper interchange in
+                port logistics.
+              </p>
+            </Grid>
+            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)'}} item xs={12} md={6}>
+              <Box className={"imgBoxProjects"}>
+                <img
+                  className={"imgProjectsSize"}
+                  alt="LatamLink"
+                  src={useBaseUrl("img/Group47.svg")}
+                />
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)'}} item xs={12} md={6}>
+              <Box className={"h3Box"}>
+                <h3 >Enterprise EOSIO Forum</h3>
+              </Box>
+              <p>
+                We are part of the Enterprise EOSIO Forum, a community-driven
+                initiative to discuss enterprise blockchain solutions
+                deploying EOSIO technology.
+              </p>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box className={"imgBoxProjects"}>
+                <img
+                  className={"imgProjectsSize"}
+                  alt="LatamLink"
+                  src={useBaseUrl("img/Group47.svg")}
+                />
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box className={"h3Box"}>
+                <h3 >EOS Foundation</h3>
+              </Box>
+              <p>
+                We are part of the EOS Foundation proof of concept. It is an
+                autonomous, decentralized, non-profit organization that will
+                enable self-representation and promotion of the EOS community.
+              </p>
+            </Grid>
+            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)'}} item xs={12} md={6}>
+              <Box className={"imgBoxProjects"}>
+                <img
+                  className={"imgProjectsSize"}
+                  alt="LatamLink"
+                  src={useBaseUrl("img/Group47.svg")}
+                />
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)'}} item xs={12} md={6}>
+              <Box className={"h3Box"}>
+                <h3 >EOS Rate</h3>
+              </Box>
+              <p>
+                EOS Rate is an open- source app that allows EOS token holders
+                to access a rating system and voting portal for block
+                producers and proxies in the EOS blockchain.
+              </p>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box className={"imgBoxProjects"}>
+                <img
+                  className={"imgProjectsSize"}
+                  alt="LatamLink"
+                  src={useBaseUrl("img/Group47.svg")}
+                />
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box className={"h3Box"}>
+                <h3 >EOSIO Dashboard</h3>
+              </Box>
+              <p>
+                The EOSIO Dashboard is an open-source project that allows
+                users to visualize the rewards distribution along the EOS
+                network to seek accountability and transparency.
+              </p>
+            </Grid>
+            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)'}} item xs={12} md={6}>
+              <Box className={"imgBoxProjects"}>
+                <img
+                  className={"imgProjectsSize"}
+                  alt="LatamLink"
+                  src={useBaseUrl("img/Group47.svg")}
+                />
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)'}} item xs={12} md={6}>
+              <Box className={"h3Box"}>
+                <h3 >Evodex</h3>
+              </Box>
+              <p>
+                Evodex is the front-end user interface for a liquidity pool
+                protocol where users vote on the pool liquidity fees and pay
+                zero gas. We were in charge of UX and front-end design.
+              </p>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box className={"imgBoxProjects"}>
+                <img
+                  className={"imgProjectsSize"}
+                  alt="LatamLink"
+                  src={useBaseUrl("img/Group47.svg")}
+                />
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box className={"h3Box"}>
+                <h3 >Undisclosed enterprise project</h3>
+              </Box>
+              <p>
+                We developed an app for a US-based client in the accounting
+                and tax industry for improved traceability of intercompany
+                transactions.
+              </p>
+            </Grid>
+            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)'}} item xs={12} md={6}>
+              <Box className={"imgBoxProjects"}>
+                <img
+                  className={"imgProjectsSize"}
+                  alt="LatamLink"
+                  src={useBaseUrl("img/Group47.svg")}
+                />
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)'}} item xs={12} md={6}>
+              <Box className={"h3Box"}>
+                <h3 >Notario Digital</h3>
+              </Box>
+              <p>
+                Notario Digital is an open-source project that generates a
+                hash of any file to register it immutably on an EOSIO network.
+              </p>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+    )
+  }
+
+
+
   return (
     <Layout>
-      <Parallax strength={800}>
-          <Background className={"bgParallax"}>
-              <Box className={"imgParallax"} />
-          </Background>
-          <Box className={"containerSec"}>
-            <Box className={"sectionHero"}>
-              <Box className={"titleBox"}>
-                <h1>Page under construction</h1>
-              </Box>
-              <p>We're still working on this page. Contact us and we'll let you know when we're ready.</p>
-              <Box className={"buttonBox"}>
-                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
-              </Box>
-            </Box>
-          </Box>
-      </Parallax>
+      <Box className={"mainContainer"}>
+        {!isMobile && 
+          <Parallax strength={800}>
+            <Background className={"bgParallax"}>
+                <Box className={"imgParallax"} />
+            </Background>
+            <HeroSection />
+            <Projects/>
+          </Parallax>
+        }
+        {isMobile && 
+          <>
+            <HeroSection />
+          </>
+        } 
+      </Box>
     </Layout>
+  );
+};
+
     /*
     <Layout>
       <Box className={styles.mainContainer}>
@@ -343,7 +587,5 @@ const OurProjects = () => {
       </Box>
     </Layout>
     */
-  );
-};
 
 export default OurProjects;
