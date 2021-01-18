@@ -24,6 +24,7 @@ const PATHS = [
     dropDown:true,
     path: "/",
     label: "About us",
+    markerSize: "70px",
     subPaths: 
     [
       {
@@ -183,7 +184,7 @@ const NavbarMenu = () => {
                         {item.dropDown && 
                           <Box className={"menuItem"}>  
                             <h5 className={clsx("link",{["linkActive"] : isCurrentPath(item.subPaths)})}>{item.label}</h5>
-                            <Box className={"dropDownMenu"}>
+                            <Box className={clsx("dropDownMenu",{["dropDownMenuActive"] : isCurrentPath(item.subPaths)})}  style={{width:item.markerSize}}>
                                 {item.subPaths.map((subItem) => (
                                   <Link href={useBaseUrl(subItem.path)} key={subItem.label} style={{textDecoration:'none'}}>
                                     <Box>  
