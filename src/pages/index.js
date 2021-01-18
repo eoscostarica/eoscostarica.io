@@ -166,9 +166,13 @@ const Home = () => {
               started!
             </p>
             <Box className={"accordionBox"}>
-              <Box style={{marginBottom:'5px'}}>
-                <Accordion square expanded={expanded === 'panel_SoftDev'}  onChange={handleChange('panel_SoftDev')} className={"accordion"} style={{backgroundColor:'#f1f1f1',boxShadow:'none'}} >
-                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                <Accordion 
+                  square 
+                  expanded={expanded === 'panel_SoftDev'} 
+                  onChange={handleChange('panel_SoftDev')} 
+                  className={"accordion"} 
+                  style={{backgroundColor:'#f1f1f1',marginTop:'20px',boxShadow:'none'}} >
+                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
                     <h3>Software Development</h3>
                   </AccordionSummary>
                   <AccordionDetails style={{padding:0}}>
@@ -185,10 +189,13 @@ const Home = () => {
                     </p>
                   </AccordionDetails>
                 </Accordion>
-              </Box>
-              <Box style={{marginBottom:'5px'}}>
-                <Accordion square expanded={expanded === 'panel_BlockInfrac'}  onChange={handleChange('panel_BlockInfrac')} className={"accordion"} style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}>
-                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                <Accordion 
+                  square
+                  expanded={expanded === 'panel_BlockInfrac'}
+                  onChange={handleChange('panel_BlockInfrac')}
+                  className={"accordion"}
+                  style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}>
+                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
                     <h3>Blockchain Infrastructure</h3>
                   </AccordionSummary>
                   <AccordionDetails style={{padding:0}}>
@@ -204,10 +211,8 @@ const Home = () => {
                     </p>
                   </AccordionDetails>
                 </Accordion>
-              </Box>
-              <Box style={{marginBottom:'5px'}}>
                 <Accordion square expanded={expanded === 'panel_Education'}  onChange={handleChange('panel_Education')} className={"accordion"} style={{backgroundColor:'#f1f1f1',boxShadow:'none',borderColor:'s\\#f1f1f1'}}>
-                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
                     <h3>Education and Training</h3>
                   </AccordionSummary>
                   <AccordionDetails style={{padding:0}}>
@@ -223,7 +228,6 @@ const Home = () => {
                   </AccordionDetails>
                 </Accordion>
               </Box>
-            </Box>
           </Grid>
           {!isMobile && 
             <Grid item  md={6}>

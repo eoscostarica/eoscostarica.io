@@ -377,7 +377,14 @@ input:checked + .slider:before {
   top: 0;
   right: auto;
   height: 100%;
-  width: 100%;
+  width: 110px;
+}
+
+.menuItem:hover .dropDownMenuActive::after{
+  top: 0;
+  right: auto;
+  height: 100%;
+  width: 110px;
 }
 
 .menuItem:hover .menuItemDrop{
@@ -390,18 +397,40 @@ input:checked + .slider:before {
   display: block;
   visibility: hidden;
   top: 70px;
-  
 }
 
 .dropDownMenu:after {
   content: "";
   position: absolute;
   z-index: -1;
-  right: 0;
-  height: 0%;
+  left: 0;
+  height: 5px;
   margin-top: -15px;
   width: 0%;
-  bottom: 0;
+  top: 0;
+  background:#5484b3;
+  transition-property: width height;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  font-weight: bold;
+}
+
+.dropDownMenuActive{
+  position: absolute;
+  display: block;
+  visibility: visible;
+  top: 70px;
+}
+
+.dropDownMenuActive:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  height: 5px;
+  margin-top: -15px;
+  width: 100%;
+  top: 0;
   background:#5484b3;
   transition-property: width height;
   transition-duration: 0.3s;
@@ -453,7 +482,7 @@ input:checked + .slider:before {
   content: "";
   position: absolute;
   z-index: -1;
-  right: 0;
+  left: 0;
   height: 5px;
   margin-top: 5px;
   width: 0;
@@ -466,17 +495,15 @@ input:checked + .slider:before {
 }
 
 .menuItem:hover .link:after {
-  left: 0;
-  right: auto;
+  left:  0;
   width: 100%;
 }
-
 
 .linkActive:after {
   content: "";
   position: absolute;
   z-index: -1;
-  right: 0;
+  left: 0;
   height: 5px;
   margin-top: 5px;
   width: 100%;
