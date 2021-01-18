@@ -857,7 +857,7 @@ input:checked + .slider:before {
 .imgProjectsSize{
   height: 230px;
   width: 230px;
-  margin-top: -40px
+  margin-top: -40px;
 }
 
 

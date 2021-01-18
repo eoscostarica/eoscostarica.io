@@ -270,6 +270,7 @@ const OurProjects = () => {
         {isMobile && 
           <>
             <HeroSection />
+            <Projects/>
           </>
         } 
       </Box>
