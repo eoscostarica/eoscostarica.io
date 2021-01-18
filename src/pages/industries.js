@@ -118,13 +118,15 @@ const Industries = () => {
                 improved payment structures.
               </p>
               <br/>
-              <a
-                className={"readMoreMargin"}
-                href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
-                target="_blank"
-              >
-                Read More
-              </a>
+              <p>
+                <a
+                  className={"readMoreMargin"}
+                  href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
+                  target="_blank"
+                >
+                  Read More
+                </a>
+              </p>
             </Grid>
             <Grid style={{marginTop:'50px'}} item xs={12} md={4}>
               <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
@@ -145,13 +147,15 @@ const Industries = () => {
                 in the logistics and supply chain industry.
               </p>
               <br/>
-              <a
-                className={"readMoreMargin"}
-                href={"https://eoscostarica.io/blog/blockchain-logistics"} 
-                target="_blank"
-              >
-                Read More
-              </a>
+              <p>
+                <a
+                  className={"readMoreMargin"}
+                  href={"https://eoscostarica.io/blog/blockchain-logistics"} 
+                  target="_blank"
+                >
+                  Read More
+                </a>
+              </p>
             </Grid>
             <Grid style={{marginTop:'-40px'}} item xs={12} md={4}>
               <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
@@ -171,13 +175,15 @@ const Industries = () => {
                 for transactions can level-up online gaming.
               </p>
               <br/>
-              <a
-                className={"readMoreMargin"} 
-                href={"https://eoscostarica.io/blog/gaming-blockchain"}
-                target="_blank"
-              >
-                Read More
-              </a>
+              <p>
+                <a
+                  className={"readMoreMargin"} 
+                  href={"https://eoscostarica.io/blog/gaming-blockchain"}
+                  target="_blank"
+                >
+                  Read More
+                </a>
+              </p>
             </Grid>
           </Grid>
           <br/>
