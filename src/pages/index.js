@@ -21,13 +21,6 @@ const Home = () => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
-  const handleScrollEnter = () => {
-    setStateAnimation(true)
-  }
-  const handleScrollExit = () => {
-    setStateAnimation(false)
-  }
-
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
