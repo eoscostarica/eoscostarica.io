@@ -320,8 +320,11 @@ const TheCompany = () => {
                   <h3>Scalability</h3>
                 </Box>
                 <p >
-                  Can your team use their experience with programming 
-                  languages, or do they need to learn a new one?
+                  EOSIO deploys the DPoS mechanism to achieve higher throughput
+                  and efficiency, becoming the blockchain protocol with the
+                  largest number of transactions per second at 4,000 on its
+                  public blockchain. In contrast, the average in other
+                  blockchain systems is 15-20 transactions per second.
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
@@ -329,9 +332,11 @@ const TheCompany = () => {
                   <h3>Flexibility</h3>
                 </Box>
                 <p>
-                  How quickly does your solution need to be? 
-                  Are you a high-frequency trading company, or can you afford 
-                  longer block confirmation times?
+                  EOSIO enables adaptability for public and private networks
+                  and can be customized according to the business requirements.
+                  This blockchain technology offers low latency, meaning that
+                  a user won't have to wait for a long time for a transaction
+                  to be complete, ensuring a better user experience.
                 </p>
               </Grid>
             </Grid>
@@ -341,9 +346,10 @@ const TheCompany = () => {
                   <h3>Cost-effective</h3>
                 </Box>
                 <p>
-                  Would the organization see a significant 
-                  reduction in costs by integrating smart contracts or 
-                  simplifying the data sharing process?
+                  EOSIO offers a flexible and favorable cost model that
+                  eliminates the need for transaction fees. This model is
+                  ideal for developers who seek a solution with low operation
+                  costs and still offers an experience free to the user.
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
@@ -351,22 +357,23 @@ const TheCompany = () => {
                   <h3>Eco-friendly</h3>
                 </Box>
                 <p>
-                  How are the blockchain’s security and 
-                  confidentiality protocols different from 
-                  others’, and how does it handle transparency?
+                  The DPoS mechanism enables a sustainable blockchain
+                  solution requiring less electricity to run nodes and
+                  confirm transactions. For example, EOSIO is 66,000 times
+                  more energy-efficient than Bitcoin and 17,000 times more
+                  energy-efficient than Ethereum.
                 </p>
               </Grid>
               <Grid item xs={12} md={8}>
-                <Box className={"h3Box"}>
+                <Box className={clsx("h3Box","reduceMediumMarginTop")}>
                   <h3>Faster adoption </h3>
                 </Box>
                 <p>
-                  Developers build smart contracts in EOSIO 
-                  using C++, a general- purpose programming 
-                  language with widespread adoption, thus eliminating 
-                  the need to learn new languages to begin deploying 
-                  the technology. Also, there are many learning 
-                  resources available online and a dynamic support community.
+                  Developers build smart contracts in EOSIO using C++,
+                  a general-purpose programming language with widespread
+                  adoption, thus eliminating the need to learn new languages
+                  to begin deploying the technology. Also, there are many
+                  learning resources available online and a dynamic support community.
                 </p>
               </Grid>
             </Grid> 
