@@ -19,6 +19,7 @@ const ManagementTeam = [
         img:"img/rodrigo.webp",
         name:"Rodrigo Fernández",
         position:"Founder, Chairman & Chief Strategist",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"https://www.linkedin.com/in/rodrigo-fernandez-57b8b72a/",
         twitter:"https://twitter.com/rjfescazu"
     },
@@ -26,6 +27,7 @@ const ManagementTeam = [
         img:"img/edgar.webp",
         name:"Edgar Fernández",
         position:"Co-founder & Finance and Enterprise",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"https://www.linkedin.com/in/edgarafernandez/",
         twitter:"https://twitter.com/fernane506"
     },
@@ -33,6 +35,7 @@ const ManagementTeam = [
         img:"img/xavier.webp",
         name:"Xavier Fernández",
         position:"Co-founder & Tech Lead",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"https://www.linkedin.com/in/xaviercr/",
         twitter:"https://twitter.com/xaviercr"
     }
@@ -44,6 +47,7 @@ const MarketingSalesTeam = [
         img:"img/luisdiego.webp",
         name:"Luis Diego Rojas",
         position:"Communications and Content Strategist",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"https://www.linkedin.com/in/ldrojas/",
         twitter:"https://twitter.com/ldrojas"
     },
@@ -51,6 +55,7 @@ const MarketingSalesTeam = [
         img:"img/rodolfo.webp",
         name:"Rodolfo Perez",
         position:"Art Director & Brand Manager",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"https://www.linkedin.com/in/rodolfo-eduardo-p%C3%ABrez-nava-73442164/",
         twitter:"https://twitter.com/monsieurRoaf"
     },
@@ -61,12 +66,14 @@ const DevelopTeam = [
         img:"img/adriel.webp",
         name:"Adriel Diaz",
         position:"Full Stack Developer",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"https://www.linkedin.com/in/adriel-d%C3%ADaz-08226384/",
         twitter:""
     },
     {
         img:"img/allan.webp",
         name:"Allan Salazar",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         position:"Network Engineer",
         linkedIn:"",
         twitter:""
@@ -75,6 +82,7 @@ const DevelopTeam = [
         img:"",
         name:"Andrés Gomez",
         position:"Cybersecurity Developer",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"https://www.linkedin.com/in/andres-gomez-ramirez-bb7226156/",
         twitter:"https://twitter.com/kuronosec"
     },
@@ -82,6 +90,7 @@ const DevelopTeam = [
         img:"",
         name:"Angelo Castro",
         position:"Intern",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"https://www.linkedin.com/in/angelo-castro-gamboa/",
         twitter:""
     },
@@ -89,6 +98,7 @@ const DevelopTeam = [
         img:"img/cris.webp",
         name:"Cristian Castro",
         position:"C++ Developer",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"https://www.linkedin.com/in/cristian-castro-95193a3a/",
         twitter:""
     },
@@ -96,6 +106,7 @@ const DevelopTeam = [
         img:"",
         name:"Jean Vega",
         position:"Intern",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"https://www.linkedin.com/in/jeanvegad/",
         twitter:""
     },
@@ -103,6 +114,7 @@ const DevelopTeam = [
         img:"img/jorge.webp",
         name:"Jorge Murillo",
         position:"Sr. UX Designer",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"https://www.linkedin.com/in/jmurilloux/",
         twitter:"https://twitter.com/Oquedo"
     },
@@ -110,6 +122,7 @@ const DevelopTeam = [
         img:"",
         name:"Justin Castillo",
         position:"Intern",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"https://www.linkedin.com/in/jacv/",
         twitter:"https://twitter.com/_JustinCast"
     },
@@ -117,6 +130,7 @@ const DevelopTeam = [
         img:"img/kevin.webp",
         name:"Kevin Castillo",
         position:"Full Stack Developer",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"https://www.linkedin.com/in/kevin-castillo-mora/",
         twitter:""
     },
@@ -124,6 +138,7 @@ const DevelopTeam = [
         img:"img/ronald.webp",
         name:"Ronald Gallo",
         position:"Network Administrator",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"",
         twitter:""
     },
@@ -131,6 +146,7 @@ const DevelopTeam = [
         img:"img/teto.webp",
         name:"Terencio Gómez",
         position:"Full Stack Developer",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"https://www.linkedin.com/in/terencio-gomez-14784ba3/",
         twitter:""
     },
@@ -138,6 +154,7 @@ const DevelopTeam = [
         img:"img/julio.webp",
         name:"Victor Julio Madrigal",
         position:"Web Developer",
+        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
         linkedIn:"",
         twitter:""
     },
@@ -178,7 +195,7 @@ const Team = () => {
         )
     } 
 
-    const PersonCard = ({img, name, position, linkedIn, twitter}) => {
+    const PersonCard = ({img, name, position,bio, linkedIn, twitter}) => {
         return(
             <Grid container>
                 <Grid item xs={12} md={6}>
@@ -190,16 +207,14 @@ const Team = () => {
                 <Box >
                     <h3 className={"nameText"}>{name}</h3>
                     <p className={"positionText"}>{position}</p>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...
-                    </p>
+                    <p>{bio}</p>
                 </Box>
                 <Box className="socialMediaBox">
                     {linkedIn && 
-                        <IconButton href={linkedIn} target="_blank"><LinkedInIcon style={{width:'25px',height:'25px', color:"#5484b3"}} /></IconButton>
+                        <a href={linkedIn} target="_blank" className={"socialMediaIcon"}><LinkedInIcon style={{width:'30px', height:'30px'}}/></a>
                     }
                     {twitter && 
-                         <IconButton href={twitter} target="_blank"><TwitterIcon  style={{width:'25px',height:'25px', color:"#5484b3"}}/></IconButton>
+                        <a href={twitter} target="_blank" className={"socialMediaIcon"}><TwitterIcon style={{width:'30px', height:'30px'}}/></a>
                     }
                 </Box>
                 </Grid>
@@ -246,6 +261,7 @@ const Team = () => {
                                             img={useBaseUrl(person.img)}
                                             name={person.name}
                                             position={person.position}
+                                            bio={person.bio}
                                             linkedIn={person.linkedIn}
                                             twitter={person.twitter}
                                         />
@@ -266,6 +282,7 @@ const Team = () => {
                                             img={useBaseUrl(person.img)}
                                             name={person.name}
                                             position={person.position}
+                                            bio={person.bio}
                                             linkedIn={person.linkedIn}
                                             twitter={person.twitter}
                                         />
@@ -286,6 +303,7 @@ const Team = () => {
                                             img={useBaseUrl(person.img)}
                                             name={person.name}
                                             position={person.position}
+                                            bio={person.bio}
                                             linkedIn={person.linkedIn}
                                             twitter={person.twitter}
                                         />

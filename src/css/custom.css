@@ -785,30 +785,26 @@ input:checked + .slider:before {
 }
 
 .nameText{
-  font-size: 24px;
-  font-weight: bold;
-  text-align: left;
-  margin-bottom: 5px;
-}
-
-.nameText{
-  font-size: 22px;
   text-align: left;
   margin-bottom: 5px;
 }
 
 .positionText{
   text-align: left;
-  font-size: 18px;
-  color: #5484b3;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: normal;
+  margin-bottom: 15px;
 }
 
 .socialMediaBox{
   display: flex;
   justify-content: start;
-  margin-top: 5px;
+  margin-top: 15px;
+}
+
+.socialMediaIcon{
+  cursor: pointer;
+  color: #5484b3;
+  margin-right: 15px;
 }
 
 /* Contact */
