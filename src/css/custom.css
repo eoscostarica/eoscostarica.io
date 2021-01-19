@@ -19,7 +19,6 @@
 }
 */
 
-
 /*blog*/
 .blog-wrapper{
   margin-top: 50px;
@@ -378,14 +377,14 @@ input:checked + .slider:before {
   top: 0;
   right: auto;
   height: 100%;
-  width: 110px;
+  width: 150px;
 }
 
 .menuItem:hover .dropDownMenuActive::after{
   top: 0;
   right: auto;
   height: 100%;
-  width: 110px;
+  width: 150px;
 }
 
 .menuItem:hover .menuItemDrop{
@@ -656,6 +655,14 @@ input:checked + .slider:before {
   height: 2000px;
 }
 
+.bgParallaxSecondaryCompany{
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 1650px;
+}
+
 .imgParallax{
   z-index: 1;
   height: 100%;
@@ -828,13 +835,13 @@ input:checked + .slider:before {
 }
 
 .titleGit1{
-  margin-top:'30px';
-  margin-left:'40px'
+  margin-top: 30px;
+  margin-left: 40px
 }
 
 .titleGit2{
-  margin-top:'60px';
-  margin-left:'-50px'
+  margin-top: 60px;
+  margin-left: -50px
 }
 
 .topSpacingBoxIcons{
@@ -851,15 +858,32 @@ input:checked + .slider:before {
 
 .imgBoxProjects{
   display: flex;
-  justify-content: center
+  justify-content: center;
+  margin-top: 8%;
+  height: 80%;
 }
 
-.imgProjectsSize{
-  height: 230px;
-  width: 230px;
-  margin-top: -40px;
+.littleImage{
+  width: 150px;
+  height: 170px;
+  flex: 0 0 auto;
+  margin: 1px;
 }
 
+.reduceMarginTop
+{
+  margin-top: -100px
+}
+
+.reduceDobleMarginTop
+{
+  margin-top: -200px
+}
+
+.reduceMediumMarginTop
+{
+  margin-top: -35px
+}
 
 @media only screen and (max-width: 960px) {
   .footerLogo {
@@ -1065,5 +1089,20 @@ input:checked + .slider:before {
   .marginTopAccordion
   {
     margin-top:-70px
+  }
+
+  .boxFlexEnd{
+    display: flex;
+    justify-content: center;
+  }
+
+  .reduceMarginTop
+  {
+    margin-top: 0
+  }
+
+  .reduceDobleMarginTop
+  {
+    margin-top: 0
   }
 }
