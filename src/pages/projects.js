@@ -8,7 +8,6 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import Box from '@material-ui/core/Box'
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { Opacity } from "@material-ui/icons";
 
 const OurProjects = () => {
   const history = useHistory();
@@ -24,7 +23,13 @@ const OurProjects = () => {
               <h1>Enterprise Blockchain</h1>
               <h1>Use Cases</h1>
           </Box>
-          <p >Years of experience developing innovative technologies speak for us. Unleash the power of blockchain technology with the help of our agile team.</p>
+          <p >
+            Over the past years, we have helped organizations in
+            both the public and private sectors learn and explore the benefits of EOSIO blockchain
+            technology. From improving the way a company registers cross-border transactions to
+            ensuring immutable traceability of logistics operations, our team has developed top-notch
+            solutions to real-world problems. Get to know our latest projects.
+          </p>
         </Box>
         }
         {isMobile && 
@@ -40,9 +45,17 @@ const OurProjects = () => {
               <h1>Enterprise Blockchain </h1>
               <h1>Use Cases</h1>
           </Box>
-          <p >Years of experience developing innovative technologies speak for us.</p>
+          <p >
+            Over the past years, we have helped organizations in
+            both the public and private sectors learn and explore the benefits of EOSIO blockchain
+            technology.
+          </p>
           <br/>
-          <p>Unleash the power of blockchain technology with the help of our agile team.</p>
+          <p>
+            From improving the way a company registers cross-border transactions to
+            ensuring immutable traceability of logistics operations, our team has developed top-notch
+            solutions to real-world problems. Get to know our latest projects.
+          </p>
         </Box>
       }
       </Box>
