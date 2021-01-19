@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useState, useEffect } from "react";
 import clsx from "clsx";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -76,11 +76,16 @@ const NavbarMenu = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const isBlog = location.pathname.substring(0,6) === '/blog/'
+  const [isBlog, setIsBlog] =  useState();//location.pathname.substring(0,6) === '/blog/'
   const [pathname, setPathname] = useState("");
   const trigger = useScrollTrigger({
     disableHysteresis: true
   })
+
+
+  useEffect(() => {
+    setIsBlog(location.pathname.substring(0,6) === '/blog/')
+  }, [location]);
 
   const useTransparentBG =  trigger
   
@@ -102,11 +107,11 @@ const NavbarMenu = () => {
   }
 
   return (
-    <Box  className={clsx("navBar", { ["navBarScroll"]: useTransparentBG})} >
+    <Box className={isBlog? clsx("navBar", "navBarScroll") : clsx("navBar", { ["navBarScroll"]: useTransparentBG})} >
       <Box className={"menuWrapper"}>
         {isMobile && 
           <>
-          {useTransparentBG && 
+          {(useTransparentBG || isBlog) &&
             <Box  className={"imgLogoBoxMobile"}>
               <img
                 className={"imgLogoScroll"}
