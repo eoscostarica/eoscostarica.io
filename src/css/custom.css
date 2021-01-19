@@ -372,6 +372,7 @@ input:checked + .slider:before {
 
 .menuItem:hover .dropDownMenu{
   visibility: visible;
+  display: block;
 }
 
 .menuItem:hover .dropDownMenu::after{
@@ -379,6 +380,11 @@ input:checked + .slider:before {
   right: auto;
   height: 100%;
   width: 110px;
+}
+
+.menuItem:hover .dropDownMenuActive{
+  visibility: visible;
+  display: block;
 }
 
 .menuItem:hover .dropDownMenuActive::after{
@@ -401,12 +407,13 @@ input:checked + .slider:before {
 }
 
 .dropDownMenu:after {
+  background-color: black;
   content: "";
   position: absolute;
   z-index: -1;
   left: 0;
   height: 5px;
-  margin-top: -15px;
+  margin-top: -20px;
   width: 0%;
   top: 0;
   background:#5484b3;
@@ -419,7 +426,7 @@ input:checked + .slider:before {
 .dropDownMenuActive{
   position: absolute;
   display: block;
-  visibility: visible;
+  visibility: hidden;
   top: 70px;
 }
 
@@ -429,7 +436,7 @@ input:checked + .slider:before {
   z-index: -1;
   left: 0;
   height: 5px;
-  margin-top: -15px;
+  margin-top: -20px;
   width: 100%;
   top: 0;
   background:#5484b3;
@@ -439,32 +446,24 @@ input:checked + .slider:before {
   font-weight: bold;
 }
 
-.paperDropDown{
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
 .menuItemDrop{
   color: white;
   white-space: nowrap;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   padding-left: 20px;
   padding-right: 25px;
   opacity: 0;
   transition: opacity .1s ease-in-out;
   -moz-transition: opacity .1s ease-in-out;
   -webkit-transition: opacity .1s ease-in-out;
-
 }
 
 .menuItemDrop:hover{
-  color: black;
+  color: #CFD8DC;
 }
 
 .menuItemDropActive{
-  color: black;
+  color: #CFD8DC;
 }
 
 .link {
@@ -485,9 +484,8 @@ input:checked + .slider:before {
   z-index: -1;
   left: 0;
   height: 5px;
-  margin-top: 5px;
   width: 0;
-  bottom: 20px;
+  bottom: 25px;
   background:#5484b3;
   transition-property: width;
   transition-duration: 0.3s;
@@ -506,13 +504,22 @@ input:checked + .slider:before {
   z-index: -1;
   left: 0;
   height: 5px;
-  margin-top: 5px;
   width: 100%;
-  bottom: 20px;
+  bottom: 25px;
   background:#5484b3;
   transition-property: width;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
+}
+
+#boxMenuItems:hover .linkActive::after{
+  left:  0;
+  width: 0%;
+}
+
+#boxMenuItems:hover .menuItem:hover .linkActive::after{
+  left:  0;
+  width: 100%;
 }
 
 .btnDrawer{

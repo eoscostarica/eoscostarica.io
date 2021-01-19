@@ -53,7 +53,8 @@ const PATHS = [
         path: "/press/",
         label: "Press",
         target: '_self'
-      },*/
+      },
+      */
     ]
   },
   {
@@ -87,12 +88,11 @@ const NavbarMenu = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const [isBlog, setIsBlog] =  useState();//location.pathname.substring(0,6) === '/blog/'
+  const [isBlog, setIsBlog] =  useState();
   const [pathname, setPathname] = useState("");
   const trigger = useScrollTrigger({
     disableHysteresis: true
   })
-
 
   useEffect(() => {
     setIsBlog(location.pathname.substring(0,6) === '/blog/')
@@ -187,7 +187,7 @@ const NavbarMenu = () => {
                       </Grid>
                     </Box>
                 )*/}
-                  <Box className={"boxMenuItems"}>
+                  <Box className={"boxMenuItems"} id={"boxMenuItems"}>
                     {PATHS.map((item) => (
                       <Box key={item.label}>
                         {!item.dropDown && 
