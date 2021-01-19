@@ -86,11 +86,16 @@ const OurProjects = () => {
                 the LACChain initiative, a program to accelerate the development
                 of the blockchain ecosystem in the region.
               </p>
+              <p>
+                <a href="http://latamlink.io/" target="_blank">
+                  Read more
+                </a>
+              </p>
             </Grid>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '50px'}} item xs={12} md={6}>
               <Box className={"imgBoxProjects"}>
                 <img
-                  alt="LatamLink"
+                  alt="Lifebank"
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
@@ -105,11 +110,16 @@ const OurProjects = () => {
                 blood banks, and local businesses, leveraged by a token economy.
                 Winner of the "Coding for Change" challenge by block.one.
               </p>
+              <p>
+                <a href="http://lifebank.io/" target="_blank">
+                  Read more
+                </a>
+              </p>
             </Grid>
             <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
               <Box className={"imgBoxProjects"}>
                 <img
-                  alt="LatamLink"
+                  alt="SMARTGATE"
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
@@ -124,11 +134,16 @@ const OurProjects = () => {
                 transmission of relevant data required for proper interchange in
                 port logistics.
               </p>
+              <p>
+                <a href="https://smartgate.tech/" target="_blank">
+                  Read more
+                </a>
+              </p>
             </Grid>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
               <Box className={"imgBoxProjects"}>
                 <img
-                  alt="LatamLink"
+                  alt="Enterprise EOSIO Forum"
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
@@ -142,11 +157,16 @@ const OurProjects = () => {
                 initiative to discuss enterprise blockchain solutions
                 deploying EOSIO technology.
               </p>
+              <p>
+                <a href="https://www.linkedin.com/company/enterprise-eosio-forum/" target="_blank">
+                  Read more
+                </a>
+              </p>
             </Grid>
             <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
               <Box className={"imgBoxProjects"}>
                 <img
-                  alt="LatamLink"
+                  alt="EOS Foundation"
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
@@ -160,11 +180,16 @@ const OurProjects = () => {
                 autonomous, decentralized, non-profit organization that will
                 enable self-representation and promotion of the EOS community.
               </p>
+              <p>
+                <a href="http://eos-foundation.eosio.cr/" target="_blank">
+                  Read more
+                </a>
+              </p>
             </Grid>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
               <Box className={"imgBoxProjects"}>
                 <img
-                  alt="LatamLink"
+                  alt="EOS Rate"
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
@@ -178,11 +203,16 @@ const OurProjects = () => {
                 to access a rating system and voting portal for block
                 producers and proxies in the EOS blockchain.
               </p>
+              <p>
+                <a href="https://eosrate.io/" target="_blank">
+                  Read more
+                </a>
+              </p>
             </Grid>
             <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
               <Box className={"imgBoxProjects"}>
                 <img
-                  alt="LatamLink"
+                  alt="EOSIO Dashboard"
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
@@ -196,11 +226,16 @@ const OurProjects = () => {
                 users to visualize the rewards distribution along the EOS
                 network to seek accountability and transparency.
               </p>
+              <p>
+                <a href="https://mainnet.eosio.cr/" target="_blank">
+                  Read more
+                </a>
+              </p>
             </Grid>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
               <Box className={"imgBoxProjects"}>
                 <img
-                  alt="LatamLink"
+                  alt="Evodex"
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
@@ -214,11 +249,16 @@ const OurProjects = () => {
                 protocol where users vote on the pool liquidity fees and pay
                 zero gas. We were in charge of UX and front-end design.
               </p>
+              <p>
+                <a href="https://evodex.io/" target="_blank">
+                  Read more
+                </a>
+              </p>
             </Grid>
             <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
               <Box className={"imgBoxProjects"}>
                 <img
-                  alt="LatamLink"
+                  alt="Undisclosed enterprise project"
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
@@ -232,11 +272,16 @@ const OurProjects = () => {
                 and tax industry for improved traceability of intercompany
                 transactions.
               </p>
+              <p>
+                <a target="_blank">
+                  Read more
+                </a>
+              </p>
             </Grid>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
               <Box className={"imgBoxProjects"}>
                 <img
-                  alt="LatamLink"
+                  alt="Notario Digital"
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
@@ -249,6 +294,34 @@ const OurProjects = () => {
                 Notario Digital is an open-source project that generates a
                 hash of any file to register it immutably on an EOSIO network.
               </p>
+              <p>
+                <a href="https://notarize.eosio.cr/dashboard/notary" target="_blank">
+                  Read more
+                </a>
+              </p>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+    )
+  }
+
+  const ContactUs = () => {
+    return (
+      <Box className={"containerGray"}>
+        <Box className={"sectionPadding"}>
+          <Grid container spacing={5}>
+            <Grid item xs={12} md={8}>
+                <Box>
+                  <h2>Start working with us</h2>
+                  <h2>and implement</h2>
+                  <h2>blockchain technology.</h2>
+                </Box>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className={"buttonBox"}>
+                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
+              </Box>
             </Grid>
           </Grid>
         </Box>
@@ -264,16 +337,17 @@ const OurProjects = () => {
             <Background className={"bgParallax"}>
                 <Box className={"imgParallax"} />
             </Background>
-            <HeroSection />
+            <HeroSection/>
             <Projects/>
           </Parallax>
         }
         {isMobile && 
           <>
-            <HeroSection />
+            <HeroSection/>
             <Projects/>
           </>
-        } 
+        }
+        <ContactUs/>
       </Box>
     </Layout>
   );
