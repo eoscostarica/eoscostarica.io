@@ -176,6 +176,7 @@ a{
   border: none;
   border-radius: 0;
   cursor: pointer;
+  transition: all .5s ease;
 }
 
 .buttonPrimary:hover{
@@ -193,6 +194,7 @@ a{
   border: solid 2px #5484B3;
   color: #5484B3;
   cursor: pointer;
+  transition: all .5s ease;
 }
 
 .gridButton{
