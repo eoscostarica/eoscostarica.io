@@ -20,66 +20,7 @@
 */
 
 
-/*blog*/
-.blog-wrapper{
-  margin-top: 50px;
-}
 
-.blog-wrapper a {
-  /*color: #0091FF;*/
-}
-
-.blog-wrapper h1{
-  font-family: 'Gotham',Arial, sans-serif;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  font-size: 35px;
-  letter-spacing: -0.24px;
-  line-height: 35px;
-}
-
-.blog-wrapper h2{
-  font-family: 'Gotham',Arial, sans-serif;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  font-size: 30px;
-  letter-spacing: -0.24px;
-  line-height: 30px;
-}
-
-.blog-wrapper h3{
-  font-family: 'Gotham',Arial, sans-serif;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  font-size: 25px;
-  letter-spacing: -0.24px;
-  line-height: 25px;
-}
-
-.blog-wrapper h4{
-  font-family: 'Gotham',Arial, sans-serif;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  font-size: 20px;
-  letter-spacing: -0.24px;
-  line-height: 20px;
-}
-
-.blog-wrapper p{
-  font-family: 'Gotham',Arial, sans-serif;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  font-size: 19px;
-  letter-spacing: -0.05px;
-  line-height: 25px;
-  text-align: justify;
-  margin-bottom: 15px;
-}
 
 /*Typographys*/
 
@@ -213,6 +154,84 @@ a{
 .buttonSecondary:hover{
   color: white;
   background-color: #5484B3;
+}
+
+/*blog*/
+.blog-wrapper{
+  margin-top: 50px;
+}
+
+.blog-wrapper a {
+  /*color: #0091FF;*/
+}
+
+.blog-wrapper h1{
+  color: black;
+  font-family: 'Gotham',Arial, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 35px;
+  letter-spacing: -0.24px;
+  line-height: 35px;
+}
+
+.blog-wrapper h2{
+  font-family: 'Gotham',Arial, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 30px;
+  letter-spacing: -0.24px;
+  line-height: 30px;
+}
+
+.blog-wrapper h3{
+  font-family: 'Gotham',Arial, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 25px;
+  letter-spacing: -0.24px;
+  line-height: 25px;
+}
+
+.blog-wrapper h4{
+  font-family: 'Gotham',Arial, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: -0.24px;
+  line-height: 20px;
+}
+
+.blog-wrapper p{
+  font-family: 'Gotham',Arial, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 19px;
+  letter-spacing: -0.05px;
+  line-height: 25px;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.blog-wrapper h2 a{
+  color: black;
+}
+
+.blog-wrapper h2 a{
+  color: black;
+}
+
+.blog-wrapper h3 a{
+  color: black;
+}
+
+.blog-wrapper h4 a{
+  color: black;
 }
 
 /*Navbar*/
