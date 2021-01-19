@@ -19,33 +19,40 @@ const PATHS = [
     dropDown:false,
     path: "/",
     label: "Home",
+    target: '_self'
   },
   {
     dropDown:true,
     path: "/",
     label: "About us",
+    target: '_self',
     markerSize: "70px",
     subPaths: 
     [
       {
         path: "/services/",
         label: "Services",
+        target: '_self'
       },
       /*{
         path: "/the-company/",
         label: "The company",
+        target: '_self'
       },
       {
         path: "/projects/",
         label: "Projects",
+        target: '_self'
       },
       {
         path: "/block-producer/",
         label: "Bp",
+        target: '_self'
       },
       {
         path: "/press/",
         label: "Press",
+        target: '_self'
       },*/
     ]
   },
@@ -53,21 +60,25 @@ const PATHS = [
     dropDown:false,
     path: "/industries/",
     label: "Industries",
+    target: '_self'
   },
   {
     dropDown:false,
     path: "https://guide.eoscostarica.io/",
     label: "Learning",
+    target: '_blank'
   },
   {
     dropDown:false,
     path: "/blog/",
     label: "Blog",
+    target: '_self'
   },
   {
     dropDown:false,
     path: "/contact-us/",
     label: "Contact",
+    target: '_self'
   },
 ];
 
@@ -133,14 +144,14 @@ const NavbarMenu = () => {
                       {item.dropDown && 
                         <>
                           {item.subPaths.map((subItem) => (
-                            <Link href={useBaseUrl(subItem.path)} key={subItem.label} style={{textDecoration: 'none'}}>
+                            <Link href={useBaseUrl(subItem.path)} target={subItem.target} key={subItem.label} style={{textDecoration: 'none'}}>
                               <ListItem button><span className={"linkItem"}>{subItem.label}</span></ListItem>
                           </Link>
                           ))}
                         </>
                       }
                       {!item.dropDown && 
-                        <Link href={useBaseUrl(item.path)} style={{textDecoration: 'none'}}>
+                        <Link href={useBaseUrl(item.path)} target={item.target} style={{textDecoration: 'none'}}>
                             <ListItem button><span className={"linkItem"}>{item.label}</span></ListItem>
                         </Link>
                       } 
