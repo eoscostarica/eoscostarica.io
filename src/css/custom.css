@@ -424,19 +424,17 @@ input:checked + .slider:before {
   position: absolute;
   display: block;
   visibility: hidden;
-  top: 70px;
+  top: 50px;
 }
 
 .dropDownMenu:after {
-  background-color: black;
   content: "";
   position: absolute;
   z-index: -1;
   left: 0;
   height: 5px;
-  margin-top: -20px;
   width: 0%;
-  top: 0;
+  top: 0px;
   background:#5484b3;
   transition-property: width height;
   transition-duration: 0.3s;
@@ -448,7 +446,7 @@ input:checked + .slider:before {
   position: absolute;
   display: block;
   visibility: hidden;
-  top: 70px;
+  top: 50px;
 }
 
 .dropDownMenuActive:after {
@@ -457,7 +455,6 @@ input:checked + .slider:before {
   z-index: -1;
   left: 0;
   height: 5px;
-  margin-top: -20px;
   width: 100%;
   top: 0;
   background:#5484b3;
@@ -468,11 +465,12 @@ input:checked + .slider:before {
 }
 
 .menuItemDrop{
+  width: auto;
   color: white;
   white-space: nowrap;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  padding-right: 25px;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   opacity: 0;
   transition: opacity .1s ease-in-out;
   -moz-transition: opacity .1s ease-in-out;
