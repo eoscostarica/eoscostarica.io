@@ -2,17 +2,10 @@
 /*Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
-@font-face {
-  font-family: 'Gotham';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Gotham'), url('https://fonts.cdnfonts.com/s/14898/GothamBold.woff') format('woff');
-}
-
 /*Typographys*/
 
 h1 {
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -22,7 +15,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -32,7 +25,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -42,7 +35,7 @@ h3 {
 }
 
 h4 {
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -52,7 +45,7 @@ h4 {
 }
 
 h5{
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -62,7 +55,7 @@ h5{
 }
 
 h6{
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -114,7 +107,7 @@ a{
 }
 
 .buttonSecondary{
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   width: auto;
   padding: 25px;
@@ -160,7 +153,7 @@ a{
 }
 
 .blog-wrapper h1{
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
@@ -171,7 +164,7 @@ a{
 }
 
 .blog-wrapper h2{
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
@@ -182,7 +175,7 @@ a{
 }
 
 .blog-wrapper h3{
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
@@ -193,7 +186,7 @@ a{
 }
 
 .blog-wrapper h4{
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
@@ -217,25 +210,25 @@ a{
 
 .blog-wrapper h2 a{
   color: black;
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
 }
 
 .blog-wrapper h2 a{
   color: black;
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
 }
 
 .blog-wrapper h3 a{
   color: black;
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
 }
 
 .blog-wrapper h4 a{
   color: black;
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
 }
 
