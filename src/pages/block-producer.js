@@ -8,7 +8,7 @@ import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { ThemeProvider } from '@material-ui/core/styles';
-import Theme from '../theme/index';
+
 
 const BlockProducer = () => {
   const history = useHistory();
