@@ -8,11 +8,7 @@ import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-import styles from "./styles.module.css";
-import useStyles from "../css/styles.js"
-
 const OurProjects = () => {
-  const classes = useStyles()
   const history = useHistory();
   return (
     <Layout>
