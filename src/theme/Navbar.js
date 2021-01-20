@@ -34,12 +34,12 @@ const PATHS = [
         label: "Services",
         target: '_self'
       },
-      /*{
+      {
         path: "/the-company/",
         label: "The company",
         target: '_self'
       },
-      {
+      /*{
         path: "/projects/",
         label: "Projects",
         target: '_self'
