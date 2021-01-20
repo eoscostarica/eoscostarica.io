@@ -139,7 +139,7 @@ const Home = () => {
                   </Grid>
                   <Grid item xs={12} md={3}>
                     <Box className={"boxFlexEnd"}>
-                      <button className={"buttonSecondary"} style={{width:'100%'}} onClick={() => history.push("/contact-us/")} >Find Out How</button>
+                      <button className={clsx("buttonSecondary","specialButton")} onClick={() => history.push("/contact-us/")} >Find Out How</button>
                     </Box>
                 </Grid>
               </Grid>
