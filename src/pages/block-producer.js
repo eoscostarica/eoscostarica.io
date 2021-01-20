@@ -497,6 +497,74 @@ const BlockProducer = () => {
     )
   }
 
+  const AdditionalResources = () => {
+    return (
+      <Box className={clsx("containerSec","reduceDobleMarginTop")}>
+        <Box className={"sectionPadding"}>
+          <Box className={"titleBox"}>
+            <h2>Additional Resources</h2>
+          </Box>
+          <p>
+            Find more interesting reads and resources to continue learning
+            about
+            <a href={"https://eoscostarica.medium.com/how-to-choose-an-enterprise-blockchainplatform-7c3665994ad6"}
+              target="_blank"
+              > enterprise blockchain</a> and
+              <a href={" https://eos.io/"} target="_blank"> EOSIO</a>.
+          </p>
+          <br/>
+          <Grid className={"topSpacingBoxIcons"} style={{justifyContent:'space-evenly'}} container>
+            <Grid onClick={() => history.push("/block-producer/")} className={"gridButton"} item xs={12} md={4}>
+              <img srcSet={useBaseUrl("img/blog.svg")}/>
+              <h3 className={"titleBlog"}>Blog</h3>
+            </Grid>
+            <Grid onClick = {() => location.href='https://guias.eoscostarica.io/'} className={"gridButton"} item xs={12} md={4}>
+              <img srcSet={useBaseUrl("img/press.svg")}/>
+              <h3 style={{marginTop:'30px', marginLeft:'20px'}}>Press</h3>
+            </Grid>
+          </Grid>
+          <br/>
+          <Grid className={"topSpacingBoxIcons"} style={{justifyContent:'space-evenly'}} container>
+            <Grid onClick = {() => location.href='https://guide.eoscostarica.io/'} className={"gridButton"} item xs={12} md={4}>
+              <img srcSet={useBaseUrl("img/decs.svg")}/>
+              <h3 className={"titleDevs1"}>Devs</h3>
+              <h3 className={"titleDevs2"}>Portal</h3>
+            </Grid>
+            <Grid onClick={() => location.href='https://github.com/eoscostarica'} className={"gridButton"} item xs={12} md={4}>
+              <img srcSet={useBaseUrl("img/github-ours.svg")}/>
+              <h3 className={"titleGit1"}>Our</h3>
+              <h3 className={"titleGit2"}>Github</h3>
+            </Grid>
+          </Grid>
+          <br/>
+        </Box>
+      </Box>
+    )
+  }
+
+  const ContactUs = () => {
+    return (
+      <Box className={"containerGray"}>
+        <Box className={"sectionPadding"}>
+          <Grid container spacing={5}>
+            <Grid item xs={12} md={8}>
+                <Box>
+                  <h2>Start working with us</h2>
+                  <h2>and implement</h2>
+                  <h2>blockchain technology.</h2>
+                </Box>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className={"buttonBox"}>
+                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+    )
+  }
+
   return (
     <Layout>
       <Box className={"mainContainer"}>
@@ -521,6 +589,8 @@ const BlockProducer = () => {
         <OpenSourceProjects/>
         <WhyCostaRica/>
         <VoteForUS/>
+        <AdditionalResources/>
+        <ContactUs />
       </Box>
     </Layout>
   );
