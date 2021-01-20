@@ -35,15 +35,15 @@ const PATHS = [
         path: "/the-company/",
         label: "The company",
       },
-      /*{
+      {
         path: "/projects/",
         label: "Projects",
       },
       {
         path: "/block-producer/",
-        label: "Bp",
+        label: "Block producer",
       },
-      {
+      /*{
         path: "/press/",
         label: "Press",
       },*/

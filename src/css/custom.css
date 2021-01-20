@@ -865,6 +865,11 @@ input:checked + .slider:before {
   margin: 1px;
 }
 
+.reduceMarginBottom
+{
+  height: 1120px;
+}
+
 .reduceMarginTop
 {
   margin-top: -100px
@@ -1099,5 +1104,9 @@ input:checked + .slider:before {
   .reduceDobleMarginTop
   {
     margin-top: 0
+  }
+  .reduceMarginBottom
+  {
+    height: 1650px;
   }
 }
