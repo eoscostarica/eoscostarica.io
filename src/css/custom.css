@@ -1,8 +1,13 @@
 
 /*Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-@import url('http://fonts.cdnfonts.com/css/gotham');
 
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Gotham'), url('https://fonts.cdnfonts.com/s/14898/GothamBold.woff') format('woff');
+}
 
 /*Typographys*/
 
