@@ -8,7 +8,7 @@
 
 h1 {
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   font-size: 60px;
@@ -18,7 +18,7 @@ h1 {
 
 h2 {
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   font-size: 40px;
@@ -28,7 +28,7 @@ h2 {
 
 h3 {
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   font-size: 28px;
@@ -38,7 +38,7 @@ h3 {
 
 h4 {
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   font-size: 20px;
@@ -48,7 +48,7 @@ h4 {
 
 h5{
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   font-size: 16px;
@@ -58,7 +58,7 @@ h5{
 
 h6{
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   font-size: 14px;
@@ -92,7 +92,7 @@ a{
 
 .buttonPrimary{
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   width: auto;
   padding: 25px;
   background-color: #5484b3;
@@ -110,7 +110,7 @@ a{
 
 .buttonSecondary{
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   width: auto;
   padding: 25px;
   background-color: transparent;
@@ -156,7 +156,7 @@ a{
 
 .blog-wrapper h1{
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -167,7 +167,7 @@ a{
 
 .blog-wrapper h2{
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -178,7 +178,7 @@ a{
 
 .blog-wrapper h3{
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -189,7 +189,7 @@ a{
 
 .blog-wrapper h4{
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -213,27 +213,25 @@ a{
 .blog-wrapper h2 a{
   color: black;
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .blog-wrapper h2 a{
   color: black;
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .blog-wrapper h3 a{
   color: black;
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
-  font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .blog-wrapper h4 a{
   color: black;
   font-family: 'Gotham', sans-serif;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 /*Navbar*/
