@@ -208,7 +208,7 @@ a{
   margin-bottom: 15px;
 }
 
-.blog-wrapper h2 a{
+.blog-wrapper h1 a{
   color: black;
   font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
@@ -430,7 +430,7 @@ input:checked + .slider:before {
   left: 0;
   height: 5px;
   width: 0%;
-  top: 0px;
+  top: 0;
   background:#5484b3;
   transition-property: width height;
   transition-duration: 0.3s;
