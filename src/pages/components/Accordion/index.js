@@ -6,7 +6,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import Theme from '../../../theme/index'
 
 import IconSvg from "./IconSvg";
-import styles from "../../styles.module.css";
+
 
 const Accordion = ({ content, title, titleStyle, useMaxWidth = false }) => {
   const [isOpen, setIsOpen] = useState(false);

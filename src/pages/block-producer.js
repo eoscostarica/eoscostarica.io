@@ -10,12 +10,8 @@ import Typography from '@material-ui/core/Typography';
 import { ThemeProvider } from '@material-ui/core/styles';
 import Theme from '../theme/index';
 
-import styles from "./styles.module.css";
-import useStyles from "../css/styles.js"
-
 const BlockProducer = () => {
   const history = useHistory();
-  const classes = useStyles()
   return(
     <Layout>
       <Parallax strength={800}>
