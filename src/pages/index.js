@@ -21,13 +21,6 @@ const Home = () => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
-  const handleScrollEnter = () => {
-    setStateAnimation(true)
-  }
-  const handleScrollExit = () => {
-    setStateAnimation(false)
-  }
-
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
@@ -146,7 +139,7 @@ const Home = () => {
                   </Grid>
                   <Grid item xs={12} md={3}>
                     <Box className={"boxFlexEnd"}>
-                      <button className={"buttonSecondary"} style={{width:'100%'}} onClick={() => history.push("/contact-us/")} >Find Out How</button>
+                      <button className={clsx("buttonSecondary","specialButton")} onClick={() => history.push("/contact-us/")} >Find Out How</button>
                     </Box>
                 </Grid>
               </Grid>
@@ -173,9 +166,13 @@ const Home = () => {
               started!
             </p>
             <Box className={"accordionBox"}>
-              <Box style={{marginBottom:'5px'}}>
-                <Accordion square expanded={expanded === 'panel_SoftDev'}  onChange={handleChange('panel_SoftDev')} className={"accordion"} style={{backgroundColor:'#f1f1f1',boxShadow:'none'}} >
-                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                <Accordion 
+                  square 
+                  expanded={expanded === 'panel_SoftDev'} 
+                  onChange={handleChange('panel_SoftDev')} 
+                  className={"accordion"} 
+                  style={{backgroundColor:'#f1f1f1',marginTop:'20px',boxShadow:'none'}} >
+                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
                     <h3>Software Development</h3>
                   </AccordionSummary>
                   <AccordionDetails style={{padding:0}}>
@@ -192,10 +189,13 @@ const Home = () => {
                     </p>
                   </AccordionDetails>
                 </Accordion>
-              </Box>
-              <Box style={{marginBottom:'5px'}}>
-                <Accordion square expanded={expanded === 'panel_BlockInfrac'}  onChange={handleChange('panel_BlockInfrac')} className={"accordion"} style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}>
-                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                <Accordion 
+                  square
+                  expanded={expanded === 'panel_BlockInfrac'}
+                  onChange={handleChange('panel_BlockInfrac')}
+                  className={"accordion"}
+                  style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}>
+                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
                     <h3>Blockchain Infrastructure</h3>
                   </AccordionSummary>
                   <AccordionDetails style={{padding:0}}>
@@ -211,10 +211,8 @@ const Home = () => {
                     </p>
                   </AccordionDetails>
                 </Accordion>
-              </Box>
-              <Box style={{marginBottom:'5px'}}>
                 <Accordion square expanded={expanded === 'panel_Education'}  onChange={handleChange('panel_Education')} className={"accordion"} style={{backgroundColor:'#f1f1f1',boxShadow:'none',borderColor:'s\\#f1f1f1'}}>
-                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
                     <h3>Education and Training</h3>
                   </AccordionSummary>
                   <AccordionDetails style={{padding:0}}>
@@ -230,7 +228,6 @@ const Home = () => {
                   </AccordionDetails>
                 </Accordion>
               </Box>
-            </Box>
           </Grid>
           {!isMobile && 
             <Grid item  md={6}>
