@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[18],{86:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"software-development","name":"software development","count":1,"permalink":"/blog/tags/software-development"}')}}]);
