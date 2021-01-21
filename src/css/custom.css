@@ -1,90 +1,11 @@
 
 /*Fonts*/
-/*@font-face {
-  font-family: "Gotham";
-  font-weight: normal;
-  src: url("../../static/fonts/GothamPro-Medium.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Gotham";
-  font-weight: bold;
-  src: url("../../static/fonts/GothamPro-Bold.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Gotham";
-  font-weight: lighter;
-  src: url("../../static/fonts/GothamPro-Light.woff2") format("woff2");
-}
-*/
-
-
-/*blog*/
-.blog-wrapper{
-  margin-top: 50px;
-}
-
-.blog-wrapper a {
-  color: #0091FF;
-}
-
-.blog-wrapper h1{
-  font-family: 'Gotham',Arial, sans-serif;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  font-size: 35px;
-  letter-spacing: -0.24px;
-  line-height: 35px;
-}
-
-.blog-wrapper h2{
-  font-family: 'Gotham',Arial, sans-serif;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  font-size: 30px;
-  letter-spacing: -0.24px;
-  line-height: 30px;
-}
-
-.blog-wrapper h3{
-  font-family: 'Gotham',Arial, sans-serif;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  font-size: 25px;
-  letter-spacing: -0.24px;
-  line-height: 25px;
-}
-
-.blog-wrapper h4{
-  font-family: 'Gotham',Arial, sans-serif;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  font-size: 20px;
-  letter-spacing: -0.24px;
-  line-height: 20px;
-}
-
-.blog-wrapper p{
-  font-family: 'Gotham',Arial, sans-serif;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  font-size: 19px;
-  letter-spacing: -0.05px;
-  line-height: 25px;
-  text-align: justify;
-  margin-bottom: 15px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 /*Typographys*/
 
 h1 {
-  font-family: 'Gotham',Arial, sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -94,7 +15,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Gotham',Arial, sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -104,7 +25,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Gotham',Arial, sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -114,7 +35,7 @@ h3 {
 }
 
 h4 {
-  font-family: 'Gotham',Arial, sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -124,7 +45,7 @@ h4 {
 }
 
 h5{
-  font-family: 'Gotham',Arial, sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -134,7 +55,7 @@ h5{
 }
 
 h6{
-  font-family: 'Gotham',Arial, sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -144,7 +65,7 @@ h6{
 }
 
 p{
-  font-family: 'Gotham',Arial, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -168,7 +89,8 @@ a{
 }
 
 .buttonPrimary{
-  font-family: 'Gotham',Arial, sans-serif;
+  font-family: 'Gotham', sans-serif;
+  font-weight: bold;
   width: auto;
   padding: 25px;
   background-color: #5484b3;
@@ -177,6 +99,7 @@ a{
   border: none;
   border-radius: 0;
   cursor: pointer;
+  transition: all .5s ease;
 }
 
 .buttonPrimary:hover{
@@ -184,6 +107,8 @@ a{
 }
 
 .buttonSecondary{
+  font-family: 'Gotham',Lato, sans-serif;
+  font-weight: bold;
   width: auto;
   padding: 25px;
   background-color: transparent;
@@ -194,6 +119,7 @@ a{
   border: solid 2px #5484B3;
   color: #5484B3;
   cursor: pointer;
+  transition: all .5s ease;
 }
 
 .gridButton{
@@ -213,6 +139,97 @@ a{
 .buttonSecondary:hover{
   color: white;
   background-color: #5484B3;
+}
+
+/*blog*/
+.blog-wrapper{
+  margin-top: 50px;
+}
+
+.blog-wrapper a {
+  font-family: Lato, sans-serif;
+  font-weight: normal;
+  color: #0091FF;
+}
+
+.blog-wrapper h1{
+  font-family: 'Gotham',Lato, sans-serif;
+  font-weight: bold;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 35px;
+  letter-spacing: -0.24px;
+  line-height: 35px;
+}
+
+.blog-wrapper h2{
+  font-family: 'Gotham',Lato, sans-serif;
+  font-weight: bold;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 30px;
+  letter-spacing: -0.24px;
+  line-height: 30px;
+}
+
+.blog-wrapper h3{
+  font-family: 'Gotham',Lato, sans-serif;
+  font-weight: bold;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 25px;
+  letter-spacing: -0.24px;
+  line-height: 25px;
+}
+
+.blog-wrapper h4{
+  font-family: 'Gotham',Lato, sans-serif;
+  font-weight: bold;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: -0.24px;
+  line-height: 20px;
+}
+
+.blog-wrapper p{
+  font-family: Lato, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 19px;
+  letter-spacing: -0.05px;
+  line-height: 25px;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.blog-wrapper h1 a{
+  color: black;
+  font-family: 'Gotham',Lato, sans-serif;
+  font-weight: bold;
+}
+
+.blog-wrapper h2 a{
+  color: black;
+  font-family: 'Gotham',Lato, sans-serif;
+  font-weight: bold;
+}
+
+.blog-wrapper h3 a{
+  color: black;
+  font-family: 'Gotham',Lato, sans-serif;
+  font-weight: bold;
+}
+
+.blog-wrapper h4 a{
+  color: black;
+  font-family: 'Gotham',Lato, sans-serif;
+  font-weight: bold;
 }
 
 /*Navbar*/
@@ -372,20 +389,26 @@ input:checked + .slider:before {
 
 .menuItem:hover .dropDownMenu{
   visibility: visible;
+  display: block;
 }
 
 .menuItem:hover .dropDownMenu::after{
   top: 0;
   right: auto;
   height: 100%;
-  width: 110px;
+  width: 150px;
+}
+
+.menuItem:hover .dropDownMenuActive{
+  visibility: visible;
+  display: block;
 }
 
 .menuItem:hover .dropDownMenuActive::after{
   top: 0;
   right: auto;
   height: 100%;
-  width: 110px;
+  width: 150px;
 }
 
 .menuItem:hover .menuItemDrop{
@@ -397,7 +420,7 @@ input:checked + .slider:before {
   position: absolute;
   display: block;
   visibility: hidden;
-  top: 70px;
+  top: 50px;
 }
 
 .dropDownMenu:after {
@@ -406,7 +429,6 @@ input:checked + .slider:before {
   z-index: -1;
   left: 0;
   height: 5px;
-  margin-top: -15px;
   width: 0%;
   top: 0;
   background:#5484b3;
@@ -419,8 +441,8 @@ input:checked + .slider:before {
 .dropDownMenuActive{
   position: absolute;
   display: block;
-  visibility: visible;
-  top: 70px;
+  visibility: hidden;
+  top: 50px;
 }
 
 .dropDownMenuActive:after {
@@ -429,7 +451,6 @@ input:checked + .slider:before {
   z-index: -1;
   left: 0;
   height: 5px;
-  margin-top: -15px;
   width: 100%;
   top: 0;
   background:#5484b3;
@@ -439,36 +460,29 @@ input:checked + .slider:before {
   font-weight: bold;
 }
 
-.paperDropDown{
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
 .menuItemDrop{
+  width: auto;
   color: white;
   white-space: nowrap;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 25px;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   opacity: 0;
   transition: opacity .1s ease-in-out;
   -moz-transition: opacity .1s ease-in-out;
   -webkit-transition: opacity .1s ease-in-out;
-
 }
 
 .menuItemDrop:hover{
-  color: black;
+  color: #CFD8DC;
 }
 
 .menuItemDropActive{
-  color: black;
+  color: #CFD8DC;
 }
 
 .link {
-  font-family: 'Gotham',Arial, sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   color: black;
   margin: 0;
   font-weight: bold;
@@ -485,9 +499,8 @@ input:checked + .slider:before {
   z-index: -1;
   left: 0;
   height: 5px;
-  margin-top: 5px;
   width: 0;
-  bottom: 20px;
+  bottom: 25px;
   background:#5484b3;
   transition-property: width;
   transition-duration: 0.3s;
@@ -506,13 +519,22 @@ input:checked + .slider:before {
   z-index: -1;
   left: 0;
   height: 5px;
-  margin-top: 5px;
   width: 100%;
-  bottom: 20px;
+  bottom: 25px;
   background:#5484b3;
   transition-property: width;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
+}
+
+#boxMenuItems:hover .linkActive::after{
+  left:  0;
+  width: 0%;
+}
+
+#boxMenuItems:hover .menuItem:hover .linkActive::after{
+  left:  0;
+  width: 100%;
 }
 
 .btnDrawer{
@@ -563,7 +585,7 @@ input:checked + .slider:before {
 }
 
 .h3Footer{
-  font-family: 'Gotham',Arial, sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   color: white;
   font-weight: bold;
   font-size: 20px;
@@ -571,7 +593,7 @@ input:checked + .slider:before {
 }
 
 .body1Footer{
-  font-family: 'Gotham',Arial, sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   color: white;
   font-weight: normal;
   font-stretch: normal;
@@ -583,7 +605,7 @@ input:checked + .slider:before {
 }
 
 .linkFooter{
-  font-family: 'Gotham',Arial, sans-serif;
+  font-family: 'Gotham',Lato, sans-serif;
   color: white;
   font-weight: normal;
   font-stretch: normal;
@@ -654,6 +676,14 @@ input:checked + .slider:before {
   justify-content: flex-end;
   align-items: flex-end;
   height: 2000px;
+}
+
+.bgParallaxSecondaryCompany{
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 1650px;
 }
 
 .imgParallax{
@@ -828,13 +858,13 @@ input:checked + .slider:before {
 }
 
 .titleGit1{
-  margin-top:'30px';
-  margin-left:'40px'
+  margin-top: 30px;
+  margin-left: 40px
 }
 
 .titleGit2{
-  margin-top:'60px';
-  margin-left:'-50px'
+  margin-top: 60px;
+  margin-left: -50px
 }
 
 .topSpacingBoxIcons{
@@ -847,6 +877,49 @@ input:checked + .slider:before {
 
 .displayLine{
   display: none
+}
+
+.littleImage{
+  width: 150px;
+  height: 170px;
+  flex: 0 0 auto;
+  margin: 1px;
+}
+
+.reduceMarginBottom
+{
+  height: 1120px;
+}
+
+.reduceMarginTop
+{
+  margin-top: -100px
+}
+
+.reduceDobleMarginTop
+{
+  margin-top: -200px
+}
+
+.reduceMediumMarginTop
+{
+  margin-top: -35px
+}
+
+.specialButton{
+  width: 100%;
+}
+
+.imgBoxTheCompany{
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  margin-bottom: 2rem;
+}
+
+.sizeImageTheCompany{
+  width: 300px;
+  height: 100px;
 }
 
 @media only screen and (max-width: 960px) {
@@ -964,7 +1037,7 @@ input:checked + .slider:before {
   }
 
   .blog-wrapper a {
-    color: #5484b3;
+    /*color: #5484b3;*/
   }
 
   .blog-wrapper h1{
@@ -992,7 +1065,7 @@ input:checked + .slider:before {
   }
 
   .blog-wrapper p{
-    font-family: 'Gotham',Arial, sans-serif;
+    font-family: 'Gotham',Lato, sans-serif;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -1053,5 +1126,28 @@ input:checked + .slider:before {
   .marginTopAccordion
   {
     margin-top:-70px
+  }
+
+  .boxFlexEnd{
+    display: flex;
+    justify-content: center;
+  }
+
+  .reduceMarginTop
+  {
+    margin-top: 0
+  }
+
+  .reduceDobleMarginTop
+  {
+    margin-top: 0
+  }
+  
+  .reduceMarginBottom{
+    height: 1650px;
+  }
+
+  .specialButton{
+    width: auto;
   }
 }
