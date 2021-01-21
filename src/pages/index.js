@@ -41,7 +41,7 @@ const Home = () => {
           <p >Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.</p>
           <p>Start transforming your organization by leveraging enterprise blockchain networks.</p>
           <Box className={"buttonBox"}>
-            <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Check our services</button>
+            <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Explore our services</button>
           </Box>
         </Box>
         }
