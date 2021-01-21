@@ -39,17 +39,17 @@ const PATHS = [
         label: "The company",
         target: '_self'
       },
-      /*{
+      {
         path: "/projects/",
         label: "Projects",
         target: '_self'
       },
       {
         path: "/block-producer/",
-        label: "Bp",
+        label: "Block producer",
         target: '_self'
       },
-      {
+      /*{
         path: "/press/",
         label: "Press",
         target: '_self'
