@@ -75,8 +75,11 @@ const TheCompany = () => {
                   the company shifted to educating new users 
                   on using the email and browsing the web! 
                   Then, we started offering internet infrastructure, 
-                  hosting, and development services. In 2013, 
-                  we began providing infrastructure for public 
+                  hosting, and development services.
+                </p>
+                <br/>
+                <p>
+                  In 2013, we began providing infrastructure for public 
                   blockchain networks and learned first-hand 
                   how blockchains work. Then, in 2018 when 
                   the EOSIO protocol was launched, we investigated 
@@ -91,7 +94,7 @@ const TheCompany = () => {
                 <Box className={"imgBoxRight"}>
                   <img
                     className={"imgKnow"}
-                    src={useBaseUrl("img/team.webp")}
+                    src={useBaseUrl("img/ourstory.jpg")}
                   />
                 </Box>  
               </Grid>
@@ -104,7 +107,7 @@ const TheCompany = () => {
                   <Box className={"imgBoxLeft"}>
                     <img
                       className={"imgKnow"}
-                      src={useBaseUrl("img/company.webp")}
+                      src={useBaseUrl("img/ourvision.jpg")}
                     />
                   </Box>  
                 </Grid>
@@ -118,7 +121,11 @@ const TheCompany = () => {
                   release of EOS… and quickly realized this was a marathon, 
                   not a sprint. We have experimented with different use 
                   cases for EOSIO blockchain technology, especially 
-                  for enterprise use. Our team offers an agile and 
+                  for enterprise use.
+                </p>
+                <br/>
+                <p>
+                  Our team offers an agile and 
                   lean approach to develop blockchain-based solutions 
                   that allow innovation departments to quickly and 
                   efficiently iterate and test proofs-of-concept with
@@ -152,6 +159,9 @@ const TheCompany = () => {
                   infrastructures. Also, we configure, host, 
                   and maintain blockchain nodes and networks that 
                   can meet your organization’s requirements and needs. 
+                </p>
+                <br/>
+                <p>
                   We offer workshops to C-suite executives and teams. 
                   We also provide training for new talents and promote 
                   the region’s blockchain ecosystem by participating 
@@ -417,9 +427,12 @@ const TheCompany = () => {
           <Box className={"doubleSpacingBox"}>
             <Grid container spacing={5}>
               <Grid item xs={12} md={4}>
-                <img
-                  src={useBaseUrl("img/latamlink2.webp")}
-                />
+                <Box className={"imgBoxTheCompany"}>
+                  <img
+                    className = {"sizeImageTheCompany"}
+                    src={useBaseUrl("img/Group47.svg")}
+                  />
+                </Box>
                 <Box className={"h3Box"}>
                   <br/>
                   <h3>LatamLink</h3>
@@ -441,9 +454,12 @@ const TheCompany = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <img
-                  src={useBaseUrl("img/lifebank.webp")}
-                />
+                <Box className={"imgBoxTheCompany"}>
+                  <img
+                    className = {"sizeImageTheCompany"}
+                    src={useBaseUrl("img/lifebank.svg")}
+                  />
+                </Box>
                 <Box className={"h3Box"}>
                   <br/>
                   <h3>Lifebank</h3>
@@ -471,9 +487,12 @@ const TheCompany = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <img
-                  src={useBaseUrl("img/smartgate.webp")}
-                />
+                <Box className={"imgBoxTheCompany"}>
+                  <img
+                    className = {"sizeImageTheCompany"} 
+                    src={useBaseUrl("img/smartgate.svg")}
+                  />
+                </Box>
                 <Box className={"h3Box"}>
                   <br/>
                   <h3>SMARTGATE</h3>
