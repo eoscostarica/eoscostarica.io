@@ -1142,7 +1142,7 @@ input:checked + .slider:before {
   {
     margin-top: 0
   }
-
+  
   .reduceMarginBottom{
     height: 1650px;
   }
