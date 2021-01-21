@@ -88,16 +88,12 @@ const NavbarMenu = () => {
   const location = useLocation();
   const [isBlog, setIsBlog] =  useState();
   const [pathname, setPathname] = useState("");
-  const trigger = useScrollTrigger();
-  const [useTransparentBG, setUseTransparentBG]= useState(false);
+  const trigger = useScrollTrigger({disableHysteresis:true});
+
 
   useEffect(() => {
     setIsBlog(location.pathname.substring(0,6) === '/blog/')
   }, [location]);
-
-  useEffect(() => {
-    setUseTransparentBG(trigger)
-  }, [trigger]);
   
   useLayoutEffect(() => {
     const pathname = window.location.pathname;
@@ -117,11 +113,11 @@ const NavbarMenu = () => {
   }
 
   return (
-    <Box className={isBlog? clsx("navBar", "navBarScroll") : clsx("navBar", { ["navBarScroll"]: useTransparentBG})} >
+    <Box className={isBlog? clsx("navBar", "navBarScroll") : clsx("navBar", { ["navBarScroll"]: trigger})} >
       <Box className={"menuWrapper"}>
         {isMobile && 
           <>
-            <Box className={useTransparentBG? "imgLogoBoxMobile": "hideImgLogoBoxMobile" }>
+            <Box className={trigger? "imgLogoBoxMobile": "hideImgLogoBoxMobile" }>
               <img
                 className={"imgLogoScroll"}
                 src={useBaseUrl("img/eoscr-logo.png")}
@@ -163,7 +159,7 @@ const NavbarMenu = () => {
             <Box className={"boxLeft"}>
               <Box  className={"imgLogoBox"}>
                 <img
-                  className={isBlog? "imgLogoScroll" : clsx("imgLogo", {["imgLogoScroll"]: useTransparentBG})}
+                  className={isBlog? "imgLogoScroll" : clsx("imgLogo", {["imgLogoScroll"]: trigger})}
                   src={useBaseUrl("img/eoscr-logo.png")}
                   alt="EOS CR LOGO"
                 />
