@@ -906,6 +906,10 @@ input:checked + .slider:before {
   margin-top: -35px
 }
 
+.specialButton{
+  width: 100%;
+}
+
 @media only screen and (max-width: 960px) {
   .footerLogo {
     width: 80%;
@@ -1126,8 +1130,12 @@ input:checked + .slider:before {
   {
     margin-top: 0
   }
-  .reduceMarginBottom
-  {
+  
+  .reduceMarginBottom{
     height: 1650px;
+  }
+
+  .specialButton{
+    width: auto;
   }
 }
