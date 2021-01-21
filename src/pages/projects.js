@@ -96,7 +96,7 @@ const OurProjects = () => {
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="Lifebank"
-                  src={useBaseUrl("img/Group47.svg")}
+                  src={useBaseUrl("img/lifebank.svg")}
                 />
               </Box>
             </Grid>
@@ -120,7 +120,7 @@ const OurProjects = () => {
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="SMARTGATE"
-                  src={useBaseUrl("img/Group47.svg")}
+                  src={useBaseUrl("img/smartgate.svg")}
                 />
               </Box>
             </Grid>
@@ -190,7 +190,7 @@ const OurProjects = () => {
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="EOS Rate"
-                  src={useBaseUrl("img/Group47.svg")}
+                  src={useBaseUrl("img/eosrate.svg")}
                 />
               </Box>
             </Grid>
