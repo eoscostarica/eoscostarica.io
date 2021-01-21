@@ -29,7 +29,7 @@ const BlockProducer = () => {
             EOSIO blockchain ecosystem worldwide.
           </p>
           <Box className={"buttonBox"}>
-            <button className={"buttonPrimary"} onClick={() => location.href='https://t.me/eoscr'} >Connect whith us</button>
+            <button className={"buttonPrimary"} onClick={() => location.href='https://t.me/eoscr'} >Connect with us</button>
           </Box>
         </Box>
         }
@@ -105,82 +105,136 @@ const BlockProducer = () => {
       <Box className={"containerGray"}>
         <Box className={"sectionPadding"}>
           <Box className={"titleBox"}>
-            <h2>Our Story</h2>
+            <h2>Our Values</h2>
           </Box>
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+          <Grid style={{justifyContent:'center'}} container spacing={10}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icon-education.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Ongoing education</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 We believe that continuous training and building human talent is
                 crucial to developing a robust ecosystem.
               </p>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'30px'}}
+                  src={useBaseUrl("img/icon-loyalty.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Loyalty</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 We recognize and acknowledge everyone’s unique talents and seek
                 to build loyalty by empowering the EOSIO community.
               </p>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+          </Grid>
+          <Grid style={{justifyContent:'center'}} container spacing={10}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icon_resilience.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Resilience</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 Our team evolves alongside technology. We strive to be as nimble
                 and efficient as possible, which lets us quickly adapt and
                 implement the newest innovations.
               </p>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icon-loyalty.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Liberty</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 We defend individual sovereignty among the EOS community,
                 replicating Costa Rica’s premise of freedom and peace as the
                 lengthiest democracy in Latin America.
               </p>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+          </Grid>
+          <Grid style={{justifyContent:'center'}} container spacing={10}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icon_tolerance.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Tolerance</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 Our team advocates for the rights of education,
                 entrepreneurship, and opportunities for all the members in our
                 community as a way to develop the ecosystem.
               </p>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icon_prudence.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Prudence</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 We commit to safeguard our community’s future and take
                 calculated risks that will bring us further to our long term
                 goals.
               </p>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+          </Grid>
+          <Grid style={{justifyContent:'center'}} container spacing={10}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icon_accountability.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Accountability</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 We firmly believe and encourage taking full accountability from
                 our team members and stakeholders. We value transparency and
                 responsibility.
               </p>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icon-equality.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Equality</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 We endorse and defend a governance model guided by merit
                 principles for our community’s benefit.
               </p>
