@@ -102,7 +102,7 @@ const BlockProducer = () => {
 
   const OurValues = () => {
     return (
-      <Box className={"containerGray"}>
+      <Box className={clsx("reduceDobleMarginTop","containerSec")}>
         <Box className={"sectionPadding"}>
           <Box className={"titleBox"}>
             <h2>Our Values</h2>
@@ -320,19 +320,17 @@ const BlockProducer = () => {
             Find out more about some open-source we are developing. Feel free to
             look over our Github profile for more details!
           </p>
-          <Box className={"doubleSpacingBox"}>
-            <Grid container spacing={5}>
+          <Box className={"topSpacingBox"}>
+            <Grid container spacing={10}>
               <Grid item xs={12} md={4}>
-                <Box style={{marginTop:'40px'}} className={"centerBox"}>
+                <Box className={"centerBox"}>
                   <img
                     className = {"sizeImageTheCompany"}
                     src={useBaseUrl("img/lifebank.svg")}
                   />
-                </Box> 
-                <Box className={"h3Box"}>
-                  <br/>
-                  <h3>Lifebank</h3>
                 </Box>
+                <br/>
+                <br/>
                 <p>
                   An open-source blockchain-based app that incentivizes blood
                   donations by creating a virtuous circle of value between
@@ -356,16 +354,14 @@ const BlockProducer = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Box style={{marginTop:'40px'}} className={"centerBox"}>
+                <Box className={"centerBox"}>
                   <img
                     className = {"sizeImageTheCompany"}
                     src={useBaseUrl("img/eosrate.svg")}
                   />
                 </Box>
-                <Box className={"h3Box"}>
-                  <br/>
-                  <h3>EOS Rate</h3>
-                </Box>
+                <br/>
+                <br/>
                 <p>
                   EOS Rate is an open- source app that allows EOS token holders
                   to access a rating system and voting portal for block
@@ -378,16 +374,14 @@ const BlockProducer = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Box style={{marginTop:'40px'}} className={"centerBox"}>
+                <Box className={"centerBox"}>
                   <img
                     className = {"sizeImageTheCompany"}
                     src={useBaseUrl("img/eosio.svg")}
                   />
                 </Box>
-                <Box className={"h3Box"}>
-                  <br/>
-                  <h3>EOSIO Dashboard</h3>
-                </Box>
+                <br/>
+                <br/>
                 <p>
                   The EOSIO Dashboard is an open-source project that allows
                   users to visualize the rewards distribution along the EOS
@@ -400,8 +394,6 @@ const BlockProducer = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={12} style={{height:'10px'}} className={"topSpacingBox"}>
-                <br/>
-                <br/>
                 <p>
                   Follow us on our profiles. We’re continually looking for
                   open-source collaborations!
@@ -597,7 +589,6 @@ const BlockProducer = () => {
               <h3 className={"titleGit2"}>Github</h3>
             </Grid>
           </Grid>
-          <br/>
         </Box>
       </Box>
     )
