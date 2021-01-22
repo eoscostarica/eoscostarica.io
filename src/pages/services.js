@@ -677,7 +677,6 @@ const ServicePage = () => {
             <IndustryBlockchain />
           </Box>
         </Layout>
-
       }
       {isMobile && 
         <Layout>
