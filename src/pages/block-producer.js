@@ -324,7 +324,7 @@ const BlockProducer = () => {
             <Grid container spacing={5}>
               <Grid item xs={12} md={4}>
                 <img
-                  src={useBaseUrl("img/lifebank.webp")}
+                  src={useBaseUrl("img/lifebank.svg")}
                 />
                 <Box className={"h3Box"}>
                   <br/>
@@ -355,7 +355,7 @@ const BlockProducer = () => {
               <Grid item xs={12} md={4}>
                 <img
                   style={{height:'175px'}}
-                  src={useBaseUrl("img/eosrate.webp")}
+                  src={useBaseUrl("img/eosrate.svg")}
                 />
                 <Box className={"h3Box"}>
                   <br/>
@@ -375,7 +375,7 @@ const BlockProducer = () => {
               <Grid item xs={12} md={4}>
                 <img
                   style={{height:'170px'}}
-                  src={useBaseUrl("img/dashboard.webp")}
+                  src={useBaseUrl("img/eosio.svg")}
                 />
                 <Box className={"h3Box"}>
                   <br/>
