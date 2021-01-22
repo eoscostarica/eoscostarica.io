@@ -16,7 +16,7 @@ import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
 
 const Home = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
-  const isDesktop = useMediaQuery({ query:'(min-device-width: 767px)'})
+  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
   const [expanded, setExpanded] = useState('panel_SoftDev');
   const history = useHistory();
   
@@ -30,6 +30,9 @@ const Home = () => {
   }, []);
 
   const HeroSection = () => {
+    const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+    const isDesktop = useMediaQuery({ query:'(min-device-width: 767px)'})
+
     return (
       <Box className={"containerSec"}>
         {isDesktop && 
@@ -647,46 +650,48 @@ const Home = () => {
   }
 
   return (
-    <Layout>
-      <Box className={"mainContainer"}>
-        {isDesktop && 
-          <Parallax strength={800}>
-            <Background className={"bgParallax"}>
+   <>
+      {isDesktop && 
+        <Layout>
+          <Box className={"mainContainer"}>
+            <Parallax strength={800}>
+              <Background className={"bgParallax"}>
+                  <Box className={"imgParallax"} />
+              </Background>
+              <HeroSection />
+              <BlockchainCanDo />
+            </Parallax>
+            <WhatWeDo />
+            <EnterpriseBlockchain />
+            <Inquieres />
+            <Parallax strength={800}>
+            <GetToKnow />
+            <WeAreOneGroup />
+            <Background className={"bgParallaxSecondary"}>
                 <Box className={"imgParallax"} />
             </Background>
+            <SomeProjects />
+            </Parallax>
+           <ContactUs />
+          </Box>
+        </Layout>
+      }
+      {isMobile && 
+        <Layout>
+          <Box className={"mainContainer"}>
             <HeroSection />
             <BlockchainCanDo />
-          </Parallax>
-        }
-        {isMobile && 
-          <>
-            <HeroSection />
-            <BlockchainCanDo />
-          </>
-        } 
-        <WhatWeDo />
-        <EnterpriseBlockchain />
-        <Inquieres />
-        {isDesktop && 
-        <Parallax strength={800}>
-          <GetToKnow />
-          <WeAreOneGroup />
-          <Background className={"bgParallaxSecondary"}>
-              <Box className={"imgParallax"} />
-          </Background>
-          <SomeProjects />
-        </Parallax>
-        }
-        {isMobile && 
-          <>
+            <WhatWeDo />
+            <EnterpriseBlockchain />
+            <Inquieres />
             <GetToKnow />
             <WeAreOneGroup />
             <SomeProjects />
-          </>
-        } 
-        <ContactUs />
-      </Box>
-    </Layout>
+            <ContactUs />
+          </Box>
+        </Layout>
+      } 
+    </>
   );
 };
 
