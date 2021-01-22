@@ -518,7 +518,7 @@ const BlockProducer = () => {
               </Grid>
               <Grid item xs={12} md={6}>
                 <Box className={"h3Box"}>
-                  <h3>Reason 2</h3>
+                  <h3>An agile team</h3>
                 </Box>
                 <p>
                   We strive to recruit the best candidates. We have assembled a
