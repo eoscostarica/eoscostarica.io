@@ -177,7 +177,7 @@ const TheCompany = () => {
 
   const WeAreOneGroup = () => {
     return (
-      <Box className={clsx("containerSec","reduceMarginTop","reduceDobleBottomPadding",{["containerGray"] : isMobile, ["containerWithBackground"] : isMobile})}>
+      <Box className={clsx("containerSec","reduceMarginTop",{["containerGray"] : isMobile, ["containerWithBackground"] : isMobile})}>
         <Box className={"sectionPadding"} >
           <Box className={"h3Box"}>
             <h3 style={{textAlign:'center'}}>We Are One Group</h3>
