@@ -30,9 +30,6 @@ const Home = () => {
   }, []);
 
   const HeroSection = () => {
-    const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
-    const isDesktop = useMediaQuery({ query:'(min-device-width: 767px)'})
-
     return (
       <Box className={"containerSec"}>
         {isDesktop && 
