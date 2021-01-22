@@ -49,7 +49,7 @@ const ServicePage = () => {
   const HeroSection = () => {
     return (
       <Box className={"containerSec"}>
-        {!isMobile && 
+        {isDesktop && 
           <Box className={"sectionHero"}>
           <Box className={"titleBox"}>
             <h1>Custom-made</h1>
@@ -158,7 +158,7 @@ const ServicePage = () => {
                   </p>
                 </Box>
               </Grid>
-              {!isMobile && 
+              {isDesktop && 
               <Grid item xs={12} md={5}>
                 <Box className={"centerBox"}>
                   <DevelopmentServices />
@@ -299,7 +299,7 @@ const ServicePage = () => {
         <Box className={"sectionPadding"}>
           <Box className={"spacingBox"}>
             <Grid container>
-              {!isMobile && 
+              {isDesktop && 
               <Grid item xs={12} md={4}>
                 <Box className={"centerBox"}>
                   <Blockchaininfrastructure/>
@@ -567,7 +567,7 @@ const ServicePage = () => {
                   </Accordion>
                 </Box>
               </Grid>
-              {!isMobile && 
+              {isDesktop && 
                 <Grid item xs={12} md={6}>
                   <Box className={"centerBox"}>
                     <img  src={useBaseUrl("/img/imgCubes/eos-education.svg")}/>
