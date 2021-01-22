@@ -323,9 +323,12 @@ const BlockProducer = () => {
           <Box className={"doubleSpacingBox"}>
             <Grid container spacing={5}>
               <Grid item xs={12} md={4}>
-                <img
-                  src={useBaseUrl("img/lifebank.svg")}
-                />
+                <Box style={{marginTop:'40px'}} className={"centerBox"}>
+                  <img
+                    className = {"sizeImageTheCompany"}
+                    src={useBaseUrl("img/lifebank.svg")}
+                  />
+                </Box> 
                 <Box className={"h3Box"}>
                   <br/>
                   <h3>Lifebank</h3>
@@ -353,10 +356,12 @@ const BlockProducer = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <img
-                  style={{height:'175px'}}
-                  src={useBaseUrl("img/eosrate.svg")}
-                />
+                <Box style={{marginTop:'40px'}} className={"centerBox"}>
+                  <img
+                    className = {"sizeImageTheCompany"}
+                    src={useBaseUrl("img/eosrate.svg")}
+                  />
+                </Box>
                 <Box className={"h3Box"}>
                   <br/>
                   <h3>EOS Rate</h3>
@@ -373,10 +378,12 @@ const BlockProducer = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <img
-                  style={{height:'170px'}}
-                  src={useBaseUrl("img/eosio.svg")}
-                />
+                <Box style={{marginTop:'40px'}} className={"centerBox"}>
+                  <img
+                    className = {"sizeImageTheCompany"}
+                    src={useBaseUrl("img/eosio.svg")}
+                  />
+                </Box>
                 <Box className={"h3Box"}>
                   <br/>
                   <h3>EOSIO Dashboard</h3>
