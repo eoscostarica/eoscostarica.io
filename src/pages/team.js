@@ -1,16 +1,13 @@
 import React from "react";
 import { Parallax, Background } from 'react-parallax';
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { useHistory } from 'react-router-dom';
-import { useTheme } from '@material-ui/core/styles';
+import { useMediaQuery } from 'react-responsive'
 import Layout from "@theme/Layout";
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import clsx from "clsx";
 import Avatar from '@material-ui/core/Avatar';
 import PersonIcon from '@material-ui/icons/Person';
-import IconButton from '@material-ui/core/IconButton';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 
@@ -162,14 +159,13 @@ const DevelopTeam = [
 ]
 
 const Team = () => {
-    const history = useHistory();
-    const theme = useTheme()
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+    const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+    const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
 
     const HeroSection = () => {
         return (
           <Box className={"containerSec"}>
-            {!isMobile && 
+            {isDesktop && 
                 <Box className={"sectionHero"} style={{height:'auto'}}>
                     <Box className={"titleBox"}>
                         <h1>Meet the Essence of Our Company</h1>
@@ -204,44 +200,21 @@ const Team = () => {
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                <Box >
-                    <h3 className={"nameText"}>{name}</h3>
-                    <p className={"positionText"}>{position}</p>
-                    <p>{bio}</p>
-                </Box>
-                <Box className="socialMediaBox">
-                    {linkedIn && 
-                        <a href={linkedIn} target="_blank" className={"socialMediaIcon"}><LinkedInIcon style={{width:'30px', height:'30px'}}/></a>
-                    }
-                    {twitter && 
-                        <a href={twitter} target="_blank" className={"socialMediaIcon"}><TwitterIcon style={{width:'30px', height:'30px'}}/></a>
-                    }
-                </Box>
+                    <Box >
+                        <h3 className={"nameText"}>{name}</h3>
+                        <p className={"positionText"}>{position}</p>
+                        <p>{bio}</p>
+                    </Box>
+                    <Box className="socialMediaBox">
+                        {linkedIn && 
+                            <a href={linkedIn} target="_blank" className={"socialMediaIcon"}><LinkedInIcon style={{width:'30px', height:'30px'}}/></a>
+                        }
+                        {twitter && 
+                            <a href={twitter} target="_blank" className={"socialMediaIcon"}><TwitterIcon style={{width:'30px', height:'30px'}}/></a>
+                        }
+                    </Box>
                 </Grid>
-
             </Grid>
-            /*
-            <Box>
-                <Box className={"avatarBox"}>
-                    <Avatar variant="square" style={{width:"250px", height:"250px"}} src={img}><PersonIcon style={{width:'40%',height:'40%'}}/></Avatar>
-                </Box>
-                <Box >
-                    <h4 className={"nameText"}>{name}</h4>
-                    <p className={"centerText"}>{positionLine1}</p>
-                    {positionLine2 && 
-                        <p className={"centerText"}>{positionLine2}</p>
-                    }
-                    
-                </Box>
-                <Box className="socialMediaBox">
-                    {linkedIn && 
-                        <IconButton href={linkedIn} target="_blank"><LinkedInIcon style={{width:'30px',height:'30px', color:"#5484b3"}} /></IconButton>
-                    }
-                    {twitter && 
-                         <IconButton href={twitter} target="_blank"><TwitterIcon  style={{width:'30px',height:'30px', color:"#5484b3"}}/></IconButton>
-                    }
-                </Box>
-            </Box>*/
         )
     }
 
@@ -319,24 +292,28 @@ const Team = () => {
     }
 
     return (
-        <Layout>
-            <Box className={"mainContainer"}>
-                {!isMobile && 
-                <Parallax strength={800}>
-                    <Background className={"bgParallax"}>
-                        <Box className={"imgParallax"} />
-                    </Background>
-                    <HeroSection />
-                </Parallax>
-                }
-                {isMobile && 
-                <>
-                    <HeroSection />
-                    <TeamSection />
-                </>
-                } 
-            </Box>
-        </Layout>
+        <>
+            {isDesktop &&
+                <Layout>
+                    <Box className={"mainContainer"}>
+                        <Parallax strength={800}>
+                            <Background className={"bgParallax"}>
+                                <Box className={"imgParallax"} />
+                            </Background>
+                            <HeroSection />
+                        </Parallax>
+                    </Box>
+                </Layout>
+            }
+            {isMobile &&
+                <Layout>
+                    <Box className={"mainContainer"}>
+                        <HeroSection />
+                        <TeamSection />
+                    </Box>
+                </Layout>
+            }
+        </>
     )
 }
 
