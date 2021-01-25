@@ -1,7 +1,6 @@
 import React from "react";
 import { useHistory } from 'react-router-dom';
 import { Parallax, Background } from 'react-parallax';
-
 import Grid from '@material-ui/core/Grid';
 import clsx from "clsx";
 import { useMediaQuery } from 'react-responsive'

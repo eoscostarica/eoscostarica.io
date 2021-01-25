@@ -3,20 +3,19 @@ import clsx from "clsx";
 import Layout from "@theme/Layout";
 import Box from '@material-ui/core/Box'
 import Paper from '@material-ui/core/Paper'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { useTheme } from '@material-ui/core/styles'
+import { useMediaQuery } from 'react-responsive'
 import { Parallax, Background } from 'react-parallax';
 
 import ContactUsForm from "./components/ContactUs";
 
-
 const ContactUs = () => {
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
 
   return(
-    <Layout>
-      {!isMobile && 
+    <>
+      {isDesktop && 
+        <Layout>
           <Parallax strength={800}>
             <Background className={"bgParallax"}>
                 <Box className={"imgParallax"} />
@@ -38,8 +37,10 @@ const ContactUs = () => {
               </Box>
             </Box>
           </Parallax>
-        }
-        {isMobile && 
+        </Layout>
+      }
+      {isMobile && 
+        <Layout>
           <Box className={"containerSec"}>
             <Box className={clsx("sectionContact",{["sectionPadding"] : isMobile})}>
               <Box className={"h3Box"}>
@@ -54,12 +55,11 @@ const ContactUs = () => {
                 </Paper>
               </Box>
             </Box>
-        </Box>
-        }
-      
-    </Layout>
+          </Box>
+        </Layout>
+      }
+    </>
   )
-
 }
 
 export default ContactUs;
