@@ -83,7 +83,7 @@ const PATHS = [
 
 const NavbarMenu = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
-  const isDesktop = useMediaQuery({ query:'(min-device-width: 767px)'})
+  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const [isBlog, setIsBlog] =  useState();
