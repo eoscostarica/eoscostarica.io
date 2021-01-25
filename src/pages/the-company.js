@@ -4,19 +4,20 @@ import { Parallax, Background } from 'react-parallax';
 
 import Grid from '@material-ui/core/Grid';
 import clsx from "clsx";
-import { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from 'react-responsive'
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Box from '@material-ui/core/Box'
 
 const TheCompany = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
   const history = useHistory();
 
   const HeroSection = () => {
     return (
       <Box className={"containerSec"}>
-        {!isMobile && 
+        {isDesktop && 
           <Box className={"sectionHero"}>
           <Box className={"titleBox"}>
             <h1>We Develop Enterprise</h1>
@@ -99,7 +100,7 @@ const TheCompany = () => {
           </Box>
           <Box className={"spacingBox"}>
             <Grid container spacing={5}>
-              {!isMobile && 
+              {isDesktop && 
                 <Grid item md={6}>
                   <Box className={"imgBoxLeft"}>
                     <img
@@ -531,33 +532,42 @@ const TheCompany = () => {
   }
 
   return (
-    <Layout>
-      <Box className={"mainContainer"}>
-        {!isMobile && 
-          <Parallax strength={800}>
-            <Background className={"bgParallax"}>
+    <>
+      {isDesktop &&
+        <Layout>
+          <Box className={"mainContainer"}>
+            <Parallax strength={800}>
+              <Background className={"bgParallax"}>
+                  <Box className={"imgParallax"} />
+              </Background>
+              <HeroSection />
+              <EOSCR />
+              <Background className={"bgParallaxSecondaryCompany"}>
                 <Box className={"imgParallax"} />
-            </Background>
+              </Background>
+            </Parallax>
+            <WeAreOneGroup />
+            <MeetTeam />
+            <TheTechnology/>
+            <SomeOurProjects/>
+            <ContactUs />
+          </Box>
+        </Layout>
+      }
+      {isMobile &&
+        <Layout>
+          <Box className={"mainContainer"}>
             <HeroSection />
             <EOSCR />
-            <Background className={"bgParallaxSecondaryCompany"}>
-              <Box className={"imgParallax"} />
-            </Background>
-          </Parallax>
-        }
-        {isMobile && 
-          <>
-            <HeroSection />
-            <EOSCR />
-          </>
-        }
-        <WeAreOneGroup />
-        <MeetTeam />
-        <TheTechnology/>
-        <SomeOurProjects/>
-        <ContactUs />
-      </Box>
-    </Layout>
+            <WeAreOneGroup />
+            <MeetTeam />
+            <TheTechnology/>
+            <SomeOurProjects/>
+            <ContactUs />
+          </Box>
+        </Layout>
+      }
+    </>
   );    
 };
 
