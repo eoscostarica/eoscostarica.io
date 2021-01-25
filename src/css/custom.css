@@ -748,13 +748,13 @@ input:checked + .slider:before {
   width: 100%;
   display: flex;
   margin-bottom: 2em;
-  background-color: blue;
   -webkit-justify-content: center;
   justify-content: center;
 }
 
 .logoMobile{
-  width: 90%;
+  width: 300px;
+  height: 110px;
 }
 
 .section{
