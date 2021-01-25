@@ -787,9 +787,18 @@ input:checked + .slider:before {
 
 .imgBoxLogos{
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content:center;
   height: 288px;
   margin-bottom: 3rem;
+}
+
+.oneGroupLogo{
+  transition: all .4s ease-in-out
+}
+
+.oneGroupLogo:hover{
+  transform: scale(1.2);
 }
 
 .spacingBox{
