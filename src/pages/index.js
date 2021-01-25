@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 import { Parallax, Background } from 'react-parallax';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { useTheme } from '@material-ui/core/styles';
+import { useMediaQuery } from 'react-responsive'
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import clsx from "clsx";
@@ -16,10 +15,11 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
 
 const Home = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
   const [expanded, setExpanded] = useState('panel_SoftDev');
   const history = useHistory();
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+  
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -32,7 +32,7 @@ const Home = () => {
   const HeroSection = () => {
     return (
       <Box className={"containerSec"}>
-        {!isMobile && 
+        {isDesktop && 
           <Box className={"sectionHero"}>
           <Box className={"titleBox"}>
               <h1>Enterprise Blockchain Solutions</h1>
@@ -229,7 +229,7 @@ const Home = () => {
                 </Accordion>
               </Box>
           </Grid>
-          {!isMobile && 
+          {isDesktop && 
             <Grid item  md={6}>
               <Box style={{paddingLeft:'50px'}}>
                 <WhatWeDoSvg />
@@ -330,7 +330,7 @@ const Home = () => {
                 </Box>
               </Box>
             </Grid>
-            {!isMobile &&
+            {isDesktop &&
               <Grid item md={6}>
                 <img src={useBaseUrl("img/eosnodes.gif")} />
               </Grid>
@@ -378,7 +378,7 @@ const Home = () => {
             </Box>
             <Box className={"spacingBox"}>
               <Grid container spacing={5}>
-                {!isMobile && 
+                {isDesktop && 
                   <Grid item md={6}>
                     <Box className={"imgBoxLeft"}>
                       <img
@@ -647,46 +647,48 @@ const Home = () => {
   }
 
   return (
-    <Layout>
-      <Box className={"mainContainer"}>
-        {!isMobile && 
-          <Parallax strength={800}>
-            <Background className={"bgParallax"}>
+   <>
+      {isDesktop && 
+        <Layout>
+          <Box className={"mainContainer"}>
+            <Parallax strength={800}>
+              <Background className={"bgParallax"}>
+                  <Box className={"imgParallax"} />
+              </Background>
+              <HeroSection />
+              <BlockchainCanDo />
+            </Parallax>
+            <WhatWeDo />
+            <EnterpriseBlockchain />
+            <Inquieres />
+            <Parallax strength={800}>
+            <GetToKnow />
+            <WeAreOneGroup />
+            <Background className={"bgParallaxSecondary"}>
                 <Box className={"imgParallax"} />
             </Background>
+            <SomeProjects />
+            </Parallax>
+           <ContactUs />
+          </Box>
+        </Layout>
+      }
+      {isMobile && 
+        <Layout>
+          <Box className={"mainContainer"}>
             <HeroSection />
             <BlockchainCanDo />
-          </Parallax>
-        }
-        {isMobile && 
-          <>
-            <HeroSection />
-            <BlockchainCanDo />
-          </>
-        } 
-        <WhatWeDo />
-        <EnterpriseBlockchain />
-        <Inquieres />
-        {!isMobile && 
-        <Parallax strength={800}>
-          <GetToKnow />
-          <WeAreOneGroup />
-          <Background className={"bgParallaxSecondary"}>
-              <Box className={"imgParallax"} />
-          </Background>
-          <SomeProjects />
-        </Parallax>
-        }
-        {isMobile && 
-          <>
+            <WhatWeDo />
+            <EnterpriseBlockchain />
+            <Inquieres />
             <GetToKnow />
             <WeAreOneGroup />
             <SomeProjects />
-          </>
-        } 
-        <ContactUs />
-      </Box>
-    </Layout>
+            <ContactUs />
+          </Box>
+        </Layout>
+      } 
+    </>
   );
 };
 
