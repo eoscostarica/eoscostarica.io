@@ -886,6 +886,11 @@ input:checked + .slider:before {
   margin: 1px;
 }
 
+.reduceMarginBottom
+{
+  height: 1120px;
+}
+
 .reduceMarginTop
 {
   margin-top: -100px
@@ -899,6 +904,26 @@ input:checked + .slider:before {
 .reduceMediumMarginTop
 {
   margin-top: -35px
+}
+
+.specialButton{
+  width: 100%;
+}
+
+.imgBoxTheCompany{
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  margin-bottom: 2rem;
+}
+
+.sizeImageTheCompany{
+  width: 300px;
+  height: 100px;
+}
+
+.centerText{
+  text-align: center;
 }
 
 @media only screen and (max-width: 960px) {
@@ -1120,5 +1145,13 @@ input:checked + .slider:before {
   .reduceDobleMarginTop
   {
     margin-top: 0
+  }
+  
+  .reduceMarginBottom{
+    height: 1650px;
+  }
+
+  .specialButton{
+    width: auto;
   }
 }
