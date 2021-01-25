@@ -520,16 +520,16 @@ const Home = () => {
           </p>
           <Box className={"doubleSpacingBox"}>
             <Box className={"spacingBox"}>
-              <Grid container spacing={5}>
-                <Grid item md={6}>
-                  <Box className={"imgBoxLeft"}>
+              <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)'}} container spacing={5}>
+                <Grid xs={12} item md={6}>
+                  <Box style={{marginTop:'40px'}} className={"centerBox"}>
                     <img
-                      className={"imgProjects"}
-                      src={useBaseUrl("img/latamlink2.webp")}
+                      className = {"sizeImageTheCompany"}
+                      src={useBaseUrl("img/Group47.svg")}
                     />
                   </Box>
                 </Grid>
-                <Grid item md={6}>
+                <Grid xs={12} item md={6}>
                   <Box className={"h3Box"}>
                     <h3>LatamLink</h3>
                   </Box>
@@ -553,15 +553,15 @@ const Home = () => {
             </Box>
             <Box className={"spacingBox"}>
               <Grid container spacing={5}>
-                <Grid item md={6}>
-                  <Box className={"imgBoxLeft"}>
+                <Grid xs={12} item md={6}>
+                  <Box style={{marginTop:'40px'}} className={"centerBox"}>
                     <img
-                      className={"imgProjects"}
-                      src={useBaseUrl("img/lifebank.webp")}
+                      className = {"sizeImageTheCompany"}
+                      src={useBaseUrl("img/lifebank.svg")}
                     />
                   </Box> 
                 </Grid>
-                <Grid item md={6}>
+                <Grid xs={12} item md={6}>
                   <Box className={"h3Box"}>
                     <h3>Lifebank</h3>
                   </Box>
@@ -590,16 +590,16 @@ const Home = () => {
               </Grid>
             </Box>
             <Box className={"spacingBox"}>
-              <Grid container spacing={5}>
-                <Grid item md={6}>
-                  <Box className={"imgBoxLeft"}>
-                      <img
-                        className={"imgProjects"}
-                        src={useBaseUrl("img/smartgate.webp")}
-                      />
+              <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)'}} container spacing={5}>
+                <Grid xs={12} item md={6}>
+                  <Box style={{marginTop:'40px'}} className={"centerBox"}>
+                    <img
+                      className = {"sizeImageTheCompany"} 
+                      src={useBaseUrl("img/smartgate.svg")}
+                    />
                   </Box> 
                 </Grid>
-                <Grid item md={6}>
+                <Grid xs={12} item md={6}>
                   <Box className={"h3Box"}>
                     <h3>SMARTGATE</h3>
                   </Box>
