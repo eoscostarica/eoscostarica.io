@@ -747,11 +747,12 @@ input:checked + .slider:before {
 .logoMobileBox{
   width: 100%;
   display: flex;
+  margin-bottom: 2em;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
 .logoMobile{
-  margin-bottom: 2em;
   width: 90%;
 }
 
@@ -769,8 +770,6 @@ input:checked + .slider:before {
   padding-bottom: 140px;
   width: 1100px;
 }
-
-
 
 .accordion{
   width: 100%;
