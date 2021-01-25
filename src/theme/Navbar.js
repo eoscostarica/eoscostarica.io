@@ -1,8 +1,7 @@
 import React, { useLayoutEffect, useState, useEffect } from "react";
 import clsx from "clsx";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { useTheme } from '@material-ui/core/styles';
+import { useMediaQuery } from 'react-responsive'
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
@@ -12,7 +11,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import { useLocation } from 'react-router-dom';
-
 
 const PATHS = [
   {
@@ -84,21 +82,18 @@ const PATHS = [
 ];
 
 const NavbarMenu = () => {
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const [isBlog, setIsBlog] =  useState();
   const [pathname, setPathname] = useState("");
-  const trigger = useScrollTrigger({
-    disableHysteresis: true
-  })
+  const trigger = useScrollTrigger({disableHysteresis:true});
+
 
   useEffect(() => {
     setIsBlog(location.pathname.substring(0,6) === '/blog/')
   }, [location]);
-
-  const useTransparentBG =  trigger
   
   useLayoutEffect(() => {
     const pathname = window.location.pathname;
@@ -118,19 +113,17 @@ const NavbarMenu = () => {
   }
 
   return (
-    <Box className={isBlog? clsx("navBar", "navBarScroll") : clsx("navBar", { ["navBarScroll"]: useTransparentBG})} >
+    <Box className={isBlog? clsx("navBar", "navBarScroll") : clsx("navBar", { ["navBarScroll"]: trigger})} >
       <Box className={"menuWrapper"}>
         {isMobile && 
           <>
-          {(useTransparentBG || isBlog) &&
-            <Box  className={"imgLogoBoxMobile"}>
+            <Box className={trigger? "imgLogoBoxMobile": "hideImgLogoBoxMobile" }>
               <img
                 className={"imgLogoScroll"}
                 src={useBaseUrl("img/eoscr-logo.png")}
                 alt="EOS CR LOGO"
               />
             </Box>
-            }
             <Box  className={"btnDrawer"}>
               <IconButton onClick={handlerDrawer}>
                 <MenuIcon  fontSize="large"/>
@@ -161,12 +154,12 @@ const NavbarMenu = () => {
               </Box>
             </Drawer>
           </>}
-        {!isMobile && 
+        {isDesktop && 
           <>
             <Box className={"boxLeft"}>
               <Box  className={"imgLogoBox"}>
                 <img
-                  className={isBlog? "imgLogoScroll" : clsx("imgLogo", {["imgLogoScroll"]: useTransparentBG})}
+                  className={isBlog? "imgLogoScroll" : clsx("imgLogo", {["imgLogoScroll"]: trigger})}
                   src={useBaseUrl("img/eoscr-logo.png")}
                   alt="EOS CR LOGO"
                 />
