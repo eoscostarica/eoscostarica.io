@@ -2,22 +2,21 @@ import React from "react";
 import { useHistory } from 'react-router-dom';
 import clsx from "clsx";
 import Layout from "@theme/Layout";
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useMediaQuery } from 'react-responsive'
 import { Parallax, Background } from 'react-parallax';
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-import { useTheme } from '@material-ui/core/styles';
 
 const BlockProducer = () => {
   const history = useHistory();
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
 
   const HeroSection = () => {
     return (
       <Box className={"containerSec"}>
-        {!isMobile && 
+        {isDesktop && 
           <Box className={"sectionHero"}>
           <Box className={"titleBox"}>
             <h1>EOS Block Producer</h1>
@@ -618,33 +617,43 @@ const BlockProducer = () => {
   }
 
   return (
-    <Layout>
-      <Box className={"mainContainer"}>
-        {!isMobile && 
-          <Parallax strength={800}>
-            <Background className={"bgParallax"}>
-                <Box className={"imgParallax"} />
-            </Background>
+    <>
+      {isDesktop && 
+        <Layout>
+          <Box className={"mainContainer"}>
+            <Parallax strength={800}>
+              <Background className={"bgParallax"}>
+                  <Box className={"imgParallax"} />
+              </Background>
+              <HeroSection />
+              <OurStory />
+              <OurValues/>
+            </Parallax>
+            <BlockProducer/>
+            <OpenSourceProjects/>
+            <WhyCostaRica/>
+            <VoteForUS/>
+            <AdditionalResources/>
+            <ContactUs />
+          </Box>
+        </Layout>
+      }
+      {isMobile && 
+        <Layout>
+          <Box className={"mainContainer"}>
             <HeroSection />
             <OurStory />
             <OurValues/>
-          </Parallax>
-        }
-        {isMobile && 
-          <>
-            <HeroSection />
-            <OurStory />
-            <OurValues/>
-          </>
-        }
-        <BlockProducer/>
-        <OpenSourceProjects/>
-        <WhyCostaRica/>
-        <VoteForUS/>
-        <AdditionalResources/>
-        <ContactUs />
-      </Box>
-    </Layout>
+            <BlockProducer/>
+            <OpenSourceProjects/>
+            <WhyCostaRica/>
+            <VoteForUS/>
+            <AdditionalResources/>
+            <ContactUs />
+          </Box>
+        </Layout>
+      }
+    </>
   );
 };
 
