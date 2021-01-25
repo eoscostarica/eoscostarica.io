@@ -794,6 +794,12 @@ input:checked + .slider:before {
   margin-bottom: 3rem;
 }
 
+.imgBoxServices{
+  display: flex;
+  justify-content: center;
+  height: 350px;
+}
+
 .imgBoxLogos{
   display: flex;
   justify-content: center;
