@@ -922,6 +922,10 @@ input:checked + .slider:before {
   height: 100px;
 }
 
+.centerText{
+  text-align: center;
+}
+
 @media only screen and (max-width: 960px) {
   .footerLogo {
     width: 80%;

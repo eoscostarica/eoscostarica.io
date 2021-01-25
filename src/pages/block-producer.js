@@ -29,7 +29,7 @@ const BlockProducer = () => {
             EOSIO blockchain ecosystem worldwide.
           </p>
           <Box className={"buttonBox"}>
-            <button className={"buttonPrimary"} onClick={() => location.href='https://t.me/eoscr'} >Connect whith us</button>
+            <button className={"buttonPrimary"} onClick={() => location.href='https://t.me/eoscr'} >Connect with us</button>
           </Box>
         </Box>
         }
@@ -102,85 +102,139 @@ const BlockProducer = () => {
 
   const OurValues = () => {
     return (
-      <Box className={"containerGray"}>
+      <Box className={clsx("reduceDobleMarginTop","containerSec")}>
         <Box className={"sectionPadding"}>
           <Box className={"titleBox"}>
-            <h2>Our Story</h2>
+            <h2>Our Values</h2>
           </Box>
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+          <Grid style={{justifyContent:'center'}} container spacing={10}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icon-education.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Ongoing education</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 We believe that continuous training and building human talent is
                 crucial to developing a robust ecosystem.
               </p>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'30px'}}
+                  src={useBaseUrl("img/icon-loyalty.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Loyalty</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 We recognize and acknowledge everyone’s unique talents and seek
                 to build loyalty by empowering the EOSIO community.
               </p>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+          </Grid>
+          <Grid style={{justifyContent:'center'}} container spacing={10}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icon_resilience.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Resilience</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 Our team evolves alongside technology. We strive to be as nimble
                 and efficient as possible, which lets us quickly adapt and
                 implement the newest innovations.
               </p>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icon-loyalty.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Liberty</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 We defend individual sovereignty among the EOS community,
                 replicating Costa Rica’s premise of freedom and peace as the
                 lengthiest democracy in Latin America.
               </p>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+          </Grid>
+          <Grid style={{justifyContent:'center'}} container spacing={10}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icon_tolerance.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Tolerance</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 Our team advocates for the rights of education,
                 entrepreneurship, and opportunities for all the members in our
                 community as a way to develop the ecosystem.
               </p>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icon_prudence.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Prudence</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 We commit to safeguard our community’s future and take
                 calculated risks that will bring us further to our long term
                 goals.
               </p>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+          </Grid>
+          <Grid style={{justifyContent:'center'}} container spacing={10}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icon_accountability.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Accountability</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 We firmly believe and encourage taking full accountability from
                 our team members and stakeholders. We value transparency and
                 responsibility.
               </p>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icon-equality.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
                 <h3>Equality</h3>
               </Box>
-              <p>
+              <p className={"centerText"}>
                 We endorse and defend a governance model guided by merit
                 principles for our community’s benefit.
               </p>
@@ -266,16 +320,17 @@ const BlockProducer = () => {
             Find out more about some open-source we are developing. Feel free to
             look over our Github profile for more details!
           </p>
-          <Box className={"doubleSpacingBox"}>
-            <Grid container spacing={5}>
+          <Box className={"topSpacingBox"}>
+            <Grid container spacing={10}>
               <Grid item xs={12} md={4}>
-                <img
-                  src={useBaseUrl("img/lifebank.webp")}
-                />
-                <Box className={"h3Box"}>
-                  <br/>
-                  <h3>Lifebank</h3>
+                <Box className={"centerBox"}>
+                  <img
+                    className = {"sizeImageTheCompany"}
+                    src={useBaseUrl("img/lifebank.svg")}
+                  />
                 </Box>
+                <br/>
+                <br/>
                 <p>
                   An open-source blockchain-based app that incentivizes blood
                   donations by creating a virtuous circle of value between
@@ -299,14 +354,14 @@ const BlockProducer = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <img
-                  style={{height:'175px'}}
-                  src={useBaseUrl("img/eosrate.webp")}
-                />
-                <Box className={"h3Box"}>
-                  <br/>
-                  <h3>EOS Rate</h3>
+                <Box className={"centerBox"}>
+                  <img
+                    className = {"sizeImageTheCompany"}
+                    src={useBaseUrl("img/eosrate.svg")}
+                  />
                 </Box>
+                <br/>
+                <br/>
                 <p>
                   EOS Rate is an open- source app that allows EOS token holders
                   to access a rating system and voting portal for block
@@ -319,14 +374,14 @@ const BlockProducer = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <img
-                  style={{height:'170px'}}
-                  src={useBaseUrl("img/dashboard.webp")}
-                />
-                <Box className={"h3Box"}>
-                  <br/>
-                  <h3>EOSIO Dashboard</h3>
+                <Box className={"centerBox"}>
+                  <img
+                    className = {"sizeImageTheCompany"}
+                    src={useBaseUrl("img/eosio.svg")}
+                  />
                 </Box>
+                <br/>
+                <br/>
                 <p>
                   The EOSIO Dashboard is an open-source project that allows
                   users to visualize the rewards distribution along the EOS
@@ -339,8 +394,6 @@ const BlockProducer = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={12} style={{height:'10px'}} className={"topSpacingBox"}>
-                <br/>
-                <br/>
                 <p>
                   Follow us on our profiles. We’re continually looking for
                   open-source collaborations!
@@ -457,7 +510,7 @@ const BlockProducer = () => {
               </Grid>
               <Grid item xs={12} md={6}>
                 <Box className={"h3Box"}>
-                  <h3>Reason 2</h3>
+                  <h3>An agile team</h3>
                 </Box>
                 <p>
                   We strive to recruit the best candidates. We have assembled a
@@ -536,7 +589,6 @@ const BlockProducer = () => {
               <h3 className={"titleGit2"}>Github</h3>
             </Grid>
           </Grid>
-          <br/>
         </Box>
       </Box>
     )
@@ -597,3 +649,4 @@ const BlockProducer = () => {
 };
 
 export default BlockProducer;
+
