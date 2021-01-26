@@ -256,28 +256,33 @@ const BlockProducer = () => {
               <Grid item md={12}>
                 <Box className={"h3Box"}>
                   <h3>Code of conduct</h3>
-                  <h3>EOS Costa Rica pledges to:</h3>
                 </Box>
+                <p>EOS Costa Rica pledges to:</p>
                 <p className={"body1"}>
-                  Provide the highest standard bare-metal infrastructure available
+                  • Provide the highest standard bare-metal infrastructure available
                   to the EOS ecosystem.
                 </p>
                 <p className={"body1"}>
-                  Become an economically sustainable and highly competitive EOS
+                  • Become an economically sustainable and highly competitive EOS
                   Block Producer.
                 </p>
                 <p className={"body1"}>
-                  Allocate block rewards to EOS educational and development
-                  initiatives. Sponsor dApps and projects for community-led
+                  • Allocate block rewards to EOS educational and development
+                  initiatives.
+                </p>
+                <p className={"body1"}>
+                  • Sponsor dApps and projects for community-led
                   developments.
                 </p>
                 <p className={"body1"}>
-                  Be totally transparent and open when allocating block rewards.
-                  Actively participate in the blockchain governance with an open and
+                  • Be totally transparent and open when allocating block rewards.
+                </p>
+                <p className={"body1"}>
+                  • Actively participate in the blockchain governance with an open and
                   positive attitude.
                 </p>
                 <p className={"body1"}>
-                  Respect and defend the constitution, fair elections, community
+                  • Respect and defend the constitution, fair elections, community
                   vigilance, and arbitration mechanisms.
                 </p>
               </Grid>

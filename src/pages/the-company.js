@@ -253,6 +253,7 @@ const TheCompany = () => {
                   encourages participation, self- accountability, 
                   and innovation. Get to know us!
                 </p>
+                <br/>
               </Grid>
               <Grid item xs={6} md={2}>
                 <Box className={"centerBox"}>
