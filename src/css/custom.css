@@ -1057,6 +1057,10 @@ input:checked + .slider:before {
     font-size: 18px;
   }
 
+  .bioText{
+    text-align: center;
+  }
+
   .socialMediaBox{
     display: flex;
     justify-content: center;
