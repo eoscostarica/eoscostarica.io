@@ -872,10 +872,6 @@ input:checked + .slider:before {
   margin-bottom: 3rem;
 }
 
-.centerText{
-  text-align: left;
-}
-
 .nameText{
   text-align: left;
   margin-bottom: 5px;
