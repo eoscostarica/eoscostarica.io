@@ -121,6 +121,7 @@ const BlockProducer = () => {
                 We believe that continuous training and building human talent is
                 crucial to developing a robust ecosystem.
               </p>
+              <br/>
             </Grid>
             <Grid item xs={12} md={4}>
               <Box className={"centerBox"}>
@@ -136,6 +137,7 @@ const BlockProducer = () => {
                 We recognize and acknowledge everyone’s unique talents and seek
                 to build loyalty by empowering the EOSIO community.
               </p>
+              <br/>
             </Grid>
           </Grid>
           <Grid style={{justifyContent:'center'}} container spacing={10}>
@@ -154,6 +156,7 @@ const BlockProducer = () => {
                 and efficient as possible, which lets us quickly adapt and
                 implement the newest innovations.
               </p>
+              <br/>
             </Grid>
             <Grid item xs={12} md={4}>
               <Box className={"centerBox"}>
@@ -170,6 +173,7 @@ const BlockProducer = () => {
                 replicating Costa Rica’s premise of freedom and peace as the
                 lengthiest democracy in Latin America.
               </p>
+              <br/>
             </Grid>
           </Grid>
           <Grid style={{justifyContent:'center'}} container spacing={10}>
@@ -188,6 +192,7 @@ const BlockProducer = () => {
                 entrepreneurship, and opportunities for all the members in our
                 community as a way to develop the ecosystem.
               </p>
+              <br/>
             </Grid>
             <Grid item xs={12} md={4}>
               <Box className={"centerBox"}>
@@ -204,6 +209,7 @@ const BlockProducer = () => {
                 calculated risks that will bring us further to our long term
                 goals.
               </p>
+              <br/>
             </Grid>
           </Grid>
           <Grid style={{justifyContent:'center'}} container spacing={10}>
@@ -322,7 +328,7 @@ const BlockProducer = () => {
           </Box>
           <p className={"body1"}>
             Find out more about some open-source we are developing. Feel free to
-            look over our Github profile for more details!
+            look over our <a href="https://github.com/eoscostarica" target="_blank">Github</a> profile for more details!
           </p>
           <Box className={"topSpacingBox"}>
             <Grid container spacing={10}>
@@ -388,7 +394,22 @@ const BlockProducer = () => {
               <Grid item xs={12} md={12} style={{height:'10px'}} className={"topSpacingBox"}>
                 <p>
                   Follow us on our profiles. We’re continually looking for
-                  open-source collaborations!
+                  open-source collaborations! {" "}
+                  <a href="https://twitter.com/EOSCostaRica" target="_blank">
+                    Twitter
+                  </a>{" - "}
+                  <a href="https://t.me/eoscr" target="_blank">
+                    Telegram
+                  </a>{" - "}
+                  <a href="https://medium.com/@eoscostarica" target="_blank">
+                    Medium
+                  </a>{" - "}
+                  <a href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
+                    YouTube
+                  </a>{" - "}
+                  <a href="https://www.instagram.com/eoscostarica/" target="_blank">
+                    Instagram
+                  </a>
                 </p>
               </Grid>
             </Grid>         
