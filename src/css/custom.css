@@ -795,6 +795,10 @@ input:checked + .slider:before {
   margin-bottom: 15px;
 }
 
+.bioText{
+  text-align: left;
+}
+
 .socialMediaBox{
   display: flex;
   justify-content: start;

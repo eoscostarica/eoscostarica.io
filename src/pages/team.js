@@ -16,7 +16,7 @@ const ManagementTeam = [
         img:"img/rodrigo.webp",
         name:"Rodrigo Fernández",
         position:"Founder, Chairman & Chief Strategist",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"I believe in fostering truth and transparency to pursue individual freedom.",
         linkedIn:"https://www.linkedin.com/in/rodrigo-fernandez-57b8b72a/",
         twitter:"https://twitter.com/rjfescazu"
     },
@@ -24,7 +24,7 @@ const ManagementTeam = [
         img:"img/edgar.webp",
         name:"Edgar Fernández",
         position:"Co-founder & Finance and Enterprise",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"I thrive on developing the entrepreneurial spirit and using tech to create decentralized networks.",
         linkedIn:"https://www.linkedin.com/in/edgarafernandez/",
         twitter:"https://twitter.com/fernane506"
     },
@@ -32,7 +32,7 @@ const ManagementTeam = [
         img:"img/xavier.webp",
         name:"Xavier Fernández",
         position:"Co-founder & Tech Lead",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"Blockchain technology helps promote trust among stakeholders through transparency and decentralization.",
         linkedIn:"https://www.linkedin.com/in/xaviercr/",
         twitter:"https://twitter.com/xaviercr"
     }
@@ -44,7 +44,7 @@ const MarketingSalesTeam = [
         img:"img/luisdiego.webp",
         name:"Luis Diego Rojas",
         position:"Communications and Content Strategist",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"I believe that communicating new techs plays a crucial role in widespread adoption.",
         linkedIn:"https://www.linkedin.com/in/ldrojas/",
         twitter:"https://twitter.com/ldrojas"
     },
@@ -52,7 +52,7 @@ const MarketingSalesTeam = [
         img:"img/rodolfo.webp",
         name:"Rodolfo Perez",
         position:"Art Director & Brand Manager",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"Like people, every company also has to develop its own essence, a soul, this is what really compounds an identity.",
         linkedIn:"https://www.linkedin.com/in/rodolfo-eduardo-p%C3%ABrez-nava-73442164/",
         twitter:"https://twitter.com/monsieurRoaf"
     },
@@ -63,14 +63,14 @@ const DevelopTeam = [
         img:"img/adriel.webp",
         name:"Adriel Diaz",
         position:"Full Stack Developer",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"",
         linkedIn:"https://www.linkedin.com/in/adriel-d%C3%ADaz-08226384/",
         twitter:""
     },
     {
         img:"img/allan.webp",
         name:"Allan Salazar",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"",
         position:"Network Engineer",
         linkedIn:"",
         twitter:""
@@ -79,7 +79,7 @@ const DevelopTeam = [
         img:"",
         name:"Andrés Gomez",
         position:"Cybersecurity Developer",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"I envision and work for a more secure, private, and decentralized world.",
         linkedIn:"https://www.linkedin.com/in/andres-gomez-ramirez-bb7226156/",
         twitter:"https://twitter.com/kuronosec"
     },
@@ -87,7 +87,7 @@ const DevelopTeam = [
         img:"",
         name:"Angelo Castro",
         position:"Intern",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"I’m ready to develop innovative ideas and face new challenges.",
         linkedIn:"https://www.linkedin.com/in/angelo-castro-gamboa/",
         twitter:""
     },
@@ -95,15 +95,23 @@ const DevelopTeam = [
         img:"img/cris.webp",
         name:"Cristian Castro",
         position:"C++ Developer",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"We're creating the new technologies that will free people for good.",
         linkedIn:"https://www.linkedin.com/in/cristian-castro-95193a3a/",
+        twitter:""
+    },
+    {
+        img:"",
+        name:"Edgar Parra",
+        position:"Intern",
+        bio:"I believe technology is a constant learning process that should be done together.",
+        linkedIn:"",
         twitter:""
     },
     {
         img:"",
         name:"Jean Vega",
         position:"Intern",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"I enjoy learning and experimenting with new tech, especially to acquire knowledge in different application areas.",
         linkedIn:"https://www.linkedin.com/in/jeanvegad/",
         twitter:""
     },
@@ -111,7 +119,7 @@ const DevelopTeam = [
         img:"img/jorge.webp",
         name:"Jorge Murillo",
         position:"Sr. UX Designer",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"",
         linkedIn:"https://www.linkedin.com/in/jmurilloux/",
         twitter:"https://twitter.com/Oquedo"
     },
@@ -119,7 +127,7 @@ const DevelopTeam = [
         img:"",
         name:"Justin Castillo",
         position:"Intern",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"I strive to be part of the change, not just a distant gear.",
         linkedIn:"https://www.linkedin.com/in/jacv/",
         twitter:"https://twitter.com/_JustinCast"
     },
@@ -127,15 +135,31 @@ const DevelopTeam = [
         img:"img/kevin.webp",
         name:"Kevin Castillo",
         position:"Full Stack Developer",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"",
         linkedIn:"https://www.linkedin.com/in/kevin-castillo-mora/",
+        twitter:""
+    },
+    {
+        img:"",
+        name:"Leister Álvarez",
+        position:"Intern",
+        bio:"Programming reflects who we are; let's do something awesome.",
+        linkedIn:"",
         twitter:""
     },
     {
         img:"img/ronald.webp",
         name:"Ronald Gallo",
         position:"Network Administrator",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"",
+        linkedIn:"",
+        twitter:""
+    },
+    {
+        img:"",
+        name:"Stephanie Delgado",
+        position:"Intern",
+        bio:"The tech world is always evolving, so I believe one must be fearless.",
         linkedIn:"",
         twitter:""
     },
@@ -143,7 +167,7 @@ const DevelopTeam = [
         img:"img/teto.webp",
         name:"Terencio Gómez",
         position:"Full Stack Developer",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"",
         linkedIn:"https://www.linkedin.com/in/terencio-gomez-14784ba3/",
         twitter:""
     },
@@ -151,7 +175,7 @@ const DevelopTeam = [
         img:"img/julio.webp",
         name:"Victor Julio Madrigal",
         position:"Web Developer",
-        bio:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...",
+        bio:"",
         linkedIn:"",
         twitter:""
     },
@@ -203,7 +227,7 @@ const Team = () => {
                     <Box >
                         <h3 className={"nameText"}>{name}</h3>
                         <p className={"positionText"}>{position}</p>
-                        <p>{bio}</p>
+                        <p className={"bioText"}>{bio}</p>
                     </Box>
                     <Box className="socialMediaBox">
                         {linkedIn && 
