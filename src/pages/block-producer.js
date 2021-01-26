@@ -344,9 +344,7 @@ const BlockProducer = () => {
                   challenge by{" "}
                   <a href="https://block.one/" target="_blank">
                     block.one.
-                  </a>
-                </p>
-                <p>
+                  </a>{" "}
                   <a href=" https://lifebank.io/" target="_blank">
                     Read more.
                   </a>
@@ -364,12 +362,7 @@ const BlockProducer = () => {
                 <p>
                   EOS Rate is an open- source app that allows EOS token holders
                   to access a rating system and voting portal for block
-                  producers and proxies in the EOS blockchain.
-                </p>
-                <p>
-                  <a href="https://latamlink.io/" target="_blank">
-                    Read more.
-                  </a>
+                  producers and proxies in the EOS blockchain.<a href="https://latamlink.io/" target="_blank"> Read more.</a>
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
@@ -384,12 +377,7 @@ const BlockProducer = () => {
                 <p>
                   The EOSIO Dashboard is an open-source project that allows
                   users to visualize the rewards distribution along the EOS
-                  network to seek accountability and transparency.
-                </p>
-                <p>
-                  <a href="https://smartgate.tech/" target="_blank">
-                    Read more
-                  </a>
+                  network to seek accountability and transparency.<a href="https://smartgate.tech/" target="_blank"> Read more</a>
                 </p>
               </Grid>
               <Grid item xs={12} md={12} style={{height:'10px'}} className={"topSpacingBox"}>

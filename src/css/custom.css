@@ -972,19 +972,19 @@ input:checked + .slider:before {
   width: 100%;
 }
 
-@media only screen and (max-width: 960px) {
-  .imgBoxTheCompany{
-    display: flex;
-    justify-content: center;
-    height: 100px;
-    margin-bottom: 2rem;
-  }
+.imgBoxTheCompany{
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  margin-bottom: 2rem;
+}
 
-  .sizeImageTheCompany{
-    width: 300px;
-    height: 100px;
-  }
+.sizeImageTheCompany{
+  width: 300px;
+  height: 100px;
+}
 
+@media only screen and (max-width: 767px) {
   .centerText{
     text-align: center;
   }
