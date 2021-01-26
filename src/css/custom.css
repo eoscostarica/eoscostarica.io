@@ -855,6 +855,46 @@ input:checked + .slider:before {
   justify-content: center;
 }
 
+/*Team*/
+
+.avatarBox{
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  margin-bottom: 3rem;
+}
+
+.centerText{
+  text-align: left;
+}
+
+.nameText{
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.positionText{
+  text-align: left;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.bioText{
+  text-align: left;
+}
+
+.socialMediaBox{
+  display: flex;
+  justify-content: start;
+  margin-top: 15px;
+}
+
+.socialMediaIcon{
+  cursor: pointer;
+  color: #5484b3;
+  margin-right: 15px;
+}
+
 /* Contact */
 .contactFormBox{
   margin-bottom: 3rem;
@@ -1016,6 +1056,26 @@ input:checked + .slider:before {
     padding-right: 5vw;
   }
 
+  .nameText{
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .positionText{
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .bioText{
+    text-align: center;
+  }
+
+  .socialMediaBox{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
   h1{
     line-height: 30px;
     font-size: 30px;
