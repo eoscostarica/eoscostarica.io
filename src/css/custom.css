@@ -684,7 +684,7 @@ input:checked + .slider:before {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  height: 2000px;
+  height: 1750px;
 }
 
 .bgParallaxSecondaryCompany{
@@ -796,9 +796,18 @@ input:checked + .slider:before {
 
 .imgBoxLogos{
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content:center;
   height: 288px;
   margin-bottom: 3rem;
+}
+
+.oneGroupLogo{
+  transition: all .4s ease-in-out
+}
+
+.oneGroupLogo:hover{
+  transform: scale(1.2);
 }
 
 .spacingBox{

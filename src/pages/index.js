@@ -461,7 +461,7 @@ const Home = () => {
   const WeAreOneGroup = () => {
     return (
       <Box className={clsx("containerSec",{["containerGray"] : isMobile, ["containerWithBackground"] : isMobile})}>
-        <Box className={"sectionPadding"} >
+        <Box className={clsx("sectionNoPadding",{["sectionPadding"] : isMobile})}>
           <Box className={"h3Box"}>
             <h3 style={{textAlign:'center'}}>We Are One Group</h3>
           </Box>
@@ -469,34 +469,46 @@ const Home = () => {
             <Grid container>
               <Grid item xs={12} md={3}>
                 <Box className={"imgBoxLogos"}>
-                  <img
-                    alt="LatamLink"
-                    src={useBaseUrl("img/Group47.svg")}
-                  />
+                  <a target="_blank" href="http://latamlink.io/">
+                    <img
+                      className={"oneGroupLogo"}
+                      alt="LatamLink"
+                      src={useBaseUrl("img/Group47.svg")}
+                    />
+                  </a>
                 </Box>
               </Grid>
               <Grid item xs={12} md={3}>
                 <Box className={"imgBoxLogos"}>
-                  <img
-                    alt="Edenia"
-                    src={useBaseUrl("img/Group17.svg")}
-                  />
+                  <a target="_blank" href="https://www.edenia.com/">
+                    <img
+                      className={"oneGroupLogo"}
+                      alt="Edenia"
+                      src={useBaseUrl("img/Group17.svg")}
+                    />
+                  </a>
                 </Box>
               </Grid>
               <Grid item xs={12} md={3}>
                 <Box className={"imgBoxLogos"}>
-                  <img
-                    alt="Eossurf"
-                    src={useBaseUrl("img/Group11.svg")}
-                  />
+                  <a target="_blank" href="https://eosurf.com/">
+                    <img
+                      className={"oneGroupLogo"}
+                      alt="Eossurf"
+                      src={useBaseUrl("img/Group11.svg")}
+                    />
+                  </a>
                 </Box>
               </Grid>
               <Grid item xs={12} md={3}>
                 <Box className={"imgBoxLogos"}>
-                  <img
-                    alt="Ticoblockchain"
-                    src={useBaseUrl("img/Group55.svg")}
-                  />
+                  <a target="_blank" href="https://ticoblockchain.cr/">
+                    <img
+                      className={"oneGroupLogo"}
+                      alt="Ticoblockchain"
+                      src={useBaseUrl("img/Group55.svg")}
+                    />
+                  </a>
                 </Box>
               </Grid>
             </Grid>
@@ -509,7 +521,7 @@ const Home = () => {
   const SomeProjects = () => {
     return (
       <Box className={"containerSec"}>
-        <Box className={"sectionPadding"}>
+        <Box className={clsx("sectionNoPadding",{["sectionPadding"] : isMobile})}>
           <Box className={"titleBox"}>
               <h2 >Some of Our Projects</h2>
           </Box>
