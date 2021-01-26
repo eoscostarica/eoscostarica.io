@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 import { Parallax, Background } from 'react-parallax';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { useTheme } from '@material-ui/core/styles';
+import { useMediaQuery } from 'react-responsive'
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import clsx from "clsx";
@@ -16,10 +15,11 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
 
 const Home = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
   const [expanded, setExpanded] = useState('panel_SoftDev');
   const history = useHistory();
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+  
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -32,7 +32,7 @@ const Home = () => {
   const HeroSection = () => {
     return (
       <Box className={"containerSec"}>
-        {!isMobile && 
+        {isDesktop && 
           <Box className={"sectionHero"}>
           <Box className={"titleBox"}>
               <h1>Enterprise Blockchain Solutions</h1>
@@ -41,7 +41,7 @@ const Home = () => {
           <p >Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.</p>
           <p>Start transforming your organization by leveraging enterprise blockchain networks.</p>
           <Box className={"buttonBox"}>
-            <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Check our services</button>
+            <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Explore our services</button>
           </Box>
         </Box>
         }
@@ -229,7 +229,7 @@ const Home = () => {
                 </Accordion>
               </Box>
           </Grid>
-          {!isMobile && 
+          {isDesktop && 
             <Grid item  md={6}>
               <Box style={{paddingLeft:'50px'}}>
                 <WhatWeDoSvg />
@@ -330,7 +330,7 @@ const Home = () => {
                 </Box>
               </Box>
             </Grid>
-            {!isMobile &&
+            {isDesktop &&
               <Grid item md={6}>
                 <img src={useBaseUrl("img/eosnodes.gif")} />
               </Grid>
@@ -378,7 +378,7 @@ const Home = () => {
             </Box>
             <Box className={"spacingBox"}>
               <Grid container spacing={5}>
-                {!isMobile && 
+                {isDesktop && 
                   <Grid item md={6}>
                     <Box className={"imgBoxLeft"}>
                       <img
@@ -520,16 +520,17 @@ const Home = () => {
           </p>
           <Box className={"doubleSpacingBox"}>
             <Box className={"spacingBox"}>
-              <Grid container spacing={5}>
-                <Grid item md={6}>
-                  <Box className={"imgBoxLeft"}>
+              <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)'}} container spacing={5}>
+                <Grid xs={12} item md={6}>
+                  <Box style={{marginTop:'40px'}} className={"centerBox"}>
                     <img
-                      className={"imgProjects"}
-                      src={useBaseUrl("img/latamlink2.webp")}
+                      className = {"sizeImageTheCompany"}
+                      src={useBaseUrl("img/Group47.svg")}
                     />
                   </Box>
                 </Grid>
-                <Grid item md={6}>
+                <Grid xs={12} item md={6}>
+                  <br/>
                   <Box className={"h3Box"}>
                     <h3>LatamLink</h3>
                   </Box>
@@ -541,27 +542,23 @@ const Home = () => {
                       LACChain
                     </a>{" "}
                     initiative, a program to accelerate the development of the
-                    blockchain ecosystem in the region.
+                    blockchain ecosystem in the region.<a href="https://latamlink.io/" target="_blank"> Read more.</a>
                   </p>
-                  <p>
-                    <a href="https://latamlink.io/" target="_blank">
-                      Read more.
-                    </a>
-                  </p>
+                  <br/>
                 </Grid>
               </Grid>
             </Box>
             <Box className={"spacingBox"}>
               <Grid container spacing={5}>
-                <Grid item md={6}>
-                  <Box className={"imgBoxLeft"}>
+                <Grid xs={12} item md={6}>
+                  <Box style={{marginTop:'40px'}} className={"centerBox"}>
                     <img
-                      className={"imgProjects"}
-                      src={useBaseUrl("img/lifebank.webp")}
+                      className = {"sizeImageTheCompany"}
+                      src={useBaseUrl("img/lifebank.svg")}
                     />
                   </Box> 
                 </Grid>
-                <Grid item md={6}>
+                <Grid xs={12} item md={6}>
                   <Box className={"h3Box"}>
                     <h3>Lifebank</h3>
                   </Box>
@@ -579,9 +576,7 @@ const Home = () => {
                     challenge by{" "}
                     <a href="https://block.one/" target="_blank">
                       block.one.
-                    </a>
-                  </p>
-                  <p>
+                    </a>{" "}
                     <a href=" https://lifebank.io/" target="_blank">
                       Read more.
                     </a>
@@ -590,16 +585,17 @@ const Home = () => {
               </Grid>
             </Box>
             <Box className={"spacingBox"}>
-              <Grid container spacing={5}>
-                <Grid item md={6}>
-                  <Box className={"imgBoxLeft"}>
-                      <img
-                        className={"imgProjects"}
-                        src={useBaseUrl("img/smartgate.webp")}
-                      />
+              <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)'}} container spacing={5}>
+                <Grid xs={12} item md={6}>
+                  <Box style={{marginTop:'40px'}} className={"centerBox"}>
+                    <img
+                      className = {"sizeImageTheCompany"} 
+                      src={useBaseUrl("img/smartgate.svg")}
+                    />
                   </Box> 
                 </Grid>
-                <Grid item md={6}>
+                <Grid xs={12} item md={6}>
+                  <br/>
                   <Box className={"h3Box"}>
                     <h3>SMARTGATE</h3>
                   </Box>
@@ -607,13 +603,9 @@ const Home = () => {
                     A blockchain-based platform that provides solutions for in-out
                     gate activity for the container industry and real-time
                     transmission of relevant data required for proper interchange
-                    in port logistics.
+                    in port logistics. <a href="https://smartgate.tech/" target="_blank">Read more.</a>
                   </p>
-                  <p>
-                    <a href="https://smartgate.tech/" target="_blank">
-                      Read more.
-                    </a>
-                  </p>
+                  <br/>
                 </Grid>
               </Grid>
             </Box>
@@ -647,46 +639,48 @@ const Home = () => {
   }
 
   return (
-    <Layout>
-      <Box className={"mainContainer"}>
-        {!isMobile && 
-          <Parallax strength={800}>
-            <Background className={"bgParallax"}>
+   <>
+      {isDesktop && 
+        <Layout>
+          <Box className={"mainContainer"}>
+            <Parallax strength={800}>
+              <Background className={"bgParallax"}>
+                  <Box className={"imgParallax"} />
+              </Background>
+              <HeroSection />
+              <BlockchainCanDo />
+            </Parallax>
+            <WhatWeDo />
+            <EnterpriseBlockchain />
+            <Inquieres />
+            <Parallax strength={800}>
+            <GetToKnow />
+            <WeAreOneGroup />
+            <Background className={"bgParallaxSecondary"}>
                 <Box className={"imgParallax"} />
             </Background>
+            <SomeProjects />
+            </Parallax>
+           <ContactUs />
+          </Box>
+        </Layout>
+      }
+      {isMobile && 
+        <Layout>
+          <Box className={"mainContainer"}>
             <HeroSection />
             <BlockchainCanDo />
-          </Parallax>
-        }
-        {isMobile && 
-          <>
-            <HeroSection />
-            <BlockchainCanDo />
-          </>
-        } 
-        <WhatWeDo />
-        <EnterpriseBlockchain />
-        <Inquieres />
-        {!isMobile && 
-        <Parallax strength={800}>
-          <GetToKnow />
-          <WeAreOneGroup />
-          <Background className={"bgParallaxSecondary"}>
-              <Box className={"imgParallax"} />
-          </Background>
-          <SomeProjects />
-        </Parallax>
-        }
-        {isMobile && 
-          <>
+            <WhatWeDo />
+            <EnterpriseBlockchain />
+            <Inquieres />
             <GetToKnow />
             <WeAreOneGroup />
             <SomeProjects />
-          </>
-        } 
-        <ContactUs />
-      </Box>
-    </Layout>
+            <ContactUs />
+          </Box>
+        </Layout>
+      } 
+    </>
   );
 };
 

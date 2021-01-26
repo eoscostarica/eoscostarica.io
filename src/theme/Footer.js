@@ -5,12 +5,7 @@ import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Typography from "@material-ui/core/Typography";
 
-import useStyles from "../css/styles.js"
-
-
 const Footer = () => {
-  const classes = useStyles()
-
   return (
     <Box className={"footer"}>
       <Box className={"footerContent"}>
