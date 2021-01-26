@@ -747,12 +747,14 @@ input:checked + .slider:before {
 .logoMobileBox{
   width: 100%;
   display: flex;
+  margin-bottom: 2em;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
 .logoMobile{
-  margin-bottom: 2em;
-  width: 90%;
+  width: 300px;
+  height: 110px;
 }
 
 .section{
@@ -769,8 +771,6 @@ input:checked + .slider:before {
   padding-bottom: 140px;
   width: 1100px;
 }
-
-
 
 .accordion{
   width: 100%;
@@ -937,7 +937,8 @@ input:checked + .slider:before {
 
 @media only screen and (max-width: 767px) {
   .footerLogo {
-    width: 80%;
+    width: 300px;
+    height: 110px;
   }
   
   .footerLogoBox{
