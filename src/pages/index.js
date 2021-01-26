@@ -461,7 +461,7 @@ const Home = () => {
   const WeAreOneGroup = () => {
     return (
       <Box className={clsx("containerSec",{["containerGray"] : isMobile, ["containerWithBackground"] : isMobile})}>
-        <Box className={"sectionPadding"} >
+        <Box className={clsx("sectionNoPadding",{["sectionPadding"] : isMobile})}>
           <Box className={"h3Box"}>
             <h3 style={{textAlign:'center'}}>We Are One Group</h3>
           </Box>
@@ -521,7 +521,7 @@ const Home = () => {
   const SomeProjects = () => {
     return (
       <Box className={"containerSec"}>
-        <Box className={"sectionPadding"}>
+        <Box className={clsx("sectionNoPadding",{["sectionPadding"] : isMobile})}>
           <Box className={"titleBox"}>
               <h2 >Some of Our Projects</h2>
           </Box>
