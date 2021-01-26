@@ -23,6 +23,16 @@ const Footer = () => {
             <Box>
               <Grid container>
                 <Grid item xs={12} md={6}>
+                  <Typography className={"body1Footer"} > 
+                    <Link 
+                      className={"linkFooter"}
+                      href="https://www.linkedin.com/company/eoscostarica/"
+                      target="_blank"
+                      style={{color:'white'}}
+                    > 
+                      LinkedIn
+                    </Link>
+                  </Typography>
                   <Typography className={"body1Footer"}> 
                     <Link 
                       className={"linkFooter"}
@@ -36,6 +46,16 @@ const Footer = () => {
                   <Typography className={"body1Footer"} > 
                     <Link 
                       className={"linkFooter"}
+                      href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ"
+                      target="_blank"
+                      style={{color:'white'}}
+                    > 
+                      YouTube
+                    </Link>
+                  </Typography>
+                  <Typography className={"body1Footer"} > 
+                    <Link 
+                      className={"linkFooter"}
                       href="https://www.facebook.com/costaricaeos"
                       target="_blank"
                       style={{color:'white'}}
@@ -43,28 +63,8 @@ const Footer = () => {
                       Facebook
                     </Link>
                   </Typography>
-                  <Typography className={"body1Footer"} > 
-                    <Link 
-                      className={"linkFooter"}
-                      href="https://www.linkedin.com/company/eoscostarica/"
-                      target="_blank"
-                      style={{color:'white'}}
-                    > 
-                      LinkedIn
-                    </Link>
-                  </Typography>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                <Typography  className={"body1Footer"}> 
-                    <Link 
-                      className={"linkFooter"}
-                      href="https://medium.com/@eoscostarica"
-                      target="_blank"
-                      style={{color:'white'}}
-                    > 
-                      Medium
-                    </Link>
-                  </Typography>
                   <Typography  className={"body1Footer"}> 
                     <Link 
                       className={"linkFooter"}
@@ -73,6 +73,26 @@ const Footer = () => {
                       style={{color:'white'}}
                     > 
                       Telegram
+                    </Link>
+                  </Typography>
+                  <Typography  className={"body1Footer"}> 
+                    <Link 
+                      className={"linkFooter"}
+                      href="https://github.com/eoscostarica"
+                      target="_blank"
+                      style={{color:'white'}}
+                    > 
+                      GitHub
+                    </Link>
+                  </Typography>
+                  <Typography  className={"body1Footer"}> 
+                    <Link 
+                      className={"linkFooter"}
+                      href="https://medium.com/@eoscostarica"
+                      target="_blank"
+                      style={{color:'white'}}
+                    > 
+                      Medium
                     </Link>
                   </Typography>
                   <Typography  className={"body1Footer"}> 
