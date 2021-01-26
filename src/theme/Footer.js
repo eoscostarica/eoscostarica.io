@@ -36,6 +36,16 @@ const Footer = () => {
                   <Typography className={"body1Footer"} > 
                     <Link 
                       className={"linkFooter"}
+                      href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ"
+                      target="_blank"
+                      style={{color:'white'}}
+                    > 
+                      YouTube
+                    </Link>
+                  </Typography>
+                  <Typography className={"body1Footer"} > 
+                    <Link 
+                      className={"linkFooter"}
                       href="https://www.facebook.com/costaricaeos"
                       target="_blank"
                       style={{color:'white'}}
@@ -73,6 +83,16 @@ const Footer = () => {
                       style={{color:'white'}}
                     > 
                       Telegram
+                    </Link>
+                  </Typography>
+                  <Typography  className={"body1Footer"}> 
+                    <Link 
+                      className={"linkFooter"}
+                      href="https://github.com/eoscostarica"
+                      target="_blank"
+                      style={{color:'white'}}
+                    > 
+                      GitHub
                     </Link>
                   </Typography>
                   <Typography  className={"body1Footer"}> 
