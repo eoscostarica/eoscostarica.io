@@ -695,6 +695,14 @@ input:checked + .slider:before {
   height: 1650px;
 }
 
+.bgParallaxSecondaryCompany{
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 1650px;
+}
+
 .imgParallax{
   z-index: 1;
   height: 100%;

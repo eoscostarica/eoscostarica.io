@@ -20,7 +20,6 @@ const Home = () => {
   const [expanded, setExpanded] = useState('panel_SoftDev');
   const history = useHistory();
   
-
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
@@ -404,7 +403,7 @@ const Home = () => {
                     </a>{" "}
                     protocol since its launch, accruing decades of experience with
                     innovative technologies.
-                    <a href={useBaseUrl("/about")} target="_blank"> Get to know us.</a>
+                    <a href={useBaseUrl("/the-company")} target="_blank"> Get to know us.</a>
                   </p>
                 </Grid>
                 {isMobile && 
