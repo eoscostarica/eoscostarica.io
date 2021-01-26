@@ -1,22 +1,22 @@
 import React from "react";
 import { useHistory } from 'react-router-dom';
 import { Parallax, Background } from 'react-parallax';
-
 import Grid from '@material-ui/core/Grid';
 import clsx from "clsx";
-import { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from 'react-responsive'
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Box from '@material-ui/core/Box'
 
 const TheCompany = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
   const history = useHistory();
 
   const HeroSection = () => {
     return (
       <Box className={"containerSec"}>
-        {!isMobile && 
+        {isDesktop && 
           <Box className={"sectionHero"}>
           <Box className={"titleBox"}>
             <h1>We Develop Enterprise</h1>
@@ -102,7 +102,7 @@ const TheCompany = () => {
           </Box>
           <Box className={"spacingBox"}>
             <Grid container spacing={5}>
-              {!isMobile && 
+              {isDesktop && 
                 <Grid item md={6}>
                   <Box className={"imgBoxLeft"}>
                     <img
@@ -177,7 +177,7 @@ const TheCompany = () => {
 
   const WeAreOneGroup = () => {
     return (
-      <Box className={clsx("containerSec","reduceMarginTop",{["containerGray"] : isMobile, ["containerWithBackground"] : isMobile})}>
+      <Box className={clsx("containerSec","reduceMarginTop","reduceDobleBottomPadding",{["containerGray"] : isMobile, ["containerWithBackground"] : isMobile})}>
         <Box className={"sectionPadding"} >
           <Box className={"h3Box"}>
             <h3 style={{textAlign:'center'}}>We Are One Group</h3>
@@ -304,7 +304,7 @@ const TheCompany = () => {
 
   const TheTechnology = () => {
     return ( 
-      <Box className={clsx("containerSec","reduceMarginTop")}> 
+      <Box className={clsx("containerSec","reduceDobleMarginTop")}> 
         <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
           <br/>
           <br/>
@@ -425,17 +425,13 @@ const TheCompany = () => {
             </h2>
           </Box>
           <Box className={"doubleSpacingBox"}>
-            <Grid container spacing={5}>
+            <Grid container spacing={10}>
               <Grid item xs={12} md={4}>
                 <Box className={"imgBoxTheCompany"}>
                   <img
                     className = {"sizeImageTheCompany"}
                     src={useBaseUrl("img/Group47.svg")}
                   />
-                </Box>
-                <Box className={"h3Box"}>
-                  <br/>
-                  <h3>LatamLink</h3>
                 </Box>
                 <p>
                   We are part of this voluntary regional alliance, led by Latin
@@ -459,10 +455,6 @@ const TheCompany = () => {
                     className = {"sizeImageTheCompany"}
                     src={useBaseUrl("img/lifebank.svg")}
                   />
-                </Box>
-                <Box className={"h3Box"}>
-                  <br/>
-                  <h3>Lifebank</h3>
                 </Box>
                 <p>
                   An open-source blockchain-based app that incentivizes blood
@@ -493,10 +485,6 @@ const TheCompany = () => {
                     src={useBaseUrl("img/smartgate.svg")}
                   />
                 </Box>
-                <Box className={"h3Box"}>
-                  <br/>
-                  <h3>SMARTGATE</h3>
-                </Box>
                 <p>
                   A blockchain-based platform that provides solutions for in-out
                   gate activity for the container industry and real-time
@@ -510,7 +498,6 @@ const TheCompany = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={12} style={{height:'10px'}} className={"topSpacingBox"}>
-                <br/>
                 <br/>
                 <p>
                   Check out more of our latest projects <a 
@@ -528,7 +515,7 @@ const TheCompany = () => {
 
   const ContactUs = () => {
     return (
-      <Box className={"containerGray"}>
+      <Box className={clsx("containerGray","reduceMarginTop")}>
         <Box className={"sectionPadding"}>
           <Grid container spacing={5}>
             <Grid item xs={12} md={8}>
@@ -550,33 +537,42 @@ const TheCompany = () => {
   }
 
   return (
-    <Layout>
-      <Box className={"mainContainer"}>
-        {!isMobile && 
-          <Parallax strength={800}>
-            <Background className={"bgParallax"}>
+    <>
+      {isDesktop &&
+        <Layout>
+          <Box className={"mainContainer"}>
+            <Parallax strength={800}>
+              <Background className={"bgParallax"}>
+                  <Box className={"imgParallax"} />
+              </Background>
+              <HeroSection />
+              <EOSCR />
+              <Background className={"bgParallaxSecondaryCompany"}>
                 <Box className={"imgParallax"} />
-            </Background>
+              </Background>
+            </Parallax>
+            <WeAreOneGroup />
+            <MeetTeam />
+            <TheTechnology/>
+            <SomeOurProjects/>
+            <ContactUs />
+          </Box>
+        </Layout>
+      }
+      {isMobile &&
+        <Layout>
+          <Box className={"mainContainer"}>
             <HeroSection />
             <EOSCR />
-            <Background className={"bgParallaxSecondaryCompany"}>
-              <Box className={"imgParallax"} />
-            </Background>
-          </Parallax>
-        }
-        {isMobile && 
-          <>
-            <HeroSection />
-            <EOSCR />
-          </>
-        }
-        <WeAreOneGroup />
-        <MeetTeam />
-        <TheTechnology/>
-        <SomeOurProjects/>
-        <ContactUs />
-      </Box>
-    </Layout>
+            <WeAreOneGroup />
+            <MeetTeam />
+            <TheTechnology/>
+            <SomeOurProjects/>
+            <ContactUs />
+          </Box>
+        </Layout>
+      }
+    </>
   );    
 };
 

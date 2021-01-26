@@ -272,10 +272,19 @@ a{
 }
 
 .imgLogoBoxMobile{
+  visibility: visible;
   position: absolute;
   left: 15px;
   top: 18px;
   width: 330px;
+}
+
+.hideImgLogoBoxMobile{
+  position: absolute;
+  left: 15px;
+  top: 18px;
+  width: 330px;
+  visibility: hidden;
 }
 
 .imgLogo{
@@ -922,7 +931,11 @@ input:checked + .slider:before {
   height: 100px;
 }
 
-@media only screen and (max-width: 960px) {
+.centerText{
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
   .footerLogo {
     width: 80%;
   }

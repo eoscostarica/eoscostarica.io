@@ -3,8 +3,7 @@ import { Parallax, Background } from 'react-parallax';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import clsx from "clsx";
 import Layout from "@theme/Layout";
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { useTheme } from '@material-ui/core/styles';
+import { useMediaQuery } from 'react-responsive'
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid';
@@ -18,8 +17,8 @@ import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure';
 
 
 const ServicePage = () => {
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
   const [expandedMap, setExpandedMap] = useState('panel_interconnectivity');
   const [expandedEducation, setExpandedEducation] = useState('panel_Workshops');
   const history = useHistory();
@@ -50,7 +49,7 @@ const ServicePage = () => {
   const HeroSection = () => {
     return (
       <Box className={"containerSec"}>
-        {!isMobile && 
+        {isDesktop && 
           <Box className={"sectionHero"}>
           <Box className={"titleBox"}>
             <h1>Custom-made</h1>
@@ -159,7 +158,7 @@ const ServicePage = () => {
                   </p>
                 </Box>
               </Grid>
-              {!isMobile && 
+              {isDesktop && 
               <Grid item xs={12} md={5}>
                 <Box className={"centerBox"}>
                   <DevelopmentServices />
@@ -300,7 +299,7 @@ const ServicePage = () => {
         <Box className={"sectionPadding"}>
           <Box className={"spacingBox"}>
             <Grid container>
-              {!isMobile && 
+              {isDesktop && 
               <Grid item xs={12} md={4}>
                 <Box className={"centerBox"}>
                   <Blockchaininfrastructure/>
@@ -568,7 +567,7 @@ const ServicePage = () => {
                   </Accordion>
                 </Box>
               </Grid>
-              {!isMobile && 
+              {isDesktop && 
                 <Grid item xs={12} md={6}>
                   <Box className={"centerBox"}>
                     <img  src={useBaseUrl("/img/imgCubes/eos-education.svg")}/>
@@ -662,28 +661,35 @@ const ServicePage = () => {
 
 
   return (
-    <Layout>
-      <Box className={"mainContainer"}>
-        {!isMobile && 
-          <Parallax strength={800}>
-            <Background className={"bgParallax"}>
-                <Box className={"imgParallax"} />
-            </Background>
+    <>
+      {isDesktop && 
+        <Layout>
+          <Box className={"mainContainer"}>
+            <Parallax strength={800}>
+              <Background className={"bgParallax"}>
+                  <Box className={"imgParallax"} />
+              </Background>
+              <HeroSection />
+              <BlockchainDev />
+            </Parallax>
+            <BlockchainInfrastructure />
+            <EducationTraining />
+            <IndustryBlockchain />
+          </Box>
+        </Layout>
+      }
+      {isMobile && 
+        <Layout>
+          <Box className={"mainContainer"}>
             <HeroSection />
             <BlockchainDev />
-          </Parallax>
-        }
-        {isMobile && 
-          <>
-            <HeroSection />
-            <BlockchainDev />
-          </>
-        }
-        <BlockchainInfrastructure />
-        <EducationTraining />
-        <IndustryBlockchain />
-      </Box>
-    </Layout>
+            <BlockchainInfrastructure />
+            <EducationTraining />
+            <IndustryBlockchain />
+          </Box>
+        </Layout>
+      }
+    </>
   );
 };
 
