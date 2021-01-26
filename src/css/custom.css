@@ -1056,9 +1056,13 @@ input:checked + .slider:before {
     text-align: center;
     font-size: 18px;
   }
-  
-  
 
+  .socialMediaBox{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
   h1{
     line-height: 30px;
     font-size: 30px;
