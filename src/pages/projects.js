@@ -61,16 +61,16 @@ const OurProjects = () => {
     )
   } 
 
-
   const Projects = () => {
     return (
-      <Box className={clsx("containerSec", "reduceDobleMarginTop")}>
+      <Box className={clsx("containerSec", "reduceMarginTop")}>
         <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
           <Grid container spacing={5}>
             <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="LatamLink"
+                  className = {"sizeImageTheCompany"}
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
@@ -92,14 +92,17 @@ const OurProjects = () => {
               </p>
             </Grid>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '50px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="Lifebank"
+                  className = {"sizeImageTheCompany"}
                   src={useBaseUrl("img/lifebank.svg")}
                 />
               </Box>
             </Grid>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '50px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"h3Box"}>
                 <h3 >Lifebank</h3>
               </Box>
@@ -116,14 +119,17 @@ const OurProjects = () => {
               </p>
             </Grid>
             <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="SMARTGATE"
+                  className = {"sizeImageTheCompany"}
                   src={useBaseUrl("img/smartgate.svg")}
                 />
               </Box>
             </Grid>
             <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"h3Box"}>
                 <h3 >SMARTGATE</h3>
               </Box>
@@ -140,14 +146,17 @@ const OurProjects = () => {
               </p>
             </Grid>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="Enterprise EOSIO Forum"
+                  className = {"sizeImageTheCompany"}
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
             </Grid>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"h3Box"}>
                 <h3 >Enterprise EOSIO Forum</h3>
               </Box>
@@ -163,14 +172,17 @@ const OurProjects = () => {
               </p>
             </Grid>
             <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="EOS Foundation"
+                  className = {"sizeImageTheCompany"}
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
             </Grid>
             <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"h3Box"}>
                 <h3 >EOS Foundation</h3>
               </Box>
@@ -186,14 +198,17 @@ const OurProjects = () => {
               </p>
             </Grid>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="EOS Rate"
+                  className = {"sizeImageTheCompany"}
                   src={useBaseUrl("img/eosrate.svg")}
                 />
               </Box>
             </Grid>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"h3Box"}>
                 <h3 >EOS Rate</h3>
               </Box>
@@ -209,14 +224,17 @@ const OurProjects = () => {
               </p>
             </Grid>
             <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="EOSIO Dashboard"
-                  src={useBaseUrl("img/Group47.svg")}
+                  className = {"sizeImageTheCompany"}
+                  src={useBaseUrl("img/eosio.svg")}
                 />
               </Box>
             </Grid>
             <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"h3Box"}>
                 <h3 >EOSIO Dashboard</h3>
               </Box>
@@ -232,14 +250,17 @@ const OurProjects = () => {
               </p>
             </Grid>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="Evodex"
+                  className = {"sizeImageTheCompany"}
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
             </Grid>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"h3Box"}>
                 <h3 >Evodex</h3>
               </Box>
@@ -255,14 +276,17 @@ const OurProjects = () => {
               </p>
             </Grid>
             <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="Undisclosed enterprise project"
+                  className = {"sizeImageTheCompany"}
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
             </Grid>
             <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"h3Box"}>
                 <h3 >Undisclosed enterprise project</h3>
               </Box>
@@ -278,14 +302,17 @@ const OurProjects = () => {
               </p>
             </Grid>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="Notario Digital"
+                  className = {"sizeImageTheCompany"}
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
             </Grid>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+              <br/>
               <Box className={"h3Box"}>
                 <h3 >Notario Digital</h3>
               </Box>

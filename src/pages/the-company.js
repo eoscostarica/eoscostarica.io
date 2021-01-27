@@ -1,22 +1,22 @@
 import React from "react";
 import { useHistory } from 'react-router-dom';
 import { Parallax, Background } from 'react-parallax';
-
 import Grid from '@material-ui/core/Grid';
 import clsx from "clsx";
-import { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from 'react-responsive'
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Box from '@material-ui/core/Box'
 
 const TheCompany = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
   const history = useHistory();
 
   const HeroSection = () => {
     return (
       <Box className={"containerSec"}>
-        {!isMobile && 
+        {isDesktop && 
           <Box className={"sectionHero"}>
           <Box className={"titleBox"}>
             <h1>We Develop Enterprise</h1>
@@ -75,8 +75,11 @@ const TheCompany = () => {
                   the company shifted to educating new users 
                   on using the email and browsing the web! 
                   Then, we started offering internet infrastructure, 
-                  hosting, and development services. In 2013, 
-                  we began providing infrastructure for public 
+                  hosting, and development services.
+                </p>
+                <br/>
+                <p>
+                  In 2013, we began providing infrastructure for public 
                   blockchain networks and learned first-hand 
                   how blockchains work. Then, in 2018 when 
                   the EOSIO protocol was launched, we investigated 
@@ -91,7 +94,7 @@ const TheCompany = () => {
                 <Box className={"imgBoxRight"}>
                   <img
                     className={"imgKnow"}
-                    src={useBaseUrl("img/team.webp")}
+                    src={useBaseUrl("img/ourstory.jpg")}
                   />
                 </Box>  
               </Grid>
@@ -99,12 +102,12 @@ const TheCompany = () => {
           </Box>
           <Box className={"spacingBox"}>
             <Grid container spacing={5}>
-              {!isMobile && 
+              {isDesktop && 
                 <Grid item md={6}>
                   <Box className={"imgBoxLeft"}>
                     <img
                       className={"imgKnow"}
-                      src={useBaseUrl("img/company.webp")}
+                      src={useBaseUrl("img/ourvision.jpg")}
                     />
                   </Box>  
                 </Grid>
@@ -118,7 +121,11 @@ const TheCompany = () => {
                   release of EOS… and quickly realized this was a marathon, 
                   not a sprint. We have experimented with different use 
                   cases for EOSIO blockchain technology, especially 
-                  for enterprise use. Our team offers an agile and 
+                  for enterprise use.
+                </p>
+                <br/>
+                <p>
+                  Our team offers an agile and 
                   lean approach to develop blockchain-based solutions 
                   that allow innovation departments to quickly and 
                   efficiently iterate and test proofs-of-concept with
@@ -152,6 +159,9 @@ const TheCompany = () => {
                   infrastructures. Also, we configure, host, 
                   and maintain blockchain nodes and networks that 
                   can meet your organization’s requirements and needs. 
+                </p>
+                <br/>
+                <p>
                   We offer workshops to C-suite executives and teams. 
                   We also provide training for new talents and promote 
                   the region’s blockchain ecosystem by participating 
@@ -167,7 +177,7 @@ const TheCompany = () => {
 
   const WeAreOneGroup = () => {
     return (
-      <Box className={clsx("containerSec","reduceMarginTop",{["containerGray"] : isMobile, ["containerWithBackground"] : isMobile})}>
+      <Box className={clsx("containerSec","reduceMarginTop","reduceDobleBottomPadding",{["containerGray"] : isMobile, ["containerWithBackground"] : isMobile})}>
         <Box className={"sectionPadding"} >
           <Box className={"h3Box"}>
             <h3 style={{textAlign:'center'}}>We Are One Group</h3>
@@ -176,34 +186,46 @@ const TheCompany = () => {
             <Grid container>
               <Grid item xs={12} md={3}>
                 <Box className={"imgBoxLogos"}>
-                  <img
-                    alt="LatamLink"
-                    src={useBaseUrl("img/Group47.svg")}
-                  />
+                  <a target="_blank" href="http://latamlink.io/">
+                    <img
+                      className={"oneGroupLogo"}
+                      alt="LatamLink"
+                      src={useBaseUrl("img/Group47.svg")}
+                    />
+                  </a>
                 </Box>
               </Grid>
               <Grid item xs={12} md={3}>
                 <Box className={"imgBoxLogos"}>
-                  <img
-                    alt="Edenia"
-                    src={useBaseUrl("img/Group17.svg")}
-                  />
+                  <a target="_blank" href="https://www.edenia.com/">
+                    <img
+                      className={"oneGroupLogo"}
+                      alt="Edenia"
+                      src={useBaseUrl("img/Group17.svg")}
+                    />
+                  </a>
                 </Box>
               </Grid>
               <Grid item xs={12} md={3}>
                 <Box className={"imgBoxLogos"}>
-                  <img
-                    alt="Eossurf"
-                    src={useBaseUrl("img/Group11.svg")}
-                  />
+                  <a target="_blank" href="https://eosurf.com/">
+                    <img
+                      className={"oneGroupLogo"}
+                      alt="Eossurf"
+                      src={useBaseUrl("img/Group11.svg")}
+                    />
+                  </a>
                 </Box>
               </Grid>
               <Grid item xs={12} md={3}>
                 <Box className={"imgBoxLogos"}>
-                  <img
-                    alt="Ticoblockchain"
-                    src={useBaseUrl("img/Group55.svg")}
-                  />
+                  <a target="_blank" href="https://ticoblockchain.cr/">
+                    <img
+                      className={"oneGroupLogo"}
+                      alt="Ticoblockchain"
+                      src={useBaseUrl("img/Group55.svg")}
+                    />
+                  </a>
                 </Box>
               </Grid>
             </Grid>
@@ -294,7 +316,7 @@ const TheCompany = () => {
 
   const TheTechnology = () => {
     return ( 
-      <Box className={clsx("containerSec","reduceMarginTop")}> 
+      <Box className={clsx("containerSec","reduceDobleMarginTop")}> 
         <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
           <br/>
           <br/>
@@ -415,14 +437,13 @@ const TheCompany = () => {
             </h2>
           </Box>
           <Box className={"doubleSpacingBox"}>
-            <Grid container spacing={5}>
+            <Grid container spacing={10}>
               <Grid item xs={12} md={4}>
-                <img
-                  src={useBaseUrl("img/latamlink2.webp")}
-                />
-                <Box className={"h3Box"}>
-                  <br/>
-                  <h3>LatamLink</h3>
+                <Box className={"imgBoxTheCompany"}>
+                  <img
+                    className = {"sizeImageTheCompany"}
+                    src={useBaseUrl("img/Group47.svg")}
+                  />
                 </Box>
                 <p>
                   We are part of this voluntary regional alliance, led by Latin
@@ -441,12 +462,11 @@ const TheCompany = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <img
-                  src={useBaseUrl("img/lifebank.webp")}
-                />
-                <Box className={"h3Box"}>
-                  <br/>
-                  <h3>Lifebank</h3>
+                <Box className={"imgBoxTheCompany"}>
+                  <img
+                    className = {"sizeImageTheCompany"}
+                    src={useBaseUrl("img/lifebank.svg")}
+                  />
                 </Box>
                 <p>
                   An open-source blockchain-based app that incentivizes blood
@@ -471,12 +491,11 @@ const TheCompany = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <img
-                  src={useBaseUrl("img/smartgate.webp")}
-                />
-                <Box className={"h3Box"}>
-                  <br/>
-                  <h3>SMARTGATE</h3>
+                <Box className={"imgBoxTheCompany"}>
+                  <img
+                    className = {"sizeImageTheCompany"} 
+                    src={useBaseUrl("img/smartgate.svg")}
+                  />
                 </Box>
                 <p>
                   A blockchain-based platform that provides solutions for in-out
@@ -491,7 +510,6 @@ const TheCompany = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={12} style={{height:'10px'}} className={"topSpacingBox"}>
-                <br/>
                 <br/>
                 <p>
                   Check out more of our latest projects <a 
@@ -509,7 +527,7 @@ const TheCompany = () => {
 
   const ContactUs = () => {
     return (
-      <Box className={"containerGray"}>
+      <Box className={clsx("containerGray","reduceMarginTop")}>
         <Box className={"sectionPadding"}>
           <Grid container spacing={5}>
             <Grid item xs={12} md={8}>
@@ -531,33 +549,42 @@ const TheCompany = () => {
   }
 
   return (
-    <Layout>
-      <Box className={"mainContainer"}>
-        {!isMobile && 
-          <Parallax strength={800}>
-            <Background className={"bgParallax"}>
+    <>
+      {isDesktop &&
+        <Layout>
+          <Box className={"mainContainer"}>
+            <Parallax strength={800}>
+              <Background className={"bgParallax"}>
+                  <Box className={"imgParallax"} />
+              </Background>
+              <HeroSection />
+              <EOSCR />
+              <Background className={"bgParallaxSecondaryCompany"}>
                 <Box className={"imgParallax"} />
-            </Background>
+              </Background>
+            </Parallax>
+            <WeAreOneGroup />
+            <MeetTeam />
+            <TheTechnology/>
+            <SomeOurProjects/>
+            <ContactUs />
+          </Box>
+        </Layout>
+      }
+      {isMobile &&
+        <Layout>
+          <Box className={"mainContainer"}>
             <HeroSection />
             <EOSCR />
-            <Background className={"bgParallaxSecondaryCompany"}>
-              <Box className={"imgParallax"} />
-            </Background>
-          </Parallax>
-        }
-        {isMobile && 
-          <>
-            <HeroSection />
-            <EOSCR />
-          </>
-        }
-        <WeAreOneGroup />
-        <MeetTeam />
-        <TheTechnology/>
-        <SomeOurProjects/>
-        <ContactUs />
-      </Box>
-    </Layout>
+            <WeAreOneGroup />
+            <MeetTeam />
+            <TheTechnology/>
+            <SomeOurProjects/>
+            <ContactUs />
+          </Box>
+        </Layout>
+      }
+    </>
   );    
 };
 

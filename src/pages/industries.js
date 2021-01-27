@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Parallax, Background } from 'react-parallax';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from '@material-ui/core/Grid';
-import { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from 'react-responsive'
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import useBaseUrl from "@docusaurus/useBaseUrl";
@@ -18,7 +18,8 @@ import Logistic from './Animations/Logistic';
 import Games from './Animations/Games';
 
 const Industries = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
+  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
   const history = useHistory();
   const [expanded, setExpanded] = useState();
   const [stateAnimation,setStateAnimation] = useState(false)
@@ -42,7 +43,7 @@ const Industries = () => {
   const HeroSection = () => {
     return (
       <Box className={"containerSec"}>
-        {!isMobile && 
+        {isDesktop && 
           <Box className={"sectionHero"}>
           <Box className={"titleBox"}>
             <h1 >Blockchain Solutions</h1>
@@ -536,42 +537,37 @@ const Industries = () => {
 
 
   return (
-    <Layout>
-      <Box className={"mainContainer"}>
-        {!isMobile && 
-          <Parallax strength={800}>
-            <Background className={"bgParallax"}>
-                <Box className={"imgParallax"} />
-            </Background>
-            <HeroSection />
-            <PrincipalIndustries />
-          </Parallax>
-        }
-        {isMobile && 
-          <>
-            <HeroSection />
-            <PrincipalIndustries />
-          </>
-        }
-        
-        {!isMobile &&
-          <>
+    <>
+      {isDesktop &&
+        <Layout>
+          <Box className={"mainContainer"}>
+            <Parallax strength={800}>
+                <Background className={"bgParallax"}>
+                    <Box className={"imgParallax"} />
+                </Background>
+                <HeroSection />
+                <PrincipalIndustries />
+            </Parallax>
             <BlockchainMoreIndustries />
             <ChoosingEnterprise />
             <AdditionalResources />
-          </>
-        }
-        {isMobile && 
-          <>
-            <BlockchainMoreIndustries />
-            <ChoosingEnterprise />
-            <AdditionalResources />
-          </>
-        } 
-        <ContactUs />
-      </Box>
-    </Layout>
+          </Box>
+        </Layout>
+      }
+      {isMobile &&
+        <Layout>
+          <Box className={"mainContainer"}>
+              <HeroSection />
+              <PrincipalIndustries />
+              <BlockchainMoreIndustries />
+              <ChoosingEnterprise />
+              <AdditionalResources />
+          </Box>
+        </Layout>
+      }
+    </>
   );
+  
 };
 
 export default Industries;
