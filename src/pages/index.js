@@ -541,6 +541,7 @@ const Home = () => {
                   </Box>
                 </Grid>
                 <Grid xs={12} item md={6}>
+                  <br/>
                   <Box className={"h3Box"}>
                     <h3>LatamLink</h3>
                   </Box>
@@ -552,13 +553,9 @@ const Home = () => {
                       LACChain
                     </a>{" "}
                     initiative, a program to accelerate the development of the
-                    blockchain ecosystem in the region.
+                    blockchain ecosystem in the region.<a href="https://latamlink.io/" target="_blank"> Read more.</a>
                   </p>
-                  <p>
-                    <a href="https://latamlink.io/" target="_blank">
-                      Read more.
-                    </a>
-                  </p>
+                  <br/>
                 </Grid>
               </Grid>
             </Box>
@@ -590,9 +587,7 @@ const Home = () => {
                     challenge by{" "}
                     <a href="https://block.one/" target="_blank">
                       block.one.
-                    </a>
-                  </p>
-                  <p>
+                    </a>{" "}
                     <a href=" https://lifebank.io/" target="_blank">
                       Read more.
                     </a>
@@ -611,6 +606,7 @@ const Home = () => {
                   </Box> 
                 </Grid>
                 <Grid xs={12} item md={6}>
+                  <br/>
                   <Box className={"h3Box"}>
                     <h3>SMARTGATE</h3>
                   </Box>
@@ -618,13 +614,9 @@ const Home = () => {
                     A blockchain-based platform that provides solutions for in-out
                     gate activity for the container industry and real-time
                     transmission of relevant data required for proper interchange
-                    in port logistics.
+                    in port logistics. <a href="https://smartgate.tech/" target="_blank">Read more.</a>
                   </p>
-                  <p>
-                    <a href="https://smartgate.tech/" target="_blank">
-                      Read more.
-                    </a>
-                  </p>
+                  <br/>
                 </Grid>
               </Grid>
             </Box>

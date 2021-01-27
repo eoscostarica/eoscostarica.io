@@ -603,9 +603,7 @@ const ServicePage = () => {
                 <p>
                   Blockchain enables an efficient and secure way to register
                   transactions that can facilitate payments and offer near
-                  real-time auditing with encryption to reduce data breaches.
-                </p>
-                <p>
+                  real-time auditing with encryption to reduce data breaches.{" "}
                   <a href="https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-a-great-idea-e384b298a4a8" target="_blank">
                     Learn more
                   </a>
@@ -622,12 +620,7 @@ const ServicePage = () => {
                   In an industry that involves dozens of stakeholders, the
                   capabilities of blockchain and smart contracts for
                   traceability, authorizations management, and automation can
-                  make a great ally.
-                </p>
-                <p>
-                  <a href={useBaseUrl("/blog/blockchain-logistics")} target="_blank">
-                    Learn more
-                  </a>
+                  make a great ally. <a href={useBaseUrl("/blog/blockchain-logistics")} target="_blank"> Learn more</a>
                 </p>
               </Grid>
               <Grid item md={4}>
@@ -641,9 +634,7 @@ const ServicePage = () => {
                   Blockchain enables a better way to transfer, valorize, and
                   collect digital in-game assets. Also, its capabilities to
                   increase security and offer a more efficient way for
-                  transactions can level-up online gaming.
-                </p>
-                <p>
+                  transactions can level-up online gaming. {" "}
                   <a href={useBaseUrl("/blog/gaming-blockchain")} target="_blank">
                     Learn more
                   </a>
