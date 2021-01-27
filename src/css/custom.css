@@ -92,7 +92,9 @@ a{
   font-family: 'Gotham', sans-serif;
   font-weight: bold;
   width: auto;
-  padding: 25px;
+  height: 70px;
+  padding-left: 25px;
+  padding-right: 25px;
   background-color: #5484b3;
   font-size: 21px;
   color: white;
@@ -110,12 +112,12 @@ a{
   font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   width: auto;
-  padding: 25px;
+  height: 70px;
+  padding-left: 25px;
+  padding-right: 25px;
   background-color: transparent;
   font-size: 21px;
   border-radius: 0;
-  display: flex;
-  justify-content: center;
   border: solid 2px #5484B3;
   color: #5484B3;
   cursor: pointer;
