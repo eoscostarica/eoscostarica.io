@@ -20,6 +20,7 @@ const ServicePage = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
   const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
   const [expandedMap, setExpandedMap] = useState('panel_interconnectivity');
+  const [expandedSolution, setExpandedSolution] = useState();
   const [expandedEducation, setExpandedEducation] = useState('panel_Workshops');
   const history = useHistory();
 
@@ -36,13 +37,17 @@ const ServicePage = () => {
     setExpandedMap(newExpanded ? panel : false);
   };
 
+  const handleChangeSolution = (panel) => (event, newExpanded) => {
+    setExpandedSolution(newExpanded ? panel : false);
+  };
+
   const handleChangeEducation = (panel) => (event, newExpanded) => {
     setExpandedEducation(newExpanded ? panel : false);
   };
 
   useEffect(() => {
     handleChangeMap('panel_interconnectivity')
-    setExpandedEducation('panel_Workshops')
+    handleChangeEducation('panel_Workshops')
   }, []);
 
 
@@ -170,91 +175,43 @@ const ServicePage = () => {
               </Box>
             </Grid>
           </Grid>
-          <Grid className={"centerBox"} container spacing={5}>
-            <Grid item xs={12} md={5}>
-              <Accordion
-                square
-                expanded={expandedMap === 'panel_BoostedEfficiency'}
-                onChange={handleChangeMap('panel_BoostedEfficiency')}
-                style={{boxShadow:'none'}}
-                className={"accordion"}
-              >
-                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h4 style={{margin:'2px'}}>Boosted efficiency</h4>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:1}}>
-                  <p>
-                    Smart contracts can help you process transactions quickly,
-                    with added efficiency compared to cloud platforms, and less
-                    costly by reducing administrative fees by cutting the
-                    middleman.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
+          <Grid container spacing={5}>
+            <Grid item xs={12} md={6}>
+                <h4>Enhanced auditability</h4>
+                <p>
+                  A permissioned blockchain allows an organization to control
+                  accesses and authorizations across the network, increasing
+                  accountability among the team, and facilitating auditability
+                  by external parties.
+                </p>
             </Grid>
-            <Grid item xs={12} md={5}>
-              <Accordion
-                square
-                expanded={expandedMap === 'panel_ImprovedSecurity'}
-                onChange={handleChangeMap('panel_ImprovedSecurity')}
-                style={{boxShadow:'none'}}
-                className={"accordion"}
-              >
-                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h4 style={{margin:'2px'}}>Improved security</h4>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:1}}>
-                  <p >
-                    The immutability and encryption capabilities of blockchain
-                    can reduce data manipulation, human error, and cyber frauds.
-                    Blockchains use hash functions – created by a mathematical
-                    function that transforms input data into code lines – that
-                    make blockchains difficult to hack.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
+            <Grid item xs={12} md={6}>
+              <h4>Improved security</h4>
+              <p>
+                The immutability and encryption capabilities of blockchain
+                can reduce data manipulation, human error, and cyber frauds.
+                Blockchains use hash functions – created by a mathematical
+                function that transforms input data into code lines – that
+                make blockchains difficult to hack.
+              </p>
             </Grid>
-            <Grid item xs={12} md={5}>
-              <Accordion
-                square
-                expanded={expandedMap === 'panel_AddedTransparency'}
-                onChange={handleChangeMap('panel_AddedTransparency')}
-                style={{boxShadow:'none'}}
-                className={"accordion"}
-              >
-                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h4 style={{margin:'2px'}}>Added transparency</h4>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:1}}>
-                  <p>
-                    Blockchain enables a transparent and near real-time registry
-                    of data that can improve the trust and traceability of
-                    processes, such as in supply chain or insurance claims
-                    processing.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
+            <Grid item xs={12} md={6}>
+              <h4>Boosted efficiency</h4>
+              <p>
+                Smart contracts can help you process transactions quickly,
+                with added efficiency compared to cloud platforms, and less
+                costly by reducing administrative fees by cutting the
+                middleman.
+              </p>
             </Grid>
-            <Grid item xs={12} md={5}>
-              <Accordion
-                square
-                expanded={expandedMap === 'panel_EnhancedAuditability'}
-                onChange={handleChangeMap('panel_EnhancedAuditability')}
-                style={{boxShadow:'none'}}
-                className={"accordion"}
-              >
-                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h4 style={{margin:'2px'}}>Enhanced auditability</h4>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:1}}>
-                  <p>
-                    A permissioned blockchain allows an organization to control
-                    accesses and authorizations across the network, increasing
-                    accountability among the team, and facilitating auditability
-                    by external parties.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
+            <Grid item xs={12} md={6}>
+              <h4>Added transparency</h4>
+              <p>
+                Blockchain enables a transparent and near real-time registry
+                of data that can improve the trust and traceability of
+                processes, such as in supply chain or insurance claims
+                processing.
+              </p>
             </Grid>
           </Grid>
           <Box className={"doubleSpacingBox"}>
@@ -275,6 +232,8 @@ const ServicePage = () => {
                 </Box>
               </Grid>
             </Grid>
+
+
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
                 <h4>User-centered approach</h4>
@@ -312,22 +271,22 @@ const ServicePage = () => {
               </Grid>
             </Grid>
           </Box>
-        <Box className={"spacingBox"}>
-          <Box className={"h3Box"}>
-            <h3>Our Process from Start to Finish</h3>
+          <Box className={"spacingBox"}>
+            <Box className={"h3Box"}>
+              <h3>Our Process from Start to Finish</h3>
+            </Box>
+            <p>
+              When working on a project, our team follows a combination of
+              Design Thinking, Lean UX, and Agile methodologies. Applying
+              Design Thinking helps us understand the users’ needs and pain
+              points, define a specific problem, and experiment to find
+              potential solutions. Lean UX allows us to learn faster,
+              repeatedly iterate until the product fits its purpose, or pivot
+              entirely when the focus shifts. Moreover, Agile methodology
+              allows us to work flexibly on sprints towards developing
+              user-centered solutions.
+            </p>
           </Box>
-          <p>
-            When working on a project, our team follows a combination of
-            Design Thinking, Lean UX, and Agile methodologies. Applying
-            Design Thinking helps us understand the users’ needs and pain
-            points, define a specific problem, and experiment to find
-            potential solutions. Lean UX allows us to learn faster,
-            repeatedly iterate until the product fits its purpose, or pivot
-            entirely when the focus shifts. Moreover, Agile methodology
-            allows us to work flexibly on sprints towards developing
-            user-centered solutions.
-          </p>
-        </Box>
         </Box>
       </Box>
     )

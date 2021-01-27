@@ -38,6 +38,11 @@ const PATHS = [
         target: '_self'
       },
       {
+        path: "/team/",
+        label: "Team",
+        target: '_self'
+      },
+      {
         path: "/projects/",
         label: "Projects",
         target: '_self'

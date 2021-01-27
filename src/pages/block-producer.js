@@ -121,6 +121,7 @@ const BlockProducer = () => {
                 We believe that continuous training and building human talent is
                 crucial to developing a robust ecosystem.
               </p>
+              <br/>
             </Grid>
             <Grid item xs={12} md={4}>
               <Box className={"centerBox"}>
@@ -136,6 +137,7 @@ const BlockProducer = () => {
                 We recognize and acknowledge everyone’s unique talents and seek
                 to build loyalty by empowering the EOSIO community.
               </p>
+              <br/>
             </Grid>
           </Grid>
           <Grid style={{justifyContent:'center'}} container spacing={10}>
@@ -154,6 +156,7 @@ const BlockProducer = () => {
                 and efficient as possible, which lets us quickly adapt and
                 implement the newest innovations.
               </p>
+              <br/>
             </Grid>
             <Grid item xs={12} md={4}>
               <Box className={"centerBox"}>
@@ -170,6 +173,7 @@ const BlockProducer = () => {
                 replicating Costa Rica’s premise of freedom and peace as the
                 lengthiest democracy in Latin America.
               </p>
+              <br/>
             </Grid>
           </Grid>
           <Grid style={{justifyContent:'center'}} container spacing={10}>
@@ -188,6 +192,7 @@ const BlockProducer = () => {
                 entrepreneurship, and opportunities for all the members in our
                 community as a way to develop the ecosystem.
               </p>
+              <br/>
             </Grid>
             <Grid item xs={12} md={4}>
               <Box className={"centerBox"}>
@@ -204,6 +209,7 @@ const BlockProducer = () => {
                 calculated risks that will bring us further to our long term
                 goals.
               </p>
+              <br/>
             </Grid>
           </Grid>
           <Grid style={{justifyContent:'center'}} container spacing={10}>
@@ -256,28 +262,33 @@ const BlockProducer = () => {
               <Grid item md={12}>
                 <Box className={"h3Box"}>
                   <h3>Code of conduct</h3>
-                  <h3>EOS Costa Rica pledges to:</h3>
                 </Box>
+                <p>EOS Costa Rica pledges to:</p>
                 <p className={"body1"}>
-                  Provide the highest standard bare-metal infrastructure available
+                  • Provide the highest standard bare-metal infrastructure available
                   to the EOS ecosystem.
                 </p>
                 <p className={"body1"}>
-                  Become an economically sustainable and highly competitive EOS
+                  • Become an economically sustainable and highly competitive EOS
                   Block Producer.
                 </p>
                 <p className={"body1"}>
-                  Allocate block rewards to EOS educational and development
-                  initiatives. Sponsor dApps and projects for community-led
+                  • Allocate block rewards to EOS educational and development
+                  initiatives.
+                </p>
+                <p className={"body1"}>
+                  • Sponsor dApps and projects for community-led
                   developments.
                 </p>
                 <p className={"body1"}>
-                  Be totally transparent and open when allocating block rewards.
-                  Actively participate in the blockchain governance with an open and
+                  • Be totally transparent and open when allocating block rewards.
+                </p>
+                <p className={"body1"}>
+                  • Actively participate in the blockchain governance with an open and
                   positive attitude.
                 </p>
                 <p className={"body1"}>
-                  Respect and defend the constitution, fair elections, community
+                  • Respect and defend the constitution, fair elections, community
                   vigilance, and arbitration mechanisms.
                 </p>
               </Grid>
@@ -317,7 +328,7 @@ const BlockProducer = () => {
           </Box>
           <p className={"body1"}>
             Find out more about some open-source we are developing. Feel free to
-            look over our Github profile for more details!
+            look over our <a href="https://github.com/eoscostarica" target="_blank">Github</a> profile for more details!
           </p>
           <Box className={"topSpacingBox"}>
             <Grid container spacing={10}>
@@ -344,9 +355,7 @@ const BlockProducer = () => {
                   challenge by{" "}
                   <a href="https://block.one/" target="_blank">
                     block.one.
-                  </a>
-                </p>
-                <p>
+                  </a>{" "}
                   <a href=" https://lifebank.io/" target="_blank">
                     Read more.
                   </a>
@@ -364,12 +373,7 @@ const BlockProducer = () => {
                 <p>
                   EOS Rate is an open- source app that allows EOS token holders
                   to access a rating system and voting portal for block
-                  producers and proxies in the EOS blockchain.
-                </p>
-                <p>
-                  <a href="https://latamlink.io/" target="_blank">
-                    Read more.
-                  </a>
+                  producers and proxies in the EOS blockchain.<a href="https://latamlink.io/" target="_blank"> Read more.</a>
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
@@ -384,18 +388,28 @@ const BlockProducer = () => {
                 <p>
                   The EOSIO Dashboard is an open-source project that allows
                   users to visualize the rewards distribution along the EOS
-                  network to seek accountability and transparency.
-                </p>
-                <p>
-                  <a href="https://smartgate.tech/" target="_blank">
-                    Read more
-                  </a>
+                  network to seek accountability and transparency.<a href="https://smartgate.tech/" target="_blank"> Read more</a>
                 </p>
               </Grid>
               <Grid item xs={12} md={12} style={{height:'10px'}} className={"topSpacingBox"}>
                 <p>
                   Follow us on our profiles. We’re continually looking for
-                  open-source collaborations!
+                  open-source collaborations! {" "}
+                  <a href="https://twitter.com/EOSCostaRica" target="_blank">
+                    Twitter
+                  </a>{" - "}
+                  <a href="https://t.me/eoscr" target="_blank">
+                    Telegram
+                  </a>{" - "}
+                  <a href="https://medium.com/@eoscostarica" target="_blank">
+                    Medium
+                  </a>{" - "}
+                  <a href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
+                    YouTube
+                  </a>{" - "}
+                  <a href="https://www.instagram.com/eoscostarica/" target="_blank">
+                    Instagram
+                  </a>
                 </p>
               </Grid>
             </Grid>         
