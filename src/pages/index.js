@@ -249,55 +249,67 @@ const Home = () => {
             <h2>Industries to Deploy Enterprise Blockchain</h2>
           </Box>
             <Box className={"spacingBox"}>
-                <Grid container spacing={5}>
-                  <Grid item md={4}>
-                    <Box className={"imgBox"}>
-                      <img src={useBaseUrl("img/payments.svg")} />
-                    </Box>
-                    <Box className={"h3Box"}>
-                      <h3>Payments and Transfers</h3>
-                    </Box>
-                    <p>
-                      Blockchain enables an efficient and secure way to register
-                      transactions that can facilitate payments and offer near
-                      real-time auditing with encryption to reduce data breaches. 
-                      <a 
-                        href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
-                        target="_blank"
-                      > Read more </a>
-                    </p>
-                  </Grid>
-                  <Grid item md={4}>
-                    <Box className={"imgBox"}>
-                      <img src={useBaseUrl("img/logistics.svg")} />
-                    </Box>
-                    <Box className={"h3Box"}>
-                      <h3>Logistics and Supply Chain</h3>
-                    </Box>
-                    <p>
-                      In an industry that involves dozens of stakeholders, the
-                      capabilities of blockchain and smart contracts for
-                      traceability, authorizations management, and automation can
-                      make a great ally. 
-                      <a href={"https://eoscostarica.io/blog/blockchain-logistics"}> Read more</a>
-                    </p>
-                  </Grid>
-                  <Grid item md={4}>
-                    <Box className={"imgBox"}>
-                      <img src={useBaseUrl("img/gaming.svg")} />
-                    </Box>
-                    <Box className={"h3Box"}>
-                      <h3>Gaming</h3>
-                    </Box>
-                    <p>
-                      Blockchain enables a better way to transfer, valorize, and
-                      collect digital in-game assets. Also, its capabilities to
-                      increase security and offer a more efficient way for
-                      transactions can level-up online gaming. 
-                      <a href={"https://eoscostarica.io/blog/gaming-blockchain"}> Read more</a>
-                    </p>
-                  </Grid>
+              <Grid container spacing={5}>
+                <Grid item md={4}>
+                  <Box className={"imgBoxServices"}>
+                    <img
+                    src={useBaseUrl("img/logistics.svg")}
+                    style={{paddingTop: '25px'}}
+                    className = {"imageIndrustries"}
+                    />
+                  </Box>
+                  <Box className={"h3Box"}>
+                    <h3>Payments and Transfers</h3>
+                  </Box>
+                  <p>
+                    Blockchain enables an efficient and secure way to register
+                    transactions that can facilitate payments and offer near
+                    real-time auditing with encryption to reduce data breaches. 
+                    <a 
+                      href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
+                      target="_blank"
+                    > Read more </a>
+                  </p>
                 </Grid>
+                <Grid item md={4}>
+                  <Box className={"imgBoxServices"}>
+                    <img 
+                      src={useBaseUrl("img/payments.svg")}
+                      style={{paddingTop: '25px'}}
+                      className = {"imageIndrustriesLogistics"}
+                    />
+                  </Box>
+                  <Box className={"h3Box"}>
+                    <h3>Logistics and Supply Chain</h3>
+                  </Box>
+                  <p>
+                    In an industry that involves dozens of stakeholders, the
+                    capabilities of blockchain and smart contracts for
+                    traceability, authorizations management, and automation can
+                    make a great ally. 
+                    <a href={"https://eoscostarica.io/blog/blockchain-logistics"}> Read more</a>
+                  </p>
+                </Grid>
+                <Grid item md={4}>
+                  <Box className={"imgBoxServices"}>
+                    <img 
+                      src={useBaseUrl("img/gaming.svg")}
+                      style={{paddingTop: '15px'}}
+                      className = {"imageIndrustries"}
+                    />
+                  </Box>
+                  <Box className={"h3Box"}>
+                    <h3>Gaming and Esports</h3>
+                  </Box>
+                  <p>
+                    Blockchain enables a better way to transfer, valorize, and
+                    collect digital in-game assets. Also, its capabilities to
+                    increase security and offer a more efficient way for
+                    transactions can level-up online gaming. 
+                    <a href={"https://eoscostarica.io/blog/gaming-blockchain"}> Read more</a>
+                  </p>
+                </Grid>
+              </Grid>
             </Box>
           <p>
             <a href={useBaseUrl("/industries")}>Discover more industries </a>
