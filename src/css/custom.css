@@ -800,6 +800,12 @@ input:checked + .slider:before {
   margin-bottom: 3rem;
 }
 
+.imgBoxServices{
+  display: flex;
+  justify-content: center;
+  height: 250px;
+}
+
 .imgBoxLogos{
   display: flex;
   align-items: center;
@@ -945,6 +951,18 @@ input:checked + .slider:before {
   height: 170px;
   flex: 0 0 auto;
   margin: 1px;
+}
+
+.imageIndrustries{
+  width: 150px;
+  height: 220px;
+  flex: 0 0 auto;
+}
+
+.imageIndrustriesLogistics{  
+  width: 250px;
+  height: 220px;
+  flex: 0 0 auto;
 }
 
 .reduceMarginBottom
