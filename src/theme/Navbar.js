@@ -122,7 +122,7 @@ const NavbarMenu = () => {
       <Box className={"menuWrapper"}>
         {isMobile && 
           <>
-            <Box className={trigger? "imgLogoBoxMobile": "hideImgLogoBoxMobile" }>
+            <Box className={"imgLogoBoxMobile"}>
               <img
                 className={"imgLogoScroll"}
                 src={useBaseUrl("img/eoscr-logo.png")}
