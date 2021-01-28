@@ -82,10 +82,9 @@ const OurProjects = () => {
               <p>
                 We are part of this voluntary regional alliance, led by Latin
                 American technology companies to offer an EOSIO-based testnet to
-                the LACChain initiative, a program to accelerate the development
-                of the blockchain ecosystem in the region.
-              </p>
-              <p>
+                the <a href="https://www.lacchain.net/" target="_blank"> LACChain</a>{" "} 
+                initiative, a program to accelerate the development
+                of the blockchain ecosystem in the region.{" "}
                 <a href="http://latamlink.io/" target="_blank">
                   Read more
                 </a>
@@ -110,9 +109,16 @@ const OurProjects = () => {
                 An open-source blockchain-based app that incentivizes blood
                 donations by creating a virtuous circle of value between donors,
                 blood banks, and local businesses, leveraged by a token economy.
-                Winner of the "Coding for Change" challenge by block.one.
-              </p>
-              <p>
+                Winner of the “
+                <a
+                  href="https://eos.io/news/winner-of-coding-for-change- virtual-hackathon-lifebank/"
+                  target="_blank"
+                >
+                  Coding for Change
+                </a>{"” "} challenge by {" "}
+                <a href="https://block.one/" target="_blank">
+                  block.one.
+                </a>{" "}
                 <a href="http://lifebank.io/" target="_blank">
                   Read more
                 </a>
@@ -137,9 +143,7 @@ const OurProjects = () => {
                 A blockchain-based platform that provides solutions for in-out
                 gate activity for the container industry and real-time
                 transmission of relevant data required for proper interchange in
-                port logistics.
-              </p>
-              <p>
+                port logistics.{" "}
                 <a href="https://smartgate.tech/" target="_blank">
                   Read more
                 </a>
@@ -163,9 +167,7 @@ const OurProjects = () => {
               <p>
                 We are part of the Enterprise EOSIO Forum, a community-driven
                 initiative to discuss enterprise blockchain solutions
-                deploying EOSIO technology.
-              </p>
-              <p>
+                deploying EOSIO technology.{" "}
                 <a href="https://www.linkedin.com/company/enterprise-eosio-forum/" target="_blank">
                   Read more
                 </a>
@@ -189,9 +191,7 @@ const OurProjects = () => {
               <p>
                 We are part of the EOS Foundation proof of concept. It is an
                 autonomous, decentralized, non-profit organization that will
-                enable self-representation and promotion of the EOS community.
-              </p>
-              <p>
+                enable self-representation and promotion of the EOS community.{" "}
                 <a href="http://eos-foundation.eosio.cr/" target="_blank">
                   Read more
                 </a>
@@ -215,9 +215,7 @@ const OurProjects = () => {
               <p>
                 EOS Rate is an open- source app that allows EOS token holders
                 to access a rating system and voting portal for block
-                producers and proxies in the EOS blockchain.
-              </p>
-              <p>
+                producers and proxies in the EOS blockchain.{" "}
                 <a href="https://eosrate.io/" target="_blank">
                   Read more
                 </a>
@@ -241,9 +239,7 @@ const OurProjects = () => {
               <p>
                 The EOSIO Dashboard is an open-source project that allows
                 users to visualize the rewards distribution along the EOS
-                network to seek accountability and transparency.
-              </p>
-              <p>
+                network to seek accountability and transparency.{" "}
                 <a href="https://mainnet.eosio.cr/" target="_blank">
                   Read more
                 </a>
@@ -267,9 +263,7 @@ const OurProjects = () => {
               <p>
                 Evodex is the front-end user interface for a liquidity pool
                 protocol where users vote on the pool liquidity fees and pay
-                zero gas. We were in charge of UX and front-end design.
-              </p>
-              <p>
+                zero gas. We were in charge of UX and front-end design.{" "}
                 <a href="https://evodex.io/" target="_blank">
                   Read more
                 </a>
@@ -293,10 +287,11 @@ const OurProjects = () => {
               <p>
                 We developed an app for a US-based client in the accounting
                 and tax industry for improved traceability of intercompany
-                transactions.
-              </p>
-              <p>
-                <a target="_blank">
+                transactions.{" "}
+                <a 
+                  href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-a-great-idea-e384b298a4a8"}
+                  target="_blank"
+                >
                   Read more
                 </a>
               </p>
@@ -318,9 +313,7 @@ const OurProjects = () => {
               </Box>
               <p>
                 Notario Digital is an open-source project that generates a
-                hash of any file to register it immutably on an EOSIO network.
-              </p>
-              <p>
+                hash of any file to register it immutably on an EOSIO network.{" "}
                 <a href="https://notarize.eosio.cr/dashboard/notary" target="_blank">
                   Read more
                 </a>
