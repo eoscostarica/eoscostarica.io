@@ -650,7 +650,6 @@ const ServicePage = () => {
     )
   }
 
-
   return (
     <>
       {isDesktop && 
