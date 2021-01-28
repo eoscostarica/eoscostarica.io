@@ -590,7 +590,11 @@ const ServicePage = () => {
             <Grid container spacing={7}>
               <Grid item xs={12} md={4}>
                 <Box className={"imgBoxServices"}>
-                  <img src={useBaseUrl("img/logistics.svg")} />
+                  <img
+                   src={useBaseUrl("img/logistics.svg")}
+                   style={{paddingTop: '25px'}}
+                   className = {"imageIndrustries"}
+                   />
                 </Box>
                 <Box className={"h3Box"}>
                   <h3>Payments and Transfers</h3>
@@ -598,9 +602,7 @@ const ServicePage = () => {
                 <p>
                   Blockchain enables an efficient and secure way to register
                   transactions that can facilitate payments and offer near
-                  real-time auditing with encryption to reduce data breaches.
-                </p>
-                <p>
+                  real-time auditing with encryption to reduce data breaches.{" "}
                   <a href="https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-a-great-idea-e384b298a4a8" target="_blank">
                     Learn more
                   </a>
@@ -608,7 +610,11 @@ const ServicePage = () => {
               </Grid>
               <Grid item xs={12} md={4}>
                 <Box className={"imgBoxServices"}>
-                  <img src={useBaseUrl("img/payments.svg")} />
+                  <img 
+                    src={useBaseUrl("img/payments.svg")}
+                    style={{paddingTop: '25px'}}
+                    className = {"imageIndrustriesLogistics"}
+                  />
                 </Box>
                 <Box className={"h3Box"}>
                   <h3>Logistics and Supply Chain</h3>
@@ -617,9 +623,7 @@ const ServicePage = () => {
                   In an industry that involves dozens of stakeholders, the
                   capabilities of blockchain and smart contracts for
                   traceability, authorizations management, and automation can
-                  make a great ally.
-                </p>
-                <p>
+                  make a great ally.{" "}
                   <a href={useBaseUrl("/blog/blockchain-logistics")} target="_blank">
                     Learn more
                   </a>
@@ -627,7 +631,11 @@ const ServicePage = () => {
               </Grid>
               <Grid item xs={12} md={4}>
                   <Box className={"imgBoxServices"}>
-                    <img src={useBaseUrl("img/gaming.svg")} />
+                    <img 
+                      src={useBaseUrl("img/gaming.svg")}
+                      style={{paddingTop: '20px'}}
+                      className = {"imageIndrustries"}
+                    />
                   </Box>
                   <Box className={"h3Box"}>
                     <h3>Gaming and Esports</h3>
@@ -636,9 +644,7 @@ const ServicePage = () => {
                   Blockchain enables a better way to transfer, valorize, and
                   collect digital in-game assets. Also, its capabilities to
                   increase security and offer a more efficient way for
-                  transactions can level-up online gaming.
-                </p>
-                <p>
+                  transactions can level-up online gaming.{" "}
                   <a href={useBaseUrl("/blog/gaming-blockchain")} target="_blank">
                     Learn more
                   </a>
@@ -646,6 +652,7 @@ const ServicePage = () => {
               </Grid>
             </Grid>
           </Box>
+          <br/>
           <p>
             Learn more about other industries that blockchain is transforming. <a href={useBaseUrl("/industries")}>Read more.</a>
           </p>

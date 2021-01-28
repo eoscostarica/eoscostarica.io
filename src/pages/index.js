@@ -251,8 +251,12 @@ const Home = () => {
             <Box className={"spacingBox"}>
               <Grid container spacing={5}>
                 <Grid item md={4}>
-                  <Box className={"imgBox"}>
-                    <img src={useBaseUrl("img/payments.svg")} />
+                  <Box className={"imgBoxServices"}>
+                    <img
+                    src={useBaseUrl("img/logistics.svg")}
+                    style={{paddingTop: '25px'}}
+                    className = {"imageIndrustries"}
+                    />
                   </Box>
                   <Box className={"h3Box"}>
                     <h3>Payments and Transfers</h3>
@@ -268,8 +272,12 @@ const Home = () => {
                   </p>
                 </Grid>
                 <Grid item md={4}>
-                  <Box className={"imgBox"}>
-                    <img src={useBaseUrl("img/logistics.svg")} />
+                  <Box className={"imgBoxServices"}>
+                    <img 
+                      src={useBaseUrl("img/payments.svg")}
+                      style={{paddingTop: '25px'}}
+                      className = {"imageIndrustriesLogistics"}
+                    />
                   </Box>
                   <Box className={"h3Box"}>
                     <h3>Logistics and Supply Chain</h3>
@@ -283,11 +291,15 @@ const Home = () => {
                   </p>
                 </Grid>
                 <Grid item md={4}>
-                  <Box className={"imgBox"}>
-                    <img src={useBaseUrl("img/gaming.svg")} />
+                  <Box className={"imgBoxServices"}>
+                    <img 
+                      src={useBaseUrl("img/gaming.svg")}
+                      style={{paddingTop: '15px'}}
+                      className = {"imageIndrustries"}
+                    />
                   </Box>
                   <Box className={"h3Box"}>
-                    <h3>Gaming</h3>
+                    <h3>Gaming and Esports</h3>
                   </Box>
                   <p>
                     Blockchain enables a better way to transfer, valorize, and
