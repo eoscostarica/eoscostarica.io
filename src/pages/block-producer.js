@@ -264,6 +264,7 @@ const BlockProducer = () => {
                   <h3>Code of conduct</h3>
                 </Box>
                 <p>EOS Costa Rica pledges to:</p>
+                <br/>
                 <p className={"body1"}>
                   • Provide the highest standard bare-metal infrastructure available
                   to the EOS ecosystem.
@@ -373,7 +374,7 @@ const BlockProducer = () => {
                 <p>
                   EOS Rate is an open- source app that allows EOS token holders
                   to access a rating system and voting portal for block
-                  producers and proxies in the EOS blockchain.<a href="https://latamlink.io/" target="_blank"> Read more.</a>
+                  producers and proxies in the EOS blockchain.<a href="https://eosrate.io/" target="_blank"> Read more.</a>
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
@@ -388,26 +389,28 @@ const BlockProducer = () => {
                 <p>
                   The EOSIO Dashboard is an open-source project that allows
                   users to visualize the rewards distribution along the EOS
-                  network to seek accountability and transparency.<a href="https://smartgate.tech/" target="_blank"> Read more</a>
+                  network to seek accountability and transparency.<a href="https://mainnet.eosio.cr/" target="_blank"> Read more</a>
                 </p>
               </Grid>
               <Grid item xs={12} md={12} style={{height:'10px'}} className={"topSpacingBox"}>
-                <p>
+                <p className={"centerText"}>
                   Follow us on our profiles. We’re continually looking for
-                  open-source collaborations! {" "}
-                  <a href="https://twitter.com/EOSCostaRica" target="_blank">
+                  open-source collaborations!
+                </p>
+                <p className={"centerText"}>
+                  <a style={{fontWeight: 'bold'}} href="https://twitter.com/EOSCostaRica" target="_blank">
                     Twitter
-                  </a>{" - "}
-                  <a href="https://t.me/eoscr" target="_blank">
+                  </a>{" · "}
+                  <a style={{fontWeight: 'bold'}} href="https://t.me/eoscr" target="_blank">
                     Telegram
-                  </a>{" - "}
-                  <a href="https://medium.com/@eoscostarica" target="_blank">
+                  </a>{" · "}
+                  <a style={{fontWeight: 'bold'}} href="https://medium.com/@eoscostarica" target="_blank">
                     Medium
-                  </a>{" - "}
-                  <a href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
+                  </a>{" · "}
+                  <a style={{fontWeight: 'bold'}} href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
                     YouTube
-                  </a>{" - "}
-                  <a href="https://www.instagram.com/eoscostarica/" target="_blank">
+                  </a>{" · "}
+                  <a style={{fontWeight: 'bold'}} href="https://www.instagram.com/eoscostarica/" target="_blank">
                     Instagram
                   </a>
                 </p>
@@ -420,8 +423,8 @@ const BlockProducer = () => {
   }
 
   const WhyCostaRica = () => {
-    return ( 
-      <Box className={clsx("containerGray","reduceMarginTop","reduceMarginBottom")}> 
+    return (
+      <Box className={clsx("containerGray","reduceMediumMarginTop","reduceMarginBottom")}>
         <Box className={"sectionPadding"}>
           <Box className={"titleBox"}>
             <h2>
