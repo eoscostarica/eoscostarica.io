@@ -425,6 +425,50 @@ input:checked + .slider:before {
   opacity: 1;
 }
 
+.navBarItemTab:focus-within .dropDownMenu{
+  visibility: visible;
+  display: block;
+}
+
+.navBarItemTab:focus-within .dropDownMenu::after{
+  top: 0;
+  right: auto;
+  height: 100%;
+  width: 150px;
+}
+
+.navBarItemTab:focus-within .dropDownMenuActive{
+  visibility: visible;
+  display: block;
+}
+
+.navBarItemTab:focus-within .dropDownMenuActive::after{
+  top: 0;
+  right: auto;
+  height: 100%;
+  width: 150px;
+}
+
+.navBarItemTab:focus-within .dropDownMenu .menuItemDrop{
+  transition-delay:  0.3s;
+  opacity: 1;
+}
+
+.navBarItemTab:focus-within .link:after{
+  left:  0;
+  width: 100%;
+}
+
+#boxMenuItems:focus-within .linkActive::after{
+  left:  0;
+  width: 0%;
+}
+
+#boxMenuItems:focus-within .navBarItemTab:focus-within .linkActive::after{
+  left:  0;
+  width: 100%;
+}
+
 .dropDownMenu{
   position: absolute;
   display: block;
@@ -695,14 +739,6 @@ input:checked + .slider:before {
   height: 1650px;
 }
 
-.bgParallaxSecondaryCompany{
-  width: 100vw;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  height: 1650px;
-}
-
 .imgParallax{
   z-index: 1;
   height: 100%;
@@ -959,7 +995,7 @@ input:checked + .slider:before {
   flex: 0 0 auto;
 }
 
-.imageIndrustriesLogistics{  
+.imageIndrustriesLogistics{
   width: 250px;
   height: 220px;
   flex: 0 0 auto;
