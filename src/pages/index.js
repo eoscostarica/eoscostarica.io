@@ -566,7 +566,7 @@ const Home = () => {
             <p>
               Get to know some of our latest projects deploying the EOSIO
               blockchain protocol.
-              <a href={useBaseUrl("/projects")}> Visit the full list here.</a>
+              <a href={useBaseUrl("/projects")} target="_blank"> Visit the full list here.</a>
             </p>
           </Box>
           <Box className={isDesktop? "doubleSpacingBox" : ""}>
