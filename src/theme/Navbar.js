@@ -118,7 +118,7 @@ const NavbarMenu = () => {
   }
 
   return (
-    <Box className={isBlog? clsx("navBar", "navBarScroll") : clsx("navBar", { ["navBarScroll"]: trigger})} >
+    <Box className={clsx("navBar", "navBarScroll")}>
       <Box className={"menuWrapper"}>
         {isMobile && 
           <>
