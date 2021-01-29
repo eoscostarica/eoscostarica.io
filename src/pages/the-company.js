@@ -472,7 +472,7 @@ const TheCompany = () => {
                   donors, blood banks, and local businesses, leveraged by a
                   token economy. Winner of the{" "}
                   <a
-                    href="https://eos.io/news/winner-of-coding-for-change- virtual-hackathon-lifebank/"
+                    href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
                     target="_blank"
                   >
                     “Coding for Change”
