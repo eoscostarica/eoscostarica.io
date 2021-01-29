@@ -2,7 +2,7 @@ import React from "react";
 
 const Blockchaininfrastructure = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="196.409" height="213.887" viewBox="0 0 96.409 213.887">
+    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 96.409 213.887">
         <g id="Group_166" data-name="Group 166" transform="translate(-429.83 -650.487)">
             <g id="Group_161" data-name="Group 161">
             <path id="Path_115" data-name="Path 115" d="M513.17,790.144l-5.19-1.78-5.17,1.77,5.18,1.77,9.95,3.4-40.59,13.86L436.76,795.3l9.95-3.4,5.18-1.77-5.17-1.77-5.19,1.78-11.7,3.99v54.01l47.52,16.23,47.52-16.23v-54.01Zm-37.57,70.09-42.27-14.44v-48.12L475.6,812.1Zm45.77-14.44-42.27,14.44V812.1l42.27-14.43Zm-42.27-63.75V778.5l-1.75-.6-1.75.6v3.54l1.75-.6Z"/>

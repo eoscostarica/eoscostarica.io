@@ -684,7 +684,15 @@ input:checked + .slider:before {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  height: 2000px;
+  height: 1750px;
+}
+
+.bgParallaxSecondaryCompany{
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 1650px;
 }
 
 .bgParallaxSecondaryCompany{
@@ -747,12 +755,14 @@ input:checked + .slider:before {
 .logoMobileBox{
   width: 100%;
   display: flex;
+  margin-bottom: 2em;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
 .logoMobile{
-  margin-bottom: 2em;
-  width: 90%;
+  width: 300px;
+  height: 110px;
 }
 
 .section{
@@ -769,8 +779,6 @@ input:checked + .slider:before {
   padding-bottom: 140px;
   width: 1100px;
 }
-
-
 
 .accordion{
   width: 100%;
@@ -794,11 +802,26 @@ input:checked + .slider:before {
   margin-bottom: 3rem;
 }
 
-.imgBoxLogos{
+.imgBoxServices{
   display: flex;
   justify-content: center;
+  height: 250px;
+}
+
+.imgBoxLogos{
+  display: flex;
+  align-items: center;
+  justify-content:center;
   height: 288px;
   margin-bottom: 3rem;
+}
+
+.oneGroupLogo{
+  transition: all .4s ease-in-out
+}
+
+.oneGroupLogo:hover{
+  transform: scale(1.2);
 }
 
 .spacingBox{
@@ -844,6 +867,42 @@ input:checked + .slider:before {
 .centerBox{
   display: flex;
   justify-content: center;
+}
+
+/*Team*/
+
+.avatarBox{
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  margin-bottom: 3rem;
+}
+
+.nameText{
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.positionText{
+  text-align: left;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.bioText{
+  text-align: left;
+}
+
+.socialMediaBox{
+  display: flex;
+  justify-content: start;
+  margin-top: 15px;
+}
+
+.socialMediaIcon{
+  cursor: pointer;
+  color: #5484b3;
+  margin-right: 15px;
 }
 
 /* Contact */
@@ -895,6 +954,18 @@ input:checked + .slider:before {
   margin: 1px;
 }
 
+.imageIndrustries{
+  width: 150px;
+  height: 220px;
+  flex: 0 0 auto;
+}
+
+.imageIndrustriesLogistics{  
+  width: 250px;
+  height: 220px;
+  flex: 0 0 auto;
+}
+
 .reduceMarginBottom
 {
   height: 1120px;
@@ -937,7 +1008,8 @@ input:checked + .slider:before {
 
 @media only screen and (max-width: 767px) {
   .footerLogo {
-    width: 80%;
+    width: 300px;
+    height: 110px;
   }
   
   .footerLogoBox{
@@ -1006,6 +1078,26 @@ input:checked + .slider:before {
     padding-right: 5vw;
   }
 
+  .nameText{
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .positionText{
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .bioText{
+    text-align: center;
+  }
+
+  .socialMediaBox{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
   h1{
     line-height: 30px;
     font-size: 30px;

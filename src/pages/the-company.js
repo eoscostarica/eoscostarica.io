@@ -186,34 +186,46 @@ const TheCompany = () => {
             <Grid container>
               <Grid item xs={12} md={3}>
                 <Box className={"imgBoxLogos"}>
-                  <img
-                    alt="LatamLink"
-                    src={useBaseUrl("img/Group47.svg")}
-                  />
+                  <a target="_blank" href="http://latamlink.io/">
+                    <img
+                      className={"oneGroupLogo"}
+                      alt="LatamLink"
+                      src={useBaseUrl("img/Group47.svg")}
+                    />
+                  </a>
                 </Box>
               </Grid>
               <Grid item xs={12} md={3}>
                 <Box className={"imgBoxLogos"}>
-                  <img
-                    alt="Edenia"
-                    src={useBaseUrl("img/Group17.svg")}
-                  />
+                  <a target="_blank" href="https://www.edenia.com/">
+                    <img
+                      className={"oneGroupLogo"}
+                      alt="Edenia"
+                      src={useBaseUrl("img/Group17.svg")}
+                    />
+                  </a>
                 </Box>
               </Grid>
               <Grid item xs={12} md={3}>
                 <Box className={"imgBoxLogos"}>
-                  <img
-                    alt="Eossurf"
-                    src={useBaseUrl("img/Group11.svg")}
-                  />
+                  <a target="_blank" href="https://eosurf.com/">
+                    <img
+                      className={"oneGroupLogo"}
+                      alt="Eossurf"
+                      src={useBaseUrl("img/Group11.svg")}
+                    />
+                  </a>
                 </Box>
               </Grid>
               <Grid item xs={12} md={3}>
                 <Box className={"imgBoxLogos"}>
-                  <img
-                    alt="Ticoblockchain"
-                    src={useBaseUrl("img/Group55.svg")}
-                  />
+                  <a target="_blank" href="https://ticoblockchain.cr/">
+                    <img
+                      className={"oneGroupLogo"}
+                      alt="Ticoblockchain"
+                      src={useBaseUrl("img/Group55.svg")}
+                    />
+                  </a>
                 </Box>
               </Grid>
             </Grid>
@@ -241,6 +253,7 @@ const TheCompany = () => {
                   encourages participation, self- accountability, 
                   and innovation. Get to know us!
                 </p>
+                <br/>
               </Grid>
               <Grid item xs={6} md={2}>
                 <Box className={"centerBox"}>
@@ -441,12 +454,9 @@ const TheCompany = () => {
                     LACChain
                   </a>{" "}
                   initiative, a program to accelerate the development of the
-                  blockchain ecosystem in the region.
+                  blockchain ecosystem in the region.<a href="https://latamlink.io/" target="_blank"> Read more.</a>
                 </p>
                 <p>
-                  <a href="https://latamlink.io/" target="_blank">
-                    Read more.
-                  </a>
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
@@ -470,9 +480,7 @@ const TheCompany = () => {
                   challenge by{" "}
                   <a href="https://block.one/" target="_blank">
                     block.one.
-                  </a>
-                </p>
-                <p>
+                  </a>{" "}
                   <a href=" https://lifebank.io/" target="_blank">
                     Read more.
                   </a>
@@ -489,12 +497,7 @@ const TheCompany = () => {
                   A blockchain-based platform that provides solutions for in-out
                   gate activity for the container industry and real-time
                   transmission of relevant data required for proper interchange
-                  in port logistics.
-                </p>
-                <p>
-                  <a href="https://smartgate.tech/" target="_blank">
-                    Read more
-                  </a>
+                  in port logistics.<a href="https://smartgate.tech/" target="_blank"> Read more</a>
                 </p>
               </Grid>
               <Grid item xs={12} md={12} style={{height:'10px'}} className={"topSpacingBox"}>
