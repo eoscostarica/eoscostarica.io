@@ -145,7 +145,7 @@ const ServicePage = () => {
                   </a>
                   , for its adaptability to any industry in both the private and
                   public sectors. Visit our{" "}
-                  <a href={useBaseUrl("/industries")}>industries page</a> to learn
+                  <a href={useBaseUrl("/industries")} target="_blank">industries page</a> to learn
                   more.
                 </p>
               </Box>

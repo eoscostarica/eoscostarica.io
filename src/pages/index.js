@@ -206,7 +206,7 @@ const Home = () => {
                       middle of the American continent offers convenient network
                       interconnectivity. We also configure, host, and maintain
                       blockchain nodes available for private and public networks
-                      with 24/7 monitoring and uptime. <a href={useBaseUrl("/about")}> Read more about this</a>.
+                      with 24/7 monitoring and uptime. <a href={useBaseUrl("/the-company")} target="_blank"> Read more about this</a>.
                     </p>
                   </AccordionDetails>
                 </Accordion>
