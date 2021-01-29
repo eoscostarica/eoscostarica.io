@@ -85,33 +85,26 @@ const ServicePage = () => {
         }
         {isMobile && 
           <Box className={"sectionHeroMobile"}>
-            <Box className={"logoMobileBox"}>
-              <img
-                  className={"logoMobile"}
-                  src={useBaseUrl("img/eoscr-logo.png")}
-                  alt="EOS CR LOGO"
-                />
+            <Box className={"titleBox"}>
+              <h1 >Custom-made</h1>
+              <h1 >Blockchain Solutions</h1>
             </Box>
-          <Box className={"titleBox"}>
-            <h1 >Custom-made</h1>
-            <h1 >Blockchain Solutions</h1>
+            <p>
+              Leverage blockchain technology. Our team will help you embrace
+              the power of this innovative technology.
+            </p>
+            <br/>
+            <p>
+              We have years of experience integrating enterprise blockchain solutions and
+              developing infrastructure for business environments.
+            </p>
+            <Box className={"buttonBoxMobile"}>
+              <button className={"buttonPrimary"} onClick={() => history.push("/about/")}>
+                Get to Know Us
+              </button>
+            </Box>
           </Box>
-          <p>
-            Leverage blockchain technology. Our team will help you embrace
-            the power of this innovative technology.
-          </p>
-          <br/>
-          <p>
-            We have years of experience integrating enterprise blockchain solutions and
-            developing infrastructure for business environments.
-          </p>
-          <Box className={"buttonBoxMobile"}>
-            <button className={"buttonPrimary"} onClick={() => history.push("/about/")}>
-              Get to Know Us
-            </button>
-          </Box>
-        </Box>
-      }
+        }
       </Box>
     )
   }
@@ -395,7 +388,7 @@ const ServicePage = () => {
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-            <Box>
+              <Box  className={"accordionBox"}>
                 <Accordion
                   square
                   expanded={expandedMap === 'panel_interconnectivity'}
@@ -404,10 +397,10 @@ const ServicePage = () => {
                   className={"accordion"}
                 >
                   <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h4 style={{margin:'2px'}}>Network interconnectivity</h4>
+                    <h4 style={{margin:'2px',padding: 0}}>Network interconnectivity</h4>
                   </AccordionSummary>
                   <AccordionDetails style={{padding:1}}>
-                    <p>
+                    <p style={{padding: 0}}>
                       Costa Rica has shores in both the Pacific and Atlantic
                       oceans and connects three submarine fiber optic cables –
                       ARCOS-1, MAYA-1, and Pan American Crossing (PAC) – that
@@ -430,10 +423,10 @@ const ServicePage = () => {
                   className={"accordion"}
                 >
                   <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h4 style={{margin:'2px'}}>Stable political framework</h4>
+                    <h4 style={{margin:'2px',padding: 0}}>Stable political framework</h4>
                   </AccordionSummary>
                   <AccordionDetails style={{padding:1}}>
-                    <p >
+                    <p style={{padding: 0}}>
                       Costa Rica is a country that values Human Rights, Peace,
                       and Democracy. The country is one of the most stable and
                       longest-lasting Democracies in America. Costa Rica
@@ -452,10 +445,10 @@ const ServicePage = () => {
                   className={"accordion"}
                 >
                   <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h4 style={{margin:'2px'}}>Environmental awareness</h4>
+                    <h4 style={{margin:'2px',padding: 0}}>Environmental awareness</h4>
                   </AccordionSummary>
                   <AccordionDetails style={{padding:1}}>
-                    <p>
+                    <p style={{padding: 0}}>
                       Despite being a small country, Costa Rica houses more
                       than 4% of the world’s biodiversity. The country’s
                       leaders have been promoting ecology and sustainable
@@ -488,19 +481,19 @@ const ServicePage = () => {
           <Box className={"spacingBox"}>
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
-                <Box>
+                <Box className={"accordionBox"}>
                   <Accordion
                     square
                     expanded={expandedEducation=== 'panel_Workshops'}
                     onChange={handleChangeEducation('panel_Workshops')}
-                    style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
+                    style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
                     className={"accordion"}
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                      <h4 style={{margin:'2px'}}>Executive Workshops</h4>
+                      <h4 style={{margin:'2px', padding: 0}}>Executive Workshops</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
-                      <p >
+                      <p style={{padding: 0}}>
                       We know that innovative technologies, such as
                       blockchain, may have a steep learning curve. So, we
                       offer workshops on blockchain and EOSIO technology to
@@ -514,14 +507,14 @@ const ServicePage = () => {
                     square
                     expanded={expandedEducation === 'panel_Developers'}
                     onChange={handleChangeEducation('panel_Developers')}
-                    style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
+                    style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
                     className={"accordion"}
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                      <h4 style={{margin:'2px'}}>Training for Developers</h4>
+                      <h4 style={{margin:'2px',padding: 0}}>Training for Developers</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
-                      <p >
+                      <p style={{padding: 0}}>
                       We also provide training and education resources for new
                       talents that wish to kickstart their career in
                       blockchain and in the EOSIO protocol. We have assembled
@@ -540,14 +533,14 @@ const ServicePage = () => {
                     square
                     expanded={expandedEducation === 'panel_Building'}
                     onChange={handleChangeEducation('panel_Building')}
-                    style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
+                    style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
                     className={"accordion"}
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                      <h4 style={{margin:'2px'}}>Community Building</h4>
+                      <h4 style={{margin:'2px',padding: 0}}>Community Building</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
-                      <p>
+                      <p style={{padding: 0}}>
                       We help promote the blockchain and EOSIO ecosystems by
                       hosting and attending community activities. We also
                       speak about blockchain and participate in events related

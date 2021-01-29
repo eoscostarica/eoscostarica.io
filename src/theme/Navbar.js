@@ -118,11 +118,11 @@ const NavbarMenu = () => {
   }
 
   return (
-    <Box className={isBlog? clsx("navBar", "navBarScroll") : clsx("navBar", { ["navBarScroll"]: trigger})} >
+    <Box className={isBlog? clsx("navBar", "navBarScroll") : clsx("navBar", { ["navBarScroll"]: (trigger || isMobile) })} >
       <Box className={"menuWrapper"}>
         {isMobile && 
           <>
-            <Box className={trigger? "imgLogoBoxMobile": "hideImgLogoBoxMobile" }>
+            <Box className={"imgLogoBoxMobile"}>
               <img
                 className={"imgLogoScroll"}
                 src={useBaseUrl("img/eoscr-logo.png")}

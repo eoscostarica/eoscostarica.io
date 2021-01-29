@@ -274,7 +274,7 @@ a{
 .imgLogoBoxMobile{
   visibility: visible;
   position: absolute;
-  left: 15px;
+  left: 25px;
   top: 18px;
   width: 330px;
 }
@@ -693,7 +693,7 @@ input:checked + .slider:before {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #f1f1f1;
+  background-color: #F8F8F8;
 }
 
 .containerBlack{
@@ -762,9 +762,8 @@ input:checked + .slider:before {
 }
 
 .buttonBoxMobile{
-  width: 100%;
-  position: absolute;
-  bottom: -30px;
+  margin-top: 50px;
+  width: 100%; 
   display: flex;
   justify-content: center;
 }
@@ -777,10 +776,9 @@ input:checked + .slider:before {
 
 .sectionHeroMobile{
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 80px;
+  padding-top: 120px;
+  padding-bottom: 0px;
   width: 100%;
-  background-color: #f1f1f1;
 }
 
 .sectionContact{
@@ -803,7 +801,7 @@ input:checked + .slider:before {
 
 .section{
   padding-bottom: 140px;
-  width: 100%;
+  width: 1100px;
 }
 
 .sectionNoPadding{
@@ -849,7 +847,7 @@ input:checked + .slider:before {
   align-items: center;
   justify-content:center;
   height: 288px;
-  margin-bottom: 3rem;
+  
 }
 
 .oneGroupLogo{
@@ -903,6 +901,7 @@ input:checked + .slider:before {
 .centerBox{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /*Team*/
@@ -1090,11 +1089,19 @@ input:checked + .slider:before {
   }
 
   .accordionBox{
-    width: 95%;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .imgBoxLogos{
-    height: 120px;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .oneGroupLogo{
+    transform: scale(1.1);
   }
 
   .inquiereBox{
@@ -1133,48 +1140,58 @@ input:checked + .slider:before {
     justify-content: center;
     margin-top: 15px;
   }
+
+  .sizeImageTheCompany{
+    width: 190px;
+  }
   
   h1{
     line-height: 30px;
     font-size: 30px;
-    text-align: center;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    text-align: left;
+    margin-bottom: 4px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   h2{
-    line-height: 20px;
+    line-height: 25px;
     font-size: 25px;
-    text-align: center;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    text-align: left;
+    margin-bottom: 6px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   h3{
     line-height: 20px;
     font-size: 20px;
-    text-align: center;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    text-align: left;
+    margin-bottom: 4px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   h4{
     line-height: 25px;
     font-size: 18px;
-    text-align: center;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    text-align: left;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   p{
-    padding-left: 5vw;
-    padding-right: 5vw;
+    line-height: 18px;
     font-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   /*blog*/
   .blog-wrapper{
     margin-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .blog-wrapper a {
@@ -1206,16 +1223,16 @@ input:checked + .slider:before {
   }
 
   .blog-wrapper p{
-    font-family: 'Gotham',Lato, sans-serif;
+    font-family: Lato, sans-serif;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    font-size: 15px;
     letter-spacing: -0.05px;
-    line-height: 25px;
     text-align: justify;
     margin-bottom: 15px;
     padding: 0;
+    line-height: 18px;
+    font-size: 15px;
   }
 
   .titleDevs1{
@@ -1290,5 +1307,9 @@ input:checked + .slider:before {
 
   .specialButton{
     width: auto;
+  }
+
+  .centerTextOnMobile{
+    text-align: center;
   }
 }
