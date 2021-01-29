@@ -469,7 +469,7 @@ const Industries = () => {
 
   const AdditionalResources = () => {
     return (
-      <Box className={"containerSec"}>
+      <Box className={clsx("containerSec","reduceDobleMarginTop")}>
         <Box className={"sectionPadding"}>
           <Box className={"titleBox"}>
             <h2>Additional Resources</h2>
@@ -484,34 +484,33 @@ const Industries = () => {
           </p>
           <br/>
           <Grid className={"topSpacingBoxIcons"} style={{justifyContent:'space-evenly'}} container>
-            <Grid onClick={() => history.push("/block-producer/")} className={"gridButton"} item xs={12} md={4}>
+            <Grid onClick={() => window.open("/blog/")} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/blog.svg")}/>
               <h3 className={"titleBlog"}>Blog</h3>
             </Grid>
-            <Grid onClick = {() => location.href='https://guias.eoscostarica.io/'} className={"gridButton"} item xs={12} md={4}>
+            <Grid onClick = {() => window.open('https://guias.eoscostarica.io/')} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/press.svg")}/>
               <h3 style={{marginTop:'30px', marginLeft:'20px'}}>Press</h3>
             </Grid>
           </Grid>
           <br/>
           <Grid className={"topSpacingBoxIcons"} style={{justifyContent:'space-evenly'}} container>
-            <Grid onClick = {() => location.href='https://guide.eoscostarica.io/'} className={"gridButton"} item xs={12} md={4}>
+            <Grid onClick = {() => window.open('https://guide.eoscostarica.io/')} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/decs.svg")}/>
               <h3 className={"titleDevs1"}>Devs</h3>
               <h3 className={"titleDevs2"}>Portal</h3>
             </Grid>
-            <Grid onClick={() => location.href='https://github.com/eoscostarica'} className={"gridButton"} item xs={12} md={4}>
+            <Grid onClick={() => window.open('https://github.com/eoscostarica')} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/github-ours.svg")}/>
               <h3 className={"titleGit1"}>Our</h3>
               <h3 className={"titleGit2"}>Github</h3>
             </Grid>
           </Grid>
-          <br/>
         </Box>
       </Box>
     )
   }
-
+  
   const ContactUs = () => {
     return (
       <Box className={"containerGray"}>

@@ -28,7 +28,7 @@ const BlockProducer = () => {
             EOSIO blockchain ecosystem worldwide.
           </p>
           <Box className={"buttonBox"}>
-            <button className={"buttonPrimary"} onClick={() => location.href='https://t.me/eoscr'} >Connect with us</button>
+            <button className={"buttonPrimary"} onClick={() => window.open('https://t.me/eoscr')} >Connect with us</button>
           </Box>
         </Box>
         }
@@ -583,23 +583,23 @@ const BlockProducer = () => {
           </p>
           <br/>
           <Grid className={"topSpacingBoxIcons"} style={{justifyContent:'space-evenly'}} container>
-            <Grid onClick={() => history.push("/block-producer/")} className={"gridButton"} item xs={12} md={4}>
+            <Grid onClick={() => window.open("/blog/")} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/blog.svg")}/>
               <h3 className={"titleBlog"}>Blog</h3>
             </Grid>
-            <Grid onClick = {() => location.href='https://guias.eoscostarica.io/'} className={"gridButton"} item xs={12} md={4}>
+            <Grid onClick = {() => window.open('https://guias.eoscostarica.io/')} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/press.svg")}/>
               <h3 style={{marginTop:'30px', marginLeft:'20px'}}>Press</h3>
             </Grid>
           </Grid>
           <br/>
           <Grid className={"topSpacingBoxIcons"} style={{justifyContent:'space-evenly'}} container>
-            <Grid onClick = {() => location.href='https://guide.eoscostarica.io/'} className={"gridButton"} item xs={12} md={4}>
+            <Grid onClick = {() => window.open('https://guide.eoscostarica.io/')} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/decs.svg")}/>
               <h3 className={"titleDevs1"}>Devs</h3>
               <h3 className={"titleDevs2"}>Portal</h3>
             </Grid>
-            <Grid onClick={() => location.href='https://github.com/eoscostarica'} className={"gridButton"} item xs={12} md={4}>
+            <Grid onClick={() => window.open('https://github.com/eoscostarica')} className={"gridButton"} item xs={12} md={4}>
               <img srcSet={useBaseUrl("img/github-ours.svg")}/>
               <h3 className={"titleGit1"}>Our</h3>
               <h3 className={"titleGit2"}>Github</h3>
