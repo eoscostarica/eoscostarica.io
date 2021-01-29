@@ -34,39 +34,32 @@ const BlockProducer = () => {
         }
         {isMobile && 
           <Box className={"sectionHeroMobile"}>
-            <Box className={"logoMobileBox"}>
-              <img
-                  className={"logoMobile"}
-                  src={useBaseUrl("img/eoscr-logo.png")}
-                  alt="EOS CR LOGO"
-                />
+            <Box className={"titleBox"}>
+              <h1>EOS Block Producer</h1>
             </Box>
-          <Box className={"titleBox"}>
-            <h1>EOS Block Producer</h1>
+            <p>
+              We are one of the first companies in Latin America to deploy the EOSIO
+              protocol.
+            </p>
+            <br/>
+            <p>
+              Innovation is in our DNA. We seek new opportunities to leverage this technology for 
+              enterprise use to solve real-world problems. Learn more about how we help to develop the
+              EOSIO blockchain ecosystem worldwide.  
+            </p>
+            <Box className={"buttonBoxMobile"}> 
+              <button className={"buttonPrimary"} onClick={() => history.push(" https://t.me/eoscr")} >Learn More</button>
+            </Box>
           </Box>
-          <p>
-            We are one of the first companies in Latin America to deploy the EOSIO
-            protocol.
-          </p>
-          <br/>
-          <p>
-            Innovation is in our DNA. We seek new opportunities to leverage this technology for 
-            enterprise use to solve real-world problems. Learn more about how we help to develop the
-            EOSIO blockchain ecosystem worldwide.  
-          </p>
-          <Box className={"buttonBoxMobile"}> 
-            <button className={"buttonPrimary"} onClick={() => history.push(" https://t.me/eoscr")} >Learn More</button>
-          </Box>
-        </Box>
-      }
+        }
       </Box>
     )
   }
 
   const OurStory = () => {
     return (
-      <Box className={clsx("reduceMarginTop","containerSec")}>
-        <Box className={"sectionPadding"}>
+      <Box className={"containerSec"}>
+        <Box  className={clsx("section",{["sectionPadding"] : isMobile})}>
           <Box className={"spacingBox"}>
             <Grid container spacing={5}>
               <Grid item md={12}>
@@ -101,13 +94,13 @@ const BlockProducer = () => {
 
   const OurValues = () => {
     return (
-      <Box className={clsx("reduceDobleMarginTop","containerSec")}>
-        <Box className={"sectionPadding"}>
+      <Box className={"containerSec"}>
+        <Box className={"section"}>
           <Box className={"titleBox"}>
             <h2>Our Values</h2>
           </Box>
-          <Grid style={{justifyContent:'center'}} container spacing={10}>
-            <Grid item xs={12} md={4}>
+          <Grid justify="center" container spacing={8}>
+            <Grid item xs={12} md={5}>
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
@@ -117,31 +110,29 @@ const BlockProducer = () => {
               <Box className={clsx("h3Box","centerText")}>
                 <h3>Ongoing education</h3>
               </Box>
-              <p className={"centerText"}>
+              <p>
                 We believe that continuous training and building human talent is
                 crucial to developing a robust ecosystem.
               </p>
               <br/>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={5}>
               <Box className={"centerBox"}>
                 <img
-                  style={{marginBottom:'30px'}}
+                  style={{marginBottom:'20px'}}
                   src={useBaseUrl("img/icon-loyalty.svg")}
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
                 <h3>Loyalty</h3>
               </Box>
-              <p className={"centerText"}>
+              <p>
                 We recognize and acknowledge everyone’s unique talents and seek
                 to build loyalty by empowering the EOSIO community.
               </p>
               <br/>
             </Grid>
-          </Grid>
-          <Grid style={{justifyContent:'center'}} container spacing={10}>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={5}>
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
@@ -151,14 +142,14 @@ const BlockProducer = () => {
               <Box className={clsx("h3Box","centerText")}>
                 <h3>Resilience</h3>
               </Box>
-              <p className={"centerText"}>
+              <p>
                 Our team evolves alongside technology. We strive to be as nimble
                 and efficient as possible, which lets us quickly adapt and
                 implement the newest innovations.
               </p>
               <br/>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={5}>
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
@@ -168,16 +159,14 @@ const BlockProducer = () => {
               <Box className={clsx("h3Box","centerText")}>
                 <h3>Liberty</h3>
               </Box>
-              <p className={"centerText"}>
+              <p>
                 We defend individual sovereignty among the EOS community,
                 replicating Costa Rica’s premise of freedom and peace as the
                 lengthiest democracy in Latin America.
               </p>
               <br/>
             </Grid>
-          </Grid>
-          <Grid style={{justifyContent:'center'}} container spacing={10}>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={5}>
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
@@ -187,14 +176,14 @@ const BlockProducer = () => {
               <Box className={clsx("h3Box","centerText")}>
                 <h3>Tolerance</h3>
               </Box>
-              <p className={"centerText"}>
+              <p>
                 Our team advocates for the rights of education,
                 entrepreneurship, and opportunities for all the members in our
                 community as a way to develop the ecosystem.
               </p>
               <br/>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={5}>
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
@@ -204,16 +193,14 @@ const BlockProducer = () => {
               <Box className={clsx("h3Box","centerText")}>
                 <h3>Prudence</h3>
               </Box>
-              <p className={"centerText"}>
+              <p>
                 We commit to safeguard our community’s future and take
                 calculated risks that will bring us further to our long term
                 goals.
               </p>
               <br/>
             </Grid>
-          </Grid>
-          <Grid style={{justifyContent:'center'}} container spacing={10}>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={5}>
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
@@ -223,13 +210,13 @@ const BlockProducer = () => {
               <Box className={clsx("h3Box","centerText")}>
                 <h3>Accountability</h3>
               </Box>
-              <p className={"centerText"}>
+              <p>
                 We firmly believe and encourage taking full accountability from
                 our team members and stakeholders. We value transparency and
                 responsibility.
               </p>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={5}>
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
@@ -239,7 +226,7 @@ const BlockProducer = () => {
               <Box className={clsx("h3Box","centerText")}>
                 <h3>Equality</h3>
               </Box>
-              <p className={"centerText"}>
+              <p>
                 We endorse and defend a governance model guided by merit
                 principles for our community’s benefit.
               </p>
@@ -252,64 +239,63 @@ const BlockProducer = () => {
 
   const BlockProducer = () => {
     return (
-      <Box className={clsx("reduceMarginTop","containerSec")}>
-        <Box className={"sectionPadding"}>
+      <Box className={"containerSec"}>
+        <Box className={isDesktop? "section" : "sectionNoPadding"}>
           <Box className={"spacingBox"}>
-            <Grid container spacing={5}>
-              <Box className={"titleBox"}>
+           <Box className={"titleBox"}>
                 <h2>Block Producer Information</h2>
+            </Box>
+            <Box className={"spacingBox"}>
+              <Box className={"h3Box"}>
+                <h3>Code of conduct</h3>
               </Box>
-              <Grid item md={12}>
-                <Box className={"h3Box"}>
-                  <h3>Code of conduct</h3>
-                </Box>
-                <p>EOS Costa Rica pledges to:</p>
-                <br/>
-                <p className={"body1"}>
-                  • Provide the highest standard bare-metal infrastructure available
-                  to the EOS ecosystem.
-                </p>
-                <p className={"body1"}>
-                  • Become an economically sustainable and highly competitive EOS
-                  Block Producer.
-                </p>
-                <p className={"body1"}>
-                  • Allocate block rewards to EOS educational and development
-                  initiatives.
-                </p>
-                <p className={"body1"}>
-                  • Sponsor dApps and projects for community-led
-                  developments.
-                </p>
-                <p className={"body1"}>
-                  • Be totally transparent and open when allocating block rewards.
-                </p>
-                <p className={"body1"}>
-                  • Actively participate in the blockchain governance with an open and
-                  positive attitude.
-                </p>
-                <p className={"body1"}>
-                  • Respect and defend the constitution, fair elections, community
-                  vigilance, and arbitration mechanisms.
-                </p>
-              </Grid>
-              <Grid item md={12}>
-                <Box className={"h3Box"}>
-                  <h3>Ownership disclosure</h3>
-                </Box>
-                <p className={"body1"}>
-                  According to the Block Producer Agreement and values that have
-                  represented us since the beginning of our campaign, EOS Costa Rica
-                  hereby commits to disclose all beneficial owners of our organization
-                  and encourages other BP candidates to abide by the Agreement.
-                  Whereas EOS Costa Rica is a community-led initiative involving
-                  various stakeholders, including but not limited to: developers,
-                  security engineers, community managers, system administrators, and
-                  financial staff, the Block Producer Keys are ultimately owned and
-                  controlled by Sistemas Edenia Internacional, S.A.
-                </p>
-              </Grid>
-            </Grid>
+              <p>EOS Costa Rica pledges to:</p>
+              <br/>
+              <p className={"body1"}>
+                • Provide the highest standard bare-metal infrastructure available
+                to the EOS ecosystem.
+              </p>
+              <p className={"body1"}>
+                • Become an economically sustainable and highly competitive EOS
+                Block Producer.
+              </p>
+              <p className={"body1"}>
+                • Allocate block rewards to EOS educational and development
+                initiatives.
+              </p>
+              <p className={"body1"}>
+                • Sponsor dApps and projects for community-led
+                developments.
+              </p>
+              <p className={"body1"}>
+                • Be totally transparent and open when allocating block rewards.
+              </p>
+              <p className={"body1"}>
+                • Actively participate in the blockchain governance with an open and
+                positive attitude.
+              </p>
+              <p className={"body1"}>
+                • Respect and defend the constitution, fair elections, community
+                vigilance, and arbitration mechanisms.
+              </p>
+            </Box>
+            <Box>
+              <Box className={"h3Box"}>
+                <h3>Ownership disclosure</h3>
+              </Box>
+              <p className={"body1"}>
+                According to the Block Producer Agreement and values that have
+                represented us since the beginning of our campaign, EOS Costa Rica
+                hereby commits to disclose all beneficial owners of our organization
+                and encourages other BP candidates to abide by the Agreement.
+                Whereas EOS Costa Rica is a community-led initiative involving
+                various stakeholders, including but not limited to: developers,
+                security engineers, community managers, system administrators, and
+                financial staff, the Block Producer Keys are ultimately owned and
+                controlled by Sistemas Edenia Internacional, S.A.
+              </p>
+            </Box>
+
           </Box>
         </Box>
       </Box> 
@@ -318,10 +304,8 @@ const BlockProducer = () => {
 
   const OpenSourceProjects = () => {
     return ( 
-      <Box className={clsx("reduceMarginTop","containerSec")}> 
-        <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
-          <br/>
-          <br/>
+      <Box className={"containerSec"}> 
+        <Box className={"section"}>
           <Box className={"titleBox"}>
             <h2>
               Open-source Projects
@@ -348,7 +332,7 @@ const BlockProducer = () => {
                   donors, blood banks, and local businesses, leveraged by a
                   token economy. Winner of the{" "}
                   <a
-                    href="https://eos.io/news/winner-of-coding-for-change- virtual-hackathon-lifebank/"
+                    href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
                     target="_blank"
                   >
                     “Coding for Change”
@@ -423,14 +407,15 @@ const BlockProducer = () => {
   }
 
   const WhyCostaRica = () => {
-    return (
-      <Box className={clsx("containerGray","reduceMediumMarginTop","reduceMarginBottom")}>
+    return ( 
+      <Box className={clsx("containerGray")}> 
         <Box className={"sectionPadding"}>
           <Box className={"titleBox"}>
             <h2>
               Why Costa Rica?
             </h2>
           </Box>
+          <Box className={"spacingBox"}>
             <p>
               We are the first EOS block producer candidate in Central America
               and one of the few in Latin America. We believe that Costa Rica’s
@@ -441,9 +426,10 @@ const BlockProducer = () => {
               structure, and defined jurisdiction makes it an opportunistic
               network available for the censorship-resistant EOS.
             </p>
-          <Box className={"doubleSpacingBox"}>
-            <Grid style={{justifyContent:'center'}} container spacing={10}>
-              <Grid item xs={12} md={4}>
+          </Box>
+          <Box className={""}>
+            <Grid justify="center" container spacing={5}>
+              <Grid item xs={12} md={5}>
                 <Box className={"h3Box"}>
                   <h3>Liberty and Peace</h3>
                 </Box>
@@ -454,7 +440,7 @@ const BlockProducer = () => {
                   innovation.
                 </p>
               </Grid>
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} md={5}>
                 <Box className={"h3Box"}>
                   <h3>Human Rights</h3>
                 </Box>
@@ -464,9 +450,7 @@ const BlockProducer = () => {
                   in San José.
                 </p>
               </Grid>
-            </Grid>
-            <Grid style={{justifyContent:'center'}} container spacing={10}>
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} md={5}>
                 <Box className={"h3Box"}>
                   <h3>Ecology</h3>
                 </Box>
@@ -476,7 +460,7 @@ const BlockProducer = () => {
                   territory comprises of protected areas and National Parks.
                 </p>
               </Grid>
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} md={5}>
                 <Box className={"h3Box"}>
                   <h3>Strategic location</h3>
                 </Box>
@@ -487,8 +471,8 @@ const BlockProducer = () => {
                   infrastructure.
                 </p>
               </Grid>
-              <Grid item xs={12} md={8}>
-                <Box className={clsx("h3Box","reduceMediumMarginTop")}>
+              <Grid item xs={12} md={10}>
+                <Box className={"h3Box"}>
                   <h3>Equality</h3>
                 </Box>
                 <p>
@@ -505,7 +489,7 @@ const BlockProducer = () => {
 
   const VoteForUS = () => {
     return (
-      <Box className={clsx("reduceMarginTop","containerSec")}>
+      <Box className={"containerSec"}>
         <Box className={"sectionPadding"}>
           <Box className={"spacingBox"}>
             <Box className={"titleBox"}>
@@ -569,7 +553,7 @@ const BlockProducer = () => {
   const AdditionalResources = () => {
     return (
       <Box className={clsx("containerSec","reduceDobleMarginTop")}>
-        <Box className={"sectionPadding"}>
+        <Box className={isDesktop ? "sectionPadding" : "section"}>
           <Box className={"titleBox"}>
             <h2>Additional Resources</h2>
           </Box>
@@ -617,9 +601,9 @@ const BlockProducer = () => {
           <Grid container spacing={5}>
             <Grid item xs={12} md={8}>
                 <Box>
-                  <h2>Start working with us</h2>
-                  <h2>and implement</h2>
-                  <h2>blockchain technology.</h2>
+                  <h2 className={"centerTextOnMobile"}>Start working with us</h2>
+                  <h2 className={"centerTextOnMobile"}>and implement</h2>
+                  <h2 className={"centerTextOnMobile"}>blockchain technology.</h2>
                 </Box>
             </Grid>
             <Grid item xs={12} md={4}>

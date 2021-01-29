@@ -198,18 +198,11 @@ const Team = () => {
                 </Box>
             }
             {isMobile && 
-              <Box className={"sectionHeroMobile"}>
-                <Box className={"logoMobileBox"}>
-                  <img
-                      className={"logoMobile"}
-                      src={useBaseUrl("img/eoscr-logo.png")}
-                      alt="EOS CR LOGO"
-                    />
+                <Box className={"sectionHeroMobile"} style={{paddingBottom: 0}}>
+                    <Box className={"titleBox"}>
+                        <h1>Meet the Essence of Our Company</h1>
+                    </Box>
                 </Box>
-              <Box className={"titleBox"}>
-                <h1>Meet the Essence of Our Company</h1>
-              </Box>
-            </Box>
           }
           </Box>
         )
@@ -245,8 +238,8 @@ const Team = () => {
     const TeamSection = () => {
         return(
             <Box className={"containerSec"}>
-                <Box className={clsx("sectionNo",{["sectionPadding"] : isMobile})}>
-                    <Box className={"doubleSpacingBox"}>
+                <Box className={clsx("sectionNoPadding")}>
+                    <Box className={isDesktop? "doubleSpacingBox" : ""}>
                         <Box className={"spacingBox"}>
                             <h2>Management Team</h2>
                         </Box>
