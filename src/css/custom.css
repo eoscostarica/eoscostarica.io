@@ -741,7 +741,7 @@ input:checked + .slider:before {
 .sectionHeroMobile{
   position: relative;
   padding-top: 120px;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
   width: 100%;
 }
 
@@ -765,7 +765,7 @@ input:checked + .slider:before {
 
 .section{
   padding-bottom: 140px;
-  width: 100%;
+  width: 1100px;
 }
 
 .sectionNoPadding{
