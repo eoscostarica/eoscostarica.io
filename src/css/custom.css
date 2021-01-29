@@ -1154,6 +1154,8 @@ input:checked + .slider:before {
   /*blog*/
   .blog-wrapper{
     margin-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .blog-wrapper a {
@@ -1185,16 +1187,16 @@ input:checked + .slider:before {
   }
 
   .blog-wrapper p{
-    font-family: 'Gotham',Lato, sans-serif;
+    font-family: Lato, sans-serif;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    font-size: 15px;
     letter-spacing: -0.05px;
-    line-height: 25px;
     text-align: justify;
     margin-bottom: 15px;
     padding: 0;
+    line-height: 18px;
+    font-size: 15px;
   }
 
   .titleDevs1{
