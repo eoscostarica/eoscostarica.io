@@ -516,7 +516,6 @@ const Industries = () => {
     )
   }
 
-
   return (
     <>
       {isDesktop &&
