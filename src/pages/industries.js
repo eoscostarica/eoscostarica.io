@@ -65,29 +65,22 @@ const Industries = () => {
         }
         {isMobile && 
           <Box className={"sectionHeroMobile"}>
-            <Box className={"logoMobileBox"}>
-              <img
-                  className={"logoMobile"}
-                  src={useBaseUrl("img/eoscr-logo.png")}
-                  alt="EOS CR LOGO"
-                />
+            <Box className={"titleBox"}>
+              <h1 >Blockchain Solutions</h1>
+              <h1 >by Industry</h1>
             </Box>
-          <Box className={"titleBox"}>
-            <h1 >Blockchain Solutions</h1>
-            <h1 >by Industry</h1>
-          </Box>
-          <p >
-            Organizations and companies in many industries deploy blockchain
-            technology to solve significant problems and improve their
-            operations. These are some use cases of enterprise blockchain in
-            different sectors, such as financial, supply chain, gaming, and
-            healthcare.
-          </p>
-          <Box className={"buttonBoxMobile"}>
-            <button className={"buttonPrimary"} href={useBaseUrl("/contact-us")}>
-              Contact us
-            </button>
-          </Box>
+            <p >
+              Organizations and companies in many industries deploy blockchain
+              technology to solve significant problems and improve their
+              operations. These are some use cases of enterprise blockchain in
+              different sectors, such as financial, supply chain, gaming, and
+              healthcare.
+            </p>
+            <Box className={"buttonBoxMobile"}>
+              <button className={"buttonPrimary"} href={useBaseUrl("/contact-us")}>
+                Contact us
+              </button>
+            </Box>
         </Box>
       }
       </Box>
@@ -117,11 +110,7 @@ const Industries = () => {
                 Blockchain may also promote alternate financial applications,
                 such as new liquidity solutions and microloans management, and
                 improved payment structures.
-              </p>
-              <br/>
-              <p>
                 <a
-                  className={"readMoreMargin"}
                   href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
                   target="_blank"
                 >
@@ -145,18 +134,15 @@ const Industries = () => {
                 authorizations management, and automation can make a great ally.
                 Blockchain can integrate different technologies, such as IoT and
                 AI, to create comprehensive solutions and streamline processes
-                in the logistics and supply chain industry.
-              </p>
-              <br/>
-              <p>
+                in the logistics and supply chain industry.  
                 <a
-                  className={"readMoreMargin"}
                   href={"https://eoscostarica.io/blog/blockchain-logistics"} 
                   target="_blank"
                 >
                   Read More
                 </a>
               </p>
+              
             </Grid>
             <Grid style={{marginTop:'-40px'}} item xs={12} md={4}>
               <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
@@ -173,12 +159,8 @@ const Industries = () => {
                 population play video games. Blockchain enables a better way to
                 transfer, valorize, and collect digital in-game assets. Its
                 capabilities to increase security and offer a more efficient way
-                for transactions can level-up online gaming.
-              </p>
-              <br/>
-              <p>
+                for transactions can level-up online gaming. 
                 <a
-                  className={"readMoreMargin"} 
                   href={"https://eoscostarica.io/blog/gaming-blockchain"}
                   target="_blank"
                 >
@@ -198,186 +180,186 @@ const Industries = () => {
     return (
       <Box className={"containerGray"}>
         <Box className={"sectionPadding"}>
-          <br/>
-          <Grid className={"doubleSpacingBox"} container spacing={6}>
-            <Grid item xs={12} md={12}>
-              <h2>Blockchain in More Industries</h2>
+          <Box className={"spacingBox"}>
+            <h2>Blockchain in More Industries</h2>
+          </Box>
+          <Box className={"accordionBox"}>
+            <Grid container spacing={0}>
+              <Grid item xs={12} md={6}>
+                <Accordion 
+                  square
+                  expanded={expanded === 'panel_AssetManagementy'}
+                  style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
+                  onChange={handleChange('panel_AssetManagementy')}
+                  className={"accordion"} >
+                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h3 style={{margin:'2px', padding: 0}}>Asset Managementy</h3>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:1}}>
+                    <p style={{padding: 0}}>
+                      Blockchain technology enables an immutable and secure way to
+                      tokenize and manage tangible and intangible assets. Some
+                      opportunities include innovative liquidity options and reduced
+                      management costs.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion 
+                  square
+                  expanded={expanded === 'panel_Decentralized'}
+                  style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
+                  onChange={handleChange('panel_Decentralized')}
+                  className={"accordion"} >
+                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h3 style={{margin:'2px', padding: 0}}>Decentralized Finance</h3>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:1}}>
+                    <p style={{padding: 0}}>
+                      Also known as DeFi, decentralized finance leverages blockchain
+                      technology to explore new liquidity opportunities for
+                      citizens. Our team is part of evodex, an open-source DeFi app.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion 
+                  square
+                  expanded={expanded === 'panel_Identity'}
+                  style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
+                  onChange={handleChange('panel_Identity')}
+                  className={"accordion"} >
+                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h3 style={{margin:'2px', padding: 0}}>Digital Identity</h3>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:1}}>
+                    <p style={{padding: 0}}>
+                      Blockchain allows an immutable, transparent, and secure system
+                      to manage digital identities that can interconnect with IoT,
+                      biometrics, and enterprise management systems.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  square
+                  expanded={expanded === 'panel_Energy'}
+                  style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
+                  onChange={handleChange('panel_Energy')}
+                  className={"accordion"} >
+                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h3 style={{margin:'2px', padding: 0}}>Energy</h3>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:1}}>
+                    <p style={{padding: 0}}>
+                      Blockchain offers an efficient and transparent way to improve
+                      the operations, distribution, and data management for energy
+                      companies. Decentralized networks may help promote sustainable
+                      and private energy generation alternatives.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion square expanded={expanded === 'panel_Tech'} style={{backgroundColor:'#f8f8f8',boxShadow:'none'}} onChange={handleChange('panel_Tech')} className={"accordion"} >
+                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h3 style={{margin:'2px', padding: 0}}>Legal Tech</h3>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:1}}>
+                    <p style={{padding: 0}}>
+                      Smart contracts are computer codes that can execute
+                      automatically and autonomously according to the contract
+                      terms. These may transform legal processes by adding
+                      transparency, efficiency, and immutable registries.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Accordion
+                  square
+                  expanded={expanded === 'panel_Government'}
+                  style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
+                  onChange={handleChange('panel_Government')}
+                  className={clsx("accordion", "marginTopAccordion")} >
+                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h3 style={{margin:'2px', padding: 0}}>Government</h3>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:1}}>
+                    <p style={{padding: 0}}>
+                      Government institutions can deploy blockchain technology to
+                      leverage its transparency and immutability features to
+                      increase trust between the public sector and the citizens. It
+                      also allows a cost-efficient way to register data and
+                      accountability.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion square expanded={expanded === 'panel_Entertainment'} style={{backgroundColor:'#f8f8f8',boxShadow:'none'}} onChange={handleChange('panel_Entertainment')} className={"accordion"} >
+                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h3 style={{margin:'2px', padding: 0}}>Media and Entertainment</h3>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:1}}>
+                    <p style={{padding: 0}}>
+                      The blockchain’s capabilities to securely and immutably store
+                      registries can help reduce piracy and disputes. Also,
+                      blockchain can protect IP and improve traceability of payments
+                      and content distribution.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion
+                  square
+                  expanded={expanded === 'panel_Insurance'}
+                  style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
+                  onChange={handleChange('panel_Insurance')}
+                  className={"accordion"} >
+                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h3 style={{margin:'2px', padding: 0}}>Healthcare and Insurance</h3>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:1}}>
+                    <p style={{padding: 0}}>
+                      Blockchain technology offers improved efficiency,
+                      traceability, and security to store medical and other
+                      sensitive data from patients. Smart contracts help reduce
+                      costs for insurance claims processing.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion 
+                  square
+                  expanded={expanded === 'panel_RealEstate'}
+                  style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
+                  onChange={handleChange('panel_RealEstate')}
+                  className={"accordion"} >
+                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h3 style={{margin:'2px', padding: 0}}>Real Estate</h3>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:1}}>
+                    <p style={{padding: 0}}>
+                      Leverage real estate investments with blockchain technology by
+                      creating new business models. Blockchain helps integrate
+                      digital assets for liquidity and streamline investor relations
+                      and portfolio management.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion 
+                  square 
+                  expanded={expanded === 'panel_Sports'} 
+                  style={{backgroundColor:'#f8f8f8',boxShadow:'none'}} 
+                  onChange={handleChange('panel_Sports')} 
+                  className={"accordion"} >
+                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h3 style={{margin:'2px', padding: 0}}>Sports</h3>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:1}}>
+                    <p style={{padding: 0}}>
+                      Blockchain in sports offers a great way to increase fan
+                      engagement, promote active participation in decision-making,
+                      and monetize through new streams such as player content and
+                      collectibles.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+              </Grid>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Accordion 
-                square
-                expanded={expanded === 'panel_AssetManagementy'}
-                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
-                onChange={handleChange('panel_AssetManagementy')}
-                className={"accordion"} >
-                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'2px'}}>Asset Managementy</h3>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:1}}>
-                  <p>
-                    Blockchain technology enables an immutable and secure way to
-                    tokenize and manage tangible and intangible assets. Some
-                    opportunities include innovative liquidity options and reduced
-                    management costs.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion 
-                square
-                expanded={expanded === 'panel_Decentralized'}
-                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
-                onChange={handleChange('panel_Decentralized')}
-                className={"accordion"} >
-                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'2px'}}>Decentralized Finance</h3>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:1}}>
-                  <p>
-                    Also known as DeFi, decentralized finance leverages blockchain
-                    technology to explore new liquidity opportunities for
-                    citizens. Our team is part of evodex, an open-source DeFi app.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion 
-                square
-                expanded={expanded === 'panel_Identity'}
-                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
-                onChange={handleChange('panel_Identity')}
-                className={"accordion"} >
-                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'2px'}}>Digital Identity</h3>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:1}}>
-                  <p>
-                    Blockchain allows an immutable, transparent, and secure system
-                    to manage digital identities that can interconnect with IoT,
-                    biometrics, and enterprise management systems.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion
-                square
-                expanded={expanded === 'panel_Energy'}
-                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
-                onChange={handleChange('panel_Energy')}
-                className={"accordion"} >
-                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'2px'}}>Energy</h3>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:1}}>
-                  <p>
-                    Blockchain offers an efficient and transparent way to improve
-                    the operations, distribution, and data management for energy
-                    companies. Decentralized networks may help promote sustainable
-                    and private energy generation alternatives.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion square expanded={expanded === 'panel_Tech'} style={{backgroundColor:'#f1f1f1',boxShadow:'none'}} onChange={handleChange('panel_Tech')} className={"accordion"} >
-                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'2px'}}>Legal Tech</h3>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:1}}>
-                  <p>
-                    Smart contracts are computer codes that can execute
-                    automatically and autonomously according to the contract
-                    terms. These may transform legal processes by adding
-                    transparency, efficiency, and immutable registries.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-              <hr className={"displayLine"}/>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Accordion
-                square
-                expanded={expanded === 'panel_Government'}
-                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
-                onChange={handleChange('panel_Government')}
-                className={clsx("accordion", "marginTopAccordion")} >
-                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'2px'}}>Government</h3>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:1}}>
-                  <p>
-                    Government institutions can deploy blockchain technology to
-                    leverage its transparency and immutability features to
-                    increase trust between the public sector and the citizens. It
-                    also allows a cost-efficient way to register data and
-                    accountability.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion square expanded={expanded === 'panel_Entertainment'} style={{backgroundColor:'#f1f1f1',boxShadow:'none'}} onChange={handleChange('panel_Entertainment')} className={"accordion"} >
-                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'2px'}}>Media and Entertainment</h3>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:1}}>
-                  <p>
-                    The blockchain’s capabilities to securely and immutably store
-                    registries can help reduce piracy and disputes. Also,
-                    blockchain can protect IP and improve traceability of payments
-                    and content distribution.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion
-                square
-                expanded={expanded === 'panel_Insurance'}
-                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
-                onChange={handleChange('panel_Insurance')}
-                className={"accordion"} >
-                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                <h3 style={{margin:'2px'}}>Healthcare and Insurance</h3>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:1}}>
-                  <p>
-                    Blockchain technology offers improved efficiency,
-                    traceability, and security to store medical and other
-                    sensitive data from patients. Smart contracts help reduce
-                    costs for insurance claims processing.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion 
-                square
-                expanded={expanded === 'panel_RealEstate'}
-                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
-                onChange={handleChange('panel_RealEstate')}
-                className={"accordion"} >
-                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'2px'}}>Real Estate</h3>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:1}}>
-                  <p>
-                    Leverage real estate investments with blockchain technology by
-                    creating new business models. Blockchain helps integrate
-                    digital assets for liquidity and streamline investor relations
-                    and portfolio management.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion 
-                square 
-                expanded={expanded === 'panel_Sports'} 
-                style={{backgroundColor:'#f1f1f1',boxShadow:'none'}} 
-                onChange={handleChange('panel_Sports')} 
-                className={"accordion"} >
-                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h3 style={{margin:'2px'}}>Sports</h3>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:1}}>
-                  <p>
-                    Blockchain in sports offers a great way to increase fan
-                    engagement, promote active participation in decision-making,
-                    and monetize through new streams such as player content and
-                    collectibles.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-            </Grid>
-          </Grid>
+          </Box>
         </Box>
       </Box>
     )
@@ -385,8 +367,8 @@ const Industries = () => {
 
   const ChoosingEnterprise = () => {
     return ( 
-      <Box className={clsx("topSpacingBox","containerSec")}> 
-        <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
+      <Box className={"containerSec"}> 
+        <Box className={"sectionPadding"}>
           <br/>
           <br/>
           <Box className={"titleBox"}>
@@ -470,7 +452,7 @@ const Industries = () => {
   const AdditionalResources = () => {
     return (
       <Box className={"containerSec"}>
-        <Box className={"sectionPadding"}>
+        <Box className={"section"}>
           <Box className={"titleBox"}>
             <h2>Additional Resources</h2>
           </Box>
