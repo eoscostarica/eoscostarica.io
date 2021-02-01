@@ -298,7 +298,7 @@ const TheCompany = () => {
               </Grid>
               <Grid className={"boxFlexEnd"} item xs={12} md={12}>
                 <Box className={"buttonBox"}>
-                  <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Meet our team</button>
+                  <button className={"buttonPrimary"} onClick={() => window.open("/team/")} >Meet our team</button>
                 </Box>
               </Grid>
             </Grid>          
@@ -464,7 +464,7 @@ const TheCompany = () => {
                   donors, blood banks, and local businesses, leveraged by a
                   token economy. Winner of the{" "}
                   <a
-                    href="https://eos.io/news/winner-of-coding-for-change- virtual-hackathon-lifebank/"
+                    href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
                     target="_blank"
                   >
                     “Coding for Change”

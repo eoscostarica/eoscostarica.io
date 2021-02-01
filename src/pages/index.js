@@ -224,7 +224,7 @@ const Home = () => {
                       middle of the American continent offers convenient network
                       interconnectivity. We also configure, host, and maintain
                       blockchain nodes available for private and public networks
-                      with 24/7 monitoring and uptime. <a href={useBaseUrl("/about")}> Read more about this</a>.
+                      with 24/7 monitoring and uptime. <a href={useBaseUrl("/the-company")} target="_blank"> Read more about this</a>.
                     </p>
                   </AccordionDetails>
                 </Accordion>
@@ -566,7 +566,7 @@ const Home = () => {
             <p>
               Get to know some of our latest projects deploying the EOSIO
               blockchain protocol.
-              <a href={useBaseUrl("/projects")}> Visit the full list here.</a>
+              <a href={useBaseUrl("/projects")} target="_blank"> Visit the full list here.</a>
             </p>
           </Box>
           <Box className={isDesktop? "doubleSpacingBox" : ""}>
@@ -580,6 +580,7 @@ const Home = () => {
                 </Box>
               </Grid>
               <Grid xs={12} item md={6}>
+                <br/>
                 <Box className={"h3Box"}>
                   <h3>LatamLink</h3>
                 </Box>
@@ -591,9 +592,7 @@ const Home = () => {
                     LACChain
                   </a>{" "}
                   initiative, a program to accelerate the development of the
-                  blockchain ecosystem in the region.
-                </p>
-                <p>
+                  blockchain ecosystem in the region.{" "}
                   <a href="https://latamlink.io/" target="_blank">
                     Read more.
                   </a>
@@ -607,9 +606,10 @@ const Home = () => {
                       className = {"sizeImageTheCompany"}
                       src={useBaseUrl("img/lifebank.svg")}
                     />
-                  </Box> 
+                  </Box>
                 </Grid>
                 <Grid xs={12} item md={6}>
+                  <br/>
                   <Box className={"h3Box"}>
                     <h3>Lifebank</h3>
                   </Box>
@@ -619,7 +619,7 @@ const Home = () => {
                     donors, blood banks, and local businesses, leveraged by a
                     token economy. Winner of the{" "}
                     <a
-                      href="https://eos.io/news/winner-of-coding-for-change- virtual-hackathon-lifebank/"
+                      href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
                       target="_blank"
                     >
                       “Coding for Change”

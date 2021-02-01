@@ -763,7 +763,7 @@ input:checked + .slider:before {
 
 .buttonBoxMobile{
   margin-top: 50px;
-  width: 100%; 
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -777,7 +777,7 @@ input:checked + .slider:before {
 .sectionHeroMobile{
   position: relative;
   padding-top: 120px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
   width: 100%;
 }
 
@@ -901,6 +901,12 @@ input:checked + .slider:before {
 .centerBox{
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.leftBox{
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
 }
 
