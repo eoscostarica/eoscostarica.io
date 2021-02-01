@@ -904,6 +904,12 @@ input:checked + .slider:before {
   align-items: center;
 }
 
+.leftBox{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 /*Team*/
 
 .avatarBox{

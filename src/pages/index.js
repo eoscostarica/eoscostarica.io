@@ -580,6 +580,7 @@ const Home = () => {
                 </Box>
               </Grid>
               <Grid xs={12} item md={6}>
+                <br/>
                 <Box className={"h3Box"}>
                   <h3>LatamLink</h3>
                 </Box>
@@ -591,9 +592,7 @@ const Home = () => {
                     LACChain
                   </a>{" "}
                   initiative, a program to accelerate the development of the
-                  blockchain ecosystem in the region.
-                </p>
-                <p>
+                  blockchain ecosystem in the region.{" "}
                   <a href="https://latamlink.io/" target="_blank">
                     Read more.
                   </a>
@@ -607,9 +606,10 @@ const Home = () => {
                       className = {"sizeImageTheCompany"}
                       src={useBaseUrl("img/lifebank.svg")}
                     />
-                  </Box> 
+                  </Box>
                 </Grid>
                 <Grid xs={12} item md={6}>
+                  <br/>
                   <Box className={"h3Box"}>
                     <h3>Lifebank</h3>
                   </Box>
