@@ -7,6 +7,10 @@ import { Parallax, Background } from 'react-parallax';
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 
 
 import AdditionalResources from './components/AdditionalResources'
@@ -31,7 +35,7 @@ const BlockProducer = () => {
             EOSIO blockchain ecosystem worldwide.
           </p>
           <Box className={"buttonBox"}>
-            <button className={"buttonPrimary"} onClick={() => location.href='https://t.me/eoscr'} >Connect with us</button>
+            <button className={"buttonPrimary"} onClick={() => window.open('https://t.me/eoscr')} >Connect with us</button>
           </Box>
         </Box>
         }
@@ -379,30 +383,40 @@ const BlockProducer = () => {
                   network to seek accountability and transparency.<a href="https://mainnet.eosio.cr/" target="_blank"> Read more</a>
                 </p>
               </Grid>
-              <Grid item xs={12} md={12} style={{height:'10px'}} className={"topSpacingBox"}>
-                <p className={"centerText"}>
-                  Follow us on our profiles. We’re continually looking for
+            </Grid>
+            <Grid className={"paddingTopGrid"} container>
+              <Grid item xs={12} md={6}>
+                <p>
+                  Follow us on our profiles.
+                </p>
+                <p>
+                  We’re continually looking for
                   open-source collaborations!
                 </p>
-                <p className={"centerText"}>
-                  <a style={{fontWeight: 'bold'}} href="https://twitter.com/EOSCostaRica" target="_blank">
-                    Twitter
-                  </a>{" · "}
-                  <a style={{fontWeight: 'bold'}} href="https://t.me/eoscr" target="_blank">
-                    Telegram
-                  </a>{" · "}
-                  <a style={{fontWeight: 'bold'}} href="https://medium.com/@eoscostarica" target="_blank">
-                    Medium
-                  </a>{" · "}
-                  <a style={{fontWeight: 'bold'}} href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
-                    YouTube
-                  </a>{" · "}
-                  <a style={{fontWeight: 'bold'}} href="https://www.instagram.com/eoscostarica/" target="_blank">
-                    Instagram
-                  </a>
-                </p>
               </Grid>
-            </Grid>         
+              <Grid item xs={12} md={6}>
+                <Box className={"leftBox"}>
+                  <a style={{margin:'15px'}} href="https://twitter.com/EOSCostaRica" target="_blank">
+                    <TwitterIcon style={{width:'30px', height:'30px', cursor:'pointer', color:'#5484b3'}}/>
+                  </a>
+                  <a style={{margin:'15px'}} href="https://t.me/eoscr" target="_blank">
+                    <LinkedInIcon style={{width:'30px', height:'30px', cursor:'pointer', color:'#5484b3'}}/>
+                  </a>
+                  <a style={{margin:'15px'}} href="https://medium.com/@eoscostarica" target="_blank">
+                    <img
+                      style={{width:'23px', height:'23px', cursor:'pointer', color:'#5484b3'}}
+                      src={useBaseUrl("img/iconMedium.svg")}
+                    />
+                  </a>
+                  <a style={{margin:'15px'}} href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
+                    <YouTubeIcon style={{width:'40px', height:'40px', cursor:'pointer', color:'#5484b3'}}/>
+                  </a>
+                  <a style={{margin:'15px'}} href="https://www.instagram.com/eoscostarica/" target="_blank">
+                    <InstagramIcon style={{width:'30px', height:'30px', cursor:'pointer', color:'#5484b3'}}/>
+                  </a>
+                </Box>
+              </Grid>
+            </Grid>       
           </Box>
         </Box>
       </Box>
@@ -411,7 +425,7 @@ const BlockProducer = () => {
 
   const WhyCostaRica = () => {
     return ( 
-      <Box className={clsx("containerGray")}> 
+      <Box className={clsx("containerGray","reduceMarginTop")}> 
         <Box className={"sectionPadding"}>
           <Box className={"titleBox"}>
             <h2>
