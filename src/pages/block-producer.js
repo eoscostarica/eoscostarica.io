@@ -103,7 +103,8 @@ const BlockProducer = () => {
           <Box className={"titleBox"}>
             <h2>Our Values</h2>
           </Box>
-          <Grid justify="center" container spacing={8}>
+          <br/>
+          <Grid justify="center" container spacing={10}>
             <Grid item xs={12} md={4}>
               <Box className={"centerBox"}>
                 <img
@@ -446,7 +447,7 @@ const BlockProducer = () => {
             <Grid justify="center" container spacing={5}>
               <Grid item xs={12} md={5}>
                 <Box className={"specialH3Box"}>
-                  <h3>Liberty and Peace</h3>
+                  <h4>Liberty and Peace</h4>
                 </Box>
                 <p >
                   Costa Rica is one of the most stable and longest-lasting
@@ -457,7 +458,7 @@ const BlockProducer = () => {
               </Grid>
               <Grid item xs={12} md={5}>
                 <Box className={"specialH3Box"}>
-                  <h3>Ecology</h3>
+                  <h4>Ecology</h4>
                 </Box>
                 <p>
                   Costa Rica promotes sustainable development and houses more than
@@ -467,7 +468,7 @@ const BlockProducer = () => {
               </Grid>
               <Grid item xs={12} md={5}>
                 <Box className={"specialH3Box"}>
-                  <h3>Human Rights</h3>
+                  <h4>Human Rights</h4>
                 </Box>
                 <p>
                   Costa Rica is founded on respect to Human Rights, and even the
@@ -477,7 +478,7 @@ const BlockProducer = () => {
               </Grid>
               <Grid item xs={12} md={5}>
                 <Box className={"specialH3Box"}>
-                  <h3>Equality</h3>
+                  <h4>Equality</h4>
                 </Box>
                 <p>
                   Costa Ricans value equality for all. For instance, the country
@@ -486,7 +487,7 @@ const BlockProducer = () => {
               </Grid>
               <Grid item xs={12} md={5}>
                 <Box className={"specialH3Box"}>
-                  <h3>Strategic location</h3>
+                  <h4>Strategic location</h4>
                 </Box>
                 <p>
                   Costa Rica is conveniently located in the middle of the
@@ -513,8 +514,8 @@ const BlockProducer = () => {
             </Box>
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
-                <Box className={"h3Box"}>
-                  <h3>Experience as integrators</h3>
+                <Box className={"specialH3Box"}>
+                  <h4>Experience as integrators</h4>
                 </Box>
                 <p>
                   We focus on building strong relationships with strategic
@@ -525,8 +526,8 @@ const BlockProducer = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Box className={"h3Box"}>
-                  <h3>An agile team</h3>
+                <Box className={"specialH3Box"}>
+                  <h4>An agile team</h4>
                 </Box>
                 <p>
                   We strive to recruit the best candidates. We have assembled a
@@ -537,8 +538,8 @@ const BlockProducer = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Box className={"h3Box"}>
-                  <h3>Great open-source projects</h3>
+                <Box className={"specialH3Box"}>
+                  <h4>Great open-source projects</h4>
                 </Box>
                 <p>
                   We develop and support open- source projects such as EOS Rate,
@@ -549,8 +550,8 @@ const BlockProducer = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Box className={"h3Box"}>
-                  <h3>Strong community building</h3>
+                <Box className={"specialH3Box"}>
+                  <h4>Strong community building</h4>
                 </Box>
                 <p>
                   We are part of local and global ecosystems to promote EOSIO
