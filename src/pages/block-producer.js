@@ -112,7 +112,7 @@ const BlockProducer = () => {
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
-                <h3>Ongoing education</h3>
+                <h4>Ongoing education</h4>
               </Box>
               <p>
                 We believe that continuous training and building human talent is
@@ -128,7 +128,7 @@ const BlockProducer = () => {
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
-                <h3>Loyalty</h3>
+                <h4>Loyalty</h4>
               </Box>
               <p>
                 We recognize and acknowledge everyone’s unique talents and seek
@@ -140,11 +140,26 @@ const BlockProducer = () => {
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icon-equality.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
+                <h4>Equality</h4>
+              </Box>
+              <p>
+                We endorse and defend a governance model guided by merit
+                principles for our community’s benefit.
+              </p>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className={"centerBox"}>
+                <img
+                  style={{marginBottom:'20px'}}
                   src={useBaseUrl("img/icon_resilience.svg")}
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
-                <h3>Resilience</h3>
+                <h4>Resilience</h4>
               </Box>
               <p>
                 Our team evolves alongside technology. We strive to be as nimble
@@ -157,11 +172,11 @@ const BlockProducer = () => {
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
-                  src={useBaseUrl("img/icon-loyalty.svg")}
+                  src={useBaseUrl("img/icon-liberty.svg")}
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
-                <h3>Liberty</h3>
+                <h4>Liberty</h4>
               </Box>
               <p>
                 We defend individual sovereignty among the EOS community,
@@ -178,7 +193,7 @@ const BlockProducer = () => {
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
-                <h3>Tolerance</h3>
+                <h4>Tolerance</h4>
               </Box>
               <p>
                 Our team advocates for the rights of education,
@@ -191,28 +206,11 @@ const BlockProducer = () => {
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
-                  src={useBaseUrl("img/icon_prudence.svg")}
-                />
-              </Box>
-              <Box className={clsx("h3Box","centerText")}>
-                <h3>Prudence</h3>
-              </Box>
-              <p>
-                We commit to safeguard our community’s future and take
-                calculated risks that will bring us further to our long term
-                goals.
-              </p>
-              <br/>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Box className={"centerBox"}>
-                <img
-                  style={{marginBottom:'20px'}}
                   src={useBaseUrl("img/icon_accountability.svg")}
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
-                <h3>Accountability</h3>
+                <h4>Accountability</h4>
               </Box>
               <p>
                 We firmly believe and encourage taking full accountability from
@@ -224,16 +222,18 @@ const BlockProducer = () => {
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
-                  src={useBaseUrl("img/icon-equality.svg")}
+                  src={useBaseUrl("img/icon_prudence.svg")}
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
-                <h3>Equality</h3>
+                <h4>Prudence</h4>
               </Box>
               <p>
-                We endorse and defend a governance model guided by merit
-                principles for our community’s benefit.
+                We commit to safeguard our community’s future and take
+                calculated risks that will bring us further to our long term
+                goals.
               </p>
+              <br/>
             </Grid>
           </Grid>
         </Box>
@@ -441,10 +441,11 @@ const BlockProducer = () => {
               network available for the censorship-resistant EOS.
             </p>
           </Box>
-          <Box className={""}>
+          <Box>
+            <br/>
             <Grid justify="center" container spacing={5}>
               <Grid item xs={12} md={5}>
-                <Box className={"h3Box"}>
+                <Box className={"specialH3Box"}>
                   <h3>Liberty and Peace</h3>
                 </Box>
                 <p >
@@ -455,17 +456,7 @@ const BlockProducer = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <Box className={"h3Box"}>
-                  <h3>Human Rights</h3>
-                </Box>
-                <p>
-                  Costa Rica is founded on respect to Human Rights, and even the
-                  Inter-American Institute of Human Rights based its headquarters
-                  in San José.
-                </p>
-              </Grid>
-              <Grid item xs={12} md={5}>
-                <Box className={"h3Box"}>
+                <Box className={"specialH3Box"}>
                   <h3>Ecology</h3>
                 </Box>
                 <p>
@@ -475,7 +466,26 @@ const BlockProducer = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <Box className={"h3Box"}>
+                <Box className={"specialH3Box"}>
+                  <h3>Human Rights</h3>
+                </Box>
+                <p>
+                  Costa Rica is founded on respect to Human Rights, and even the
+                  Inter-American Institute of Human Rights based its headquarters
+                  in San José.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={5}>
+                <Box className={"specialH3Box"}>
+                  <h3>Equality</h3>
+                </Box>
+                <p>
+                  Costa Ricans value equality for all. For instance, the country
+                  ranks as the first in Latin America for gender equality.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={5}>
+                <Box className={"specialH3Box"}>
                   <h3>Strategic location</h3>
                 </Box>
                 <p>
@@ -485,15 +495,7 @@ const BlockProducer = () => {
                   infrastructure.
                 </p>
               </Grid>
-              <Grid item xs={12} md={5}>
-                <Box className={"h3Box"}>
-                  <h3>Equality</h3>
-                </Box>
-                <p>
-                  Costa Ricans value equality for all. For instance, the country
-                  ranks as the first in Latin America for gender equality.
-                </p>
-              </Grid>
+              <Grid md={5}></Grid>
             </Grid>
           </Box>
         </Box>

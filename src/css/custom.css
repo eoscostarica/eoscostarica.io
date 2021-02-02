@@ -756,6 +756,10 @@ input:checked + .slider:before {
   margin-bottom: 2rem;
 }
 
+.specialH3Box{
+  margin-bottom: 1rem;
+}
+
 .buttonBox{
   margin-top: 3rem;
   margin-bottom: 3rem;
