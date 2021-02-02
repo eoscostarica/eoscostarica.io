@@ -104,7 +104,7 @@ const BlockProducer = () => {
             <h2>Our Values</h2>
           </Box>
           <Grid justify="center" container spacing={8}>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={4}>
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
@@ -120,7 +120,7 @@ const BlockProducer = () => {
               </p>
               <br/>
             </Grid>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={4}>
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
@@ -136,7 +136,7 @@ const BlockProducer = () => {
               </p>
               <br/>
             </Grid>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={4}>
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
@@ -153,7 +153,7 @@ const BlockProducer = () => {
               </p>
               <br/>
             </Grid>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={4}>
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
@@ -170,7 +170,7 @@ const BlockProducer = () => {
               </p>
               <br/>
             </Grid>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={4}>
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
@@ -187,7 +187,7 @@ const BlockProducer = () => {
               </p>
               <br/>
             </Grid>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={4}>
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
@@ -204,7 +204,7 @@ const BlockProducer = () => {
               </p>
               <br/>
             </Grid>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={4}>
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
@@ -220,7 +220,7 @@ const BlockProducer = () => {
                 responsibility.
               </p>
             </Grid>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={4}>
               <Box className={"centerBox"}>
                 <img
                   style={{marginBottom:'20px'}}
@@ -382,34 +382,34 @@ const BlockProducer = () => {
               </Grid>
             </Grid>
             <Grid className={"paddingTopGrid"} container>
-              <Grid item xs={12} md={6}>
-                <p>
+              <Grid item xs={12} md={8}>
+                <h3>
                   Follow us on our profiles.
-                </p>
-                <p>
+                </h3>
+                <h3>
                   We’re continually looking for
                   open-source collaborations!
-                </p>
+                </h3>
               </Grid>
-              <Grid item xs={12} md={6}>
-                <Box className={"leftBox"}>
-                  <a style={{margin:'15px'}} href="https://twitter.com/EOSCostaRica" target="_blank">
-                    <TwitterIcon style={{width:'30px', height:'30px', cursor:'pointer', color:'#5484b3'}}/>
+              <Grid item xs={12} md={4}>
+                <Box className={"righttBox"}>
+                  <a style={{margin:'13px'}} href="https://twitter.com/EOSCostaRica" target="_blank">
+                    <TwitterIcon style={{width:'43px', height:'43px', cursor:'pointer', color:'#5484b3'}}/>
                   </a>
-                  <a style={{margin:'15px'}} href="https://t.me/eoscr" target="_blank">
-                    <LinkedInIcon style={{width:'30px', height:'30px', cursor:'pointer', color:'#5484b3'}}/>
+                  <a style={{margin:'13px'}} href="https://t.me/eoscr" target="_blank">
+                    <LinkedInIcon style={{width:'43px', height:'43px', cursor:'pointer', color:'#5484b3'}}/>
                   </a>
-                  <a style={{margin:'15px'}} href="https://medium.com/@eoscostarica" target="_blank">
+                  <a style={{margin:'13px'}} href="https://medium.com/@eoscostarica" target="_blank">
                     <img
-                      style={{width:'23px', height:'23px', cursor:'pointer', color:'#5484b3'}}
+                      style={{width:'34px', height:'34px', cursor:'pointer', color:'#5484b3'}}
                       src={useBaseUrl("img/iconMedium.svg")}
                     />
                   </a>
-                  <a style={{margin:'15px'}} href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
-                    <YouTubeIcon style={{width:'40px', height:'40px', cursor:'pointer', color:'#5484b3'}}/>
+                  <a style={{margin:'13px'}} href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
+                    <YouTubeIcon style={{width:'53px', height:'54px', cursor:'pointer', color:'#5484b3'}}/>
                   </a>
-                  <a style={{margin:'15px'}} href="https://www.instagram.com/eoscostarica/" target="_blank">
-                    <InstagramIcon style={{width:'30px', height:'30px', cursor:'pointer', color:'#5484b3'}}/>
+                  <a style={{margin:'13px'}} href="https://www.instagram.com/eoscostarica/" target="_blank">
+                    <InstagramIcon style={{width:'43px', height:'43px', cursor:'pointer', color:'#5484b3'}}/>
                   </a>
                 </Box>
               </Grid>
@@ -422,7 +422,7 @@ const BlockProducer = () => {
 
   const WhyCostaRica = () => {
     return ( 
-      <Box className={clsx("containerGray","reduceMarginTop")}> 
+      <Box className={clsx("containerGray")}> 
         <Box className={"sectionPadding"}>
           <Box className={"titleBox"}>
             <h2>
@@ -485,7 +485,7 @@ const BlockProducer = () => {
                   infrastructure.
                 </p>
               </Grid>
-              <Grid item xs={12} md={10}>
+              <Grid item xs={12} md={5}>
                 <Box className={"h3Box"}>
                   <h3>Equality</h3>
                 </Box>

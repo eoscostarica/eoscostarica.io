@@ -904,9 +904,9 @@ input:checked + .slider:before {
   align-items: center;
 }
 
-.leftBox{
+.righttBox{
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
 }
 
