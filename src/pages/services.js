@@ -12,8 +12,28 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import { useHistory } from 'react-router-dom';
 
+import AccordionComp from './components/AccordionComp'
 import DevelopmentServices from './SvgComponents/DevelopmentServices';
 import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure';
+
+const strategicLocationAccordion = 
+[
+  {
+    title: 'Network interconnectivity',
+    content:'Costa Rica has shores in both the Pacific and Atlantic oceans and connects three submarine fiber optic cables – ARCOS-1, MAYA-1, and Pan American Crossing (PAC) – that provide the majority of the bandwidth in the country. This interconnection provides real-time fail-over and redundancy to our infrastructure. Costa Rica is part of the six Central American nations interconnected via a terrestrial fiber-optic network (REDCA). Additionally, having direct connections to all upstream carriers allows the country’s network to prevent single-point failures.',
+    target: 'panel_interconnectivity'
+  },
+  {
+    title: 'Stable political framework',
+    content:'Costa Rica is a country that values Human Rights, Peace, and Democracy. The country is one of the most stable and longest-lasting Democracies in America. Costa Rica abolished its army in 1948 to promote education and wellbeing and stands out on equality and innovation. Moreover, the Inter-American Institute of Human Rights based its headquarters in San José.',
+    target: 'panel_framework'
+  },
+  {
+    title: 'Environmental awareness',
+    content:'Despite being a small country, Costa Rica houses more than 4% of the world’s biodiversity. The country’s leaders have been promoting ecology and sustainable development. Leading by example, more than 26% of its territory comprises of protected areas and National Parks.',
+    target: 'panel_awareness'
+  },
+]
 
 
 const ServicePage = () => {
@@ -225,8 +245,6 @@ const ServicePage = () => {
                 </Box>
               </Grid>
             </Grid>
-
-
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
                 <h4>User-centered approach</h4>
@@ -388,76 +406,8 @@ const ServicePage = () => {
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Box  className={"accordionBox"}>
-                <Accordion
-                  square
-                  expanded={expandedMap === 'panel_interconnectivity'}
-                  onChange={handleChangeMap('panel_interconnectivity')}
-                  style={{boxShadow:'none'}}
-                  className={"accordion"}
-                >
-                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h4 style={{margin:'2px',padding: 0}}>Network interconnectivity</h4>
-                  </AccordionSummary>
-                  <AccordionDetails style={{padding:1}}>
-                    <p style={{padding: 0}}>
-                      Costa Rica has shores in both the Pacific and Atlantic
-                      oceans and connects three submarine fiber optic cables –
-                      ARCOS-1, MAYA-1, and Pan American Crossing (PAC) – that
-                      provide the majority of the bandwidth in the country.
-                      This interconnection provides real-time fail-over and
-                      redundancy to our infrastructure. Costa Rica is part of
-                      the six Central American nations interconnected via a
-                      terrestrial fiber-optic network (REDCA). Additionally,
-                      having direct connections to all upstream carriers
-                      allows the country’s network to prevent single-point
-                      failures.
-                    </p>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  square
-                  expanded={expandedMap === 'panel_framework'}
-                  onChange={handleChangeMap('panel_framework')}
-                  style={{boxShadow:'none'}}
-                  className={"accordion"}
-                >
-                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h4 style={{margin:'2px',padding: 0}}>Stable political framework</h4>
-                  </AccordionSummary>
-                  <AccordionDetails style={{padding:1}}>
-                    <p style={{padding: 0}}>
-                      Costa Rica is a country that values Human Rights, Peace,
-                      and Democracy. The country is one of the most stable and
-                      longest-lasting Democracies in America. Costa Rica
-                      abolished its army in 1948 to promote education and
-                      wellbeing and stands out on equality and innovation.
-                      Moreover, the Inter-American Institute of Human Rights
-                      based its headquarters in San José.
-                    </p>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  square
-                  expanded={expandedMap === 'panel_awareness'}
-                  onChange={handleChangeMap('panel_awareness')}
-                  style={{boxShadow:'none'}}
-                  className={"accordion"}
-                >
-                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h4 style={{margin:'2px',padding: 0}}>Environmental awareness</h4>
-                  </AccordionSummary>
-                  <AccordionDetails style={{padding:1}}>
-                    <p style={{padding: 0}}>
-                      Despite being a small country, Costa Rica houses more
-                      than 4% of the world’s biodiversity. The country’s
-                      leaders have been promoting ecology and sustainable
-                      development. Leading by example, more than 26% of its
-                      territory comprises of protected areas and National
-                      Parks.
-                    </p>
-                  </AccordionDetails>
-                </Accordion>
+              <Box className={"accordionBox"}>
+                <AccordionComp data={strategicLocationAccordion} expanded={expandedMap} handleChange={handleChangeMap}  bgColor={'white'}/>
               </Box>
             </Grid>
           </Grid>
