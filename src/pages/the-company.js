@@ -33,23 +33,16 @@ const TheCompany = () => {
         }
         {isMobile && 
           <Box className={"sectionHeroMobile"}>
-            <Box className={"logoMobileBox"}>
-              <img
-                  className={"logoMobile"}
-                  src={useBaseUrl("img/eoscr-logo.png")}
-                  alt="EOS CR LOGO"
-                />
+            <Box className={"titleBox"}>
+              <h1>We Develop Enterprise</h1>
+              <h1>Blockchain Solutions</h1>
             </Box>
-          <Box className={"titleBox"}>
-            <h1>We Develop Enterprise</h1>
-            <h1>Blockchain Solutions</h1>
-          </Box>
-          <p>Years of experience developing innovative technologies speak for us.</p>
-          <br/>
-          <p>Unleash the power of blockchain technology with the help of our agile team.</p>
-          <Box className={"buttonBoxMobile"}>
-            <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Learn More</button>
-          </Box>
+            <p>Years of experience developing innovative technologies speak for us.</p>
+            <br/>
+            <p>Unleash the power of blockchain technology with the help of our agile team.</p>
+            <Box className={"buttonBoxMobile"}>
+              <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Learn More</button>
+            </Box>
         </Box>
       }
       </Box>
@@ -177,69 +170,69 @@ const TheCompany = () => {
 
   const WeAreOneGroup = () => {
     return (
-      <Box className={clsx("containerSec","reduceMarginTop","reduceDobleBottomPadding",{["containerGray"] : isMobile, ["containerWithBackground"] : isMobile})}>
-        <Box className={"sectionPadding"} >
-          <Box className={"h3Box"}>
-            <h3 style={{textAlign:'center'}}>We Are One Group</h3>
-          </Box>
-          <Box className={"spacingBox"}>
-            <Grid container>
-              <Grid item xs={12} md={3}>
-                <Box className={"imgBoxLogos"}>
-                  <a target="_blank" href="http://latamlink.io/">
-                    <img
-                      className={"oneGroupLogo"}
-                      alt="LatamLink"
-                      src={useBaseUrl("img/Group47.svg")}
-                    />
-                  </a>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Box className={"imgBoxLogos"}>
-                  <a target="_blank" href="https://www.edenia.com/">
-                    <img
-                      className={"oneGroupLogo"}
-                      alt="Edenia"
-                      src={useBaseUrl("img/Group17.svg")}
-                    />
-                  </a>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Box className={"imgBoxLogos"}>
-                  <a target="_blank" href="https://eosurf.com/">
-                    <img
-                      className={"oneGroupLogo"}
-                      alt="Eossurf"
-                      src={useBaseUrl("img/Group11.svg")}
-                    />
-                  </a>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Box className={"imgBoxLogos"}>
-                  <a target="_blank" href="https://ticoblockchain.cr/">
-                    <img
-                      className={"oneGroupLogo"}
-                      alt="Ticoblockchain"
-                      src={useBaseUrl("img/Group55.svg")}
-                    />
-                  </a>
-                </Box>
-              </Grid>
+      <Box className={clsx("containerSec")}>
+      <Box className={clsx("sectionNoPadding")}>
+        <Box className={"h3Box"}>
+          <h3 style={{textAlign:'center'}}>We Are One Group</h3>
+        </Box>
+        <Box className={"spacingBox"}>
+          <Grid container>
+            <Grid item xs={12} md={3}>
+              <Box className={"imgBoxLogos"}>
+                <a target="_blank" href="http://latamlink.io/">
+                  <img
+                    className={"oneGroupLogo"}
+                    alt="LatamLink"
+                    src={useBaseUrl("img/Group47.svg")}
+                  />
+                </a>
+              </Box>
             </Grid>
-          </Box>
+            <Grid item xs={12} md={3}>
+              <Box className={"imgBoxLogos"}>
+                <a target="_blank" href="https://www.edenia.com/">
+                  <img
+                    className={"oneGroupLogo"}
+                    alt="Edenia"
+                    src={useBaseUrl("img/Group17.svg")}
+                  />
+                </a>
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={3}>
+              <Box className={"imgBoxLogos"}>
+                <a target="_blank" href="https://eosurf.com/">
+                  <img
+                    className={"oneGroupLogo"}
+                    alt="Eossurf"
+                    src={useBaseUrl("img/Group11.svg")}
+                  />
+                </a>
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={3}>
+              <Box className={"imgBoxLogos"}>
+                <a target="_blank" href="https://ticoblockchain.cr/">
+                  <img
+                    className={"oneGroupLogo"}
+                    alt="Ticoblockchain"
+                    src={useBaseUrl("img/Group55.svg")}
+                  />
+                </a>
+              </Box>
+            </Grid>
+          </Grid>
         </Box>
       </Box>
+    </Box>
     )
   }
 
   const MeetTeam = () => {
     return (
-      <Box className={clsx("reduceDobleMarginTop","containerSec")}>
-        <Box className={"sectionPadding"}>
-          <Box className={"spacingBox"}>
+      <Box className={clsx("containerSec")}>
+        <Box className={"sectionNoPadding"}>
+          <Box>
             <Grid container spacing={1}>
               <Grid item md={12}>
                 <Box className={"titleBox"}>
@@ -305,7 +298,7 @@ const TheCompany = () => {
               </Grid>
               <Grid className={"boxFlexEnd"} item xs={12} md={12}>
                 <Box className={"buttonBox"}>
-                  <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Meet our team</button>
+                  <button className={"buttonPrimary"} onClick={() => window.open("/team/")} >Meet our team</button>
                 </Box>
               </Grid>
             </Grid>          
@@ -317,8 +310,8 @@ const TheCompany = () => {
 
   const TheTechnology = () => {
     return ( 
-      <Box className={clsx("containerSec","reduceDobleMarginTop")}> 
-        <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
+      <Box className={clsx("containerSec")}> 
+        <Box className={clsx("sectionNoPadding")}>
           <br/>
           <br/>
           <Box className={"titleBox"}>
@@ -400,26 +393,25 @@ const TheCompany = () => {
                 </p>
               </Grid>
             </Grid> 
-            <Grid className={"paddingTopGrid"} style={{justifyContent:'center'}} container spacing={10}>
-              <Grid item xs={12} md={4}>
-                <h4>
-                  We can help you 
-                </h4>
-                <h4>
-                  explore EOSIO technology.
-                </h4>
-              </Grid>
-              <Grid item xs={12} md={4}>
-                <Box className={"boxFlexEnd"}>
-                  <button 
-                    className={"buttonPrimary"} 
-                    style={{width:'80%'}} 
-                    onClick={() => history.push("/contact-us/")} >
-                      Drop Us a Line
-                  </button>
-                </Box>
-              </Grid>
-            </Grid>           
+            {isDesktop &&
+              <Box className={"doubleSpacingBox"}>
+                <Grid  style={{justifyContent:'center'}} container spacing={10}>
+                  <Grid item xs={5} md={4}>
+                    <h4>We can help you explore EOSIO technology.</h4>
+                  </Grid>
+                  <Grid item xs={7} md={4}>
+                    <Box className={"boxFlexEnd"}>
+                      <button 
+                        className={"buttonPrimary"} 
+                        style={{width:'80%'}} 
+                        onClick={() => history.push("/contact-us/")} >
+                          Drop Us a Line
+                      </button>
+                    </Box>
+                  </Grid>
+                </Grid>     
+              </Box>    
+            } 
           </Box>
         </Box>
       </Box>
@@ -428,8 +420,8 @@ const TheCompany = () => {
 
   const SomeOurProjects = () => {
     return ( 
-      <Box className={clsx("reduceMarginTop","containerSec")}> 
-        <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
+      <Box className={clsx("containerSec")}> 
+        <Box className={clsx("sectionNoPadding")}>
           <br/>
           <br/>
           <Box className={"titleBox"}>
@@ -472,7 +464,7 @@ const TheCompany = () => {
                   donors, blood banks, and local businesses, leveraged by a
                   token economy. Winner of the{" "}
                   <a
-                    href="https://eos.io/news/winner-of-coding-for-change- virtual-hackathon-lifebank/"
+                    href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
                     target="_blank"
                   >
                     “Coding for Change”
@@ -518,14 +510,14 @@ const TheCompany = () => {
 
   const ContactUs = () => {
     return (
-      <Box className={clsx("containerGray","reduceMarginTop")}>
+      <Box className={clsx("containerGray")}>
         <Box className={"sectionPadding"}>
           <Grid container spacing={5}>
             <Grid item xs={12} md={8}>
                 <Box>
-                  <h2>Start working with us</h2>
-                  <h2>and implement</h2>
-                  <h2>blockchain technology.</h2>
+                  <h2 className={"centerTextOnMobile"}>Start working with us</h2>
+                  <h2 className={"centerTextOnMobile"}>and implement</h2>
+                  <h2 className={"centerTextOnMobile"}>blockchain technology.</h2>
                 </Box>
             </Grid>
             <Grid item xs={12} md={4}>
@@ -550,9 +542,6 @@ const TheCompany = () => {
               </Background>
               <HeroSection />
               <EOSCR />
-              <Background className={"bgParallaxSecondaryCompany"}>
-                <Box className={"imgParallax"} />
-              </Background>
             </Parallax>
             <WeAreOneGroup />
             <MeetTeam />

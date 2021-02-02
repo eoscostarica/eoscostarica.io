@@ -118,11 +118,11 @@ const NavbarMenu = () => {
   }
 
   return (
-    <Box className={isBlog? clsx("navBar", "navBarScroll") : clsx("navBar", { ["navBarScroll"]: trigger})} >
+    <Box className={isBlog? clsx("navBar", "navBarScroll") : clsx("navBar", { ["navBarScroll"]: (trigger || isMobile) })} >
       <Box className={"menuWrapper"}>
         {isMobile && 
           <>
-            <Box className={trigger? "imgLogoBoxMobile": "hideImgLogoBoxMobile" }>
+            <Box className={"imgLogoBoxMobile"}>
               <img
                 className={"imgLogoScroll"}
                 src={useBaseUrl("img/eoscr-logo.png")}
@@ -189,25 +189,27 @@ const NavbarMenu = () => {
                     {PATHS.map((item) => (
                       <Box key={item.label}>
                         {!item.dropDown && 
-                          <Link href={useBaseUrl(item.path)} target={item.target} key={item.label} style={{textDecoration:'none'}}>
+                          <Link className={"navBarItemTab"} href={useBaseUrl(item.path)} target={item.target} key={item.label} style={{textDecoration:'none'}}>
                             <Box className={"menuItem"}>  
                               <h5 className={clsx("link",{["linkActive"] : pathname === item.path})}>{item.label}</h5>                  
                             </Box>
                           </Link>
                         }
                         {item.dropDown && 
-                          <Box className={"menuItem"}>  
-                            <h5 className={clsx("link",{["linkActive"] : isCurrentPath(item.subPaths)})}>{item.label}</h5>
-                            <Box className={clsx("dropDownMenu",{["dropDownMenuActive"] : isCurrentPath(item.subPaths)})}  style={{width:item.markerSize}}>
-                                {item.subPaths.map((subItem) => (
-                                  <Link href={useBaseUrl(subItem.path)} target={subItem.target}  key={subItem.label} style={{textDecoration:'none'}}>
-                                    <Box>  
-                                      <h5 className={clsx("menuItemDrop",{["menuItemDropActive"] : pathname === subItem.path})} >{subItem.label}</h5>                  
-                                    </Box>
-                                  </Link>
-                                ))}
-                            </Box>                    
-                          </Box>
+                          <Link className={"navBarItemTab"}  href={useBaseUrl(item.path)} style={{textDecoration:'none'}}>
+                            <Box className={"menuItem"}>  
+                                <h5 className={clsx("link",{["linkActive"] : isCurrentPath(item.subPaths)})}>{item.label}</h5>
+                              <Box className={clsx("dropDownMenu",{["dropDownMenuActive"] : isCurrentPath(item.subPaths)})}  style={{width:item.markerSize}}>
+                                  {item.subPaths.map((subItem) => (
+                                    <Link className={"navBarItemTab"} href={useBaseUrl(subItem.path)} target={subItem.target}  key={subItem.label} style={{textDecoration:'none'}}>
+                                      <Box>  
+                                        <h5 className={clsx("menuItemDrop",{["menuItemDropActive"] : pathname === subItem.path})} >{subItem.label}</h5>                  
+                                      </Box>
+                                    </Link>
+                                  ))}
+                              </Box>                    
+                            </Box>
+                          </Link>
                         }
                       </Box>
                     ))}

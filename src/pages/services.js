@@ -12,8 +12,28 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import { useHistory } from 'react-router-dom';
 
+import AccordionComp from './components/AccordionComp'
 import DevelopmentServices from './SvgComponents/DevelopmentServices';
 import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure';
+
+const strategicLocationAccordion = 
+[
+  {
+    title: 'Network interconnectivity',
+    content:'Costa Rica has shores in both the Pacific and Atlantic oceans and connects three submarine fiber optic cables – ARCOS-1, MAYA-1, and Pan American Crossing (PAC) – that provide the majority of the bandwidth in the country. This interconnection provides real-time fail-over and redundancy to our infrastructure. Costa Rica is part of the six Central American nations interconnected via a terrestrial fiber-optic network (REDCA). Additionally, having direct connections to all upstream carriers allows the country’s network to prevent single-point failures.',
+    target: 'panel_interconnectivity'
+  },
+  {
+    title: 'Stable political framework',
+    content:'Costa Rica is a country that values Human Rights, Peace, and Democracy. The country is one of the most stable and longest-lasting Democracies in America. Costa Rica abolished its army in 1948 to promote education and wellbeing and stands out on equality and innovation. Moreover, the Inter-American Institute of Human Rights based its headquarters in San José.',
+    target: 'panel_framework'
+  },
+  {
+    title: 'Environmental awareness',
+    content:'Despite being a small country, Costa Rica houses more than 4% of the world’s biodiversity. The country’s leaders have been promoting ecology and sustainable development. Leading by example, more than 26% of its territory comprises of protected areas and National Parks.',
+    target: 'panel_awareness'
+  },
+]
 
 
 const ServicePage = () => {
@@ -85,33 +105,26 @@ const ServicePage = () => {
         }
         {isMobile && 
           <Box className={"sectionHeroMobile"}>
-            <Box className={"logoMobileBox"}>
-              <img
-                  className={"logoMobile"}
-                  src={useBaseUrl("img/eoscr-logo.png")}
-                  alt="EOS CR LOGO"
-                />
+            <Box className={"titleBox"}>
+              <h1 >Custom-made</h1>
+              <h1 >Blockchain Solutions</h1>
             </Box>
-          <Box className={"titleBox"}>
-            <h1 >Custom-made</h1>
-            <h1 >Blockchain Solutions</h1>
+            <p>
+              Leverage blockchain technology. Our team will help you embrace
+              the power of this innovative technology.
+            </p>
+            <br/>
+            <p>
+              We have years of experience integrating enterprise blockchain solutions and
+              developing infrastructure for business environments.
+            </p>
+            <Box className={"buttonBoxMobile"}>
+              <button className={"buttonPrimary"} onClick={() => history.push("/about/")}>
+                Get to Know Us
+              </button>
+            </Box>
           </Box>
-          <p>
-            Leverage blockchain technology. Our team will help you embrace
-            the power of this innovative technology.
-          </p>
-          <br/>
-          <p>
-            We have years of experience integrating enterprise blockchain solutions and
-            developing infrastructure for business environments.
-          </p>
-          <Box className={"buttonBoxMobile"}>
-            <button className={"buttonPrimary"} onClick={() => history.push("/about/")}>
-              Get to Know Us
-            </button>
-          </Box>
-        </Box>
-      }
+        }
       </Box>
     )
   }
@@ -145,7 +158,7 @@ const ServicePage = () => {
                   </a>
                   , for its adaptability to any industry in both the private and
                   public sectors. Visit our{" "}
-                  <a href={useBaseUrl("/industries")}>industries page</a> to learn
+                  <a href={useBaseUrl("/industries")} target="_blank">industries page</a> to learn
                   more.
                 </p>
               </Box>
@@ -232,8 +245,6 @@ const ServicePage = () => {
                 </Box>
               </Grid>
             </Grid>
-
-
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
                 <h4>User-centered approach</h4>
@@ -395,76 +406,8 @@ const ServicePage = () => {
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-            <Box>
-                <Accordion
-                  square
-                  expanded={expandedMap === 'panel_interconnectivity'}
-                  onChange={handleChangeMap('panel_interconnectivity')}
-                  style={{boxShadow:'none'}}
-                  className={"accordion"}
-                >
-                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h4 style={{margin:'2px'}}>Network interconnectivity</h4>
-                  </AccordionSummary>
-                  <AccordionDetails style={{padding:1}}>
-                    <p>
-                      Costa Rica has shores in both the Pacific and Atlantic
-                      oceans and connects three submarine fiber optic cables –
-                      ARCOS-1, MAYA-1, and Pan American Crossing (PAC) – that
-                      provide the majority of the bandwidth in the country.
-                      This interconnection provides real-time fail-over and
-                      redundancy to our infrastructure. Costa Rica is part of
-                      the six Central American nations interconnected via a
-                      terrestrial fiber-optic network (REDCA). Additionally,
-                      having direct connections to all upstream carriers
-                      allows the country’s network to prevent single-point
-                      failures.
-                    </p>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  square
-                  expanded={expandedMap === 'panel_framework'}
-                  onChange={handleChangeMap('panel_framework')}
-                  style={{boxShadow:'none'}}
-                  className={"accordion"}
-                >
-                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h4 style={{margin:'2px'}}>Stable political framework</h4>
-                  </AccordionSummary>
-                  <AccordionDetails style={{padding:1}}>
-                    <p >
-                      Costa Rica is a country that values Human Rights, Peace,
-                      and Democracy. The country is one of the most stable and
-                      longest-lasting Democracies in America. Costa Rica
-                      abolished its army in 1948 to promote education and
-                      wellbeing and stands out on equality and innovation.
-                      Moreover, the Inter-American Institute of Human Rights
-                      based its headquarters in San José.
-                    </p>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  square
-                  expanded={expandedMap === 'panel_awareness'}
-                  onChange={handleChangeMap('panel_awareness')}
-                  style={{boxShadow:'none'}}
-                  className={"accordion"}
-                >
-                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h4 style={{margin:'2px'}}>Environmental awareness</h4>
-                  </AccordionSummary>
-                  <AccordionDetails style={{padding:1}}>
-                    <p>
-                      Despite being a small country, Costa Rica houses more
-                      than 4% of the world’s biodiversity. The country’s
-                      leaders have been promoting ecology and sustainable
-                      development. Leading by example, more than 26% of its
-                      territory comprises of protected areas and National
-                      Parks.
-                    </p>
-                  </AccordionDetails>
-                </Accordion>
+              <Box className={"accordionBox"}>
+                <AccordionComp data={strategicLocationAccordion} expanded={expandedMap} handleChange={handleChangeMap}  bgColor={'white'}/>
               </Box>
             </Grid>
           </Grid>
@@ -488,19 +431,19 @@ const ServicePage = () => {
           <Box className={"spacingBox"}>
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
-                <Box>
+                <Box className={"accordionBox"}>
                   <Accordion
                     square
                     expanded={expandedEducation=== 'panel_Workshops'}
                     onChange={handleChangeEducation('panel_Workshops')}
-                    style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
+                    style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
                     className={"accordion"}
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                      <h4 style={{margin:'2px'}}>Executive Workshops</h4>
+                      <h4 style={{margin:'2px', padding: 0}}>Executive Workshops</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
-                      <p >
+                      <p style={{padding: 0}}>
                       We know that innovative technologies, such as
                       blockchain, may have a steep learning curve. So, we
                       offer workshops on blockchain and EOSIO technology to
@@ -514,14 +457,14 @@ const ServicePage = () => {
                     square
                     expanded={expandedEducation === 'panel_Developers'}
                     onChange={handleChangeEducation('panel_Developers')}
-                    style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
+                    style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
                     className={"accordion"}
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                      <h4 style={{margin:'2px'}}>Training for Developers</h4>
+                      <h4 style={{margin:'2px',padding: 0}}>Training for Developers</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
-                      <p >
+                      <p style={{padding: 0}}>
                       We also provide training and education resources for new
                       talents that wish to kickstart their career in
                       blockchain and in the EOSIO protocol. We have assembled
@@ -540,14 +483,14 @@ const ServicePage = () => {
                     square
                     expanded={expandedEducation === 'panel_Building'}
                     onChange={handleChangeEducation('panel_Building')}
-                    style={{backgroundColor:'#f1f1f1',boxShadow:'none'}}
+                    style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
                     className={"accordion"}
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                      <h4 style={{margin:'2px'}}>Community Building</h4>
+                      <h4 style={{margin:'2px',padding: 0}}>Community Building</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
-                      <p>
+                      <p style={{padding: 0}}>
                       We help promote the blockchain and EOSIO ecosystems by
                       hosting and attending community activities. We also
                       speak about blockchain and participate in events related
@@ -660,7 +603,6 @@ const ServicePage = () => {
       </Box>
     )
   }
-
 
   return (
     <>
