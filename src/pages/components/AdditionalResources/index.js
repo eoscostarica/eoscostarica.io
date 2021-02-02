@@ -3,12 +3,8 @@ import clsx from "clsx";
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import CircularProgress from '@material-ui/core/CircularProgress';
-import HubspotForm from 'react-hubspot-form'
-
 
 const AdditionalResources = () => {
-  
   return (
     <Box className={"containerSec"}>
       <Box className={"section"}>
