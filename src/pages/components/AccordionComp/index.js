@@ -35,4 +35,8 @@ AccordionComp.propTypes = {
     handleChange: PropTypes.func,
 }
 
+AccordionComp.defaultProps = {
+    data: [],
+  }
+
 export default AccordionComp;
