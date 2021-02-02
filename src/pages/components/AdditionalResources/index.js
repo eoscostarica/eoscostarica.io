@@ -22,22 +22,22 @@ const AdditionalResources = () => {
           </p>
         </Box>
         <br/>
-          <Grid container spacing={5} justify="center">
-            <Grid onClick={() => history.push("/block-producer/")} className={"gridButton"} item xs={12} md={5} >
-              <Box className={clsx("centerBox","spacingBox")}>
-                <img style={{width:'100px'}} srcSet={useBaseUrl("img/blog.svg")}/>
+          <Grid container spacing={5} justify="center" >
+            <Grid onClick={() => history.push("/block-producer/")} className={"gridButton"} item xs={12} md={5}>
+              <Box className={clsx("centerBox","spacingBox")} >
+                <img className={"resourcesIcon"} srcSet={useBaseUrl("img/blog.svg")}/>
                 <h3 style={{marginLeft:'25px'}}>Blog</h3>
               </Box>
             </Grid>
             <Grid onClick = {() => location.href='https://guias.eoscostarica.io/'} className={"gridButton"} item xs={12} md={5}>
               <Box className={clsx("centerBox","spacingBox")}>
-                <img style={{width:'100px'}} srcSet={useBaseUrl("img/press.svg")}/>
+                <img className={"resourcesIcon"} srcSet={useBaseUrl("img/press.svg")}/>
                 <h3 style={{marginLeft:'25px'}}>Press</h3>
               </Box>
             </Grid>
             <Grid onClick = {() => location.href='https://guide.eoscostarica.io/'} className={"gridButton"} item xs={12} md={5}>
               <Box className={clsx("centerBox","spacingBox")}>
-                <img style={{width:'100px'}} srcSet={useBaseUrl("img/decs.svg")}/>
+                <img className={"resourcesIcon"} srcSet={useBaseUrl("img/decs.svg")}/>
                 <Box style={{marginLeft:'25px'}}>
                   <h3 style={{marginBottom:'5px'}}>Devs</h3>
                   <h3 style={{marginBottom:'5px'}}>Portal</h3>
@@ -46,7 +46,7 @@ const AdditionalResources = () => {
             </Grid>
             <Grid onClick={() => location.href='https://github.com/eoscostarica'} className={"gridButton"} item xs={12} md={5}>
             <Box className={clsx("centerBox","spacingBox")}>
-                <img style={{width:'100px'}} srcSet={useBaseUrl("img/github-ours.svg")}/>
+                <img className={"resourcesIcon"} srcSet={useBaseUrl("img/github-ours.svg")}/>
                 <Box style={{marginLeft:'25px'}}>
                   <h3 style={{marginBottom:'5px'}}>Our</h3>
                   <h3 style={{marginBottom:'5px'}}>Github</h3>

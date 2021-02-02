@@ -8,6 +8,9 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 
+
+import AdditionalResources from './components/AdditionalResources'
+
 const BlockProducer = () => {
   const history = useHistory();
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
@@ -545,50 +548,6 @@ const BlockProducer = () => {
               </Grid>
             </Grid>
           </Box>
-        </Box>
-      </Box>
-    )
-  }
-
-  const AdditionalResources = () => {
-    return (
-      <Box className={clsx("containerSec","reduceDobleMarginTop")}>
-        <Box className={isDesktop ? "sectionPadding" : "section"}>
-          <Box className={"titleBox"}>
-            <h2>Additional Resources</h2>
-          </Box>
-          <p>
-            Find more interesting reads and resources to continue learning
-            about
-            <a href={"https://eoscostarica.medium.com/how-to-choose-an-enterprise-blockchainplatform-7c3665994ad6"}
-              target="_blank"
-              > enterprise blockchain</a> and
-              <a href={" https://eos.io/"} target="_blank"> EOSIO</a>.
-          </p>
-          <br/>
-          <Grid className={"topSpacingBoxIcons"} style={{justifyContent:'space-evenly'}} container>
-            <Grid onClick={() => history.push("/block-producer/")} className={"gridButton"} item xs={12} md={4}>
-              <img srcSet={useBaseUrl("img/blog.svg")}/>
-              <h3 className={"titleBlog"}>Blog</h3>
-            </Grid>
-            <Grid onClick = {() => location.href='https://guias.eoscostarica.io/'} className={"gridButton"} item xs={12} md={4}>
-              <img srcSet={useBaseUrl("img/press.svg")}/>
-              <h3 style={{marginTop:'30px', marginLeft:'20px'}}>Press</h3>
-            </Grid>
-          </Grid>
-          <br/>
-          <Grid className={"topSpacingBoxIcons"} style={{justifyContent:'space-evenly'}} container>
-            <Grid onClick = {() => location.href='https://guide.eoscostarica.io/'} className={"gridButton"} item xs={12} md={4}>
-              <img srcSet={useBaseUrl("img/decs.svg")}/>
-              <h3 className={"titleDevs1"}>Devs</h3>
-              <h3 className={"titleDevs2"}>Portal</h3>
-            </Grid>
-            <Grid onClick={() => location.href='https://github.com/eoscostarica'} className={"gridButton"} item xs={12} md={4}>
-              <img srcSet={useBaseUrl("img/github-ours.svg")}/>
-              <h3 className={"titleGit1"}>Our</h3>
-              <h3 className={"titleGit2"}>Github</h3>
-            </Grid>
-          </Grid>
         </Box>
       </Box>
     )
