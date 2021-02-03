@@ -216,7 +216,6 @@ const Team = () => {
                         {!img && 
                             <Avatar variant="square" style={{width:"200px", height:"250px"}} src={useBaseUrl("img/team/profile.jpg")}/>
                         }
-                        
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6}>
