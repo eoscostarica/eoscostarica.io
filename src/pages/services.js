@@ -94,7 +94,7 @@ const solutionBaseAccordionRight =
 const ServicePage = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
   const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
-  const [expandedMap, setExpandedMap] = useState('panel_interconnectivity');
+  const [expandedMap, setExpandedMap] = useState();
   const [expandedSolution, setExpandedSolution] = useState();
   const [expandedEnterprise, setExpandedEnterprise] = useState();
   const [expandedEducation, setExpandedEducation] = useState('panel_Workshops');
@@ -130,15 +130,13 @@ const ServicePage = () => {
     handleChangeEducation('panel_Workshops')
   }, []);
 
-
   const HeroSection = () => {
     return (
-      <Box className={"containerSec"}>
+      <Box className="containerSec">
         {isDesktop && 
-          <Box className={"sectionHero"}>
-          <Box className={"titleBox"}>
-            <h1>Custom-made</h1>
-            <h1>Blockchain Solutions</h1>
+          <Box className="sectionHero">
+          <Box className="titleBox">
+            <h1>Custom-made <br/> Blockchain Solutions</h1>
           </Box>
           <p >
             Leverage blockchain technology. Our team will help you embrace
@@ -148,26 +146,25 @@ const ServicePage = () => {
             We have years of experience integrating enterprise blockchain solutions and
             developing infrastructure for business environments.
           </p>
-          <Box className={"doubleSpacingBox"}>
+          <Box className="doubleSpacingBox">
             <Grid container spacing={5}>
               <Grid item xs={12} md={4}>
-                <button className={"buttonSecondary"} style={{padding: "19px", height:"90px", width: "100%"}} onClick={handleScrollDev}>Development<br/>Services</button>
+                <button className="buttonSecondary" style={{padding: "19px", height:"90px", width: "100%"}} onClick={handleScrollDev}>Development<br/>Services</button>
               </Grid>
               <Grid item xs={12} md={4}>
-                <button className={"buttonSecondary"} style={{padding: "19px", height:"90px", width: "100%"}} onClick={handleScrollInfra}>Blockchain<br/>Infrastructure</button>
+                <button className="buttonSecondary" style={{padding: "19px", height:"90px", width: "100%"}} onClick={handleScrollInfra}>Blockchain<br/>Infrastructure</button>
               </Grid>
               <Grid item xs={12} md={4}>
-                <button className={"buttonSecondary"} style={{padding: "19px", height:"90px", width: "100%"}} onClick={handleScrollEdu}>Education<br/>and Training</button>
+                <button className="buttonSecondary" style={{padding: "19px", height:"90px", width: "100%"}} onClick={handleScrollEdu}>Education<br/>and Training</button>
               </Grid>
             </Grid>
           </Box>
         </Box>
         }
         {isMobile && 
-          <Box className={"sectionHeroMobile"}>
-            <Box className={"titleBox"}>
-              <h1 >Custom-made</h1>
-              <h1 >Blockchain Solutions</h1>
+          <Box className="sectionHeroMobile">
+            <Box className="titleBox">
+              <h1 >Custom-made <br/> Blockchain Solutions</h1>
             </Box>
             <p>
               Leverage blockchain technology. Our team will help you embrace
@@ -178,8 +175,8 @@ const ServicePage = () => {
               We have years of experience integrating enterprise blockchain solutions and
               developing infrastructure for business environments.
             </p>
-            <Box className={"buttonBoxMobile"}>
-              <button className={"buttonPrimary"} onClick={() => history.push("/about/")}>
+            <Box className="buttonBoxMobile">
+              <button className="buttonPrimary" onClick={() => history.push("/about/")}>
                 Get to Know Us
               </button>
             </Box>
@@ -191,20 +188,19 @@ const ServicePage = () => {
 
   const BlockchainDev = () => {
     return (
-      <Box ref={refDevelopment}  className={"containerSec"}>
-        <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
-          <Box className={"titleBox"}>
-            <h2>Blockchain</h2>
-            <h2>Development Services</h2>
+      <Box ref={refDevelopment}  className="containerSec">
+        <Box className={clsx("section",{["sectionPadding"]: isMobile})}>
+          <Box className="titleBox">
+            <h2>Blockchain <br/> Development Services</h2>
           </Box>
           {isMobile && 
-            <Box className={"centerBox"}>
+            <Box className="centerBox">
               <DevelopmentServices width="214.409"/>
             </Box>
           }
           <Grid container>
             <Grid item xs={12} md={6}>
-              <Box className={"spacingBox"}>
+              <Box className="spacingBox">
                 <p>
                   Explore the possibilities that blockchain technology offers. Boost
                   your operations with increased transparency, security, and
@@ -225,7 +221,7 @@ const ServicePage = () => {
             </Grid>
             {isDesktop && 
               <Grid item xs={12} md={6}>
-                <Box style={{marginTop:'-40px'}} className={"centerBox"}>
+                <Box style={{marginTop:'-40px'}} className="centerBox">
                   <DevelopmentServices />
                 </Box>
               </Grid>
@@ -233,8 +229,8 @@ const ServicePage = () => {
             <Grid item xs={12} md={12}>
               <br/>
               <br/>
-              <Box className={"spacingBox"}>
-                <Box className={"h3Box"}>
+              <Box className="spacingBox">
+                <Box className="h3Box">
                   <h3 >Enterprise Blockchain</h3>
                 </Box>
                 <p>
@@ -250,24 +246,24 @@ const ServicePage = () => {
           </Grid>
           <Grid container spacing={10}>
             <Grid item xs={12} md={6}>
-              <Box className={"accordionBox"}>
+              <Box className="accordionBox">
                 <AccordionComp data={enterpriseBlockchainAccordionLeft} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Box className={"accordionBox"}>
+              <Box className="accordionBox">
                 <AccordionComp data={enterpriseBlockchainAccordionRight} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
               </Box>
               <br/>
             </Grid>
           </Grid>
-          <Box className={"doubleSpacingBox"}>
+          <Box className="doubleSpacingBox">
             <Grid container>
               <Grid item xs={12} md={12}>
-                <Box className={"h3Box"}>
+                <Box className="h3Box">
                   <h3>A Solution-based Approach</h3>
                 </Box>
-                <Box className={"spacingBox"}>
+                <Box className="spacingBox">
                   <p>
                     EOS Costa Rica leverages a cross-functional team that follows an
                     Agile methodology. We seek efficiency and collaboration and
@@ -281,33 +277,30 @@ const ServicePage = () => {
             </Grid>
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
-                <Box className={"accordionBox"}>
+                <Box className="accordionBox">
                   <AccordionComp data={solutionBaseAccordionLeft} expanded={expandedSolution} handleChange={handleChangeSolution} bgColor={'white'}/>
                 </Box>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Box className={"accordionBox"}>
+                <Box className="accordionBox">
                   <AccordionComp data={solutionBaseAccordionRight} expanded={expandedSolution} handleChange={handleChangeSolution} bgColor={'white'}/>
                 </Box>
                 <br/>
               </Grid>
             </Grid>
           </Box>
-          <Box className={"spacingBox"}>
-            <Box className={"h3Box"}>
+          <Box className="spacingBox">
+            <Box className="h3Box">
               <h3>Our Process from Start to Finish</h3>
             </Box>
-            <p>
-              When working on a project, our team follows a combination of
-              Design Thinking, Lean UX, and Agile methodologies. Applying
-              Design Thinking helps us understand the users’ needs and pain
-              points, define a specific problem, and experiment to find
-              potential solutions. Lean UX allows us to learn faster,
-              repeatedly iterate until the product fits its purpose, or pivot
-              entirely when the focus shifts. Moreover, Agile methodology
-              allows us to work flexibly on sprints towards developing
-              user-centered solutions.
-            </p>
+            <Box className={clsx("centerBox","doubleSpacingBox")}>
+              {isDesktop && 
+                <img src={useBaseUrl("/img/process.jpg")}/>
+              }
+              {!isDesktop && 
+                <img src={useBaseUrl("/img/process.jpg")}/>
+              }
+            </Box>
           </Box>
         </Box>
       </Box>
@@ -317,27 +310,13 @@ const ServicePage = () => {
   const BlockchainInfrastructure = () => {
     return (
       <Box ref={refInfraestrcture} className={clsx("containerSec","reduceDobleMarginTop")}>
-        <Box className={"sectionPadding"}>
+        <Box className="sectionPadding">
           <Grid container spacing={5}>
-            {isDesktop && 
             <Grid item xs={12} md={6}>
-              <Box className={"centerBox"}>
-                <Blockchaininfrastructure/>
+              <Box className="titleBox">
+                <h2>Blockchain <br/> Infrastructure</h2>
               </Box>
-            </Grid>
-            }
-            <Grid item xs={12} md={6}>
-              <Box className={"titleBox"}>
-                <h2>Blockchain Infrastructure</h2>
-              </Box>
-              {isMobile && 
-                <Box className={"spacingBox"}>
-                  <Box className={"centerBox"}>
-                    <Blockchaininfrastructure/>
-                  </Box>
-                </Box>
-              }
-              <Box className={"h3Box"}>
+              <Box className="h3Box">
                 <h3>Top-notch Blockchain Infrastructure</h3>
               </Box>
               <p>
@@ -349,11 +328,20 @@ const ServicePage = () => {
                 Learn more about enterprise blockchain:
               </p>
             </Grid>
+            {isDesktop && 
+            <Grid item xs={12} md={6}>
+              <br/>
+              <br/>
+              <Box className="centerBox">
+                <Blockchaininfrastructure/>
+              </Box>
+            </Grid>
+            }
           </Grid>
-          <Box className={"topSpacingBox"}>
+          <Box className="topSpacingBox">
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
-                <Box className={"h3Box"}>
+                <Box className="h3Box">
                   <h4>Blockchain nodes development</h4>
                 </Box>
                 <p>
@@ -364,17 +352,7 @@ const ServicePage = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Box className={"h3Box"}>
-                  <h4>Ready-to-use infrastructure</h4>
-                </Box>
-                <p>
-                  Also, we developed a robust, top-grade infrastructure ready to
-                  host blockchain networks for our clients and open-source
-                  projects from our datacenter.
-                </p>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Box className={"h3Box"}>
+                <Box className="h3Box">
                   <h4>API endpoints</h4>
                 </Box>
                 <p>
@@ -385,7 +363,17 @@ const ServicePage = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+                <Box className="h3Box">
+                  <h4>Ready-to-use infrastructure</h4>
+                </Box>
+                <p>
+                  Also, we developed a robust, top-grade infrastructure ready to
+                  host blockchain networks for our clients and open-source
+                  projects from our datacenter.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Box className="h3Box">
                   <h4>Experience deploying networks</h4>
                 </Box>
                 <p>
@@ -396,8 +384,8 @@ const ServicePage = () => {
               </Grid>
             </Grid>
           </Box>
-          <Box className={"doubleSpacingBox"}>
-            <Box className={"h3Box"}>
+          <Box className="doubleSpacingBox">
+            <Box className="h3Box">
               <h3>A Strategic Location</h3>
             </Box>
             <p>
@@ -412,13 +400,13 @@ const ServicePage = () => {
           </Box>
           <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
-              <Box className={"centerBox"}>
-                <img src={useBaseUrl("/img/map.svg")}/>
+              <Box className="centerBox">
+                <img src={useBaseUrl("/img/map-loacation.svg")}/>
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Box className={"accordionBox"}>
-                <AccordionComp data={strategicLocationAccordion} expanded={expandedMap} handleChange={handleChangeMap}  bgColor={'white'}/>
+              <Box className="accordionBox">
+                <AccordionComp data={strategicLocationAccordion} expanded={expandedMap} handleChange={handleChangeMap} bgColor={'white'}/>
               </Box>
             </Grid>
           </Grid>
@@ -429,38 +417,38 @@ const ServicePage = () => {
 
   const EducationTraining = () => {
     return (
-      <Box ref={refEducation}  className={"containerGray"}>
-        <Box className={"sectionPadding"}>
-          <Box className={"h3Box"}>
+      <Box ref={refEducation} className="containerGray">
+        <Box className="sectionPadding">
+          <Box className="h3Box">
             <h2>Education and Training</h2>
           </Box>
           {isMobile && 
-            <Box className={"centerBox"}>
+            <Box className="centerBox">
               <img src={useBaseUrl("/img/imgCubes/eos-education.svg")}/>
            </Box>
           }
-          <Box className={"spacingBox"}>
+          <Box className="spacingBox">
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
-                <Box className={"accordionBox"}>
+                <Box className="accordionBox">
                   <Accordion
                     square
                     expanded={expandedEducation=== 'panel_Workshops'}
                     onChange={handleChangeEducation('panel_Workshops')}
                     style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
-                    className={"accordion"}
+                    className="accordion"
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
                       <h4 style={{margin:'2px', padding: 0}}>Executive Workshops</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
                       <p style={{padding: 0}}>
-                      We know that innovative technologies, such as
-                      blockchain, may have a steep learning curve. So, we
-                      offer workshops on blockchain and EOSIO technology to
-                      C-suite executives and teams that want to keep up to
-                      date and learn more about blockchain and enterprise use
-                      cases.
+                        We know that innovative technologies, such as
+                        blockchain, may have a steep learning curve. So, we
+                        offer workshops on blockchain and EOSIO technology to
+                        C-suite executives and teams that want to keep up to
+                        date and learn more about blockchain and enterprise use
+                        cases.
                       </p>
                     </AccordionDetails>
                   </Accordion>
@@ -469,24 +457,24 @@ const ServicePage = () => {
                     expanded={expandedEducation === 'panel_Developers'}
                     onChange={handleChangeEducation('panel_Developers')}
                     style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
-                    className={"accordion"}
+                    className="accordion"
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
                       <h4 style={{margin:'2px',padding: 0}}>Training for Developers</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
                       <p style={{padding: 0}}>
-                      We also provide training and education resources for new
-                      talents that wish to kickstart their career in
-                      blockchain and in the EOSIO protocol. We have assembled
-                      a web portal that includes learning materials and guides
-                      for developers. Check them out {" "}  
-                      <a href="https://guide.eoscostarica.io/" target="_blank">
-                          here
-                      </a>. Also, <a href={useBaseUrl("/contact-us/")} target="_blank">
-                          ask us
-                      </a> about
-                      our training courses for companies and teams.
+                        We also provide training and education resources for new
+                        talents that wish to kickstart their career in
+                        blockchain and in the EOSIO protocol. We have assembled
+                        a web portal that includes learning materials and guides
+                        for developers. Check them out {" "}  
+                        <a href="https://guide.eoscostarica.io/" target="_blank">
+                            here
+                        </a>. Also, <a href={useBaseUrl("/contact-us/")} target="_blank">
+                            ask us
+                        </a> about
+                        our training courses for companies and teams.
                       </p>
                     </AccordionDetails>
                   </Accordion>
@@ -495,22 +483,22 @@ const ServicePage = () => {
                     expanded={expandedEducation === 'panel_Building'}
                     onChange={handleChangeEducation('panel_Building')}
                     style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
-                    className={"accordion"}
+                    className="accordion"
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
                       <h4 style={{margin:'2px',padding: 0}}>Community Building</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
                       <p style={{padding: 0}}>
-                      We help promote the blockchain and EOSIO ecosystems by
-                      hosting and attending community activities. We also
-                      speak about blockchain and participate in events related
-                      to technology and innovation. Every year, we host a
-                      team-building event called <a href="https://eosurf.com/" target="_blank">
-                          EOSurf
-                      </a> that takes our
-                      operations to the beach for several days to switch
-                      computers and code for surf and yoga lessons.
+                        We help promote the blockchain and EOSIO ecosystems by
+                        hosting and attending community activities. We also
+                        speak about blockchain and participate in events related
+                        to technology and innovation. Every year, we host a
+                        team-building event called <a href="https://eosurf.com/" target="_blank">
+                            EOSurf
+                        </a> that takes our
+                        operations to the beach for several days to switch
+                        computers and code for surf and yoga lessons.
                       </p>
                     </AccordionDetails>
                   </Accordion>
@@ -518,7 +506,7 @@ const ServicePage = () => {
               </Grid>
               {isDesktop && 
                 <Grid item xs={12} md={6}>
-                  <Box className={"centerBox"}>
+                  <Box className="centerBox">
                     <img  src={useBaseUrl("/img/imgCubes/eos-education.svg")}/>
                   </Box>
                 </Grid>
@@ -533,24 +521,24 @@ const ServicePage = () => {
   const IndustryBlockchain = () => {
     return (
       <Box className={clsx("containerSec","reduceMarginTop")}>
-        <Box className={"sectionPadding"}>
-          <Box className={"titleBox"}>
+        <Box className="sectionPadding">
+          <Box className="titleBox">
             <h2>How Can Your Industry Deploy Blockchain?</h2>
           </Box>
           <p>
             Blockchain technology has the capabilities to transform many industries, including:
           </p>
-          <Box className={"spacingBox"}>
+          <Box className="spacingBox">
             <Grid container spacing={7}>
               <Grid item xs={12} md={4}>
-                <Box className={"imgBoxServices"}>
+                <Box className="imgBoxServices">
                   <img
                    src={useBaseUrl("img/logistics.svg")}
                    style={{paddingTop: '25px'}}
-                   className = {"imageIndrustries"}
+                   className="imageIndrustries"
                    />
                 </Box>
-                <Box className={"h3Box"}>
+                <Box className="h3Box">
                   <h3>Payments and Transfers</h3>
                 </Box>
                 <p>
@@ -563,14 +551,14 @@ const ServicePage = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Box className={"imgBoxServices"}>
+                <Box className="imgBoxServices">
                   <img 
                     src={useBaseUrl("img/payments.svg")}
                     style={{paddingTop: '25px'}}
-                    className = {"imageIndrustriesLogistics"}
+                    className="imageIndrustriesLogistics"
                   />
                 </Box>
-                <Box className={"h3Box"}>
+                <Box className="h3Box">
                   <h3>Logistics and Supply Chain</h3>
                 </Box>
                 <p>
@@ -584,14 +572,14 @@ const ServicePage = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                  <Box className={"imgBoxServices"}>
+                  <Box className="imgBoxServices">
                     <img 
                       src={useBaseUrl("img/gaming.svg")}
                       style={{paddingTop: '20px'}}
-                      className = {"imageIndrustries"}
+                      className="imageIndrustries"
                     />
                   </Box>
-                  <Box className={"h3Box"}>
+                  <Box className="h3Box">
                     <h3>Gaming and Esports</h3>
                   </Box>
                 <p>
@@ -619,10 +607,10 @@ const ServicePage = () => {
     <>
       {isDesktop && 
         <Layout>
-          <Box className={"mainContainer"}>
+          <Box className="mainContainer">
             <Parallax strength={800}>
-              <Background className={"bgParallax"}>
-                  <Box className={"imgParallax"} />
+              <Background className="bgParallax">
+                  <Box className="imgParallax" />
               </Background>
               <HeroSection />
               <BlockchainDev />
@@ -635,7 +623,7 @@ const ServicePage = () => {
       }
       {isMobile && 
         <Layout>
-          <Box className={"mainContainer"}>
+          <Box className="mainContainer">
             <HeroSection />
             <BlockchainDev />
             <BlockchainInfrastructure />
