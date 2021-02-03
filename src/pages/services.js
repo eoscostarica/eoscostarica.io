@@ -520,10 +520,10 @@ const ServicePage = () => {
 
   const IndustryBlockchain = () => {
     return (
-      <Box className={clsx("containerSec","reduceMarginTop")}>
+      <Box className="containerSec">
         <Box className="sectionPadding">
           <Box className="titleBox">
-            <h2>How Can Your Industry Deploy Blockchain?</h2>
+            <h2>How Can Your Industry Deploy <br/> Blockchain?</h2>
           </Box>
           <p>
             Blockchain technology has the capabilities to transform many industries, including:
@@ -603,6 +603,29 @@ const ServicePage = () => {
     )
   }
 
+  const ContactUs = () => {
+    return (
+      <Box className={"containerGray"}>
+        <Box className={"sectionPadding"}>
+          <Grid container spacing={5}>
+            <Grid item xs={12} md={8}>
+                <Box>
+                  <h2 className={"centerTextOnMobile"}>Start working with us</h2>
+                  <h2 className={"centerTextOnMobile"}>and implement</h2>
+                  <h2 className={"centerTextOnMobile"}>blockchain technology.</h2>
+                </Box>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className={"buttonBox"}>
+                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+    )
+  }
+
   return (
     <>
       {isDesktop && 
@@ -618,6 +641,7 @@ const ServicePage = () => {
             <BlockchainInfrastructure />
             <EducationTraining />
             <IndustryBlockchain />
+            <ContactUs />
           </Box>
         </Layout>
       }
@@ -629,6 +653,7 @@ const ServicePage = () => {
             <BlockchainInfrastructure />
             <EducationTraining />
             <IndustryBlockchain />
+            <ContactUs />
           </Box>
         </Layout>
       }
