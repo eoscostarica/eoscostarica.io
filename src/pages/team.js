@@ -1,15 +1,14 @@
-import React from "react";
-import { Parallax, Background } from 'react-parallax';
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import React from "react"
+import { Parallax, Background } from 'react-parallax'
+import useBaseUrl from "@docusaurus/useBaseUrl"
 import { useMediaQuery } from 'react-responsive'
-import Layout from "@theme/Layout";
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import clsx from "clsx";
-import Avatar from '@material-ui/core/Avatar';
-import PersonIcon from '@material-ui/icons/Person';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import TwitterIcon from '@material-ui/icons/Twitter';
+import Layout from "@theme/Layout"
+import Box from '@material-ui/core/Box'
+import Grid from '@material-ui/core/Grid'
+import clsx from "clsx"
+import Avatar from '@material-ui/core/Avatar'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import TwitterIcon from '@material-ui/icons/Twitter'
 
 const ManagementTeam = [
     {
@@ -37,7 +36,6 @@ const ManagementTeam = [
         twitter:"https://twitter.com/xaviercr"
     }
 ]
-
 
 const MarketingSalesTeam = [
     {
@@ -179,27 +177,26 @@ const DevelopTeam = [
         linkedIn:"",
         twitter:""
     },
-    
 ]
 
 const Team = () => {
-    const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
-    const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
+    const isMobile = useMediaQuery({query: '(max-width: 767px)'})
+    const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
 
     const HeroSection = () => {
         return (
-          <Box className={"containerSec"}>
+          <Box className="containerSec">
             {isDesktop && 
-                <Box className={"sectionHero"} style={{height:'auto'}}>
-                    <Box className={"titleBox"}>
+                <Box className="sectionHero" style={{height:'auto'}}>
+                    <Box className="titleBox">
                         <h1>Meet the Essence of Our Company</h1>
                     </Box>
                     <TeamSection />
                 </Box>
             }
             {isMobile && 
-                <Box className={"sectionHeroMobile"} style={{paddingBottom: 0}}>
-                    <Box className={"titleBox"}>
+                <Box className="sectionHeroMobile" style={{paddingBottom: 0}}>
+                    <Box className="titleBox">
                         <h1>Meet the Essence of Our Company</h1>
                     </Box>
                 </Box>
@@ -212,7 +209,7 @@ const Team = () => {
         return(
             <Grid container>
                 <Grid item xs={12} md={6}>
-                    <Box className={"avatarBox"}>
+                    <Box className="avatarBox">
                         {img && 
                             <Avatar variant="square" style={{width:"200px", height:"250px"}} src={useBaseUrl(img)}/>
                         }
@@ -224,16 +221,16 @@ const Team = () => {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Box >
-                        <h3 className={"nameText"}>{name}</h3>
-                        <p className={"positionText"}>{position}</p>
-                        <p className={"bioText"}>{bio}</p>
+                        <h3 className="nameText">{name}</h3>
+                        <p className="positionText">{position}</p>
+                        <p className="bioText">{bio}</p>
                     </Box>
                     <Box className="socialMediaBox">
                         {linkedIn && 
-                            <a href={linkedIn} target="_blank" className={"socialMediaIcon"}><LinkedInIcon style={{width:'30px', height:'30px'}}/></a>
+                            <a href={linkedIn} target="_blank" className="socialMediaIcon"><LinkedInIcon style={{width:'30px', height:'30px'}}/></a>
                         }
                         {twitter && 
-                            <a href={twitter} target="_blank" className={"socialMediaIcon"}><TwitterIcon style={{width:'30px', height:'30px'}}/></a>
+                            <a href={twitter} target="_blank" className="socialMediaIcon"><TwitterIcon style={{width:'30px', height:'30px'}}/></a>
                         }
                     </Box>
                 </Grid>
@@ -243,10 +240,10 @@ const Team = () => {
 
     const TeamSection = () => {
         return(
-            <Box className={"containerSec"}>
+            <Box className="containerSec">
                 <Box className={clsx("sectionNoPadding")}>
-                    <Box className={isDesktop? "doubleSpacingBox" : ""}>
-                        <Box className={"spacingBox"}>
+                    <Box className={isDesktop? "doubleSpacingBox": ""}>
+                        <Box className="spacingBox">
                             <h2>Management Team</h2>
                         </Box>
                         <Box>
@@ -266,8 +263,8 @@ const Team = () => {
                             </Grid>
                         </Box>
                     </Box>
-                    <Box className={"doubleSpacingBox"}>
-                        <Box className={"spacingBox"}>
+                    <Box className="doubleSpacingBox">
+                        <Box className="spacingBox">
                             <h2>Marketing and Sales</h2>
                         </Box>
                         <Box>
@@ -287,8 +284,8 @@ const Team = () => {
                             </Grid>
                         </Box>
                     </Box>
-                    <Box className={"doubleSpacingBox"}>
-                        <Box className={"spacingBox"}>
+                    <Box className="doubleSpacingBox">
+                        <Box className="spacingBox">
                             <h2>Development and Design</h2>
                         </Box>
                         <Box>
@@ -318,10 +315,10 @@ const Team = () => {
         <>
             {isDesktop &&
                 <Layout>
-                    <Box className={"mainContainer"}>
+                    <Box className="mainContainer">
                         <Parallax strength={800}>
-                            <Background className={"bgParallax"}>
-                                <Box className={"imgParallax"} />
+                            <Background className="bgParallax">
+                                <Box className="imgParallax"/>
                             </Background>
                             <HeroSection />
                         </Parallax>
@@ -330,7 +327,7 @@ const Team = () => {
             }
             {isMobile &&
                 <Layout>
-                    <Box className={"mainContainer"}>
+                    <Box className="mainContainer">
                         <HeroSection />
                         <TeamSection />
                     </Box>
@@ -339,7 +336,5 @@ const Team = () => {
         </>
     )
 }
-
-
 
 export default Team;
