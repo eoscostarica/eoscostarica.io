@@ -12,7 +12,7 @@ import TwitterIcon from '@material-ui/icons/Twitter'
 
 const ManagementTeam = [
     {
-        img:"",
+        img:"img/team/rodrigo.jpg",
         name:"Rodrigo Fernández",
         position:"Founder, Chairman & Chief Strategist",
         bio:"I believe in fostering truth and transparency to pursue individual freedom.",
@@ -20,7 +20,7 @@ const ManagementTeam = [
         twitter:"https://twitter.com/rjfescazu"
     },
     {
-        img:"",
+        img:"img/team/edgar.jpg",
         name:"Edgar Fernández",
         position:"Co-founder & Finance and Enterprise",
         bio:"I thrive on developing the entrepreneurial spirit and using tech to create decentralized networks.",
@@ -39,7 +39,7 @@ const ManagementTeam = [
 
 const MarketingSalesTeam = [
     {
-        img:"",
+        img:"img/team/luisD.jpg",
         name:"Luis Diego Rojas",
         position:"Communications and Content Strategist",
         bio:"I believe that communicating new techs plays a crucial role in widespread adoption.",
@@ -58,7 +58,7 @@ const MarketingSalesTeam = [
 
 const DevelopTeam = [
     {
-        img:"",
+        img:"img/team/adriel.jpg",
         name:"Adriel Diaz",
         position:"Full Stack Developer",
         bio:"",
@@ -90,7 +90,7 @@ const DevelopTeam = [
         twitter:""
     },
     {
-        img:"",
+        img:"img/team/cristian.jpg",
         name:"Cristian Castro",
         position:"C++ Developer",
         bio:"We're creating the new technologies that will free people for good.",
@@ -114,7 +114,7 @@ const DevelopTeam = [
         twitter:""
     },
     {
-        img:"",
+        img:"img/team/jorge.jpg",
         name:"Jorge Murillo",
         position:"Sr. UX Designer",
         bio:"",
@@ -154,7 +154,7 @@ const DevelopTeam = [
         twitter:""
     },
     {
-        img:"",
+        img:"img/team/steph.jpg",
         name:"Stephanie Delgado",
         position:"Intern",
         bio:"The tech world is always evolving, so I believe one must be fearless.",
@@ -214,7 +214,7 @@ const Team = () => {
                             <Avatar variant="square" style={{width:"200px", height:"250px"}} src={useBaseUrl(img)}/>
                         }
                         {!img && 
-                            <Avatar variant="square" style={{width:"200px", height:"250px"}} src={useBaseUrl("img/team/profile.jpg")}/>
+                            <Avatar variant="square" style={{width:"200px", height:"250px"}} src={useBaseUrl("img/team/profile-thinner.jpg")}/>
                         }
                     </Box>
                 </Grid>
