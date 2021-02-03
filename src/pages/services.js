@@ -1,20 +1,20 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Parallax, Background } from 'react-parallax';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import clsx from "clsx";
-import Layout from "@theme/Layout";
+import React, { useState, useEffect, useRef } from "react"
+import { Parallax, Background } from 'react-parallax'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import clsx from "clsx"
+import Layout from "@theme/Layout"
 import { useMediaQuery } from 'react-responsive'
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import useBaseUrl from "@docusaurus/useBaseUrl"
 import Box from '@material-ui/core/Box'
-import Grid from '@material-ui/core/Grid';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import { useHistory } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid'
+import Accordion from '@material-ui/core/Accordion'
+import AccordionDetails from '@material-ui/core/AccordionDetails'
+import AccordionSummary from '@material-ui/core/AccordionSummary'
+import { useHistory } from 'react-router-dom'
 
 import AccordionComp from './components/AccordionComp'
-import DevelopmentServices from './SvgComponents/DevelopmentServices';
-import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure';
+import DevelopmentServices from './SvgComponents/DevelopmentServices'
+import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure'
 
 const strategicLocationAccordion = 
 [
