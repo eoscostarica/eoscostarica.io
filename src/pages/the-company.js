@@ -10,6 +10,7 @@ import Box from '@material-ui/core/Box'
 import Carousel from 'react-material-ui-carousel'
 
 import ContactUsBanner from './components/ContactUsBanner'
+import WeAreOneGroup from './components/WeAreOneGroup'
 
 const TheCompany = () => {
   const isMobile = useMediaQuery({query:'(max-width: 767px)'})
@@ -164,66 +165,6 @@ const TheCompany = () => {
           </Box>
         </Box>
       </Box> 
-    )
-  }
-
-  const WeAreOneGroup = () => {
-    return (
-      <Box className="containerSec">
-      <Box className="sectionNoPadding">
-        <Box className="h3Box">
-          <h3 style={{textAlign:'center'}}>We Are One Group</h3>
-        </Box>
-        <Box className="spacingBox">
-          <Grid container>
-            <Grid item xs={12} md={3}>
-              <Box className="imgBoxLogos">
-                <a target="_blank" href="http://latamlink.io/">
-                  <img
-                    className="oneGroupLogo"
-                    alt="LatamLink"
-                    src={useBaseUrl("img/Group47.svg")}
-                  />
-                </a>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={3}>
-              <Box className="imgBoxLogos">
-                <a target="_blank" href="https://www.edenia.com/">
-                  <img
-                    className="oneGroupLogo"
-                    alt="Edenia"
-                    src={useBaseUrl("img/Group17.svg")}
-                  />
-                </a>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={3}>
-              <Box className="imgBoxLogos">
-                <a target="_blank" href="https://eosurf.com/">
-                  <img
-                    className="oneGroupLogo"
-                    alt="Eossurf"
-                    src={useBaseUrl("img/Group11.svg")}
-                  />
-                </a>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={3}>
-              <Box className="imgBoxLogos">
-                <a target="_blank" href="https://ticoblockchain.cr/">
-                  <img
-                    className="oneGroupLogo"
-                    alt="Ticoblockchain"
-                    src={useBaseUrl("img/Group55.svg")}
-                  />
-                </a>
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-    </Box>
     )
   }
 
