@@ -37,7 +37,7 @@ const AdditionalResources = () => {
             </Grid>
             <Grid onClick = {() => location.href='https://guide.eoscostarica.io/'} className="gridButton" item xs={12} md={5}>
               <Box className={clsx("centerBox","spacingBox")}>
-                <img className="resourcesIcon" srcSet={useBaseUrl("img/decs.svg")}/>
+                <img srcSet={useBaseUrl("img/decs.svg")}/>
                 <Box style={{marginLeft:'25px'}}>
                   <h3 style={{marginBottom:'5px'}}>Devs</h3>
                   <h3 style={{marginBottom:'5px'}}>Portal</h3>
