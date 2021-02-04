@@ -1,47 +1,44 @@
-import React from "react";
-import { useHistory } from 'react-router-dom';
-import { Parallax, Background } from 'react-parallax';
-import Grid from '@material-ui/core/Grid';
-import clsx from "clsx";
+import React from "react"
+import { useHistory } from 'react-router-dom'
+import { Parallax, Background } from 'react-parallax'
+import Grid from '@material-ui/core/Grid'
+import clsx from "clsx"
 import { useMediaQuery } from 'react-responsive'
-import Layout from "@theme/Layout";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import Layout from "@theme/Layout"
+import useBaseUrl from "@docusaurus/useBaseUrl"
 import Box from '@material-ui/core/Box'
+import Carousel from 'react-material-ui-carousel'
 
 const TheCompany = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
-  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
+  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
+  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
   const history = useHistory();
 
   const HeroSection = () => {
     return (
-      <Box className={"containerSec"}>
+      <Box className="containerSec">
         {isDesktop && 
-          <Box className={"sectionHero"}>
-          <Box className={"titleBox"}>
-            <h1>We Develop Enterprise</h1>
-            <h1>Blockchain Solutions</h1>
+          <Box className="sectionHero">
+          <Box className="titleBox">
+            <h1>We Develop Enterprise <br/> Blockchain Solutions</h1>
           </Box>
-          <p >Years of experience developing innovative technologies speak for us. 
-            Unleash the power of blockchain technology with the help of our agile team.
-          </p>
+          <p >Years of experience developing innovative technologies speak for us.Unleash the power of blockchain technology with the help of our agile team.</p>
           <br/>
-          <Box className={"buttonBox"}>
-            <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact Us</button>
+          <Box className="buttonBox">
+            <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact Us</button>
           </Box>
         </Box>
         }
         {isMobile && 
-          <Box className={"sectionHeroMobile"}>
-            <Box className={"titleBox"}>
-              <h1>We Develop Enterprise</h1>
-              <h1>Blockchain Solutions</h1>
+          <Box className="sectionHeroMobile">
+            <Box className="titleBox">
+                <h1>We Develop Enterprise <br/> Blockchain Solutions</h1>
             </Box>
             <p>Years of experience developing innovative technologies speak for us.</p>
             <br/>
             <p>Unleash the power of blockchain technology with the help of our agile team.</p>
-            <Box className={"buttonBoxMobile"}>
-              <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Learn More</button>
+            <Box className="buttonBoxMobile">
+              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Learn More</button>
             </Box>
         </Box>
       }
@@ -51,15 +48,15 @@ const TheCompany = () => {
 
   const EOSCR = () => {
     return (
-      <Box className={clsx("reduceMarginTop","containerSec")}>
-        <Box className={"sectionPadding"}>
-          <Box className={"spacingBox"}>
+      <Box className="containerSec">
+        <Box className={clsx("section",{["sectionPadding"]: isMobile})}>
+          <Box className="spacingBox">
             <Grid container spacing={5}>
               <Grid item md={6}>
-                <Box className={"titleBox"}>
+                <Box className="titleBox">
                   <h2>Get to Know EOS Costa Rica</h2>
                 </Box>
-                <p className={"body1"}>
+                <p>
                   EOS Costa Rica is part of a company with over 
                   three decades of developing innovative technologies. 
                   During the 80s, we launched the first BBS 
@@ -84,29 +81,29 @@ const TheCompany = () => {
                 </p>
               </Grid>
               <Grid item md={6}>
-                <Box className={"imgBoxRight"}>
+                <Box className="imgBoxRight">
                   <img
-                    className={"imgKnow"}
+                    className="imgKnow"
                     src={useBaseUrl("img/ourstory.jpg")}
                   />
                 </Box>  
               </Grid>
             </Grid>
           </Box>
-          <Box className={"spacingBox"}>
+          <Box className="spacingBox">
             <Grid container spacing={5}>
               {isDesktop && 
                 <Grid item md={6}>
-                  <Box className={"imgBoxLeft"}>
+                  <Box className="imgBoxLeft">
                     <img
-                      className={"imgKnow"}
+                      className="imgKnow"
                       src={useBaseUrl("img/ourvision.jpg")}
                     />
                   </Box>  
                 </Grid>
               }
               <Grid item md={6}>
-                <Box className={"titleBox"}>
+                <Box className="titleBox">
                   <h2>Our vision</h2>
                 </Box>
                 <p>
@@ -129,9 +126,9 @@ const TheCompany = () => {
               </Grid>
               {isMobile && 
                 <Grid item md={6}>
-                  <Box className={"imgBoxLeft"}>
+                  <Box className="imgBoxLeft">
                     <img
-                      className={"imgKnow"}
+                      className="imgKnow"
                       src={useBaseUrl("img/company.webp")}
                     />
                   </Box>  
@@ -139,7 +136,7 @@ const TheCompany = () => {
               }
             </Grid>
           </Box>
-          <Box className={"spacingBox"}>
+          <Box className="spacingBox">
             <Grid container spacing={5} >
               <Grid item xs={12} md={12}>
                 <p>
@@ -170,18 +167,18 @@ const TheCompany = () => {
 
   const WeAreOneGroup = () => {
     return (
-      <Box className={clsx("containerSec")}>
-      <Box className={clsx("sectionNoPadding")}>
-        <Box className={"h3Box"}>
+      <Box className="containerSec">
+      <Box className="sectionNoPadding">
+        <Box className="h3Box">
           <h3 style={{textAlign:'center'}}>We Are One Group</h3>
         </Box>
-        <Box className={"spacingBox"}>
+        <Box className="spacingBox">
           <Grid container>
             <Grid item xs={12} md={3}>
-              <Box className={"imgBoxLogos"}>
+              <Box className="imgBoxLogos">
                 <a target="_blank" href="http://latamlink.io/">
                   <img
-                    className={"oneGroupLogo"}
+                    className="oneGroupLogo"
                     alt="LatamLink"
                     src={useBaseUrl("img/Group47.svg")}
                   />
@@ -189,10 +186,10 @@ const TheCompany = () => {
               </Box>
             </Grid>
             <Grid item xs={12} md={3}>
-              <Box className={"imgBoxLogos"}>
+              <Box className="imgBoxLogos">
                 <a target="_blank" href="https://www.edenia.com/">
                   <img
-                    className={"oneGroupLogo"}
+                    className="oneGroupLogo"
                     alt="Edenia"
                     src={useBaseUrl("img/Group17.svg")}
                   />
@@ -200,10 +197,10 @@ const TheCompany = () => {
               </Box>
             </Grid>
             <Grid item xs={12} md={3}>
-              <Box className={"imgBoxLogos"}>
+              <Box className="imgBoxLogos">
                 <a target="_blank" href="https://eosurf.com/">
                   <img
-                    className={"oneGroupLogo"}
+                    className="oneGroupLogo"
                     alt="Eossurf"
                     src={useBaseUrl("img/Group11.svg")}
                   />
@@ -211,10 +208,10 @@ const TheCompany = () => {
               </Box>
             </Grid>
             <Grid item xs={12} md={3}>
-              <Box className={"imgBoxLogos"}>
+              <Box className="imgBoxLogos">
                 <a target="_blank" href="https://ticoblockchain.cr/">
                   <img
-                    className={"oneGroupLogo"}
+                    className="oneGroupLogo"
                     alt="Ticoblockchain"
                     src={useBaseUrl("img/Group55.svg")}
                   />
@@ -230,79 +227,40 @@ const TheCompany = () => {
 
   const MeetTeam = () => {
     return (
-      <Box className={clsx("containerSec")}>
-        <Box className={"sectionNoPadding"}>
-          <Box>
-            <Grid container spacing={1}>
-              <Grid item md={12}>
-                <Box className={"titleBox"}>
-                  <h2>Meet the Team</h2>
+      <Box className="containerSec">
+        <Box className="sectionPadding">
+            <Box>
+                <Box className="titleBox">
+                    <h2>Meet the Team</h2>
                 </Box>
-                <p className={"body1"}>
-                  We have assembled a Latin American team with 
-                  a problem-solving mindset and expertise in 
-                  their areas of knowledge. Our distributed 
-                  team operates in an Agile environment that 
-                  encourages participation, self- accountability, 
-                  and innovation. Get to know us!
-                </p>
-                <br/>
-              </Grid>
-              <Grid item xs={6} md={2}>
-                <Box className={"centerBox"}>
-                  <img
-                    className={"littleImage"}
-                    src={useBaseUrl("img/rodrigo.webp")}
-                  />
+                <Box className="spacingBox">
+                    <p>
+                        We have assembled a Latin American team with 
+                        a problem-solving mindset and expertise in 
+                        their areas of knowledge. Our distributed 
+                        team operates in an Agile environment that 
+                        encourages participation, self- accountability, 
+                        and innovation. Get to know us!
+                    </p>
                 </Box>
-              </Grid>
-              <Grid item xs={6} md={2}>
-                <Box className={"centerBox"}>
-                  <img
-                    className={"littleImage"}
-                    src={useBaseUrl("img/edgar.webp")}
-                  />
-                </Box>
-              </Grid>
-              <Grid item xs={6} md={2}>
-                <Box className={"centerBox"}>
-                  <img
-                    className={"littleImage"}
-                    src={useBaseUrl("img/xavier.webp")}
-                  />
-                </Box>
-              </Grid>
-              <Grid item xs={6} md={2}>
-                <Box className={"centerBox"}>
-                  <img
-                    className={"littleImage"}
-                    src={useBaseUrl("img/luisdiego.webp")}
-                  />
-                </Box>
-              </Grid>
-              <Grid item xs={6} md={2}>
-                <Box className={"centerBox"}>
-                  <img
-                    className={"littleImage"}
-                    src={useBaseUrl("img/rodolfo.webp")}
-                  />
-                </Box>
-              </Grid>
-              <Grid item xs={6} md={2}>
-                <Box className={"centerBox"}>
-                  <img
-                    className={"littleImage"}
-                    src={useBaseUrl("img/adriel.webp")}
-                  />
-                </Box>
-              </Grid>
-              <Grid className={"boxFlexEnd"} item xs={12} md={12}>
-                <Box className={"buttonBox"}>
-                  <button className={"buttonPrimary"} onClick={() => window.open("/team/")} >Meet our team</button>
-                </Box>
-              </Grid>
-            </Grid>          
-          </Box>
+                {isDesktop &&
+                    <Box className="spacingBox">
+                        <Carousel animation="slide" timeout={500} indicators={false}>
+                            <img
+                                alt="Crew image"
+                                src={useBaseUrl("img/team/crew1.jpg")}
+                            />
+                            <img
+                                alt="Crew image 2"
+                                src={useBaseUrl("img/team/crew2.jpg")}
+                            />
+                        </Carousel>
+                    </Box>
+                }
+                <Box className="boxFlexEnd">
+                    <button className="buttonPrimary" onClick={() => window.open("/team/")} >Meet our team</button>
+                </Box>       
+            </Box>
         </Box>
       </Box> 
     )
@@ -310,29 +268,27 @@ const TheCompany = () => {
 
   const TheTechnology = () => {
     return ( 
-      <Box className={clsx("containerSec")}> 
-        <Box className={clsx("sectionNoPadding")}>
-          <br/>
-          <br/>
-          <Box className={"titleBox"}>
-            <h2>
-              The Technology
-            </h2>
-          </Box>
-            <p>
-              Our team specializes in the blockchain protocol
-              <a href=" https://eos.io/" target='_blank'> EOSIO</a>, launched by 
-              <a href=" https://block.one/" target='_blank' > block.one</a> in 2018, 
-              as an open-source blockchain technology that deploys
-              a consensus model known as Delegated Proof-of-Stake
-              (DPoS). In DPoS, computers do not compete over 
-              computational power to solve algorithms. 
-              The following are some key features of EOSIO:
-            </p>
-          <Box className={"doubleSpacingBox"}>
-            <Grid style={{justifyContent:'center'}} container spacing={10}>
-              <Grid item xs={12} md={4}>
-                <Box className={"h3Box"}>
+      <Box className="containerSec"> 
+        <Box className="sectionNoPadding">
+            <Box className="titleBox">
+                <h2>The Technology</h2>
+            </Box>
+            <Box className="spacingBox">
+                <p>
+                Our team specializes in the blockchain protocol
+                <a href=" https://eos.io/" target='_blank'> EOSIO</a>, launched by 
+                <a href=" https://block.one/" target='_blank' > block.one</a> in 2018, 
+                as an open-source blockchain technology that deploys
+                a consensus model known as Delegated Proof-of-Stake
+                (DPoS). In DPoS, computers do not compete over 
+                computational power to solve algorithms. 
+                The following are some key features of EOSIO:
+                </p>
+            </Box>
+            <Box className="doubleSpacingBox">
+            <Grid justify="center" container spacing={5}>
+              <Grid item xs={12} md={5}>
+                <Box className="h3Box">
                   <h3>Scalability</h3>
                 </Box>
                 <p >
@@ -343,8 +299,8 @@ const TheCompany = () => {
                   blockchain systems is 15-20 transactions per second.
                 </p>
               </Grid>
-              <Grid item xs={12} md={4}>
-                <Box className={"h3Box"}>
+              <Grid item xs={12} md={5}>
+                <Box className="h3Box">
                   <h3>Flexibility</h3>
                 </Box>
                 <p>
@@ -355,10 +311,8 @@ const TheCompany = () => {
                   to be complete, ensuring a better user experience.
                 </p>
               </Grid>
-            </Grid>
-            <Grid style={{justifyContent:'center'}} container spacing={10}>
-              <Grid item xs={12} md={4}>
-                <Box className={"h3Box"}>
+              <Grid item xs={12} md={5}>
+                <Box className="h3Box">
                   <h3>Cost-effective</h3>
                 </Box>
                 <p>
@@ -368,8 +322,8 @@ const TheCompany = () => {
                   costs and still offers an experience free to the user.
                 </p>
               </Grid>
-              <Grid item xs={12} md={4}>
-                <Box className={"h3Box"}>
+              <Grid item xs={12} md={5}>
+                <Box className="h3Box">
                   <h3>Eco-friendly</h3>
                 </Box>
                 <p>
@@ -380,8 +334,8 @@ const TheCompany = () => {
                   energy-efficient than Ethereum.
                 </p>
               </Grid>
-              <Grid item xs={12} md={8}>
-                <Box className={clsx("h3Box","reduceMediumMarginTop")}>
+              <Grid item xs={12} md={10}>
+                <Box className="h3Box">
                   <h3>Faster adoption </h3>
                 </Box>
                 <p>
@@ -392,27 +346,29 @@ const TheCompany = () => {
                   learning resources available online and a dynamic support community.
                 </p>
               </Grid>
-            </Grid> 
-            {isDesktop &&
-              <Box className={"doubleSpacingBox"}>
-                <Grid  style={{justifyContent:'center'}} container spacing={10}>
-                  <Grid item xs={5} md={4}>
-                    <h4>We can help you explore EOSIO technology.</h4>
-                  </Grid>
-                  <Grid item xs={7} md={4}>
-                    <Box className={"boxFlexEnd"}>
-                      <button 
-                        className={"buttonPrimary"} 
-                        style={{width:'80%'}} 
-                        onClick={() => history.push("/contact-us/")} >
-                          Drop Us a Line
-                      </button>
-                    </Box>
-                  </Grid>
-                </Grid>     
-              </Box>    
-            } 
+            </Grid>
           </Box>
+            {isDesktop &&
+                <Box className="doubleSpacingBox">
+                    <Grid  justify="center" container spacing={10}>
+                        <Grid item xs={12} md={7}>
+                            <Box className="boxFlexEnd">
+                                <h4>We can help you explore EOSIO technology.</h4>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={3}>
+                            <Box className="boxFlexEnd">
+                                <button 
+                                    className="buttonPrimary" 
+                                    onClick={() => history.push("/contact-us/")}
+                                >
+                                    Drop Us a Line
+                                </button>
+                            </Box>
+                        </Grid>
+                    </Grid>     
+                </Box>    
+            } 
         </Box>
       </Box>
     )
@@ -420,21 +376,18 @@ const TheCompany = () => {
 
   const SomeOurProjects = () => {
     return ( 
-      <Box className={clsx("containerSec")}> 
-        <Box className={clsx("sectionNoPadding")}>
-          <br/>
-          <br/>
-          <Box className={"titleBox"}>
-            <h2>
-              Some of Our Projects
-            </h2>
+      <Box className="containerSec"> 
+        <Box className="section">
+          <Box className="spacingBox">
+            <h2>Some of Our Projects</h2>
+            <br />
           </Box>
-          <Box className={"doubleSpacingBox"}>
-            <Grid container spacing={10}>
+          <Box>
+            <Grid container spacing={5}>
               <Grid item xs={12} md={4}>
-                <Box className={"imgBoxTheCompany"}>
+                <Box className="imgBoxTheCompany">
                   <img
-                    className = {"sizeImageTheCompany"}
+                    className="sizeImageTheCompany"
                     src={useBaseUrl("img/Group47.svg")}
                   />
                 </Box>
@@ -452,9 +405,9 @@ const TheCompany = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Box className={"imgBoxTheCompany"}>
+                <Box className="imgBoxTheCompany">
                   <img
-                    className = {"sizeImageTheCompany"}
+                    className="sizeImageTheCompany"
                     src={useBaseUrl("img/lifebank.svg")}
                   />
                 </Box>
@@ -479,9 +432,9 @@ const TheCompany = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Box className={"imgBoxTheCompany"}>
+                <Box className="imgBoxTheCompany">
                   <img
-                    className = {"sizeImageTheCompany"} 
+                    className="sizeImageTheCompany"
                     src={useBaseUrl("img/smartgate.svg")}
                   />
                 </Box>
@@ -492,7 +445,7 @@ const TheCompany = () => {
                   in port logistics.<a href="https://smartgate.tech/" target="_blank"> Read more</a>
                 </p>
               </Grid>
-              <Grid item xs={12} md={12} style={{height:'10px'}} className={"topSpacingBox"}>
+              <Grid item xs={12} md={12} >
                 <br/>
                 <p>
                   Check out more of our latest projects <a 
@@ -510,19 +463,19 @@ const TheCompany = () => {
 
   const ContactUs = () => {
     return (
-      <Box className={clsx("containerGray")}>
-        <Box className={"sectionPadding"}>
+      <Box className="containerGray">
+        <Box className="sectionPadding">
           <Grid container spacing={5}>
             <Grid item xs={12} md={8}>
                 <Box>
-                  <h2 className={"centerTextOnMobile"}>Start working with us</h2>
-                  <h2 className={"centerTextOnMobile"}>and implement</h2>
-                  <h2 className={"centerTextOnMobile"}>blockchain technology.</h2>
+                  <h2 className="centerTextOnMobile">Start working with us</h2>
+                  <h2 className="centerTextOnMobile">and implement</h2>
+                  <h2 className="centerTextOnMobile">blockchain technology.</h2>
                 </Box>
             </Grid>
             <Grid item xs={12} md={4}>
-              <Box className={"buttonBox"}>
-                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
+              <Box className="buttonBox">
+                <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact us</button>
               </Box>
             </Grid>
           </Grid>
@@ -535,10 +488,10 @@ const TheCompany = () => {
     <>
       {isDesktop &&
         <Layout>
-          <Box className={"mainContainer"}>
+          <Box className="mainContainer">
             <Parallax strength={800}>
-              <Background className={"bgParallax"}>
-                  <Box className={"imgParallax"} />
+              <Background className="bgParallax">
+                  <Box className="imgParallax"/>
               </Background>
               <HeroSection />
               <EOSCR />
@@ -553,7 +506,7 @@ const TheCompany = () => {
       }
       {isMobile &&
         <Layout>
-          <Box className={"mainContainer"}>
+          <Box className="mainContainer">
             <HeroSection />
             <EOSCR />
             <WeAreOneGroup />

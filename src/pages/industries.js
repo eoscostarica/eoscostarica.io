@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { useHistory } from 'react-router-dom';
-import { Parallax, Background } from 'react-parallax';
-import Grid from '@material-ui/core/Grid';
+import React, { useState, useEffect } from "react"
+import { useHistory } from 'react-router-dom'
+import { Parallax, Background } from 'react-parallax'
+import Grid from '@material-ui/core/Grid'
 import { useMediaQuery } from 'react-responsive'
-import clsx from "clsx";
-import Layout from "@theme/Layout";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import clsx from "clsx"
+import Layout from "@theme/Layout"
+import useBaseUrl from "@docusaurus/useBaseUrl"
 import Box from '@material-ui/core/Box'
-import ScrollTrigger from 'react-scroll-trigger';
+import ScrollTrigger from 'react-scroll-trigger'
 
 import AdditionalResources from './components/AdditionalResources'
 import AccordionComp from './components/AccordionComp'
-import Payments from './Animations/Payments';
-import Logistic from './Animations/Logistic';
-import Games from './Animations/Games';
+import Payments from './Animations/Payments'
+import Logistic from './Animations/Logistic'
+import Games from './Animations/Games'
 
 const moreIndustriesAccordion = 
 [
@@ -74,8 +74,8 @@ const moreIndustriesAccordion2 =
 ]
 
 const Industries = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
-  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
+  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
+  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
   const history = useHistory();
   const [expanded, setExpanded] = useState();
   const [stateAnimation,setStateAnimation] = useState(false)
@@ -86,7 +86,7 @@ const Industries = () => {
   
   useEffect(() => {
     handleChange('panel_AssetManagementy')
-  }, []);
+  }, [])
 
   const handleScrollEnter = () => {
     setStateAnimation(true)
@@ -98,32 +98,11 @@ const Industries = () => {
 
   const HeroSection = () => {
     return (
-      <Box className={"containerSec"}>
+      <Box className="containerSec">
         {isDesktop && 
-          <Box className={"sectionHero"}>
-          <Box className={"titleBox"}>
-            <h1 >Blockchain Solutions</h1>
-            <h1 >by Industry</h1>
-          </Box>
-          <p >
-            Organizations and companies in many industries deploy blockchain
-            technology to solve significant problems and improve their
-            operations. These are some use cases of enterprise blockchain in
-            different sectors, such as financial, supply chain, gaming, and
-            healthcare.
-          </p>
-          <Box className={"buttonBox"}>
-            <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")}>
-              Contact us
-            </button>
-          </Box>
-        </Box>
-        }
-        {isMobile && 
-          <Box className={"sectionHeroMobile"}>
-            <Box className={"titleBox"}>
-              <h1 >Blockchain Solutions</h1>
-              <h1 >by Industry</h1>
+          <Box className="sectionHero">
+            <Box className="titleBox">
+              <h1 >Blockchain Solutions <br/> by Industry</h1>
             </Box>
             <p >
               Organizations and companies in many industries deploy blockchain
@@ -132,8 +111,27 @@ const Industries = () => {
               different sectors, such as financial, supply chain, gaming, and
               healthcare.
             </p>
-            <Box className={"buttonBoxMobile"}>
-              <button className={"buttonPrimary"} href={useBaseUrl("/contact-us")}>
+            <Box className="buttonBox">
+              <button className="buttonPrimary" onClick={() => history.push("/contact-us/")}>
+                Contact us
+              </button>
+            </Box>
+          </Box>
+        }
+        {isMobile && 
+          <Box className="sectionHeroMobile">
+            <Box className="titleBox">
+              <h1 >Blockchain Solutions <br/> by Industry</h1>
+            </Box>
+            <p >
+              Organizations and companies in many industries deploy blockchain
+              technology to solve significant problems and improve their
+              operations. These are some use cases of enterprise blockchain in
+              different sectors, such as financial, supply chain, gaming, and
+              healthcare.
+            </p>
+            <Box className="buttonBoxMobile">
+              <button className="buttonPrimary" href={useBaseUrl("/contact-us")}>
                 Contact us
               </button>
             </Box>
@@ -145,88 +143,84 @@ const Industries = () => {
 
   const PrincipalIndustries = () => {
     return (
-      <Box className={"containerSec"}>
-        <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
-        <br/>
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={4}>
-              <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
-                <Box className={"imgBox"}>
-                  <Payments state={stateAnimation}/>
-                </Box>
-              </ScrollTrigger>
+      <Box className="containerSec">
+        <Box className={clsx("section",{["sectionPadding"]: isMobile})}>
+          <Box className={isDesktop? "doubleSpacingBox": ""}>
+            <Grid container spacing={5}>
+              <Grid item xs={12} md={4}>
+                <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
+                  <Box className="imgBox">
+                    <Payments state={stateAnimation}/>
+                  </Box>
+                </ScrollTrigger>
+              </Grid>
+              <Grid item xs={12} md={8}>
+                <h2>Payments and <br/> Transfers</h2>
+                <p style={{marginTop: '30px'}}>
+                  Blockchain enables an efficient and secure way to register
+                  transactions that can facilitate payments and offer near
+                  real-time auditing with encryption to reduce data breaches.
+                  Blockchain may also promote alternate financial applications,
+                  such as new liquidity solutions and microloans management, and
+                  improved payment structures.
+                  <a
+                    href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
+                    target="_blank"
+                  >
+                    Read More
+                  </a>
+                </p>
+              </Grid>
+              <Grid style={{marginTop:'50px'}} item xs={12} md={4}>
+                <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
+                  <Box className="imgBox">
+                    <Logistic state={stateAnimation}/>
+                  </Box>
+                </ScrollTrigger>
+              </Grid>
+              <Grid item xs={12} md={8}>
+                <h2>Logistics and <br/> supply chain </h2>
+                <p style={{marginTop: '30px'}}>
+                  In an industry that involves dozens of stakeholders, the
+                  capabilities of blockchain and smart contracts for traceability,
+                  authorizations management, and automation can make a great ally.
+                  Blockchain can integrate different technologies, such as IoT and
+                  AI, to create comprehensive solutions and streamline processes
+                  in the logistics and supply chain industry.  
+                  <a
+                    href={"https://eoscostarica.io/blog/blockchain-logistics"} 
+                    target="_blank"
+                  >
+                    Read More
+                  </a>
+                </p>
+                
+              </Grid>
+              <Grid style={{marginTop:'-40px'}} item xs={12} md={4}>
+                <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
+                  <Box className="imgBox">
+                    <Games state={stateAnimation}/>
+                  </Box>
+                </ScrollTrigger>
+              </Grid>
+              <Grid style={{paddingTop:'110px'}} item xs={12} md={8}>
+                <h2>Gaming and <br/> Esports</h2>
+                <p style={{marginTop: '30px'}}>
+                  The gaming industry is booming—nearly 40% of the total world's
+                  population play video games. Blockchain enables a better way to
+                  transfer, valorize, and collect digital in-game assets. Its
+                  capabilities to increase security and offer a more efficient way
+                  for transactions can level-up online gaming. 
+                  <a
+                    href={"https://eoscostarica.io/blog/gaming-blockchain"}
+                    target="_blank"
+                  >
+                    Read More
+                  </a>
+                </p>
+              </Grid>
             </Grid>
-            <Grid item xs={12} md={8}>
-              <h2 style={{lineHeight: '26px'}}>Payments and</h2>
-              <h2 style={{lineHeight: '26px'}}>Transfers</h2>
-              <p style={{marginTop: '30px'}}>
-                Blockchain enables an efficient and secure way to register
-                transactions that can facilitate payments and offer near
-                real-time auditing with encryption to reduce data breaches.
-                Blockchain may also promote alternate financial applications,
-                such as new liquidity solutions and microloans management, and
-                improved payment structures.
-                <a
-                  href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
-                  target="_blank"
-                >
-                  Read More
-                </a>
-              </p>
-            </Grid>
-            <Grid style={{marginTop:'50px'}} item xs={12} md={4}>
-              <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
-                <Box className={"imgBox"}>
-                  <Logistic state={stateAnimation}/>
-                </Box>
-              </ScrollTrigger>
-            </Grid>
-            <Grid item xs={12} md={8}>
-              <h2 style={{lineHeight: '26px'}}>Logistics and</h2>
-              <h2 style={{lineHeight: '26px'}}>supply chain</h2>
-              <p style={{marginTop: '30px'}}>
-                In an industry that involves dozens of stakeholders, the
-                capabilities of blockchain and smart contracts for traceability,
-                authorizations management, and automation can make a great ally.
-                Blockchain can integrate different technologies, such as IoT and
-                AI, to create comprehensive solutions and streamline processes
-                in the logistics and supply chain industry.  
-                <a
-                  href={"https://eoscostarica.io/blog/blockchain-logistics"} 
-                  target="_blank"
-                >
-                  Read More
-                </a>
-              </p>
-              
-            </Grid>
-            <Grid style={{marginTop:'-40px'}} item xs={12} md={4}>
-              <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
-                <Box className={"imgBox"}>
-                  <Games state={stateAnimation}/>
-                </Box>
-              </ScrollTrigger>
-            </Grid>
-            <Grid style={{paddingTop:'110px'}} item xs={12} md={8}>
-              <h2 style={{lineHeight: '26px'}}>Gaming and</h2>
-              <h2 style={{lineHeight: '26px'}}>Esports</h2>
-              <p style={{marginTop: '30px'}}>
-                The gaming industry is booming—nearly 40% of the total world's
-                population play video games. Blockchain enables a better way to
-                transfer, valorize, and collect digital in-game assets. Its
-                capabilities to increase security and offer a more efficient way
-                for transactions can level-up online gaming. 
-                <a
-                  href={"https://eoscostarica.io/blog/gaming-blockchain"}
-                  target="_blank"
-                >
-                  Read More
-                </a>
-              </p>
-            </Grid>
-          </Grid>
-          <br/>
-          <br/>
+          </Box>
         </Box>
       </Box>
     )
@@ -234,12 +228,12 @@ const Industries = () => {
 
   const BlockchainMoreIndustries = () => {
     return (
-      <Box className={"containerGray"}>
-        <Box className={"sectionPadding"}>
-          <Box className={"spacingBox"}>
+      <Box className="containerGray">
+        <Box className="sectionPadding">
+          <Box className="spacingBox">
             <h2>Blockchain in More Industries</h2>
           </Box>
-          <Box className={"accordionBox"}>
+          <Box className="accordionBox">
             {isDesktop && 
               <Grid container spacing={5}>
                 <Grid item xs={12} md={6} >
@@ -264,15 +258,12 @@ const Industries = () => {
 
   const ChoosingEnterprise = () => {
     return ( 
-      <Box className={"containerSec"}> 
-        <Box className={"sectionPadding"}>
-          <br/>
-          <br/>
-          <Box className={"titleBox"}>
-            <h2>
-              Choosing an Enterprise Blockchain
-            </h2>
+      <Box className="containerSec"> 
+        <Box className="sectionPadding">
+          <Box className="titleBox">
+            <h2>Choosing an Enterprise Blockchain</h2>
           </Box>
+          <Box className="spacingBox">
             <p>
               There are several 
               <a href={"https://eoscostarica.medium.com/how-to-choose-an-enterprise-blockchainplatform-7c3665994ad6"}
@@ -284,10 +275,12 @@ const Industries = () => {
               a list of some key features you must consider when choosing what
               blockchain platform is the most suitable for your organization:
             </p>
-          <Box className={"doubleSpacingBox"}>
-            <Grid style={{justifyContent:'center'}} container spacing={10}>
-              <Grid item xs={12} md={4}>
-                <Box className={"h3Box"}>
+            <br/>
+          </Box>
+          <Box>
+            <Grid justify="center" container spacing={5}>
+              <Grid item xs={12} md={5}>
+                <Box className="h3Box">
                   <h3>Quick adoption</h3>
                 </Box>
                 <p >
@@ -295,8 +288,8 @@ const Industries = () => {
                   languages, or do they need to learn a new one?
                 </p>
               </Grid>
-              <Grid item xs={12} md={4}>
-                <Box className={"h3Box"}>
+              <Grid item xs={12} md={5}>
+                <Box className="h3Box">
                   <h3>Cost-efficiency</h3>
                 </Box>
                 <p>
@@ -305,12 +298,10 @@ const Industries = () => {
                   sharing process?
                 </p>
               </Grid>
-            </Grid>
-            <Grid style={{justifyContent:'center'}} container spacing={10}>
-              <Grid item xs={12} md={4}>
-              <Box className={"h3Box"}>
-                  <h3>Privacy and</h3>
-                  <h3>transparency</h3>
+              <Grid item xs={12} md={5}>
+                <Box className="h3Box">
+                  <h3>Privacy and transparency</h3>
+                  <h3></h3>
                 </Box>
                 <p>
                   How are the blockchain’s security and confidentiality
@@ -318,8 +309,8 @@ const Industries = () => {
                   transparency?
                 </p>
               </Grid>
-              <Grid item xs={12} md={4}>
-                <Box className={"h3Box"}>
+              <Grid item xs={12} md={5}>
+                <Box className="h3Box">
                   <h3>Speed or throughput</h3>
                 </Box>
                 <p>
@@ -328,12 +319,10 @@ const Industries = () => {
                   block confirmation times?
                 </p>
               </Grid>
-            </Grid>
-            <Grid style={{justifyContent:'flex-end', height:'30px'}} container>
-              <Grid className={"paddingTopGrid"} item xs={12} md={4}>
-                <Box className={"buttonBox"}>
+              <Grid item xs={12} md={10}>
+                <Box className="boxFlexEnd">
                   <button
-                    className={"buttonPrimary"}
+                    className="buttonPrimary"
                     onClick={() => history.push("/contact-us/")}>
                       Drop Us a Line
                   </button>
@@ -373,10 +362,10 @@ const Industries = () => {
     <>
       {isDesktop &&
         <Layout>
-          <Box className={"mainContainer"}>
+          <Box className="mainContainer">
             <Parallax strength={800}>
-                <Background className={"bgParallax"}>
-                    <Box className={"imgParallax"} />
+                <Background className="bgParallax">
+                    <Box className="imgParallax" />
                 </Background>
                 <HeroSection />
                 <PrincipalIndustries />
@@ -389,7 +378,7 @@ const Industries = () => {
       }
       {isMobile &&
         <Layout>
-          <Box className={"mainContainer"}>
+          <Box className="mainContainer">
               <HeroSection />
               <PrincipalIndustries />
               <BlockchainMoreIndustries />
