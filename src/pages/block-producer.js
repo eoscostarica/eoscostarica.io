@@ -1,22 +1,22 @@
-import React from "react";
-import { useHistory } from 'react-router-dom';
-import clsx from "clsx";
-import Layout from "@theme/Layout";
+import React from "react"
+import { useHistory } from 'react-router-dom'
+import clsx from "clsx"
+import Layout from "@theme/Layout"
 import { useMediaQuery } from 'react-responsive'
-import { Parallax, Background } from 'react-parallax';
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import { Parallax, Background } from 'react-parallax'
+import useBaseUrl from "@docusaurus/useBaseUrl"
+import Grid from '@material-ui/core/Grid'
+import Box from '@material-ui/core/Box'
+import InstagramIcon from '@material-ui/icons/Instagram'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import TwitterIcon from '@material-ui/icons/Twitter'
+import YouTubeIcon from '@material-ui/icons/YouTube'
+import GitHubIcon from '@material-ui/icons/GitHub'
 
 const BlockProducer = () => {
-  const history = useHistory();
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
-  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
+  const history = useHistory()
+  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
+  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
 
   const HeroSection = () => {
     return (
@@ -385,19 +385,19 @@ const BlockProducer = () => {
             </Grid>
             <Grid className="paddingTop" container>
               <Grid item xs={12} md={6}>
-                <h3 className={isMobile ? "centerText": ""}>
-                  Follow us on our profiles. We’re continually looking for open-source collaborations!
-                </h3>
+                <Box className={isMobile? "spacingBox": ""}>
+                  <h3 className={isMobile? "centerText": ""}>Follow us on our profiles. We’re continually looking for open-source collaborations!</h3>
+                </Box>
               </Grid>
               <Grid className="litlePaddingTop" item xs={12} md={3}>
-                <Box className={isMobile ? "centerBox": "boxFlexEnd"}>
-                  <a className="noMarginsTop" href="https://twitter.com/EOSCostaRica" target="_blank">
+                <Box className={isMobile? "centerBox": "boxFlexEnd"}>
+                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://github.com/eoscostarica" target="_blank">
                     <GitHubIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
                   </a>
-                  <a className="noMarginsTop" href="https://twitter.com/EOSCostaRica" target="_blank">
+                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://twitter.com/EOSCostaRica" target="_blank">
                     <TwitterIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
                   </a>
-                  <a className="noMarginsTop" href="https://t.me/eoscr" target="_blank">
+                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://t.me/eoscr" target="_blank">
                     <LinkedInIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
                   </a>
                 </Box>
@@ -406,14 +406,15 @@ const BlockProducer = () => {
                 <Box className="centerBox">
                   <a className="noMarginsTop" href="https://medium.com/@eoscostarica" target="_blank">
                     <img
-                      style={{width:'39px', height:'39px', cursor:'pointer', color:'#5484b3'}}
-                      src={useBaseUrl("img/icon-medium.svg")}
+                      className="socialMediaAnimation"
+                      style={{width:'48px', height:'48px', cursor:'pointer', color:'#5484b3'}}
+                      src={useBaseUrl("img/icon-medium.png")}
                     />
                   </a>
-                  <a className="noMarginsTop" href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
+                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
                     <YouTubeIcon style={{ width:'56px', height:'56px', cursor:'pointer', color:'#5484b3'}}/>
                   </a>
-                  <a className="noMarginsTop" href="https://www.instagram.com/eoscostarica/" target="_blank">
+                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.instagram.com/eoscostarica/" target="_blank">
                     <InstagramIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
                   </a>
                 </Box>
@@ -574,7 +575,7 @@ const BlockProducer = () => {
   const AdditionalResources = () => {
     return (
       <Box className={clsx("containerSec","reduceDobleMarginTop")}>
-        <Box className={isDesktop ? "sectionPadding": "section"}>
+        <Box className={isDesktop? "sectionPadding": "section"}>
           <Box className="titleBox">
             <h2>Additional Resources</h2>
           </Box>

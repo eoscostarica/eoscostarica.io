@@ -1065,6 +1065,15 @@ input:checked + .slider:before {
   margin-right: 18px;
 }
 
+.socialMediaAnimation{
+  transition: all .4s ease-in-out
+}
+
+.socialMediaAnimation:hover{
+  transform: scale(1.1);
+}
+
+
 @media only screen and (max-width: 767px) {
   .footerLogo {
     width: 300px;
