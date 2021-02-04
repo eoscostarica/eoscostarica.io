@@ -94,7 +94,7 @@ const solutionBaseAccordionRight =
 const ServicePage = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
   const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
-  const [expandedMap, setExpandedMap] = useState();
+  const [expandedMap, setExpandedMap] = useState('panel_interconnectivity');
   const [expandedSolution, setExpandedSolution] = useState();
   const [expandedEnterprise, setExpandedEnterprise] = useState();
   const [expandedEducation, setExpandedEducation] = useState('panel_Workshops');
@@ -244,19 +244,24 @@ const ServicePage = () => {
               </Box>
             </Grid>
           </Grid>
-          <Grid container spacing={10}>
-            <Grid item xs={12} md={6}>
-              <Box className="accordionBox">
-                <AccordionComp data={enterpriseBlockchainAccordionLeft} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className="accordionBox">
-                <AccordionComp data={enterpriseBlockchainAccordionRight} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
-              </Box>
-              <br/>
-            </Grid>
-          </Grid>
+          <Box className="accordionBox">
+            {isDesktop && 
+                <Grid container spacing={5}>
+                  <Grid item xs={12} md={6} >
+                  <AccordionComp data={enterpriseBlockchainAccordionLeft} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
+                  </Grid>
+                  <Grid item xs={12} md={6} >
+                  <AccordionComp data={enterpriseBlockchainAccordionRight} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
+                  </Grid>
+                </Grid>
+              }
+              {isMobile && 
+                <>
+                  <AccordionComp data={enterpriseBlockchainAccordionLeft} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
+                  <AccordionComp data={enterpriseBlockchainAccordionRight} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
+                </>
+              }
+          </Box>
           <Box className="doubleSpacingBox">
             <Grid container>
               <Grid item xs={12} md={12}>
@@ -275,19 +280,24 @@ const ServicePage = () => {
                 </Box>
               </Grid>
             </Grid>
-            <Grid container spacing={5}>
-              <Grid item xs={12} md={6}>
-                <Box className="accordionBox">
+            <Box className="accordionBox">
+            {isDesktop && 
+              <Grid container spacing={5}>
+                <Grid item xs={12} md={6} >
                   <AccordionComp data={solutionBaseAccordionLeft} expanded={expandedSolution} handleChange={handleChangeSolution} bgColor={'white'}/>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Box className="accordionBox">
+                </Grid>
+                <Grid item xs={12} md={6} >
                   <AccordionComp data={solutionBaseAccordionRight} expanded={expandedSolution} handleChange={handleChangeSolution} bgColor={'white'}/>
-                </Box>
-                <br/>
+                </Grid>
               </Grid>
-            </Grid>
+            }
+            {isMobile && 
+              <>
+                <AccordionComp data={solutionBaseAccordionLeft} expanded={expandedSolution} handleChange={handleChangeSolution} bgColor={'white'}/>
+                <AccordionComp data={solutionBaseAccordionRight} expanded={expandedSolution} handleChange={handleChangeSolution} bgColor={'white'}/>
+              </>
+            }
+            </Box>
           </Box>
           <Box className="spacingBox">
             <Box className="h3Box">
