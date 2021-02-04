@@ -1,19 +1,18 @@
-import React from "react";
-import { Parallax, Background } from 'react-parallax';
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import React from "react"
+import { Parallax, Background } from 'react-parallax'
+import useBaseUrl from "@docusaurus/useBaseUrl"
 import { useMediaQuery } from 'react-responsive'
-import Layout from "@theme/Layout";
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import clsx from "clsx";
-import Avatar from '@material-ui/core/Avatar';
-import PersonIcon from '@material-ui/icons/Person';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import TwitterIcon from '@material-ui/icons/Twitter';
+import Layout from "@theme/Layout"
+import Box from '@material-ui/core/Box'
+import Grid from '@material-ui/core/Grid'
+import clsx from "clsx"
+import Avatar from '@material-ui/core/Avatar'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import TwitterIcon from '@material-ui/icons/Twitter'
 
 const ManagementTeam = [
     {
-        img:"img/rodrigo.webp",
+        img:"img/team/rodrigo.jpg",
         name:"Rodrigo Fernández",
         position:"Founder, Chairman & Chief Strategist",
         bio:"I believe in fostering truth and transparency to pursue individual freedom.",
@@ -21,7 +20,7 @@ const ManagementTeam = [
         twitter:"https://twitter.com/rjfescazu"
     },
     {
-        img:"img/edgar.webp",
+        img:"img/team/edgar.jpg",
         name:"Edgar Fernández",
         position:"Co-founder & Finance and Enterprise",
         bio:"I thrive on developing the entrepreneurial spirit and using tech to create decentralized networks.",
@@ -29,7 +28,7 @@ const ManagementTeam = [
         twitter:"https://twitter.com/fernane506"
     },
     {
-        img:"img/xavier.webp",
+        img:"img/team/xavier.jpg",
         name:"Xavier Fernández",
         position:"Co-founder & Tech Lead",
         bio:"Blockchain technology helps promote trust among stakeholders through transparency and decentralization.",
@@ -38,10 +37,9 @@ const ManagementTeam = [
     }
 ]
 
-
 const MarketingSalesTeam = [
     {
-        img:"img/luisdiego.webp",
+        img:"img/team/luisD.jpg",
         name:"Luis Diego Rojas",
         position:"Communications and Content Strategist",
         bio:"I believe that communicating new techs plays a crucial role in widespread adoption.",
@@ -49,7 +47,7 @@ const MarketingSalesTeam = [
         twitter:"https://twitter.com/ldrojas"
     },
     {
-        img:"img/rodolfo.webp",
+        img:"img/team/rodolfo.jpg",
         name:"Rodolfo Perez",
         position:"Art Director & Brand Manager",
         bio:"Like people, every company also has to develop its own essence, a soul, this is what really compounds an identity.",
@@ -60,7 +58,7 @@ const MarketingSalesTeam = [
 
 const DevelopTeam = [
     {
-        img:"img/adriel.webp",
+        img:"img/team/adriel.jpg",
         name:"Adriel Diaz",
         position:"Full Stack Developer",
         bio:"",
@@ -68,7 +66,7 @@ const DevelopTeam = [
         twitter:""
     },
     {
-        img:"img/allan.webp",
+        img:"img/team/allan.jpg",
         name:"Allan Salazar",
         bio:"",
         position:"Network Engineer",
@@ -84,7 +82,7 @@ const DevelopTeam = [
         twitter:"https://twitter.com/kuronosec"
     },
     {
-        img:"",
+        img:"img/team/angelo.jpg",
         name:"Angelo Castro",
         position:"Intern",
         bio:"I’m ready to develop innovative ideas and face new challenges.",
@@ -92,7 +90,7 @@ const DevelopTeam = [
         twitter:""
     },
     {
-        img:"img/cris.webp",
+        img:"img/team/cristian.jpg",
         name:"Cristian Castro",
         position:"C++ Developer",
         bio:"We're creating the new technologies that will free people for good.",
@@ -100,15 +98,15 @@ const DevelopTeam = [
         twitter:""
     },
     {
-        img:"",
+        img:"img/team/edgarParra.jpg",
         name:"Edgar Parra",
         position:"Intern",
         bio:"I believe technology is a constant learning process that should be done together.",
-        linkedIn:"",
+        linkedIn:"https://www.linkedin.com/in/edgar-parra-barillas-078883161/",
         twitter:""
     },
     {
-        img:"",
+        img:"img/team/jean.jpg",
         name:"Jean Vega",
         position:"Intern",
         bio:"I enjoy learning and experimenting with new tech, especially to acquire knowledge in different application areas.",
@@ -116,7 +114,7 @@ const DevelopTeam = [
         twitter:""
     },
     {
-        img:"img/jorge.webp",
+        img:"img/team/jorge.jpg",
         name:"Jorge Murillo",
         position:"Sr. UX Designer",
         bio:"",
@@ -132,7 +130,7 @@ const DevelopTeam = [
         twitter:"https://twitter.com/_JustinCast"
     },
     {
-        img:"img/kevin.webp",
+        img:"img/team/kevin.jpg",
         name:"Kevin Castillo",
         position:"Full Stack Developer",
         bio:"",
@@ -140,15 +138,15 @@ const DevelopTeam = [
         twitter:""
     },
     {
-        img:"",
+        img:"img/team/leister.jpg",
         name:"Leister Álvarez",
         position:"Intern",
         bio:"Programming reflects who we are; let's do something awesome.",
-        linkedIn:"",
+        linkedIn:"https://www.linkedin.com/in/leister-francisco-alvarez-campos-65b7801bb/",
         twitter:""
     },
     {
-        img:"img/ronald.webp",
+        img:"",
         name:"Ronald Gallo",
         position:"Network Administrator",
         bio:"",
@@ -156,15 +154,15 @@ const DevelopTeam = [
         twitter:""
     },
     {
-        img:"",
+        img:"img/team/steph.jpg",
         name:"Stephanie Delgado",
         position:"Intern",
         bio:"The tech world is always evolving, so I believe one must be fearless.",
-        linkedIn:"",
+        linkedIn:"https://www.linkedin.com/in/stephaniedelgadobrenes/",
         twitter:""
     },
     {
-        img:"img/teto.webp",
+        img:"img/team/teto.jpg",
         name:"Terencio Gómez",
         position:"Full Stack Developer",
         bio:"",
@@ -172,44 +170,36 @@ const DevelopTeam = [
         twitter:""
     },
     {
-        img:"img/julio.webp",
+        img:"",
         name:"Victor Julio Madrigal",
         position:"Web Developer",
         bio:"",
         linkedIn:"",
         twitter:""
     },
-    
 ]
 
 const Team = () => {
-    const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
-    const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
+    const isMobile = useMediaQuery({query: '(max-width: 767px)'})
+    const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
 
     const HeroSection = () => {
         return (
-          <Box className={"containerSec"}>
+          <Box className="containerSec">
             {isDesktop && 
-                <Box className={"sectionHero"} style={{height:'auto'}}>
-                    <Box className={"titleBox"}>
+                <Box className="sectionHero" style={{height:'auto'}}>
+                    <Box className="titleBox">
                         <h1>Meet the Essence of Our Company</h1>
                     </Box>
                     <TeamSection />
                 </Box>
             }
             {isMobile && 
-              <Box className={"sectionHeroMobile"}>
-                <Box className={"logoMobileBox"}>
-                  <img
-                      className={"logoMobile"}
-                      src={useBaseUrl("img/eoscr-logo.png")}
-                      alt="EOS CR LOGO"
-                    />
+                <Box className="sectionHeroMobile" style={{paddingBottom: 0}}>
+                    <Box className="titleBox">
+                        <h1>Meet the Essence of Our Company</h1>
+                    </Box>
                 </Box>
-              <Box className={"titleBox"}>
-                <h1>Meet the Essence of Our Company</h1>
-              </Box>
-            </Box>
           }
           </Box>
         )
@@ -219,22 +209,27 @@ const Team = () => {
         return(
             <Grid container>
                 <Grid item xs={12} md={6}>
-                    <Box className={"avatarBox"}>
-                        <Avatar variant="square" style={{width:"200px", height:"250px"}} src={img}><PersonIcon style={{width:'40%',height:'40%'}}/></Avatar>
+                    <Box className="avatarBox">
+                        {img && 
+                            <Avatar variant="square" style={{width:"200px", height:"250px"}} src={useBaseUrl(img)}/>
+                        }
+                        {!img && 
+                            <Avatar variant="square" style={{width:"200px", height:"250px"}} src={useBaseUrl("img/team/profile-thinner.jpg")}/>
+                        }
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Box >
-                        <h3 className={"nameText"}>{name}</h3>
-                        <p className={"positionText"}>{position}</p>
-                        <p className={"bioText"}>{bio}</p>
+                        <h3 className="nameText">{name}</h3>
+                        <p className="positionText">{position}</p>
+                        <p className="bioText">{bio}</p>
                     </Box>
                     <Box className="socialMediaBox">
                         {linkedIn && 
-                            <a href={linkedIn} target="_blank" className={"socialMediaIcon"}><LinkedInIcon style={{width:'30px', height:'30px'}}/></a>
+                            <a href={linkedIn} target="_blank" className="socialMediaIcon"><LinkedInIcon style={{width:'30px', height:'30px'}}/></a>
                         }
                         {twitter && 
-                            <a href={twitter} target="_blank" className={"socialMediaIcon"}><TwitterIcon style={{width:'30px', height:'30px'}}/></a>
+                            <a href={twitter} target="_blank" className="socialMediaIcon"><TwitterIcon style={{width:'30px', height:'30px'}}/></a>
                         }
                     </Box>
                 </Grid>
@@ -244,10 +239,10 @@ const Team = () => {
 
     const TeamSection = () => {
         return(
-            <Box className={"containerSec"}>
-                <Box className={clsx("sectionNo",{["sectionPadding"] : isMobile})}>
-                    <Box className={"doubleSpacingBox"}>
-                        <Box className={"spacingBox"}>
+            <Box className="containerSec">
+                <Box className={clsx("sectionNoPadding")}>
+                    <Box className={isDesktop? "doubleSpacingBox": ""}>
+                        <Box className="spacingBox">
                             <h2>Management Team</h2>
                         </Box>
                         <Box>
@@ -267,8 +262,8 @@ const Team = () => {
                             </Grid>
                         </Box>
                     </Box>
-                    <Box className={"doubleSpacingBox"}>
-                        <Box className={"spacingBox"}>
+                    <Box className="doubleSpacingBox">
+                        <Box className="spacingBox">
                             <h2>Marketing and Sales</h2>
                         </Box>
                         <Box>
@@ -288,8 +283,8 @@ const Team = () => {
                             </Grid>
                         </Box>
                     </Box>
-                    <Box className={"doubleSpacingBox"}>
-                        <Box className={"spacingBox"}>
+                    <Box className="doubleSpacingBox">
+                        <Box className="spacingBox">
                             <h2>Development and Design</h2>
                         </Box>
                         <Box>
@@ -319,10 +314,10 @@ const Team = () => {
         <>
             {isDesktop &&
                 <Layout>
-                    <Box className={"mainContainer"}>
+                    <Box className="mainContainer">
                         <Parallax strength={800}>
-                            <Background className={"bgParallax"}>
-                                <Box className={"imgParallax"} />
+                            <Background className="bgParallax">
+                                <Box className="imgParallax"/>
                             </Background>
                             <HeroSection />
                         </Parallax>
@@ -331,7 +326,7 @@ const Team = () => {
             }
             {isMobile &&
                 <Layout>
-                    <Box className={"mainContainer"}>
+                    <Box className="mainContainer">
                         <HeroSection />
                         <TeamSection />
                     </Box>
@@ -340,7 +335,5 @@ const Team = () => {
         </>
     )
 }
-
-
 
 export default Team;
