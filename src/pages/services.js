@@ -92,43 +92,42 @@ const solutionBaseAccordionRight =
 ]
 
 const ServicePage = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
-  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
-  const [expandedMap, setExpandedMap] = useState('panel_interconnectivity');
-  const [expandedSolution, setExpandedSolution] = useState();
-  const [expandedEnterprise, setExpandedEnterprise] = useState();
-  const [expandedEducation, setExpandedEducation] = useState('panel_Workshops');
-  const history = useHistory();
+  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
+  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const [expandedMap, setExpandedMap] = useState('panel_interconnectivity')
+  const [expandedSolution, setExpandedSolution] = useState()
+  const [expandedEnterprise, setExpandedEnterprise] = useState()
+  const [expandedEducation, setExpandedEducation] = useState('panel_Workshops')
+  const history = useHistory()
 
   const refDevelopment = useRef(null)
   const refInfraestrcture = useRef(null)
   const refEducation = useRef(null)
 
-  const handleScrollDev = () => refDevelopment.current.scrollIntoView({ behavior: 'smooth', block: "start", inline: "nearest"  })
-  const handleScrollInfra = () => refInfraestrcture.current.scrollIntoView({ behavior: 'smooth', block: "start", inline: "nearest" })  
-  const handleScrollEdu = () => refEducation.current.scrollIntoView({ behavior: 'smooth', block: "start", inline: "nearest" })  
-
+  const handleScrollDev = () => refDevelopment.current.scrollIntoView({behavior:'smooth', block:'start', inline:'nearest'})
+  const handleScrollInfra = () => refInfraestrcture.current.scrollIntoView({behavior:'smooth', block:'start', inline:'nearest'})  
+  const handleScrollEdu = () => refEducation.current.scrollIntoView({behavior:'smooth', block:'start', inline:'nearest'})  
 
   const handleChangeMap = (panel) => (event, newExpanded) => {
-    setExpandedMap(newExpanded ? panel : false);
-  };
+    setExpandedMap(newExpanded? panel: false)
+  }
 
   const handleChangeSolution = (panel) => (event, newExpanded) => {
-    setExpandedSolution(newExpanded ? panel : false);
-  };
+    setExpandedSolution(newExpanded? panel: false)
+  }
 
   const handleChangeEnterprise = (panel) => (event, newExpanded) => {
-    setExpandedEnterprise(newExpanded ? panel : false);
-  };
+    setExpandedEnterprise(newExpanded? panel: false)
+  }
 
   const handleChangeEducation = (panel) => (event, newExpanded) => {
-    setExpandedEducation(newExpanded ? panel : false);
-  };
+    setExpandedEducation(newExpanded? panel: false)
+  }
 
   useEffect(() => {
     handleChangeMap('panel_interconnectivity')
     handleChangeEducation('panel_Workshops')
-  }, []);
+  }, [])
 
   const HeroSection = () => {
     return (
@@ -149,13 +148,13 @@ const ServicePage = () => {
           <Box className="doubleSpacingBox">
             <Grid container spacing={5}>
               <Grid item xs={12} md={4}>
-                <button className="buttonSecondary" style={{padding: "19px", height:"90px", width: "100%"}} onClick={handleScrollDev}>Development<br/>Services</button>
+                <button className="buttonSecondary" style={{padding:"19px", height:"90px", width:"100%"}} onClick={handleScrollDev}>Development<br/>Services</button>
               </Grid>
               <Grid item xs={12} md={4}>
-                <button className="buttonSecondary" style={{padding: "19px", height:"90px", width: "100%"}} onClick={handleScrollInfra}>Blockchain<br/>Infrastructure</button>
+                <button className="buttonSecondary" style={{padding:"19px", height:"90px", width:"100%"}} onClick={handleScrollInfra}>Blockchain<br/>Infrastructure</button>
               </Grid>
               <Grid item xs={12} md={4}>
-                <button className="buttonSecondary" style={{padding: "19px", height:"90px", width: "100%"}} onClick={handleScrollEdu}>Education<br/>and Training</button>
+                <button className="buttonSecondary" style={{padding:"19px", height:"90px", width:"100%"}} onClick={handleScrollEdu}>Education<br/>and Training</button>
               </Grid>
             </Grid>
           </Box>
@@ -188,7 +187,7 @@ const ServicePage = () => {
 
   const BlockchainDev = () => {
     return (
-      <Box ref={refDevelopment}  className="containerSec">
+      <Box ref={refDevelopment} className="containerSec">
         <Box className={clsx("section",{["sectionPadding"]: isMobile})}>
           <Box className="titleBox">
             <h2>Blockchain <br/> Development Services</h2>
@@ -496,10 +495,10 @@ const ServicePage = () => {
                     className="accordion"
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                      <h4 style={{margin:'2px',padding: 0}}>Community Building</h4>
+                      <h4 style={{margin:'2px',padding:0}}>Community Building</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
-                      <p style={{padding: 0}}>
+                      <p style={{padding:0}}>
                         We help promote the blockchain and EOSIO ecosystems by
                         hosting and attending community activities. We also
                         speak about blockchain and participate in events related
@@ -544,7 +543,7 @@ const ServicePage = () => {
                 <Box className="imgBoxServices">
                   <img
                    src={useBaseUrl("img/logistics.svg")}
-                   style={{paddingTop: '25px'}}
+                   style={{paddingTop:'25px'}}
                    className="imageIndrustries"
                    />
                 </Box>
@@ -564,7 +563,7 @@ const ServicePage = () => {
                 <Box className="imgBoxServices">
                   <img 
                     src={useBaseUrl("img/payments.svg")}
-                    style={{paddingTop: '25px'}}
+                    style={{paddingTop:'25px'}}
                     className="imageIndrustriesLogistics"
                   />
                 </Box>
@@ -585,7 +584,7 @@ const ServicePage = () => {
                   <Box className="imgBoxServices">
                     <img 
                       src={useBaseUrl("img/gaming.svg")}
-                      style={{paddingTop: '20px'}}
+                      style={{paddingTop:'20px'}}
                       className="imageIndrustries"
                     />
                   </Box>
