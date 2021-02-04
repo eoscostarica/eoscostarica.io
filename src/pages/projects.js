@@ -154,8 +154,8 @@ const OurProjects = () => {
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="Enterprise EOSIO Forum"
-                  className = {"sizeImageTheCompany"}
-                  src={useBaseUrl("img/Group47.svg")}
+                  style={{width:'310px', height:'75px'}}
+                  src={useBaseUrl("img/imagenotavailable.png")}
                 />
               </Box>
             </Grid>
@@ -178,8 +178,8 @@ const OurProjects = () => {
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="EOS Foundation"
-                  className = {"sizeImageTheCompany"}
-                  src={useBaseUrl("img/Group47.svg")}
+                  style={{width:'310px', height:'75px'}}
+                  src={useBaseUrl("img/imagenotavailable.png")}
                 />
               </Box>
             </Grid>
@@ -250,8 +250,8 @@ const OurProjects = () => {
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="Evodex"
-                  className = {"sizeImageTheCompany"}
-                  src={useBaseUrl("img/Group47.svg")}
+                  style={{width:'310px', height:'75px'}}
+                  src={useBaseUrl("img/imagenotavailable.png")}
                 />
               </Box>
             </Grid>
@@ -274,8 +274,8 @@ const OurProjects = () => {
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="Undisclosed enterprise project"
-                  className = {"sizeImageTheCompany"}
-                  src={useBaseUrl("img/Group47.svg")}
+                  style={{width:'310px', height:'75px'}}
+                  src={useBaseUrl("img/imagenotavailable.png")}
                 />
               </Box>
             </Grid>
@@ -301,8 +301,8 @@ const OurProjects = () => {
               <Box className={"imgBoxProjects"}>
                 <img
                   alt="Notario Digital"
-                  className = {"sizeImageTheCompany"}
-                  src={useBaseUrl("img/Group47.svg")}
+                  style={{width:'300px', height:'75px'}}
+                  src={useBaseUrl("img/imagenotavailable.png")}
                 />
               </Box>
             </Grid>
