@@ -1,48 +1,46 @@
-import React from "react";
-import { useHistory } from 'react-router-dom';
-import { Parallax, Background } from 'react-parallax';
-import clsx from "clsx";
-import Grid from '@material-ui/core/Grid';
-import Layout from "@theme/Layout";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import React from "react"
+import { useHistory } from 'react-router-dom'
+import { Parallax, Background } from 'react-parallax'
+import clsx from "clsx"
+import Grid from '@material-ui/core/Grid'
+import Layout from "@theme/Layout"
+import useBaseUrl from "@docusaurus/useBaseUrl"
 import Box from '@material-ui/core/Box'
 import { useMediaQuery } from 'react-responsive'
 
 const OurProjects = () => {
-  const history = useHistory();
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
-  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
+  const history = useHistory()
+  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
+  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
 
   const HeroSection = () => {
     return (
-      <Box className={"containerSec"}>
+      <Box className="containerSec">
         {isDesktop && 
-          <Box className={"sectionHero"}>
-          <Box className={"titleBox"}>
-              <h1>Enterprise Blockchain</h1>
-              <h1>Use Cases</h1>
+          <Box className="sectionHero">
+            <Box className="titleBox">
+              <h1>Enterprise Blockchain <br/> Use Cases</h1>
+            </Box>
+            <p >
+              Over the past years, we have helped organizations in
+              both the public and private sectors learn and explore the benefits of EOSIO blockchain
+              technology. From improving the way a company registers cross-border transactions to
+              ensuring immutable traceability of logistics operations, our team has developed top-notch
+              solutions to real-world problems. Get to know our latest projects.
+            </p>
           </Box>
-          <p >
-            Over the past years, we have helped organizations in
-            both the public and private sectors learn and explore the benefits of EOSIO blockchain
-            technology. From improving the way a company registers cross-border transactions to
-            ensuring immutable traceability of logistics operations, our team has developed top-notch
-            solutions to real-world problems. Get to know our latest projects.
-          </p>
-        </Box>
         }
         {isMobile && 
-          <Box className={"sectionHeroMobile"}>
-            <Box className={"logoMobileBox"}>
+          <Box className="sectionHeroMobile">
+            <Box className="logoMobileBox">
               <img
-                  className={"logoMobile"}
-                  src={useBaseUrl("img/eoscr-logo.png")}
-                  alt="EOS CR LOGO"
-                />
+                className="logoMobile"
+                src={useBaseUrl("img/eoscr-logo.png")}
+                alt="EOS CR LOGO"
+              />
             </Box>
-          <Box className={"titleBox"}>
-              <h1>Enterprise Blockchain </h1>
-              <h1>Use Cases</h1>
+          <Box className="titleBox">
+            <h1>Enterprise Blockchain <br/> Use Cases</h1>
           </Box>
           <p >
             Over the past years, we have helped organizations in
@@ -64,19 +62,19 @@ const OurProjects = () => {
   const Projects = () => {
     return (
       <Box className={clsx("containerSec", "reduceMarginTop")}>
-        <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
+        <Box className={clsx("section",{["sectionPadding"]: isMobile})}>
           <Grid container spacing={5}>
-            <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
-              <Box className={"imgBoxProjects"}>
+            <Grid style={{marginBottom:'50px'}} item xs={12} md={6}>
+              <Box className="imgBoxProjects">
                 <img
                   alt="LatamLink"
-                  className = {"sizeImageTheCompany"}
+                  className="sizeImageTheCompany"
                   src={useBaseUrl("img/Group47.svg")}
                 />
               </Box>
             </Grid>
-            <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
-              <Box className={"h3Box"}>
+            <Grid style={{marginBottom:'50px'}} item xs={12} md={6}>
+              <Box className="h3Box">
                 <h3 >LatamLink</h3>
               </Box>
               <p>
@@ -90,19 +88,19 @@ const OurProjects = () => {
                 </a>
               </p>
             </Grid>
-            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '50px'}} item xs={12} md={6}>
+            <Grid style={{backgroundColor:'rgba(241, 241, 241, 0.5)', paddingBottom:'50px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"imgBoxProjects"}>
+              <Box className="imgBoxProjects">
                 <img
                   alt="Lifebank"
-                  className = {"sizeImageTheCompany"}
+                  className="sizeImageTheCompany"
                   src={useBaseUrl("img/lifebank.svg")}
                 />
               </Box>
             </Grid>
-            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '50px'}} item xs={12} md={6}>
+            <Grid style={{backgroundColor:'rgba(241, 241, 241, 0.5)', paddingBottom:'50px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"h3Box"}>
+              <Box className="h3Box">
                 <h3 >Lifebank</h3>
               </Box>
               <p>
@@ -124,34 +122,31 @@ const OurProjects = () => {
                 </a>
               </p>
             </Grid>
-            <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
+            <Grid style={{marginBottom:'50px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"imgBoxProjects"}>
+              <Box className="imgBoxProjects">
                 <img
                   alt="SMARTGATE"
-                  className = {"sizeImageTheCompany"}
+                  className="sizeImageTheCompany"
                   src={useBaseUrl("img/smartgate.svg")}
                 />
               </Box>
             </Grid>
-            <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
+            <Grid style={{marginBottom:'50px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"h3Box"}>
+              <Box className="h3Box">
                 <h3 >SMARTGATE</h3>
               </Box>
               <p>
                 A blockchain-based platform that provides solutions for in-out
                 gate activity for the container industry and real-time
                 transmission of relevant data required for proper interchange in
-                port logistics.{" "}
-                <a href="https://smartgate.tech/" target="_blank">
-                  Read more
-                </a>
+                port logistics.<a href="https://smartgate.tech/" target="_blank"> Read more </a>
               </p>
             </Grid>
-            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+            <Grid style={{backgroundColor:'rgba(241, 241, 241, 0.5)', paddingBottom:'70px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"imgBoxProjects"}>
+              <Box className="imgBoxProjects">
                 <img
                   alt="Enterprise EOSIO Forum"
                   style={{width:'310px', height:'75px'}}
@@ -159,9 +154,9 @@ const OurProjects = () => {
                 />
               </Box>
             </Grid>
-            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+            <Grid style={{backgroundColor:'rgba(241, 241, 241, 0.5)', paddingBottom:'70px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"h3Box"}>
+              <Box className="h3Box">
                 <h3 >Enterprise EOSIO Forum</h3>
               </Box>
               <p>
@@ -173,9 +168,9 @@ const OurProjects = () => {
                 </a>
               </p>
             </Grid>
-            <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
+            <Grid style={{marginBottom:'50px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"imgBoxProjects"}>
+              <Box className="imgBoxProjects">
                 <img
                   alt="EOS Foundation"
                   style={{width:'310px', height:'75px'}}
@@ -183,71 +178,63 @@ const OurProjects = () => {
                 />
               </Box>
             </Grid>
-            <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
+            <Grid style={{marginBottom:'50px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"h3Box"}>
+              <Box className="h3Box">
                 <h3 >EOS Foundation</h3>
               </Box>
               <p>
                 We are part of the EOS Foundation proof of concept. It is an
                 autonomous, decentralized, non-profit organization that will
                 enable self-representation and promotion of the EOS community.{" "}
-                <a href="http://eos-foundation.eosio.cr/" target="_blank">
-                  Read more
-                </a>
+                <a href="http://eos-foundation.eosio.cr/" target="_blank"> Read more </a>
               </p>
             </Grid>
-            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+            <Grid style={{backgroundColor:'rgba(241, 241, 241, 0.5)', paddingBottom:'70px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"imgBoxProjects"}>
+              <Box className="imgBoxProjects">
                 <img
                   alt="EOS Rate"
-                  className = {"sizeImageTheCompany"}
+                  className="sizeImageTheCompany"
                   src={useBaseUrl("img/eosrate.svg")}
                 />
               </Box>
             </Grid>
-            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+            <Grid style={{backgroundColor:'rgba(241, 241, 241, 0.5)', paddingBottom:'70px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"h3Box"}>
+              <Box className="h3Box">
                 <h3 >EOS Rate</h3>
               </Box>
               <p>
                 EOS Rate is an open- source app that allows EOS token holders
                 to access a rating system and voting portal for block
-                producers and proxies in the EOS blockchain.{" "}
-                <a href="https://eosrate.io/" target="_blank">
-                  Read more
-                </a>
+                producers and proxies in the EOS blockchain.<a href="https://eosrate.io/" target="_blank"> Read more </a>
               </p>
             </Grid>
-            <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
+            <Grid style={{marginBottom:'50px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"imgBoxProjects"}>
+              <Box className="imgBoxProjects">
                 <img
                   alt="EOSIO Dashboard"
-                  className = {"sizeImageTheCompany"}
+                  className="sizeImageTheCompany"
                   src={useBaseUrl("img/eosio.svg")}
                 />
               </Box>
             </Grid>
-            <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
+            <Grid style={{marginBottom:'50px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"h3Box"}>
+              <Box className="h3Box">
                 <h3 >EOSIO Dashboard</h3>
               </Box>
               <p>
                 The EOSIO Dashboard is an open-source project that allows
                 users to visualize the rewards distribution along the EOS
-                network to seek accountability and transparency.{" "}
-                <a href="https://mainnet.eosio.cr/" target="_blank">
-                  Read more
-                </a>
+                network to seek accountability and transparency.<a href="https://mainnet.eosio.cr/" target="_blank"> Read more </a>
               </p>
             </Grid>
-            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+            <Grid style={{backgroundColor:'rgba(241, 241, 241, 0.5)', paddingBottom:'70px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"imgBoxProjects"}>
+              <Box className="imgBoxProjects">
                 <img
                   alt="Evodex"
                   style={{width:'310px', height:'75px'}}
@@ -255,9 +242,9 @@ const OurProjects = () => {
                 />
               </Box>
             </Grid>
-            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+            <Grid style={{backgroundColor:'rgba(241, 241, 241, 0.5)', paddingBottom:'70px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"h3Box"}>
+              <Box className="h3Box">
                 <h3 >Evodex</h3>
               </Box>
               <p>
@@ -269,9 +256,9 @@ const OurProjects = () => {
                 </a>
               </p>
             </Grid>
-            <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
+            <Grid style={{marginBottom:'50px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"imgBoxProjects"}>
+              <Box className="imgBoxProjects">
                 <img
                   alt="Undisclosed enterprise project"
                   style={{width:'310px', height:'75px'}}
@@ -281,7 +268,7 @@ const OurProjects = () => {
             </Grid>
             <Grid style={{marginBottom: '50px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"h3Box"}>
+              <Box className="h3Box">
                 <h3 >Undisclosed enterprise project</h3>
               </Box>
               <p>
@@ -296,9 +283,9 @@ const OurProjects = () => {
                 </a>
               </p>
             </Grid>
-            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+            <Grid style={{backgroundColor:'rgba(241, 241, 241, 0.5)', paddingBottom:'70px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"imgBoxProjects"}>
+              <Box className="imgBoxProjects">
                 <img
                   alt="Notario Digital"
                   style={{width:'300px', height:'75px'}}
@@ -306,9 +293,9 @@ const OurProjects = () => {
                 />
               </Box>
             </Grid>
-            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingBottom: '70px'}} item xs={12} md={6}>
+            <Grid style={{backgroundColor:'rgba(241, 241, 241, 0.5)', paddingBottom:'70px'}} item xs={12} md={6}>
               <br/>
-              <Box className={"h3Box"}>
+              <Box className="h3Box">
                 <h3 >Notario Digital</h3>
               </Box>
               <p>
@@ -327,19 +314,17 @@ const OurProjects = () => {
 
   const ContactUs = () => {
     return (
-      <Box className={"containerGray"}>
-        <Box className={"sectionPadding"}>
+      <Box className="containerGray">
+        <Box className="sectionPadding">
           <Grid container spacing={5}>
             <Grid item xs={12} md={8}>
-                <Box>
-                  <h2>Start working with us</h2>
-                  <h2>and implement</h2>
-                  <h2>blockchain technology.</h2>
-                </Box>
+              <Box>
+                <h2>Start working with us <br/> and implement <br/> blockchain technology.</h2>
+              </Box>
             </Grid>
             <Grid item xs={12} md={4}>
-              <Box className={"buttonBox"}>
-                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
+              <Box className="buttonBox">
+                <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact us</button>
               </Box>
             </Grid>
           </Grid>
@@ -352,10 +337,10 @@ const OurProjects = () => {
     <>
       {isDesktop && 
         <Layout>
-          <Box className={"mainContainer"}>
+          <Box className="mainContainer">
             <Parallax strength={800}>
-              <Background className={"bgParallax"}>
-                  <Box className={"imgParallax"} />
+              <Background className="bgParallax">
+                  <Box className="imgParallax"/>
               </Background>
               <HeroSection/>
               <Projects/>
@@ -366,7 +351,7 @@ const OurProjects = () => {
       }
       {isMobile && 
         <Layout>
-          <Box className={"mainContainer"}>
+          <Box className="mainContainer">
             <HeroSection/>
             <Projects/>
             <ContactUs/>
