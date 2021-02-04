@@ -13,6 +13,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary'
 import { useHistory } from 'react-router-dom'
 
 import AccordionComp from './components/AccordionComp'
+import ContactUsBanner from './components/ContactUsBanner'
 import DevelopmentServices from './SvgComponents/DevelopmentServices'
 import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure'
 
@@ -612,29 +613,6 @@ const ServicePage = () => {
     )
   }
 
-  const ContactUs = () => {
-    return (
-      <Box className={"containerGray"}>
-        <Box className={"sectionPadding"}>
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={8}>
-                <Box>
-                  <h2 className={"centerTextOnMobile"}>Start working with us</h2>
-                  <h2 className={"centerTextOnMobile"}>and implement</h2>
-                  <h2 className={"centerTextOnMobile"}>blockchain technology.</h2>
-                </Box>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Box className={"buttonBox"}>
-                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-    )
-  }
-
   return (
     <>
       {isDesktop && 
@@ -650,7 +628,7 @@ const ServicePage = () => {
             <BlockchainInfrastructure />
             <EducationTraining />
             <IndustryBlockchain />
-            <ContactUs />
+            <ContactUsBanner />
           </Box>
         </Layout>
       }
@@ -662,7 +640,7 @@ const ServicePage = () => {
             <BlockchainInfrastructure />
             <EducationTraining />
             <IndustryBlockchain />
-            <ContactUs />
+            <ContactUsBanner />
           </Box>
         </Layout>
       }

@@ -13,6 +13,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
+import ContactUsBanner from './components/ContactUsBanner'
 
 const Home = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
@@ -664,29 +665,6 @@ const Home = () => {
     )
   }
 
-  const ContactUs = () => {
-    return (
-      <Box className={"containerGray"}>
-        <Box className={"sectionPadding"}>
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={8}>
-                <Box>
-                  <h2 className={"centerTextOnMobile"}>Start working with us</h2>
-                  <h2 className={"centerTextOnMobile"}>and implement</h2>
-                  <h2 className={"centerTextOnMobile"}>blockchain technology.</h2>
-                </Box>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Box className={"buttonBox"}>
-                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-    )
-  }
-
   return (
    <>
       {isDesktop && 
@@ -710,7 +688,7 @@ const Home = () => {
             </Background>
             <SomeProjects />
             </Parallax>
-           <ContactUs />
+           <ContactUsBanner />
           </Box>
         </Layout>
       }
@@ -725,7 +703,7 @@ const Home = () => {
             <GetToKnow />
             <WeAreOneGroup />
             <SomeProjects />
-            <ContactUs />
+            <ContactUsBanner />
           </Box>
         </Layout>
       } 
