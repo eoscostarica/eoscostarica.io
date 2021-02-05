@@ -1,32 +1,34 @@
-import React, { useState, useEffect } from "react";
-import { useHistory } from 'react-router-dom';
-import { Parallax, Background } from 'react-parallax';
+import React, { useState, useEffect } from "react"
+import { useHistory } from 'react-router-dom'
+import { Parallax, Background } from 'react-parallax'
 import { useMediaQuery } from 'react-responsive'
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import clsx from "clsx";
-import Layout from "@theme/Layout";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import Accordion from '@material-ui/core/Accordion';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Box from '@material-ui/core/Box'
+import Grid from '@material-ui/core/Grid'
+import clsx from "clsx"
+import Layout from "@theme/Layout"
+import useBaseUrl from "@docusaurus/useBaseUrl"
+import Accordion from '@material-ui/core/Accordion'
+import AccordionDetails from '@material-ui/core/AccordionDetails'
+import AccordionSummary from '@material-ui/core/AccordionSummary'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
-import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
+import WhatWeDoSvg from "./SvgComponents/WhatWeDo"
+import ContactUsBanner from './components/ContactUsBanner'
+import WeAreOneGroup from './components/WeAreOneGroup'
 
 const Home = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
-  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
-  const [expanded, setExpanded] = useState('panel_SoftDev');
-  const history = useHistory();
+  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
+  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const [expanded, setExpanded] = useState('panel_SoftDev')
+  const history = useHistory()
   
   const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
+    setExpanded(newExpanded? panel: false)
+  }
   
   useEffect(() => {
     handleChange('panel_SoftDev')
-  }, []);
+  }, [])
 
   const HeroSection = () => {
     return (
@@ -34,8 +36,7 @@ const Home = () => {
         {isDesktop && 
           <Box className="sectionHero">
           <Box className="titleBox">
-              <h1>Enterprise Blockchain Solutions</h1>
-              <h1>That Fit Your Needs</h1>
+              <h1>Enterprise Blockchain Solutions <br /> That Fit Your Needs</h1>
           </Box>
           <p >Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.</p>
           <p>Start transforming your organization by leveraging enterprise blockchain networks.</p>
@@ -47,9 +48,7 @@ const Home = () => {
         {isMobile && 
           <Box className="sectionHeroMobile">
             <Box className="titleBox">
-                <h1>Enterprise Blockchain</h1>
-                <h1>Solutions That</h1>
-                <h1>Fit Your Needs</h1>
+                <h1>Enterprise Blockchain <br /> Solutions That <br /> Fit Your Needs</h1>
             </Box>
             <p>Deploy EOSIO blockchain technology to improve transparency, boost efficiency, and reduce costs.</p>
             <br/>
@@ -73,8 +72,7 @@ const Home = () => {
                 }
                 {isMobile && 
                   <>
-                    <h2>What Enterprise</h2>
-                    <h2>Blockchain Can Do</h2>
+                    <h2>What Enterprise <br /> Blockchain Can Do</h2>
                   </> 
                 }  
             </Box>
@@ -142,7 +140,6 @@ const Home = () => {
                     </Box>
                   </Grid>
                 </Grid>
-
               }
               {isMobile &&
                 <Grid container spacing={0}>
@@ -269,8 +266,7 @@ const Home = () => {
             }
             {isMobile && 
               <>
-                <h2>Industries to Deploy</h2>
-                <h2>Enterprise Blockchain</h2>
+                <h2>Industries to Deploy <br /> Enterprise Blockchain</h2>
               </> 
             }     
           </Box>
@@ -359,8 +355,7 @@ const Home = () => {
             <Grid item xs={12} md={6}>
               <Box className="inquiereBox">
                 <Box style={{width:'100%'}}>
-                  <h2 className={clsx("white","centerTextOnMobile")}>Do you have inquiries</h2>
-                  <h2 className={clsx("white","centerTextOnMobile")}>about blockchain?</h2>
+                  <h2 className={clsx("white","centerTextOnMobile")}>Do you have inquiries <br /> about blockchain? </h2>
                   <Box className="buttonBox">
                     <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Drop us a line</button>
                   </Box>
@@ -394,7 +389,7 @@ const Home = () => {
                   <Box className="h3Box">
                     <h3>The Team</h3>
                   </Box>
-                  <p className="body1">
+                  <p>
                       We have assembled a Latin American team with a problem-solving
                       mindset and expertise in their knowledge areas. We operate as
                       a distributed team in an Agile environment and make a
@@ -495,65 +490,6 @@ const Home = () => {
     )
   }
 
-  const WeAreOneGroup = () => {
-    return (
-      <Box className="containerSec">
-        <Box className="sectionNoPadding">
-          <Box className="h3Box">
-            <h3 style={{textAlign:'center'}}>We Are One Group</h3>
-          </Box>
-          <Box className="spacingBox">
-            <Grid container>
-              <Grid item xs={12} md={3}>
-                <Box className="imgBoxLogos">
-                  <a target="_blank" href="http://latamlink.io/">
-                    <img
-                      className="oneGroupLogo"
-                      alt="LatamLink"
-                      src={useBaseUrl("img/Group47.svg")}
-                    />
-                  </a>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Box className="imgBoxLogos">
-                  <a target="_blank" href="https://www.edenia.com/">
-                    <img
-                      className={"oneGroupLogo"}
-                      alt="Edenia"
-                      src={useBaseUrl("img/Group17.svg")}
-                    />
-                  </a>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Box className={"imgBoxLogos"}>
-                  <a target="_blank" href="https://eosurf.com/">
-                    <img
-                      className="oneGroupLogo"
-                      alt="Eossurf"
-                      src={useBaseUrl("img/Group11.svg")}
-                    />
-                  </a>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Box className="imgBoxLogos">
-                  <a target="_blank" href="https://ticoblockchain.cr/">
-                    <img
-                      className="oneGroupLogo"
-                      alt="Ticoblockchain"
-                      src={useBaseUrl("img/Group55.svg")}
-                    />
-                  </a>
-                </Box>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
-      </Box>
-    )
-  }
 
   const SomeProjects = () => {
     return (
@@ -564,12 +500,11 @@ const Home = () => {
           </Box>
           <Box className="spacingBox"> 
             <p>
-              Get to know some of our latest projects deploying the EOSIO
-              blockchain protocol.
+              Get to know some of our latest projects deploying the EOSIO blockchain protocol.
               <a href={useBaseUrl("/projects")} target="_blank"> Visit the full list here.</a>
             </p>
           </Box>
-          <Box className={isDesktop? "doubleSpacingBox" : ""}>
+          <Box className={isDesktop? "doubleSpacingBox": ""}>
             <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingTop:'20px',paddingBottom:'20px'}} container spacing={5}>
               <Grid xs={12} item md={6}>
                 <Box className="centerBox" style={{height:'100%'}}>
@@ -581,7 +516,7 @@ const Home = () => {
               </Grid>
               <Grid xs={12} item md={6}>
                 <br/>
-                <Box className={"h3Box"}>
+                <Box className="h3Box">
                   <h3>LatamLink</h3>
                 </Box>
                 <p>
@@ -603,7 +538,7 @@ const Home = () => {
                 <Grid xs={12} item md={6}>
                   <Box className="centerBox" style={{height:'100%'}}>
                     <img
-                      className = "sizeImageTheCompany"
+                      className="sizeImageTheCompany"
                       src={useBaseUrl("img/lifebank.svg")}
                     />
                   </Box>
@@ -638,14 +573,14 @@ const Home = () => {
                 <Grid xs={12} item md={6}>
                   <Box className="centerBox" style={{height:'100%'}}>
                     <img
-                      className = "sizeImageTheCompany"
+                      className="sizeImageTheCompany"
                       src={useBaseUrl("img/smartgate.svg")}
                     />
                   </Box> 
                 </Grid>
                 <Grid xs={12} item md={6}>
                   <br/>
-                  <Box className={"h3Box"}>
+                  <Box className="h3Box">
                     <h3>SMARTGATE</h3>
                   </Box>
                   <p>
@@ -664,29 +599,6 @@ const Home = () => {
     )
   }
 
-  const ContactUs = () => {
-    return (
-      <Box className="containerGray">
-        <Box className="sectionPadding">
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={8}>
-                <Box>
-                  <h2 className="centerTextOnMobile">Start working with us</h2>
-                  <h2 className="centerTextOnMobile">and implement</h2>
-                  <h2 className="centerTextOnMobile">blockchain technology.</h2>
-                </Box>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Box className="buttonBox">
-                <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact us</button>
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-    )
-  }
-
   return (
    <>
       {isDesktop && 
@@ -694,7 +606,7 @@ const Home = () => {
           <Box className="mainContainer">
             <Parallax strength={800}>
               <Background className="bgParallax">
-                  <Box className="imgParallax" />
+                  <Box className="imgParallax"/>
               </Background>
               <HeroSection />
               <BlockchainCanDo />
@@ -706,11 +618,11 @@ const Home = () => {
             <GetToKnow />
             <WeAreOneGroup />
             <Background className="bgParallaxSecondary">
-                <Box className="imgParallax" />
+                <Box className="imgParallax"/>
             </Background>
             <SomeProjects />
             </Parallax>
-           <ContactUs />
+           <ContactUsBanner />
           </Box>
         </Layout>
       }
@@ -725,7 +637,7 @@ const Home = () => {
             <GetToKnow />
             <WeAreOneGroup />
             <SomeProjects />
-            <ContactUs />
+            <ContactUsBanner />
           </Box>
         </Layout>
       } 
