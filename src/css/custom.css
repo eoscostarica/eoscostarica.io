@@ -1004,8 +1004,8 @@ input:checked + .slider:before {
 .imgBoxProjects{
   display: flex;
   justify-content: center;
-  margin-top: 8%;
-  height: 80%;
+  align-items: center;
+  height: 100%;
 }
 
 .littleImage{
@@ -1080,6 +1080,12 @@ input:checked + .slider:before {
   transform: scale(1.1);
 }
 
+.projectsGrid{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-right: 40px;
+  height: 100%;
+}
 
 @media only screen and (max-width: 767px) {
   .footerLogo {
