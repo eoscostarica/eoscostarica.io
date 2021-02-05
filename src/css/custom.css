@@ -857,7 +857,6 @@ input:checked + .slider:before {
   align-items: center;
   justify-content:center;
   height: 288px;
-  
 }
 
 .oneGroupLogo{
@@ -1079,6 +1078,12 @@ input:checked + .slider:before {
   transform: scale(1.1);
 }
 
+.animationBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
 
 @media only screen and (max-width: 767px) {
   .footerLogo {
@@ -1182,6 +1187,11 @@ input:checked + .slider:before {
 
   .sizeImageTheCompany{
     width: 190px;
+  }
+
+  .animationBox{
+    height: 150px;
+    margin-bottom: 50px;
   }
   
   h1{

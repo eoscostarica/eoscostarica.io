@@ -148,79 +148,98 @@ const Industries = () => {
           <Box className={isDesktop? "doubleSpacingBox": ""}>
             <Grid container spacing={5}>
               <Grid item xs={12} md={4}>
-                <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
-                  <Box className="imgBox">
-                    <Payments state={stateAnimation}/>
+                  <Box className="animationBox">
+                    <Payments isDesktop={isDesktop} />
                   </Box>
-                </ScrollTrigger>
               </Grid>
               <Grid item xs={12} md={8}>
-                <h2>Payments and <br/> Transfers</h2>
-                <p style={{marginTop: '30px'}}>
-                  Blockchain enables an efficient and secure way to register
-                  transactions that can facilitate payments and offer near
-                  real-time auditing with encryption to reduce data breaches.
-                  Blockchain may also promote alternate financial applications,
-                  such as new liquidity solutions and microloans management, and
-                  improved payment structures.
-                  <a
-                    href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
-                    target="_blank"
-                  >
-                    Read More
-                  </a>
-                </p>
-              </Grid>
-              <Grid style={{marginTop:'50px'}} item xs={12} md={4}>
-                <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
-                  <Box className="imgBox">
-                    <Logistic state={stateAnimation}/>
+                <Box className="animationBox">
+                  <Box>
+                    <Box className="h3Box">
+                      <h2>Payments and <br/> Transfers</h2>
+                    </Box>
+                    <p>
+                      Blockchain enables an efficient and secure way to register
+                      transactions that can facilitate payments and offer near
+                      real-time auditing with encryption to reduce data breaches.
+                      Blockchain may also promote alternate financial applications,
+                      such as new liquidity solutions and microloans management, and
+                      improved payment structures.
+                      <a
+                        href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
+                        target="_blank"
+                      >
+                        Read More
+                      </a>
+                    </p>
                   </Box>
-                </ScrollTrigger>
-              </Grid>
-              <Grid item xs={12} md={8}>
-                <h2>Logistics and <br/> supply chain </h2>
-                <p style={{marginTop: '30px'}}>
-                  In an industry that involves dozens of stakeholders, the
-                  capabilities of blockchain and smart contracts for traceability,
-                  authorizations management, and automation can make a great ally.
-                  Blockchain can integrate different technologies, such as IoT and
-                  AI, to create comprehensive solutions and streamline processes
-                  in the logistics and supply chain industry.  
-                  <a
-                    href={"https://eoscostarica.io/blog/blockchain-logistics"} 
-                    target="_blank"
-                  >
-                    Read More
-                  </a>
-                </p>
-                
-              </Grid>
-              <Grid style={{marginTop:'-40px'}} item xs={12} md={4}>
-                <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
-                  <Box className="imgBox">
-                    <Games state={stateAnimation}/>
-                  </Box>
-                </ScrollTrigger>
-              </Grid>
-              <Grid style={{paddingTop:'110px'}} item xs={12} md={8}>
-                <h2>Gaming and <br/> Esports</h2>
-                <p style={{marginTop: '30px'}}>
-                  The gaming industry is booming—nearly 40% of the total world's
-                  population play video games. Blockchain enables a better way to
-                  transfer, valorize, and collect digital in-game assets. Its
-                  capabilities to increase security and offer a more efficient way
-                  for transactions can level-up online gaming. 
-                  <a
-                    href={"https://eoscostarica.io/blog/gaming-blockchain"}
-                    target="_blank"
-                  >
-                    Read More
-                  </a>
-                </p>
+                </Box>  
               </Grid>
             </Grid>
           </Box>
+          <Box className={isDesktop? "doubleSpacingBox": ""}>
+            <Grid container spacing={5}>
+              <Grid item xs={12} md={4}>
+                <Box className="animationBox">
+                  <Logistic isDesktop={isDesktop}/>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={8}>
+                <Box className="animationBox">
+                  <Box>
+                    <Box className="h3Box">
+                      <h2>Logistics and <br/> supply chain </h2>
+                    </Box>
+                    <p>
+                      In an industry that involves dozens of stakeholders, the
+                      capabilities of blockchain and smart contracts for traceability,
+                      authorizations management, and automation can make a great ally.
+                      Blockchain can integrate different technologies, such as IoT and
+                      AI, to create comprehensive solutions and streamline processes
+                      in the logistics and supply chain industry.  
+                      <a
+                        href={"https://eoscostarica.io/blog/blockchain-logistics"} 
+                        target="_blank"
+                      >
+                        Read More
+                      </a>
+                    </p>
+                  </Box>
+                </Box>
+              </Grid>
+            </Grid>
+          </Box>
+          <Box className={isDesktop? "doubleSpacingBox": ""}>
+            <Grid container spacing={5}>
+              <Grid item xs={12} md={4}>
+                <Box className="animationBox">
+                  <Games isDesktop={isDesktop}/>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={8}>
+                <Box className="animationBox">
+                  <Box>
+                    <Box className="h3Box">
+                      <h2>Gaming and <br/> Esports</h2>
+                    </Box>
+                    <p>
+                      The gaming industry is booming—nearly 40% of the total world's
+                      population play video games. Blockchain enables a better way to
+                      transfer, valorize, and collect digital in-game assets. Its
+                      capabilities to increase security and offer a more efficient way
+                      for transactions can level-up online gaming. 
+                      <a
+                        href={"https://eoscostarica.io/blog/gaming-blockchain"}
+                        target="_blank"
+                      >
+                        Read More
+                      </a>
+                    </p>
+                  </Box>
+                </Box>
+              </Grid>
+            </Grid>
+          </Box>                 
         </Box>
       </Box>
     )
