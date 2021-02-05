@@ -7,7 +7,6 @@ import clsx from "clsx"
 import Layout from "@theme/Layout"
 import useBaseUrl from "@docusaurus/useBaseUrl"
 import Box from '@material-ui/core/Box'
-import ScrollTrigger from 'react-scroll-trigger'
 
 import AdditionalResources from './components/AdditionalResources'
 import AccordionComp from './components/AccordionComp'
@@ -78,7 +77,6 @@ const Industries = () => {
   const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
   const history = useHistory();
   const [expanded, setExpanded] = useState();
-  const [stateAnimation,setStateAnimation] = useState(false)
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -87,14 +85,6 @@ const Industries = () => {
   useEffect(() => {
     handleChange('panel_AssetManagementy')
   }, [])
-
-  const handleScrollEnter = () => {
-    setStateAnimation(true)
-  }
-
-  const handleScrollExit = () => {
-    setStateAnimation(false)
-  }
 
   const HeroSection = () => {
     return (
