@@ -21,10 +21,10 @@ const Footer = () => {
     <Box className="footer">
       <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
         <Box className="footerContent">
-          <Grid container spacing={5}>
+          <Grid container spacing={4}>
             <Grid item xs={12} md={3}>
               <Box className="footerLogoBox">
-                <img src={useBaseUrl("img/logo-white.png")} alt="EOS CR LOGO" className={clsx("footerLogo","oneGroupLogo")} />
+                <img src={useBaseUrl("img/logo-white.png")} alt="EOS CR LOGO" className={clsx("footerLogo",stateAnimation? "footerLogoAnimation":"")} />
               </Box>
             </Grid>
             <Grid item xs={12} md={2}/>
