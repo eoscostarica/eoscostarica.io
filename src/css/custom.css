@@ -1086,6 +1086,16 @@ input:checked + .slider:before {
   transform: scale(1.1);
 }
 
+.footerLogo {
+  width: 300px;
+  height: 90px;
+}
+
+.footerLogoAnimation{
+  transition: all .9s ease-in-out;
+  transform: scale(0.87);
+}
+
 .teamPadding{
   padding: 2rem;
 }
