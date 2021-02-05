@@ -1096,6 +1096,10 @@ input:checked + .slider:before {
   transform: scale(0.87);
 }
 
+.teamPadding{
+  padding: 2rem;
+}
+
 .projectsGrid{
   padding-top: 70px;
   padding-bottom: 70px;
