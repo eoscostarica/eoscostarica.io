@@ -14,6 +14,7 @@ import YouTubeIcon from '@material-ui/icons/YouTube'
 import GitHubIcon from '@material-ui/icons/GitHub'
 
 import AdditionalResources from './components/AdditionalResources'
+import ContactUsBanner from './components/ContactUsBanner'
 
 const BlockProducer = () => {
   const history = useHistory()
@@ -574,27 +575,6 @@ const BlockProducer = () => {
     )
   }
 
-  const ContactUs = () => {
-    return (
-      <Box className="containerGray">
-        <Box className="sectionPadding">
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={8}>
-              <Box>
-                <h2 className="centerTextOnMobile">Start working with us <br/> and implement <br/> blockchain technology.</h2>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Box className="buttonBox">
-                <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact us</button>
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-    )
-  }
-
   return (
     <>
       {isDesktop && 
@@ -613,7 +593,7 @@ const BlockProducer = () => {
             <WhyCostaRica/>
             <VoteForUS/>
             <AdditionalResources/>
-            <ContactUs />
+            <ContactUsBanner />
           </Box>
         </Layout>
       }
@@ -628,7 +608,7 @@ const BlockProducer = () => {
             <WhyCostaRica/>
             <VoteForUS/>
             <AdditionalResources/>
-            <ContactUs />
+            <ContactUsBanner />
           </Box>
         </Layout>
       }
