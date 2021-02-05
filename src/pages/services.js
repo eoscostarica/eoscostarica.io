@@ -13,6 +13,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary'
 import { useHistory } from 'react-router-dom'
 
 import AccordionComp from './components/AccordionComp'
+import ContactUsBanner from './components/ContactUsBanner'
 import DevelopmentServices from './SvgComponents/DevelopmentServices'
 import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure'
 
@@ -378,7 +379,7 @@ const ServicePage = () => {
                 <p>
                   Also, we developed a robust, top-grade infrastructure ready to
                   host blockchain networks for our clients and open-source
-                  projects from our datacenter.
+                  projects from our datacenter in Costa Rica.
                 </p>
               </Grid>
               <Grid item xs={12} md={6}>
@@ -650,7 +651,7 @@ const ServicePage = () => {
             <BlockchainInfrastructure />
             <EducationTraining />
             <IndustryBlockchain />
-            <ContactUs />
+            <ContactUsBanner />
           </Box>
         </Layout>
       }
@@ -662,7 +663,7 @@ const ServicePage = () => {
             <BlockchainInfrastructure />
             <EducationTraining />
             <IndustryBlockchain />
-            <ContactUs />
+            <ContactUsBanner />
           </Box>
         </Layout>
       }
