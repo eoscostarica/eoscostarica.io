@@ -154,7 +154,7 @@ const Industries = () => {
                       real-time auditing with encryption to reduce data breaches.
                       Blockchain may also promote alternate financial applications,
                       such as new liquidity solutions and microloans management, and
-                      improved payment structures.
+                      improved payment structures. {" "}
                       <a
                         href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
                         target="_blank"
@@ -186,7 +186,7 @@ const Industries = () => {
                       authorizations management, and automation can make a great ally.
                       Blockchain can integrate different technologies, such as IoT and
                       AI, to create comprehensive solutions and streamline processes
-                      in the logistics and supply chain industry.  
+                      in the logistics and supply chain industry. {" "}  
                       <a
                         href={"https://eoscostarica.io/blog/blockchain-logistics"} 
                         target="_blank"
@@ -217,7 +217,7 @@ const Industries = () => {
                       population play video games. Blockchain enables a better way to
                       transfer, valorize, and collect digital in-game assets. Its
                       capabilities to increase security and offer a more efficient way
-                      for transactions can level-up online gaming. 
+                      for transactions can level-up online gaming. {" "} 
                       <a
                         href={"https://eoscostarica.io/blog/gaming-blockchain"}
                         target="_blank"
