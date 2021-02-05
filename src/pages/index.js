@@ -266,8 +266,7 @@ const Home = () => {
             }
             {isMobile && 
               <>
-                <h2>Industries to Deploy</h2>
-                <h2>Enterprise Blockchain</h2>
+                <h2>Industries to Deploy <br /> Enterprise Blockchain</h2>
               </> 
             }     
           </Box>
@@ -501,8 +500,7 @@ const Home = () => {
           </Box>
           <Box className="spacingBox"> 
             <p>
-              Get to know some of our latest projects deploying the EOSIO
-              blockchain protocol.
+              Get to know some of our latest projects deploying the EOSIO blockchain protocol.
               <a href={useBaseUrl("/projects")} target="_blank"> Visit the full list here.</a>
             </p>
           </Box>

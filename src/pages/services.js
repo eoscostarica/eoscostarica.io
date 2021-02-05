@@ -379,7 +379,7 @@ const ServicePage = () => {
                 <p>
                   Also, we developed a robust, top-grade infrastructure ready to
                   host blockchain networks for our clients and open-source
-                  projects from our datacenter.
+                  projects from our datacenter in Costa Rica.
                 </p>
               </Grid>
               <Grid item xs={12} md={6}>
