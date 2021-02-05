@@ -1007,6 +1007,13 @@ input:checked + .slider:before {
   display: none
 }
 
+.imgBoxProjects{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .littleImage{
   width: 150px;
   height: 170px;
@@ -1080,7 +1087,14 @@ input:checked + .slider:before {
 }
 
 .teamPadding{
-  padding: 1rem;
+  padding: 2rem;
+}
+
+.projectsGrid{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-right: 40px;
+  height: 100%;
 }
 
 @media only screen and (max-width: 767px) {
