@@ -1006,6 +1006,13 @@ input:checked + .slider:before {
   display: none
 }
 
+.imgBoxProjects{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .littleImage{
   width: 150px;
   height: 170px;
@@ -1083,6 +1090,27 @@ input:checked + .slider:before {
   justify-content: center;
   align-items: center;
   height: 350px;
+}
+
+.footerLogo {
+  width: 300px;
+  height: 90px;
+}
+
+.footerLogoAnimation{
+  transition: all .9s ease-in-out;
+  transform: scale(0.87);
+}
+
+.teamPadding{
+  padding: 2rem;
+}
+
+.projectsGrid{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-right: 40px;
+  height: 100%;
 }
 
 @media only screen and (max-width: 767px) {
