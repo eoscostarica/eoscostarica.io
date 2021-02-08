@@ -223,7 +223,6 @@ const OurProjects = () => {
     )
   }
 
-
   return (
     <>
       {isDesktop && 
