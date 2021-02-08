@@ -124,7 +124,7 @@ const NavbarMenu = () => {
             <Box className="imgLogoBoxMobile">
               <img
                 className="imgLogoScroll"
-                src={useBaseUrl("img/eoscr-logo.png")}
+                src={useBaseUrl("img/logos/eoscr-logo.png")}
                 alt="EOS CR LOGO"
               />
             </Box>
@@ -164,7 +164,7 @@ const NavbarMenu = () => {
               <Box  className="imgLogoBox">
                 <img
                   className={isBlog? "imgLogoScroll": clsx("imgLogo",{["imgLogoScroll"]: trigger})}
-                  src={useBaseUrl("img/eoscr-logo.png")}
+                  src={useBaseUrl("img/logos/eoscr-logo.png")}
                   alt="EOS CR LOGO"
                 />
               </Box>

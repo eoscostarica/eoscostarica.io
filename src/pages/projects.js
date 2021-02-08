@@ -10,21 +10,21 @@ import { useMediaQuery } from 'react-responsive'
 
 const ProjectsList = [
   {
-    img:"img/smartgate.svg",
+    img:"img/logos/smartgate.svg",
     name:"SMARTGATE",
     details:"A blockchain-based platform that provides solutions for in-out gate activity for the container industry and real-time transmission of relevant data required for proper interchange in port logistics.",
     link:"https://smartgate.tech/",
     color:"#ffffff"
   },
   {
-    img:"img/eosio.svg",
+    img:"img/logos/eosio.svg",
     name:"EOSIO Dashboard",
     details:"The EOSIO Dashboard is an open-source project that allows users to visualize the rewards distribution along the EOS network to seek accountability and transparency.",
     link:"https://mainnet.eosio.cr/",
     color:"#f8f8f8"
   },
   {
-    img:"img/eosrate.svg",
+    img:"img/logos/eosrate.svg",
     name:"EOS Rate",
     details:"EOS Rate is an open- source app that allows EOS token holders to access a rating system and voting portal for block producers and proxies in the EOS blockchain.",
     link:"https://eosrate.io/",
@@ -91,27 +91,20 @@ const OurProjects = () => {
         }
         {isMobile && 
           <Box className="sectionHeroMobile">
-            <Box className="logoMobileBox">
-              <img
-                className="logoMobile"
-                src={useBaseUrl("img/eoscr-logo.png")}
-                alt="EOS CR LOGO"
-              />
+            <Box className="titleBox">
+              <h1>Enterprise Blockchain <br/> Use Cases</h1>
             </Box>
-          <Box className="titleBox">
-            <h1>Enterprise Blockchain <br/> Use Cases</h1>
+            <p >
+              Over the past years, we have helped organizations in
+              both the public and private sectors learn and explore the benefits of EOSIO blockchain
+              technology.
+            <br/>
+              From improving the way a company registers cross-border transactions to
+              ensuring immutable traceability of logistics operations, our team has developed top-notch
+              solutions to real-world problems. Get to know our latest projects.
+            </p>
           </Box>
-          <p >
-            Over the past years, we have helped organizations in
-            both the public and private sectors learn and explore the benefits of EOSIO blockchain
-            technology.
-          <br/>
-            From improving the way a company registers cross-border transactions to
-            ensuring immutable traceability of logistics operations, our team has developed top-notch
-            solutions to real-world problems. Get to know our latest projects.
-          </p>
-        </Box>
-      }
+        }
       </Box>
     )
   }
@@ -155,7 +148,7 @@ const OurProjects = () => {
                     <img
                       alt="LatamLink"
                       className="sizeImageTheCompany"
-                      src={useBaseUrl("img/Group47.svg")}
+                      src={useBaseUrl("img/logos/Group47.svg")}
                     />
                   </Box>
                 </Box>
@@ -182,7 +175,7 @@ const OurProjects = () => {
                 <Box className="imgBoxProjects">
                   <img
                     alt="Lifebank"
-                    src={useBaseUrl("img/lifebank.svg")}
+                    src={useBaseUrl("img/logos/lifebank.svg")}
                   />
                 </Box>
               </Box>

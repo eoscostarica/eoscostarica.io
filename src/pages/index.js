@@ -275,7 +275,7 @@ const Home = () => {
                 <Grid item md={4}>
                   <Box className="imgBoxServices">
                     <img
-                    src={useBaseUrl("img/logistics.svg")}
+                    src={useBaseUrl("img/icons/logistics.svg")}
                     style={{paddingTop: '25px'}}
                     className = {"imageIndrustries"}
                     />
@@ -296,7 +296,7 @@ const Home = () => {
                 <Grid item md={4}>
                   <Box className="imgBoxServices">
                     <img 
-                      src={useBaseUrl("img/payments.svg")}
+                      src={useBaseUrl("img/icons/payments.svg")}
                       style={{paddingTop: '25px'}}
                       className = {"imageIndrustriesLogistics"}
                     />
@@ -315,7 +315,7 @@ const Home = () => {
                 <Grid item md={4}>
                   <Box className="imgBoxServices">
                     <img 
-                      src={useBaseUrl("img/gaming.svg")}
+                      src={useBaseUrl("img/icons/gaming.svg")}
                       style={{paddingTop: '15px'}}
                       className = {"imageIndrustries"}
                     />
@@ -402,7 +402,7 @@ const Home = () => {
                   <Box className="imgBoxRight">
                     <img
                       className="imgKnow"
-                      src={useBaseUrl("img/team.webp")}
+                      src={useBaseUrl("img/team.png")}
                     />
                   </Box>  
                 </Grid>
@@ -415,7 +415,7 @@ const Home = () => {
                     <Box className="imgBoxLeft">
                       <img
                         className="imgKnow"
-                        src={useBaseUrl("img/company.webp")}
+                        src={useBaseUrl("img/company.png")}
                       />
                     </Box>  
                   </Grid>
@@ -444,7 +444,7 @@ const Home = () => {
                     <Box className="imgBoxLeft">
                       <img
                         className="imgKnow"
-                        src={useBaseUrl("img/company.webp")}
+                        src={useBaseUrl("img/company.png")}
                       />
                     </Box>  
                   </Grid>
@@ -478,7 +478,7 @@ const Home = () => {
                   <Box className="imgBoxRight">
                     <img
                       className="imgKnow"
-                      src={useBaseUrl("img/technology.webp")}
+                      src={useBaseUrl("img/technology.png")}
                     />
                   </Box>  
                 </Grid>
@@ -510,7 +510,7 @@ const Home = () => {
                 <Box className="centerBox" style={{height:'100%'}}>
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/Group47.svg")}
+                    src={useBaseUrl("img/logos/Group47.svg")}
                   />
                 </Box>
               </Grid>
@@ -539,7 +539,7 @@ const Home = () => {
                   <Box className="centerBox" style={{height:'100%'}}>
                     <img
                       className="sizeImageTheCompany"
-                      src={useBaseUrl("img/lifebank.svg")}
+                      src={useBaseUrl("img/logos/lifebank.svg")}
                     />
                   </Box>
                 </Grid>
@@ -574,7 +574,7 @@ const Home = () => {
                   <Box className="centerBox" style={{height:'100%'}}>
                     <img
                       className="sizeImageTheCompany"
-                      src={useBaseUrl("img/smartgate.svg")}
+                      src={useBaseUrl("img/logos/smartgate.svg")}
                     />
                   </Box> 
                 </Grid>
