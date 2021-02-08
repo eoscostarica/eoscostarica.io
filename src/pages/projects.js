@@ -114,7 +114,7 @@ const OurProjects = () => {
     return(
       <Grid container>
         <Grid style={{backgroundColor:color}} item xs={12} md={6}>
-          <Box className="projectsGrid">
+          <Box className="projectsGridLeft">
             <Box className="imgBoxProjects">
               <img
                 alt={name}
@@ -124,7 +124,7 @@ const OurProjects = () => {
           </Box>
         </Grid>
         <Grid style={{backgroundColor:color}} item xs={12} md={6}>
-          <Box className="projectsGrid">
+          <Box className="projectsGridRight">
             <Box className="h3Box">
               <h3>{name}</h3>
             </Box>
@@ -143,7 +143,7 @@ const OurProjects = () => {
         <Box className={clsx("section",{["sectionPadding"]: isMobile})}>
           <Grid container>
               <Grid item xs={12} md={6}>
-                <Box className="projectsGrid">
+                <Box className="projectsGridLeft">
                   <Box className="imgBoxProjects">
                     <img
                       alt="LatamLink"
@@ -154,7 +154,7 @@ const OurProjects = () => {
                 </Box>
               </Grid>
               <Grid  item xs={12} md={6}>
-                <Box className="projectsGrid">
+                <Box className="projectsGridRight">
                   <Box className="h3Box">
                     <h3 >LatamLink</h3>
                   </Box>
@@ -171,7 +171,7 @@ const OurProjects = () => {
                 </Box>
               </Grid>
             <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
-              <Box className="projectsGrid">
+              <Box className="projectsGridLeft">
                 <Box className="imgBoxProjects">
                   <img
                     alt="Lifebank"
@@ -181,7 +181,7 @@ const OurProjects = () => {
               </Box>
             </Grid>
             <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
-              <Box className="projectsGrid">
+              <Box className="projectsGridRight">
                 <Box className="h3Box">
                   <h3 >Lifebank</h3>
                 </Box>

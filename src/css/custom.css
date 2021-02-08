@@ -1106,7 +1106,14 @@ input:checked + .slider:before {
   padding: 2rem;
 }
 
-.projectsGrid{
+.projectsGridLeft{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-right: 40px;
+  height: 100%;
+}
+
+.projectsGridRight{
   padding-top: 70px;
   padding-bottom: 70px;
   padding-right: 40px;
@@ -1392,5 +1399,16 @@ input:checked + .slider:before {
 
   .centerTextOnMobile{
     text-align: center;
+  }
+
+  .projectsGridLeft{
+    padding-bottom: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .projectsGridRight{
+    padding-top: 50px;
+    padding-right: 0;
   }
 }
