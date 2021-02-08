@@ -8,6 +8,8 @@ import useBaseUrl from "@docusaurus/useBaseUrl"
 import Box from '@material-ui/core/Box'
 import { useMediaQuery } from 'react-responsive'
 
+import ContactUsBanner from './components/ContactUsBanner'
+
 const ProjectsList = [
   {
     img:"img/logos/smartgate.svg",
@@ -208,6 +210,7 @@ const OurProjects = () => {
           </Grid>
           {ProjectsList.map((project) => (
             <Projects
+              key={project.name}
               img={useBaseUrl(project.img)}
               name={project.name}
               details={project.details}
@@ -220,26 +223,6 @@ const OurProjects = () => {
     )
   }
 
-  const ContactUs = () => {
-    return (
-      <Box className="containerGray">
-        <Box className="sectionPadding">
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={8}>
-              <Box>
-                <h2>Start working with us <br/> and implement <br/> blockchain technology.</h2>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Box className="buttonBox">
-                <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact us</button>
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-    )
-  }
 
   return (
     <>
@@ -253,7 +236,7 @@ const OurProjects = () => {
               <HeroSection/>
               <Body/>
             </Parallax>
-            <ContactUs/>
+            <ContactUsBanner/>
           </Box>
         </Layout>
       }
@@ -262,7 +245,7 @@ const OurProjects = () => {
           <Box className="mainContainer">
             <HeroSection/>
             <Body/>
-            <ContactUs/>
+            <ContactUsBanner/>
           </Box>
         </Layout>
       }
