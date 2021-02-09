@@ -113,7 +113,7 @@ const BlockProducer = () => {
               <Box className="centerBox">
                 <img
                   style={{marginBottom:'20px'}}
-                  src={useBaseUrl("img/icon-education.svg")}
+                  src={useBaseUrl("img/icons/icon-education.svg")}
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
@@ -129,7 +129,7 @@ const BlockProducer = () => {
               <Box className="centerBox">
                 <img
                   style={{marginBottom:'20px'}}
-                  src={useBaseUrl("img/icon-loyalty.svg")}
+                  src={useBaseUrl("img/icons/icon-loyalty.svg")}
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
@@ -145,7 +145,7 @@ const BlockProducer = () => {
               <Box className="centerBox">
                 <img
                   style={{marginBottom:'20px'}}
-                  src={useBaseUrl("img/icon-equality.svg")}
+                  src={useBaseUrl("img/icons/icon-equality.svg")}
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
@@ -160,7 +160,7 @@ const BlockProducer = () => {
               <Box className="centerBox">
                 <img
                   style={{marginBottom:'20px'}}
-                  src={useBaseUrl("img/icon_resilience.svg")}
+                  src={useBaseUrl("img/icons/icon_resilience.svg")}
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
@@ -177,7 +177,7 @@ const BlockProducer = () => {
               <Box className="centerBox">
                 <img
                   style={{marginBottom:'20px'}}
-                  src={useBaseUrl("img/icon-liberty.svg")}
+                  src={useBaseUrl("img/icons/icon-liberty.svg")}
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
@@ -194,7 +194,7 @@ const BlockProducer = () => {
               <Box className="centerBox">
                 <img
                   style={{marginBottom:'20px'}}
-                  src={useBaseUrl("img/icon_tolerance.svg")}
+                  src={useBaseUrl("img/icons/icon_tolerance.svg")}
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
@@ -211,7 +211,7 @@ const BlockProducer = () => {
               <Box className="centerBox">
                 <img
                   style={{marginBottom:'20px'}}
-                  src={useBaseUrl("img/icon_accountability.svg")}
+                  src={useBaseUrl("img/icons/icon_accountability.svg")}
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
@@ -227,7 +227,7 @@ const BlockProducer = () => {
               <Box className="centerBox">
                 <img
                   style={{marginBottom:'20px'}}
-                  src={useBaseUrl("img/icon_prudence.svg")}
+                  src={useBaseUrl("img/icons/icon_prudence.svg")}
                 />
               </Box>
               <Box className={clsx("h3Box","centerText")}>
@@ -330,7 +330,7 @@ const BlockProducer = () => {
                 <Box className="centerBox">
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/lifebank.svg")}
+                    src={useBaseUrl("img/logos/lifebank.svg")}
                   />
                 </Box>
                 <br/>
@@ -359,7 +359,7 @@ const BlockProducer = () => {
                 <Box className="centerBox">
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/eosrate.svg")}
+                    src={useBaseUrl("img/logos/eosrate.svg")}
                   />
                 </Box>
                 <br/>
@@ -374,7 +374,7 @@ const BlockProducer = () => {
                 <Box className="centerBox">
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/eosio.svg")}
+                    src={useBaseUrl("img/logos/eosio.svg")}
                   />
                 </Box>
                 <br/>
@@ -411,7 +411,7 @@ const BlockProducer = () => {
                     <img
                       className="socialMediaAnimation"
                       style={{width:'48px', height:'48px', cursor:'pointer', color:'#5484b3'}}
-                      src={useBaseUrl("img/icon-medium.png")}
+                      src={useBaseUrl("img/icons/icon-medium.png")}
                     />
                   </a>
                   <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">

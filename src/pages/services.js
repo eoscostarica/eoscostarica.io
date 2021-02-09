@@ -543,7 +543,7 @@ const ServicePage = () => {
               <Grid item xs={12} md={4}>
                 <Box className="imgBoxServices">
                   <img
-                   src={useBaseUrl("img/logistics.svg")}
+                   src={useBaseUrl("img/icons/logistics.svg")}
                    style={{paddingTop:'25px'}}
                    className="imageIndrustries"
                    />
@@ -563,7 +563,7 @@ const ServicePage = () => {
               <Grid item xs={12} md={4}>
                 <Box className="imgBoxServices">
                   <img 
-                    src={useBaseUrl("img/payments.svg")}
+                    src={useBaseUrl("img/icons/payments.svg")}
                     style={{paddingTop:'25px'}}
                     className="imageIndrustriesLogistics"
                   />
@@ -584,7 +584,7 @@ const ServicePage = () => {
               <Grid item xs={12} md={4}>
                   <Box className="imgBoxServices">
                     <img 
-                      src={useBaseUrl("img/gaming.svg")}
+                      src={useBaseUrl("img/icons/gaming.svg")}
                       style={{paddingTop:'20px'}}
                       className="imageIndrustries"
                     />
