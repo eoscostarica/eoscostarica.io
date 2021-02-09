@@ -530,7 +530,7 @@ const Home = () => {
                   initiative, a program to accelerate the development of the
                   blockchain ecosystem in the region.{" "}
                   <a href="https://latamlink.io/" target="_blank">
-                    Read more.
+                    Discover more about LatamLink.
                   </a>
                 </p>
               </Grid>
@@ -565,7 +565,7 @@ const Home = () => {
                       block.one.
                     </a>{" "}
                     <a href=" https://lifebank.io/" target="_blank">
-                      Read more.
+                      Find out more about Lifebank.
                     </a>
                   </p>
                 </Grid>
@@ -588,7 +588,7 @@ const Home = () => {
                     A blockchain-based platform that provides solutions for in-out
                     gate activity for the container industry and real-time
                     transmission of relevant data required for proper interchange
-                    in port logistics. <a href="https://smartgate.tech/" target="_blank">Read more.</a>
+                    in port logistics. <a href="https://smartgate.tech/" target="_blank">Learn more about SMARTGATE.</a>
                   </p>
                   <br/>
                 </Grid>

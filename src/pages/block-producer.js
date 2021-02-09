@@ -351,7 +351,7 @@ const BlockProducer = () => {
                     block.one.
                   </a>{" "}
                   <a href=" https://lifebank.io/" target="_blank">
-                    Read more.
+                  Find out more about Lifebank.
                   </a>
                 </p>
               </Grid>
@@ -367,7 +367,7 @@ const BlockProducer = () => {
                 <p>
                   EOS Rate is an open- source app that allows EOS token holders
                   to access a rating system and voting portal for block
-                  producers and proxies in the EOS blockchain.<a href="https://eosrate.io/" target="_blank"> Read more.</a>
+                  producers and proxies in the EOS blockchain.<a href="https://eosrate.io/" target="_blank"> Explore EOS Rate.</a>
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
@@ -382,7 +382,8 @@ const BlockProducer = () => {
                 <p>
                   The EOSIO Dashboard is an open-source project that allows
                   users to visualize the rewards distribution along the EOS
-                  network to seek accountability and transparency.<a href="https://mainnet.eosio.cr/" target="_blank"> Read more</a>
+                  network to seek accountability and transparency.{" "}
+                  <a href="https://mainnet.eosio.cr/" target="_blank"> Read more about EOSIO Dashboard.</a>
                 </p>
               </Grid>
             </Grid>
