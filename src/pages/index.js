@@ -12,7 +12,15 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
+import MetaTags from './components/MetaTags'
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
+
+const MetaData={
+  title:"Enterprise Blockchain Solutions | EOSIO",
+  description:" EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
+  img:"/metadataImg",
+  url:"",
+}
 
 const Home = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
@@ -691,6 +699,7 @@ const Home = () => {
    <>
       {isDesktop && 
         <Layout>
+          <MetaTags title={MetaData.title} description={MetaData.description} url={MetaData.url} img={MetaData.img} />
           <Box className={"mainContainer"}>
             <Parallax strength={800}>
               <Background className={"bgParallax"}>
