@@ -129,7 +129,7 @@ const DevelopTeam = [
         img:"img/team/jorge.jpg",
         name:"Jorge Murillo",
         position:"Sr. UX Designer",
-        bio:"Understanding the people's and projects' needs is crucial to create user interfaces for hi-tech apps and mediate among users, designers, and developers.",
+        bio:"Understanding the people's needs is crucial to create user interfaces for hi-tech apps and mediate among users, designers, and developers.",
         linkedIn:"https://www.linkedin.com/in/jmurilloux/",
         twitter:"https://twitter.com/Oquedo",
         color:"#ffffff"
