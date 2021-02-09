@@ -1,14 +1,11 @@
-import React from "react";
-import PropTypes from 'prop-types';
-import Lottie  from 'react-lottie';
-import animationData from './games.json';
+import React from "react"
+import Lottie  from 'react-lottie'
+import animationData from './games.json'
 
-const Games = ({
-  state
-}) => {
+const Games = ({isDesktop}) => {
   const defaultOptions = {
-    loop: 4,
-    autoplay: state,
+    loop: true,
+    autoplay: true,
     animationData: animationData,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice'
@@ -18,14 +15,10 @@ const Games = ({
   return (
     <Lottie
       options={defaultOptions}
-      width='500px'
-      height='500px'
+      width={isDesktop? '500px':'250px'}
+      height={isDesktop? '500px':'250px'}
     />
   );
-}
-
-Games.propTypes = {
-  state: PropTypes.bool
 }
 
 export default Games;

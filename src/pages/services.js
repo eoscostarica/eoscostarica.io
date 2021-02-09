@@ -1,64 +1,142 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Parallax, Background } from 'react-parallax';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import clsx from "clsx";
-import Layout from "@theme/Layout";
+import React, { useState, useEffect, useRef } from "react"
+import { Parallax, Background } from 'react-parallax'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import clsx from "clsx"
+import Layout from "@theme/Layout"
 import { useMediaQuery } from 'react-responsive'
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import useBaseUrl from "@docusaurus/useBaseUrl"
 import Box from '@material-ui/core/Box'
-import Grid from '@material-ui/core/Grid';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import { useHistory } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid'
+import Accordion from '@material-ui/core/Accordion'
+import AccordionDetails from '@material-ui/core/AccordionDetails'
+import AccordionSummary from '@material-ui/core/AccordionSummary'
+import { useHistory } from 'react-router-dom'
 
-import DevelopmentServices from './SvgComponents/DevelopmentServices';
-import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure';
+import AccordionComp from './components/AccordionComp'
+import ContactUsBanner from './components/ContactUsBanner'
+import DevelopmentServices from './SvgComponents/DevelopmentServices'
+import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure'
 
+const strategicLocationAccordion = 
+[
+  {
+    title: 'Network interconnectivity',
+    content:'Costa Rica has shores in both the Pacific and Atlantic oceans and connects three submarine fiber optic cables – ARCOS-1, MAYA-1, and Pan American Crossing (PAC) – that provide the majority of the bandwidth in the country. This interconnection provides real-time fail-over and redundancy to our infrastructure. Costa Rica is part of the six Central American nations interconnected via a terrestrial fiber-optic network (REDCA). Additionally, having direct connections to all upstream carriers allows the country’s network to prevent single-point failures.',
+    target: 'panel_interconnectivity'
+  },
+  {
+    title: 'Stable political framework',
+    content:'Costa Rica is a country that values Human Rights, Peace, and Democracy. The country is one of the most stable and longest-lasting Democracies in America. Costa Rica abolished its army in 1948 to promote education and wellbeing and stands out on equality and innovation. Moreover, the Inter-American Institute of Human Rights based its headquarters in San José.',
+    target: 'panel_framework'
+  },
+  {
+    title: 'Environmental awareness',
+    content:'Despite being a small country, Costa Rica houses more than 4% of the world’s biodiversity. The country’s leaders have been promoting ecology and sustainable development. Leading by example, more than 26% of its territory comprises of protected areas and National Parks.',
+    target: 'panel_awareness'
+  }
+]
+
+const enterpriseBlockchainAccordionLeft = 
+[
+  {
+    title: 'Added transparency',
+    content:'Blockchain enables a transparent and near real-time registry of data that can improve the trust and traceability of processes, such as in supply chain or insurance claims processing.',
+    target: 'panel_addedTransparency'
+  },
+  {
+    title: 'Improved security',
+    content:'The immutability and encryption capabilities of blockchain can reduce data manipulation, human error, and cyber frauds. Blockchains use hash functions – created by a mathematical function that transforms input data into code lines – that make blockchains difficult to hack.',
+    target: 'panel_improvedSecurity'
+  }
+]
+
+const enterpriseBlockchainAccordionRight = 
+[
+  {
+    title: 'Boosted efficiency',
+    content:'Smart contracts can help you process transactions quickly, with added efficiency compared to cloud platforms, and less costly by reducing administrative fees by cutting the middleman.',
+    target: 'panel_boostedEfficiency'
+  },
+  {
+    title: 'Enhanced auditability',
+    content:'A permissioned blockchain allows an organization to control accesses and authorizations across the network, increasing accountability among the team, and facilitating auditability by external parties.',
+    target: 'panel_enhancedAuditability'
+  }
+]
+
+const solutionBaseAccordionLeft = 
+[
+  {
+    title: 'User-centered approach',
+    content:'We focus on the user. We understand the importance of user research to identify their pain points and needs. Good research helps us know who the user is to find the best solution to specific problems.',
+    target: 'panel_userCentered'
+  },
+  {
+    title: 'Adaptability and innovation',
+    content:'We continually explore the newest trends in blockchain technology to better serve our clients. Also, we offer an open, unlimited platform that enables developers to innovate.',
+    target: 'panel_daptabilityInnovation'
+  }
+]
+
+const solutionBaseAccordionRight = 
+[
+  {
+    title: 'Dynamic tech stack',
+    content:'We deploy the optimum tech stack available to leverage the blockchain protocol we use, which we call the “EOS Dream Stack.” It allows us to explore further the many assets this technology offers.',
+    target: 'panel_dynamicTech'
+  },
+  {
+    title: 'Agile methodology',
+    content:'We deploy an Agile approach that stimulates cross-functional collaboration, flexibility, and adaptability to encourage constant improvement.',
+    target: 'panel_agileMethodology'
+  }
+]
 
 const ServicePage = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
-  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
-  const [expandedMap, setExpandedMap] = useState('panel_interconnectivity');
-  const [expandedSolution, setExpandedSolution] = useState();
-  const [expandedEducation, setExpandedEducation] = useState('panel_Workshops');
-  const history = useHistory();
+  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
+  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const [expandedMap, setExpandedMap] = useState('panel_interconnectivity')
+  const [expandedSolution, setExpandedSolution] = useState()
+  const [expandedEnterprise, setExpandedEnterprise] = useState()
+  const [expandedEducation, setExpandedEducation] = useState('panel_Workshops')
+  const history = useHistory()
 
   const refDevelopment = useRef(null)
   const refInfraestrcture = useRef(null)
   const refEducation = useRef(null)
 
-  const handleScrollDev = () => refDevelopment.current.scrollIntoView({ behavior: 'smooth', block: "start", inline: "nearest"  })
-  const handleScrollInfra = () => refInfraestrcture.current.scrollIntoView({ behavior: 'smooth', block: "start", inline: "nearest" })  
-  const handleScrollEdu = () => refEducation.current.scrollIntoView({ behavior: 'smooth', block: "start", inline: "nearest" })  
-
+  const handleScrollDev = () => refDevelopment.current.scrollIntoView({behavior:'smooth', block:'start', inline:'nearest'})
+  const handleScrollInfra = () => refInfraestrcture.current.scrollIntoView({behavior:'smooth', block:'start', inline:'nearest'})  
+  const handleScrollEdu = () => refEducation.current.scrollIntoView({behavior:'smooth', block:'start', inline:'nearest'})  
 
   const handleChangeMap = (panel) => (event, newExpanded) => {
-    setExpandedMap(newExpanded ? panel : false);
-  };
+    setExpandedMap(newExpanded? panel: false)
+  }
 
   const handleChangeSolution = (panel) => (event, newExpanded) => {
-    setExpandedSolution(newExpanded ? panel : false);
-  };
+    setExpandedSolution(newExpanded? panel: false)
+  }
+
+  const handleChangeEnterprise = (panel) => (event, newExpanded) => {
+    setExpandedEnterprise(newExpanded? panel: false)
+  }
 
   const handleChangeEducation = (panel) => (event, newExpanded) => {
-    setExpandedEducation(newExpanded ? panel : false);
-  };
+    setExpandedEducation(newExpanded? panel: false)
+  }
 
   useEffect(() => {
     handleChangeMap('panel_interconnectivity')
     handleChangeEducation('panel_Workshops')
-  }, []);
-
+  }, [])
 
   const HeroSection = () => {
     return (
-      <Box className={"containerSec"}>
+      <Box className="containerSec">
         {isDesktop && 
-          <Box className={"sectionHero"}>
-          <Box className={"titleBox"}>
-            <h1>Custom-made</h1>
-            <h1>Blockchain Solutions</h1>
+          <Box className="sectionHero">
+          <Box className="titleBox">
+            <h1>Custom-made <br/> Blockchain Solutions</h1>
           </Box>
           <p >
             Leverage blockchain technology. Our team will help you embrace
@@ -68,26 +146,25 @@ const ServicePage = () => {
             We have years of experience integrating enterprise blockchain solutions and
             developing infrastructure for business environments.
           </p>
-          <Box className={"doubleSpacingBox"}>
+          <Box className="doubleSpacingBox">
             <Grid container spacing={5}>
               <Grid item xs={12} md={4}>
-                <button className={"buttonSecondary"} style={{padding: "19px", height:"90px", width: "100%"}} onClick={handleScrollDev}>Development<br/>Services</button>
+                <button className="buttonSecondary" style={{padding:"19px", height:"90px", width:"100%"}} onClick={handleScrollDev}>Development<br/>Services</button>
               </Grid>
               <Grid item xs={12} md={4}>
-                <button className={"buttonSecondary"} style={{padding: "19px", height:"90px", width: "100%"}} onClick={handleScrollInfra}>Blockchain<br/>Infrastructure</button>
+                <button className="buttonSecondary" style={{padding:"19px", height:"90px", width:"100%"}} onClick={handleScrollInfra}>Blockchain<br/>Infrastructure</button>
               </Grid>
               <Grid item xs={12} md={4}>
-                <button className={"buttonSecondary"} style={{padding: "19px", height:"90px", width: "100%"}} onClick={handleScrollEdu}>Education<br/>and Training</button>
+                <button className="buttonSecondary" style={{padding:"19px", height:"90px", width:"100%"}} onClick={handleScrollEdu}>Education<br/>and Training</button>
               </Grid>
             </Grid>
           </Box>
         </Box>
         }
         {isMobile && 
-          <Box className={"sectionHeroMobile"}>
-            <Box className={"titleBox"}>
-              <h1 >Custom-made</h1>
-              <h1 >Blockchain Solutions</h1>
+          <Box className="sectionHeroMobile">
+            <Box className="titleBox">
+              <h1 >Custom-made <br/> Blockchain Solutions</h1>
             </Box>
             <p>
               Leverage blockchain technology. Our team will help you embrace
@@ -98,8 +175,8 @@ const ServicePage = () => {
               We have years of experience integrating enterprise blockchain solutions and
               developing infrastructure for business environments.
             </p>
-            <Box className={"buttonBoxMobile"}>
-              <button className={"buttonPrimary"} onClick={() => history.push("/about/")}>
+            <Box className="buttonBoxMobile">
+              <button className="buttonPrimary" onClick={() => history.push("/about/")}>
                 Get to Know Us
               </button>
             </Box>
@@ -111,20 +188,19 @@ const ServicePage = () => {
 
   const BlockchainDev = () => {
     return (
-      <Box ref={refDevelopment}  className={"containerSec"}>
-        <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
-          <Box className={"titleBox"}>
-            <h2>Blockchain</h2>
-            <h2>Development Services</h2>
+      <Box ref={refDevelopment} className="containerSec">
+        <Box className={clsx("section",{["sectionPadding"]: isMobile})}>
+          <Box className="titleBox">
+            <h2>Blockchain <br/> Development Services</h2>
           </Box>
           {isMobile && 
-            <Box className={"centerBox"}>
+            <Box className="centerBox">
               <DevelopmentServices width="214.409"/>
             </Box>
           }
           <Grid container>
             <Grid item xs={12} md={6}>
-              <Box className={"spacingBox"}>
+              <Box className="spacingBox">
                 <p>
                   Explore the possibilities that blockchain technology offers. Boost
                   your operations with increased transparency, security, and
@@ -138,14 +214,14 @@ const ServicePage = () => {
                   </a>
                   , for its adaptability to any industry in both the private and
                   public sectors. Visit our{" "}
-                  <a href={useBaseUrl("/industries")}>industries page</a> to learn
+                  <a href={useBaseUrl("/industries")} target="_blank">industries page</a> to learn
                   more.
                 </p>
               </Box>
             </Grid>
             {isDesktop && 
               <Grid item xs={12} md={6}>
-                <Box style={{marginTop:'-40px'}} className={"centerBox"}>
+                <Box style={{marginTop:'-40px'}} className="centerBox">
                   <DevelopmentServices />
                 </Box>
               </Grid>
@@ -153,8 +229,8 @@ const ServicePage = () => {
             <Grid item xs={12} md={12}>
               <br/>
               <br/>
-              <Box className={"spacingBox"}>
-                <Box className={"h3Box"}>
+              <Box className="spacingBox">
+                <Box className="h3Box">
                   <h3 >Enterprise Blockchain</h3>
                 </Box>
                 <p>
@@ -168,52 +244,31 @@ const ServicePage = () => {
               </Box>
             </Grid>
           </Grid>
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={6}>
-                <h4>Enhanced auditability</h4>
-                <p>
-                  A permissioned blockchain allows an organization to control
-                  accesses and authorizations across the network, increasing
-                  accountability among the team, and facilitating auditability
-                  by external parties.
-                </p>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <h4>Improved security</h4>
-              <p>
-                The immutability and encryption capabilities of blockchain
-                can reduce data manipulation, human error, and cyber frauds.
-                Blockchains use hash functions – created by a mathematical
-                function that transforms input data into code lines – that
-                make blockchains difficult to hack.
-              </p>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <h4>Boosted efficiency</h4>
-              <p>
-                Smart contracts can help you process transactions quickly,
-                with added efficiency compared to cloud platforms, and less
-                costly by reducing administrative fees by cutting the
-                middleman.
-              </p>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <h4>Added transparency</h4>
-              <p>
-                Blockchain enables a transparent and near real-time registry
-                of data that can improve the trust and traceability of
-                processes, such as in supply chain or insurance claims
-                processing.
-              </p>
-            </Grid>
-          </Grid>
-          <Box className={"doubleSpacingBox"}>
+          <Box className="accordionBox">
+            {isDesktop && 
+                <Grid container spacing={5}>
+                  <Grid item xs={12} md={6} >
+                  <AccordionComp data={enterpriseBlockchainAccordionLeft} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
+                  </Grid>
+                  <Grid item xs={12} md={6} >
+                  <AccordionComp data={enterpriseBlockchainAccordionRight} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
+                  </Grid>
+                </Grid>
+              }
+              {isMobile && 
+                <>
+                  <AccordionComp data={enterpriseBlockchainAccordionLeft} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
+                  <AccordionComp data={enterpriseBlockchainAccordionRight} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
+                </>
+              }
+          </Box>
+          <Box className="doubleSpacingBox">
             <Grid container>
               <Grid item xs={12} md={12}>
-                <Box className={"h3Box"}>
+                <Box className="h3Box">
                   <h3>A Solution-based Approach</h3>
                 </Box>
-                <Box className={"spacingBox"}>
+                <Box className="spacingBox">
                   <p>
                     EOS Costa Rica leverages a cross-functional team that follows an
                     Agile methodology. We seek efficiency and collaboration and
@@ -225,60 +280,37 @@ const ServicePage = () => {
                 </Box>
               </Grid>
             </Grid>
-
-
-            <Grid container spacing={5}>
-              <Grid item xs={12} md={6}>
-                <h4>User-centered approach</h4>
-                <p>
-                  We focus on the user. We understand the importance of user
-                  research to identify their pain points and needs. Good
-                  research helps us know who the user is to find the best
-                  solution to specific problems.
-                </p>
+            <Box className="accordionBox">
+            {isDesktop && 
+              <Grid container spacing={5}>
+                <Grid item xs={12} md={6} >
+                  <AccordionComp data={solutionBaseAccordionLeft} expanded={expandedSolution} handleChange={handleChangeSolution} bgColor={'white'}/>
+                </Grid>
+                <Grid item xs={12} md={6} >
+                  <AccordionComp data={solutionBaseAccordionRight} expanded={expandedSolution} handleChange={handleChangeSolution} bgColor={'white'}/>
+                </Grid>
               </Grid>
-              <Grid item xs={12} md={6}>
-                <h4>Dynamic tech stack</h4>
-                <p>
-                  We deploy the optimum tech stack available to leverage the
-                  blockchain protocol we use, which we call the “EOS Dream
-                  Stack.” It allows us to explore further the many assets this
-                  technology offers.
-                </p>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <h4>Adaptability and innovation</h4>
-                <p>
-                  We continually explore the newest trends in blockchain
-                  technology to better serve our clients. Also, we offer an
-                  open, unlimited platform that enables developers to innovate.
-                </p>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <h4>Agile methodology</h4>
-                <p>
-                  We deploy an Agile approach that stimulates cross-functional
-                  collaboration, flexibility, and adaptability to encourage
-                  constant improvement.
-                </p>
-              </Grid>
-            </Grid>
+            }
+            {isMobile && 
+              <>
+                <AccordionComp data={solutionBaseAccordionLeft} expanded={expandedSolution} handleChange={handleChangeSolution} bgColor={'white'}/>
+                <AccordionComp data={solutionBaseAccordionRight} expanded={expandedSolution} handleChange={handleChangeSolution} bgColor={'white'}/>
+              </>
+            }
+            </Box>
           </Box>
-          <Box className={"spacingBox"}>
-            <Box className={"h3Box"}>
+          <Box className="spacingBox">
+            <Box className="h3Box">
               <h3>Our Process from Start to Finish</h3>
             </Box>
-            <p>
-              When working on a project, our team follows a combination of
-              Design Thinking, Lean UX, and Agile methodologies. Applying
-              Design Thinking helps us understand the users’ needs and pain
-              points, define a specific problem, and experiment to find
-              potential solutions. Lean UX allows us to learn faster,
-              repeatedly iterate until the product fits its purpose, or pivot
-              entirely when the focus shifts. Moreover, Agile methodology
-              allows us to work flexibly on sprints towards developing
-              user-centered solutions.
-            </p>
+            <Box className={clsx("centerBox","doubleSpacingBox")}>
+              {isDesktop && 
+                <img src={useBaseUrl("/img/process.jpg")}/>
+              }
+              {!isDesktop && 
+                <img src={useBaseUrl("/img/process.jpg")}/>
+              }
+            </Box>
           </Box>
         </Box>
       </Box>
@@ -288,27 +320,13 @@ const ServicePage = () => {
   const BlockchainInfrastructure = () => {
     return (
       <Box ref={refInfraestrcture} className={clsx("containerSec","reduceDobleMarginTop")}>
-        <Box className={"sectionPadding"}>
+        <Box className="sectionPadding">
           <Grid container spacing={5}>
-            {isDesktop && 
             <Grid item xs={12} md={6}>
-              <Box className={"centerBox"}>
-                <Blockchaininfrastructure/>
+              <Box className="titleBox">
+                <h2>Blockchain <br/> Infrastructure</h2>
               </Box>
-            </Grid>
-            }
-            <Grid item xs={12} md={6}>
-              <Box className={"titleBox"}>
-                <h2>Blockchain Infrastructure</h2>
-              </Box>
-              {isMobile && 
-                <Box className={"spacingBox"}>
-                  <Box className={"centerBox"}>
-                    <Blockchaininfrastructure/>
-                  </Box>
-                </Box>
-              }
-              <Box className={"h3Box"}>
+              <Box className="h3Box">
                 <h3>Top-notch Blockchain Infrastructure</h3>
               </Box>
               <p>
@@ -320,11 +338,20 @@ const ServicePage = () => {
                 Learn more about enterprise blockchain:
               </p>
             </Grid>
+            {isDesktop && 
+            <Grid item xs={12} md={6}>
+              <br/>
+              <br/>
+              <Box className="centerBox">
+                <Blockchaininfrastructure/>
+              </Box>
+            </Grid>
+            }
           </Grid>
-          <Box className={"topSpacingBox"}>
+          <Box className="topSpacingBox">
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
-                <Box className={"h3Box"}>
+                <Box className="h3Box">
                   <h4>Blockchain nodes development</h4>
                 </Box>
                 <p>
@@ -335,17 +362,7 @@ const ServicePage = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Box className={"h3Box"}>
-                  <h4>Ready-to-use infrastructure</h4>
-                </Box>
-                <p>
-                  Also, we developed a robust, top-grade infrastructure ready to
-                  host blockchain networks for our clients and open-source
-                  projects from our datacenter.
-                </p>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Box className={"h3Box"}>
+                <Box className="h3Box">
                   <h4>API endpoints</h4>
                 </Box>
                 <p>
@@ -356,7 +373,17 @@ const ServicePage = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={6}>
-              <Box className={"h3Box"}>
+                <Box className="h3Box">
+                  <h4>Ready-to-use infrastructure</h4>
+                </Box>
+                <p>
+                  Also, we developed a robust, top-grade infrastructure ready to
+                  host blockchain networks for our clients and open-source
+                  projects from our datacenter in Costa Rica.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Box className="h3Box">
                   <h4>Experience deploying networks</h4>
                 </Box>
                 <p>
@@ -367,8 +394,8 @@ const ServicePage = () => {
               </Grid>
             </Grid>
           </Box>
-          <Box className={"doubleSpacingBox"}>
-            <Box className={"h3Box"}>
+          <Box className="doubleSpacingBox">
+            <Box className="h3Box">
               <h3>A Strategic Location</h3>
             </Box>
             <p>
@@ -383,81 +410,13 @@ const ServicePage = () => {
           </Box>
           <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
-              <Box className={"centerBox"}>
-                <img src={useBaseUrl("/img/map.svg")}/>
+              <Box className="centerBox">
+                <img src={useBaseUrl("/img/map-loacation.svg")}/>
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Box  className={"accordionBox"}>
-                <Accordion
-                  square
-                  expanded={expandedMap === 'panel_interconnectivity'}
-                  onChange={handleChangeMap('panel_interconnectivity')}
-                  style={{boxShadow:'none'}}
-                  className={"accordion"}
-                >
-                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h4 style={{margin:'2px',padding: 0}}>Network interconnectivity</h4>
-                  </AccordionSummary>
-                  <AccordionDetails style={{padding:1}}>
-                    <p style={{padding: 0}}>
-                      Costa Rica has shores in both the Pacific and Atlantic
-                      oceans and connects three submarine fiber optic cables –
-                      ARCOS-1, MAYA-1, and Pan American Crossing (PAC) – that
-                      provide the majority of the bandwidth in the country.
-                      This interconnection provides real-time fail-over and
-                      redundancy to our infrastructure. Costa Rica is part of
-                      the six Central American nations interconnected via a
-                      terrestrial fiber-optic network (REDCA). Additionally,
-                      having direct connections to all upstream carriers
-                      allows the country’s network to prevent single-point
-                      failures.
-                    </p>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  square
-                  expanded={expandedMap === 'panel_framework'}
-                  onChange={handleChangeMap('panel_framework')}
-                  style={{boxShadow:'none'}}
-                  className={"accordion"}
-                >
-                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h4 style={{margin:'2px',padding: 0}}>Stable political framework</h4>
-                  </AccordionSummary>
-                  <AccordionDetails style={{padding:1}}>
-                    <p style={{padding: 0}}>
-                      Costa Rica is a country that values Human Rights, Peace,
-                      and Democracy. The country is one of the most stable and
-                      longest-lasting Democracies in America. Costa Rica
-                      abolished its army in 1948 to promote education and
-                      wellbeing and stands out on equality and innovation.
-                      Moreover, the Inter-American Institute of Human Rights
-                      based its headquarters in San José.
-                    </p>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  square
-                  expanded={expandedMap === 'panel_awareness'}
-                  onChange={handleChangeMap('panel_awareness')}
-                  style={{boxShadow:'none'}}
-                  className={"accordion"}
-                >
-                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h4 style={{margin:'2px',padding: 0}}>Environmental awareness</h4>
-                  </AccordionSummary>
-                  <AccordionDetails style={{padding:1}}>
-                    <p style={{padding: 0}}>
-                      Despite being a small country, Costa Rica houses more
-                      than 4% of the world’s biodiversity. The country’s
-                      leaders have been promoting ecology and sustainable
-                      development. Leading by example, more than 26% of its
-                      territory comprises of protected areas and National
-                      Parks.
-                    </p>
-                  </AccordionDetails>
-                </Accordion>
+              <Box className="accordionBox">
+                <AccordionComp data={strategicLocationAccordion} expanded={expandedMap} handleChange={handleChangeMap} bgColor={'white'}/>
               </Box>
             </Grid>
           </Grid>
@@ -468,38 +427,38 @@ const ServicePage = () => {
 
   const EducationTraining = () => {
     return (
-      <Box ref={refEducation}  className={"containerGray"}>
-        <Box className={"sectionPadding"}>
-          <Box className={"h3Box"}>
+      <Box ref={refEducation} className="containerGray">
+        <Box className="sectionPadding">
+          <Box className="h3Box">
             <h2>Education and Training</h2>
           </Box>
           {isMobile && 
-            <Box className={"centerBox"}>
+            <Box className="centerBox">
               <img src={useBaseUrl("/img/imgCubes/eos-education.svg")}/>
            </Box>
           }
-          <Box className={"spacingBox"}>
+          <Box className="spacingBox">
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
-                <Box className={"accordionBox"}>
+                <Box className="accordionBox">
                   <Accordion
                     square
                     expanded={expandedEducation=== 'panel_Workshops'}
                     onChange={handleChangeEducation('panel_Workshops')}
                     style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
-                    className={"accordion"}
+                    className="accordion"
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
                       <h4 style={{margin:'2px', padding: 0}}>Executive Workshops</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
                       <p style={{padding: 0}}>
-                      We know that innovative technologies, such as
-                      blockchain, may have a steep learning curve. So, we
-                      offer workshops on blockchain and EOSIO technology to
-                      C-suite executives and teams that want to keep up to
-                      date and learn more about blockchain and enterprise use
-                      cases.
+                        We know that innovative technologies, such as
+                        blockchain, may have a steep learning curve. So, we
+                        offer workshops on blockchain and EOSIO technology to
+                        C-suite executives and teams that want to keep up to
+                        date and learn more about blockchain and enterprise use
+                        cases.
                       </p>
                     </AccordionDetails>
                   </Accordion>
@@ -508,24 +467,24 @@ const ServicePage = () => {
                     expanded={expandedEducation === 'panel_Developers'}
                     onChange={handleChangeEducation('panel_Developers')}
                     style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
-                    className={"accordion"}
+                    className="accordion"
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
                       <h4 style={{margin:'2px',padding: 0}}>Training for Developers</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
                       <p style={{padding: 0}}>
-                      We also provide training and education resources for new
-                      talents that wish to kickstart their career in
-                      blockchain and in the EOSIO protocol. We have assembled
-                      a web portal that includes learning materials and guides
-                      for developers. Check them out {" "}  
-                      <a href="https://guide.eoscostarica.io/" target="_blank">
-                          here
-                      </a>. Also, <a href={useBaseUrl("/contact-us/")} target="_blank">
-                          ask us
-                      </a> about
-                      our training courses for companies and teams.
+                        We also provide training and education resources for new
+                        talents that wish to kickstart their career in
+                        blockchain and in the EOSIO protocol. We have assembled
+                        a web portal that includes learning materials and guides
+                        for developers. Check them out {" "}  
+                        <a href="https://guide.eoscostarica.io/" target="_blank">
+                            here
+                        </a>. Also, <a href={useBaseUrl("/contact-us/")} target="_blank">
+                            ask us
+                        </a> about
+                        our training courses for companies and teams.
                       </p>
                     </AccordionDetails>
                   </Accordion>
@@ -534,22 +493,22 @@ const ServicePage = () => {
                     expanded={expandedEducation === 'panel_Building'}
                     onChange={handleChangeEducation('panel_Building')}
                     style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
-                    className={"accordion"}
+                    className="accordion"
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                      <h4 style={{margin:'2px',padding: 0}}>Community Building</h4>
+                      <h4 style={{margin:'2px',padding:0}}>Community Building</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
-                      <p style={{padding: 0}}>
-                      We help promote the blockchain and EOSIO ecosystems by
-                      hosting and attending community activities. We also
-                      speak about blockchain and participate in events related
-                      to technology and innovation. Every year, we host a
-                      team-building event called <a href="https://eosurf.com/" target="_blank">
-                          EOSurf
-                      </a> that takes our
-                      operations to the beach for several days to switch
-                      computers and code for surf and yoga lessons.
+                      <p style={{padding:0}}>
+                        We help promote the blockchain and EOSIO ecosystems by
+                        hosting and attending community activities. We also
+                        speak about blockchain and participate in events related
+                        to technology and innovation. Every year, we host a
+                        team-building event called <a href="https://eosurf.com/" target="_blank">
+                            EOSurf
+                        </a> that takes our
+                        operations to the beach for several days to switch
+                        computers and code for surf and yoga lessons.
                       </p>
                     </AccordionDetails>
                   </Accordion>
@@ -557,7 +516,7 @@ const ServicePage = () => {
               </Grid>
               {isDesktop && 
                 <Grid item xs={12} md={6}>
-                  <Box className={"centerBox"}>
+                  <Box className="centerBox">
                     <img  src={useBaseUrl("/img/imgCubes/eos-education.svg")}/>
                   </Box>
                 </Grid>
@@ -571,25 +530,25 @@ const ServicePage = () => {
 
   const IndustryBlockchain = () => {
     return (
-      <Box className={clsx("containerSec","reduceMarginTop")}>
-        <Box className={"sectionPadding"}>
-          <Box className={"titleBox"}>
-            <h2>How Can Your Industry Deploy Blockchain?</h2>
+      <Box className="containerSec">
+        <Box className="sectionPadding">
+          <Box className="titleBox">
+            <h2>How Can Your Industry Deploy <br/> Blockchain?</h2>
           </Box>
           <p>
             Blockchain technology has the capabilities to transform many industries, including:
           </p>
-          <Box className={"spacingBox"}>
+          <Box className="spacingBox">
             <Grid container spacing={7}>
               <Grid item xs={12} md={4}>
-                <Box className={"imgBoxServices"}>
+                <Box className="imgBoxServices">
                   <img
-                   src={useBaseUrl("img/logistics.svg")}
-                   style={{paddingTop: '25px'}}
-                   className = {"imageIndrustries"}
+                   src={useBaseUrl("img/icons/logistics.svg")}
+                   style={{paddingTop:'25px'}}
+                   className="imageIndrustries"
                    />
                 </Box>
-                <Box className={"h3Box"}>
+                <Box className="h3Box">
                   <h3>Payments and Transfers</h3>
                 </Box>
                 <p>
@@ -602,14 +561,14 @@ const ServicePage = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Box className={"imgBoxServices"}>
+                <Box className="imgBoxServices">
                   <img 
-                    src={useBaseUrl("img/payments.svg")}
-                    style={{paddingTop: '25px'}}
-                    className = {"imageIndrustriesLogistics"}
+                    src={useBaseUrl("img/icons/payments.svg")}
+                    style={{paddingTop:'25px'}}
+                    className="imageIndrustriesLogistics"
                   />
                 </Box>
-                <Box className={"h3Box"}>
+                <Box className="h3Box">
                   <h3>Logistics and Supply Chain</h3>
                 </Box>
                 <p>
@@ -623,14 +582,14 @@ const ServicePage = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
-                  <Box className={"imgBoxServices"}>
+                  <Box className="imgBoxServices">
                     <img 
-                      src={useBaseUrl("img/gaming.svg")}
-                      style={{paddingTop: '20px'}}
-                      className = {"imageIndrustries"}
+                      src={useBaseUrl("img/icons/gaming.svg")}
+                      style={{paddingTop:'20px'}}
+                      className="imageIndrustries"
                     />
                   </Box>
-                  <Box className={"h3Box"}>
+                  <Box className="h3Box">
                     <h3>Gaming and Esports</h3>
                   </Box>
                 <p>
@@ -654,14 +613,37 @@ const ServicePage = () => {
     )
   }
 
+  const ContactUs = () => {
+    return (
+      <Box className={"containerGray"}>
+        <Box className={"sectionPadding"}>
+          <Grid container spacing={5}>
+            <Grid item xs={12} md={8}>
+                <Box>
+                  <h2 className={"centerTextOnMobile"}>Start working with us</h2>
+                  <h2 className={"centerTextOnMobile"}>and implement</h2>
+                  <h2 className={"centerTextOnMobile"}>blockchain technology.</h2>
+                </Box>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className={"buttonBox"}>
+                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+    )
+  }
+
   return (
     <>
       {isDesktop && 
         <Layout>
-          <Box className={"mainContainer"}>
+          <Box className="mainContainer">
             <Parallax strength={800}>
-              <Background className={"bgParallax"}>
-                  <Box className={"imgParallax"} />
+              <Background className="bgParallax">
+                  <Box className="imgParallax" />
               </Background>
               <HeroSection />
               <BlockchainDev />
@@ -669,17 +651,19 @@ const ServicePage = () => {
             <BlockchainInfrastructure />
             <EducationTraining />
             <IndustryBlockchain />
+            <ContactUsBanner />
           </Box>
         </Layout>
       }
       {isMobile && 
         <Layout>
-          <Box className={"mainContainer"}>
+          <Box className="mainContainer">
             <HeroSection />
             <BlockchainDev />
             <BlockchainInfrastructure />
             <EducationTraining />
             <IndustryBlockchain />
+            <ContactUsBanner />
           </Box>
         </Layout>
       }
