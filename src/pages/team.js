@@ -129,7 +129,7 @@ const DevelopTeam = [
         img:"img/team/jorge.jpg",
         name:"Jorge Murillo",
         position:"Sr. UX Designer",
-        bio:"",
+        bio:"Understanding the people's needs is crucial to create user interfaces for hi-tech apps and mediate among users, designers, and developers.",
         linkedIn:"https://www.linkedin.com/in/jmurilloux/",
         twitter:"https://twitter.com/Oquedo",
         color:"#ffffff"
@@ -147,7 +147,7 @@ const DevelopTeam = [
         img:"img/team/kevin.jpg",
         name:"Kevin Castillo",
         position:"Full Stack Developer",
-        bio:"",
+        bio:"Software development has given me the opportunity to learn and create new things everyday.",
         linkedIn:"https://www.linkedin.com/in/kevin-castillo-mora/",
         twitter:"",
         color:"#ffffff"
@@ -183,7 +183,7 @@ const DevelopTeam = [
         img:"img/team/teto.jpg",
         name:"Terencio Gómez",
         position:"Full Stack Developer",
-        bio:"",
+        bio:"Keeping a happy team will most likely guarantee a successful final result.",
         linkedIn:"https://www.linkedin.com/in/terencio-gomez-14784ba3/",
         twitter:"",
         color:"#ffffff"

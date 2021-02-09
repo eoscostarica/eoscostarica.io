@@ -38,8 +38,10 @@ const Home = () => {
           <Box className="titleBox">
               <h1>Enterprise Blockchain Solutions <br /> That Fit Your Needs</h1>
           </Box>
-          <p >Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.</p>
-          <p>Start transforming your organization by leveraging enterprise blockchain networks.</p>
+          <p>
+            Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.
+            Start transforming your organization by leveraging enterprise blockchain networks.
+          </p>
           <Box className="buttonBox">
             <button className="buttonPrimary" onClick={() => history.push("/services/")} >Explore our services</button>
           </Box>
@@ -125,14 +127,13 @@ const Home = () => {
                 </p>
               </Grid>
             </Grid>
-            <Box className="topSpacingBox">
+            <Box className="paddingTop">
               {isDesktop &&
-                <Grid container spacing={5}>
-                  <Grid item xs={12} md={6}></Grid>
-                  <Grid item xs={12} md={3}>
-                    <p>
+                <Grid justify="center" container spacing={5}>
+                  <Grid item xs={12} md={7}>
+                    <h3>
                       Learn more about how blockchain can improve your operations.
-                    </p>
+                    </h3>
                   </Grid>
                   <Grid item xs={12} md={3}>
                     <Box className="boxFlexEnd">
@@ -305,10 +306,10 @@ const Home = () => {
                     <h3>Logistics and Supply Chain</h3>
                   </Box>
                   <p>
-                    In an industry that involves dozens of stakeholders, the
-                    capabilities of blockchain and smart contracts for
-                    traceability, authorizations management, and automation can
-                    make a great ally. 
+                    In an industry that involves dozens of 
+                    stakeholders, blockchain's capabilities 
+                    to manage authorizations and automate 
+                    and trace operations can make a great ally.{" "}
                     <a href={"https://eoscostarica.io/blog/blockchain-logistics"}> Read more</a>
                   </p>
                 </Grid>

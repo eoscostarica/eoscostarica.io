@@ -17,7 +17,7 @@ import Games from './Animations/Games'
 const moreIndustriesAccordion = 
 [
   {
-    title: 'Asset Managementy',
+    title: 'Asset Management',
     content:' Blockchain technology enables an immutable and secure way to tokenize and manage tangible and intangible assets. Some opportunities include innovative liquidity options and reduced management costs.',
     target: 'panel_AssetManagementy'
   },
@@ -186,7 +186,7 @@ const Industries = () => {
                       authorizations management, and automation can make a great ally.
                       Blockchain can integrate different technologies, such as IoT and
                       AI, to create comprehensive solutions and streamline processes
-                      in the logistics and supply chain industry. {" "}  
+                      in the logistics and supply chain industry. {" "}
                       <a
                         href={"https://eoscostarica.io/blog/blockchain-logistics"} 
                         target="_blank"

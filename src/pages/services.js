@@ -572,10 +572,10 @@ const ServicePage = () => {
                   <h3>Logistics and Supply Chain</h3>
                 </Box>
                 <p>
-                  In an industry that involves dozens of stakeholders, the
-                  capabilities of blockchain and smart contracts for
-                  traceability, authorizations management, and automation can
-                  make a great ally.{" "}
+                  In an industry that involves dozens of 
+                  stakeholders, blockchain's capabilities 
+                  to manage authorizations and automate 
+                  and trace operations can make a great ally.{" "}
                   <a href={useBaseUrl("/blog/blockchain-logistics")} target="_blank">
                     Learn more
                   </a>

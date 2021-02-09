@@ -504,7 +504,7 @@ const BlockProducer = () => {
                   infrastructure.
                 </p>
               </Grid>
-              <Grid md={5}></Grid>
+              <Grid md={5}/>
             </Grid>
           </Box>
         </Box>

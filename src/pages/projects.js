@@ -14,58 +14,66 @@ const ProjectsList = [
   {
     img:"img/logos/smartgate.svg",
     name:"SMARTGATE",
-    details:"A blockchain-based platform that provides solutions for in-out gate activity for the container industry and real-time transmission of relevant data required for proper interchange in port logistics.",
+    details:"A blockchain-based platform that provides solutions for in-out gate activity for the container industry and real-time transmission of relevant data required for proper interchange in port logistics. ",
     link:"https://smartgate.tech/",
-    color:"#ffffff"
+    color:"#ffffff",
+    linkText:"Learn more about SMARTGATE."
   },
   {
     img:"img/logos/eosio.svg",
     name:"EOSIO Dashboard",
-    details:"The EOSIO Dashboard is an open-source project that allows users to visualize the rewards distribution along the EOS network to seek accountability and transparency.",
+    details:"The EOSIO Dashboard is an open-source project that allows users to visualize the rewards distribution along the EOS network to seek accountability and transparency. ",
     link:"https://mainnet.eosio.cr/",
-    color:"#f8f8f8"
+    color:"#f8f8f8",
+    linkText:"Read more about EOSIO Dashboard."
   },
   {
     img:"img/logos/eosrate.svg",
     name:"EOS Rate",
-    details:"EOS Rate is an open- source app that allows EOS token holders to access a rating system and voting portal for block producers and proxies in the EOS blockchain.",
+    details:"EOS Rate is an open- source app that allows EOS token holders to access a rating system and voting portal for block producers and proxies in the EOS blockchain. ",
     link:"https://eosrate.io/",
-    color:"#ffffff"
+    color:"#ffffff",
+    linkText:"Explore EOS Rate."
   },
   {
     img:"img/imagenotavailable.png",
     name:"Enterprise EOSIO Forum",
-    details:"We are part of the Enterprise EOSIO Forum, a community-driven initiative to discuss enterprise blockchain solutions deploying EOSIO technology",
+    details:"We are part of the Enterprise EOSIO Forum, a community-driven initiative to discuss enterprise blockchain solutions deploying EOSIO technology. ",
     link:"https://www.linkedin.com/company/enterprise-eosio-forum/",
-    color:"#f8f8f8"
+    color:"#f8f8f8",
+    linkText:"More about Enterprise EOSIO Forum."
   },
   {
     img:"img/imagenotavailable.png",
     name:"EOS Foundation",
-    details:"We are part of the EOS Foundation proof of concept. It is an autonomous, decentralized, non-profit organization that will enable self-representation and promotion of the EOS community.",
+    details:"We are part of the EOS Foundation proof of concept. It is an autonomous, decentralized, non-profit organization that will enable self-representation and promotion of the EOS community. ",
     link:"http://eos-foundation.eosio.cr/",
-    color:"#ffffff"
+    color:"#ffffff",
+    linkText:"Check EOS Foundation."
   },
   {
     img:"img/imagenotavailable.png",
     name:"Evodex",
-    details:"Evodex is the front-end user interface for a liquidity pool protocol where users vote on the pool liquidity fees and pay zero gas. We were in charge of UX and front-end design.",
+    details:"Evodex is the front-end user interface for a liquidity pool protocol where users vote on the pool liquidity fees and pay zero gas. We were in charge of UX and front-end design. ",
     link:"https://evodex.io/",
-    color:"#f8f8f8"
+    color:"#f8f8f8",
+    linkText: "Try Evodex now."
   },
   {
     img:"img/imagenotavailable.png",
     name:"Undisclosed enterprise project",
-    details:" We developed an app for a US-based client in the accounting and tax industry for improved traceability of intercompany transactions.",
+    details:" We developed an app for a US-based client in the accounting and tax industry for improved traceability of intercompany transactions. ",
     link:"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-a-great-idea-e384b298a4a8",
-    color:"#ffffff"
+    color:"#ffffff",
+    linkText:"Read more here."
   },
   {
     img:"img/imagenotavailable.png",
     name:"Notario Digital",
-    details:"Notario Digital is an open-source project that generates a hash of any file to register it immutably on an EOSIO network.",
+    details:"Notario Digital is an open-source project that generates a hash of any file to register it immutably on an EOSIO network. ",
     link:"https://notarize.eosio.cr/dashboard/notary",
-    color:"#f8f8f8"
+    color:"#f8f8f8",
+    linkText:"Take a look at it."
   }
 ]
 
@@ -112,7 +120,7 @@ const OurProjects = () => {
   }
 
 
-  const Projects= ({img, name, details, link, color}) => {
+  const Projects= ({img, name, details, link, color, linkText}) => {
     return(
       <Grid container>
         <Grid style={{backgroundColor:color}} item xs={12} md={6}>
@@ -131,7 +139,7 @@ const OurProjects = () => {
               <h3>{name}</h3>
             </Box>
             <p>
-              {details}<a href={link} target="_blank"> Read more</a>
+              {details}<a href={link} target="_blank">{linkText}</a>
             </p>
           </Box>
         </Grid>
@@ -167,7 +175,7 @@ const OurProjects = () => {
                     initiative, a program to accelerate the development
                     of the blockchain ecosystem in the region.{" "}
                     <a href="http://latamlink.io/" target="_blank">
-                      Read more
+                      Discover more about LatamLink.
                     </a>
                   </p>
                 </Box>
@@ -202,7 +210,7 @@ const OurProjects = () => {
                     block.one.
                   </a>{" "}
                   <a href="http://lifebank.io/" target="_blank">
-                    Read more
+                    Find out more about Lifebank.
                   </a>
                 </p>
               </Box>
@@ -216,6 +224,7 @@ const OurProjects = () => {
               details={project.details}
               link={project.link}
               color={project.color}
+              linkText={project.linkText}
             />
           ))}
         </Box>
