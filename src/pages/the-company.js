@@ -86,7 +86,7 @@ const TheCompany = () => {
               <Grid item md={6}>
                 <Box className="imgBoxRight">
                   <img
-                    className="imgKnow"
+                    className="imgKnowCompany"
                     src={useBaseUrl("img/ourstory.jpg")}
                   />
                 </Box>  
@@ -99,7 +99,7 @@ const TheCompany = () => {
                 <Grid item md={6}>
                   <Box className="imgBoxLeft">
                     <img
-                      className="imgKnow"
+                      className="imgKnowCompany"
                       src={useBaseUrl("img/ourvision.jpg")}
                     />
                   </Box>  
@@ -131,8 +131,8 @@ const TheCompany = () => {
                 <Grid item md={6}>
                   <Box className="imgBoxLeft">
                     <img
-                      className="imgKnow"
-                      src={useBaseUrl("img/company.webp")}
+                      className="imgKnowCompany"
+                      src={useBaseUrl("img/company.png")}
                     />
                   </Box>  
                 </Grid>
@@ -332,7 +332,7 @@ const TheCompany = () => {
                 <Box className="imgBoxTheCompany">
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/Group47.svg")}
+                    src={useBaseUrl("img/logos/Group47.svg")}
                   />
                 </Box>
                 <p>
@@ -352,7 +352,7 @@ const TheCompany = () => {
                 <Box className="imgBoxTheCompany">
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/lifebank.svg")}
+                    src={useBaseUrl("img/logos/lifebank.svg")}
                   />
                 </Box>
                 <p>
@@ -379,7 +379,7 @@ const TheCompany = () => {
                 <Box className="imgBoxTheCompany">
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/smartgate.svg")}
+                    src={useBaseUrl("img/logos/smartgate.svg")}
                   />
                 </Box>
                 <p>
