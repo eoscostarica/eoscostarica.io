@@ -256,13 +256,14 @@ const TheCompany = () => {
               </Grid>
               <Grid item xs={12} md={5}>
                 <Box className="h3Box">
-                  <h3>Cost-effective</h3>
+                  <h3>Faster adoption </h3>
                 </Box>
                 <p>
-                  EOSIO offers a flexible and favorable cost model that
-                  eliminates the need for transaction fees. This model is
-                  ideal for developers who seek a solution with low operation
-                  costs and still offers an experience free to the user.
+                  Developers build smart contracts in EOSIO using C++,
+                  a general-purpose programming language with widespread
+                  adoption, thus eliminating the need to learn new languages
+                  to begin deploying the technology. Also, there are many
+                  learning resources available online and a dynamic support community.
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
@@ -277,40 +278,40 @@ const TheCompany = () => {
                   energy-efficient than Ethereum.
                 </p>
               </Grid>
-              <Grid item xs={12} md={10}>
+              <Grid item xs={12} md={5}>
                 <Box className="h3Box">
-                  <h3>Faster adoption </h3>
+                  <h3>Cost-effective</h3>
                 </Box>
                 <p>
-                  Developers build smart contracts in EOSIO using C++,
-                  a general-purpose programming language with widespread
-                  adoption, thus eliminating the need to learn new languages
-                  to begin deploying the technology. Also, there are many
-                  learning resources available online and a dynamic support community.
+                  EOSIO offers a flexible and favorable cost model that
+                  eliminates the need for transaction fees. This model is
+                  ideal for developers who seek a solution with low operation
+                  costs and still offers an experience free to the user.
                 </p>
               </Grid>
+              <Grid md={5}/>
             </Grid>
           </Box>
             {isDesktop &&
-                <Box className="doubleSpacingBox">
-                    <Grid  justify="center" container spacing={10}>
-                        <Grid item xs={12} md={7}>
-                            <Box className="boxFlexEnd">
-                                <h4>We can help you explore EOSIO technology.</h4>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} md={3}>
-                            <Box className="boxFlexEnd">
-                                <button 
-                                    className="buttonPrimary" 
-                                    onClick={() => history.push("/contact-us/")}
-                                >
-                                    Drop Us a Line
-                                </button>
-                            </Box>
-                        </Grid>
-                    </Grid>     
-                </Box>    
+              <Box className="doubleSpacingBox">
+                <Grid  justify="center" container spacing={5}>
+                  <Grid item xs={12} md={7}>
+                    <Box className="boxFlexEnd">
+                      <h3>We can help you explore EOSIO technology.</h3>
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} md={3}>
+                      <Box className="boxFlexEnd">
+                        <button 
+                          className="buttonPrimary" 
+                          onClick={() => history.push("/contact-us/")}
+                        >
+                          Drop Us a Line
+                        </button>
+                      </Box>
+                  </Grid>
+                </Grid>
+              </Box>
             } 
         </Box>
       </Box>
@@ -321,7 +322,7 @@ const TheCompany = () => {
     return ( 
       <Box className="containerSec"> 
         <Box className="section">
-          <Box className="spacingBox">
+          <Box className="buttonBox">
             <h2>Some of Our Projects</h2>
             <br />
           </Box>
