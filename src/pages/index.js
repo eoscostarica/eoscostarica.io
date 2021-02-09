@@ -18,8 +18,8 @@ import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
 const MetaData={
   title:"Enterprise Blockchain Solutions | EOSIO",
   description:" EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
-  img:"/metadataImg",
-  url:"/",
+  img:"img/metadataImg",
+  url:"https://deploy-preview-218--eoscr.netlify.app/",
 }
 
 const Home = () => {
