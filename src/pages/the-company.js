@@ -86,7 +86,7 @@ const TheCompany = () => {
               <Grid item md={6}>
                 <Box className="imgBoxRight">
                   <img
-                    className="imgKnow"
+                    className="imgKnowCompany"
                     src={useBaseUrl("img/ourstory.jpg")}
                   />
                 </Box>  
@@ -99,7 +99,7 @@ const TheCompany = () => {
                 <Grid item md={6}>
                   <Box className="imgBoxLeft">
                     <img
-                      className="imgKnow"
+                      className="imgKnowCompany"
                       src={useBaseUrl("img/ourvision.jpg")}
                     />
                   </Box>  
@@ -131,7 +131,7 @@ const TheCompany = () => {
                 <Grid item md={6}>
                   <Box className="imgBoxLeft">
                     <img
-                      className="imgKnow"
+                      className="imgKnowCompany"
                       src={useBaseUrl("img/company.png")}
                     />
                   </Box>  
