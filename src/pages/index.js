@@ -18,8 +18,8 @@ import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
 const MetaData={
   title:"Enterprise Blockchain Solutions | EOSIO",
   description:" EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
-  img:"img/metadataImg",
-  url:"https://deploy-preview-218--eoscr.netlify.app/",
+  img:"https://eoscostarica.io/img/metadataImg",
+  url:"https://eoscostarica.io/",
 }
 
 const Home = () => {
@@ -725,6 +725,7 @@ const Home = () => {
       }
       {isMobile && 
         <Layout>
+          <MetaTags title={MetaData.title} description={MetaData.description} url={MetaData.url} img={MetaData.img} />
           <Box className={"mainContainer"}>
             <HeroSection />
             <BlockchainCanDo />

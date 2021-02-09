@@ -1,27 +1,26 @@
 import React from "react"
 import PropTypes from 'prop-types'
-import {Helmet} from "react-helmet"
-import useBaseUrl from "@docusaurus/useBaseUrl"
+import Head from '@docusaurus/Head'
 
 const MetaTags = ({title,description,img,url}) => {
   return (
-    <Helmet>
+    <Head>
         <title>{title}</title>
         <meta name="title" content={description}/>
         <meta name="description" content={description}/>
 
-        <meta property="og:type" content="website"/>
-        <meta property="og:url" content={url}/>
-        <meta property="og:title" content={title}/>
-        <meta property="og:description" content={description}/>
-        <meta property="og:image" content={useBaseUrl(img)}/>
+        <meta name="og:type" content="website"/>
+        <meta name="og:url" content={url}/>
+        <meta name="og:title" content={title}/>
+        <meta name="og:description" content={description}/>
+        <meta name="og:image" content={img}/>
 
-        <meta property="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content={url}/>
         <meta property="twitter:title" content={title}/>
         <meta property="twitter:description" content={description}/>
-        <meta property="twitter:image" content={useBaseUrl(img)}/>
-    </Helmet>
+        <meta property="twitter:image" content={img}/>
+    </Head>
   );
 };
 
