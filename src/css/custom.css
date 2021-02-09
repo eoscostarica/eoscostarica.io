@@ -123,7 +123,9 @@ a{
 }
 
 .gridButton{
-  display:flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gridButton:hover{
@@ -139,6 +141,10 @@ a{
 .buttonSecondary:hover{
   color: white;
   background-color: #5484B3;
+}
+
+.resourcesIcon{
+  width: 100px;
 }
 
 /*blog*/
@@ -851,7 +857,6 @@ input:checked + .slider:before {
   align-items: center;
   justify-content:center;
   height: 288px;
-  
 }
 
 .oneGroupLogo{
@@ -1001,6 +1006,13 @@ input:checked + .slider:before {
   display: none
 }
 
+.imgBoxProjects{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .littleImage{
   width: 150px;
   height: 170px;
@@ -1073,6 +1085,33 @@ input:checked + .slider:before {
   transform: scale(1.1);
 }
 
+.animationBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+
+.footerLogo {
+  width: 300px;
+  height: 90px;
+}
+
+.footerLogoAnimation{
+  transition: all .9s ease-in-out;
+  transform: scale(0.87);
+}
+
+.teamPadding{
+  padding: 2rem;
+}
+
+.projectsGrid{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-right: 40px;
+  height: 100%;
+}
 
 @media only screen and (max-width: 767px) {
   .footerLogo {
@@ -1176,6 +1215,11 @@ input:checked + .slider:before {
 
   .sizeImageTheCompany{
     width: 190px;
+  }
+
+  .animationBox{
+    height: 150px;
+    margin-bottom: 50px;
   }
   
   h1{
@@ -1295,6 +1339,10 @@ input:checked + .slider:before {
   .gridButton{
     justify-content: center;
     padding: 30px;
+  }
+
+  .resourcesIcon{
+    width: 80px;
   }
 
   .topSpacingBoxIcons{
