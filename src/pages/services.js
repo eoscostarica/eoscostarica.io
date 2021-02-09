@@ -140,10 +140,7 @@ const ServicePage = () => {
           </Box>
           <p >
             Leverage blockchain technology. Our team will help you embrace
-            the power of this innovative technology.
-          </p>
-          <p>
-            We have years of experience integrating enterprise blockchain solutions and
+            the power of this innovative technology. We have years of experience integrating enterprise blockchain solutions and
             developing infrastructure for business environments.
           </p>
           <Box className="doubleSpacingBox">
