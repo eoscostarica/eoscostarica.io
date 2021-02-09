@@ -19,7 +19,7 @@ const MetaData={
   title:"Enterprise Blockchain Solutions | EOSIO",
   description:" EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
   img:"/metadataImg",
-  url:"",
+  url:"/",
 }
 
 const Home = () => {
