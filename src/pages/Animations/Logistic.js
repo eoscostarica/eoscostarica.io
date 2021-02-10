@@ -2,7 +2,7 @@ import React from 'react'
 import Lottie  from 'react-lottie'
 import animationData from './logistic.json'
 
-const Logistic = ({isDesktop}) => {
+const Logistic = ({ isDesktop }) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -12,7 +12,7 @@ const Logistic = ({isDesktop}) => {
   return (
     <Lottie
       options={defaultOptions}
-      width={isDesktop? '90%':'60%'}
+      width={isDesktop ? '90%' : '60%'}
     />   
   );
 }

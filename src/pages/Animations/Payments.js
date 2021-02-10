@@ -2,7 +2,7 @@ import React from 'react'
 import Lottie  from 'react-lottie'
 import animationData from './payments.json'
 
-const Payments = ({isDesktop}) => {
+const Payments = ({ isDesktop }) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -12,8 +12,8 @@ const Payments = ({isDesktop}) => {
   return (
     <Lottie
       options={defaultOptions}
-      width={isDesktop? '70%':'100%'}
-      height={isDesktop? '100%':'100%'}
+      width={isDesktop ? '70%' : '100%'}
+      height={isDesktop ? '100%' : '100%'}
     />
   );
 }

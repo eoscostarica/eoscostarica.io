@@ -5,7 +5,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
-const AccordionComp = ({data,handleChange,expanded, bgColor}) => {
+const AccordionComp = ( {data, handleChange, expanded, bgColor} ) => {
   return (
     <>
         {data.map((item) => (

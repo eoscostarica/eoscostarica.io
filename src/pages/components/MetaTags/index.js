@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from 'prop-types'
 import Head from '@docusaurus/Head'
 
-const MetaTags = ({title,description,img,url}) => {
+const MetaTags = ( {title, description, img, url} ) => {
   return (
     <Head>
         <title>{title}</title>
