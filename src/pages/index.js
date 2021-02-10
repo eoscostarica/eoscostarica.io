@@ -198,7 +198,7 @@ const Home = () => {
                   <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
                     <h3 style={{padding: 0}}>Software Development</h3>
                   </AccordionSummary>
-                  <AccordionDetails style={{padding:0}}>
+                  <AccordionDetails style={{padding:0, marginTop:'-20px'}}>
                     <p style={{padding: 0}}>
                       Our value proposition is to develop blockchain-based
                       software to solve real-life problems. We have experience
@@ -221,7 +221,7 @@ const Home = () => {
                   <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
                     <h3 style={{padding: 0}}>Blockchain Infrastructure</h3>
                   </AccordionSummary>
-                  <AccordionDetails style={{padding:0}}>
+                  <AccordionDetails style={{padding:0, marginTop:'-20px'}}>
                     <p style={{padding: 0}}>
                       We offer top-grade infrastructure for blockchain networks
                       and API endpoints from our datacenter in San José, Costa
@@ -238,7 +238,7 @@ const Home = () => {
                   <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
                     <h3 style={{padding: 0}}>Education and Training</h3>
                   </AccordionSummary>
-                  <AccordionDetails style={{padding:0}}>
+                  <AccordionDetails style={{padding:0, marginTop:'-20px'}}>
                     <p style={{padding: 0}}>
                       In today’s world, new technologies are leading the way to
                       transform many industries. We offer workshops on blockchain
