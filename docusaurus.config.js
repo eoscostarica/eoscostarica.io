@@ -26,6 +26,7 @@ module.exports = {
       },
     ],
   ],
+
   themeConfig: {
     footer: {},
     googleAnalytics: {

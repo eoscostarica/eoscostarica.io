@@ -1,0 +1,81 @@
+{
+  "projectName": "eoscostarica.io",
+  "projectOwner": "eoscostarica",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "xavier506",
+      "name": "Xavier Fernandez",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/5632966?v=4",
+      "profile": "https://eoscostarica.io",
+      "contributions": [
+        "code",
+        "content",
+        "doc",
+        "ideas",
+        "projectManagement",
+        "review"
+      ]
+    },
+    {
+      "login": "ldrojas",
+      "name": "Luis Diego Rojas",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/29232417?v=4",
+      "profile": "https://github.com/ldrojas",
+      "contributions": [
+        "content",
+        "doc",
+        "ideas",
+        "projectManagement",
+        "review"
+      ]
+    },
+    {
+      "login": "AngeloCG97",
+      "name": "Angelo Castro",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/51149817?v=4",
+      "profile": "https://github.com/AngeloCG97",
+      "contributions": [
+        "code",
+        "content",
+        "doc",
+        "ideas",
+        "review"
+      ]
+    },
+    {
+      "login": "tetogomez",
+      "name": "Teto Gomez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10634375?s=460&u=26fce95b96304281a7a20598dc7c1d6f546d3b08&v=4",
+      "profile": "https://github.com/tetogomez",
+      "contributions": [
+        "code",
+        "content",
+        "doc",
+        "ideas",
+        "review"
+      ]
+    },
+    {
+      "login": "JeanVegaD",
+      "name": "Jean Vega",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/19317138?v=4",
+      "profile": "https://github.com/JeanVegaD",
+      "contributions": [
+        "code",
+        "content",
+        "doc",
+        "ideas",
+        "review"
+      ]
+    }  
+  ],
+  "contributorsPerLine": 7
+}
