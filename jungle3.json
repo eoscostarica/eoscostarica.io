@@ -10,9 +10,9 @@
 		"chain_resources": "",
 		"other_resources": ["https://eosrate.io", "https://guide.eoscostarica.io", "https://guias.eoscostarica.io"],
 		"branding": {
-			"logo_256": "https://eoscostarica.io/img/eos-CostaRica-256x256.png",
-			"logo_1024": "https://eoscostarica.io/img/eos-CostaRica-1024x1024.png",
-			"logo_svg": "https://eoscostarica.io/img/eos-CostaRica-vectors.svg"
+			"logo_256": "https://eoscostarica.io/img/logos/eos-CostaRica-256x256.png",
+			"logo_1024": "https://eoscostarica.io/img/logos/eos-CostaRica-1024x1024.png",
+			"logo_svg": "https://eoscostarica.io/img/logos/eos-CostaRica-vectors.svg"
 		},
 		"location": {
 			"name": "San Jose",
