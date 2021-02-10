@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[50],{113:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"enterprise-blockchain","name":"enterprise blockchain","count":1,"permalink":"/blog/tags/enterprise-blockchain"}')}}]);
