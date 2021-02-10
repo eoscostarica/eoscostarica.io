@@ -289,8 +289,8 @@ const Industries = () => {
           <Box>
             <Grid justify="center" container spacing={5}>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Quick adoption</h3>
+                <Box className="specialH3Box">
+                  <h4>Quick adoption</h4>
                 </Box>
                 <p >
                   Can your team use their experience with programming
@@ -298,8 +298,8 @@ const Industries = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Cost-efficiency</h3>
+                <Box className="specialH3Box">
+                  <h4>Cost-efficiency</h4>
                 </Box>
                 <p>
                   Would the organization see a significant reduction in costs
@@ -308,9 +308,8 @@ const Industries = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Privacy and transparency</h3>
-                  <h3></h3>
+                <Box className="specialH3Box">
+                  <h4>Privacy and transparency</h4>
                 </Box>
                 <p>
                   How are the blockchain’s security and confidentiality
@@ -319,8 +318,8 @@ const Industries = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Speed or throughput</h3>
+                <Box className="specialH3Box">
+                  <h4>Speed or throughput</h4>
                 </Box>
                 <p>
                   How quickly does your solution need to be? Are you a

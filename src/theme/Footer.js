@@ -27,7 +27,7 @@ const Footer = () => {
                 <img 
                 src={useBaseUrl("img/logos/logo-white.png")} 
                 alt="EOS CR LOGO" 
-                className={clsx("footerLogo",{ [stateAnimation]: footerLogoAnimation })} />
+                className={clsx("footerLogo",{ [stateAnimation]:"footerLogoAnimation" })} />
               </Box>
             </Grid>
             <Grid item xs={12} md={2}/>

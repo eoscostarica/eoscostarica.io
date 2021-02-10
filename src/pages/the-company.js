@@ -172,38 +172,38 @@ const TheCompany = () => {
     return (
       <Box className="containerSec">
         <Box className="sectionPadding">
-            <Box>
-                <Box className="titleBox">
-                    <h2>Meet the Team</h2>
-                </Box>
-                <Box className="spacingBox">
-                    <p>
-                        We have assembled a Latin American team with 
-                        a problem-solving mindset and expertise in 
-                        their areas of knowledge. Our distributed 
-                        team operates in an Agile environment that 
-                        encourages participation, self- accountability, 
-                        and innovation. Get to know us!
-                    </p>
-                </Box>
-                {isDesktop &&
-                    <Box className="spacingBox">
-                        <Carousel animation="slide" timeout={500} indicators={false}>
-                            <img
-                                alt="Crew image"
-                                src={useBaseUrl("img/team/crew1.jpg")}
-                            />
-                            <img
-                                alt="Crew image 2"
-                                src={useBaseUrl("img/team/crew2.jpg")}
-                            />
-                        </Carousel>
-                    </Box>
-                }
-                <Box className="boxFlexEnd">
-                    <button className="buttonPrimary" onClick={() => window.open("/team/")} >Meet our team</button>
-                </Box>       
+          <Box>
+            <Box className="titleBox">
+              <h2>Meet the Team</h2>
             </Box>
+            <Box className="spacingBox">
+              <p>
+                  We have assembled a Latin American team with 
+                  a problem-solving mindset and expertise in 
+                  their areas of knowledge. Our distributed 
+                  team operates in an Agile environment that 
+                  encourages participation, self- accountability, 
+                  and innovation. Get to know us!
+              </p>
+            </Box>
+            {isDesktop &&
+              <Box className="spacingBox">
+                <Carousel animation="slide" timeout={500} indicators={false}>
+                  <img
+                    alt="Crew image"
+                    src={useBaseUrl("img/team/crew1.jpg")}
+                  />
+                  <img
+                      alt="Crew image 2"
+                      src={useBaseUrl("img/team/crew2.jpg")}
+                  />
+                </Carousel>
+              </Box>
+            }
+            <Box className="boxFlexEnd">
+              <button className="buttonPrimary" onClick={() => window.open("/team/")} >Meet our team</button>
+            </Box>
+          </Box>
         </Box>
       </Box> 
     )
@@ -214,10 +214,10 @@ const TheCompany = () => {
       <Box className="containerSec"> 
         <Box className="sectionNoPadding">
             <Box className="titleBox">
-                <h2>The Technology</h2>
+              <h2>The Technology</h2>
             </Box>
             <Box className="spacingBox">
-                <p>
+              <p>
                 Our team specializes in the blockchain protocol
                 <a href=" https://eos.io/" target='_blank'> EOSIO</a>, launched by 
                 <a href=" https://block.one/" target='_blank' > block.one</a> in 2018, 
@@ -226,13 +226,13 @@ const TheCompany = () => {
                 (DPoS). In DPoS, computers do not compete over 
                 computational power to solve algorithms. 
                 The following are some key features of EOSIO:
-                </p>
+              </p>
             </Box>
             <Box className="doubleSpacingBox">
             <Grid justify="center" container spacing={5}>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Scalability</h3>
+                <Box className="specialH3Box">
+                  <h4>Scalability</h4>
                 </Box>
                 <p >
                   EOSIO deploys the DPoS mechanism to achieve higher throughput
@@ -243,8 +243,8 @@ const TheCompany = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Flexibility</h3>
+                <Box className="specialH3Box">
+                  <h4>Flexibility</h4>
                 </Box>
                 <p>
                   EOSIO enables adaptability for public and private networks
@@ -255,8 +255,8 @@ const TheCompany = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Faster adoption </h3>
+                <Box className="specialH3Box">
+                  <h4>Faster adoption</h4>
                 </Box>
                 <p>
                   Developers build smart contracts in EOSIO using C++,
@@ -267,8 +267,8 @@ const TheCompany = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Eco-friendly</h3>
+                <Box className="specialH3Box">
+                  <h4>Eco-friendly</h4>
                 </Box>
                 <p>
                   The DPoS mechanism enables a sustainable blockchain
@@ -279,8 +279,8 @@ const TheCompany = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Cost-effective</h3>
+                <Box className="specialH3Box">
+                  <h4>Cost-effective</h4>
                 </Box>
                 <p>
                   EOSIO offers a flexible and favorable cost model that
@@ -344,8 +344,6 @@ const TheCompany = () => {
                   </a>{" "}
                   initiative, a program to accelerate the development of the
                   blockchain ecosystem in the region.<a href="https://latamlink.io/" target="_blank"> Discover more about LatamLink.</a>
-                </p>
-                <p>
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
