@@ -300,12 +300,12 @@ const ServicePage = () => {
             <Box className="h3Box">
               <h3>Our Process from Start to Finish</h3>
             </Box>
-            <Box className={clsx("centerBox","doubleSpacingBox")}>
+            <Box className={isDesktop? clsx("centerBox", "doubleSpacingBox"): clsx("centerBox", "reduceMargin")}>
               {isDesktop && 
                 <img src={useBaseUrl("/img/process.jpg")}/>
               }
               {!isDesktop && 
-                <img src={useBaseUrl("/img/process.jpg")}/>
+                <img src={useBaseUrl("/img/processVertical.gif")}/>
               }
             </Box>
           </Box>
@@ -316,8 +316,8 @@ const ServicePage = () => {
 
   const BlockchainInfrastructure = () => {
     return (
-      <Box ref={refInfraestrcture} className={clsx("containerSec","reduceDobleMarginTop")}>
-        <Box className="sectionPadding">
+      <Box ref={refInfraestrcture} className="containerSec">
+        <Box className="section">
           <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
               <Box className="titleBox">
@@ -407,7 +407,7 @@ const ServicePage = () => {
           </Box>
           <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
-              <Box className="centerBox">
+              <Box className={!isMobile? "centerBox": clsx("centerBox","reduceMargin")}>
                 <img src={useBaseUrl("/img/map-loacation.svg")}/>
               </Box>
             </Grid>
