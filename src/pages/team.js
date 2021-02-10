@@ -225,7 +225,7 @@ const Team = () => {
         )
     } 
 
-    const PersonCard = ({img, name, position, bio, linkedIn, twitter}) => {
+    const PersonCard = ( {img, name, position, bio, linkedIn, twitter} ) => {
         return(
             <Grid container>
                 <Grid item xs={12} md={6}>
