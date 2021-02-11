@@ -140,10 +140,7 @@ const ServicePage = () => {
           </Box>
           <p >
             Leverage blockchain technology. Our team will help you embrace
-            the power of this innovative technology.
-          </p>
-          <p>
-            We have years of experience integrating enterprise blockchain solutions and
+            the power of this innovative technology. We have years of experience integrating enterprise blockchain solutions and
             developing infrastructure for business environments.
           </p>
           <Box className="doubleSpacingBox">
@@ -543,7 +540,7 @@ const ServicePage = () => {
               <Grid item xs={12} md={4}>
                 <Box className="imgBoxServices">
                   <img
-                   src={useBaseUrl("img/logistics.svg")}
+                   src={useBaseUrl("img/icons/logistics.svg")}
                    style={{paddingTop:'25px'}}
                    className="imageIndrustries"
                    />
@@ -563,7 +560,7 @@ const ServicePage = () => {
               <Grid item xs={12} md={4}>
                 <Box className="imgBoxServices">
                   <img 
-                    src={useBaseUrl("img/payments.svg")}
+                    src={useBaseUrl("img/icons/payments.svg")}
                     style={{paddingTop:'25px'}}
                     className="imageIndrustriesLogistics"
                   />
@@ -572,10 +569,10 @@ const ServicePage = () => {
                   <h3>Logistics and Supply Chain</h3>
                 </Box>
                 <p>
-                  In an industry that involves dozens of stakeholders, the
-                  capabilities of blockchain and smart contracts for
-                  traceability, authorizations management, and automation can
-                  make a great ally.{" "}
+                  In an industry that involves dozens of 
+                  stakeholders, blockchain's capabilities 
+                  to manage authorizations and automate 
+                  and trace operations can make a great ally.{" "}
                   <a href={useBaseUrl("/blog/blockchain-logistics")} target="_blank">
                     Learn more
                   </a>
@@ -584,7 +581,7 @@ const ServicePage = () => {
               <Grid item xs={12} md={4}>
                   <Box className="imgBoxServices">
                     <img 
-                      src={useBaseUrl("img/gaming.svg")}
+                      src={useBaseUrl("img/icons/gaming.svg")}
                       style={{paddingTop:'20px'}}
                       className="imageIndrustries"
                     />

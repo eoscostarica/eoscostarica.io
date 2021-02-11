@@ -86,7 +86,7 @@ const TheCompany = () => {
               <Grid item md={6}>
                 <Box className="imgBoxRight">
                   <img
-                    className="imgKnow"
+                    className="imgKnowCompany"
                     src={useBaseUrl("img/ourstory.jpg")}
                   />
                 </Box>  
@@ -99,7 +99,7 @@ const TheCompany = () => {
                 <Grid item md={6}>
                   <Box className="imgBoxLeft">
                     <img
-                      className="imgKnow"
+                      className="imgKnowCompany"
                       src={useBaseUrl("img/ourvision.jpg")}
                     />
                   </Box>  
@@ -131,8 +131,8 @@ const TheCompany = () => {
                 <Grid item md={6}>
                   <Box className="imgBoxLeft">
                     <img
-                      className="imgKnow"
-                      src={useBaseUrl("img/company.webp")}
+                      className="imgKnowCompany"
+                      src={useBaseUrl("img/company.png")}
                     />
                   </Box>  
                 </Grid>
@@ -256,13 +256,14 @@ const TheCompany = () => {
               </Grid>
               <Grid item xs={12} md={5}>
                 <Box className="h3Box">
-                  <h3>Cost-effective</h3>
+                  <h3>Faster adoption </h3>
                 </Box>
                 <p>
-                  EOSIO offers a flexible and favorable cost model that
-                  eliminates the need for transaction fees. This model is
-                  ideal for developers who seek a solution with low operation
-                  costs and still offers an experience free to the user.
+                  Developers build smart contracts in EOSIO using C++,
+                  a general-purpose programming language with widespread
+                  adoption, thus eliminating the need to learn new languages
+                  to begin deploying the technology. Also, there are many
+                  learning resources available online and a dynamic support community.
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
@@ -277,40 +278,40 @@ const TheCompany = () => {
                   energy-efficient than Ethereum.
                 </p>
               </Grid>
-              <Grid item xs={12} md={10}>
+              <Grid item xs={12} md={5}>
                 <Box className="h3Box">
-                  <h3>Faster adoption </h3>
+                  <h3>Cost-effective</h3>
                 </Box>
                 <p>
-                  Developers build smart contracts in EOSIO using C++,
-                  a general-purpose programming language with widespread
-                  adoption, thus eliminating the need to learn new languages
-                  to begin deploying the technology. Also, there are many
-                  learning resources available online and a dynamic support community.
+                  EOSIO offers a flexible and favorable cost model that
+                  eliminates the need for transaction fees. This model is
+                  ideal for developers who seek a solution with low operation
+                  costs and still offers an experience free to the user.
                 </p>
               </Grid>
+              <Grid md={5}/>
             </Grid>
           </Box>
             {isDesktop &&
-                <Box className="doubleSpacingBox">
-                    <Grid  justify="center" container spacing={10}>
-                        <Grid item xs={12} md={7}>
-                            <Box className="boxFlexEnd">
-                                <h4>We can help you explore EOSIO technology.</h4>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} md={3}>
-                            <Box className="boxFlexEnd">
-                                <button 
-                                    className="buttonPrimary" 
-                                    onClick={() => history.push("/contact-us/")}
-                                >
-                                    Drop Us a Line
-                                </button>
-                            </Box>
-                        </Grid>
-                    </Grid>     
-                </Box>    
+              <Box className="doubleSpacingBox">
+                <Grid  justify="center" container spacing={5}>
+                  <Grid item xs={12} md={7}>
+                    <Box className="boxFlexEnd">
+                      <h3>We can help you explore EOSIO technology.</h3>
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} md={3}>
+                      <Box className="boxFlexEnd">
+                        <button 
+                          className="buttonPrimary" 
+                          onClick={() => history.push("/contact-us/")}
+                        >
+                          Drop Us a Line
+                        </button>
+                      </Box>
+                  </Grid>
+                </Grid>
+              </Box>
             } 
         </Box>
       </Box>
@@ -321,7 +322,7 @@ const TheCompany = () => {
     return ( 
       <Box className="containerSec"> 
         <Box className="section">
-          <Box className="spacingBox">
+          <Box className="buttonBox">
             <h2>Some of Our Projects</h2>
             <br />
           </Box>
@@ -331,7 +332,7 @@ const TheCompany = () => {
                 <Box className="imgBoxTheCompany">
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/Group47.svg")}
+                    src={useBaseUrl("img/logos/Group47.svg")}
                   />
                 </Box>
                 <p>
@@ -342,7 +343,7 @@ const TheCompany = () => {
                     LACChain
                   </a>{" "}
                   initiative, a program to accelerate the development of the
-                  blockchain ecosystem in the region.<a href="https://latamlink.io/" target="_blank"> Read more.</a>
+                  blockchain ecosystem in the region.<a href="https://latamlink.io/" target="_blank"> Discover more about LatamLink.</a>
                 </p>
                 <p>
                 </p>
@@ -351,7 +352,7 @@ const TheCompany = () => {
                 <Box className="imgBoxTheCompany">
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/lifebank.svg")}
+                    src={useBaseUrl("img/logos/lifebank.svg")}
                   />
                 </Box>
                 <p>
@@ -370,7 +371,7 @@ const TheCompany = () => {
                     block.one.
                   </a>{" "}
                   <a href=" https://lifebank.io/" target="_blank">
-                    Read more.
+                    Find out more about Lifebank.
                   </a>
                 </p>
               </Grid>
@@ -378,14 +379,14 @@ const TheCompany = () => {
                 <Box className="imgBoxTheCompany">
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/smartgate.svg")}
+                    src={useBaseUrl("img/logos/smartgate.svg")}
                   />
                 </Box>
                 <p>
                   A blockchain-based platform that provides solutions for in-out
                   gate activity for the container industry and real-time
                   transmission of relevant data required for proper interchange
-                  in port logistics.<a href="https://smartgate.tech/" target="_blank"> Read more</a>
+                  in port logistics.<a href="https://smartgate.tech/" target="_blank"> Learn more about SMARTGATE.</a>
                 </p>
               </Grid>
               <Grid item xs={12} md={12} >
@@ -397,7 +398,7 @@ const TheCompany = () => {
                   </a>.
                 </p>
               </Grid>
-            </Grid>         
+            </Grid>
           </Box>
         </Box>
       </Box>

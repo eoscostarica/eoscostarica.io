@@ -857,7 +857,6 @@ input:checked + .slider:before {
   align-items: center;
   justify-content:center;
   height: 288px;
-  
 }
 
 .oneGroupLogo{
@@ -899,6 +898,12 @@ input:checked + .slider:before {
 
 .imgKnow{
   width: 90%;
+  height: 300px;
+}
+
+.imgKnowCompany{
+  width: 90%;
+  height: 500px;
 }
 
 .imgProjects{
@@ -1086,15 +1091,60 @@ input:checked + .slider:before {
   transform: scale(1.1);
 }
 
+.animationBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+
+.footerLogo {
+  width: 300px;
+  height: 90px;
+}
+
+.footerLogoAnimation{
+  transition: all .9s ease-in-out;
+  transform: scale(0.87);
+}
+
 .teamPadding{
   padding: 2rem;
 }
 
-.projectsGrid{
+.projectsGridLeft{
   padding-top: 70px;
   padding-bottom: 70px;
   padding-right: 40px;
   height: 100%;
+}
+
+.projectsGridRight{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-right: 40px;
+  height: 100%;
+}
+
+.imgcard {
+  display: block;
+  width: 150px;
+  margin: auto
+}
+
+.media {
+  object-fit: cover;
+  object-position: bottom;
+  height: 180px
+}
+
+.expand {
+  transform: rotate(0deg);
+}
+
+.shrink{
+  transform: rotate(180deg);
+  color: #000;
 }
 
 @media only screen and (max-width: 767px) {
@@ -1166,6 +1216,12 @@ input:checked + .slider:before {
 
   .imgKnow{
     width: 100%;
+    height: 100%;
+  }
+
+  .imgKnowCompany{
+    width: 100%;
+    height: 100%;
   }
   
   .imgProjects{
@@ -1199,6 +1255,11 @@ input:checked + .slider:before {
 
   .sizeImageTheCompany{
     width: 190px;
+  }
+
+  .animationBox{
+    height: 150px;
+    margin-bottom: 50px;
   }
   
   h1{
@@ -1371,5 +1432,16 @@ input:checked + .slider:before {
 
   .centerTextOnMobile{
     text-align: center;
+  }
+
+  .projectsGridLeft{
+    padding-bottom: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .projectsGridRight{
+    padding-top: 50px;
+    padding-right: 0;
   }
 }
