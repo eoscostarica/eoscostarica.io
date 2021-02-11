@@ -40,7 +40,7 @@ export default function LayoutHead(props) {
     absolute: true
   });
   const faviconUrl = useBaseUrl(favicon);
-  const htmlLang = currentLocale.split('-')[0];
+  const htmlLang = "en"
   return <>
       <Head>
         <html lang={htmlLang} />
@@ -57,8 +57,6 @@ export default function LayoutHead(props) {
         {permalink && <link rel="canonical" href={siteUrl + permalink} />}
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
-      <SearchMetadatas tag={DEFAULT_SEARCH_TAG} locale={currentLocale} {...searchMetadatas} />
 
       <Head // it's important to have an additional <Head> element here,
     // as it allows react-helmet to override values set in previous <Head>

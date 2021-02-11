@@ -26,10 +26,6 @@ module.exports = {
       },
     ],
   ],
-  i18n: {
-    defaultLocale: 'en',
-    locales:['en']
-  },
   themeConfig: {
     image:"img/metaImgBlack.png",
     footer: {},
