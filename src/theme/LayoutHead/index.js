@@ -40,7 +40,7 @@ export default function LayoutHead(props) {
     absolute: true
   });
   const faviconUrl = useBaseUrl(favicon);
-  const htmlLang = currentLocale.split('-')[0];
+  const htmlLang = "en";
   return <>
       <Head>
         <html lang={htmlLang} />
