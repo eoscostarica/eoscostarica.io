@@ -8,14 +8,9 @@ import React from 'react';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import SearchMetadatas from '@theme/SearchMetadatas';
-import { DEFAULT_SEARCH_TAG, useTitleFormatter } from '@docusaurus/theme-common';
 export default function LayoutHead(props) {
   const {
     siteConfig,
-    i18n: {
-      currentLocale
-    }
   } = useDocusaurusContext();
   const {
     title:siteTitle,
@@ -32,7 +27,6 @@ export default function LayoutHead(props) {
     image,
     keywords,
     permalink,
-    searchMetadatas
   } = props;
   const metaTitle = title || siteTitle;
   const metaImage = image || defaultImage;
