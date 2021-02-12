@@ -11,8 +11,8 @@ import { Button, Card } from '@material-ui/core';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Collapse from '@material-ui/core/Collapse';
-import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 import ContactUsBanner from './components/ContactUsBanner'
 
@@ -224,7 +224,7 @@ const Press = () => {
           </Collapse >
           <Box className={clsx("centerBox","litlePaddingTop")}>
             <Button
-              className={clsx(exp? "shrink": "expandOpen", "button-glow")}
+              className={exp? "shrink": ""}
               onClick={action}
               aria-expanded={exp}
               aria-label="show more"
@@ -236,7 +236,7 @@ const Press = () => {
                 display: !exp? 'none': ''}
               }
               >
-              <ExpandMoreIcon style={{width:'50px', height:'50px', display: !exp? 'none': ''}}/>
+              <ExpandLessIcon style={{width:'50px', height:'50px', display: !exp? 'none': ''}}/>
             </Button>
           </Box>
         </Box>
