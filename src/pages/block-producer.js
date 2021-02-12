@@ -16,6 +16,12 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import AdditionalResources from './components/AdditionalResources'
 import ContactUsBanner from './components/ContactUsBanner'
 
+const MetaData={
+  title:"EOS Costa Rica: Block Producer",
+  description:"Get to know EOS Costa Rica – a technically proven EOS block producer candidate that develops dapps and smart contracts.",
+  img:"img/metaImgBlack.png",
+}
+
 const BlockProducer = () => {
   const history = useHistory()
   const isMobile = useMediaQuery({query:'(max-width: 767px)'})
@@ -577,43 +583,43 @@ const BlockProducer = () => {
   }
 
   return (
-    <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+    > 
       {isDesktop && 
-        <Layout>
-          <Box className="mainContainer">
-            <Parallax strength={800}>
-              <Background className="bgParallax">
-                  <Box className="imgParallax" />
-              </Background>
-              <HeroSection />
-              <OurStory />
-              <OurValues/>
-            </Parallax>
-            <BlockProducer/>
-            <OpenSourceProjects/>
-            <WhyCostaRica/>
-            <VoteForUS/>
-            <AdditionalResources/>
-            <ContactUsBanner />
-          </Box>
-        </Layout>
-      }
-      {isMobile &&
-        <Layout>
-          <Box className="mainContainer">
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+            <Background className="bgParallax">
+                <Box className="imgParallax" />
+            </Background>
             <HeroSection />
             <OurStory />
             <OurValues/>
-            <BlockProducer/>
-            <OpenSourceProjects/>
-            <WhyCostaRica/>
-            <VoteForUS/>
-            <AdditionalResources/>
-            <ContactUsBanner />
-          </Box>
-        </Layout>
+          </Parallax>
+          <BlockProducer/>
+          <OpenSourceProjects/>
+          <WhyCostaRica/>
+          <VoteForUS/>
+          <AdditionalResources/>
+          <ContactUsBanner />
+        </Box>
       }
-    </>
+      {isMobile &&
+        <Box className="mainContainer">
+          <HeroSection />
+          <OurStory />
+          <OurValues/>
+          <BlockProducer/>
+          <OpenSourceProjects/>
+          <WhyCostaRica/>
+          <VoteForUS/>
+          <AdditionalResources/>
+          <ContactUsBanner />
+        </Box>
+      }
+    </Layout>
   );
 };
 

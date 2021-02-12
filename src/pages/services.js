@@ -17,6 +17,12 @@ import ContactUsBanner from './components/ContactUsBanner'
 import DevelopmentServices from './SvgComponents/DevelopmentServices'
 import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure'
 
+const MetaData={
+  title:"EOS Costa Rica: Services",
+  description:"EOS Costa Rica leverages the enterprise blockchain protocol EOSIO to develop real-world solutions.",
+  img:"img/metaImgBlack.png",
+}
+
 const strategicLocationAccordion = 
 [
   {
@@ -634,37 +640,37 @@ const ServicePage = () => {
   }
 
   return (
-    <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+    > 
       {isDesktop && 
-        <Layout>
-          <Box className="mainContainer">
-            <Parallax strength={800}>
-              <Background className="bgParallax">
-                  <Box className="imgParallax" />
-              </Background>
-              <HeroSection />
-              <BlockchainDev />
-            </Parallax>
-            <BlockchainInfrastructure />
-            <EducationTraining />
-            <IndustryBlockchain />
-            <ContactUsBanner />
-          </Box>
-        </Layout>
-      }
-      {isMobile && 
-        <Layout>
-          <Box className="mainContainer">
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+            <Background className="bgParallax">
+                <Box className="imgParallax" />
+            </Background>
             <HeroSection />
             <BlockchainDev />
-            <BlockchainInfrastructure />
-            <EducationTraining />
-            <IndustryBlockchain />
-            <ContactUsBanner />
-          </Box>
-        </Layout>
+          </Parallax>
+          <BlockchainInfrastructure />
+          <EducationTraining />
+          <IndustryBlockchain />
+          <ContactUsBanner />
+        </Box>
       }
-    </>
+      {isMobile && 
+        <Box className="mainContainer">
+          <HeroSection />
+          <BlockchainDev />
+          <BlockchainInfrastructure />
+          <EducationTraining />
+          <IndustryBlockchain />
+          <ContactUsBanner />
+        </Box>
+      }
+    </Layout>
   );
 };
 
