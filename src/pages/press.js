@@ -196,7 +196,7 @@ const Press = () => {
               aria-expanded={exp}
               aria-label="show more"
               style={{
-                backgroundColor: 'transparent', 
+                backgroundColor: 'transparent',
                 transition: 'all .4s ease-in-out',
                 textTransform: 'none', 
                 display: exp? 'none': ''
@@ -288,7 +288,7 @@ const Press = () => {
               title="EOS Costa Rica in the News"
               princialList={EOSCRNews}
               secondList={EOSCROtherNews}
-              exp={expandedRelease}
+              exp={expandedEOSCR}
               action={handleExpandEOSCRClick}
             />
             <ContactUsBanner/>
