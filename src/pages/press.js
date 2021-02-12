@@ -70,7 +70,7 @@ const EOSCROtherNews = [
     media:"CoinDesk"
   },
   {
-    img:"https://miro.medium.com/max/700/1*x7OW2wAhH1YapNVZl_-SEA.png",
+    img:"https://images.cointelegraph.com/images/717_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS9zdG9yYWdlL3VwbG9hZHMvdmlldy8yZTk3ZmM0YmEwZWI0MDc2OWEyYzg5NzJjNmM2MGMyYi5qcGc=.jpg",
     title:"The Rise of Virtual Hackathons: Tackling Blockchain Challenges Online",
     date:"Jul 02, 2020",
     link:"https://cointelegraph.com/news/the-rise-of-virtual-hackathons-tackling-blockchain-challenges-online",
