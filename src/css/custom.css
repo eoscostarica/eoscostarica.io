@@ -1132,6 +1132,15 @@ input:checked + .slider:before {
   margin: auto
 }
 
+.card{
+  height: 360px;
+  cursor: pointer;
+}
+
+.card:hover{
+  transform: scale(1.02);
+}
+
 .media {
   object-fit: cover;
   object-position: bottom;
@@ -1140,11 +1149,34 @@ input:checked + .slider:before {
 
 .expand {
   transform: rotate(0deg);
+  transition: all 5s;
 }
 
 .shrink{
   transform: rotate(180deg);
+  transition: all 5s;
   color: #000;
+}
+
+.shrink:hover{
+  transform: scale(1.02);
+  transform: rotate(180deg);
+}
+
+.nowrapText{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.button-glow {
+  height:'70px';
+  width:'150px';
+}
+
+.button-glow:hover{
+  transform: scale(1.18);
 }
 
 @media only screen and (max-width: 767px) {
