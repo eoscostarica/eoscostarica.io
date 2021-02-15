@@ -16,6 +16,12 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 import ContactUsBanner from './components/ContactUsBanner'
 
+const MetaData={
+  title:"",
+  description:"",
+  img:"img/metaImgBlack.png",
+}
+
 const firtsNewsRelease = [
   {
       img:"https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/metaImgBlack.png",
@@ -245,45 +251,25 @@ const Press = () => {
   }
 
   return (
-    <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+    > 
       {isDesktop && 
-        <Layout>
-          <Box className="mainContainer">
-            <Parallax strength={800}>
-              <Background className="bgParallax">
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+            <Background className="bgParallax">
                 <Box className="imgParallax"/>
-              </Background>
-              <HeroSection/>
-              <NewsList
-                title="Press Releases"
-                princialList={firtsNewsRelease}
-                secondList={otherNewsRelease}
-                exp={expandedRelease}
-                action={handleExpandReleaseClick}
-              />
-              <NewsList
-                title="EOS Costa Rica in the News"
-                princialList={EOSCRNews}
-                secondList={EOSCROtherNews}
-                exp={expandedEOSCR}
-                action={handleExpandEOSCRClick}
-              />
-            </Parallax>
-            <ContactUsBanner/>
-          </Box>
-        </Layout>
-      }
-      {isMobile && 
-        <Layout>
-          <Box className="mainContainer">
-            <HeroSection/>
+            </Background>
+            <HeroSection />
             <NewsList
               title="Press Releases"
               princialList={firtsNewsRelease}
               secondList={otherNewsRelease}
               exp={expandedRelease}
               action={handleExpandReleaseClick}
-          />
+            />
             <NewsList
               title="EOS Costa Rica in the News"
               princialList={EOSCRNews}
@@ -291,11 +277,31 @@ const Press = () => {
               exp={expandedEOSCR}
               action={handleExpandEOSCRClick}
             />
-            <ContactUsBanner/>
-          </Box>
-        </Layout>
+          </Parallax>
+          <ContactUsBanner/>
+        </Box>
       }
-    </>
+      {isMobile && 
+        <Box className="mainContainer">
+          <HeroSection />
+          <NewsList
+              title="Press Releases"
+              princialList={firtsNewsRelease}
+              secondList={otherNewsRelease}
+              exp={expandedRelease}
+              action={handleExpandReleaseClick}
+          />
+          <NewsList
+            title="EOS Costa Rica in the News"
+            princialList={EOSCRNews}
+            secondList={EOSCROtherNews}
+            exp={expandedEOSCR}
+            action={handleExpandEOSCRClick}
+          />
+          <ContactUsBanner />
+        </Box>
+      }
+    </Layout>
   );
 };
 

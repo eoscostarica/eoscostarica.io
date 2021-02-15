@@ -1175,6 +1175,10 @@ input:checked + .slider:before {
   transform: scale(1.18);
 }
 
+.reduceMargin{
+  margin: 20px;
+}
+
 @media only screen and (max-width: 767px) {
   .footerLogo {
     width: 300px;
