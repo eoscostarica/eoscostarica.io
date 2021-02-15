@@ -42,7 +42,7 @@ const ProjectsList = [
     linkText:"Explore EOS Rate."
   },
   {
-    img:"img/imagenotavailable.png",
+    img:"img/logos/eosioforum.svg",
     name:"Enterprise EOSIO Forum",
     details:"We are part of the Enterprise EOSIO Forum, a community-driven initiative to discuss enterprise blockchain solutions deploying EOSIO technology. ",
     link:"https://www.linkedin.com/company/enterprise-eosio-forum/",
@@ -50,20 +50,20 @@ const ProjectsList = [
     linkText:"More about Enterprise EOSIO Forum."
   },
   {
+    img:"img/logos/evodex.svg",
+    name:"Evodex",
+    details:"Evodex is the front-end user interface for a liquidity pool protocol where users vote on the pool liquidity fees and pay zero gas. We were in charge of UX and front-end design. ",
+    link:"https://evodex.io/",
+    color:"#ffffff",
+    linkText: "Try Evodex now."
+  },
+  {
     img:"img/imagenotavailable.png",
     name:"EOS Foundation",
     details:"We are part of the EOS Foundation proof of concept. It is an autonomous, decentralized, non-profit organization that will enable self-representation and promotion of the EOS community. ",
     link:"http://eos-foundation.eosio.cr/",
-    color:"#ffffff",
-    linkText:"Check EOS Foundation."
-  },
-  {
-    img:"img/imagenotavailable.png",
-    name:"Evodex",
-    details:"Evodex is the front-end user interface for a liquidity pool protocol where users vote on the pool liquidity fees and pay zero gas. We were in charge of UX and front-end design. ",
-    link:"https://evodex.io/",
     color:"#f8f8f8",
-    linkText: "Try Evodex now."
+    linkText:"Check EOS Foundation."
   },
   {
     img:"img/imagenotavailable.png",
@@ -84,7 +84,6 @@ const ProjectsList = [
 ]
 
 const OurProjects = () => {
-  const history = useHistory()
   const isMobile = useMediaQuery({query:'(max-width: 767px)'})
   const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
 
