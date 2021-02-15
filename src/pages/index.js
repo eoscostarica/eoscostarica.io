@@ -12,16 +12,14 @@ import AccordionDetails from '@material-ui/core/AccordionDetails'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
-import MetaTags from './components/MetaTags'
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo"
 import ContactUsBanner from './components/ContactUsBanner'
 import WeAreOneGroup from './components/WeAreOneGroup'
 
 const MetaData={
   title:"Enterprise Blockchain Solutions | EOSIO",
-  description:" EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
-  img:"https://eoscostarica.io/img/metadataImg",
-  url:"https://eoscostarica.io/",
+  description:"EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
+  img:"img/metaImgBlack.png",
 }
 
 const Home = () => {
@@ -602,57 +600,54 @@ const Home = () => {
                 </Grid>
               </Grid>
           </Box>
-
         </Box>
       </Box>
     )
   }
 
   return (
-   <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+    > 
       {isDesktop && 
-        <Layout>
-          <MetaTags title={MetaData.title} description={MetaData.description} url={MetaData.url} img={MetaData.img} />
-          <Box className="mainContainer">
-            <Parallax strength={800}>
-              <Background className="bgParallax">
-                  <Box className="imgParallax"/>
-              </Background>
-              <HeroSection />
-              <BlockchainCanDo />
-            </Parallax>
-            <WhatWeDo />
-            <EnterpriseBlockchain />
-            <Inquieres />
-            <Parallax strength={800}>
-            <GetToKnow />
-            <WeAreOneGroup />
-            <Background className="bgParallaxSecondary">
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+            <Background className="bgParallax">
                 <Box className="imgParallax"/>
             </Background>
-            <SomeProjects />
-            </Parallax>
-           <ContactUsBanner />
-          </Box>
-        </Layout>
-      }
-      {isMobile && 
-        <Layout>
-          <MetaTags title={MetaData.title} description={MetaData.description} url={MetaData.url} img={MetaData.img} />
-          <Box className="mainContainer">
             <HeroSection />
             <BlockchainCanDo />
-            <WhatWeDo />
-            <EnterpriseBlockchain />
-            <Inquieres />
-            <GetToKnow />
-            <WeAreOneGroup />
-            <SomeProjects />
-            <ContactUsBanner />
-          </Box>
-        </Layout>
-      } 
-    </>
+          </Parallax>
+          <WhatWeDo />
+          <EnterpriseBlockchain />
+          <Inquieres />
+          <Parallax strength={800}>
+          <GetToKnow />
+          <WeAreOneGroup />
+          <Background className="bgParallaxSecondary">
+              <Box className="imgParallax"/>
+          </Background>
+          <SomeProjects />
+          </Parallax>
+          <ContactUsBanner />
+        </Box>
+      }
+      {isMobile && 
+        <Box className="mainContainer">
+          <HeroSection />
+          <BlockchainCanDo />
+          <WhatWeDo />
+          <EnterpriseBlockchain />
+          <Inquieres />
+          <GetToKnow />
+          <WeAreOneGroup />
+          <SomeProjects />
+          <ContactUsBanner />
+        </Box>
+      }
+    </Layout>
   );
 };
 

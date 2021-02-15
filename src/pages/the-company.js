@@ -12,6 +12,12 @@ import Carousel from 'react-material-ui-carousel'
 import ContactUsBanner from './components/ContactUsBanner'
 import WeAreOneGroup from './components/WeAreOneGroup'
 
+const MetaData={
+  title:"EOS Costa Rica: Company Page",
+  description:"EOS Costa Rica is part of a company with more than three decades of experience developing innovative solutions.",
+  img:"img/metaImgBlack.png",
+}
+
 const TheCompany = () => {
   const isMobile = useMediaQuery({query:'(max-width: 767px)'})
   const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
@@ -404,39 +410,39 @@ const TheCompany = () => {
   }
 
   return (
-    <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+    > 
       {isDesktop &&
-        <Layout>
-          <Box className="mainContainer">
-            <Parallax strength={800}>
-              <Background className="bgParallax">
-                  <Box className="imgParallax"/>
-              </Background>
-              <HeroSection />
-              <EOSCR />
-            </Parallax>
-            <WeAreOneGroup />
-            <MeetTeam />
-            <TheTechnology/>
-            <SomeOurProjects/>
-            <ContactUsBanner />
-          </Box>
-        </Layout>
-      }
-      {isMobile &&
-        <Layout>
-          <Box className="mainContainer">
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+            <Background className="bgParallax">
+                <Box className="imgParallax"/>
+            </Background>
             <HeroSection />
             <EOSCR />
-            <WeAreOneGroup />
-            <MeetTeam />
-            <TheTechnology/>
-            <SomeOurProjects/>
-            <ContactUsBanner />
-          </Box>
-        </Layout>
+          </Parallax>
+          <WeAreOneGroup />
+          <MeetTeam />
+          <TheTechnology/>
+          <SomeOurProjects/>
+          <ContactUsBanner />
+        </Box>
       }
-    </>
+      {isMobile &&
+        <Box className="mainContainer">
+          <HeroSection />
+          <EOSCR />
+          <WeAreOneGroup />
+          <MeetTeam />
+          <TheTechnology/>
+          <SomeOurProjects/>
+          <ContactUsBanner />
+        </Box>
+      }
+    </Layout>
   );    
 };
 
