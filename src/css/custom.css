@@ -1126,6 +1126,43 @@ input:checked + .slider:before {
   height: 100%;
 }
 
+.iconStep{
+  background-color: #9E9E9E;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconStepActive{
+  background-color: #5484b3;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconText{
+  color: white;
+  padding: 0;
+  margin-bottom: 1px;
+  font-size: 15px;
+}
+
+.stepText{
+  font-family: 'Gotham',Lato, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 28px;
+  letter-spacing: -0.06px;
+  line-height: 34px;
+}
+
 @media only screen and (max-width: 767px) {
   .footerLogo {
     width: 300px;
