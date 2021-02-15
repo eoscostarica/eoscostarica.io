@@ -89,6 +89,9 @@ a{
 }
 
 .buttonPrimary{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   font-family: 'Gotham', sans-serif;
   font-weight: bold;
   width: auto;
@@ -109,6 +112,9 @@ a{
 }
 
 .buttonSecondary{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
   width: auto;
