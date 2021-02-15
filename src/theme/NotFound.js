@@ -19,10 +19,10 @@ function NotFound() {
             <Box className="containerSec">
               <Box className="sectionHero">
                 <Box className="titleBox">
-                  <h1>Oops! We couldn’t find this page.</h1>
-                  <h2>Please, go back to the <a href="/">homepage</a> and try it again.</h2>
+                  <h1 className="centerText">Oops! We couldn’t find this page.</h1>
+                  <h1 className="centerText">Please, go back to the <a href="/">homepage</a> and try it again.</h1>
                 </Box>
-                <p>If you have any questions regarding EOSIO and blockchain, please <a href="/contact-us">contact us</a> or go to our <a href="/blog">blog</a>!</p>
+                <p className="centerText">If you have any questions regarding EOSIO and blockchain, please <a href="/contact-us">contact us</a> or go to our <a href="/blog">blog</a>!</p>
               </Box>
             </Box>
           </Parallax>
