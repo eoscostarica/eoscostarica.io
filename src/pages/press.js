@@ -4,22 +4,21 @@ import { Parallax, Background } from 'react-parallax'
 import clsx from "clsx"
 import Grid from '@material-ui/core/Grid'
 import Layout from "@theme/Layout"
-import useBaseUrl from "@docusaurus/useBaseUrl"
 import Box from '@material-ui/core/Box'
 import { useMediaQuery } from 'react-responsive'
-import { Button, Card } from '@material-ui/core';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Collapse from '@material-ui/core/Collapse';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import { Button, Card } from '@material-ui/core'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import Collapse from '@material-ui/core/Collapse'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import ExpandLessIcon from '@material-ui/icons/ExpandLess'
 
 import ContactUsBanner from './components/ContactUsBanner'
 
 const MetaData={
   title:"",
   description:"",
-  img:"img/metaImgBlack.png",
+  img:"img/metaImgBlack.png"
 }
 
 const firtsNewsRelease = [
@@ -49,7 +48,7 @@ const EOSCRNews = [
     title:"Block.one Debuts Big-Business Version of EOSIO Blockchain",
     date:"Oct 15, 2020",
     link:"https://www.coindesk.com/block-one-eosio-blockchain-enterprise-eos",
-    media:"CoinDesk",
+    media:"CoinDesk"
   },
   {
     img:"https://images.cointelegraph.com/images/717_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS9zdG9yYWdlL3VwbG9hZHMvdmlldy8yYjMzMjkxMjZhYWVlZjcyNDQ3ZTU3NjkyYmQ1MGUxMi5qcGc=.jpg",
@@ -109,16 +108,16 @@ const Press = () => {
   const history = useHistory()
   const isMobile = useMediaQuery({query:'(max-width: 767px)'})
   const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
-  const [expandedRelease, setExpandedRelease] = useState(false);
-  const [expandedEOSCR, setExpandedEOSCR] = useState(false);
+  const [expandedRelease, setExpandedRelease] = useState(false)
+  const [expandedEOSCR, setExpandedEOSCR] = useState(false)
 
   const handleExpandReleaseClick = () => {
-    setExpandedRelease(!expandedRelease);
-  };
+    setExpandedRelease(!expandedRelease)
+  }
 
   const handleExpandEOSCRClick = () => {
-    setExpandedEOSCR(!expandedEOSCR);
-  };
+    setExpandedEOSCR(!expandedEOSCR)
+  }
 
   const HeroSection = () => {
     return (
@@ -174,7 +173,7 @@ const Press = () => {
     return (
       <Box className={"containerSec"}>
         {
-          !princialList? princialList=[] : ''
+          !princialList? princialList=[]: ''
         }
         {
           !secondList? secondList=[]: ''
