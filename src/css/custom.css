@@ -1126,6 +1126,55 @@ input:checked + .slider:before {
   height: 100%;
 }
 
+.imgcard {
+  display: block;
+  width: 150px;
+  margin: auto
+}
+
+.card{
+  height: 360px;
+  cursor: pointer;
+}
+
+.card:hover{
+  transform: scale(1.02);
+}
+
+.media {
+  object-fit: cover;
+  object-position: bottom;
+  height: 180px
+}
+
+.expand {
+  transition: all 5s;
+}
+
+.shrink{
+  transition: all 5s;
+}
+
+.shrink:hover{
+  transform: scale(1.4);
+}
+
+.nowrapText{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.button-glow {
+  height:'70px';
+  width:'150px';
+}
+
+.button-glow:hover{
+  transform: scale(1.18);
+}
+
 .reduceMargin{
   margin: 20px;
 }

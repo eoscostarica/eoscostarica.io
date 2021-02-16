@@ -402,7 +402,7 @@ const TheCompany = () => {
                   </a>.
                 </p>
               </Grid>
-            </Grid>         
+            </Grid>
           </Box>
         </Box>
       </Box>
