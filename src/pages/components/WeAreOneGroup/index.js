@@ -18,7 +18,7 @@ const WeAreOneGroup = () => {
                                 <img
                                     className="oneGroupLogo"
                                     alt="LatamLink"
-                                    src={useBaseUrl("img/Group47.svg")}
+                                    src={useBaseUrl("img/logos/Group47.svg")}
                                 />
                             </a>
                         </Box>
@@ -29,7 +29,7 @@ const WeAreOneGroup = () => {
                                 <img
                                     className="oneGroupLogo"
                                     alt="Edenia"
-                                    src={useBaseUrl("img/Group17.svg")}
+                                    src={useBaseUrl("img/logos/Group17.svg")}
                                 />
                             </a>
                         </Box>
@@ -40,7 +40,7 @@ const WeAreOneGroup = () => {
                                 <img
                                     className="oneGroupLogo"
                                     alt="Eossurf"
-                                    src={useBaseUrl("img/Group11.svg")}
+                                    src={useBaseUrl("img/logos/Group11.svg")}
                                 />
                             </a>
                         </Box>
@@ -51,7 +51,7 @@ const WeAreOneGroup = () => {
                                 <img
                                     className="oneGroupLogo"
                                     alt="Ticoblockchain"
-                                    src={useBaseUrl("img/Group55.svg")}
+                                    src={useBaseUrl("img/logos/Group55.svg")}
                                 />
                             </a>
                         </Box>

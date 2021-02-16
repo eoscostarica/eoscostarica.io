@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useState, useEffect } from "react"
 import clsx from "clsx"
 import useBaseUrl from "@docusaurus/useBaseUrl"
-import { useMediaQuery } from 'react-responsive'
+import PropTypes from 'prop-types'
 import useScrollTrigger from '@material-ui/core/useScrollTrigger'
 import Box from '@material-ui/core/Box'
 import Link from '@material-ui/core/Link'
@@ -86,9 +86,7 @@ const PATHS = [
   },
 ];
 
-const NavbarMenu = () => {
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+const NavbarMenu = ({isMobile, isDesktop}) => {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
   const [isBlog, setIsBlog] =  useState()
@@ -124,7 +122,7 @@ const NavbarMenu = () => {
             <Box className="imgLogoBoxMobile">
               <img
                 className="imgLogoScroll"
-                src={useBaseUrl("img/eoscr-logo.png")}
+                src={useBaseUrl("img/logos/eoscr-logo.png")}
                 alt="EOS CR LOGO"
               />
             </Box>
@@ -164,7 +162,7 @@ const NavbarMenu = () => {
               <Box  className="imgLogoBox">
                 <img
                   className={isBlog? "imgLogoScroll": clsx("imgLogo",{["imgLogoScroll"]: trigger})}
-                  src={useBaseUrl("img/eoscr-logo.png")}
+                  src={useBaseUrl("img/logos/eoscr-logo.png")}
                   alt="EOS CR LOGO"
                 />
               </Box>
@@ -220,5 +218,10 @@ const NavbarMenu = () => {
     </Box> 
   );
 };
+
+NavbarMenu.propTypes = {
+  isDesktop:PropTypes.bool,
+  isMobile:PropTypes.bool,
+}
 
 export default NavbarMenu;

@@ -17,6 +17,12 @@ import ContactUsBanner from './components/ContactUsBanner'
 import DevelopmentServices from './SvgComponents/DevelopmentServices'
 import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure'
 
+const MetaData={
+  title:"EOS Costa Rica: Services",
+  description:"EOS Costa Rica leverages the enterprise blockchain protocol EOSIO to develop real-world solutions.",
+  img:"img/metaImgBlack.png",
+}
+
 const strategicLocationAccordion = 
 [
   {
@@ -140,10 +146,7 @@ const ServicePage = () => {
           </Box>
           <p >
             Leverage blockchain technology. Our team will help you embrace
-            the power of this innovative technology.
-          </p>
-          <p>
-            We have years of experience integrating enterprise blockchain solutions and
+            the power of this innovative technology. We have years of experience integrating enterprise blockchain solutions and
             developing infrastructure for business environments.
           </p>
           <Box className="doubleSpacingBox">
@@ -303,12 +306,12 @@ const ServicePage = () => {
             <Box className="h3Box">
               <h3>Our Process from Start to Finish</h3>
             </Box>
-            <Box className={clsx("centerBox","doubleSpacingBox")}>
+            <Box className={isDesktop? clsx("centerBox", "doubleSpacingBox"): clsx("centerBox", "reduceMargin")}>
               {isDesktop && 
                 <img src={useBaseUrl("/img/process.jpg")}/>
               }
               {!isDesktop && 
-                <img src={useBaseUrl("/img/process.jpg")}/>
+                <img src={useBaseUrl("/img/processVertical.gif")}/>
               }
             </Box>
           </Box>
@@ -319,8 +322,8 @@ const ServicePage = () => {
 
   const BlockchainInfrastructure = () => {
     return (
-      <Box ref={refInfraestrcture} className={clsx("containerSec","reduceDobleMarginTop")}>
-        <Box className="sectionPadding">
+      <Box ref={refInfraestrcture} className="containerSec">
+        <Box className="section">
           <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
               <Box className="titleBox">
@@ -410,7 +413,7 @@ const ServicePage = () => {
           </Box>
           <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
-              <Box className="centerBox">
+              <Box className={!isMobile? "centerBox": clsx("centerBox","reduceMargin")}>
                 <img src={useBaseUrl("/img/map-loacation.svg")}/>
               </Box>
             </Grid>
@@ -543,7 +546,7 @@ const ServicePage = () => {
               <Grid item xs={12} md={4}>
                 <Box className="imgBoxServices">
                   <img
-                   src={useBaseUrl("img/logistics.svg")}
+                   src={useBaseUrl("img/icons/logistics.svg")}
                    style={{paddingTop:'25px'}}
                    className="imageIndrustries"
                    />
@@ -563,7 +566,7 @@ const ServicePage = () => {
               <Grid item xs={12} md={4}>
                 <Box className="imgBoxServices">
                   <img 
-                    src={useBaseUrl("img/payments.svg")}
+                    src={useBaseUrl("img/icons/payments.svg")}
                     style={{paddingTop:'25px'}}
                     className="imageIndrustriesLogistics"
                   />
@@ -572,10 +575,10 @@ const ServicePage = () => {
                   <h3>Logistics and Supply Chain</h3>
                 </Box>
                 <p>
-                  In an industry that involves dozens of stakeholders, the
-                  capabilities of blockchain and smart contracts for
-                  traceability, authorizations management, and automation can
-                  make a great ally.{" "}
+                  In an industry that involves dozens of 
+                  stakeholders, blockchain's capabilities 
+                  to manage authorizations and automate 
+                  and trace operations can make a great ally.{" "}
                   <a href={useBaseUrl("/blog/blockchain-logistics")} target="_blank">
                     Learn more
                   </a>
@@ -584,7 +587,7 @@ const ServicePage = () => {
               <Grid item xs={12} md={4}>
                   <Box className="imgBoxServices">
                     <img 
-                      src={useBaseUrl("img/gaming.svg")}
+                      src={useBaseUrl("img/icons/gaming.svg")}
                       style={{paddingTop:'20px'}}
                       className="imageIndrustries"
                     />
@@ -637,37 +640,37 @@ const ServicePage = () => {
   }
 
   return (
-    <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+    > 
       {isDesktop && 
-        <Layout>
-          <Box className="mainContainer">
-            <Parallax strength={800}>
-              <Background className="bgParallax">
-                  <Box className="imgParallax" />
-              </Background>
-              <HeroSection />
-              <BlockchainDev />
-            </Parallax>
-            <BlockchainInfrastructure />
-            <EducationTraining />
-            <IndustryBlockchain />
-            <ContactUsBanner />
-          </Box>
-        </Layout>
-      }
-      {isMobile && 
-        <Layout>
-          <Box className="mainContainer">
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+            <Background className="bgParallax">
+                <Box className="imgParallax" />
+            </Background>
             <HeroSection />
             <BlockchainDev />
-            <BlockchainInfrastructure />
-            <EducationTraining />
-            <IndustryBlockchain />
-            <ContactUsBanner />
-          </Box>
-        </Layout>
+          </Parallax>
+          <BlockchainInfrastructure />
+          <EducationTraining />
+          <IndustryBlockchain />
+          <ContactUsBanner />
+        </Box>
       }
-    </>
+      {isMobile && 
+        <Box className="mainContainer">
+          <HeroSection />
+          <BlockchainDev />
+          <BlockchainInfrastructure />
+          <EducationTraining />
+          <IndustryBlockchain />
+          <ContactUsBanner />
+        </Box>
+      }
+    </Layout>
   );
 };
 

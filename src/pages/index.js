@@ -16,6 +16,12 @@ import WhatWeDoSvg from "./SvgComponents/WhatWeDo"
 import ContactUsBanner from './components/ContactUsBanner'
 import WeAreOneGroup from './components/WeAreOneGroup'
 
+const MetaData={
+  title:"Enterprise Blockchain Solutions | EOSIO",
+  description:"EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
+  img:"img/metaImgBlack.png",
+}
+
 const Home = () => {
   const isMobile = useMediaQuery({query:'(max-width: 767px)'})
   const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
@@ -38,8 +44,10 @@ const Home = () => {
           <Box className="titleBox">
               <h1>Enterprise Blockchain Solutions <br /> That Fit Your Needs</h1>
           </Box>
-          <p >Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.</p>
-          <p>Start transforming your organization by leveraging enterprise blockchain networks.</p>
+          <p>
+            Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.
+            Start transforming your organization by leveraging enterprise blockchain networks.
+          </p>
           <Box className="buttonBox">
             <button className="buttonPrimary" onClick={() => history.push("/services/")} >Explore our services</button>
           </Box>
@@ -125,14 +133,13 @@ const Home = () => {
                 </p>
               </Grid>
             </Grid>
-            <Box className="topSpacingBox">
+            <Box className="paddingTop">
               {isDesktop &&
-                <Grid container spacing={5}>
-                  <Grid item xs={12} md={6}></Grid>
-                  <Grid item xs={12} md={3}>
-                    <p>
+                <Grid justify="center" container spacing={5}>
+                  <Grid item xs={12} md={7}>
+                    <h3>
                       Learn more about how blockchain can improve your operations.
-                    </p>
+                    </h3>
                   </Grid>
                   <Grid item xs={12} md={3}>
                     <Box className="boxFlexEnd">
@@ -189,7 +196,7 @@ const Home = () => {
                   <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
                     <h3 style={{padding: 0}}>Software Development</h3>
                   </AccordionSummary>
-                  <AccordionDetails style={{padding:0}}>
+                  <AccordionDetails style={{padding:0, marginTop:'-20px'}}>
                     <p style={{padding: 0}}>
                       Our value proposition is to develop blockchain-based
                       software to solve real-life problems. We have experience
@@ -212,7 +219,7 @@ const Home = () => {
                   <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
                     <h3 style={{padding: 0}}>Blockchain Infrastructure</h3>
                   </AccordionSummary>
-                  <AccordionDetails style={{padding:0}}>
+                  <AccordionDetails style={{padding:0, marginTop:'-20px'}}>
                     <p style={{padding: 0}}>
                       We offer top-grade infrastructure for blockchain networks
                       and API endpoints from our datacenter in San José, Costa
@@ -229,7 +236,7 @@ const Home = () => {
                   <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
                     <h3 style={{padding: 0}}>Education and Training</h3>
                   </AccordionSummary>
-                  <AccordionDetails style={{padding:0}}>
+                  <AccordionDetails style={{padding:0, marginTop:'-20px'}}>
                     <p style={{padding: 0}}>
                       In today’s world, new technologies are leading the way to
                       transform many industries. We offer workshops on blockchain
@@ -275,7 +282,7 @@ const Home = () => {
                 <Grid item md={4}>
                   <Box className="imgBoxServices">
                     <img
-                    src={useBaseUrl("img/logistics.svg")}
+                    src={useBaseUrl("img/icons/logistics.svg")}
                     style={{paddingTop: '25px'}}
                     className = {"imageIndrustries"}
                     />
@@ -296,7 +303,7 @@ const Home = () => {
                 <Grid item md={4}>
                   <Box className="imgBoxServices">
                     <img 
-                      src={useBaseUrl("img/payments.svg")}
+                      src={useBaseUrl("img/icons/payments.svg")}
                       style={{paddingTop: '25px'}}
                       className = {"imageIndrustriesLogistics"}
                     />
@@ -305,17 +312,17 @@ const Home = () => {
                     <h3>Logistics and Supply Chain</h3>
                   </Box>
                   <p>
-                    In an industry that involves dozens of stakeholders, the
-                    capabilities of blockchain and smart contracts for
-                    traceability, authorizations management, and automation can
-                    make a great ally. 
+                    In an industry that involves dozens of 
+                    stakeholders, blockchain's capabilities 
+                    to manage authorizations and automate 
+                    and trace operations can make a great ally.{" "}
                     <a href={"https://eoscostarica.io/blog/blockchain-logistics"}> Read more</a>
                   </p>
                 </Grid>
                 <Grid item md={4}>
                   <Box className="imgBoxServices">
                     <img 
-                      src={useBaseUrl("img/gaming.svg")}
+                      src={useBaseUrl("img/icons/gaming.svg")}
                       style={{paddingTop: '15px'}}
                       className = {"imageIndrustries"}
                     />
@@ -402,7 +409,7 @@ const Home = () => {
                   <Box className="imgBoxRight">
                     <img
                       className="imgKnow"
-                      src={useBaseUrl("img/team.webp")}
+                      src={useBaseUrl("img/team.png")}
                     />
                   </Box>  
                 </Grid>
@@ -415,7 +422,7 @@ const Home = () => {
                     <Box className="imgBoxLeft">
                       <img
                         className="imgKnow"
-                        src={useBaseUrl("img/company.webp")}
+                        src={useBaseUrl("img/company.png")}
                       />
                     </Box>  
                   </Grid>
@@ -444,7 +451,7 @@ const Home = () => {
                     <Box className="imgBoxLeft">
                       <img
                         className="imgKnow"
-                        src={useBaseUrl("img/company.webp")}
+                        src={useBaseUrl("img/company.png")}
                       />
                     </Box>  
                   </Grid>
@@ -478,7 +485,7 @@ const Home = () => {
                   <Box className="imgBoxRight">
                     <img
                       className="imgKnow"
-                      src={useBaseUrl("img/technology.webp")}
+                      src={useBaseUrl("img/technology.png")}
                     />
                   </Box>  
                 </Grid>
@@ -510,7 +517,7 @@ const Home = () => {
                 <Box className="centerBox" style={{height:'100%'}}>
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/Group47.svg")}
+                    src={useBaseUrl("img/logos/Group47.svg")}
                   />
                 </Box>
               </Grid>
@@ -529,7 +536,7 @@ const Home = () => {
                   initiative, a program to accelerate the development of the
                   blockchain ecosystem in the region.{" "}
                   <a href="https://latamlink.io/" target="_blank">
-                    Read more.
+                    Discover more about LatamLink.
                   </a>
                 </p>
               </Grid>
@@ -539,7 +546,7 @@ const Home = () => {
                   <Box className="centerBox" style={{height:'100%'}}>
                     <img
                       className="sizeImageTheCompany"
-                      src={useBaseUrl("img/lifebank.svg")}
+                      src={useBaseUrl("img/logos/lifebank.svg")}
                     />
                   </Box>
                 </Grid>
@@ -564,7 +571,7 @@ const Home = () => {
                       block.one.
                     </a>{" "}
                     <a href=" https://lifebank.io/" target="_blank">
-                      Read more.
+                      Find out more about Lifebank.
                     </a>
                   </p>
                 </Grid>
@@ -574,7 +581,7 @@ const Home = () => {
                   <Box className="centerBox" style={{height:'100%'}}>
                     <img
                       className="sizeImageTheCompany"
-                      src={useBaseUrl("img/smartgate.svg")}
+                      src={useBaseUrl("img/logos/smartgate.svg")}
                     />
                   </Box> 
                 </Grid>
@@ -587,61 +594,60 @@ const Home = () => {
                     A blockchain-based platform that provides solutions for in-out
                     gate activity for the container industry and real-time
                     transmission of relevant data required for proper interchange
-                    in port logistics. <a href="https://smartgate.tech/" target="_blank">Read more.</a>
+                    in port logistics. <a href="https://smartgate.tech/" target="_blank">Learn more about SMARTGATE.</a>
                   </p>
                   <br/>
                 </Grid>
               </Grid>
           </Box>
-
         </Box>
       </Box>
     )
   }
 
   return (
-   <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+    > 
       {isDesktop && 
-        <Layout>
-          <Box className="mainContainer">
-            <Parallax strength={800}>
-              <Background className="bgParallax">
-                  <Box className="imgParallax"/>
-              </Background>
-              <HeroSection />
-              <BlockchainCanDo />
-            </Parallax>
-            <WhatWeDo />
-            <EnterpriseBlockchain />
-            <Inquieres />
-            <Parallax strength={800}>
-            <GetToKnow />
-            <WeAreOneGroup />
-            <Background className="bgParallaxSecondary">
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+            <Background className="bgParallax">
                 <Box className="imgParallax"/>
             </Background>
-            <SomeProjects />
-            </Parallax>
-           <ContactUsBanner />
-          </Box>
-        </Layout>
-      }
-      {isMobile && 
-        <Layout>
-          <Box className="mainContainer">
             <HeroSection />
             <BlockchainCanDo />
-            <WhatWeDo />
-            <EnterpriseBlockchain />
-            <Inquieres />
-            <GetToKnow />
-            <WeAreOneGroup />
-            <SomeProjects />
-            <ContactUsBanner />
-          </Box>
-        </Layout>
-      } 
-    </>
+          </Parallax>
+          <WhatWeDo />
+          <EnterpriseBlockchain />
+          <Inquieres />
+          <Parallax strength={800}>
+          <GetToKnow />
+          <WeAreOneGroup />
+          <Background className="bgParallaxSecondary">
+              <Box className="imgParallax"/>
+          </Background>
+          <SomeProjects />
+          </Parallax>
+          <ContactUsBanner />
+        </Box>
+      }
+      {isMobile && 
+        <Box className="mainContainer">
+          <HeroSection />
+          <BlockchainCanDo />
+          <WhatWeDo />
+          <EnterpriseBlockchain />
+          <Inquieres />
+          <GetToKnow />
+          <WeAreOneGroup />
+          <SomeProjects />
+          <ContactUsBanner />
+        </Box>
+      }
+    </Layout>
   );
 };
 
