@@ -12,16 +12,14 @@ import AccordionDetails from '@material-ui/core/AccordionDetails'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
-import MetaTags from './components/MetaTags'
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo"
 import ContactUsBanner from './components/ContactUsBanner'
 import WeAreOneGroup from './components/WeAreOneGroup'
 
 const MetaData={
   title:"Enterprise Blockchain Solutions | EOSIO",
-  description:" EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
-  img:"https://eoscostarica.io/img/metadataImg",
-  url:"https://eoscostarica.io/",
+  description:"EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
+  img:"img/metaImgBlack.png",
 }
 
 const Home = () => {
@@ -198,7 +196,7 @@ const Home = () => {
                   <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
                     <h3 style={{padding: 0}}>Software Development</h3>
                   </AccordionSummary>
-                  <AccordionDetails style={{padding:0}}>
+                  <AccordionDetails style={{padding:0, marginTop:'-20px'}}>
                     <p style={{padding: 0}}>
                       Our value proposition is to develop blockchain-based
                       software to solve real-life problems. We have experience
@@ -221,7 +219,7 @@ const Home = () => {
                   <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
                     <h3 style={{padding: 0}}>Blockchain Infrastructure</h3>
                   </AccordionSummary>
-                  <AccordionDetails style={{padding:0}}>
+                  <AccordionDetails style={{padding:0, marginTop:'-20px'}}>
                     <p style={{padding: 0}}>
                       We offer top-grade infrastructure for blockchain networks
                       and API endpoints from our datacenter in San José, Costa
@@ -238,7 +236,7 @@ const Home = () => {
                   <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
                     <h3 style={{padding: 0}}>Education and Training</h3>
                   </AccordionSummary>
-                  <AccordionDetails style={{padding:0}}>
+                  <AccordionDetails style={{padding:0, marginTop:'-20px'}}>
                     <p style={{padding: 0}}>
                       In today’s world, new technologies are leading the way to
                       transform many industries. We offer workshops on blockchain
@@ -602,57 +600,54 @@ const Home = () => {
                 </Grid>
               </Grid>
           </Box>
-
         </Box>
       </Box>
     )
   }
 
   return (
-   <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+    > 
       {isDesktop && 
-        <Layout>
-          <MetaTags title={MetaData.title} description={MetaData.description} url={MetaData.url} img={MetaData.img} />
-          <Box className="mainContainer">
-            <Parallax strength={800}>
-              <Background className="bgParallax">
-                  <Box className="imgParallax"/>
-              </Background>
-              <HeroSection />
-              <BlockchainCanDo />
-            </Parallax>
-            <WhatWeDo />
-            <EnterpriseBlockchain />
-            <Inquieres />
-            <Parallax strength={800}>
-            <GetToKnow />
-            <WeAreOneGroup />
-            <Background className="bgParallaxSecondary">
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+            <Background className="bgParallax">
                 <Box className="imgParallax"/>
             </Background>
-            <SomeProjects />
-            </Parallax>
-           <ContactUsBanner />
-          </Box>
-        </Layout>
-      }
-      {isMobile && 
-        <Layout>
-          <MetaTags title={MetaData.title} description={MetaData.description} url={MetaData.url} img={MetaData.img} />
-          <Box className="mainContainer">
             <HeroSection />
             <BlockchainCanDo />
-            <WhatWeDo />
-            <EnterpriseBlockchain />
-            <Inquieres />
-            <GetToKnow />
-            <WeAreOneGroup />
-            <SomeProjects />
-            <ContactUsBanner />
-          </Box>
-        </Layout>
-      } 
-    </>
+          </Parallax>
+          <WhatWeDo />
+          <EnterpriseBlockchain />
+          <Inquieres />
+          <Parallax strength={800}>
+          <GetToKnow />
+          <WeAreOneGroup />
+          <Background className="bgParallaxSecondary">
+              <Box className="imgParallax"/>
+          </Background>
+          <SomeProjects />
+          </Parallax>
+          <ContactUsBanner />
+        </Box>
+      }
+      {isMobile && 
+        <Box className="mainContainer">
+          <HeroSection />
+          <BlockchainCanDo />
+          <WhatWeDo />
+          <EnterpriseBlockchain />
+          <Inquieres />
+          <GetToKnow />
+          <WeAreOneGroup />
+          <SomeProjects />
+          <ContactUsBanner />
+        </Box>
+      }
+    </Layout>
   );
 };
 
