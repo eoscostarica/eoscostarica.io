@@ -8,57 +8,63 @@ import { Parallax, Background } from 'react-parallax'
 
 import ContactUsForm from "./components/ContactUs"
 
+const MetaData={
+  title:"EOS Costa Rica: Contact Us",
+  description:"Ask us how to integrate EOSIO blockchain technology into your organization.",
+  img:"img/metaImgBlack.png",
+}
+
 const ContactUs = () => {
   const isMobile = useMediaQuery({query:'(max-width: 767px)'})
   const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
 
   return(
-    <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+    > 
       {isDesktop && 
-        <Layout>
-          <Parallax strength={800}>
-            <Background className="bgParallax">
-                <Box className="imgParallax"/>
-            </Background>
-            <Box className="containerSec">
-              <Box className={clsx("sectionContact",{["sectionPadding"]: isMobile})}>
-                <Box className="h3Box">
-                  <h1>Contact</h1>
-                </Box>
-               
-                <Box className="contactFormBox">
-                  <Paper style={{padding:'25px'}} variant="outlined">
-                  <Box className="spacingBox">
-                  <p>Let’s get the conversation started. Ask us how we can help you implement blockchain technology into your organization.</p>
-                </Box>
-                  <ContactUsForm />
-                  </Paper>
-                </Box>
-              </Box>
-            </Box>
-          </Parallax>
-        </Layout>
-      }
-      {isMobile && 
-        <Layout>
+        <Parallax strength={800}>
+          <Background className="bgParallax">
+              <Box className="imgParallax"/>
+          </Background>
           <Box className="containerSec">
             <Box className={clsx("sectionContact",{["sectionPadding"]: isMobile})}>
               <Box className="h3Box">
                 <h1>Contact</h1>
               </Box>
+              
               <Box className="contactFormBox">
                 <Paper style={{padding:'25px'}} variant="outlined">
-                  <Box className="spacingBox">
-                    <p style={{padding:0}}>Let’s get the conversation started. Ask us how we can help you implement blockchain technology into your organization.</p>
-                  </Box>
-                  <ContactUsForm />
+                <Box className="spacingBox">
+                <p>Let’s get the conversation started. Ask us how we can help you implement blockchain technology into your organization.</p>
+              </Box>
+                <ContactUsForm />
                 </Paper>
               </Box>
             </Box>
           </Box>
-        </Layout>
+        </Parallax>
       }
-    </>
+      {isMobile && 
+        <Box className="containerSec">
+          <Box className={clsx("sectionContact",{["sectionPadding"]: isMobile})}>
+            <Box className="h3Box">
+              <h1>Contact</h1>
+            </Box>
+            <Box className="contactFormBox">
+              <Paper style={{padding:'25px'}} variant="outlined">
+                <Box className="spacingBox">
+                  <p style={{padding:0}}>Let’s get the conversation started. Ask us how we can help you implement blockchain technology into your organization.</p>
+                </Box>
+                <ContactUsForm />
+              </Paper>
+            </Box>
+          </Box>
+        </Box>
+      }
+    </Layout>
   )
 }
 
