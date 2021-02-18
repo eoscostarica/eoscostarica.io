@@ -3,80 +3,166 @@ import { Parallax, Background } from 'react-parallax'
 import { useMediaQuery } from 'react-responsive'
 import Layout from "@theme/Layout"
 import Box from '@material-ui/core/Box'
+import Grid from '@material-ui/core/Grid'
+import clsx from "clsx"
+import InstagramIcon from '@material-ui/icons/Instagram'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import TwitterIcon from '@material-ui/icons/Twitter'
+import YouTubeIcon from '@material-ui/icons/YouTube'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import useBaseUrl from "@docusaurus/useBaseUrl"
 
 import FormComponent from './components/FormComponent'
 
 const formQuestions = [
     {
         title:"1 - Data integrity and trust",
+        visible:true,
         index:0,
         color:"#f8f8f8",
         description:"A blockchain is a decentralized registry of data shared among various network participants called “nodes.” These nodes keep an exact copy of the registry to guarantee that they all share access to it and minimizing single points of failure in the network. Also, blockchains enable immutable records, meaning no one can delete or alter a transaction. A new block of data must be verified and added to the chain to update any record.",
         questions:[
-            "The organization needs to trust users outside of the organization who access a shared data registry.",
-            "The organization needs to guarantee participants in the network act in good faith and are trustworthy.",
-            "The organization needs to enhance trust between future participants in the network, such as employees, customers, or external organizations (for example, providers, tax agents, or customs workers).",
-            "The participants in the network need to trust each other. Blockchain enables users to have full traceability, manage authorizations, and immutably register transactions to prevent information tampering."
+            {
+                question:"The organization needs to trust users outside of the organization who access a shared data registry.",
+                value:-1
+            },
+            {
+                question:"The organization needs to guarantee participants in the network act in good faith and are trustworthy.",
+                value:-1
+            },
+            {
+                question:"The organization needs to enhance trust between future participants in the network, such as employees, customers, or external organizations (for example, providers, tax agents, or customs workers).",
+                value:-1
+            },
+            {
+                question:"The participants in the network need to trust each other. Blockchain enables users to have full traceability, manage authorizations, and immutably register transactions to prevent information tampering.",
+                value:-1
+            }
         ]
     },
     {
         title:"2 -Authenticity",
         index:1,
+        visible:false,
         color:"#ffffff",
         description:"By deploying blockchain technology, an organization can ensure the authenticity of transactions and documents. Once a transaction is registered in a blockchain, it will become immutable and cannot be hacked or altered. On the other hand, smart contracts in blockchain technology enable transactions that can execute automatically and autonomously. This offers a secure way to certify data, such as legal claims or legal agreements without a middleman.",
         questions:[
-            "The organization needs to verify or authenticate digital assets across a network, for example, an agreement or transaction.",
-            "The organization wants to certify the ownership and keep traceability of assets by registering unique ID numbers on physical goods.",
-            "The organization must meet strict regulations on information security and/or wants to grant access to authorities to its registry in a trusty way.",
-            "The organization wants to protect digital rights as timestamped records and register them in an immutable and decentralized network.",
-            "The organization is interested in certifying the integrity of goods to prevent counterfeit products or services.	"
+            {
+                question:"The organization needs to verify or authenticate digital assets across a network, for example, an agreement or transaction.",
+                value:-1
+            },
+            {
+                question:"The organization wants to certify the ownership and keep traceability of assets by registering unique ID numbers on physical goods.",
+                value:-1
+            },
+            {
+                question:"The organization must meet strict regulations on information security and/or wants to grant access to authorities to its registry in a trusty way.",
+                value:-1
+            },
+            {
+                question:"The organization wants to protect digital rights as timestamped records and register them in an immutable and decentralized network.",
+                value:-1
+            },
+            {
+                question:"The organization is interested in certifying the integrity of goods to prevent counterfeit products or services.",
+                value:-1
+            },
         ]
     },
     {
         title:"3 - Security and authorizations",
         index:2,
         color:"#f8f8f8",
+        visible:false,
         description:"Decentralized blockchain networks can improve the security of transactions. Blockchain prevents single points of failure, making it difficult for hackers to access information stored in the network since they must change records in all the nodes. Also, blockchain enables hash functions, giving each block of data a unique encrypted ID that is difficult to hack or modify.",
         questions:[
-            "The organization manages sensitive information and can benefit from storing it in a decentralized network that prevents data leaks.",
-            "The organization’s users or customers may feel safer knowing their sensitive information is stored in a decentralized network.",
-            "Your users or customers would benefit from managing authorizations and access to their sensitive information stored in your records.",
-            "The organization aims to provide the highest security standards for storing data and transactions.",
-            "The organization wants to manage users’ authorizations to access data and keep traceability of transactions, thus preventing data silos."
+            {
+                question:"The organization manages sensitive information and can benefit from storing it in a decentralized network that prevents data leaks.",
+                value:-1
+            },
+            {
+                question:"The organization’s users or customers may feel safer knowing their sensitive information is stored in a decentralized network.",
+                value:-1
+            },
+            {
+                question:"Your users or customers would benefit from managing authorizations and access to their sensitive information stored in your records.",
+                value:-1
+            },
+            {
+                question:"The organization aims to provide the highest security standards for storing data and transactions.",
+                value:-1
+            },
+            {
+                question: "The organization wants to manage users’ authorizations to access data and keep traceability of transactions, thus preventing data silos.",
+                value:-1
+            }
         ]
     },
     {
         title:"4 - Efficiency",
         index:3,
+        visible:false,
         color:"#ffffff",
         description:"Blockchain also enables the development of smart contracts. Smart contracts are code that can execute automatically and autonomously when the agreed terms are met, same as with any agreement but without a third party’s involvement. This automatization allows more efficient processes in industries such as real estate, payments processing, insurance claims, among others. Smart contracts also allow companies to reduce paperwork and prevent human errors.",
         questions:[
-            "The organization can benefit from minimizing intermediaries and automating processes to make them more efficient.",
-            "The organization prioritizes documents and data security and wants to keep them immutably registered with full traceability.",
-            "The organization currently spends time and effort in fixing human-error that can be prevented by automatizing processes.",
-            "The organization currently has data silos that slow down productivity when accessing relevant information."
+            {
+                question:"The organization can benefit from minimizing intermediaries and automating processes to make them more efficient.",
+                value:-1
+            },
+            {
+                question:"The organization prioritizes documents and data security and wants to keep them immutably registered with full traceability.",
+                value:-1
+            },
+            {
+                question:"The organization currently spends time and effort in fixing human-error that can be prevented by automatizing processes.",
+                value:-1
+            },
+            {
+                question:"The organization currently has data silos that slow down productivity when accessing relevant information.",
+                value:-1
+            }
         ]
     },
     {
         title:"5 - Industry focus",
         index:4,
+        visible:false,
         color:"#f8f8f8",
         description:"As part of the industry 4.0 new technologies, blockchain helps companies worldwide solve many issues. It is a fundamental technology that can be deployed in many industries, including finance, healthcare, insurance, logistics, and digital media. It can also help improve how other new technologies such as AI or IoT store big data.",
         questions:[
-            "The competitors of the organization or similar companies are currently using or planning to implement blockchain technology.",
-            "The organization leverages and embraces new technologies into its innovation processes.",
-            "The clients or users of the organization value new technologies that help them experience a better and safer service."
+            {
+                question:"The competitors of the organization or similar companies are currently using or planning to implement blockchain technology.",
+                value:-1
+            },
+            {
+                question:"The organization leverages and embraces new technologies into its innovation processes.",
+                value:-1
+            },
+            {
+                question:"The clients or users of the organization value new technologies that help them experience a better and safer service.",
+                value:-1
+            }
         ]
     },
     {
         title:"6 - Infrastructure",
         index:5,
+        visible:false,
         color:"#ffffff",
         description:"A blockchain infrastructure must be distributed among a network of computers or users, differing from centralized systems where a single entity controls it. In a blockchain, the nodes must verify each transaction, so it is highly improbable that a single user will change or delete a data entry without other users’ consent. Different blockchain technologies require different infrastructures to operate.",
         questions:[
-            "The network will benefit from restricting users from deleting or changing records without justification or permission by other network entities.",
-            "The organization wants to create or join a business network that extends to multiple stakeholders with similar relevance in the system.",
-            "The organization can invest part of its budget in implementing blockchain technology."
+            {
+                question:"The network will benefit from restricting users from deleting or changing records without justification or permission by other network entities.",
+                value:-1
+            },
+            {
+                question:"The organization wants to create or join a business network that extends to multiple stakeholders with similar relevance in the system.",
+                value:-1
+            },
+            {
+                question:"The organization can invest part of its budget in implementing blockchain technology.",
+                value:-1
+            }
         ]
     }
 ]
@@ -84,28 +170,25 @@ const formQuestions = [
 const Form = () => {
     const isMobile = useMediaQuery( {query:'(max-width: 767px)'} )
     const isDesktop = useMediaQuery( {query:'(min-width: 767px)'} )
-    const [activeDisclaimer, setActiveDisclaimer] = useState(false)
-    const [activeStep, setActiveStep] = useState(0)
-
-    const handleNext = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep + 1)
-    }
     
-    const handleBack = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep - 1)
-    }
-    
-    const handleReset = () => {
-        setActiveStep(0)
-    }
+    const getFormResults = () => {
+        let res = 0
+        formQuestions.map((section) => {
+            section.questions.map((item) => {
+                res+= item.value
+            })
+        })
 
-    const handleDisclaimer = () => {
-        setActiveDisclaimer(true)
+        return res
     }
-
-
 
     const HeroSection = () => {
+        const [activeDisclaimer, setActiveDisclaimer] = useState(false)
+
+        const handleDisclaimer = () => {
+            setActiveDisclaimer(true)
+        }
+
         return (
             <Box className="containerSec">
                 {isDesktop && 
@@ -157,7 +240,14 @@ const Form = () => {
         )
     }
 
-    const Questions = () => {
+    const QuestionsSection = () => {
+        const [resultsSection, setResultsSection] = useState(true)
+
+        const onSubmitForm = () => {
+            setResultsSection(true)
+            console.log("he obtenido una puntucacion de: ", getFormResults())
+        }
+
         return(
             <Box className="containerSec">
                 <Box className="sectionPadding">
@@ -176,10 +266,151 @@ const Form = () => {
                         <p>Take your time to answer them and analyze your response. In the end, you will receive a final score to the answers provided. Make sure to answer all the questions! <br/><br/>
                             If you have any questions or suggestions regarding this tool, please <a href="/contact-us" target="_blank">contact us</a>.</p>
                     </Box>
-                    <FormComponent formQuestions={formQuestions}/>
+                    <Box className="spacingBox">
+                        <FormComponent formQuestions={formQuestions} isDesktop={isDesktop} onSubmit={onSubmitForm}/>
+                    </Box>
+                    
+                    {resultsSection && <GetResults />}
+                </Box>
+            </Box> 
+        )
+    }
+
+    const GetResults = () => {
+        const [email, setEmail] = useState()
+        const [thanksMessage, setThanksMessage] = useState(false)
+        
+        const handleEmailChange = (e) => {
+            setEmail(e.target.value)
+        }
+
+        const  onSubmitEmailResults = async (e) => {
+            e.preventDefault()
+
+            const jsonData = {
+                "fields": [
+                  {
+                    "name": "email",
+                    "value": email
+                  },
+                  {
+                    "name": "blockchainpoints",
+                    "value": "email"
+                  }
+                ],
+                "context": {
+                  "pageUri": "www.example.com/page",
+                  "pageName": "Example page"
+                },
+                "legalConsentOptions": {
+                  "consent": {
+                    "consentToProcess": true,
+                    "text": "I agree to allow Example Company to store and process my personal data.",
+                    "communications": [
+                      {
+                        "value": true,
+                        "subscriptionTypeId": 999,
+                        "text": "I agree to receive marketing communications from Example Company."
+                      }
+                    ]
+                  }
+                }
+              }
+            
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(jsonData)
+            };
+            const response = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/9444166/77354d92-7a10-46b7-b8a9-8ebac6e78f7f', requestOptions);
+            const data = await response.json();
+            console.log(data)
+ 
+            setThanksMessage(true)
+        }
+        
+        return(
+            <Box className="">
+                <Box className="spacingBox">
+                    <h2>Get the results</h2>
+                </Box>
+                {!thanksMessage && 
+                    <form onSubmit={onSubmitEmailResults}>  
+                        <Grid container spacing={2}>
+                            <Grid item xs={12} md={12}>
+                                <p>You obtained <b>{getFormResults()} points</b>. <br/>Please, enter your email below to send you the results.</p>
+                            </Grid>
+                            <Grid item xs={12} md={6}>
+                                <input 
+                                    type="email" 
+                                    className="inputMail" 
+                                    value={email} 
+                                    onChange={handleEmailChange} 
+                                    placeholder="Email" 
+                                    required 
+                                />
+                            </Grid>
+                            <Grid item xs={12} md={2}>
+                                <Box className={isMobile ? "centerBox" : ""}>   
+                                    <input type="submit" className="buttonPrimary" value="Submit"/>
+                                </Box>
+                            </Grid>
+                        </Grid>
+                    </form>
+                }
+                {thanksMessage && 
+                    <Box>
+                        <p>Thanks for use this tool, check your inbox for more details.</p>
+                        <p>If you have any questions regarding EOSIO and blockchain, please <a href="/contact-us">contact us</a> or go to our <a href="/blog">blog</a>!</p>
+                    </Box>
+                }
+            </Box>
+        )
+    }
+
+    const HelpfulResources =  () => {
+        return (
+            <Box className="containerSec">
+                <Box className="section">
+                    <Grid className="paddingTop" container>
+                        <Grid item xs={12} md={6}>
+                            <Box className={isMobile? "spacingBox": ""}>
+                            <h3 className={isMobile? "centerText": ""}>Follow us on our profiles. We’re continually looking for open-source collaborations!</h3>
+                            </Box>
+                        </Grid>
+                        <Grid className="litlePaddingTop" item xs={12} md={3}>
+                            <Box className={isMobile? "centerBox": "boxFlexEnd"}>
+                            <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://github.com/eoscostarica" target="_blank">
+                                <GitHubIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                            </a>
+                            <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://twitter.com/EOSCostaRica" target="_blank">
+                                <TwitterIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                            </a>
+                            <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://t.me/eoscr" target="_blank">
+                                <LinkedInIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                            </a>
+                            </Box>
+                        </Grid>
+                        <Grid className="litlePaddingTop" style={{marginTop:'-7px'}} item xs={12} md={3}>
+                            <Box className="centerBox">
+                            <a className="noMarginsTop" href="https://medium.com/@eoscostarica" target="_blank">
+                                <img
+                                className="socialMediaAnimation"
+                                style={{width:'48px', height:'48px', cursor:'pointer', color:'#5484b3'}}
+                                src={useBaseUrl("img/icons/icon-medium.png")}
+                                />
+                            </a>
+                            <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
+                                <YouTubeIcon style={{ width:'56px', height:'56px', cursor:'pointer', color:'#5484b3'}}/>
+                            </a>
+                            <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.instagram.com/eoscostarica/" target="_blank">
+                                <InstagramIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                            </a>
+                            </Box>
+                        </Grid>
+                    </Grid>      
                 </Box>
             </Box>
-            
         )
     }
 
@@ -192,14 +423,16 @@ const Form = () => {
                             <Box className="imgParallax" />
                         </Background>
                         <HeroSection />
-                        <Questions />
+                        <QuestionsSection />
+                        <HelpfulResources />
                     </Parallax>
                 </Box>
             }
             {isMobile &&
                 <Box className="mainContainer">
                     <HeroSection />  
-                    <Questions />
+                    <QuestionsSection />
+                    <HelpfulResources />
                 </Box>
             }
         </Layout>

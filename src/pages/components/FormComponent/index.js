@@ -20,53 +20,74 @@ const GenericRadio = withStyles({
     checked: {},
   })((props) => <Radio color="default" {...props} />);
 
-const FormComponent = ( {formQuestions} ) => {
+const FormComponent = ( {formQuestions, isDesktop, onSubmit} ) => {
     const [activeStep, setActiveStep] = useState(0)
+    const [disableButton, setDisableButton] = useState(true)
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1)
-    }
-    
-    const handleBack = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep - 1)
-    }
-    
-    const handleReset = () => {
-        setActiveStep(0)
+        formQuestions[activeStep+1].visible=true
+        handleDisableButton()
     }
 
+    const handleEnableButton = () => {
+        setDisableButton(false)
+    }
+
+    const handleDisableButton = () => {
+        setDisableButton(true)
+    }
+
+    const setQuestionValue = (indexSection,indexQuestion,value) => {
+        formQuestions[indexSection].questions[indexQuestion].value=value
+        if(isSectionComplete(indexSection)){
+            handleEnableButton()
+        }
+    }
+
+    const isSectionComplete = (indexSection) => {
+        let flag = true
+
+        formQuestions[indexSection].questions.map((item) => {
+            if(item.value===-1) flag= false
+        })
+        return flag
+    }
+    
     return (
       <>
-        {formQuestions.map((question) => (
-            <Box key={question.title} style={{padding:'50px',backgroundColor:question.color}}>
-                <h3 style={{margin:0}}>{question.title}</h3> 
-                {(activeStep===question.index) && 
+        {formQuestions.map((section) => (
+            <Box key={section.title} className="formBox" style={{backgroundColor:section.color}}>
+                <h3 style={{margin:0}}>{section.title}</h3> 
+                {section.visible && 
                     <Box>
                         <Box className={clsx("topSpacingBox","spacingBox")}>
-                        <p>{question.description}</p>
+                            <p>{section.description}</p>
                         </Box>
                         <Box>
-                            {question.questions.map((item,i) => (
+                            {section.questions.map((item,i) => (
                                 <Box className="spacingBox" key={i}>
-                                    <p><b>{question.index+1}.{i+1}</b> - {item}</p>
-                                    <FormControl component="fieldset" style={{marginTop:'10px'}}>
-                                        <RadioGroup row  aria-label="form" name="form1" >
-                                            <FormControlLabel value="1" control={<GenericRadio />} label="1" />
-                                            <FormControlLabel value="2" control={<GenericRadio />} label="2" />
-                                            <FormControlLabel value="3" control={<GenericRadio />} label="3" />
-                                            <FormControlLabel value="4" control={<GenericRadio />} label="4" />
-                                            <FormControlLabel value="5" control={<GenericRadio />} label="5" />
-                                        </RadioGroup>
-                                    </FormControl>
+                                    <p className="itemQuestion"><b>{section.index+1}.{i+1}</b> - {item.question}</p>
+                                    <Box className="radioBox">
+                                        <FormControl component="fieldset" >
+                                            <RadioGroup row  aria-label="form" name="form1" >
+                                                <FormControlLabel value="1" control={<GenericRadio />} label="1" style={{marginRight: isDesktop ? '50px' : '20px'}} onChange={()=>{setQuestionValue(section.index,i,1)}}/>
+                                                <FormControlLabel value="2" control={<GenericRadio />} label="2" style={{marginRight: isDesktop ? '50px' : '20px'}} onChange={()=>{setQuestionValue(section.index,i,2)}}/>
+                                                <FormControlLabel value="3" control={<GenericRadio />} label="3" style={{marginRight: isDesktop ? '50px' : '20px'}} onChange={()=>{setQuestionValue(section.index,i,3)}}/>
+                                                <FormControlLabel value="4" control={<GenericRadio />} label="4" style={{marginRight: isDesktop ? '50px' : '20px'}} onChange={()=>{setQuestionValue(section.index,i,4)}}/>
+                                                <FormControlLabel value="5" control={<GenericRadio />} label="5" style={{marginRight: isDesktop ? '50px' : '20px'}} onChange={()=>{setQuestionValue(section.index,i,5)}}/>
+                                            </RadioGroup>
+                                        </FormControl>
+                                    </Box>
                                 </Box>
                             ))}
                         </Box>
                         <Box className={clsx("boxFlexEnd","spacingBox")}>
-                            {activeStep!==0 && 
-                                <button className="buttonSecondary" onClick={handleBack}>Back</button>
+                            {(activeStep=== section.index) && activeStep!==formQuestions.length-1 && 
+                                <button className="buttonPrimary" style={{marginLeft:'10px'}} onClick={handleNext} disabled={disableButton}>Next</button>     
                             }
-                            {activeStep!==5 && 
-                                <button className="buttonPrimary" style={{marginLeft:'10px'}} onClick={handleNext}>Next</button>
+                            {(activeStep=== section.index) && activeStep===formQuestions.length-1 && 
+                                <button className="buttonPrimary" style={{marginLeft:'10px'}} onClick={onSubmit} disabled={disableButton}>Finish</button>     
                             }
                         </Box>
                     </Box>
@@ -78,7 +99,13 @@ const FormComponent = ( {formQuestions} ) => {
 };
 
 FormComponent.propTypes = {
-    formQuestions:PropTypes.array
+    formQuestions:PropTypes.array,
+    isDesktop:PropTypes.bool,
+    onSubmit:PropTypes.func,
+}
+
+FormComponent.defaultProps = {
+    formQuestions:[],
 }
 
 export default FormComponent;

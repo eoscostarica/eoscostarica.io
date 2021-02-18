@@ -106,6 +106,12 @@ a{
   opacity:0.8;
 }
 
+.buttonPrimary:disabled,
+.buttonPrimary[disabled]{
+  background-color: #cccccc;
+  color: #666666;
+}
+
 .buttonSecondary{
   font-family: 'Gotham',Lato, sans-serif;
   font-weight: bold;
@@ -120,6 +126,15 @@ a{
   color: #5484B3;
   cursor: pointer;
   transition: all .5s ease;
+}
+
+.inputMail{
+  font-family: 'Gotham',Lato, sans-serif;
+  padding: 25px;
+  font-size: 19px;
+  border: solid 1px gray;
+  width: 100%;
+  margin-right: 20px;
 }
 
 .gridButton{
@@ -1163,6 +1178,23 @@ input:checked + .slider:before {
   line-height: 34px;
 }
 
+.formBox{
+  padding: 50px;
+}
+
+.radioBox{
+  margin-top: 10px;
+}
+
+.itemQuestion{
+  text-indent: -46px; 
+  padding-left: 46px;
+}
+
+.itemQuestionRadio{
+  margin-right: 50px;
+}
+
 @media only screen and (max-width: 767px) {
   .footerLogo {
     width: 300px;
@@ -1460,4 +1492,33 @@ input:checked + .slider:before {
     padding-top: 50px;
     padding-right: 0;
   }
+
+  .formBox{
+    padding: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .radioBox{
+    margin-left: 25px;
+  }
+
+  .itemQuestion{
+    text-indent: 0; 
+    padding-left: 25px;
+  }
+
+  .itemQuestionRadio{
+    margin-right: 0;
+  }
+
+  .inputMail{
+    font-family: 'Gotham',Lato, sans-serif;
+    padding: 25px;
+    font-size: 19px;
+    border: solid 1px gray;
+    width: 85%;
+    margin: 25px;
+  }
+
 }
