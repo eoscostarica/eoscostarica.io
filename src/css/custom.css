@@ -833,10 +833,10 @@ input:checked + .slider:before {
   box-shadow: none;
 }
 
-.MuiAccordion-root::before{
-  background-color: #f1f1f1;
+.MuiAccordion-root + .MuiAccordion-root{
   margin: 0;
   padding: 0;
+  border-top: solid 1px rgba(128, 128, 128, .3);
 }
 
 .imgBox{
