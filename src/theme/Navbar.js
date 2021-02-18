@@ -52,12 +52,11 @@ const PATHS = [
         label: "Block producer",
         target: '_self'
       },
-      /*{
+      {
         path: "/press/",
         label: "Press",
         target: '_self'
-      },
-      */
+      }
     ]
   },
   {
