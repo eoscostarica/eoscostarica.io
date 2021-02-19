@@ -99,8 +99,8 @@ const solutionBaseAccordionRight =
 ]
 
 const ServicePage = () => {
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
   const [expandedMap, setExpandedMap] = useState('panel_interconnectivity')
   const [expandedSolution, setExpandedSolution] = useState()
   const [expandedEnterprise, setExpandedEnterprise] = useState()
