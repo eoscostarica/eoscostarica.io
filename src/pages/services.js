@@ -403,12 +403,12 @@ const ServicePage = () => {
             </Box>
             <p>
               Our datacenter, located in San José, Costa Rica, is
-                strategically located in the middle of the American continent,
-                allowing convenient network interconnectivity. Costa Rica offers
-                high political stability, a long-lasting democracy, high
-                education ranks, and flexible corporate structure – all
-                appropriate for decentralized networks. These are some of the
-                advantages that this country may add to your infrastructure:
+              strategically located in the middle of the American continent,
+              allowing convenient network interconnectivity. Costa Rica offers
+              high political stability, a long-lasting democracy, high
+              education ranks, and flexible corporate structure – all
+              appropriate for decentralized networks. These are some of the
+              advantages that this country may add to your infrastructure:
             </p>
           </Box>
           <Grid container spacing={5}>
@@ -483,11 +483,8 @@ const ServicePage = () => {
                         a web portal that includes learning materials and guides
                         for developers. Check them out {" "}  
                         <a href="https://guide.eoscostarica.io/" target="_blank">
-                            here
-                        </a>. Also, <a href={useBaseUrl("/contact-us/")} target="_blank">
-                            ask us
-                        </a> about
-                        our training courses for companies and teams.
+                        here </a>. Also, <a href={useBaseUrl("/contact-us/")} target="_blank">
+                        ask us </a> about our training courses for companies and teams.
                       </p>
                     </AccordionDetails>
                   </Accordion>
@@ -508,8 +505,7 @@ const ServicePage = () => {
                         speak about blockchain and participate in events related
                         to technology and innovation. Every year, we host a
                         team-building event called <a href="https://eosurf.com/" target="_blank">
-                            EOSurf
-                        </a> that takes our
+                        EOSurf </a> that takes our
                         operations to the beach for several days to switch
                         computers and code for surf and yoga lessons.
                       </p>
