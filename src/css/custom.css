@@ -92,7 +92,7 @@ a{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-family: 'Gotham', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-size: 21px;
   width: auto;
@@ -113,7 +113,7 @@ a{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-size: 21px;
   width: auto;
