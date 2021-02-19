@@ -833,11 +833,17 @@ input:checked + .slider:before {
   box-shadow: none;
 }
 
+.MuiAccordion-root + .MuiAccordion-root::before{
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
 .MuiAccordion-root + .MuiAccordion-root{
   margin: 0;
   padding: 0;
   opacity: 1;
-  border-top: solid 1px rgba(128, 128, 128, .2);
+  border-top: solid 1px rgba(128, 128, 128, .3);
 }
 
 .imgBox{
