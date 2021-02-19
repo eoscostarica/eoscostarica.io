@@ -512,93 +512,96 @@ const Home = () => {
             </p>
           </Box>
           <Box className={isDesktop? "doubleSpacingBox": ""}>
-            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingTop:'20px',paddingBottom:'20px'}} container spacing={5}>
-              <Grid xs={12} item md={6}>
-                <Box className="centerBox" style={{height:'100%'}}>
-                  <img
-                    className="sizeImageTheCompany"
-                    src={useBaseUrl("img/logos/Group47.svg")}
-                  />
-                </Box>
-              </Grid>
-              <Grid xs={12} item md={6}>
-                <br/>
-                <Box className="h3Box">
-                  <h3>LatamLink</h3>
-                </Box>
-                <p>
-                  We are part of this voluntary regional alliance, led by Latin
-                  American technology companies to offer an EOSIO-based testnet
-                  to the{" "}
-                  <a href="https://www.lacchain.net/" target="_blank">
-                    LACChain
-                  </a>{" "}
-                  initiative, a program to accelerate the development of the
-                  blockchain ecosystem in the region.{" "}
-                  <a href="https://latamlink.io/" target="_blank">
-                    Discover more about LatamLink.
-                  </a>
-                </p>
-              </Grid>
-            </Grid>
-            <Grid container style={{paddingTop:'25px',paddingBottom:'25px'}} spacing={5}>
-                <Grid xs={12} item md={6}>
-                  <Box className="centerBox" style={{height:'100%'}}>
+            <Grid container>
+              <Grid item xs={12} md={6}>
+                <Box className="projectsGridLeft">
+                  <Box className="imgBoxProjects">
                     <img
+                      alt="LatamLink"
                       className="sizeImageTheCompany"
-                      src={useBaseUrl("img/logos/lifebank.svg")}
+                      src={useBaseUrl("img/logos/Group47.svg")}
                     />
                   </Box>
-                </Grid>
-                <Grid xs={12} item md={6}>
-                  <br/>
+                </Box>
+              </Grid>
+              <Grid  item xs={12} md={6}>
+                <Box className="projectsGridRight">
                   <Box className="h3Box">
-                    <h3>Lifebank</h3>
+                    <h3 >LatamLink</h3>
                   </Box>
                   <p>
-                    An open-source blockchain-based app that incentivizes blood
-                    donations by creating a virtuous circle of value between
-                    donors, blood banks, and local businesses, leveraged by a
-                    token economy. Winner of the{" "}
-                    <a
-                      href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
-                      target="_blank"
-                    >
-                      “Coding for Change”
-                    </a>{" "}
-                    challenge by{" "}
-                    <a href="https://block.one/" target="_blank">
-                      block.one.
-                    </a>{" "}
-                    <a href=" https://lifebank.io/" target="_blank">
-                      Find out more about Lifebank.
+                    We are part of this voluntary regional alliance, led by Latin
+                    American technology companies to offer an EOSIO-based testnet to
+                    the <a href="https://www.lacchain.net/" target="_blank"> LACChain</a>{" "} 
+                    initiative, a program to accelerate the development
+                    of the blockchain ecosystem in the region.{" "}
+                    <a href="http://latamlink.io/" target="_blank">
+                      Discover more about LatamLink.
                     </a>
                   </p>
-                </Grid>
+                </Box>
               </Grid>
-              <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingTop:'20px',paddingBottom:'20px'}} container spacing={5}>
-                <Grid xs={12} item md={6}>
-                  <Box className="centerBox" style={{height:'100%'}}>
-                    <img
-                      className="sizeImageTheCompany"
-                      src={useBaseUrl("img/logos/smartgate.svg")}
-                    />
-                  </Box> 
-                </Grid>
-                <Grid xs={12} item md={6}>
-                  <br/>
-                  <Box className="h3Box">
-                    <h3>SMARTGATE</h3>
-                  </Box>
-                  <p>
-                    A blockchain-based platform that provides solutions for in-out
-                    gate activity for the container industry and real-time
-                    transmission of relevant data required for proper interchange
-                    in port logistics. <a href="https://smartgate.tech/" target="_blank">Learn more about SMARTGATE.</a>
-                  </p>
-                  <br/>
-                </Grid>
-              </Grid>
+            <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+              <Box className="projectsGridLeft">
+                <Box className="imgBoxProjects">
+                  <img
+                    alt="Lifebank"
+                    src={useBaseUrl("img/logos/lifebank.svg")}
+                  />
+                </Box>
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+              <Box className="projectsGridRight">
+                <Box className="h3Box">
+                  <h3 >Lifebank</h3>
+                </Box>
+                <p>
+                  An open-source blockchain-based app that incentivizes blood
+                  donations by creating a virtuous circle of value between donors,
+                  blood banks, and local businesses, leveraged by a token economy.
+                  Winner of the “
+                  <a
+                    href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
+                    target="_blank"
+                  >
+                    Coding for Change
+                  </a>{"” "} challenge by {" "}
+                  <a href="https://block.one/" target="_blank">
+                    block.one.
+                  </a>{" "}
+                  <a href="http://lifebank.io/" target="_blank">
+                    Find out more about Lifebank.
+                  </a>
+                </p>
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor:'#ffffff'}} item xs={12} md={6}>
+              <Box className="projectsGridLeft">
+                <Box className="imgBoxProjects">
+                  <img
+                    alt="SMARTGATE"
+                    src={useBaseUrl("img/logos/smartgate.svg")}
+                  />
+                </Box>
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor:'#ffffff'}} item xs={12} md={6}>
+              <Box className="projectsGridRight">
+                <Box className="h3Box">
+                  <h3 >SMARTGATE</h3>
+                </Box>
+                <p>
+                  A blockchain-based platform that provides solutions for in-out gate activity for the container 
+                  industry and real-time transmission of relevant data required for proper interchange in port logistics. 
+                  {" "}
+                  <a href="https://smartgate.tech/" target="_blank">
+                    Learn more about SMARTGATE.
+                  </a>
+                </p>
+              </Box>
+            </Grid>
+          </Grid>
           </Box>
         </Box>
       </Box>
