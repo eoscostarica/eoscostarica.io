@@ -836,7 +836,8 @@ input:checked + .slider:before {
 .MuiAccordion-root + .MuiAccordion-root{
   margin: 0;
   padding: 0;
-  border-top: solid 1px rgba(128, 128, 128, .3);
+  opacity: 1;
+  border-top: solid 1px rgba(128, 128, 128, .2);
 }
 
 .imgBox{

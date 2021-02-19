@@ -133,7 +133,6 @@ const Footer = () => {
       </ScrollTrigger>
     </Box>
   )
-
 }
 
 export default Footer;
