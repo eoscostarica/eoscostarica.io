@@ -194,9 +194,9 @@ const Home = () => {
                 className="accordion"
                 style={{backgroundColor:'#F8F8F8', boxShadow:'none'}} >
                 <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h4 style={{padding: 0, paddingTop:'10px'}}>Software Development</h4>
+                  <h4 style={{margin:'2px', padding: 0}}>Software Development</h4>
                 </AccordionSummary>
-                <AccordionDetails style={{padding:1, marginTop:'-20px'}}>
+                <AccordionDetails style={{padding:1, marginTop:'-15px'}}>
                   <p style={{padding: 0}}>
                     Our value proposition is to develop blockchain-based
                     software to solve real-life problems. We have experience
@@ -217,9 +217,9 @@ const Home = () => {
                 className="accordion"
                 style={{backgroundColor:'#F8F8F8',boxShadow:'none'}}>
                 <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h4 style={{padding: 0, paddingTop:'10px'}}>Blockchain Infrastructure</h4>
+                  <h4 style={{margin:'2px', padding: 0}}>Blockchain Infrastructure</h4>
                 </AccordionSummary>
-                <AccordionDetails style={{padding:0, marginTop:'-20px'}}>
+                <AccordionDetails style={{padding:0, marginTop:'-15px'}}>
                   <p style={{padding: 0}}>
                     We offer top-grade infrastructure for blockchain networks
                     and API endpoints from our datacenter in San José, Costa
@@ -234,9 +234,9 @@ const Home = () => {
               </Accordion>
               <Accordion square expanded={expanded === 'panel_Education'}  onChange={handleChange('panel_Education')} className="accordion" style={{backgroundColor:'#F8F8F8',boxShadow:'none',borderColor:'s\\#f1f1f1'}}>
                 <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h4 style={{padding: 0, paddingTop:'10px'}}>Education and Training</h4>
+                  <h4 style={{margin:'2px', padding: 0}}>Education and Training</h4>
                 </AccordionSummary>
-                <AccordionDetails style={{padding:0, marginTop:'-20px'}}>
+                <AccordionDetails style={{padding:0, marginTop:'-15px'}}>
                   <p style={{padding: 0}}>
                     In today’s world, new technologies are leading the way to
                     transform many industries. We offer workshops on blockchain
