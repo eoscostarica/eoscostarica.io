@@ -632,11 +632,25 @@ input:checked + .slider:before {
   overflow-x: hidden;
 }
 
-.footerContent{
-  width: 1100px;
+.footerCopy{
+  width: "100%";
   display: flex;
-  padding-top: 40px;
-  padding-bottom: 80px;
+  justify-content: center;
+  background-color: white;
+  overflow-x: hidden;
+  height: 50px;
+}
+
+.footerCopyContent{
+  width: 1280px;
+  display: flex;
+}
+
+.footerContent{
+  width: 1280px;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .boxTitle{
@@ -936,6 +950,12 @@ input:checked + .slider:before {
   align-items: center;
 }
 
+.leftBox{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 /*Team*/
 
 .avatarBox{
@@ -1012,6 +1032,10 @@ input:checked + .slider:before {
 
 .paddingTop{
   padding-top: 100px
+}
+
+.mediumPaddingTop{
+  padding-top: 50px
 }
 
 .litlePaddingTop{
@@ -1110,13 +1134,8 @@ input:checked + .slider:before {
 }
 
 .footerLogo {
-  width: 300px;
-  height: 90px;
-}
-
-.footerLogoAnimation{
-  transition: all .9s ease-in-out;
-  transform: scale(0.87);
+  width: 290px;
+  height: 75px;
 }
 
 .teamPadding{
@@ -1197,8 +1216,8 @@ input:checked + .slider:before {
 
 @media only screen and (max-width: 767px) {
   .footerLogo {
-    width: 300px;
-    height: 110px;
+    width: 200px;
+    height: 70px;
   }
   
   .footerLogoBox{
