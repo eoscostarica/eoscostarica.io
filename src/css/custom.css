@@ -859,10 +859,16 @@ input:checked + .slider:before {
   box-shadow: none;
 }
 
-.MuiAccordion-root::before{
-  background-color: #f1f1f1;
+.MuiAccordion-root + .MuiAccordion-root::before{
   margin: 0;
   padding: 0;
+  opacity: 0;
+}
+
+.MuiAccordion-root + .MuiAccordion-root{
+  margin: 0;
+  padding: 0;
+  border-top: solid 1px #E0E0E0;
 }
 
 .imgBox{
