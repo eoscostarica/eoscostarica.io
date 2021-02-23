@@ -10,6 +10,12 @@ import { useMediaQuery } from 'react-responsive'
 
 import ContactUsBanner from './components/ContactUsBanner'
 
+const MetaData={
+  title:"EOS Costa Rica: Our Projects",
+  description:"EOS Costa Rica has developed solutions for many industries and open-source projects for the blockchain community.",
+  img:"img/metaImgBlack.png",
+}
+
 const ProjectsList = [
   {
     img:"img/logos/smartgate.svg",
@@ -78,8 +84,13 @@ const ProjectsList = [
 ]
 
 const OurProjects = () => {
+<<<<<<< HEAD
   const isMobile = useMediaQuery({query:'(max-width: 767px)'})
   const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+=======
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
+>>>>>>> f2d902ca2bbf87ae15f72469a247d9d6276ce03f
 
   const HeroSection = () => {
     return (
@@ -232,31 +243,31 @@ const OurProjects = () => {
   }
 
   return (
-    <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+    > 
       {isDesktop && 
-        <Layout>
-          <Box className="mainContainer">
-            <Parallax strength={800}>
-              <Background className="bgParallax">
-                  <Box className="imgParallax"/>
-              </Background>
-              <HeroSection/>
-              <Body/>
-            </Parallax>
-            <ContactUsBanner/>
-          </Box>
-        </Layout>
-      }
-      {isMobile && 
-        <Layout>
-          <Box className="mainContainer">
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+            <Background className="bgParallax">
+                <Box className="imgParallax"/>
+            </Background>
             <HeroSection/>
             <Body/>
-            <ContactUsBanner/>
-          </Box>
-        </Layout>
+          </Parallax>
+          <ContactUsBanner/>
+        </Box>
       }
-    </>
+      {isMobile && 
+        <Box className="mainContainer">
+          <HeroSection/>
+          <Body/>
+          <ContactUsBanner/>
+        </Box>
+      }
+    </Layout>
   );
 };
 

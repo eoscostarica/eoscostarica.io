@@ -14,6 +14,12 @@ import Payments from './Animations/Payments'
 import Logistic from './Animations/Logistic'
 import Games from './Animations/Games'
 
+const MetaData={
+  title:"EOS Costa Rica: Industries",
+  description:"",
+  img:"img/metaImgBlack.png",
+}
+
 const moreIndustriesAccordion = 
 [
   {
@@ -73,8 +79,8 @@ const moreIndustriesAccordion2 =
 ]
 
 const Industries = () => {
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
   const history = useHistory();
   const [expanded, setExpanded] = useState();
 
@@ -344,35 +350,35 @@ const Industries = () => {
   }
 
   return (
-    <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+    > 
       {isDesktop &&
-        <Layout>
-          <Box className="mainContainer">
-            <Parallax strength={800}>
-                <Background className="bgParallax">
-                    <Box className="imgParallax" />
-                </Background>
-                <HeroSection />
-                <PrincipalIndustries />
-            </Parallax>
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+              <Background className="bgParallax">
+                  <Box className="imgParallax" />
+              </Background>
+              <HeroSection />
+              <PrincipalIndustries />
+          </Parallax>
+          <BlockchainMoreIndustries />
+          <ChoosingEnterprise />
+          <AdditionalResources />
+        </Box>
+      }
+      {isMobile &&
+        <Box className="mainContainer">
+            <HeroSection />
+            <PrincipalIndustries />
             <BlockchainMoreIndustries />
             <ChoosingEnterprise />
             <AdditionalResources />
-          </Box>
-        </Layout>
+        </Box>
       }
-      {isMobile &&
-        <Layout>
-          <Box className="mainContainer">
-              <HeroSection />
-              <PrincipalIndustries />
-              <BlockchainMoreIndustries />
-              <ChoosingEnterprise />
-              <AdditionalResources />
-          </Box>
-        </Layout>
-      }
-    </>
+    </Layout>
   );
   
 };

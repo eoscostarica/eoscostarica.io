@@ -27,7 +27,11 @@ const Footer = () => {
                 <img 
                 src={useBaseUrl("img/logos/logo-white.png")} 
                 alt="EOS CR LOGO" 
+<<<<<<< HEAD
                 className={clsx("footerLogo",{ [stateAnimation]:"footerLogoAnimation" })} />
+=======
+                className={clsx("footerLogo",{ [stateAnimation]: "footerLogoAnimation" })} />
+>>>>>>> f2d902ca2bbf87ae15f72469a247d9d6276ce03f
               </Box>
             </Grid>
             <Grid item xs={12} md={2}/>
@@ -133,7 +137,6 @@ const Footer = () => {
       </ScrollTrigger>
     </Box>
   )
-
 }
 
 export default Footer;

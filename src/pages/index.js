@@ -12,21 +12,19 @@ import AccordionDetails from '@material-ui/core/AccordionDetails'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
-import MetaTags from './components/MetaTags'
 import WhatWeDoSvg from "./SvgComponents/WhatWeDo"
 import ContactUsBanner from './components/ContactUsBanner'
 import WeAreOneGroup from './components/WeAreOneGroup'
 
 const MetaData={
   title:"Enterprise Blockchain Solutions | EOSIO",
-  description:" EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
-  img:"https://eoscostarica.io/img/metadataImg",
-  url:"https://eoscostarica.io/",
+  description:"EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
+  img:"img/metaImgBlack.png",
 }
 
 const Home = () => {
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
   const [expanded, setExpanded] = useState('panel_SoftDev')
   const history = useHistory()
   
@@ -188,6 +186,7 @@ const Home = () => {
               <a href={useBaseUrl("/contact-us")}>Contact us</a> and get the conversation
               started!
             </p>
+<<<<<<< HEAD
             <Box className="accordionBox">
                 <Accordion 
                   square 
@@ -251,6 +250,71 @@ const Home = () => {
                   </AccordionDetails>
                 </Accordion>
               </Box>
+=======
+            <Box className="accordionBox" style={{ marginTop:'20px'}}>
+              <Accordion 
+                square
+                expanded={expanded === 'panel_SoftDev'} 
+                onChange={handleChange('panel_SoftDev')} 
+                className="accordion"
+                style={{backgroundColor:'#F8F8F8', boxShadow:'none'}} >
+                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h4 style={{margin:'2px', padding: 0}}>Software Development</h4>
+                </AccordionSummary>
+                <AccordionDetails style={{padding:1, marginTop:'-15px'}}>
+                  <p style={{padding: 0}}>
+                    Our value proposition is to develop blockchain-based
+                    software to solve real-life problems. We have experience
+                    working with large global enterprises and SMEs, government
+                    entities and NGOs, and open-source projects across many
+                    industries. We adapt to our clients’ budgets and needs,
+                    without compromising thought leadership or quality. Our team
+                    is technology agnostic but specializes in the open-source
+                    blockchain technology <a href={"https://eos.io/"} target="_blank">EOSIO</a>, launched by leading company
+                    <a href={"https://block.one/"} target="_blank"> block.one</a>.
+                  </p>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion 
+                square
+                expanded={expanded === 'panel_BlockInfrac'}
+                onChange={handleChange('panel_BlockInfrac')}
+                className="accordion"
+                style={{backgroundColor:'#F8F8F8',boxShadow:'none'}}>
+                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h4 style={{margin:'2px', padding: 0}}>Blockchain Infrastructure</h4>
+                </AccordionSummary>
+                <AccordionDetails style={{padding:0, marginTop:'-15px'}}>
+                  <p style={{padding: 0}}>
+                    We offer top-grade infrastructure for blockchain networks
+                    and API endpoints from our datacenter in San José, Costa
+                    Rica. Costa Rica is a country with high political stability
+                    and a long-lasting democracy. Our strategic location in the
+                    middle of the American continent offers convenient network
+                    interconnectivity. We also configure, host, and maintain
+                    blockchain nodes available for private and public networks
+                    with 24/7 monitoring and uptime. <a href={useBaseUrl("/the-company")} target="_blank"> Read more about this</a>.
+                  </p>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion square expanded={expanded === 'panel_Education'}  onChange={handleChange('panel_Education')} className="accordion" style={{backgroundColor:'#F8F8F8',boxShadow:'none',borderColor:'s\\#f1f1f1'}}>
+                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                  <h4 style={{margin:'2px', padding: 0}}>Education and Training</h4>
+                </AccordionSummary>
+                <AccordionDetails style={{padding:0, marginTop:'-15px'}}>
+                  <p style={{padding: 0}}>
+                    In today’s world, new technologies are leading the way to
+                    transform many industries. We offer workshops on blockchain
+                    and EOSIO to C-suite executives and teams that want to keep
+                    up to date and learn more about what is blockchain and
+                    enterprise use cases. We also provide training and education
+                    resources for new talents that wish to kickstart their
+                    career in blockchain.
+                  </p>
+                </AccordionDetails>
+              </Accordion>
+            </Box>
+>>>>>>> f2d902ca2bbf87ae15f72469a247d9d6276ce03f
           </Grid>
           {isDesktop && 
             <Grid item  md={6}>
@@ -514,145 +578,145 @@ const Home = () => {
             </p>
           </Box>
           <Box className={isDesktop? "doubleSpacingBox": ""}>
-            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingTop:'20px',paddingBottom:'20px'}} container spacing={5}>
-              <Grid xs={12} item md={6}>
-                <Box className="centerBox" style={{height:'100%'}}>
-                  <img
-                    className="sizeImageTheCompany"
-                    src={useBaseUrl("img/logos/Group47.svg")}
-                  />
-                </Box>
-              </Grid>
-              <Grid xs={12} item md={6}>
-                <br/>
-                <Box className="h3Box">
-                  <h3>LatamLink</h3>
-                </Box>
-                <p>
-                  We are part of this voluntary regional alliance, led by Latin
-                  American technology companies to offer an EOSIO-based testnet
-                  to the{" "}
-                  <a href="https://www.lacchain.net/" target="_blank">
-                    LACChain
-                  </a>{" "}
-                  initiative, a program to accelerate the development of the
-                  blockchain ecosystem in the region.{" "}
-                  <a href="https://latamlink.io/" target="_blank">
-                    Discover more about LatamLink.
-                  </a>
-                </p>
-              </Grid>
-            </Grid>
-            <Grid container style={{paddingTop:'25px',paddingBottom:'25px'}} spacing={5}>
-                <Grid xs={12} item md={6}>
-                  <Box className="centerBox" style={{height:'100%'}}>
+            <Grid container>
+              <Grid item xs={12} md={6}>
+                <Box className="projectsGridLeft">
+                  <Box className="imgBoxProjects">
                     <img
+                      alt="LatamLink"
                       className="sizeImageTheCompany"
-                      src={useBaseUrl("img/logos/lifebank.svg")}
+                      src={useBaseUrl("img/logos/Group47.svg")}
                     />
                   </Box>
-                </Grid>
-                <Grid xs={12} item md={6}>
-                  <br/>
+                </Box>
+              </Grid>
+              <Grid  item xs={12} md={6}>
+                <Box className="projectsGridRight">
                   <Box className="h3Box">
-                    <h3>Lifebank</h3>
+                    <h3 >LatamLink</h3>
                   </Box>
                   <p>
-                    An open-source blockchain-based app that incentivizes blood
-                    donations by creating a virtuous circle of value between
-                    donors, blood banks, and local businesses, leveraged by a
-                    token economy. Winner of the{" "}
-                    <a
-                      href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
-                      target="_blank"
-                    >
-                      “Coding for Change”
-                    </a>{" "}
-                    challenge by{" "}
-                    <a href="https://block.one/" target="_blank">
-                      block.one.
-                    </a>{" "}
-                    <a href=" https://lifebank.io/" target="_blank">
-                      Find out more about Lifebank.
+                    We are part of this voluntary regional alliance, led by Latin
+                    American technology companies to offer an EOSIO-based testnet to
+                    the <a href="https://www.lacchain.net/" target="_blank"> LACChain</a>{" "} 
+                    initiative, a program to accelerate the development
+                    of the blockchain ecosystem in the region.{" "}
+                    <a href="http://latamlink.io/" target="_blank">
+                      Discover more about LatamLink.
                     </a>
                   </p>
-                </Grid>
+                </Box>
               </Grid>
-              <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingTop:'20px',paddingBottom:'20px'}} container spacing={5}>
-                <Grid xs={12} item md={6}>
-                  <Box className="centerBox" style={{height:'100%'}}>
-                    <img
-                      className="sizeImageTheCompany"
-                      src={useBaseUrl("img/logos/smartgate.svg")}
-                    />
-                  </Box> 
-                </Grid>
-                <Grid xs={12} item md={6}>
-                  <br/>
-                  <Box className="h3Box">
-                    <h3>SMARTGATE</h3>
-                  </Box>
-                  <p>
-                    A blockchain-based platform that provides solutions for in-out
-                    gate activity for the container industry and real-time
-                    transmission of relevant data required for proper interchange
-                    in port logistics. <a href="https://smartgate.tech/" target="_blank">Learn more about SMARTGATE.</a>
-                  </p>
-                  <br/>
-                </Grid>
-              </Grid>
+            <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+              <Box className="projectsGridLeft">
+                <Box className="imgBoxProjects">
+                  <img
+                    alt="Lifebank"
+                    src={useBaseUrl("img/logos/lifebank.svg")}
+                  />
+                </Box>
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+              <Box className="projectsGridRight">
+                <Box className="h3Box">
+                  <h3 >Lifebank</h3>
+                </Box>
+                <p>
+                  An open-source blockchain-based app that incentivizes blood
+                  donations by creating a virtuous circle of value between donors,
+                  blood banks, and local businesses, leveraged by a token economy.
+                  Winner of the “
+                  <a
+                    href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
+                    target="_blank"
+                  >
+                    Coding for Change
+                  </a>{"” "} challenge by {" "}
+                  <a href="https://block.one/" target="_blank">
+                    block.one.
+                  </a>{" "}
+                  <a href="http://lifebank.io/" target="_blank">
+                    Find out more about Lifebank.
+                  </a>
+                </p>
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor:'#ffffff'}} item xs={12} md={6}>
+              <Box className="projectsGridLeft">
+                <Box className="imgBoxProjects">
+                  <img
+                    alt="SMARTGATE"
+                    src={useBaseUrl("img/logos/smartgate.svg")}
+                  />
+                </Box>
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor:'#ffffff'}} item xs={12} md={6}>
+              <Box className="projectsGridRight">
+                <Box className="h3Box">
+                  <h3 >SMARTGATE</h3>
+                </Box>
+                <p>
+                  A blockchain-based platform that provides solutions for in-out gate activity for the container 
+                  industry and real-time transmission of relevant data required for proper interchange in port logistics. 
+                  {" "}
+                  <a href="https://smartgate.tech/" target="_blank">
+                    Learn more about SMARTGATE.
+                  </a>
+                </p>
+              </Box>
+            </Grid>
+          </Grid>
           </Box>
-
         </Box>
       </Box>
     )
   }
 
   return (
-   <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+    > 
       {isDesktop && 
-        <Layout>
-          <MetaTags title={MetaData.title} description={MetaData.description} url={MetaData.url} img={MetaData.img} />
-          <Box className="mainContainer">
-            <Parallax strength={800}>
-              <Background className="bgParallax">
-                  <Box className="imgParallax"/>
-              </Background>
-              <HeroSection />
-              <BlockchainCanDo />
-            </Parallax>
-            <WhatWeDo />
-            <EnterpriseBlockchain />
-            <Inquieres />
-            <Parallax strength={800}>
-            <GetToKnow />
-            <WeAreOneGroup />
-            <Background className="bgParallaxSecondary">
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+            <Background className="bgParallax">
                 <Box className="imgParallax"/>
             </Background>
-            <SomeProjects />
-            </Parallax>
-           <ContactUsBanner />
-          </Box>
-        </Layout>
-      }
-      {isMobile && 
-        <Layout>
-          <MetaTags title={MetaData.title} description={MetaData.description} url={MetaData.url} img={MetaData.img} />
-          <Box className="mainContainer">
             <HeroSection />
             <BlockchainCanDo />
-            <WhatWeDo />
-            <EnterpriseBlockchain />
-            <Inquieres />
-            <GetToKnow />
-            <WeAreOneGroup />
-            <SomeProjects />
-            <ContactUsBanner />
-          </Box>
-        </Layout>
-      } 
-    </>
+          </Parallax>
+          <WhatWeDo />
+          <EnterpriseBlockchain />
+          <Inquieres />
+          <Parallax strength={800}>
+          <GetToKnow />
+          <WeAreOneGroup />
+          <Background className="bgParallaxSecondary">
+              <Box className="imgParallax"/>
+          </Background>
+          <SomeProjects />
+          </Parallax>
+          <ContactUsBanner />
+        </Box>
+      }
+      {isMobile && 
+        <Box className="mainContainer">
+          <HeroSection />
+          <BlockchainCanDo />
+          <WhatWeDo />
+          <EnterpriseBlockchain />
+          <Inquieres />
+          <GetToKnow />
+          <WeAreOneGroup />
+          <SomeProjects />
+          <ContactUsBanner />
+        </Box>
+      }
+    </Layout>
   );
 };
 

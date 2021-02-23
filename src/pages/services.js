@@ -17,6 +17,12 @@ import ContactUsBanner from './components/ContactUsBanner'
 import DevelopmentServices from './SvgComponents/DevelopmentServices'
 import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure'
 
+const MetaData={
+  title:"EOS Costa Rica: Services",
+  description:"EOS Costa Rica leverages the enterprise blockchain protocol EOSIO to develop real-world solutions.",
+  img:"img/metaImgBlack.png",
+}
+
 const strategicLocationAccordion = 
 [
   {
@@ -93,8 +99,8 @@ const solutionBaseAccordionRight =
 ]
 
 const ServicePage = () => {
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
   const [expandedMap, setExpandedMap] = useState('panel_interconnectivity')
   const [expandedSolution, setExpandedSolution] = useState()
   const [expandedEnterprise, setExpandedEnterprise] = useState()
@@ -397,12 +403,12 @@ const ServicePage = () => {
             </Box>
             <p>
               Our datacenter, located in San José, Costa Rica, is
-                strategically located in the middle of the American continent,
-                allowing convenient network interconnectivity. Costa Rica offers
-                high political stability, a long-lasting democracy, high
-                education ranks, and flexible corporate structure – all
-                appropriate for decentralized networks. These are some of the
-                advantages that this country may add to your infrastructure:
+              strategically located in the middle of the American continent,
+              allowing convenient network interconnectivity. Costa Rica offers
+              high political stability, a long-lasting democracy, high
+              education ranks, and flexible corporate structure – all
+              appropriate for decentralized networks. These are some of the
+              advantages that this country may add to your infrastructure:
             </p>
           </Box>
           <Grid container spacing={5}>
@@ -477,11 +483,8 @@ const ServicePage = () => {
                         a web portal that includes learning materials and guides
                         for developers. Check them out {" "}  
                         <a href="https://guide.eoscostarica.io/" target="_blank">
-                            here
-                        </a>. Also, <a href={useBaseUrl("/contact-us/")} target="_blank">
-                            ask us
-                        </a> about
-                        our training courses for companies and teams.
+                        here </a>. Also, <a href={useBaseUrl("/contact-us/")} target="_blank">
+                        ask us </a> about our training courses for companies and teams.
                       </p>
                     </AccordionDetails>
                   </Accordion>
@@ -502,8 +505,7 @@ const ServicePage = () => {
                         speak about blockchain and participate in events related
                         to technology and innovation. Every year, we host a
                         team-building event called <a href="https://eosurf.com/" target="_blank">
-                            EOSurf
-                        </a> that takes our
+                        EOSurf </a> that takes our
                         operations to the beach for several days to switch
                         computers and code for surf and yoga lessons.
                       </p>
@@ -634,37 +636,37 @@ const ServicePage = () => {
   }
 
   return (
-    <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+    > 
       {isDesktop && 
-        <Layout>
-          <Box className="mainContainer">
-            <Parallax strength={800}>
-              <Background className="bgParallax">
-                  <Box className="imgParallax" />
-              </Background>
-              <HeroSection />
-              <BlockchainDev />
-            </Parallax>
-            <BlockchainInfrastructure />
-            <EducationTraining />
-            <IndustryBlockchain />
-            <ContactUsBanner />
-          </Box>
-        </Layout>
-      }
-      {isMobile && 
-        <Layout>
-          <Box className="mainContainer">
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+            <Background className="bgParallax">
+                <Box className="imgParallax" />
+            </Background>
             <HeroSection />
             <BlockchainDev />
-            <BlockchainInfrastructure />
-            <EducationTraining />
-            <IndustryBlockchain />
-            <ContactUsBanner />
-          </Box>
-        </Layout>
+          </Parallax>
+          <BlockchainInfrastructure />
+          <EducationTraining />
+          <IndustryBlockchain />
+          <ContactUsBanner />
+        </Box>
       }
-    </>
+      {isMobile && 
+        <Box className="mainContainer">
+          <HeroSection />
+          <BlockchainDev />
+          <BlockchainInfrastructure />
+          <EducationTraining />
+          <IndustryBlockchain />
+          <ContactUsBanner />
+        </Box>
+      }
+    </Layout>
   );
 };
 
