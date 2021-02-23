@@ -89,12 +89,15 @@ a{
 }
 
 .buttonPrimary{
-  font-family: 'Gotham', sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: Lato, sans-serif;
   font-weight: bold;
+  font-size: 21px;
   width: auto;
   padding: 25px;
   background-color: #5484b3;
-  font-size: 21px;
   color: white;
   border: none;
   border-radius: 0;
@@ -107,15 +110,16 @@ a{
 }
 
 .buttonSecondary{
-  font-family: 'Gotham',Lato, sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: Lato, sans-serif;
   font-weight: bold;
+  font-size: 21px;
   width: auto;
   padding: 25px;
   background-color: transparent;
-  font-size: 21px;
   border-radius: 0;
-  display: flex;
-  justify-content: center;
   border: solid 2px #5484B3;
   color: #5484B3;
   cursor: pointer;
