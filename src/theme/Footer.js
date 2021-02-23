@@ -20,11 +20,11 @@ const Footer = () => {
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
-      return;
+      return
     }
 
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   const SuscribeForm =() => {
     const [email, setEmail] = useState()
@@ -65,7 +65,7 @@ const Footer = () => {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(jsonData)
-        };
+        }
         const response = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/9018734/df605eac-d7d1-44b5-af45-dd93d65d84ee', requestOptions)
         setOpen(true)
       }
@@ -125,7 +125,7 @@ const Footer = () => {
             { isMobile &&
               <SuscribeForm/>
             }
-            <Grid className={isMobile? "mediumPaddingTop": ""} item xs={6} md={2}>
+            <Grid className={isMobile ? "mediumPaddingTop" : ""} item xs={6} md={2}>
               <Box className="specialH3Box">
                 <h3 className="h3Footer">About us</h3>
               </Box>
@@ -180,7 +180,7 @@ const Footer = () => {
                 </Link>
               </p>
             </Grid>
-            <Grid className={isMobile? "mediumPaddingTop": ""} item xs={6} md={2}>
+            <Grid className={isMobile ? "mediumPaddingTop" : ""} item xs={6} md={2}>
               <Box className="specialH3Box">
                 <h3 className="h3Footer">Content for you</h3>
               </Box>
@@ -215,7 +215,7 @@ const Footer = () => {
                 </Link>
               </p>
             </Grid>
-            <Grid className={isMobile? "litlePaddingTop": ""} item xs={12} md={1} ></Grid>
+            <Grid className={isMobile ? "litlePaddingTop" : ""} item xs={12} md={1} ></Grid>
             { isDesktop &&
               <SuscribeForm/>
             }
@@ -314,4 +314,4 @@ const Footer = () => {
   )
 }
 
-export default Footer;
+export default Footer
