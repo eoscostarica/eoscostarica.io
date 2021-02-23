@@ -42,7 +42,7 @@ const Home = () => {
         {isDesktop && 
           <Box className="sectionHero">
           <Box className="titleBox">
-              <h1>Enterprise Blockchain Solutions <br /> That Fit Your Needs</h1>
+            <h1>Enterprise Blockchain Solutions <br /> That Fit Your Needs</h1>
           </Box>
           <p>
             Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.

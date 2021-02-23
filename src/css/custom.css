@@ -638,19 +638,20 @@ input:checked + .slider:before {
   justify-content: center;
   background-color: white;
   overflow-x: hidden;
-  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .footerCopyContent{
-  width: 1280px;
+  width: 1100px;
   display: flex;
 }
 
 .footerContent{
-  width: 1280px;
+  width: 1100px;
   display: flex;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .boxTitle{
@@ -1042,7 +1043,6 @@ input:checked + .slider:before {
   padding-top: 18px
 }
 
-
 .displayLine{
   display: none
 }
@@ -1093,6 +1093,10 @@ input:checked + .slider:before {
   margin-top: -35px
 }
 
+.litleMarginTop {
+  margin-top: 20px;
+}
+
 .specialButton{
   width: 100%;
 }
@@ -1134,8 +1138,11 @@ input:checked + .slider:before {
 }
 
 .footerLogo {
-  width: 290px;
-  height: 75px;
+  width: 100%;
+}
+
+.footerBadge {
+  width: 50%;
 }
 
 .teamPadding{
@@ -1214,10 +1221,20 @@ input:checked + .slider:before {
   margin-right: 9px;
 }
 
+input[type=email], select {
+  width: 70%;
+  padding: 13px;
+  padding-top: 11.5px;
+  margin-right: 5px;
+  display: inline-block;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
 @media only screen and (max-width: 767px) {
   .footerLogo {
-    width: 200px;
-    height: 70px;
+    width: 50%;
   }
   
   .footerLogoBox{
@@ -1226,15 +1243,18 @@ input:checked + .slider:before {
   }
 
   .h3Footer{
-    text-align: center;
+    text-align: start;
+    font-size: 18px;
   }
 
   .body1Footer{
-    text-align: center;
+    text-align: start;
+    font-size: 16px;
   }
 
   .linkFooter{
-    text-align: center;
+    text-align: start;
+    font-size: 16px;
   }
 
   .buttonBox{
@@ -1510,5 +1530,13 @@ input:checked + .slider:before {
   .projectsGridRight{
     padding-top: 50px;
     padding-right: 0;
+  }
+
+  .footerCopyContent{
+    justify-content: center;
+  }
+
+  .marginIconsFooter{
+    margin: 18px;
   }
 }
