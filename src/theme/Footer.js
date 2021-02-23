@@ -78,7 +78,8 @@ const Footer = () => {
         </Box>
         <Box style={{paddingLeft: isMobile ? '25px' : 0, paddingRight: isMobile ? '25px' : 0}}>
           <form onSubmit={onSubmitEmailResults}>
-            <input 
+            <input
+              className="inputFooter"
               type="email"
               id="email"
               name="email"

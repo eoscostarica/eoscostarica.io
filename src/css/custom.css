@@ -1212,7 +1212,7 @@ input:checked + .slider:before {
   overflow: hidden;
 }
 
-.button-glow {
+.button-glow{
   height:'70px';
   width:'150px';
 }
@@ -1230,7 +1230,7 @@ input:checked + .slider:before {
   margin-right: 9px;
 }
 
-input[type=email], select {
+.inputFooter{
   width: 70%;
   padding: 13px;
   padding-top: 11.5px;
