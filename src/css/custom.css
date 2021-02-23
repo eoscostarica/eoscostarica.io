@@ -691,7 +691,6 @@ input:checked + .slider:before {
 }
 
 .containerSec{
-  max-width: var(--ifm-container-width);
   margin: 0 auto;
   display: flex;
   width: 1100px;
@@ -1189,7 +1188,42 @@ input:checked + .slider:before {
   margin: 20px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1279px) {
+  .menuWrapper{
+    width: 960px;
+  }
+
+  .footerContent{
+    width: 960px;
+  }
+
+  .containerSec{
+    width: 960px;
+  }
+
+  .sectionHero{
+    width: 960px;
+  }
+
+  .sectionContact{
+    width: 960px;
+  }
+
+  .section{
+    width: 960px;
+  }
+
+  .sectionNoPadding{
+    width: 960px;
+  }
+
+  .sectionPadding{
+    width: 960px;
+  }
+
+}
+
+@media only screen and (max-width: 960px) {
   .footerLogo {
     width: 300px;
     height: 110px;

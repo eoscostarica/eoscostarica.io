@@ -106,8 +106,8 @@ const EOSCROtherNews = [
 
 const Press = () => {
   const history = useHistory()
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
   const [expandedRelease, setExpandedRelease] = useState(false)
   const [expandedEOSCR, setExpandedEOSCR] = useState(false)
 
