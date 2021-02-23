@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, createRef } from "react"
 import { Parallax, Background } from 'react-parallax'
 import { useMediaQuery } from 'react-responsive'
 import Layout from "@theme/Layout"
@@ -11,8 +11,10 @@ import TwitterIcon from '@material-ui/icons/Twitter'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import useBaseUrl from "@docusaurus/useBaseUrl"
+import { PDFDownloadLink } from '@react-pdf/renderer'
 
 import FormComponent from './components/FormComponent'
+import FormPDF from './components/FormPDF'
 
 const formQuestions = [
     {
@@ -269,8 +271,7 @@ const Form = () => {
                     <Box className="spacingBox">
                         <FormComponent formQuestions={formQuestions} isDesktop={isDesktop} onSubmit={onSubmitForm}/>
                     </Box>
-                    
-                    {resultsSection && <GetResults />}
+                    {resultsSection && <GetResults/>}
                 </Box>
             </Box> 
         )
@@ -324,8 +325,7 @@ const Form = () => {
             };
             const response = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/9444166/77354d92-7a10-46b7-b8a9-8ebac6e78f7f', requestOptions);
             const data = await response.json();
-            console.log(data)
- 
+             
             setThanksMessage(true)
         }
         
@@ -335,7 +335,7 @@ const Form = () => {
                     <h2>Get the results</h2>
                 </Box>
                 {!thanksMessage && 
-                    <form onSubmit={onSubmitEmailResults}>  
+                    /*<form onSubmit={onSubmitEmailResults}>  
                         <Grid container spacing={2}>
                             <Grid item xs={12} md={12}>
                                 <p>You obtained <b>{getFormResults()} points</b>. <br/>Please, enter your email below to send you the results.</p>
@@ -354,9 +354,12 @@ const Form = () => {
                                 <Box className={isMobile ? "centerBox" : ""}>   
                                     <input type="submit" className="buttonPrimary" value="Submit"/>
                                 </Box>
+                                
                             </Grid>
                         </Grid>
-                    </form>
+                    </form>*/
+                    <FormPDF formQuestions={formQuestions}/>
+
                 }
                 {thanksMessage && 
                     <Box>
