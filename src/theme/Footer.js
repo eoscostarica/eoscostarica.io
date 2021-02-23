@@ -1,4 +1,4 @@
-import React, {useState } from "react"
+import React from "react"
 import useBaseUrl from "@docusaurus/useBaseUrl"
 import { useMediaQuery } from 'react-responsive'
 import Box from '@material-ui/core/Box'
@@ -10,99 +10,12 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 import GitHubIcon from '@material-ui/icons/GitHub'
-import Snackbar from '@material-ui/core/Snackbar'
-import Alert from '@material-ui/lab/Alert'
+
+import SuscribeForm from '../pages/components/Subscribe'
 
 const Footer = () => {
   const isMobile = useMediaQuery({query:'(max-width: 767px)'})
   const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
-  const [open, setOpen] = useState(false)
-
-  const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return
-    }
-
-    setOpen(false)
-  }
-
-  const SuscribeForm =() => {
-    const [email, setEmail] = useState()
-    const handleSetEmail = (e) => {
-      setEmail(e.target.value)
-    }
-
-    const onSubmitEmailResults = async (e) => {
-      e.preventDefault()
-
-      if(email){
-        const jsonData = {
-          "fields": [
-            {
-              "name": "email",
-              "value": email
-            } 
-          ],
-          "context": {
-            "pageUri": "https://eoscostarica.io/",
-            "pageName": "EOS Costa Rica"
-          },
-          "legalConsentOptions": {
-            "consent": {
-              "consentToProcess": true,
-              "text": "I agree to allow Example Company to store and process my personal data.",
-              "communications": [
-                {
-                  "value": true,
-                  "subscriptionTypeId": 999,
-                  "text": "I agree to receive marketing communications from Example Company."
-                }
-              ]
-            }
-          }
-        }
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(jsonData)
-        }
-        const response = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/9018734/df605eac-d7d1-44b5-af45-dd93d65d84ee', requestOptions)
-        setOpen(true)
-      }
-    }
-
-    return (
-      <Grid className={isMobile? "mediumPaddingTop": ""} item xs={12} md={4}>
-        <Box className="specialH3Box">
-          <h3 className="h3Footer">Subscribe to our communications </h3>
-        </Box>
-        <Box style={{paddingLeft: isMobile ? '25px' : 0, paddingRight: isMobile ? '25px' : 0}}>
-          <form onSubmit={onSubmitEmailResults}>
-            <input
-              className="inputFooter"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              onChange={handleSetEmail}
-            />
-            <button className="buttonPrimary" style={{padding:'11px', fontSize:'16px', float:'right'}}>Submit</button>
-          </form>
-        </Box>
-        <Box className="litleMarginTop">
-          <p style={{color:'white', fontSize:'14px'}}>
-            EOS Costa Rica respects your privacy. We need the contact information you provide to us to contact you about our services.
-            You may unsubscrie from these communications at any time.
-          </p>
-        </Box>
-        <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
-          <Alert>
-            Thank you for subscribing
-          </Alert>
-        </Snackbar>
-      </Grid>
-    )
-  }
 
   return (
     <Box>
@@ -124,7 +37,9 @@ const Footer = () => {
               </Grid>
             }
             { isMobile &&
-              <SuscribeForm/>
+              <Grid className="mediumPaddingTop" item xs={12} md={4}>
+                <SuscribeForm/>
+              </Grid>
             }
             <Grid className={isMobile ? "mediumPaddingTop" : ""} item xs={6} md={2}>
               <Box className="specialH3Box">
@@ -218,7 +133,9 @@ const Footer = () => {
             </Grid>
             <Grid className={isMobile ? "litlePaddingTop" : ""} item xs={12} md={1} ></Grid>
             { isDesktop &&
-              <SuscribeForm/>
+              <Grid item xs={12} md={4}>
+                <SuscribeForm/>
+              </Grid>
             }
             <Grid style={{marginTop:'50px'}} item xs={12} md={1} ></Grid>
             { isDesktop && 
