@@ -192,20 +192,18 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
                           </Link>
                         }
                         {item.dropDown && 
-                          <Link className="navBarItemTab" href={useBaseUrl(item.path)} style={{textDecoration:'none'}}>
-                            <Box className="menuItem">  
-                                <h5 className={clsx("link",{["linkActive"]: isCurrentPath(item.subPaths)})}>{item.label}</h5>
-                              <Box className={clsx("dropDownMenu",{["dropDownMenuActive"]: isCurrentPath(item.subPaths)})} style={{width:item.markerSize}}>
-                                  {item.subPaths.map((subItem) => (
-                                    <Link className="navBarItemTab" href={useBaseUrl(subItem.path)} target={subItem.target} key={subItem.label} style={{textDecoration:'none'}}>
-                                      <Box>  
-                                        <h5 className={clsx("menuItemDrop",{["menuItemDropActive"]: pathname === subItem.path})} >{subItem.label}</h5>                  
-                                      </Box>
-                                    </Link>
-                                  ))}
-                              </Box>                    
-                            </Box>
-                          </Link>
+                          <Box tabIndex="0" className={clsx("menuItem","navBarItemTab")} >  
+                              <h5 className={clsx("link",{["linkActive"]: isCurrentPath(item.subPaths)})}>{item.label}</h5>
+                            <Box className={clsx("dropDownMenu",{["dropDownMenuActive"]: isCurrentPath(item.subPaths)})} style={{width:item.markerSize}}>
+                                {item.subPaths.map((subItem) => (
+                                  <Link className="navBarItemTab" href={useBaseUrl(subItem.path)} target={subItem.target} key={subItem.label} style={{textDecoration:'none'}}>
+                                    <Box>  
+                                      <h5 className={clsx("menuItemDrop",{["menuItemDropActive"]: pathname === subItem.path})} >{subItem.label}</h5>                  
+                                    </Box>
+                                  </Link>
+                                ))}
+                            </Box>                    
+                          </Box>
                         }
                       </Box>
                     ))}
