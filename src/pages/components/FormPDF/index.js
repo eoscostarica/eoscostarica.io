@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from 'prop-types'
-import {Page } from '@react-pdf/renderer'
+import { saveAs } from 'file-saver'
+import {PDFViewer , Page, Font, Text,Image, View, Document, StyleSheet,pdf } from '@react-pdf/renderer'
 import useBaseUrl from "@docusaurus/useBaseUrl"
-/*
+
 const styles = StyleSheet.create({
     page: {
       backgroundColor: 'white',
@@ -55,9 +56,9 @@ const styles = StyleSheet.create({
         marginBottom: '15px'
     }
   })
-*/
+
 const FormPDF = ( {formQuestions} ) => {
-    /*
+
     const registerFont = () => {
         Font.register('https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wXg.woff2', {
             family: 'Lato',
@@ -108,17 +109,17 @@ const FormPDF = ( {formQuestions} ) => {
         //registerFont();
     }, []);
 
-    */
-
-    const generatePdfDocument = async () => {
-        /*const blob = await pdf((<MyDoc />)).toBlob();
-        saveAs(blob, "prueba");*/
+    const generatePdfDocument = async (documentData) => {
+        const blob = await pdf((<MyDoc />)).toBlob();
+        saveAs(blob, "prueba");
     };
-    
 
     return (
         <div>
             <button onClick={generatePdfDocument}>descargar</button>
+            <PDFViewer style={{width:'100%',height:'1000px'}}>
+                <MyDoc />
+            </PDFViewer>
         </div>
         
     )

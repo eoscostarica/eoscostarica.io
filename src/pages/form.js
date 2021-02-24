@@ -11,6 +11,7 @@ import TwitterIcon from '@material-ui/icons/Twitter'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import useBaseUrl from "@docusaurus/useBaseUrl"
+import { PDFDownloadLink } from '@react-pdf/renderer'
 
 import FormComponent from './components/FormComponent'
 import FormPDF from './components/FormPDF'
@@ -242,7 +243,7 @@ const Form = () => {
     }
 
     const QuestionsSection = () => {
-        const [resultsSection, setResultsSection] = useState(false)
+        const [resultsSection, setResultsSection] = useState(true)
 
         const onSubmitForm = () => {
             setResultsSection(true)
@@ -334,7 +335,7 @@ const Form = () => {
                     <h2>Get the results</h2>
                 </Box>
                 {!thanksMessage && 
-                    <form onSubmit={onSubmitEmailResults}>  
+                    /*<form onSubmit={onSubmitEmailResults}>  
                         <Grid container spacing={2}>
                             <Grid item xs={12} md={12}>
                                 <p>You obtained <b>{getFormResults()} points</b>. <br/>Please, enter your email below to send you the results.</p>
@@ -356,8 +357,9 @@ const Form = () => {
                                 
                             </Grid>
                         </Grid>
-                    </form>
-                    /*<FormPDF formQuestions={formQuestions}/>*/
+                    </form>*/
+                    <FormPDF formQuestions={formQuestions}/>
+
                 }
                 {thanksMessage && 
                     <Box>
