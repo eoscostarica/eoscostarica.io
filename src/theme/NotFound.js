@@ -5,8 +5,8 @@ import Layout from "@theme/Layout"
 import Box from '@material-ui/core/Box'
 
 function NotFound() {
-  const isMobile = useMediaQuery( {query:'(max-width: 767px)'} )
-  const isDesktop = useMediaQuery( {query:'(min-width: 767px)'} )
+  const isMobile = useMediaQuery( {query:'(max-width: 1100px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 1100px)'} )
 
   return (
     <Layout>

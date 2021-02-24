@@ -89,12 +89,15 @@ a{
 }
 
 .buttonPrimary{
-  font-family: 'Gotham', sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: Lato, sans-serif;
   font-weight: bold;
+  font-size: 21px;
   width: auto;
   padding: 25px;
   background-color: #5484b3;
-  font-size: 21px;
   color: white;
   border: none;
   border-radius: 0;
@@ -107,15 +110,16 @@ a{
 }
 
 .buttonSecondary{
-  font-family: 'Gotham',Lato, sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: Lato, sans-serif;
   font-weight: bold;
+  font-size: 21px;
   width: auto;
   padding: 25px;
   background-color: transparent;
-  font-size: 21px;
   border-radius: 0;
-  display: flex;
-  justify-content: center;
   border: solid 2px #5484B3;
   color: #5484B3;
   cursor: pointer;
@@ -687,7 +691,6 @@ input:checked + .slider:before {
 }
 
 .containerSec{
-  max-width: var(--ifm-container-width);
   margin: 0 auto;
   display: flex;
   width: 1100px;
@@ -833,10 +836,16 @@ input:checked + .slider:before {
   box-shadow: none;
 }
 
-.MuiAccordion-root::before{
-  background-color: #f1f1f1;
+.MuiAccordion-root + .MuiAccordion-root::before{
   margin: 0;
   padding: 0;
+  opacity: 0;
+}
+
+.MuiAccordion-root + .MuiAccordion-root{
+  margin: 0;
+  padding: 0;
+  border-top: solid 1px #E0E0E0;
 }
 
 .imgBox{
@@ -1179,7 +1188,42 @@ input:checked + .slider:before {
   margin: 20px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1279px) {
+  .menuWrapper{
+    width: 960px;
+  }
+
+  .footerContent{
+    width: 960px;
+  }
+
+  .containerSec{
+    width: 960px;
+  }
+
+  .sectionHero{
+    width: 960px;
+  }
+
+  .sectionContact{
+    width: 960px;
+  }
+
+  .section{
+    width: 960px;
+  }
+
+  .sectionNoPadding{
+    width: 960px;
+  }
+
+  .sectionPadding{
+    width: 960px;
+  }
+
+}
+
+@media only screen and (max-width: 960px) {
   .footerLogo {
     width: 300px;
     height: 110px;

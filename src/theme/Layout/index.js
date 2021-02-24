@@ -21,8 +21,8 @@ function Layout(props) {
     noFooter,
     wrapperClassName
   } = props
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'}) 
   useKeyboardNavigation()
   return <LayoutProviders>
       <LayoutHead {...props} />
