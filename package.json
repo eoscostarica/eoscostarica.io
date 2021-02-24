@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.12.1"
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "all-contributors-cli": "^6.19.0"
   }
 }
