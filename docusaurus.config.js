@@ -26,8 +26,8 @@ module.exports = {
       },
     ],
   ],
-
   themeConfig: {
+    image:"img/metaImgBlack.png",
     footer: {},
     googleAnalytics: {
       trackingID: "UA-173987-66",
