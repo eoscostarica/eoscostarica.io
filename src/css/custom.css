@@ -1204,7 +1204,6 @@ input:checked + .slider:before {
   margin-right: 50px;
 }
 
-@media only screen and (max-width: 767px) {
 .imgcard {
   display: block;
   width: 150px;
