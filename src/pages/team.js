@@ -198,7 +198,7 @@ const DevelopTeam = [
         img:"",
         name:"Victor Julio Madrigal",
         position:"Web Developer",
-        bio:"",
+        bio:"What I like the most is to develop innovative projects that move forward with the newest technologies.",
         linkedIn:"",
         twitter:"",
         color:"#f8f8f8"

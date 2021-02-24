@@ -1,5 +1,4 @@
 import React from "react"
-import { useHistory } from 'react-router-dom'
 import { Parallax, Background } from 'react-parallax'
 import clsx from "clsx"
 import Grid from '@material-ui/core/Grid'
@@ -84,13 +83,8 @@ const ProjectsList = [
 ]
 
 const OurProjects = () => {
-<<<<<<< HEAD
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
-=======
   const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
   const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
->>>>>>> f2d902ca2bbf87ae15f72469a247d9d6276ce03f
 
   const HeroSection = () => {
     return (

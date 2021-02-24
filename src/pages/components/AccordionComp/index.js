@@ -17,7 +17,7 @@ const AccordionComp = ( {data, handleChange, expanded, bgColor} ) => {
           onChange={handleChange(item.target)}
           className="accordion">
           <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-          <h4 style={{margin:'2px', padding: 0}}>{item.title}</h4>
+            <h4 style={{margin:'2px', padding: 0}}>{item.title}</h4>
           </AccordionSummary>
           <AccordionDetails style={{padding:1, marginTop:'-15px'}}>
           <p style={{padding: 0}}>
