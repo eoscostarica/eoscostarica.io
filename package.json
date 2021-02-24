@@ -21,6 +21,7 @@
     "file-saver": "^2.0.5",
     "jquery": "^3.5.1",
     "lottie-ios": "3.1.8",
+    "meteor-node-stubs": "^1.0.1",
     "react": "^16.14.0",
     "react-alice-carousel": "^2.2.1",
     "react-dom": "^17.0.1",
