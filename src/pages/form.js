@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createRef } from "react"
+import React, { useState } from "react"
 import { Parallax, Background } from 'react-parallax'
 import { useMediaQuery } from 'react-responsive'
 import Layout from "@theme/Layout"
@@ -11,7 +11,6 @@ import TwitterIcon from '@material-ui/icons/Twitter'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import useBaseUrl from "@docusaurus/useBaseUrl"
-import { PDFDownloadLink } from '@react-pdf/renderer'
 
 import FormComponent from './components/FormComponent'
 import FormPDF from './components/FormPDF'
@@ -170,8 +169,8 @@ const formQuestions = [
 ]
 
 const Form = () => {
-    const isMobile = useMediaQuery( {query:'(max-width: 767px)'} )
-    const isDesktop = useMediaQuery( {query:'(min-width: 767px)'} )
+    const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+    const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
     
     const getFormResults = () => {
         let res = 0
@@ -243,11 +242,10 @@ const Form = () => {
     }
 
     const QuestionsSection = () => {
-        const [resultsSection, setResultsSection] = useState(true)
+        const [resultsSection, setResultsSection] = useState(false)
 
         const onSubmitForm = () => {
             setResultsSection(true)
-            console.log("he obtenido una puntucacion de: ", getFormResults())
         }
 
         return(
@@ -279,15 +277,33 @@ const Form = () => {
 
     const GetResults = () => {
         const [email, setEmail] = useState()
+        const [companyName, setCompanyName] = useState()
+        const [companyIndustry, setCompanyIndustry] = useState("")
         const [thanksMessage, setThanksMessage] = useState(false)
+        const [formError, setFormError] = useState(false)
         
         const handleEmailChange = (e) => {
             setEmail(e.target.value)
+            setFormError(false)
+        }
+
+        const handleCompanyChange = (e) => {
+            setCompanyName(e.target.value)
+            setFormError(false)
+        }
+
+        const validateEmail = (mail) => {
+            const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+            return regex.test(mail)
         }
 
         const  onSubmitEmailResults = async (e) => {
             e.preventDefault()
+            if(validateEmail(email)) sendData()
+            else setFormError(true)
+        }
 
+        const sendData = async (e) => {
             const jsonData = {
                 "fields": [
                   {
@@ -296,12 +312,12 @@ const Form = () => {
                   },
                   {
                     "name": "blockchainpoints",
-                    "value": "email"
+                    "value": 25
                   }
                 ],
                 "context": {
-                  "pageUri": "www.example.com/page",
-                  "pageName": "Example page"
+                  "pageUri": "https://eoscostarica.io/do-you-need-blockchain",
+                  "pageName": "Do you need blockchain?"
                 },
                 "legalConsentOptions": {
                   "consent": {
@@ -324,7 +340,6 @@ const Form = () => {
                 body: JSON.stringify(jsonData)
             };
             const response = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/9444166/77354d92-7a10-46b7-b8a9-8ebac6e78f7f', requestOptions);
-            const data = await response.json();
              
             setThanksMessage(true)
         }
@@ -335,44 +350,70 @@ const Form = () => {
                     <h2>Get the results</h2>
                 </Box>
                 {!thanksMessage && 
-                    /*<form onSubmit={onSubmitEmailResults}>  
+                    <form onSubmit={onSubmitEmailResults} noValidate>  
+                        <Box className="spacingBox">
+                            <p>Receive a PDF of your responses and the final results directly into your email. Provide your email address and company name to get a personalized document. </p>
+                            <br/>
+                            <p>
+                                We respect your privacy. We will not share any contact information and will only use it to contact you about our services. You may unsubscribe from these communications at any time.
+                            </p>
+                        </Box>
                         <Grid container spacing={2}>
-                            <Grid item xs={12} md={12}>
-                                <p>You obtained <b>{getFormResults()} points</b>. <br/>Please, enter your email below to send you the results.</p>
-                            </Grid>
                             <Grid item xs={12} md={6}>
+                                <label htmlFor="email">Email</label>
                                 <input 
+                                    id="email"
                                     type="email" 
-                                    className="inputMail" 
+                                    className="inputForm" 
                                     value={email} 
                                     onChange={handleEmailChange} 
-                                    placeholder="Email" 
                                     required 
                                 />
                             </Grid>
+                            <Grid item xs={12} md={6}>
+                                <label htmlFor="company">Company name</label>
+                                <input 
+                                    id="company"
+                                    type="text" 
+                                    className="inputForm" 
+                                    value={companyName} 
+                                    onChange={handleCompanyChange} 
+                                    required 
+                                />
+                            </Grid>
+                            {formError && 
+                                <Grid item xs={12} md={12}>
+                                    <p style={{color:'red'}}>Invalid email, please check fields and try again</p>
+                                </Grid>
+                            }
                             <Grid item xs={12} md={2}>
                                 <Box className={isMobile ? "centerBox" : ""}>   
-                                    <input type="submit" className="buttonPrimary" value="Submit"/>
+                                    <input type="submit" className="buttonPrimary" value="Submit" 
+                                    disabled={
+                                        !email ||
+                                        !companyName ||
+                                        !validateEmail(email)
+                                    }/>
                                 </Box>
-                                
                             </Grid>
                         </Grid>
-                    </form>*/
-                    <FormPDF 
-                        formQuestions={formQuestions} 
-                        blockchainPoints={20}
-                        companyName="EOS Costa Rica"
-                        companyIndustry="Technologhy"
-                        companyEmail="contact@eosio.cr"
-                        twitterImage={useBaseUrl("img/icons/TwitterIcon.png")}
-                        linkedinImage={useBaseUrl("img/icons/LinkedInIcon.png")}
-                    />
-
+                    </form>
                 }
                 {thanksMessage && 
                     <Box>
-                        <p>Thanks for use this tool, check your inbox for more details.</p>
-                        <p>If you have any questions regarding EOSIO and blockchain, please <a href="/contact-us">contact us</a> or go to our <a href="/blog">blog</a>!</p>
+                        <Box className="spacingBox">
+                            <p>Thanks for use this tool, download file for more details.</p>
+                            <p>If you have any questions regarding EOSIO and blockchain, please <a href="/contact-us">contact us</a> or go to our <a href="/blog">blog</a>!</p>
+                        </Box>            
+                        <FormPDF 
+                            formQuestions={formQuestions} 
+                            blockchainPoints={getFormResults()}
+                            companyName={companyName}
+                            companyIndustry={companyIndustry}
+                            companyEmail={email}
+                            twitterImage={useBaseUrl("img/icons/TwitterIcon.png")}
+                            linkedinImage={useBaseUrl("img/icons/LinkedInIcon.png")}
+                        />   
                     </Box>
                 }
             </Box>

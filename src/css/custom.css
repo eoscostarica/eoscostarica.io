@@ -76,6 +76,17 @@ p{
   margin-bottom: 0;
 }
 
+label{
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 19px;
+  letter-spacing: -0.05px;
+  line-height: 25px;
+  text-align: justify;
+}
+
 a{
   color: #0091FF;
 }
@@ -132,13 +143,12 @@ a{
   transition: all .5s ease;
 }
 
-.inputMail{
-  font-family: 'Gotham',Lato, sans-serif;
-  padding: 25px;
+.inputForm{
+  font-family: Lato, sans-serif;
+  padding: 15px;
   font-size: 19px;
   border: solid 1px gray;
   width: 100%;
-  margin-right: 20px;
 }
 
 .gridButton{
@@ -1449,6 +1459,13 @@ input:checked + .slider:before {
     padding-right: 25px;
   }
 
+  label{
+    line-height: 18px;
+    font-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
   /*blog*/
   .blog-wrapper{
     margin-top: 50px;
@@ -1609,13 +1626,13 @@ input:checked + .slider:before {
     margin-right: 0;
   }
 
-  .inputMail{
-    font-family: 'Gotham',Lato, sans-serif;
-    padding: 25px;
+  .inputForm{
+    font-family: Lato, sans-serif;
     font-size: 19px;
     border: solid 1px gray;
     width: 85%;
-    margin: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
 }
