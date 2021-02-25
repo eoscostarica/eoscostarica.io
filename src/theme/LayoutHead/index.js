@@ -80,7 +80,7 @@ export default function LayoutHead(props) {
               "url": "https://eoscostarica.io/",
               "telephone": "+506 2256-3944",
               "email": "contact@eosio.cr",
-              "foundingDate": "01-01-2018",
+              "foundingDate": "22-05-2018",
               "founders": [
                 {
                   "@type": "Person",
