@@ -358,7 +358,15 @@ const Form = () => {
                             </Grid>
                         </Grid>
                     </form>*/
-                    <FormPDF formQuestions={formQuestions}/>
+                    <FormPDF 
+                        formQuestions={formQuestions} 
+                        blockchainPoints={20}
+                        companyName="EOS Costa Rica"
+                        companyIndustry="Technologhy"
+                        companyEmail="contact@eosio.cr"
+                        twitterImage={useBaseUrl("img/icons/TwitterIcon.png")}
+                        linkedinImage={useBaseUrl("img/icons/LinkedInIcon.png")}
+                    />
 
                 }
                 {thanksMessage && 
