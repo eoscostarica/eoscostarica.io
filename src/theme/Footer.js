@@ -22,13 +22,13 @@ const Footer = () => {
       <Box className="footer">
         <Box className="footerContent">
           <Grid container>
-            { isMobile && 
+            { isMobile &&
               <Grid item xs={12} md={2}>
                 <Box className="footerLogoBox">
-                  <img 
-                    src={useBaseUrl("img/logos/logo-square.svg")} 
+                  <img
+                    src={useBaseUrl("img/logos/logo-square.svg")}
                     alt="EOS CR LOGO" 
-                    className="footerLogo" 
+                    className="footerLogo"
                   />
                 </Box>
                 <p style={{textAlign:'center', marginLeft:'84px', fontSize:'14px', marginTop:'10px', color:'#ffffff'}}>
@@ -45,48 +45,48 @@ const Footer = () => {
               <Box className="specialH3Box">
                 <h3 className="h3Footer">About us</h3>
               </Box>
-              <p className="body1Footer" > 
-                <Link 
+              <p className="body1Footer">
+                <Link
                   className="linkFooter"
                   href="https://www.linkedin.com/company/eoscostarica/"
                   target="_blank"
                   style={{color:'white'}}
-                > 
+                >
                   Services
                 </Link>
               </p>
-              <p className="body1Footer"> 
-                <Link 
+              <p className="body1Footer">
+                <Link
                   className="linkFooter"
                   href="https://twitter.com/EOSCostaRica"
                   target="_blank"
                   style={{color:'white'}}
-                > 
+                >
                   The company
                 </Link>
               </p>
-              <p className="body1Footer"> 
-                <Link 
+              <p className="body1Footer">
+                <Link
                   className="linkFooter"
                   href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ"
                   target="_blank"
                   style={{color:'white'}}
-                > 
+                >
                   Team
                 </Link>
               </p>
-              <p className="body1Footer"> 
-                <Link 
+              <p className="body1Footer">
+                <Link
                   className="linkFooter"
                   href="https://www.facebook.com/costaricaeos"
                   target="_blank"
                   style={{color:'white'}}
-                > 
+                >
                   Projects
                 </Link>
               </p>
-              <p  className="body1Footer"> 
-                <Link 
+              <p  className="body1Footer">
+                <Link
                   className="linkFooter"
                   href="https://t.me/eoscr"
                   target="_blank"
@@ -100,51 +100,51 @@ const Footer = () => {
               <Box className="specialH3Box">
                 <h3 className="h3Footer">Content for you</h3>
               </Box>
-              <p className="body1Footer"> 
-                <Link 
+              <p className="body1Footer">
+                <Link
                   className="linkFooter"
                   href="https://t.me/eoscr"
                   target="_blank"
                   style={{color:'white'}}
-                > 
+                >
                   Learning
                 </Link>
               </p>
-              <p  className="body1Footer"> 
-                <Link 
+              <p  className="body1Footer">
+                <Link
                   className="linkFooter"
                   href="https://t.me/eoscr"
                   target="_blank"
                   style={{color:'white'}}
-                > 
+                >
                   Blog
                 </Link>
               </p>
-              <p  className="body1Footer"> 
-                <Link 
+              <p  className="body1Footer">
+                <Link
                   className="linkFooter"
                   href="https://t.me/eoscr"
                   target="_blank"
                   style={{color:'white'}}
-                > 
+                >
                   Press
                 </Link>
               </p>
             </Grid>
-            <Grid className={isMobile ? "litlePaddingTop" : ""} item xs={12} md={1} ></Grid>
+            <Grid className={isMobile ? "litlePaddingTop" : ""} item xs={12} md={1}/>
             { isDesktop &&
               <Grid item xs={12} md={4}>
                 <SuscribeForm/>
               </Grid>
             }
             <Grid style={{marginTop:'50px'}} item xs={12} md={1} ></Grid>
-            { isDesktop && 
+            { isDesktop &&
               <Grid item md={2}>
                 <Box className="centerBox">
-                  <img 
-                    src={useBaseUrl("img/logos/logo-square.svg")} 
-                    alt="EOS CR LOGO" 
-                    className="footerLogo" 
+                  <img
+                    src={useBaseUrl("img/logos/logo-square.svg")}
+                    alt="EOS CR LOGO"
+                    className="footerLogo"
                   />
                 </Box>
                 <p style={{textAlign:'end', fontSize:'14px', marginTop:'10px', color:'#ffffff'}}>
@@ -168,12 +168,12 @@ const Footer = () => {
                     <TwitterIcon 
                       style={{
                         width: isDesktop ? '35px' : '45px',
-                        height: isDesktop ? '35px' : '45px', 
+                        height: isDesktop ? '35px' : '45px',
                         cursor:'pointer', color:'#ffffff'
                       }}/>
                   </a>
-                  <a className={clsx("marginIconsFooter","socialMediaAnimation")} href="https://t.me/eoscr" target="_blank">
-                    <LinkedInIcon 
+                  <a className={clsx("marginIconsFooter","socialMediaAnimation")} href="https://www.linkedin.com/company/eoscostarica/mycompany/" target="_blank">
+                    <LinkedInIcon
                       style={{
                         width: isDesktop ? '35px' : '45px',
                         height: isDesktop ? '35px' : '45px',
