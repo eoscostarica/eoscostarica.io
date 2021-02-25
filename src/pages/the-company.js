@@ -152,20 +152,20 @@ const TheCompany = () => {
                   <h2>What Can We Do for You?</h2>
                 </Box>
                 <p>
-                  • We can co-ideate and develop the ideal solution 
+                  We can co-ideate and develop the ideal solution 
                   that integrates blockchain technology into your 
                   operations following an agile and lean approach 
                   that will help you explore blockchain’s features 
                   within a restricted budget and schedule.
                   <br/>
                   <br/>
-                  • We provide top-notch, ready-to-use blockchain 
+                  We provide top-notch, ready-to-use blockchain 
                   infrastructures. Also, we configure, host, 
                   and maintain blockchain nodes and networks that 
                   can meet your organization’s requirements and needs.
                   <br/>
                   <br/>
-                  • We offer workshops to C-suite executives and teams. 
+                  We offer workshops to C-suite executives and teams. 
                   We also provide training for new talents and promote 
                   the region’s blockchain ecosystem by participating 
                   in events, seminars, and conferences.
