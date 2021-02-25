@@ -1,10 +1,9 @@
 const webpack = require('webpack')
 
-module.exports = function (context, options) {
+module.exports = function () {
     return {
       name: 'custom-docusaurus-plugin',
       configureWebpack(config, isServer, utils) {
-        const {getCacheLoader} = utils;
         return {
           module: {
             rules: [

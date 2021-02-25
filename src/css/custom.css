@@ -1196,7 +1196,7 @@ input:checked + .slider:before {
 }
 
 .itemQuestion{
-  text-indent: -46px; 
+  text-indent: -46px;
   padding-left: 46px;
 }
 
@@ -1601,7 +1601,7 @@ input:checked + .slider:before {
   }
 
   .itemQuestion{
-    text-indent: 0; 
+    text-indent: 0;
     padding-left: 25px;
   }
 
