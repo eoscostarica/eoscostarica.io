@@ -65,59 +65,43 @@ export default function LayoutHead(props) {
           <script type="application/ld+json">
             {`{
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "image": [
-                "https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/metaImgBlack.png"
-               ],
-              "name": "EOS Costa Rica",
+              "@type": "Organization",
+              "logo": "https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/logos/eoscr-logo.png",
+              "image": "https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/metaImgBlack.png",
+              "legalName": "EOS Costa Rica",
+              "description": "EOS Costa Rica develops blockchain-based enterprise solutions by deploying the EOSIO protocol to solve real-world problems",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "148 W 51st St",
-                "addressLocality": "Costa Rica",
-                "addressRegion": "NY",
-                "postalCode": "10019",
-                "addressCountry": "CR"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 40.761293,
-                "longitude": -73.982294
+                "addressLocality": "San Jose, Costa Rica",
+                "addressCountry": "CR",
+                "postalCode": "11801",
+                "streetAddress": "Real Cariari Autopista General Cañas, Cruce de San Antonio de Belén San José, SJ 40104"
               },
               "url": "https://eoscostarica.io/",
-              "telephone": "+12122459600",
-              "priceRange": "$$$",
-              "openingHoursSpecification": [
+              "telephone": "+506 2256-3944",
+              "email": "contact@eosio.cr",
+              "foundingDate": "01-01-2018",
+              "founders": [
                 {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": [
-                    "Monday",
-                    "Tuesday"
-                  ],
-                  "opens": "11:30",
-                  "closes": "22:00"
+                  "@type": "Person",
+                  "name": "Xavier Fernández",
+                  "sameAs": "https://www.linkedin.com/in/xaviercr/"
                 },
                 {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": [
-                    "Wednesday",
-                    "Thursday",
-                    "Friday"
-                  ],
-                  "opens": "11:30",
-                  "closes": "23:00"
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": "Saturday",
-                  "opens": "16:00",
-                  "closes": "23:00"
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": "Sunday",
-                  "opens": "16:00",
-                  "closes": "22:00"
+                  "@type": "Person",
+                  "name": "Edgar Fernández",
+                  "sameAs": "https://www.linkedin.com/in/edgarafernandez/"
                 }
+              ],
+              "sameAs": [
+                "https://www.linkedin.com/company/eoscostarica/mycompany/",
+                "https://twitter.com/EOSCostaRica",
+                "https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ",
+                "https://www.facebook.com/costaricaeos",
+                "https://t.me/eoscr",
+                "https://github.com/eoscostarica",
+                "https://eoscostarica.medium.com/",
+                "https://www.instagram.com/eoscostarica/"
               ]
             }`}
           </script>
