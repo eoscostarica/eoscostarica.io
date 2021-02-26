@@ -10,6 +10,8 @@ import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
+
+import Divider from '@material-ui/core/Divider'
 import { useLocation } from 'react-router-dom'
 
 const PATHS = [
@@ -133,24 +135,48 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
             <Drawer anchor={'right'} open={isOpen} onClose={handlerDrawer} >
               <Box className="drawerContent">
                 <List>
-                  {PATHS.map((item) => (
-                    <Box  key={item.label}>
-                      {item.dropDown && 
-                        <>
-                          {item.subPaths.map((subItem) => (
-                            <Link href={useBaseUrl(subItem.path)} target={subItem.target} key={subItem.label} style={{textDecoration: 'none'}}>
+                  <Link href={useBaseUrl(PATHS[0].path)} target={PATHS[0].target} style={{textDecoration: 'none'}}>
+                    <ListItem button>
+                      <span className="linkItem">Home</span>
+                      </ListItem>
+                  </Link>
+                  <Divider />
+                  <Box className="linkGruopBox">
+                      <Box style={{marginBottom:'10px'}}>
+                        <span className="linkGruopLabel">About us</span>
+                      </Box>
+                      {PATHS[1].subPaths.map((subItem) => (
+                        <Box key={subItem.label}>
+                          {subItem.label!="Press" &&
+                            <Link href={useBaseUrl(subItem.path)} target={subItem.target}  style={{textDecoration: 'none'}}>
                               <ListItem button><span className="linkItem">{subItem.label}</span></ListItem>
-                          </Link>
-                          ))}
-                        </>
-                      }
-                      {!item.dropDown && 
-                        <Link href={useBaseUrl(item.path)} target={item.target} style={{textDecoration: 'none'}}>
-                            <ListItem button><span className="linkItem">{item.label}</span></ListItem>
-                        </Link>
-                      } 
+                            </Link>
+                          }
+                        </Box>
+                      ))}
+                      <Link href={useBaseUrl(PATHS[2].path)} target={PATHS[2].target} style={{textDecoration: 'none'}}>
+                        <ListItem button><span className="linkItem">{PATHS[2].label}</span></ListItem>
+                      </Link>
+                  </Box>
+                  <Divider />
+                  <Box className="linkGruopBox">
+                    <Box style={{marginBottom:'10px'}}>
+                      <span className="linkGruopLabel">Content for you</span>
                     </Box>
-                  ))}
+                    <Link href={useBaseUrl(PATHS[3].path)} target={PATHS[3].target} style={{textDecoration: 'none'}}>
+                        <ListItem button><span className="linkItem">{PATHS[3].label}</span></ListItem>
+                    </Link>
+                    <Link href={useBaseUrl(PATHS[4].path)} target={PATHS[4].target} style={{textDecoration: 'none'}}>
+                        <ListItem button><span className="linkItem">{PATHS[4].label}</span></ListItem>
+                    </Link>
+                    <Link href={useBaseUrl(PATHS[1].subPaths[5].path)} target={PATHS[1].subPaths[5].target} style={{textDecoration: 'none'}}>
+                        <ListItem button><span className="linkItem">{PATHS[1].subPaths[5].label}</span></ListItem>
+                    </Link>
+                  </Box>
+                  <Divider />
+                  <Link href={useBaseUrl(PATHS[5].path)} target={PATHS[5].target} style={{textDecoration: 'none'}}>
+                        <ListItem button><span className="linkItem">{PATHS[5].label}</span></ListItem>
+                    </Link>
                 </List>
               </Box>
             </Drawer>
