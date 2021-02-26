@@ -429,7 +429,7 @@ const BlockProducer = () => {
                   </a>
                 </Box>
               </Grid>
-            </Grid>       
+            </Grid> 
           </Box>
         </Box>
       </Box>
