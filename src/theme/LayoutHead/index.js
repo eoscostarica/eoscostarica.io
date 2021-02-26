@@ -8,6 +8,7 @@ import React from 'react';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import { JSONLD, Generic, GenericCollection } from 'react-structured-data'
 export default function LayoutHead(props) {
   const {
     siteConfig,
@@ -61,51 +62,100 @@ export default function LayoutHead(props) {
         {metadatas.map((metadata, i) => <meta key={`metadata_${i}`} {...metadata} />)}
       </Head>
       <html>
-        <head>
-          <script type="application/ld+json">
-            {`{
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "logo": "https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/logos/eoscr-logo.png",
-              "image": "https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/metaImgBlack.png",
-              "legalName": "EOS Costa Rica",
-              "description": "EOS Costa Rica develops blockchain-based enterprise solutions by deploying the EOSIO protocol to solve real-world problems",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "San Jose, Costa Rica",
-                "addressCountry": "CR",
-                "postalCode": "11801",
-                "streetAddress": "Real Cariari Autopista General Cañas, Cruce de San Antonio de Belén San José, SJ 40104"
-              },
-              "url": "https://eoscostarica.io/",
-              "telephone": "+506 2256-3944",
-              "email": "contact@eosio.cr",
-              "foundingDate": "22-05-2018",
-              "founders": [
-                {
-                  "@type": "Person",
-                  "name": "Xavier Fernández",
-                  "sameAs": "https://www.linkedin.com/in/xaviercr/"
-                },
-                {
-                  "@type": "Person",
-                  "name": "Edgar Fernández",
-                  "sameAs": "https://www.linkedin.com/in/edgarafernandez/"
-                }
-              ],
-              "sameAs": [
-                "https://www.linkedin.com/company/eoscostarica/mycompany/",
-                "https://twitter.com/EOSCostaRica",
-                "https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ",
-                "https://www.facebook.com/costaricaeos",
-                "https://t.me/eoscr",
-                "https://github.com/eoscostarica",
-                "https://eoscostarica.medium.com/",
-                "https://www.instagram.com/eoscostarica/"
-              ]
-            }`}
-          </script>
-        </head>
+        <JSONLD>
+          <Generic
+            type="Organization"
+            jsonldtype="Organization"
+            schema={{
+              legalName: "EOS Costa Rica",
+              logo: "https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/logos/eoscr-logo.png",
+              email: "contact@eosio.cr",
+              image: "https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/metaImgBlack.png",
+              url: "https://eoscostarica.io/",
+              telephone: "+506 2256-3944",
+              description: "EOS Costa Rica develops blockchain-based enterprise solutions by deploying the EOSIO protocol to solve real-world problems",
+              foundingDate: "22-05-2018",
+
+            }}
+          >
+            <Generic
+              type="address"
+              jsonldtype="PostalAddress"
+              schema={{
+                  addressLocality: "San Jose, Costa Rica",
+                  addressCountry: "CR",
+                  postalCode: "11801",
+                  streetAddress: "Real Cariari Autopista General Cañas, Cruce de San Antonio de Belén San José, SJ 40104"
+              }}
+            />
+            <GenericCollection type="founders">
+              <Generic
+                jsonldtype="Person"
+                schema={{
+                  name: "Edgar Fernández",
+                  sameAs: "https://www.linkedin.com/in/edgarafernandez/"
+                }}
+              />
+              <Generic
+                jsonldtype="Person"
+                schema={{
+                  name: "Xavier Fernández",
+                  sameAs: "https://www.linkedin.com/in/xaviercr/"
+                }}
+                />
+            </GenericCollection >
+            <GenericCollection type="sameAs">
+              <Generic
+                jsonldtype="sameAs"
+                schema={{
+                  url: "https://www.linkedin.com/company/eoscostarica/mycompany/"
+                }}
+              />
+              <Generic
+                jsonldtype="sameAs"
+                schema={{
+                  url: "https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ"
+                }}
+              />
+              <Generic
+                jsonldtype="sameAs"
+                schema={{
+                  url: "https://twitter.com/EOSCostaRica"
+                }}
+              />
+              <Generic
+                jsonldtype="sameAs"
+                schema={{
+                  url: "https://www.facebook.com/costaricaeos"
+                }}
+              />
+              <Generic
+                jsonldtype="sameAs"
+                schema={{
+                  url: "https://t.me/eoscr"
+                }}
+              />
+              <Generic
+                jsonldtype="sameAs"
+                schema={{
+                  url: "https://github.com/eoscostarica"
+                }}
+              />
+              <Generic
+                jsonldtype="sameAs"
+                schema={{
+                  url: "https://eoscostarica.medium.com/"
+                }}
+              />
+              <Generic
+                jsonldtype="sameAs"
+                schema={{
+                  url: "https://www.instagram.com/eoscostarica/"
+                }}
+              />
+            </GenericCollection>
+          </Generic>
+        </JSONLD>
       </html>
     </>;
 }
