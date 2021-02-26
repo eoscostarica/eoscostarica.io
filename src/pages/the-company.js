@@ -113,7 +113,7 @@ const TheCompany = () => {
               }
               <Grid item md={6}>
                 <Box className="titleBox">
-                  <h2>Our vision</h2>
+                  <h2>Our Vision</h2>
                 </Box>
                 <p>
                   We founded EOS Costa Rica two years ago — before the 
@@ -148,19 +148,23 @@ const TheCompany = () => {
           <Box className="spacingBox">
             <Grid container spacing={5} >
               <Grid item xs={12} md={12}>
+                <Box className="titleBox">
+                  <h2>What Can We Do for You?</h2>
+                </Box>
                 <p>
                   We can co-ideate and develop the ideal solution 
                   that integrates blockchain technology into your 
                   operations following an agile and lean approach 
                   that will help you explore blockchain’s features 
-                  within a restricted budget and schedule. We 
-                  provide top-notch, ready-to-use blockchain 
+                  within a restricted budget and schedule.
+                  <br/>
+                  <br/>
+                  We provide top-notch, ready-to-use blockchain 
                   infrastructures. Also, we configure, host, 
                   and maintain blockchain nodes and networks that 
-                  can meet your organization’s requirements and needs. 
-                </p>
-                <br/>
-                <p>
+                  can meet your organization’s requirements and needs.
+                  <br/>
+                  <br/>
                   We offer workshops to C-suite executives and teams. 
                   We also provide training for new talents and promote 
                   the region’s blockchain ecosystem by participating 
@@ -274,6 +278,17 @@ const TheCompany = () => {
               </Grid>
               <Grid item xs={12} md={5}>
                 <Box className="specialH3Box">
+                  <h4>Cost-effective</h4>
+                </Box>
+                <p>
+                  EOSIO offers a flexible and favorable cost model that
+                  eliminates the need for transaction fees. This model is
+                  ideal for developers who seek a solution with low operation
+                  costs and still offers an experience free to the user.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={5}>
+                <Box className="specialH3Box">
                   <h4>Eco-friendly</h4>
                 </Box>
                 <p>
@@ -284,18 +299,15 @@ const TheCompany = () => {
                   energy-efficient than Ethereum.
                 </p>
               </Grid>
-              <Grid item xs={12} md={5}>
-                <Box className="specialH3Box">
-                  <h4>Cost-effective</h4>
+              <Grid md={5}>
+                <Box className="centerBox">
+                  <img
+                    style={{width: isDesktop ? '40%' : '35%', paddingTop:'30px'}}
+                    alt={'Carbon Neutral Block Producer Badge'}
+                    src={useBaseUrl('img/badge.png')}
+                  />
                 </Box>
-                <p>
-                  EOSIO offers a flexible and favorable cost model that
-                  eliminates the need for transaction fees. This model is
-                  ideal for developers who seek a solution with low operation
-                  costs and still offers an experience free to the user.
-                </p>
               </Grid>
-              <Grid md={5}/>
             </Grid>
           </Box>
             {isDesktop &&
