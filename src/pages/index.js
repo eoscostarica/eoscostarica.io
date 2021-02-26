@@ -284,7 +284,7 @@ const Home = () => {
                     <img
                     src={useBaseUrl("img/icons/logistics.svg")}
                     style={{paddingTop: '25px'}}
-                    className = {"imageIndrustries"}
+                    className ="imageIndrustries"
                     />
                   </Box>
                   <Box className="h3Box">
@@ -305,7 +305,7 @@ const Home = () => {
                     <img 
                       src={useBaseUrl("img/icons/payments.svg")}
                       style={{paddingTop: '25px'}}
-                      className = {"imageIndrustriesLogistics"}
+                      className="imageIndrustriesLogistics"
                     />
                   </Box>
                   <Box className="h3Box">
@@ -324,7 +324,7 @@ const Home = () => {
                     <img 
                       src={useBaseUrl("img/icons/gaming.svg")}
                       style={{paddingTop: '15px'}}
-                      className = {"imageIndrustries"}
+                      className = "imageIndrustries"
                     />
                   </Box>
                   <Box className="h3Box">
