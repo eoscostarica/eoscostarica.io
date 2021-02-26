@@ -14,8 +14,8 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import SuscribeForm from '../pages/components/Subscribe'
 
 const Footer = () => {
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const isMobile = useMediaQuery({query:'(max-width: 769px)'})
+  const isDesktop = useMediaQuery({query:'(min-width: 769px)'})
 
   return (
     <Box>

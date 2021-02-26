@@ -5,9 +5,10 @@ import Alert from '@material-ui/lab/Alert'
 import { useMediaQuery } from 'react-responsive'
 
 const SuscribeForm =() => {
-    const isMobile = useMediaQuery({query:'(max-width: 767px)'})
+    const isMobile = useMediaQuery({query:'(max-width: 769px)'})
     const [open, setOpen] = useState(false)
-    const [email, setEmail] = useState("")
+    const [errorMessage, setErrorMessage] = useState(false)
+    const [email, setEmail] = useState()
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -15,50 +16,57 @@ const SuscribeForm =() => {
         }
 
         setOpen(false)
+        setErrorMessage(false)
     }
 
     const handleSetEmail = (e) => {
         setEmail(e.target.value)
     }
 
+    const validateEmail = (mail) => {
+        const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+        return regex.test(mail)
+    }
+
     const onSubmitEmailResults = async (e) => {
         e.preventDefault()
-
-        if(email){
-        const jsonData = {
-            "fields": [
-                {
-                    "name": "email",
-                    "value": email
-                }
-            ],
-            "context": {
-                "pageUri": "https://eoscostarica.io/",
-                "pageName": "EOS Costa Rica"
-            },
-            "legalConsentOptions": {
-                "consent": {
-                    "consentToProcess": true,
-                    "text": "I agree to allow Example Company to store and process my personal data.",
-                    "communications": [
-                        {
-                            "value": true,
-                            "subscriptionTypeId": 999,
-                            "text": "I agree to receive marketing communications from Example Company."
-                        }
-                    ]
+        
+        if(validateEmail(email)){
+            const jsonData = {
+                "fields": [
+                    {
+                        "name": "email",
+                        "value": email
+                    }
+                ],
+                "context": {
+                    "pageUri": "https://eoscostarica.io/",
+                    "pageName": "EOS Costa Rica"
+                },
+                "legalConsentOptions": {
+                    "consent": {
+                        "consentToProcess": true,
+                        "text": "I agree to allow Example Company to store and process my personal data.",
+                        "communications": [
+                            {
+                                "value": true,
+                                "subscriptionTypeId": 999,
+                                "text": "I agree to receive marketing communications from Example Company."
+                            }
+                        ]
+                    }
                 }
             }
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(jsonData)
+            }
+            const response = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/9018734/df605eac-d7d1-44b5-af45-dd93d65d84ee', requestOptions)
+            setOpen(true)
+            setEmail("")
         }
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(jsonData)
-        }
-        const response = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/9018734/df605eac-d7d1-44b5-af45-dd93d65d84ee', requestOptions)
-        setOpen(true)
-        setEmail("")
-        }
+        else setErrorMessage(true)
     }
 
     return (
@@ -70,14 +78,23 @@ const SuscribeForm =() => {
                 <form onSubmit={onSubmitEmailResults}>
                     <input
                         className="inputFooter"
-                        type="email"
+                        type="text"
                         id="email"
                         name="email"
                         placeholder="Email"
                         value={email}
                         onChange={handleSetEmail}
                     />
-                    <button className="buttonPrimary" style={{padding:'11px', fontSize:'16px', float:'right'}}>Submit</button>
+                    <button
+                        className="buttonPrimary"
+                        style={{
+                            padding:'11px',
+                            fontSize:'16px',
+                            float:'right'
+                        }}
+                        >
+                            Submit
+                    </button>
                 </form>
             </Box>
             <Box className="litleMarginTop">
@@ -86,9 +103,14 @@ const SuscribeForm =() => {
                 You may unsubscrie from these communications at any time.
             </p>
             </Box>
-            <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
+            <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
                 <Alert>
                     Thank you for subscribing
+                </Alert>
+            </Snackbar>
+            <Snackbar open={errorMessage} autoHideDuration={4000} onClose={handleClose}>
+                <Alert severity="error">
+                    Complete the field and verify that it is a correct email
                 </Alert>
             </Snackbar>
         </Box>

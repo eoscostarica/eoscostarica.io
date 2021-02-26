@@ -1231,7 +1231,7 @@ input:checked + .slider:before {
 }
 
 .inputFooter{
-  width: 70%;
+  width: 75%;
   padding: 13px;
   padding-top: 11.5px;
   margin-right: 5px;
@@ -1273,7 +1273,6 @@ input:checked + .slider:before {
   .sectionPadding{
     width: 960px;
   }
-
 }
 
 @media only screen and (max-width: 960px) {
@@ -1582,5 +1581,14 @@ input:checked + .slider:before {
 
   .marginIconsFooter{
     margin: 18px;
+  }
+
+}
+
+@media only screen and (max-width: 360px) {
+
+  .inputFooter{
+    width: 67%;
+    margin-right: 0;
   }
 }
