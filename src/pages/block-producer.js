@@ -407,7 +407,7 @@ const BlockProducer = () => {
                   <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://twitter.com/EOSCostaRica" target="_blank">
                     <TwitterIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
                   </a>
-                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://t.me/eoscr" target="_blank">
+                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.linkedin.com/company/eoscostarica/mycompany/" target="_blank">
                     <LinkedInIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
                   </a>
                 </Box>

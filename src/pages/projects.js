@@ -1,5 +1,4 @@
 import React from "react"
-import { useHistory } from 'react-router-dom'
 import { Parallax, Background } from 'react-parallax'
 import clsx from "clsx"
 import Grid from '@material-ui/core/Grid'
