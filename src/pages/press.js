@@ -23,6 +23,13 @@ const MetaData={
 
 const firtsNewsRelease = [
   {
+    img:"https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/metaImgBlack.png",
+    title:"Block.one Joins IDB-Backed Alliance to Deploy Blockchain Solutions for Pressing Public Sector Needs in Latin America",
+    date:"Feb 25, 2021",
+    link:"https://www.businesswire.com/news/home/20210225005312/en/Block.one-Joins-IDB-Backed-Alliance-to-Deploy-Blockchain-Solutions-for-Pressing-Public-Sector-Needs-in-Latin-America",
+    media:"businesswire"
+  },
+  {
       img:"https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/metaImgBlack.png",
       title:"EOS Costa Rica and EOS Argentina Team Up To Launch Evodex Zero Gas Fees and Fast Transaction Times",
       date:"Sep 17, 2020",
@@ -34,13 +41,6 @@ const firtsNewsRelease = [
       title:"EOS Costa Rica Leverages Blockchain to Tackle a Global Blood Supply Shortage Amid the COVID-19 Pandemic",
       date:"Jul 30, 2020",
       link:"https://finance.yahoo.com/news/eos-costa-rica-leverages-blockchain-130000041.html",
-      media:"businesswire"
-  },
-  {
-      img:"https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/metaImgBlack.png",
-      title:"Block.one Joins IDB-Backed Alliance to Deploy Blockchain Solutions for Pressing Public Sector Needs in Latin America",
-      date:"Feb 25, 2021",
-      link:"https://www.businesswire.com/news/home/20210225005312/en/Block.one-Joins-IDB-Backed-Alliance-to-Deploy-Blockchain-Solutions-for-Pressing-Public-Sector-Needs-in-Latin-America",
       media:"businesswire"
   }
 ]
