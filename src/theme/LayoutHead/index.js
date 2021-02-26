@@ -73,8 +73,7 @@ export default function LayoutHead(props) {
             url: "https://eoscostarica.io/",
             telephone: "+506 2256-3944",
             description: "EOS Costa Rica develops blockchain-based enterprise solutions by deploying the EOSIO protocol to solve real-world problems",
-            foundingDate: "22-05-2018",
-
+            foundingDate: "22-05-2018"
           }}
         >
           <Generic
@@ -85,6 +84,14 @@ export default function LayoutHead(props) {
                 addressCountry: "CR",
                 postalCode: "11801",
                 streetAddress: "Real Cariari Autopista General Cañas, Cruce de San Antonio de Belén San José, SJ 40104"
+            }}
+          />
+          <Generic
+            type="parentOrganization"
+            jsonldtype="Organization"
+            schema={{
+              name: "SISTEMAS EDENIA INTERNACIONAL S.A.",
+              url: "https://www.edenia.com/"
             }}
           />
           <GenericCollection type="founders">
