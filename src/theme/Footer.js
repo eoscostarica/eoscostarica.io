@@ -48,7 +48,7 @@ const Footer = () => {
               <p className="body1Footer">
                 <Link
                   className="linkFooter"
-                  href="https://www.linkedin.com/company/eoscostarica/"
+                  href={useBaseUrl("/services/")}
                   target="_blank"
                   style={{color:'white'}}
                 >
@@ -58,7 +58,7 @@ const Footer = () => {
               <p className="body1Footer">
                 <Link
                   className="linkFooter"
-                  href="https://twitter.com/EOSCostaRica"
+                  href={useBaseUrl("/the-company/")}
                   target="_blank"
                   style={{color:'white'}}
                 >
@@ -68,7 +68,7 @@ const Footer = () => {
               <p className="body1Footer">
                 <Link
                   className="linkFooter"
-                  href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ"
+                  href={useBaseUrl("/team/")}
                   target="_blank"
                   style={{color:'white'}}
                 >
@@ -78,7 +78,7 @@ const Footer = () => {
               <p className="body1Footer">
                 <Link
                   className="linkFooter"
-                  href="https://www.facebook.com/costaricaeos"
+                  href={useBaseUrl("/projects/")}
                   target="_blank"
                   style={{color:'white'}}
                 >
@@ -88,7 +88,7 @@ const Footer = () => {
               <p  className="body1Footer">
                 <Link
                   className="linkFooter"
-                  href="https://t.me/eoscr"
+                  href={useBaseUrl("/block-producer/")}
                   target="_blank"
                   style={{color:'white'}}
                 > 
@@ -103,7 +103,7 @@ const Footer = () => {
               <p className="body1Footer">
                 <Link
                   className="linkFooter"
-                  href="https://t.me/eoscr"
+                  href="https://guide.eoscostarica.io//"
                   target="_blank"
                   style={{color:'white'}}
                 >
@@ -113,7 +113,7 @@ const Footer = () => {
               <p  className="body1Footer">
                 <Link
                   className="linkFooter"
-                  href="https://t.me/eoscr"
+                  href={useBaseUrl("/blog/")}
                   target="_blank"
                   style={{color:'white'}}
                 >
@@ -123,7 +123,7 @@ const Footer = () => {
               <p  className="body1Footer">
                 <Link
                   className="linkFooter"
-                  href="https://t.me/eoscr"
+                  href={useBaseUrl("/press/")}
                   target="_blank"
                   style={{color:'white'}}
                 >
