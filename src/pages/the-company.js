@@ -281,10 +281,11 @@ const TheCompany = () => {
                   <h4>Cost-effective</h4>
                 </Box>
                 <p>
-                  EOSIO offers a flexible and favorable cost model that
-                  eliminates the need for transaction fees. This model is
-                  ideal for developers who seek a solution with low operation
-                  costs and still offers an experience free to the user.
+                  Developers build smart contracts in EOSIO using C++,
+                  a general-purpose programming language with widespread
+                  adoption, thus eliminating the need to learn new languages
+                  to begin deploying the technology. Also, there are many
+                  learning resources available online and a dynamic support community.
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
