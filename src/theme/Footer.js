@@ -21,13 +21,29 @@ const Footer = () => {
     <Box>
       <Box className="footer">
         <Box className="footerContent">
-          <Grid container spacing={4}>
-            <Grid item xs={12} md={3}>
-              <Box className="footerLogoBox">
-                <img 
-                src={useBaseUrl("img/logos/logo-white.png")} 
-                alt="EOS CR LOGO" 
-                className={clsx("footerLogo",{ [stateAnimation]:"footerLogoAnimation" })} />
+          <Grid container>
+            { isMobile &&
+              <Grid item xs={12} md={2}>
+                <Box className="footerLogoBox">
+                  <img
+                    src={useBaseUrl("img/logos/logo-square.svg")}
+                    alt="EOS CR LOGO" 
+                    className="footerLogo"
+                  />
+                </Box>
+                <p style={{textAlign:'center', marginLeft:'84px', fontSize:'14px', marginTop:'10px', color:'#ffffff'}}>
+                  v3.1 / Feb 2021
+                </p>
+              </Grid>
+            }
+            { isMobile &&
+              <Grid className="mediumPaddingTop" item xs={12} md={4}>
+                <SuscribeForm/>
+              </Grid>
+            }
+            <Grid className={isMobile ? "mediumPaddingTop" : ""} item xs={6} md={2}>
+              <Box className="specialH3Box">
+                <h3 className="h3Footer">About us</h3>
               </Box>
               <p className="body1Footer">
                 <Link
