@@ -10,7 +10,7 @@ import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
-
+import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
 import { useLocation } from 'react-router-dom'
 
@@ -18,12 +18,14 @@ const PATHS = [
   {
     dropDown:false,
     path: "/",
+    espPath: "/",
     label: "Home",
     target: '_self'
   },
   {
     dropDown:true,
     path: "/services/",
+    espPath: "/servicios/",
     label: "About us",
     target: '_self',
     markerSize: "70px",
@@ -31,31 +33,37 @@ const PATHS = [
     [
       {
         path: "/services/",
+        espPath: "/servicios/",
         label: "Services",
         target: '_self'
       },
       {
         path: "/the-company/",
+        espPath: "/compañia/",
         label: "The company",
         target: '_self'
       },
       {
         path: "/team/",
+        espPath: "/equipo/",
         label: "Team",
         target: '_self'
       },
       {
         path: "/projects/",
+        espPath: "/proyectos/",
         label: "Projects",
         target: '_self'
       },
       {
         path: "/block-producer/",
+        espPath: "/productor-de-bloques/",
         label: "Block producer",
         target: '_self'
       },
       {
         path: "/press/",
+        espPath: "/prensa/",
         label: "Press",
         target: '_self'
       }
@@ -64,6 +72,7 @@ const PATHS = [
   {
     dropDown:false,
     path: "/industries/",
+    espPath: "/industrias/",
     label: "Industries",
     target: '_self'
   },
@@ -76,12 +85,14 @@ const PATHS = [
   {
     dropDown:false,
     path: "/blog/",
+    espPath: "/blog/",
     label: "Blog",
     target: '_self'
   },
   {
     dropDown:false,
     path: "/contact-us/",
+    espPath: "/contactenos/",
     label: "Contact",
     target: '_self'
   },
@@ -113,6 +124,26 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
       if(pathname === item.path) res=true
     })
     return res
+  }
+
+  const getSpanishPath = (path) => {
+    let espPath
+
+    PATHS.map((item) => {
+      if(item.dropDown){
+        item.subPaths.map((subitem) => {
+          if(subitem.path===path) espPath=subitem.espPath
+        })
+      }else{
+        if(item.path===path) espPath=item.espPath
+      }
+    })
+
+    return espPath
+  }
+
+  const translateSite = () => {
+    window.open(`https://es.eoscostarica.io${getSpanishPath(pathname)}`,'_self')
   }
 
   return (
@@ -193,20 +224,22 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
               </Box>
             </Box>
             <Box className="boxRight">
-                {/*!isMobile && (
-                    <Box className={"boxLanguages"}>
-                      <Grid component="label" container alignItems="center" spacing={1}>
-                        <Grid item>Español</Grid>
-                        <Grid item>
-                          <label className="switch">
-                            <input type="checkbox" checked onChange={() => window.open("https://es.eoscostarica.io/","_self")}/>
-                            <span className="slider round"></span>
-                          </label>
-                        </Grid>
-                        <Grid item>English</Grid>
+                  <Box className={"boxLanguages"}>
+                    <Grid component="label" container alignItems="center" spacing={1}>
+                      <Grid item><span className="languageLabel">Esp</span></Grid>
+                      <Grid item>
+                        <label className="switch">
+                          <input 
+                            type="checkbox" 
+                            checked
+                            onChange={translateSite}
+                          />
+                          <span className="slider round"></span>
+                        </label>
                       </Grid>
-                    </Box>
-                )*/}
+                      <Grid item><span className="languageLabelActive">Eng</span></Grid>
+                    </Grid>
+                  </Box>
                   <Box className="boxMenuItems" id="boxMenuItems">
                     {PATHS.map((item) => (
                       <Box key={item.label}>
