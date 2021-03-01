@@ -9,12 +9,13 @@ const GenericListItem = withStyles({
   root: {
     paddingLeft:'20px',
     paddingRight: 0,
+    borderLeft: 'solid 5px white',
   },
   selected: {
     backgroundColor: '#F8F8F8',
     borderLeft: 'solid 5px #5484b3',
   }
-})((props) => <ListItem {...props} selected={props.isSelected}/>);
+})((props) => <ListItem {...props} />);
 
 const GenericListItemIcon = withStyles({
     root: {
@@ -39,7 +40,7 @@ const GenericListItemText = withStyles({
 const CustomListItem = ( {label, href, target, icon, isSelected}) => {
   return (
     <Link href={href} target={target} style={{textDecoration: 'none'}}>
-      <GenericListItem button path={href} isSelected={isSelected}>
+      <GenericListItem button selected={isSelected}>
         <GenericListItemIcon >
          {icon}
         </GenericListItemIcon>

@@ -12,16 +12,16 @@ import List from '@material-ui/core/List'
 import Grid from '@material-ui/core/Grid'
 import { useLocation } from 'react-router-dom'
 import HomeIcon from '@material-ui/icons/Home'
-import SettingsIcon from '@material-ui/icons/Settings'
+import ComputerIcon from '@material-ui/icons/Computer';
 import ApartmentIcon from '@material-ui/icons/Apartment'
 import GroupIcon from '@material-ui/icons/Group'
 import ListAltIcon from '@material-ui/icons/ListAlt'
 import GridOnIcon from '@material-ui/icons/GridOn'
-import RssFeedIcon from '@material-ui/icons/RssFeed'
+import EditIcon from '@material-ui/icons/Edit'
 import BusinessIcon from '@material-ui/icons/Business'
 import MenuBookIcon from '@material-ui/icons/MenuBook'
 import MailIcon from '@material-ui/icons/Mail'
-import NewReleasesIcon from '@material-ui/icons/NewReleases'
+import ForumIcon from '@material-ui/icons/Forum'
 
 import CustomListItem from '../pages/components/CustomListItem'
 
@@ -48,7 +48,7 @@ const PATHS = [
         espPath: "/servicios/",
         label: "Services",
         target: '_self',
-        icon: <SettingsIcon style={{width:'20px'}}/> 
+        icon: <ComputerIcon style={{width:'20px'}}/> 
       },
       {
         path: "/the-company/",
@@ -83,7 +83,7 @@ const PATHS = [
         espPath: "/prensa/",
         label: "Press",
         target: '_self',
-        icon: <NewReleasesIcon style={{width:'20px'}}/>
+        icon: <ForumIcon style={{width:'20px'}}/>
       }
     ]
   },
@@ -108,7 +108,7 @@ const PATHS = [
     espPath: "/blog/",
     label: "Blog",
     target: '_self',
-    icon: <RssFeedIcon style={{width:'20px'}}/>
+    icon: <EditIcon style={{width:'20px'}}/>
   },
   {
     dropDown:false,
@@ -236,6 +236,7 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
               </Box>
             </Box>
             <Box className="boxRight">
+                  {/* 
                   <Box className={"boxLanguages"}>
                     <Grid component="label" container alignItems="center" spacing={1}>
                       <Grid item><span className="languageLabel">Esp</span></Grid>
@@ -252,6 +253,7 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
                       <Grid item><span className="languageLabelActive">Eng</span></Grid>
                     </Grid>
                   </Box>
+                  */}
                   <Box className="boxMenuItems" id="boxMenuItems">
                     {PATHS.map((item) => (
                       <Box key={item.label}>
