@@ -636,11 +636,26 @@ input:checked + .slider:before {
   overflow-x: hidden;
 }
 
+.footerCopy{
+  width: "100%";
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footerCopyContent{
+  width: 1100px;
+  display: flex;
+}
+
 .footerContent{
   width: 1100px;
   display: flex;
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .boxTitle{
@@ -653,6 +668,12 @@ input:checked + .slider:before {
   font-weight: bold;
   font-size: 20px;
   letter-spacing: -0.06px;
+}
+
+.hs-richtext{
+  line-height: 24px;
+  font-size: 14px;
+  color: #ffffff;
 }
 
 .body1Footer{
@@ -767,6 +788,11 @@ input:checked + .slider:before {
 
 .specialH3Box{
   margin-bottom: 1rem;
+}
+
+.footerTitle{
+  margin-top: 4rem;
+  margin-bottom: 0;
 }
 
 .buttonBox{
@@ -934,6 +960,12 @@ input:checked + .slider:before {
   align-items: center;
 }
 
+.leftBox{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 /*Team*/
 
 .avatarBox{
@@ -1012,10 +1044,13 @@ input:checked + .slider:before {
   padding-top: 100px
 }
 
+.mediumPaddingTop{
+  padding-top: 50px
+}
+
 .litlePaddingTop{
   padding-top: 18px
 }
-
 
 .displayLine{
   display: none
@@ -1067,6 +1102,10 @@ input:checked + .slider:before {
   margin-top: -35px
 }
 
+.litleMarginTop {
+  margin-top: 20px;
+}
+
 .specialButton{
   width: 100%;
 }
@@ -1108,13 +1147,11 @@ input:checked + .slider:before {
 }
 
 .footerLogo {
-  width: 300px;
-  height: 90px;
+  width: 100%;
 }
 
-.footerLogoAnimation{
-  transition: all .9s ease-in-out;
-  transform: scale(0.87);
+.footerBadge {
+  width: 50%;
 }
 
 .teamPadding{
@@ -1175,7 +1212,7 @@ input:checked + .slider:before {
   overflow: hidden;
 }
 
-.button-glow {
+.button-glow{
   height:'70px';
   width:'150px';
 }
@@ -1186,6 +1223,22 @@ input:checked + .slider:before {
 
 .reduceMargin{
   margin: 20px;
+}
+
+.marginIconsFooter{
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+.inputFooter{
+  width: 75%;
+  padding: 13px;
+  padding-top: 11.5px;
+  margin-right: 5px;
+  display: inline-block;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 1279px) {
@@ -1220,13 +1273,11 @@ input:checked + .slider:before {
   .sectionPadding{
     width: 960px;
   }
-
 }
 
 @media only screen and (max-width: 960px) {
   .footerLogo {
-    width: 300px;
-    height: 110px;
+    width: 50%;
   }
   
   .footerLogoBox{
@@ -1235,15 +1286,18 @@ input:checked + .slider:before {
   }
 
   .h3Footer{
-    text-align: center;
+    text-align: start;
+    font-size: 18px;
   }
 
   .body1Footer{
-    text-align: center;
+    text-align: start;
+    font-size: 16px;
   }
 
   .linkFooter{
-    text-align: center;
+    text-align: start;
+    font-size: 16px;
   }
 
   .buttonBox{
@@ -1519,5 +1573,22 @@ input:checked + .slider:before {
   .projectsGridRight{
     padding-top: 50px;
     padding-right: 0;
+  }
+
+  .footerCopyContent{
+    justify-content: center;
+  }
+
+  .marginIconsFooter{
+    margin: 18px;
+  }
+
+}
+
+@media only screen and (max-width: 360px) {
+
+  .inputFooter{
+    width: 67%;
+    margin-right: 0;
   }
 }

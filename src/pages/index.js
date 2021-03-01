@@ -42,7 +42,7 @@ const Home = () => {
         {isDesktop && 
           <Box className="sectionHero">
           <Box className="titleBox">
-              <h1>Enterprise Blockchain Solutions <br /> That Fit Your Needs</h1>
+            <h1>Enterprise Blockchain Solutions <br /> That Fit Your Needs</h1>
           </Box>
           <p>
             Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.
@@ -284,7 +284,7 @@ const Home = () => {
                     <img
                     src={useBaseUrl("img/icons/logistics.svg")}
                     style={{paddingTop: '25px'}}
-                    className = {"imageIndrustries"}
+                    className ="imageIndrustries"
                     />
                   </Box>
                   <Box className="h3Box">
@@ -305,7 +305,7 @@ const Home = () => {
                     <img 
                       src={useBaseUrl("img/icons/payments.svg")}
                       style={{paddingTop: '25px'}}
-                      className = {"imageIndrustriesLogistics"}
+                      className="imageIndrustriesLogistics"
                     />
                   </Box>
                   <Box className="h3Box">
@@ -324,7 +324,7 @@ const Home = () => {
                     <img 
                       src={useBaseUrl("img/icons/gaming.svg")}
                       style={{paddingTop: '15px'}}
-                      className = {"imageIndrustries"}
+                      className = "imageIndrustries"
                     />
                   </Box>
                   <Box className="h3Box">
@@ -429,7 +429,7 @@ const Home = () => {
                 }
                 <Grid item md={6}>
                   <Box className="h3Box">
-                    <h3>The company</h3>
+                    <h3>The Company</h3>
                   </Box>
                   <p>
                     During the 1980s, we developed the first BBS in the country, a
@@ -462,7 +462,7 @@ const Home = () => {
               <Grid container spacing={5} >
                 <Grid item md={6}>
                   <Box className="h3Box">
-                    <h3>The technology</h3>
+                    <h3>The Technology</h3>
                   </Box>
                   <p>
                     We focus on deploying{" "}
