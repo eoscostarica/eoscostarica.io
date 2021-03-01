@@ -160,7 +160,7 @@ const Press = () => {
 
   const News= ({img, title, media, date, link}) => {
     return(
-      <Grid onClick = {() => window.open(link)} item xs={12} md={4}>
+      <Grid onClick = {() => window.open(link)} style={{marginLeft: isMobile ? '25px' : ' ', marginRight:isMobile ? '25px' : ' '}} item xs={12} md={4}>
         <Card style={{transition: 'all .4s ease-in-out'}} className="card" variant="outlined">
           <CardMedia
             className="media"
@@ -201,7 +201,7 @@ const Press = () => {
               />
             ))}
           </Grid>
-          <Box style={{display: (secondList.length === 0)? 'none': ''}} className={clsx("centerBox","litlePaddingTop")}>
+          <Box style={{display: (secondList.length === 0) ? 'none' : ''}} className={clsx("centerBox","litlePaddingTop")}>
             <Button
               className={clsx(!exp? "expand": "","button-glow")}
               onClick={action}
@@ -216,7 +216,7 @@ const Press = () => {
               >
                 <Box style={{display: 'inline-block', paddingTop:'30px'}}>
                   <p style={{marginBottom:'-15px', fontWeight:'bold'}}>View More</p>
-                  <ExpandMoreIcon style={{width:'50px', height:'50px', display: exp? 'none': ''}}/>
+                  <ExpandMoreIcon style={{width:'50px', height:'50px', display: exp ? 'none' : ''}}/>
                 </Box>
             </Button>
           </Box>
@@ -248,7 +248,7 @@ const Press = () => {
                 display: !exp? 'none': ''}
               }
               >
-              <ExpandLessIcon style={{width:'50px', height:'50px', display: !exp? 'none': ''}}/>
+              <ExpandLessIcon style={{width:'50px', height:'50px', display: !exp ? 'none' : ''}}/>
             </Button>
           </Box>
         </Box>
