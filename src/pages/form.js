@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { Parallax, Background } from 'react-parallax'
 import { useMediaQuery } from 'react-responsive'
 import Layout from "@theme/Layout"
@@ -171,6 +171,7 @@ const formQuestions = [
 const Form = () => {
     const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
     const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
+    const refResults = useRef(null)
     
     const getFormResults = () => {
         let res = 0
@@ -246,6 +247,7 @@ const Form = () => {
 
         const onSubmitForm = () => {
             setResultsSection(true)
+            refResults.current.scrollIntoView({behavior:'smooth', block:'center', inline:'nearest'})
         }
 
         return(
@@ -269,7 +271,9 @@ const Form = () => {
                     <Box className="spacingBox">
                         <FormComponent formQuestions={formQuestions} isDesktop={isDesktop} onSubmit={onSubmitForm}/>
                     </Box>
-                    {resultsSection && <GetResults/>}
+                    <Box ref={refResults}>
+                        {resultsSection && <GetResults/>}
+                    </Box>
                 </Box>
             </Box> 
         )

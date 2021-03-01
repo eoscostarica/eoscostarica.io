@@ -1,14 +1,12 @@
-import React, { useState } from "react"
+import React, { useState, useRef, createRef } from "react"
 import { withStyles } from '@material-ui/core/styles'
 import clsx from "clsx"
 import PropTypes from 'prop-types'
 import Box from '@material-ui/core/Box'
-
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
+import Radio from '@material-ui/core/Radio'
+import RadioGroup from '@material-ui/core/RadioGroup'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import FormControl from '@material-ui/core/FormControl'
 
 const GenericRadio = withStyles({
     root: {
@@ -24,9 +22,14 @@ const FormComponent = ( {formQuestions, isDesktop, onSubmit} ) => {
     const [activeStep, setActiveStep] = useState(0)
     const [disableButton, setDisableButton] = useState(true)
 
+    const refNextSection = useRef([])
+    refNextSection.current = Array(formQuestions.length).fill().map((_, i) => createRef());
+
+
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1)
         formQuestions[activeStep+1].visible=true
+        refNextSection.current[activeStep+1].scrollIntoView({behavior:'smooth', block:'center', inline:'nearest'})
         handleDisableButton()
     }
 
@@ -56,8 +59,8 @@ const FormComponent = ( {formQuestions, isDesktop, onSubmit} ) => {
     
     return (
       <>
-        {formQuestions.map((section) => (
-            <Box key={section.title} className="formBox" style={{backgroundColor:section.color}}>
+        {formQuestions.map((section,i) => (
+            <Box key={section.title} className="formBox" style={{backgroundColor:section.color}} ref={el => refNextSection.current[i] = el}>
                 <h3 style={{margin:0}}>{section.title}</h3> 
                 {section.visible && 
                     <Box>
