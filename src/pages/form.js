@@ -168,6 +168,12 @@ const formQuestions = [
     }
 ]
 
+const MetaData={
+    title:"Do You Need Blockchain? - FREE Guide for Enterprise Blockchain",
+    description:"Is your company ready to implement blockchain? Find out using this simple tool for FREE! Designed by EOS Costa Rica – a blockchain development company.",
+    img:"img/metaImgBlack.png",
+  }
+
 const Form = () => {
     const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
     const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
@@ -471,7 +477,11 @@ const Form = () => {
     }
 
     return (
-        <Layout>
+        <Layout
+            title={MetaData.title}
+            description={MetaData.description}
+            image={MetaData.img}
+        >
             {isDesktop &&
                 <Box className="mainContainer">
                     <Parallax strength={800}>
