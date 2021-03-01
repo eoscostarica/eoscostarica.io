@@ -9,10 +9,21 @@ import Drawer from '@material-ui/core/Drawer'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
 import Grid from '@material-ui/core/Grid'
-import Divider from '@material-ui/core/Divider'
 import { useLocation } from 'react-router-dom'
+import HomeIcon from '@material-ui/icons/Home'
+import SettingsIcon from '@material-ui/icons/Settings'
+import ApartmentIcon from '@material-ui/icons/Apartment'
+import GroupIcon from '@material-ui/icons/Group'
+import ListAltIcon from '@material-ui/icons/ListAlt'
+import GridOnIcon from '@material-ui/icons/GridOn'
+import RssFeedIcon from '@material-ui/icons/RssFeed'
+import BusinessIcon from '@material-ui/icons/Business'
+import MenuBookIcon from '@material-ui/icons/MenuBook'
+import MailIcon from '@material-ui/icons/Mail'
+import NewReleasesIcon from '@material-ui/icons/NewReleases'
+
+import CustomListItem from '../pages/components/CustomListItem'
 
 const PATHS = [
   {
@@ -20,7 +31,8 @@ const PATHS = [
     path: "/",
     espPath: "/",
     label: "Home",
-    target: '_self'
+    target: '_self',
+    icon: <HomeIcon style={{width:'20px'}}/>
   },
   {
     dropDown:true,
@@ -35,37 +47,43 @@ const PATHS = [
         path: "/services/",
         espPath: "/servicios/",
         label: "Services",
-        target: '_self'
+        target: '_self',
+        icon: <SettingsIcon style={{width:'20px'}}/> 
       },
       {
         path: "/the-company/",
         espPath: "/compañia/",
         label: "The company",
-        target: '_self'
+        target: '_self',
+        icon: <ApartmentIcon style={{width:'20px'}}/>
       },
       {
         path: "/team/",
         espPath: "/equipo/",
         label: "Team",
-        target: '_self'
+        target: '_self',
+        icon: <GroupIcon style={{width:'20px'}}/> 
       },
       {
         path: "/projects/",
         espPath: "/proyectos/",
         label: "Projects",
-        target: '_self'
+        target: '_self',
+        icon: <ListAltIcon style={{width:'20px'}}/>
       },
       {
         path: "/block-producer/",
         espPath: "/productor-de-bloques/",
         label: "Block producer",
-        target: '_self'
+        target: '_self',
+        icon: <GridOnIcon style={{width:'20px'}}/>
       },
       {
         path: "/press/",
         espPath: "/prensa/",
         label: "Press",
-        target: '_self'
+        target: '_self',
+        icon: <NewReleasesIcon style={{width:'20px'}}/>
       }
     ]
   },
@@ -74,27 +92,31 @@ const PATHS = [
     path: "/industries/",
     espPath: "/industrias/",
     label: "Industries",
-    target: '_self'
+    target: '_self',
+    icon: <BusinessIcon style={{width:'20px'}}/>
   },
   {
     dropDown:false,
     path: "https://guide.eoscostarica.io/",
     label: "Learning",
-    target: '_blank'
+    target: '_blank',
+    icon: <MenuBookIcon style={{width:'20px'}}/>
   },
   {
     dropDown:false,
     path: "/blog/",
     espPath: "/blog/",
     label: "Blog",
-    target: '_self'
+    target: '_self',
+    icon: <RssFeedIcon style={{width:'20px'}}/>
   },
   {
     dropDown:false,
     path: "/contact-us/",
     espPath: "/contactenos/",
     label: "Contact",
-    target: '_self'
+    target: '_self',
+    icon: <MailIcon style={{width:'20px'}}/>
   },
 ];
 
@@ -168,48 +190,34 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
             <Drawer anchor={'right'} open={isOpen} onClose={handlerDrawer} >
               <Box className="drawerContent">
                 <List>
-                  <Link href={useBaseUrl(PATHS[0].path)} target={PATHS[0].target} style={{textDecoration: 'none'}}>
-                    <ListItem button>
-                      <span className="linkItem">Home</span>
-                      </ListItem>
-                  </Link>
-                  <Divider />
                   <Box className="linkGruopBox">
-                      <Box style={{marginBottom:'10px'}}>
-                        <span className="linkGruopLabel">About us</span>
+                    <CustomListItem href={useBaseUrl(PATHS[0].path)} target={PATHS[0].target} label={PATHS[0].label} icon={PATHS[0].icon} isSelected={pathname===PATHS[0].path}/>
+                  </Box>
+                  <Box className="linkGruopBox">
+                    <span className="linkGruopLabel">ABOUT US</span>
+                    {PATHS[1].subPaths.map((subItem) => (
+                      <Box key={subItem.label}>
+                        {subItem.label!="Press" &&
+                          <CustomListItem  href={useBaseUrl(subItem.path)} target={subItem.target} label={subItem.label} icon={subItem.icon} isSelected={pathname===subItem.path}/>
+                        }
                       </Box>
-                      {PATHS[1].subPaths.map((subItem) => (
-                        <Box key={subItem.label}>
-                          {subItem.label!="Press" &&
-                            <Link href={useBaseUrl(subItem.path)} target={subItem.target}  style={{textDecoration: 'none'}}>
-                              <ListItem button><span className="linkItem">{subItem.label}</span></ListItem>
-                            </Link>
-                          }
-                        </Box>
-                      ))}
-                      <Link href={useBaseUrl(PATHS[2].path)} target={PATHS[2].target} style={{textDecoration: 'none'}}>
-                        <ListItem button><span className="linkItem">{PATHS[2].label}</span></ListItem>
-                      </Link>
+                    ))}
+                    <CustomListItem href={useBaseUrl(PATHS[2].path)} target={PATHS[2].target} label={PATHS[2].label} icon={PATHS[2].icon} isSelected={pathname===PATHS[2].path}/>
                   </Box>
-                  <Divider />
                   <Box className="linkGruopBox">
-                    <Box style={{marginBottom:'10px'}}>
-                      <span className="linkGruopLabel">Content for you</span>
-                    </Box>
-                    <Link href={useBaseUrl(PATHS[3].path)} target={PATHS[3].target} style={{textDecoration: 'none'}}>
-                        <ListItem button><span className="linkItem">{PATHS[3].label}</span></ListItem>
-                    </Link>
-                    <Link href={useBaseUrl(PATHS[4].path)} target={PATHS[4].target} style={{textDecoration: 'none'}}>
-                        <ListItem button><span className="linkItem">{PATHS[4].label}</span></ListItem>
-                    </Link>
-                    <Link href={useBaseUrl(PATHS[1].subPaths[5].path)} target={PATHS[1].subPaths[5].target} style={{textDecoration: 'none'}}>
-                        <ListItem button><span className="linkItem">{PATHS[1].subPaths[5].label}</span></ListItem>
-                    </Link>
+                    <span className="linkGruopLabel">CONTENT FOR YOU</span>
+                    <CustomListItem href={useBaseUrl(PATHS[3].path)} target={PATHS[3].target} label={PATHS[3].label} icon={PATHS[3].icon} isSelected={pathname===PATHS[3].path}/>
+                    <CustomListItem href={useBaseUrl(PATHS[4].path)} target={PATHS[4].target} label={PATHS[4].label} icon={PATHS[4].icon} isSelected={pathname===PATHS[4].path}/>
+                    <CustomListItem href={useBaseUrl(PATHS[1].subPaths[5].path)} 
+                    target={PATHS[1].subPaths[5].target} 
+                    label={PATHS[1].subPaths[5].label} 
+                    icon={PATHS[1].subPaths[5].icon} 
+                    isSelected={pathname===PATHS[1].subPaths[5].path}/>
                   </Box>
-                  <Divider />
-                  <Link href={useBaseUrl(PATHS[5].path)} target={PATHS[5].target} style={{textDecoration: 'none'}}>
-                        <ListItem button><span className="linkItem">{PATHS[5].label}</span></ListItem>
-                    </Link>
+                  <Box className="linkGruopBox">
+                    <span className="linkGruopLabel">CONTACT</span>
+                    <CustomListItem href={useBaseUrl(PATHS[5].path)} target={PATHS[5].target} label={PATHS[5].label} icon={PATHS[5].icon} isSelected={pathname===PATHS[5].path}/>
+                  </Box>
                 </List>
               </Box>
             </Drawer>
