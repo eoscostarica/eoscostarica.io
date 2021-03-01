@@ -10,6 +10,12 @@ import Avatar from '@material-ui/core/Avatar'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import TwitterIcon from '@material-ui/icons/Twitter'
 
+const MetaData={
+    title:"EOS Costa Rica: Our Team",
+    description:"Meet the team behind EOS Costa Rica that develops blockchain solutions for business innovation.",
+    img:"img/metaImgBlack.png",
+}
+
 const ManagementTeam = [
     {
         img:"img/team/rodrigo.jpg",
@@ -66,7 +72,7 @@ const DevelopTeam = [
         img:"img/team/adriel.jpg",
         name:"Adriel Diaz",
         position:"Full Stack Developer",
-        bio:"",
+        bio:"Proud father and full stack developer",
         linkedIn:"https://www.linkedin.com/in/adriel-d%C3%ADaz-08226384/",
         twitter:"",
         color:"#f8f8f8"
@@ -192,7 +198,7 @@ const DevelopTeam = [
         img:"",
         name:"Victor Julio Madrigal",
         position:"Web Developer",
-        bio:"",
+        bio:"What I like the most is to develop innovative projects that move forward with the newest technologies.",
         linkedIn:"",
         twitter:"",
         color:"#f8f8f8"
@@ -200,8 +206,8 @@ const DevelopTeam = [
 ]
 
 const Team = () => {
-    const isMobile = useMediaQuery({query: '(max-width: 767px)'})
-    const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+    const isMobile = useMediaQuery( {query: '(max-width: 960px)'} )
+    const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
 
     const HeroSection = () => {
         return (
@@ -336,28 +342,28 @@ const Team = () => {
     }
 
     return (
-        <>
+        <Layout
+            title={MetaData.title}
+            description={MetaData.description}
+            image={MetaData.img}
+        > 
             {isDesktop &&
-                <Layout>
-                    <Box className="mainContainer">
-                        <Parallax strength={800}>
-                            <Background className="bgParallax">
-                                <Box className="imgParallax"/>
-                            </Background>
-                            <HeroSection />
-                        </Parallax>
-                    </Box>
-                </Layout>
+                <Box className="mainContainer">
+                    <Parallax strength={800}>
+                        <Background className="bgParallax">
+                            <Box className="imgParallax"/>
+                        </Background>
+                        <HeroSection />
+                    </Parallax>
+                </Box>
             }
             {isMobile &&
-                <Layout>
-                    <Box className="mainContainer">
-                        <HeroSection />
-                        <TeamSection />
-                    </Box>
-                </Layout>
+                <Box className="mainContainer">
+                    <HeroSection />
+                    <TeamSection />
+                </Box>
             }
-        </>
+        </Layout>
     )
 }
 
