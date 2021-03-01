@@ -26,6 +26,7 @@ module.exports = {
       },
     ],
   ],
+
   themeConfig: {
     image:"img/metaImgBlack.png",
     footer: {},
