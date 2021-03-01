@@ -152,11 +152,13 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
         {isMobile && 
           <>
             <Box className="imgLogoBoxMobile">
-              <img
-                className="imgLogoScroll"
-                src={useBaseUrl("img/logos/eoscr-logo.png")}
-                alt="EOS CR LOGO"
-              />
+              <a href={useBaseUrl("/")} alt="EOS CR LOGO">
+                <img
+                  className="imgLogoScroll"
+                  src={useBaseUrl("img/logos/eoscr-logo.png")}
+                  alt="EOS CR LOGO"
+                />
+              </a>
             </Box>
             <Box  className="btnDrawer">
               <IconButton onClick={handlerDrawer}>
@@ -216,11 +218,13 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
           <>
             <Box className="boxLeft">
               <Box  className="imgLogoBox">
-                <img
-                  className={isBlog? "imgLogoScroll": clsx("imgLogo",{["imgLogoScroll"]: trigger})}
-                  src={useBaseUrl("img/logos/eoscr-logo.png")}
-                  alt="EOS CR LOGO"
-                />
+                <a href={useBaseUrl("/")}>
+                  <img
+                    className={isBlog? "imgLogoScroll": clsx("imgLogo",{["imgLogoScroll"]: trigger})}
+                    src={useBaseUrl("img/logos/eoscr-logo.png")}
+                    alt="EOS CR LOGO"
+                  />
+                </a>
               </Box>
             </Box>
             <Box className="boxRight">
