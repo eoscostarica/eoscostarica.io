@@ -18,7 +18,7 @@
 /*Typographys*/
 
 h1 {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -28,7 +28,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -38,7 +38,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -48,7 +48,7 @@ h3 {
 }
 
 h4 {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -58,7 +58,7 @@ h4 {
 }
 
 h5{
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -68,7 +68,7 @@ h5{
 }
 
 h6{
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -78,7 +78,7 @@ h6{
 }
 
 p{
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -105,7 +105,7 @@ a{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-size: 21px;
   width: auto;
@@ -126,7 +126,7 @@ a{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-size: 21px;
   width: auto;
@@ -170,13 +170,13 @@ a{
 }
 
 .blog-wrapper a {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: normal;
   color: #0091FF;
 }
 
 .blog-wrapper h1{
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
@@ -187,7 +187,7 @@ a{
 }
 
 .blog-wrapper h2{
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
@@ -198,7 +198,7 @@ a{
 }
 
 .blog-wrapper h3{
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
@@ -209,7 +209,7 @@ a{
 }
 
 .blog-wrapper h4{
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
@@ -220,7 +220,7 @@ a{
 }
 
 .blog-wrapper p{
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -233,25 +233,25 @@ a{
 
 .blog-wrapper h1 a{
   color: black;
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
 }
 
 .blog-wrapper h2 a{
   color: black;
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
 }
 
 .blog-wrapper h3 a{
   color: black;
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
 }
 
 .blog-wrapper h4 a{
   color: black;
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
 }
 
@@ -558,7 +558,7 @@ input:checked + .slider:before {
 }
 
 .link {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   color: black;
   margin: 0;
   font-weight: bold;
@@ -676,7 +676,7 @@ input:checked + .slider:before {
 }
 
 .h3Footer{
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   color: white;
   font-weight: bold;
   font-size: 20px;
@@ -690,7 +690,7 @@ input:checked + .slider:before {
 }
 
 .body1Footer{
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   color: white;
   font-weight: normal;
   font-stretch: normal;
@@ -702,7 +702,7 @@ input:checked + .slider:before {
 }
 
 .linkFooter{
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, sans-serif;
   color: white;
   font-weight: normal;
   font-stretch: normal;
@@ -1483,7 +1483,7 @@ input:checked + .slider:before {
   }
 
   .blog-wrapper p{
-    font-family: 'Lato', sans-serif;
+    font-family: Lato, sans-serif;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
