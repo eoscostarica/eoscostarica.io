@@ -321,8 +321,12 @@ const Form = () => {
                     "value": email
                   },
                   {
-                    "name": "blockchainpoints",
-                    "value": 25
+                    "name": "company",
+                    "value": companyName
+                  },
+                  {
+                    "name": "score_do_you_need_blockchain",
+                    "value": getFormResults()
                   }
                 ],
                 "context": {
