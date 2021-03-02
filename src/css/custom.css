@@ -643,7 +643,7 @@ input:checked + .slider:before {
   font-family: Lato, sans-serif;
   font-weight: normal;
   color: black;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .linkItem:hover{
