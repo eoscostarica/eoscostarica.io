@@ -416,13 +416,18 @@ const Form = () => {
                             <p>If you have any questions regarding EOSIO and blockchain, please <a href="/contact-us">contact us</a> or go to our <a href="/blog">blog</a>!</p>
                         </Box>            
                         <FormPDF 
+                            isMobile={isMobile}
                             formQuestions={formQuestions} 
                             blockchainPoints={getFormResults()}
                             companyName={companyName}
                             companyIndustry={companyIndustry}
                             companyEmail={email}
+                            GitHubImage={useBaseUrl("img/icons/GitHubIcon.png")}
                             twitterImage={useBaseUrl("img/icons/TwitterIcon.png")}
                             linkedinImage={useBaseUrl("img/icons/LinkedInIcon.png")}
+                            MediumImage={useBaseUrl("img/icons/icon-medium.png")}
+                            YoutubeImage={useBaseUrl("img/icons/YouTubeIcon.png")}
+                            InstramImage={useBaseUrl("img/icons/InstagramIcon.png")}
                         />   
                     </Box>
                 }
