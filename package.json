@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "all-contributors-cli": "^6.19.0"
+    "all-contributors-cli": "^6.19.0",
+    "react-scripts-plugin-no-minify": "^0.4.0"
   }
 }
