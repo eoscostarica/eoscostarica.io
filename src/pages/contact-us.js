@@ -4,6 +4,8 @@ import Layout from "@theme/Layout"
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 import InputBase from '@material-ui/core/InputBase'
+import Snackbar from '@material-ui/core/Snackbar'
+import Alert from '@material-ui/lab/Alert'
 import { withStyles } from '@material-ui/core/styles'
 import { useMediaQuery } from 'react-responsive'
 import { Parallax, Background } from 'react-parallax'
@@ -40,6 +42,7 @@ const ContactUs = () => {
   const [resultsSection, setResultsSection] = useState(false)
 
   const ContactForm = () =>{
+    const [errorMessage, setErrorMessage] = useState(false)
     const [contactForm, setContactForm] = useState(
       {
         email: '',
@@ -49,8 +52,13 @@ const ContactUs = () => {
         additionalComments: ''
       }
     )
+    
     const handleSetField = (field, value) => {
       setContactForm({...contactForm, [field]: value })
+    }
+
+    const handleCloseErrorMessage = () =>{
+      setErrorMessage(false)
     }
 
     const validateEmail = (mail) => {
@@ -61,7 +69,6 @@ const ContactUs = () => {
     const onSubmitForms = async (e) => {
       e.preventDefault()
       sendData();
-      setResultsSection(true)
     }
 
     const sendData = async () => {
@@ -113,7 +120,8 @@ const ContactUs = () => {
           body: JSON.stringify(jsonData)
       };
       const response = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/9018734/68e53955-746e-4e74-9812-68153170bf97', requestOptions);
-      console.log(response)
+      if(response.ok) setResultsSection(true)
+      else setErrorMessage(true)
     }
 
     return(
@@ -189,6 +197,9 @@ const ContactUs = () => {
                   }/>
               </Box>
             </Grid>
+            <Snackbar open={errorMessage} autoHideDuration={4000} onClose={handleCloseErrorMessage}>
+                <Alert severity="error">Something happened! please try again</Alert>
+            </Snackbar>
           </Grid>
         </form>
       </Box>
