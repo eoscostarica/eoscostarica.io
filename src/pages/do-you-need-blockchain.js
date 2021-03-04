@@ -528,7 +528,7 @@ const Form = () => {
     }
 
     const QuestionsSection = () => {
-        const [resultsSection, setResultsSection] = useState(true)
+        const [resultsSection, setResultsSection] = useState(false)
 
         const onSubmitForm = () => {
             setResultsSection(true)
@@ -569,7 +569,7 @@ const Form = () => {
         const [companyName, setCompanyName] = useState()
         const [companyIndustry, setCompanyIndustry] = useState("")
         const [companyCountry, setcompanyCountry] = useState("")
-        const [thanksMessage, setThanksMessage] = useState(true)
+        const [thanksMessage, setThanksMessage] = useState(false)
         const [formError, setFormError] = useState(false)
         
         const handleEmailChange = (e) => {
