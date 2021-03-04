@@ -16,6 +16,8 @@ import InputBase from '@material-ui/core/InputBase'
 import Select from '@material-ui/core/Select'
 import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl'
+import Snackbar from '@material-ui/core/Snackbar'
+import Alert from '@material-ui/lab/Alert'
 
 import FormComponent from './components/FormComponent'
 import FormPDF from './components/FormPDF'
@@ -488,6 +490,7 @@ const GenericInput = withStyles({
 const Form = () => {
     const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
     const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
+
     const refResults = useRef(null)
     
     const getFormResults = () => {
@@ -602,6 +605,7 @@ const Form = () => {
         const [companyCountry, setcompanyCountry] = useState("")
         const [thanksMessage, setThanksMessage] = useState(false)
         const [formError, setFormError] = useState(false)
+        const [errorMessage, setErrorMessage] = useState(false)
         
         const handleEmailChange = (e) => {
             setEmail(e.target.value)
@@ -621,6 +625,10 @@ const Form = () => {
         const handleIndustryChange = (e) => {
             setCompanyIndustry(e.target.value)
             setFormError(false)
+        }
+
+        const handleCloseErrorMessage = () =>{
+            setErrorMessage(false)
         }
 
         const validateEmail = (mail) => {
@@ -650,6 +658,10 @@ const Form = () => {
                     "value": companyCountry
                   },
                   {
+                    "name": "industry",
+                    "value": companyIndustry
+                  },
+                  {
                     "name": "score_do_you_need_blockchain",
                     "value": getFormResults()
                   }
@@ -677,10 +689,10 @@ const Form = () => {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(jsonData)
-            };
-            const response = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/9444166/77354d92-7a10-46b7-b8a9-8ebac6e78f7f', requestOptions);
-             
-            setThanksMessage(true)
+            }
+            const response = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/9018734/7c668857-b92d-48f8-ad46-94c5a9c2cc86', requestOptions)
+            if(response.ok) setThanksMessage(true)
+            else setErrorMessage(true)
         }
         
         return(
@@ -773,6 +785,9 @@ const Form = () => {
                                     }/>
                                 </Box>
                             </Grid>
+                            <Snackbar open={errorMessage} autoHideDuration={4000} onClose={handleCloseErrorMessage}>
+                                <Alert severity="error">Something happened! please try again</Alert>
+                            </Snackbar>
                         </Grid>
                     </form>
                 }
