@@ -431,7 +431,26 @@ const countryList = [
 	"Åland Islands"
 ]
 
-const industryList = [ ]
+const industryList = [
+    'Accommodation & Food Services',
+    'Administration, Business Support & Waste Management Services',
+    'Agriculture, Forestry, Fishing & Hunting',
+    'Arts, Entertainment & Recreation',
+    'Construction',
+    'Educational Services',
+    'Finance & Insurance',
+    'Healthcare & Social Assistance',
+    'Information',
+    'Manufacturing',
+    'Mining',
+    'Professional, Scientific & Technical Services',
+    'Real Estate & Rental & Leasing',
+    'Retail Trade',
+    'Transportation & Warehousing',
+    'Utilities',
+    'Wholesale Trade',
+    'Other Services'
+]
 
 const GenericInput = withStyles({
     root: {
