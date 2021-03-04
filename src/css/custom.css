@@ -1,11 +1,24 @@
 
 /*Fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@font-face {
+  font-family: 'Lato';
+  src:  url('/fonts/Lato-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
 
+@font-face {
+  font-family: 'Lato';
+  src: url('/fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+:root {
+  --ifm-font-family-base: 'Lato';
+}
 /*Typographys*/
 
 h1 {
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -15,7 +28,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -25,7 +38,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -35,7 +48,7 @@ h3 {
 }
 
 h4 {
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -45,7 +58,7 @@ h4 {
 }
 
 h5{
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -55,7 +68,7 @@ h5{
 }
 
 h6{
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -180,7 +193,7 @@ a{
 }
 
 .blog-wrapper h1{
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
@@ -191,7 +204,7 @@ a{
 }
 
 .blog-wrapper h2{
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
@@ -202,7 +215,7 @@ a{
 }
 
 .blog-wrapper h3{
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
@@ -213,7 +226,7 @@ a{
 }
 
 .blog-wrapper h4{
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
   font-weight: bold;
   font-stretch: normal;
@@ -237,25 +250,25 @@ a{
 
 .blog-wrapper h1 a{
   color: black;
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
 }
 
 .blog-wrapper h2 a{
   color: black;
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
 }
 
 .blog-wrapper h3 a{
   color: black;
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
 }
 
 .blog-wrapper h4 a{
   color: black;
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: bold;
 }
 
@@ -281,7 +294,7 @@ a{
   font-weight: bold;
   top: 0;
   transition: 0.2s;
-  height: 80px;
+  height: 100px;
   margin: 0 auto;
 }
 
@@ -345,7 +358,7 @@ a{
   z-index: 300;
   position: absolute;
   right: 0;
-  top: 5px;
+  top: 15px;
   font-size: 11px;
   font-weight: 500;
 }
@@ -353,15 +366,14 @@ a{
 .switch {
   position: relative;
   display: inline-block;
-  width: 28px;
-  height: 16px;
+  width: 27px;
+  height: 15px;
 }
 
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
-  background-color: #5484b3;
   background-color: #5484b3;
 }
 
@@ -372,7 +384,8 @@ a{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #5484b3;
+  border: solid 1px #5484b3;
+  background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -380,13 +393,27 @@ a{
 .slider:before {
   position: absolute;
   content: "";
-  height: 12px;
-  width: 12px;
-  left: 3px;
-  bottom: 2px;
-  background-color: white;
+  height: 11px;
+  width: 11px;
+  left: 2px;
+  bottom: 1px;
+  background-color: #5484b3;
   -webkit-transition: .4s;
   transition: .4s;
+}
+
+.languageLabel{
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  color: gray;
+}
+
+.languageLabelActive{
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  color: #5484b3;
 }
 
 input:checked + .slider:before {
@@ -408,7 +435,7 @@ input:checked + .slider:before {
   position: absolute;
   right: 0;
   top: 0;
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: flex-end;
 }
@@ -417,7 +444,7 @@ input:checked + .slider:before {
   position: relative;
   cursor: pointer;
   margin-left: 20px;
-  height: 80px;
+  height: 100px;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -500,7 +527,7 @@ input:checked + .slider:before {
   position: absolute;
   display: block;
   visibility: hidden;
-  top: 50px;
+  top: 60px;
 }
 
 .dropDownMenu:after {
@@ -522,7 +549,7 @@ input:checked + .slider:before {
   position: absolute;
   display: block;
   visibility: hidden;
-  top: 50px;
+  top: 60px;
 }
 
 .dropDownMenuActive:after {
@@ -562,7 +589,7 @@ input:checked + .slider:before {
 }
 
 .link {
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   color: black;
   margin: 0;
   font-weight: bold;
@@ -580,7 +607,7 @@ input:checked + .slider:before {
   left: 0;
   height: 5px;
   width: 0;
-  bottom: 25px;
+  bottom: 35px;
   background:#5484b3;
   transition-property: width;
   transition-duration: 0.3s;
@@ -600,7 +627,7 @@ input:checked + .slider:before {
   left: 0;
   height: 5px;
   width: 100%;
-  bottom: 25px;
+  bottom: 35px;
   background:#5484b3;
   transition-property: width;
   transition-duration: 0.3s;
@@ -625,13 +652,28 @@ input:checked + .slider:before {
 }
 
 .drawerContent{
-  width: 45vw;
+  width: 65vw;
+}
+
+.linkGruopBox{
+  margin-top: 15px;
+}
+
+.linkGruopLabel{
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  margin-left: 20px;
+  opacity: .6;
+  color: black;
+  font-weight: bold;
 }
 
 .linkItem{
+  font-family: Lato, sans-serif;
+  font-weight: normal;
   color: black;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .linkItem:hover{
@@ -653,11 +695,26 @@ input:checked + .slider:before {
   overflow-x: hidden;
 }
 
+.footerCopy{
+  width: "100%";
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footerCopyContent{
+  width: 1100px;
+  display: flex;
+}
+
 .footerContent{
   width: 1100px;
   display: flex;
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .boxTitle{
@@ -665,15 +722,21 @@ input:checked + .slider:before {
 }
 
 .h3Footer{
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   color: white;
   font-weight: bold;
   font-size: 20px;
   letter-spacing: -0.06px;
 }
 
+.hs-richtext{
+  line-height: 24px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
 .body1Footer{
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   color: white;
   font-weight: normal;
   font-stretch: normal;
@@ -685,7 +748,7 @@ input:checked + .slider:before {
 }
 
 .linkFooter{
-  font-family: 'Gotham',Lato, sans-serif;
+  font-family: Lato, sans-serif;
   color: white;
   font-weight: normal;
   font-stretch: normal;
@@ -784,6 +847,11 @@ input:checked + .slider:before {
 
 .specialH3Box{
   margin-bottom: 1rem;
+}
+
+.footerTitle{
+  margin-top: 4rem;
+  margin-bottom: 0;
 }
 
 .buttonBox{
@@ -951,6 +1019,12 @@ input:checked + .slider:before {
   align-items: center;
 }
 
+.leftBox{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 /*Team*/
 
 .avatarBox{
@@ -1029,10 +1103,13 @@ input:checked + .slider:before {
   padding-top: 100px
 }
 
+.mediumPaddingTop{
+  padding-top: 50px
+}
+
 .litlePaddingTop{
   padding-top: 18px
 }
-
 
 .displayLine{
   display: none
@@ -1084,6 +1161,10 @@ input:checked + .slider:before {
   margin-top: -35px
 }
 
+.litleMarginTop {
+  margin-top: 20px;
+}
+
 .specialButton{
   width: 100%;
 }
@@ -1125,13 +1206,11 @@ input:checked + .slider:before {
 }
 
 .footerLogo {
-  width: 300px;
-  height: 90px;
+  width: 100%;
 }
 
-.footerLogoAnimation{
-  transition: all .9s ease-in-out;
-  transform: scale(0.87);
+.footerBadge {
+  width: 50%;
 }
 
 .teamPadding{
@@ -1246,7 +1325,7 @@ input:checked + .slider:before {
   overflow: hidden;
 }
 
-.button-glow {
+.button-glow{
   height:'70px';
   width:'150px';
 }
@@ -1257,6 +1336,22 @@ input:checked + .slider:before {
 
 .reduceMargin{
   margin: 20px;
+}
+
+.marginIconsFooter{
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+.inputFooter{
+  width: 75%;
+  padding: 13px;
+  padding-top: 11.5px;
+  margin-right: 5px;
+  display: inline-block;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 1279px) {
@@ -1291,13 +1386,11 @@ input:checked + .slider:before {
   .sectionPadding{
     width: 960px;
   }
-
 }
 
 @media only screen and (max-width: 960px) {
   .footerLogo {
-    width: 300px;
-    height: 110px;
+    width: 50%;
   }
   
   .footerLogoBox{
@@ -1306,15 +1399,18 @@ input:checked + .slider:before {
   }
 
   .h3Footer{
-    text-align: center;
+    text-align: start;
+    font-size: 18px;
   }
 
   .body1Footer{
-    text-align: center;
+    text-align: start;
+    font-size: 16px;
   }
 
   .linkFooter{
-    text-align: center;
+    text-align: start;
+    font-size: 16px;
   }
 
   .buttonBox{
@@ -1613,15 +1709,27 @@ input:checked + .slider:before {
     text-indent: 0;
     padding-left: 25px;
   }
-
-  .itemQuestionRadio{
-    margin-right: 0;
-  }
-
+  
   .inputFormBox{
     width: '100%';
     padding-left: 25px;
     padding-right: 25px;
   }
 
+  .footerCopyContent{
+    justify-content: center;
+  }
+
+  .marginIconsFooter{
+    margin: 18px;
+  }
+
+}
+
+@media only screen and (max-width: 360px) {
+
+  .inputFooter{
+    width: 67%;
+    margin-right: 0;
+  }
 }

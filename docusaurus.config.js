@@ -1,5 +1,4 @@
 const path = require('path')
-
 module.exports = {
   title: 'EOSIO Enterprise Blockchain Development Services -  EOS Costa Rica',
   tagline: '',

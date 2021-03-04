@@ -72,7 +72,7 @@ const DevelopTeam = [
         img:"img/team/adriel.jpg",
         name:"Adriel Diaz",
         position:"Full Stack Developer",
-        bio:"",
+        bio:"Proud father and full stack developer",
         linkedIn:"https://www.linkedin.com/in/adriel-d%C3%ADaz-08226384/",
         twitter:"",
         color:"#f8f8f8"
@@ -198,7 +198,7 @@ const DevelopTeam = [
         img:"",
         name:"Victor Julio Madrigal",
         position:"Web Developer",
-        bio:"",
+        bio:"What I like the most is to develop innovative projects that move forward with the newest technologies.",
         linkedIn:"",
         twitter:"",
         color:"#f8f8f8"
