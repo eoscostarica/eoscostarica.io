@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react"
 import { Parallax, Background } from 'react-parallax'
 import { useMediaQuery } from 'react-responsive'
+import { withStyles } from '@material-ui/core/styles'
 import Layout from "@theme/Layout"
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
@@ -11,6 +12,10 @@ import TwitterIcon from '@material-ui/icons/Twitter'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import useBaseUrl from "@docusaurus/useBaseUrl"
+import InputBase from '@material-ui/core/InputBase'
+import Select from '@material-ui/core/Select'
+import MenuItem from '@material-ui/core/MenuItem'
+import FormControl from '@material-ui/core/FormControl'
 
 import FormComponent from './components/FormComponent'
 import FormPDF from './components/FormPDF'
@@ -168,11 +173,286 @@ const formQuestions = [
     }
 ]
 
-const MetaData={
+const metaData={
     title:"Do You Need Blockchain? - FREE Guide for Enterprise Blockchain",
     description:"Is your company ready to implement blockchain? Find out using this simple tool for FREE! Designed by EOS Costa Rica – a blockchain development company.",
     img:"img/metaImgBlack.png",
-  }
+}
+
+const countryList = [
+	"Afghanistan",
+	"Albania",
+	"Algeria",
+	"American Samoa",
+	"Andorra",
+	"Angola",
+	"Anguilla",
+	"Antarctica",
+	"Antigua and Barbuda",
+	"Argentina",
+	"Armenia",
+	"Aruba",
+	"Australia",
+	"Austria",
+	"Azerbaijan",
+	"Bahamas (the)",
+	"Bahrain",
+	"Bangladesh",
+	"Barbados",
+	"Belarus",
+	"Belgium",
+	"Belize",
+	"Benin",
+	"Bermuda",
+	"Bhutan",
+	"Bolivia (Plurinational State of)",
+	"Bonaire, Sint Eustatius and Saba",
+	"Bosnia and Herzegovina",
+	"Botswana",
+	"Bouvet Island",
+	"Brazil",
+	"British Indian Ocean Territory (the)",
+	"Brunei Darussalam",
+	"Bulgaria",
+	"Burkina Faso",
+	"Burundi",
+	"Cabo Verde",
+	"Cambodia",
+	"Cameroon",
+	"Canada",
+	"Cayman Islands (the)",
+	"Central African Republic (the)",
+	"Chad",
+	"Chile",
+	"China",
+	"Christmas Island",
+	"Cocos (Keeling) Islands (the)",
+	"Colombia",
+	"Comoros (the)",
+	"Congo (the Democratic Republic of the)",
+	"Congo (the)",
+	"Cook Islands (the)",
+	"Costa Rica",
+	"Croatia",
+	"Cuba",
+	"Curaçao",
+	"Cyprus",
+	"Czechia",
+	"Côte d'Ivoire",
+	"Denmark",
+	"Djibouti",
+	"Dominica",
+	"Dominican Republic (the)",
+	"Ecuador",
+	"Egypt",
+	"El Salvador",
+	"Equatorial Guinea",
+	"Eritrea",
+	"Estonia",
+	"Eswatini",
+	"Ethiopia",
+	"Falkland Islands (the) [Malvinas]",
+	"Faroe Islands (the)",
+	"Fiji",
+	"Finland",
+	"France",
+	"French Guiana",
+	"French Polynesia",
+	"French Southern Territories (the)",
+	"Gabon",
+	"Gambia (the)",
+	"Georgia",
+	"Germany",
+	"Ghana",
+	"Gibraltar",
+	"Greece",
+	"Greenland",
+	"Grenada",
+	"Guadeloupe",
+	"Guam",
+	"Guatemala",
+	"Guernsey",
+	"Guinea",
+	"Guinea-Bissau",
+	"Guyana",
+	"Haiti",
+	"Heard Island and McDonald Islands",
+	"Holy See (the)",
+	"Honduras",
+	"Hong Kong",
+	"Hungary",
+	"Iceland",
+	"India",
+	"Indonesia",
+	"Iran (Islamic Republic of)",
+	"Iraq",
+	"Ireland",
+	"Isle of Man",
+	"Israel",
+	"Italy",
+	"Jamaica",
+	"Japan",
+	"Jersey",
+	"Jordan",
+	"Kazakhstan",
+	"Kenya",
+	"Kiribati",
+	"Korea (the Democratic People's Republic of)",
+	"Korea (the Republic of)",
+	"Kuwait",
+	"Kyrgyzstan",
+	"Lao People's Democratic Republic (the)",
+	"Latvia",
+	"Lebanon",
+	"Lesotho",
+	"Liberia",
+	"Libya",
+	"Liechtenstein",
+	"Lithuania",
+	"Luxembourg",
+	"Macao",
+	"Madagascar",
+	"Malawi",
+	"Malaysia",
+	"Maldives",
+	"Mali",
+	"Malta",
+	"Marshall Islands (the)",
+	"Martinique",
+	"Mauritania",
+	"Mauritius",
+	"Mayotte",
+	"Mexico",
+	"Micronesia (Federated States of)",
+	"Moldova (the Republic of)",
+	"Monaco",
+	"Mongolia",
+	"Montenegro",
+	"Montserrat",
+	"Morocco",
+	"Mozambique",
+	"Myanmar",
+	"Namibia",
+	"Nauru",
+	"Nepal",
+	"Netherlands (the)",
+	"New Caledonia",
+	"New Zealand",
+	"Nicaragua",
+	"Niger (the)",
+	"Nigeria",
+	"Niue",
+	"Norfolk Island",
+	"Northern Mariana Islands (the)",
+	"Norway",
+	"Oman",
+	"Pakistan",
+	"Palau",
+	"Palestine, State of",
+	"Panama",
+	"Papua New Guinea",
+	"Paraguay",
+	"Peru",
+	"Philippines (the)",
+	"Pitcairn",
+	"Poland",
+	"Portugal",
+	"Puerto Rico",
+	"Qatar",
+	"Republic of North Macedonia",
+	"Romania",
+	"Russian Federation (the)",
+	"Rwanda",
+	"Réunion",
+	"Saint Barthélemy",
+	"Saint Helena, Ascension and Tristan da Cunha",
+	"Saint Kitts and Nevis",
+	"Saint Lucia",
+	"Saint Martin (French part)",
+	"Saint Pierre and Miquelon",
+	"Saint Vincent and the Grenadines",
+	"Samoa",
+	"San Marino",
+	"Sao Tome and Principe",
+	"Saudi Arabia",
+	"Senegal",
+	"Serbia",
+	"Seychelles",
+	"Sierra Leone",
+	"Singapore",
+	"Sint Maarten (Dutch part)",
+	"Slovakia",
+	"Slovenia",
+	"Solomon Islands",
+	"Somalia",
+	"South Africa",
+	"South Georgia and the South Sandwich Islands",
+	"South Sudan",
+	"Spain",
+	"Sri Lanka",
+	"Sudan (the)",
+	"Suriname",
+	"Svalbard and Jan Mayen",
+	"Sweden",
+	"Switzerland",
+	"Syrian Arab Republic",
+	"Taiwan",
+	"Tajikistan",
+	"Tanzania, United Republic of",
+	"Thailand",
+	"Timor-Leste",
+	"Togo",
+	"Tokelau",
+	"Tonga",
+	"Trinidad and Tobago",
+	"Tunisia",
+	"Turkey",
+	"Turkmenistan",
+	"Turks and Caicos Islands (the)",
+	"Tuvalu",
+	"Uganda",
+	"Ukraine",
+	"United Arab Emirates (the)",
+	"United Kingdom of Great Britain and Northern Ireland (the)",
+	"United States Minor Outlying Islands (the)",
+	"United States of America (the)",
+	"Uruguay",
+	"Uzbekistan",
+	"Vanuatu",
+	"Venezuela (Bolivarian Republic of)",
+	"Viet Nam",
+	"Virgin Islands (British)",
+	"Virgin Islands (U.S.)",
+	"Wallis and Futuna",
+	"Western Sahara",
+	"Yemen",
+	"Zambia",
+	"Zimbabwe",
+	"Åland Islands"
+]
+
+const industryList = [ ]
+
+const GenericInput = withStyles({
+    root: {
+        width: '100%',
+        padding:'10px',
+        border: 'solid 1px gray',
+    },
+    input:{
+        fontFamily: 'Lato',
+        fontSize: 19,
+        fontWeight: 'normal',
+        '&:-webkit-autofill': {
+            transitionDelay: '9999s',
+            transitionProperty: 'background-color, color',
+        },
+    },
+    focused:{
+        border: 'solid 1px #5484b3'
+    }
+  })((props) => <InputBase {...props} />);
+
 
 const Form = () => {
     const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
@@ -220,8 +500,7 @@ const Form = () => {
                                 </p>
                             </Box>
                         }
-                       
-                </Box>
+                    </Box>
                 }
                 {isMobile && 
                     <Box className="sectionHeroMobile">
@@ -249,7 +528,7 @@ const Form = () => {
     }
 
     const QuestionsSection = () => {
-        const [resultsSection, setResultsSection] = useState(false)
+        const [resultsSection, setResultsSection] = useState(true)
 
         const onSubmitForm = () => {
             setResultsSection(true)
@@ -289,7 +568,8 @@ const Form = () => {
         const [email, setEmail] = useState()
         const [companyName, setCompanyName] = useState()
         const [companyIndustry, setCompanyIndustry] = useState("")
-        const [thanksMessage, setThanksMessage] = useState(false)
+        const [companyCountry, setcompanyCountry] = useState("")
+        const [thanksMessage, setThanksMessage] = useState(true)
         const [formError, setFormError] = useState(false)
         
         const handleEmailChange = (e) => {
@@ -299,6 +579,16 @@ const Form = () => {
 
         const handleCompanyChange = (e) => {
             setCompanyName(e.target.value)
+            setFormError(false)
+        }
+
+        const handleCountryChange = (e) => {
+            setcompanyCountry(e.target.value)
+            setFormError(false)
+        }
+
+        const handleIndustryChange = (e) => {
+            setCompanyIndustry(e.target.value)
             setFormError(false)
         }
 
@@ -323,6 +613,10 @@ const Form = () => {
                   {
                     "name": "company",
                     "value": companyName
+                  },
+                  {
+                    "name": "country",
+                    "value": companyCountry
                   },
                   {
                     "name": "score_do_you_need_blockchain",
@@ -359,7 +653,7 @@ const Form = () => {
         }
         
         return(
-            <Box className="">
+            <Box>
                 <Box className="spacingBox">
                     <h2>Get the results</h2>
                 </Box>
@@ -375,37 +669,75 @@ const Form = () => {
                         <Grid container spacing={2}>
                             <Grid item xs={12} md={6}>
                                 <label htmlFor="email">Email</label>
-                                <input 
-                                    id="email"
-                                    type="email" 
-                                    className="inputForm" 
-                                    value={email} 
-                                    onChange={handleEmailChange} 
-                                    required 
-                                />
+                                <Box className="inputFormBox">
+                                    <GenericInput id="email" value={email || ''} required  onChange={handleEmailChange} />
+                                </Box>
                             </Grid>
                             <Grid item xs={12} md={6}>
                                 <label htmlFor="company">Company name</label>
-                                <input 
-                                    id="company"
-                                    type="text" 
-                                    className="inputForm" 
-                                    value={companyName} 
-                                    onChange={handleCompanyChange} 
-                                    required 
-                                />
+                                <Box className="inputFormBox">
+
+                                    <GenericInput id="company" value={companyName || ''} required  onChange={handleCompanyChange} />
+                                </Box>
+                            </Grid>
+                            <Grid item xs={12} md={6}>
+                                <label htmlFor="industry">Country</label>
+                                <Box className="inputFormBox">
+                                    <FormControl variant="outlined" style={{width: '100%'}} >
+                                            <Select
+                                                style={{width:'100%'}} 
+                                                input={ <GenericInput />}
+                                                value={companyCountry}
+                                                onChange={handleCountryChange}
+                                            >
+                                                {countryList.map((item) =>
+                                                <MenuItem 
+                                                    key={item} 
+                                                    value={item}
+                                                    style={{fontFamily: 'Lato',fontSize: 19,}}
+                                                >
+                                                    {item}
+                                                </MenuItem>)}
+                                            </Select>
+                                    </FormControl>
+                                </Box>
+                            </Grid>
+                            <Grid item xs={12} md={6}>
+                                <label htmlFor="industry">Industry</label>
+                                <Box className="inputFormBox">
+                                    <FormControl variant="outlined" style={{width: '100%'}} >
+                                        <Select 
+                                            style={{width:'100%'}} 
+                                            input={ <GenericInput />}
+                                            value={companyIndustry}
+                                            onChange={handleIndustryChange}
+                                        >
+                                            {industryList.map((item) =>
+                                            <MenuItem 
+                                                key={item} 
+                                                value={item}
+                                                style={{fontFamily: 'Lato',fontSize: 19,}}
+                                            >
+                                                {item}
+                                            </MenuItem>
+                                            )}
+                                        </Select>
+                                    </FormControl>
+                                </Box>
                             </Grid>
                             {formError && 
                                 <Grid item xs={12} md={12}>
                                     <p style={{color:'red'}}>Invalid email, please check fields and try again</p>
                                 </Grid>
                             }
-                            <Grid item xs={12} md={2}>
+                            <Grid item xs={12} md={12}>
                                 <Box className={isMobile ? "centerBox" : ""}>   
                                     <input type="submit" className="buttonPrimary" value="Submit" 
                                     disabled={
                                         !email ||
                                         !companyName ||
+                                        !companyIndustry ||
+                                        !companyCountry ||
                                         !validateEmail(email)
                                     }/>
                                 </Box>
@@ -487,9 +819,9 @@ const Form = () => {
 
     return (
         <Layout
-            title={MetaData.title}
-            description={MetaData.description}
-            image={MetaData.img}
+            title={metaData.title}
+            description={metaData.description}
+            image={metaData.img}
         >
             {isDesktop &&
                 <Box className="mainContainer">

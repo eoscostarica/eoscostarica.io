@@ -6,89 +6,89 @@ import {Page, Link, Text,Image, View, Document, StyleSheet, pdf } from '@react-p
 
 const styles = StyleSheet.create({
     page: {
-      backgroundColor: 'white',
-      padding:50
+        backgroundColor: 'white',
+        padding: 50
     },
     header:{
-        height:'80px',
-        marginBottom:'30px',
+        height: '80px',
+        marginBottom: '30px',
         flexDirection: 'row',
     },
     headerLeft:{
         flexDirection: 'column',
-        width:"30%",
+        width: "30%",
     },
     headerRight:{
-        width:"70%",
+        width: "70%",
         flexDirection: 'column',
     },
     headerText:{
-        width:'100%',
-        fontFamily:'Helvetica',
+        width: '100%',
+        fontFamily: 'Helvetica',
         fontWeight: 'normal',
-        textAlign:'right',
-        fontSize:13,
+        textAlign: 'right',
+        fontSize: 13,
     },
     headerTextBold:{
-        width:'100%',
-        fontFamily:'Helvetica-Bold',
+        width: '100%',
+        fontFamily: 'Helvetica-Bold',
         fontWeight: 'bold',
-        textAlign:'right',
-        fontSize:13,
+        textAlign: 'right',
+        fontSize: 13,
     },
     image:{
-        width:'100%'
+        width: '100%'
     },
     subHeader:{
-        marginBottom:'30px'
+        marginBottom: '30px'
     },
     pointBox:{
         borderWidth: 2,
         borderColor: 'black',
-        padding:10,
-        marginBottom:'30px'
+        padding: 10,
+        marginBottom: '30px'
     },
     textPointsBold:{
-        fontFamily:'Helvetica-Bold',
+        fontFamily: 'Helvetica-Bold',
         fontWeight: 'bold',
-        textAlign:'left',
-        fontSize:13,
+        textAlign: 'left',
+        fontSize: 13,
     },
     h1:{
-        fontFamily:'Helvetica-Bold',
+        fontFamily: 'Helvetica-Bold',
         fontWeight: 'bold',
-        fontSize:25,
-        marginBottom:'10px'
+        fontSize: 25,
+        marginBottom: '10px'
     },
     p:{
         fontFamily:'Helvetica',
         fontWeight: 'normal',
-        textAlign:'justify',
-        fontSize:12,
-        lineHeight:1.5
+        textAlign: 'justify',
+        fontSize: 12,
+        lineHeight: 1.5
     },
     linkText:{
-        color:'#0091FF',
-        textDecoration:'none'
+        color: '#0091FF',
+        textDecoration: 'none'
     },
     paragraphSection:{
-        marginBottom:'10px'
+        marginBottom: '10px'
     },
     actionButtons:{
-        display:'flex',
+        display: 'flex',
         flexDirection: 'row',
-        alignItems:'flex-start',
-        marginBottom:'30px'
+        alignItems: 'flex-start',
+        marginBottom: '30px'
     },
     mainButton:{
         fontFamily:'Helvetica-Bold',
         fontWeight: 'bold',
         fontSize:15,
         backgroundColor: '#5484b3',
-        width:'150px',
-        color:'white',
-        textDecoration:'none',
-        padding:'20px'
+        width: '150px',
+        color: 'white',
+        textDecoration: 'none',
+        padding: '20px'
     },
     socialButtonsBox:{
         marginTop:'10px',
@@ -100,33 +100,38 @@ const styles = StyleSheet.create({
     },  
     socialButton:{
         flexDirection: 'column',
-        width:'25px',
-        height:'25px',
-        marginRight:"20px"
+        width: '25px',
+        height: '25px',
+        marginRight: '20px'
     },
     h2:{
-        fontFamily:'Helvetica-Bold',
+        fontFamily: 'Helvetica-Bold',
         fontWeight: 'bold',
-        fontSize:18,
-        marginBottom:'15px'
+        fontSize: 18,
+        marginBottom: '15px'
     },
     h3:{
-        fontFamily:'Helvetica-Bold',
+        fontFamily: 'Helvetica-Bold',
         fontWeight: 'bold',
-        fontSize:12,
+        fontSize: 12,
         marginBottom:'10px'
     },
     section:{
-        marginBottom:'20px',
+        marginBottom:' 20px',
     },
     titleSection:{
         fontFamily:'Helvetica-Bold',
         fontWeight: 'bold',
-        fontSize:13,
+        fontSize: 13,
         marginBottom:'10px'
     },
     spacingBox:{
-        marginBottom: '15 px'
+        marginBottom: '15px'
+    },
+    footer:{
+        position: 'absolute',
+        bottom: 50,
+        left: 50
     }
 })
 
@@ -334,7 +339,7 @@ const FormPDF = ( {
                     <Image src={InstramImage}/>
                 </Link>
             </View>
-            <View>
+            <View style={styles.footer}>
                 <Text style={styles.p}>Made by EOS Costa Rica, v.1, 2021</Text>
             </View>
           </Page>
