@@ -264,7 +264,7 @@ a{
   font-weight: bold;
   top: 0;
   transition: 0.2s;
-  height: 80px;
+  height: 100px;
   margin: 0 auto;
 }
 
@@ -328,7 +328,7 @@ a{
   z-index: 300;
   position: absolute;
   right: 0;
-  top: 5px;
+  top: 15px;
   font-size: 11px;
   font-weight: 500;
 }
@@ -336,15 +336,14 @@ a{
 .switch {
   position: relative;
   display: inline-block;
-  width: 28px;
-  height: 16px;
+  width: 27px;
+  height: 15px;
 }
 
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
-  background-color: #5484b3;
   background-color: #5484b3;
 }
 
@@ -355,7 +354,8 @@ a{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #5484b3;
+  border: solid 1px #5484b3;
+  background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -363,13 +363,27 @@ a{
 .slider:before {
   position: absolute;
   content: "";
-  height: 12px;
-  width: 12px;
-  left: 3px;
-  bottom: 2px;
-  background-color: white;
+  height: 11px;
+  width: 11px;
+  left: 2px;
+  bottom: 1px;
+  background-color: #5484b3;
   -webkit-transition: .4s;
   transition: .4s;
+}
+
+.languageLabel{
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  color: gray;
+}
+
+.languageLabelActive{
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  color: #5484b3;
 }
 
 input:checked + .slider:before {
@@ -391,7 +405,7 @@ input:checked + .slider:before {
   position: absolute;
   right: 0;
   top: 0;
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: flex-end;
 }
@@ -400,7 +414,7 @@ input:checked + .slider:before {
   position: relative;
   cursor: pointer;
   margin-left: 20px;
-  height: 80px;
+  height: 100px;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -483,7 +497,7 @@ input:checked + .slider:before {
   position: absolute;
   display: block;
   visibility: hidden;
-  top: 50px;
+  top: 60px;
 }
 
 .dropDownMenu:after {
@@ -505,7 +519,7 @@ input:checked + .slider:before {
   position: absolute;
   display: block;
   visibility: hidden;
-  top: 50px;
+  top: 60px;
 }
 
 .dropDownMenuActive:after {
@@ -563,7 +577,7 @@ input:checked + .slider:before {
   left: 0;
   height: 5px;
   width: 0;
-  bottom: 25px;
+  bottom: 35px;
   background:#5484b3;
   transition-property: width;
   transition-duration: 0.3s;
@@ -583,7 +597,7 @@ input:checked + .slider:before {
   left: 0;
   height: 5px;
   width: 100%;
-  bottom: 25px;
+  bottom: 35px;
   background:#5484b3;
   transition-property: width;
   transition-duration: 0.3s;
@@ -608,13 +622,28 @@ input:checked + .slider:before {
 }
 
 .drawerContent{
-  width: 45vw;
+  width: 65vw;
+}
+
+.linkGruopBox{
+  margin-top: 15px;
+}
+
+.linkGruopLabel{
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  margin-left: 20px;
+  opacity: .6;
+  color: black;
+  font-weight: bold;
 }
 
 .linkItem{
+  font-family: Lato, sans-serif;
+  font-weight: normal;
   color: black;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .linkItem:hover{
