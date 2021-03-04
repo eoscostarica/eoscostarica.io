@@ -1,29 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Lottie  from 'react-lottie';
-import animationData from './payments.json';
+import React from 'react'
+import Lottie  from 'react-lottie'
+import animationData from './payments.json'
 
-const Payments = ({
-  state
-}) => {
+const Payments = ({ isDesktop }) => {
   const defaultOptions = {
-    loop: 4,
-    autoplay: state,
+    loop: true,
+    autoplay: true,
     animationData: animationData
   };
 
   return (
     <Lottie
       options={defaultOptions}
-      width='225px'
-      height='225px'
-      style={{marginTop:'110px'}}
+      width={isDesktop ? '70%' : '100%'}
+      height={isDesktop ? '100%' : '100%'}
     />
   );
-}
-
-Payments.propTypes = {
-  state: PropTypes.bool
 }
 
 export default Payments;

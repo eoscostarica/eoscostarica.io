@@ -1,29 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Lottie  from 'react-lottie';
-import animationData from './logistic.json';
+import React from 'react'
+import Lottie  from 'react-lottie'
+import animationData from './logistic.json'
 
-const Logistic = ({
-  state
-}) => {
+const Logistic = ({ isDesktop }) => {
   const defaultOptions = {
-    loop: 5,
-    autoplay: state,
+    loop: true,
+    autoplay: true,
     animationData: animationData
   };
 
   return (
     <Lottie
       options={defaultOptions}
-      width='250px'
-      height='250px'
-      style={{marginTop:'115px'}}
+      width={isDesktop ? '90%' : '60%'}
     />   
   );
-}
-
-Logistic.propTypes = {
-  state: PropTypes.bool
 }
 
 export default Logistic;

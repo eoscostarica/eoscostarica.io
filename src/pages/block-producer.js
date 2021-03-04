@@ -1,56 +1,85 @@
-import React from "react";
-import clsx from "clsx";
-import Layout from "@theme/Layout";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import React from "react"
+import { useHistory } from 'react-router-dom'
+import clsx from "clsx"
+import Layout from "@theme/Layout"
+import { useMediaQuery } from 'react-responsive'
+import { Parallax, Background } from 'react-parallax'
+import useBaseUrl from "@docusaurus/useBaseUrl"
+import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import { ThemeProvider } from '@material-ui/core/styles';
-import Theme from '../theme/index';
+import InstagramIcon from '@material-ui/icons/Instagram'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import TwitterIcon from '@material-ui/icons/Twitter'
+import YouTubeIcon from '@material-ui/icons/YouTube'
+import GitHubIcon from '@material-ui/icons/GitHub'
 
-import styles from "./styles.module.css";
-import useStyles from "../css/styles.js"
+import AdditionalResources from './components/AdditionalResources'
+import ContactUsBanner from './components/ContactUsBanner'
+
+const MetaData={
+  title:"EOS Costa Rica: Block Producer",
+  description:"Get to know EOS Costa Rica – a technically proven EOS block producer candidate that develops dapps and smart contracts.",
+  img:"img/metaImgBlack.png",
+}
 
 const BlockProducer = () => {
-  const classes = useStyles()
-  return(
-    <Layout>
-      <ThemeProvider theme={Theme}>
-        <Box className={styles.mainContainer}>
-          <Box className={clsx("container", styles.noPadding)}>
-            <Box
-              className={clsx(styles.bpTopBox)}
-            >
-              <Box>
-                <img
-                  className={styles.logoMobile}
-                  src={useBaseUrl("img/eoscr-logo.png")}
-                  alt="EOS CR LOGO"
-                />
-                <Box className={classes.sectionHero}>
-                <Box className={classes.titleBox}>
-                  <Typography className={classes.h1}>
-                    EOS Block Producer
-                  </Typography>                    
-                </Box>
-                  <Typography className={classes.body1}>
-                    Learn more about how we help to develop the EOSIO blockchain
-                    ecosystem worldwide.
-                  </Typography>
-                <Box className={classes.buttonBox}>
-                  <Button className={classes.buttonPrimary} href={useBaseUrl("/contact-us")}>
-                    Contact us
-                  </Button>
-                </Box>
-              </Box>
-              </Box>
+  const history = useHistory()
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
+
+  const HeroSection = () => {
+    return (
+      <Box className="containerSec">
+        {isDesktop && 
+          <Box className="sectionHero">
+          <Box className="titleBox">
+            <h1>EOS Block Producer</h1>
+          </Box>
+          <p >
+            We are one of the first companies in Latin America to deploy the EOSIO
+            protocol. Innovation is in our DNA. We seek new opportunities to leverage this technology for 
+            enterprise use to solve real-world problems. Learn more about how we help to develop the
+            EOSIO blockchain ecosystem worldwide.
+          </p>
+          <Box className="buttonBox">
+            <button className="buttonPrimary" onClick={() => window.open('https://t.me/eoscr')} >Connect with us</button>
+          </Box>
+        </Box>
+        }
+        {isMobile && 
+          <Box className="sectionHeroMobile">
+            <Box className="titleBox">
+              <h1>EOS Block Producer</h1>
             </Box>
-            <Box className={clsx(styles.sectionWhite, styles.enterpriceBox)}>
-              <Box className={styles.enterpriceTitleBox}>
-                <Box className={classes.titleBox}>
-                  <Typography className={classes.h2}>Our Story</Typography>
+            <p>
+              We are one of the first companies in Latin America to deploy the EOSIO
+              protocol.
+            <br/>
+            <br/>
+              Innovation is in our DNA. We seek new opportunities to leverage this technology for 
+              enterprise use to solve real-world problems. Learn more about how we help to develop the
+              EOSIO blockchain ecosystem worldwide.  
+            </p>
+            <Box className="buttonBoxMobile"> 
+              <button className="buttonPrimary" onClick={() => history.push(" https://t.me/eoscr")} >Connect with us</button>
+            </Box>
+          </Box>
+        }
+      </Box>
+    )
+  }
+
+  const OurStory = () => {
+    return (
+      <Box className="containerSec">
+        <Box  className={clsx("section",{["sectionPadding"]: isMobile})}>
+          <Box className="spacingBox">
+            <Grid container spacing={5}>
+              <Grid item md={12}>
+                <Box className="titleBox">
+                  <h2>Our Story</h2>
                 </Box>
-                <Typography className={classes.body1}>
+                <p className="body1">
                   EOS Costa Rica is a company spinoff with over three decades of
                   developing technologies in Costa Rica. During the 80s, we launched
                   the first BBS (bulletin board service) in the country, a precursor
@@ -58,160 +87,217 @@ const BlockProducer = () => {
                   users on using email and browsing the web. Then, we started
                   offering internet infrastructure, hosting, and development
                   services.
-                </Typography>
-                <br/>
-                <Typography className={classes.body1}>
+                </p>
+                <br />
+                <p className="body1">
                   In 2013, we began providing infrastructure for public blockchain
                   networks and learned first-hand how blockchains work. Then, in
                   2018 when EOSIO was launched, we investigated the advantages of
                   this technology and started learning how to deploy it in the real
                   world. We were there during the genesis of the EOS Mainnet and
                   will continue to be there throughout its growth.
-                </Typography>
+                </p>
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
+      </Box> 
+    )
+  }
+
+  const OurValues = () => {
+    return (
+      <Box className="containerSec">
+        <Box className="section">
+          <Box className="titleBox">
+            <h2>Our Values</h2>
+          </Box>
+          <br/>
+          <Grid justify="center" container spacing={10}>
+            <Grid item xs={12} md={4}>
+              <Box className="centerBox">
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icons/icon-education.svg")}
+                />
               </Box>
-            </Box>
-            <Box
-              className={clsx(
-                styles.sectionGray,
-                styles.enterpriceBox,
-                styles.flexColumn
-              )}
-            >
-              <Box className={classes.titleBox}>
-                <Typography className={classes.h2}>Our Values</Typography>
+              <Box className={clsx("h3Box","centerText")}>
+                <h4>Ongoing education</h4>
               </Box>
-              <Box className={styles.colBox}>
-                <Box className={styles.enterpriceInfoBox}>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Ongoing education</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    We believe that continuous training and building human talent is
-                    crucial to developing a robust ecosystem.
-                  </Typography>
-                </Box>
-                <Box className={styles.enterpriceInfoBox}>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Loyalty</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    We recognize and acknowledge everyone’s unique talents and seek
-                    to build loyalty by empowering the EOSIO community.
-                  </Typography>
-                </Box>
-              </Box>
-              <Box className={styles.colBox}>
-                <Box className={styles.enterpriceInfoBox}>
-                  <br/>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Resilience</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    Our team evolves alongside technology. We strive to be as nimble
-                    and efficient as possible, which lets us quickly adapt and
-                    implement the newest innovations.
-                  </Typography>
-                </Box>
-                <Box className={styles.enterpriceInfoBox}>
-                  <br/>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Liberty</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    We defend individual sovereignty among the EOS community,
-                    replicating Costa Rica’s premise of freedom and peace as the
-                    lengthiest democracy in Latin America.
-                  </Typography>
-                </Box>
-              </Box>
-              <Box className={styles.colBox}>
-                <Box className={styles.enterpriceInfoBox}>
-                  <br/>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Tolerance</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    Our team advocates for the rights of education,
-                    entrepreneurship, and opportunities for all the members in our
-                    community as a way to develop the ecosystem.
-                  </Typography>
-                </Box>
-                <Box className={styles.enterpriceInfoBox}>
-                  <br/>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Prudence</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    We commit to safeguard our community’s future and take
-                    calculated risks that will bring us further to our long term
-                    goals.
-                  </Typography>
-                </Box>
-              </Box>
-              <Box className={styles.colBox}>
-                <Box className={styles.enterpriceInfoBox}>
-                  <br/>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Accountability</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    We firmly believe and encourage taking full accountability from
-                    our team members and stakeholders. We value transparency and
-                    responsibility.
-                  </Typography>
-                </Box>
-                <Box className={styles.enterpriceInfoBox}>
-                  <br/>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Equality</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    We endorse and defend a governance model guided by merit
-                    principles for our community’s benefit.
-                  </Typography>
-                </Box>
-              </Box>
-            </Box>
-            <Box className={clsx(styles.sectionWhite, styles.industryBox)}>
-              <Box className={classes.titleBox}>
-                <Typography className={classes.h2}>Block Producer Information</Typography>
-              </Box>
-              <Box>
-                <Box className={classes.h3Box}>
-                  <Typography className={classes.h3}>Code of conduct</Typography>
-                  <br/>
-                  <Typography className={classes.h3}>EOS Costa Rica pledges to:</Typography>
-                </Box>
-                <Typography className={classes.body1}>
-                  Provide the highest standard bare-metal infrastructure available
-                  to the EOS ecosystem.
-                </Typography>
-                <Typography className={classes.body1}>
-                  Become an economically sustainable and highly competitive EOS
-                  Block Producer.
-                </Typography>
-                <Typography className={classes.body1}>
-                  Allocate block rewards to EOS educational and development
-                  initiatives. Sponsor dApps and projects for community-led
-                  developments.
-                </Typography>
-                <Typography className={classes.body1}>
-                  Be totally transparent and open when allocating block rewards.
-                  Actively participate in the blockchain governance with an open and
-                  positive attitude.
-                </Typography>
-                <Typography className={classes.body1}>
-                  Respect and defend the constitution, fair elections, community
-                  vigilance, and arbitration mechanisms.
-                </Typography>
-              </Box>
+              <p>
+                We believe that continuous training and building human talent is
+                crucial to developing a robust ecosystem.
+              </p>
               <br/>
-              <Box className={classes.h3Box}>
-                <Typography className={classes.h3} id="ownership-disclosure">
-                  Ownership disclosure
-                </Typography>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className="centerBox">
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icons/icon-loyalty.svg")}
+                />
               </Box>
-              <Typography className={classes.body1}>
+              <Box className={clsx("h3Box","centerText")}>
+                <h4>Loyalty</h4>
+              </Box>
+              <p>
+                We recognize and acknowledge everyone’s unique talents and seek
+                to build loyalty by empowering the EOSIO community.
+              </p>
+              <br/>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className="centerBox">
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icons/icon-equality.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
+                <h4>Equality</h4>
+              </Box>
+              <p>
+                We endorse and defend a governance model guided by merit
+                principles for our community’s benefit.
+              </p>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className="centerBox">
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icons/icon_resilience.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
+                <h4>Resilience</h4>
+              </Box>
+              <p>
+                Our team evolves alongside technology. We strive to be as nimble
+                and efficient as possible, which lets us quickly adapt and
+                implement the newest innovations.
+              </p>
+              <br/>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className="centerBox">
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icons/icon-liberty.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
+                <h4>Liberty</h4>
+              </Box>
+              <p>
+                We defend individual sovereignty among the EOS community,
+                replicating Costa Rica’s premise of freedom and peace as the
+                lengthiest democracy in Latin America.
+              </p>
+              <br/>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className="centerBox">
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icons/icon_tolerance.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
+                <h4>Tolerance</h4>
+              </Box>
+              <p>
+                Our team advocates for the rights of education,
+                entrepreneurship, and opportunities for all the members in our
+                community as a way to develop the ecosystem.
+              </p>
+              <br/>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className="centerBox">
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icons/icon_accountability.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
+                <h4>Accountability</h4>
+              </Box>
+              <p>
+                We firmly believe and encourage taking full accountability from
+                our team members and stakeholders. We value transparency and
+                responsibility.
+              </p>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box className="centerBox">
+                <img
+                  style={{marginBottom:'20px'}}
+                  src={useBaseUrl("img/icons/icon_prudence.svg")}
+                />
+              </Box>
+              <Box className={clsx("h3Box","centerText")}>
+                <h4>Prudence</h4>
+              </Box>
+              <p>
+                We commit to safeguard our community’s future and take
+                calculated risks that will bring us further to our long term
+                goals.
+              </p>
+              <br/>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+    )
+  }
+
+  const BlockProducer = () => {
+    return (
+      <Box className="containerSec">
+        <Box className={isDesktop? "section": "sectionNoPadding"}>
+          <Box className="spacingBox">
+           <Box className="titleBox">
+                <h2>Block Producer Information</h2>
+            </Box>
+            <Box className="spacingBox">
+              <Box className="h3Box">
+                <h3>Code of Conduct</h3>
+              </Box>
+              <p>EOS Costa Rica pledges to:</p>
+              <br/>
+              <p className="body1">
+                • Provide the highest standard bare-metal infrastructure available
+                to the EOS ecosystem.
+              </p>
+              <p className="body1">
+                • Become an economically sustainable and highly competitive EOS
+                Block Producer.
+              </p>
+              <p className="body1">
+                • Allocate block rewards to EOS educational and development
+                initiatives.
+              </p>
+              <p className="body1">
+                • Sponsor dApps and projects for community-led
+                developments.
+              </p>
+              <p className="body1">
+                • Be totally transparent and open when allocating block rewards.
+              </p>
+              <p className="body1">
+                • Actively participate in the blockchain governance with an open and
+                positive attitude.
+              </p>
+              <p className="body1">
+                • Respect and defend the constitution, fair elections, community
+                vigilance, and arbitration mechanisms.
+              </p>
+            </Box>
+            <Box>
+              <Box className="h3Box">
+                <h3>Ownership Disclosure</h3>
+              </Box>
+              <p className="body1">
                 According to the Block Producer Agreement and values that have
                 represented us since the beginning of our campaign, EOS Costa Rica
                 hereby commits to disclose all beneficial owners of our organization
@@ -221,314 +307,320 @@ const BlockProducer = () => {
                 security engineers, community managers, system administrators, and
                 financial staff, the Block Producer Keys are ultimately owned and
                 controlled by Sistemas Edenia Internacional, S.A.
-              </Typography>
+              </p>
             </Box>
-            <Box
-              className={clsx(
-                styles.sectionGray,
-                styles.industryBox,
-                styles.flexColumn
-              )}
-            >
-              <Box className={classes.titleBox}>
-                <Typography className={classes.h2}>Open-source Projects</Typography>
-              </Box>
-              <Typography className={classes.body1}>
-                Find out more about some open-source we are developing. Feel free to
-                look over our Github profile for more details!
-              </Typography>
-              <Box className={styles.industryColWrapper}>
-                <Box className={clsx(styles.industryColBox, styles.noPaddingTop)}>
-                  <Box>
-                    <Box className={styles.svgBox}>
-                      <picture>
-                        <source
-                          className={styles.defaultImg}
-                          srcSet={useBaseUrl("img/lifebank.jp2")}
-                          type="image/jp2"
-                        />
-                        <img
-                          className={styles.defaultImg}
-                          src={useBaseUrl("img/lifebank.webp")}
-                        />
-                      </picture>
-                    </Box>
-                    <Box className={classes.h3Box}>
-                      <Typography className={classes.h3}>Lifebank</Typography>
-                    </Box>
-                    <Typography className={classes.body1}>
-                      An open-source blockchain-based app that incentivizes blood
-                      donations by creating a virtuous circle of value between
-                      donors, blood banks, and local businesses, leveraged by a
-                      token economy. Winner of the "Coding for Change" challenge by
-                      block.one.
-                    </Typography>
-                  </Box>
-                </Box>
-                <Box className={clsx(styles.industryColBox, styles.noPaddingTop)}>
-                  <Box>
-                    <Box className={styles.svgBox}>
-                      <picture>
-                        <source
-                          className={styles.defaultImg}
-                          srcSet={useBaseUrl("img/eosrate.jp2")}
-                          type="image/jp2"
-                        />
-                        <img
-                          className={styles.defaultImg}
-                          src={useBaseUrl("img/eosrate.webp")}
-                        />
-                      </picture>
-                    </Box>
-                    <Box className={classes.h3Box}>
-                      <Typography className={classes.h3}>EOS Rate</Typography>
-                    </Box>
-                    <Typography className={classes.body1}>
-                      EOS Rate is an open- source app that allows EOS token holders
-                      to access a rating system and voting portal for block
-                      producers and proxies in the EOS blockchain.
-                    </Typography>
-                  </Box>
-                </Box>
-                <Box className={clsx(styles.industryColBox, styles.noPaddingTop)}>
-                  <Box>
-                    <Box className={styles.svgBox}>
-                      <picture>
-                        <source
-                          className={styles.defaultImg}
-                          srcSet={useBaseUrl("img/dashboard.jp2")}
-                          type="image/jp2"
-                        />
-                        <img
-                          className={styles.defaultImg}
-                          src={useBaseUrl("img/dashboard.webp")}
-                        />
-                      </picture>
-                    </Box>
-                    <Box className={classes.h3Box}>
-                      <Typography className={classes.h3}>EOSIO Dashboard</Typography>
-                    </Box>
-                    <Typography className={classes.body1}>
-                      The EOSIO Dashboard is an open-source project that allows
-                      users to visualize the rewards distribution along the EOS
-                      network to seek accountability and transparency.
-                    </Typography>
-                  </Box>
-                </Box>
-              </Box>
-              <Box className={styles.btnBox}>
-                <Typography className={classes.body1}>
-                  Follow us on our profiles. We’re continually looking for
-                  open-source collaborations!
-                </Typography>
-              </Box>
-            </Box>
-            <Box className={clsx(styles.sectionWhite, styles.enterpriceBox)}>
-              <Box className={clsx(styles.enterpriceTitleBox)}>
-                <Box className={classes.titleBox}>
-                  <Typography className={classes.h2}>Why Costa Rica?</Typography>
-                </Box>
-                <Typography className={classes.body1}>
-                  We are the first EOS block producer candidate in Central America
-                  and one of the few in Latin America. We believe that Costa Rica’s
-                  features can be an excellent asset for aggregating diversity to
-                  the EOS network, be it for its political stability, absence of an
-                  army, or respect to Human Rights. Additionally, its technical
-                  infrastructure, stable political framework, flexible corporate
-                  structure, and defined jurisdiction makes it an opportunistic
-                  network available for the censorship-resistant EOS.
-                </Typography>
-              </Box>
-              <Box className={styles.colBox}>
-                <Box className={styles.enterpriceInfoBox}>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Liberty and Peace</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    Costa Rica is one of the most stable and longest-lasting
-                    Democracies in America. It abolished its army in 1948 to promote
-                    education and wellbeing and stands out on equality and
-                    innovation.
-                  </Typography>
-                </Box>
-                <Box className={styles.enterpriceInfoBox}>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Human Rights</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    Costa Rica is founded on respect to Human Rights, and even the
-                    Inter-American Institute of Human Rights based its headquarters
-                    in San José.
-                  </Typography>
-                </Box>
-              </Box>
 
-              <Box className={styles.colBox}>
-                <Box className={styles.enterpriceInfoBox}>
-                  <br/>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Ecology</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    Costa Rica promotes sustainable development and houses more than
-                    4% of the world’s biodiversity, where more than 26% of its
-                    territory comprises of protected areas and National Parks.
-                  </Typography>
-                </Box>
-                <Box className={styles.enterpriceInfoBox}>
-                  <br/>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Strategic location</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    Costa Rica is conveniently located in the middle of the
-                    Americas. The country connects three submarine fiber optic
-                    cables, providing real-time fail- over and redundancy to our
-                    infrastructure.
-                  </Typography>
-                </Box>
-              </Box>
-              <Box className={styles.enterpriceInfoBox}>
-                <br/>
-                <Box className={classes.h3Box}>
-                  <Typography className={classes.h3}>Equality</Typography>
-                </Box>
-                <Typography className={classes.body1}>
-                  Costa Ricans value equality for all. For instance, the country
-                  ranks as the first in Latin America for gender equality.
-                </Typography>
-              </Box>
-              <img
-                className={styles.defaultImg}
-                alt="eoscr-logo"
-                src={useBaseUrl("img/eoscr.svg")}
-              />
-            </Box>
-            <Box
-              className={clsx(
-                styles.sectionGray,
-                styles.enterpriceBox,
-                styles.flexColumn
-              )}
-            >
-              <Box className={classes.titleBox}>
-                <Typography className={classes.h2}>Vote for Us as Block Producers</Typography>
-              </Box>
-              <Box className={styles.colBox}>
-                <Box className={styles.enterpriceInfoBox}>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Experience as integrators</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    We focus on building strong relationships with strategic
-                    partners and the enterprise sector. We constantly seek new
-                    business opportunities and strive to educate executives in both
-                    the public and private sectors about the EOSIO protocol and
-                    blockchain technology.
-                  </Typography>
-                </Box>
-                <Box className={styles.enterpriceInfoBox}>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Reason 2</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    We strive to recruit the best candidates. We have assembled a
-                    Latin American team with a problem-solving mindset and expertise
-                    in their areas of knowledge. Our team operates in an Agile
-                    environment that encourages participation, self- accountability,
-                    and innovation.
-                  </Typography>
-                </Box>
-              </Box>
-              <Box className={styles.colBox}>
-                <Box className={styles.enterpriceInfoBox}>
-                  <br/>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Great open-source projects</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    We develop and support open- source projects such as EOS Rate,
-                    LatamLink, Lifebank, EOSIO Dashboard, and many more that strive
-                    to push the EOSIO ecosystem forward. These projects are built by
-                    talented developers and professionals that believe in the
-                    benefits of the network.
-                  </Typography>
-                </Box>
-                <Box className={styles.enterpriceInfoBox}>
-                  <br/>
-                  <Box className={classes.h3Box}>
-                    <Typography className={classes.h3}>Strong community building</Typography>
-                  </Box>
-                  <Typography className={classes.body1}>
-                    We are part of local and global ecosystems to promote EOSIO
-                    adoption. We attend events such as the EOS Conferences, events
-                    by Block.one, and take an active part in the community’s digital
-                    conversations.
-                  </Typography>
-                </Box>
-              </Box>
-              <Box className={styles.boxWrapper}>
-                <Box className={styles.colBox}>
-                  <picture>
-                    <source
-                      className={styles.flexImgBox}
-                      srcSet={useBaseUrl("img/blog.jp2")}
-                      type="image/jp2"
-                    />
-                    <img
-                      className={styles.flexImgBox}
-                      src={useBaseUrl("img/blog.webp")}
-                    />
-                  </picture>
-                  <picture>
-                    <source
-                      className={styles.flexImgBox}
-                      srcSet={useBaseUrl("img/press.jp2")}
-                      type="image/jp2"
-                    />
-                    <img
-                      className={styles.flexImgBox}
-                      src={useBaseUrl("img/press.webp")}
-                    />
-                  </picture>
-                </Box>
-                <Box className={styles.colBox}>
-                  <picture>
-                    <source
-                      className={styles.flexImgBox}
-                      srcSet={useBaseUrl("img/portal.jp2")}
-                      type="image/jp2"
-                    />
-                    <img
-                      className={styles.flexImgBox}
-                      src={useBaseUrl("img/portal.webp")}
-                    />
-                  </picture>
-                  <picture>
-                    <source
-                      className={styles.flexImgBox}
-                      srcSet={useBaseUrl("img/github.jp2")}
-                      type="image/jp2"
-                    />
-                    <img
-                      className={styles.flexImgBox}
-                      src={useBaseUrl("img/github.webp")}
-                    />
-                  </picture>
-                </Box>
-              </Box>
-              <Box className={styles.btnBox}>
-                <Typography className={classes.body1}>Get to know more about our team!</Typography>
-                <a className={classes.a} target="_blank">
-                  Read more
-                </a>
-              </Box>
-            </Box>
           </Box>
         </Box>
-      </ThemeProvider>
+      </Box> 
+    )
+  }
+
+  const OpenSourceProjects = () => {
+    return ( 
+      <Box className="containerSec"> 
+        <Box className="section">
+          <Box className="titleBox">
+            <h2>
+              Open-source Projects
+            </h2>
+          </Box>
+          <p className="body1">
+            Find out more about some open-source we are developing. Feel free to
+            look over our <a href="https://github.com/eoscostarica" target="_blank">Github</a> profile for more details!
+          </p>
+          <Box className="topSpacingBox">
+            <Grid container spacing={10}>
+              <Grid item xs={12} md={4}>
+                <Box className="centerBox">
+                  <img
+                    className="sizeImageTheCompany"
+                    src={useBaseUrl("img/logos/lifebank.svg")}
+                  />
+                </Box>
+                <br/>
+                <br/>
+                <p>
+                  An open-source blockchain-based app that incentivizes blood
+                  donations by creating a virtuous circle of value between
+                  donors, blood banks, and local businesses, leveraged by a
+                  token economy. Winner of the{" "}
+                  <a
+                    href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
+                    target="_blank"
+                  >
+                    “Coding for Change”
+                  </a>{" "}
+                  challenge by{" "}
+                  <a href="https://block.one/" target="_blank">
+                    block.one.
+                  </a>{" "}
+                  <a href=" https://lifebank.io/" target="_blank">
+                  Find out more about Lifebank.
+                  </a>
+                </p>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Box className="centerBox">
+                  <img
+                    className="sizeImageTheCompany"
+                    src={useBaseUrl("img/logos/eosrate.svg")}
+                  />
+                </Box>
+                <br/>
+                <br/>
+                <p>
+                  EOS Rate is an open- source app that allows EOS token holders
+                  to access a rating system and voting portal for block
+                  producers and proxies in the EOS blockchain.<a href="https://eosrate.io/" target="_blank"> Explore EOS Rate.</a>
+                </p>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Box className="centerBox">
+                  <img
+                    className="sizeImageTheCompany"
+                    src={useBaseUrl("img/logos/eosio.svg")}
+                  />
+                </Box>
+                <br/>
+                <br/>
+                <p>
+                  The EOSIO Dashboard is an open-source project that allows
+                  users to visualize the rewards distribution along the EOS
+                  network to seek accountability and transparency.{" "}
+                  <a href="https://mainnet.eosio.cr/" target="_blank"> Read more about EOSIO Dashboard.</a>
+                </p>
+              </Grid>
+            </Grid>
+            <Grid className="paddingTop" container>
+              <Grid item xs={12} md={6}>
+                <Box className={isMobile? "spacingBox": ""}>
+                  <h3 className={isMobile? "centerText": ""}>Follow us on our profiles. We’re continually looking for open-source collaborations!</h3>
+                </Box>
+              </Grid>
+              <Grid className="litlePaddingTop" item xs={12} md={3}>
+                <Box className={isMobile? "centerBox": "boxFlexEnd"}>
+                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://github.com/eoscostarica" target="_blank">
+                    <GitHubIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                  </a>
+                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://twitter.com/EOSCostaRica" target="_blank">
+                    <TwitterIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                  </a>
+                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.linkedin.com/company/eoscostarica/mycompany/" target="_blank">
+                    <LinkedInIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                  </a>
+                </Box>
+              </Grid>
+              <Grid className="litlePaddingTop" style={{marginTop:'-7px'}} item xs={12} md={3}>
+                <Box className="centerBox">
+                  <a className="noMarginsTop" href="https://medium.com/@eoscostarica" target="_blank">
+                    <img
+                      className="socialMediaAnimation"
+                      style={{width:'48px', height:'48px', cursor:'pointer', color:'#5484b3'}}
+                      src={useBaseUrl("img/icons/icon-medium.png")}
+                    />
+                  </a>
+                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
+                    <YouTubeIcon style={{ width:'56px', height:'56px', cursor:'pointer', color:'#5484b3'}}/>
+                  </a>
+                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.instagram.com/eoscostarica/" target="_blank">
+                    <InstagramIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                  </a>
+                </Box>
+              </Grid>
+            </Grid> 
+          </Box>
+        </Box>
+      </Box>
+    )
+  }
+
+  const WhyCostaRica = () => {
+    return ( 
+      <Box className="containerGray"> 
+        <Box className="sectionPadding">
+          <Box className="titleBox">
+            <h2>
+              Why Costa Rica?
+            </h2>
+          </Box>
+          <Box className="spacingBox">
+            <p>
+              We are the first EOS block producer candidate in Central America
+              and one of the few in Latin America. We believe that Costa Rica’s
+              features can be an excellent asset for aggregating diversity to
+              the EOS network, be it for its political stability, absence of an
+              army, or respect to Human Rights. Additionally, its technical
+              infrastructure, stable political framework, flexible corporate
+              structure, and defined jurisdiction makes it an opportunistic
+              network available for the censorship-resistant EOS.
+            </p>
+          </Box>
+          <Box>
+            <br/>
+            <Grid justify="center" container spacing={5}>
+              <Grid item xs={12} md={5}>
+                <Box className="specialH3Box">
+                  <h4>Liberty and peace</h4>
+                </Box>
+                <p >
+                  Costa Rica is one of the most stable and longest-lasting
+                  Democracies in America. It abolished its army in 1948 to promote
+                  education and wellbeing and stands out on equality and
+                  innovation.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={5}>
+                <Box className="specialH3Box">
+                  <h4>Ecology</h4>
+                </Box>
+                <p>
+                  Costa Rica promotes sustainable development and houses more than
+                  4% of the world’s biodiversity, where more than 26% of its
+                  territory comprises of protected areas and National Parks.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={5}>
+                <Box className="specialH3Box">
+                  <h4>Human rights</h4>
+                </Box>
+                <p>
+                  Costa Rica is founded on respect to Human Rights, and even the
+                  Inter-American Institute of Human Rights based its headquarters
+                  in San José.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={5}>
+                <Box className="specialH3Box">
+                  <h4>Equality</h4>
+                </Box>
+                <p>
+                  Costa Ricans value equality for all. For instance, the country
+                  ranks as the first in Latin America for gender equality.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={5}>
+                <Box className="specialH3Box">
+                  <h4>Strategic location</h4>
+                </Box>
+                <p>
+                  Costa Rica is conveniently located in the middle of the
+                  Americas. The country connects three submarine fiber optic
+                  cables, providing real-time fail- over and redundancy to our
+                  infrastructure.
+                </p>
+              </Grid>
+              <Grid md={5}/>
+            </Grid>
+          </Box>
+        </Box>
+      </Box>
+    )
+  }
+
+  const VoteForUS = () => {
+    return (
+      <Box className="containerSec">
+        <Box className="sectionPadding">
+          <Box className="spacingBox">
+            <Box className="titleBox">
+              <h2>Vote for Us as Block Producers</h2>
+            </Box>
+            <Grid container spacing={5}>
+              <Grid item xs={12} md={6}>
+                <Box className="specialH3Box">
+                  <h4>Experience as integrators</h4>
+                </Box>
+                <p>
+                  We focus on building strong relationships with strategic
+                  partners and the enterprise sector. We constantly seek new
+                  business opportunities and strive to educate executives in both
+                  the public and private sectors about the EOSIO protocol and
+                  blockchain technology.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Box className="specialH3Box">
+                  <h4>An agile team</h4>
+                </Box>
+                <p>
+                  We strive to recruit the best candidates. We have assembled a
+                  Latin American team with a problem-solving mindset and expertise
+                  in their areas of knowledge. Our team operates in an Agile
+                  environment that encourages participation, self- accountability,
+                  and innovation.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Box className="specialH3Box">
+                  <h4>Great open-source projects</h4>
+                </Box>
+                <p>
+                  We develop and support open- source projects such as EOS Rate,
+                  LatamLink, Lifebank, EOSIO Dashboard, and many more that strive
+                  to push the EOSIO ecosystem forward. These projects are built by
+                  talented developers and professionals that believe in the
+                  benefits of the network.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Box className="specialH3Box">
+                  <h4>Strong community building</h4>
+                </Box>
+                <p>
+                  We are part of local and global ecosystems to promote EOSIO
+                  adoption. We attend events such as the EOS Conferences, events
+                  by Block.one, and take an active part in the community’s digital
+                  conversations.
+                </p>
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
+      </Box>
+    )
+  }
+
+  return (
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+    > 
+      {isDesktop && 
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+            <Background className="bgParallax">
+                <Box className="imgParallax" />
+            </Background>
+            <HeroSection />
+            <OurStory />
+            <OurValues/>
+          </Parallax>
+          <BlockProducer/>
+          <OpenSourceProjects/>
+          <WhyCostaRica/>
+          <VoteForUS/>
+          <AdditionalResources/>
+          <ContactUsBanner />
+        </Box>
+      }
+      {isMobile &&
+        <Box className="mainContainer">
+          <HeroSection />
+          <OurStory />
+          <OurValues/>
+          <BlockProducer/>
+          <OpenSourceProjects/>
+          <WhyCostaRica/>
+          <VoteForUS/>
+          <AdditionalResources/>
+          <ContactUsBanner />
+        </Box>
+      }
     </Layout>
   );
 };
 
 export default BlockProducer;
+

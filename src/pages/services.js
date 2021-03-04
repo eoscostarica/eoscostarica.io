@@ -1,463 +1,406 @@
-import React, { useState, useEffect } from "react";
-import { Parallax, Background } from 'react-parallax';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Grid from '@material-ui/core/Grid';
-import { useMediaQuery } from "react-responsive";
-import clsx from "clsx";
-import Layout from "@theme/Layout";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import React, { useState, useEffect, useRef } from "react"
+import { Parallax, Background } from 'react-parallax'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import clsx from "clsx"
+import Layout from "@theme/Layout"
+import { useMediaQuery } from 'react-responsive'
+import useBaseUrl from "@docusaurus/useBaseUrl"
 import Box from '@material-ui/core/Box'
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
+import Grid from '@material-ui/core/Grid'
+import Accordion from '@material-ui/core/Accordion'
+import AccordionDetails from '@material-ui/core/AccordionDetails'
+import AccordionSummary from '@material-ui/core/AccordionSummary'
+import { useHistory } from 'react-router-dom'
 
-import styles from "./styles.module.css";
-import useStyles from "../css/styles.js"
+import AccordionComp from './components/AccordionComp'
+import ContactUsBanner from './components/ContactUsBanner'
+import DevelopmentServices from './SvgComponents/DevelopmentServices'
+import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure'
+
+const MetaData={
+  title:"EOS Costa Rica: Services",
+  description:"EOS Costa Rica leverages the enterprise blockchain protocol EOSIO to develop real-world solutions.",
+  img:"img/metaImgBlack.png",
+}
+
+const strategicLocationAccordion = 
+[
+  {
+    title: 'Network interconnectivity',
+    content:'Costa Rica has shores in both the Pacific and Atlantic oceans and connects three submarine fiber optic cables – ARCOS-1, MAYA-1, and Pan American Crossing (PAC) – that provide the majority of the bandwidth in the country. This interconnection provides real-time fail-over and redundancy to our infrastructure. Costa Rica is part of the six Central American nations interconnected via a terrestrial fiber-optic network (REDCA). Additionally, having direct connections to all upstream carriers allows the country’s network to prevent single-point failures.',
+    target: 'panel_interconnectivity'
+  },
+  {
+    title: 'Stable political framework',
+    content:'Costa Rica is a country that values Human Rights, Peace, and Democracy. The country is one of the most stable and longest-lasting Democracies in America. Costa Rica abolished its army in 1948 to promote education and wellbeing and stands out on equality and innovation. Moreover, the Inter-American Institute of Human Rights based its headquarters in San José.',
+    target: 'panel_framework'
+  },
+  {
+    title: 'Environmental awareness',
+    content:'Despite being a small country, Costa Rica houses more than 4% of the world’s biodiversity. The country’s leaders have been promoting ecology and sustainable development. Leading by example, more than 26% of its territory comprises of protected areas and National Parks.',
+    target: 'panel_awareness'
+  }
+]
+
+const enterpriseBlockchainAccordionLeft = 
+[
+  {
+    title: 'Added transparency',
+    content:'Blockchain enables a transparent and near real-time registry of data that can improve the trust and traceability of processes, such as in supply chain or insurance claims processing.',
+    target: 'panel_addedTransparency'
+  },
+  {
+    title: 'Improved security',
+    content:'The immutability and encryption capabilities of blockchain can reduce data manipulation, human error, and cyber frauds. Blockchains use hash functions – created by a mathematical function that transforms input data into code lines – that make blockchains difficult to hack.',
+    target: 'panel_improvedSecurity'
+  }
+]
+
+const enterpriseBlockchainAccordionRight = 
+[
+  {
+    title: 'Boosted efficiency',
+    content:'Smart contracts can help you process transactions quickly, with added efficiency compared to cloud platforms, and less costly by reducing administrative fees by cutting the middleman.',
+    target: 'panel_boostedEfficiency'
+  },
+  {
+    title: 'Enhanced auditability',
+    content:'A permissioned blockchain allows an organization to control accesses and authorizations across the network, increasing accountability among the team, and facilitating auditability by external parties.',
+    target: 'panel_enhancedAuditability'
+  }
+]
+
+const solutionBaseAccordionLeft = 
+[
+  {
+    title: 'User-centered approach',
+    content:'We focus on the user. We understand the importance of user research to identify their pain points and needs. Good research helps us know who the user is to find the best solution to specific problems.',
+    target: 'panel_userCentered'
+  },
+  {
+    title: 'Adaptability and innovation',
+    content:'We continually explore the newest trends in blockchain technology to better serve our clients. Also, we offer an open, unlimited platform that enables developers to innovate.',
+    target: 'panel_daptabilityInnovation'
+  }
+]
+
+const solutionBaseAccordionRight = 
+[
+  {
+    title: 'Dynamic tech stack',
+    content:'We deploy the optimum tech stack available to leverage the blockchain protocol we use, which we call the “EOS Dream Stack.” It allows us to explore further the many assets this technology offers.',
+    target: 'panel_dynamicTech'
+  },
+  {
+    title: 'Agile methodology',
+    content:'We deploy an Agile approach that stimulates cross-functional collaboration, flexibility, and adaptability to encourage constant improvement.',
+    target: 'panel_agileMethodology'
+  }
+]
 
 const ServicePage = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
-  const [activeItemIndex, setActiveItemIndex] = useState(0);
-  const classes = useStyles()
-  const [expanded, setExpanded] = useState('panel_AssetManagementy');
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
+  const [expandedMap, setExpandedMap] = useState('panel_interconnectivity')
+  const [expandedSolution, setExpandedSolution] = useState()
+  const [expandedEnterprise, setExpandedEnterprise] = useState()
+  const [expandedEducation, setExpandedEducation] = useState('panel_Workshops')
+  const history = useHistory()
 
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
-  
+  const refDevelopment = useRef(null)
+  const refInfraestrcture = useRef(null)
+  const refEducation = useRef(null)
+
+  const handleScrollDev = () => refDevelopment.current.scrollIntoView({behavior:'smooth', block:'start', inline:'nearest'})
+  const handleScrollInfra = () => refInfraestrcture.current.scrollIntoView({behavior:'smooth', block:'start', inline:'nearest'})  
+  const handleScrollEdu = () => refEducation.current.scrollIntoView({behavior:'smooth', block:'start', inline:'nearest'})  
+
+  const handleChangeMap = (panel) => (event, newExpanded) => {
+    setExpandedMap(newExpanded? panel: false)
+  }
+
+  const handleChangeSolution = (panel) => (event, newExpanded) => {
+    setExpandedSolution(newExpanded? panel: false)
+  }
+
+  const handleChangeEnterprise = (panel) => (event, newExpanded) => {
+    setExpandedEnterprise(newExpanded? panel: false)
+  }
+
+  const handleChangeEducation = (panel) => (event, newExpanded) => {
+    setExpandedEducation(newExpanded? panel: false)
+  }
+
   useEffect(() => {
-    handleChange('panel_AssetManagementy')
-  }, []);
+    handleChangeMap('panel_interconnectivity')
+    handleChangeEducation('panel_Workshops')
+  }, [])
 
   const HeroSection = () => {
     return (
-      <Box className={classes.container}>
-        {!isMobile && 
-          <Box className={classes.sectionHero}>
-          <Box className={classes.titleBox}>
-            <Typography className={classes.h1}>Custom-made</Typography>
-            <Typography className={classes.h1}>Blockchain Solutions</Typography>
+      <Box className="containerSec">
+        {isDesktop && 
+          <Box className="sectionHero">
+          <Box className="titleBox">
+            <h1>Custom-made <br/> Blockchain Solutions</h1>
           </Box>
-          <Typography className={classes.body1} >
+          <p >
             Leverage blockchain technology. Our team will help you embrace
-            the power of this innovative technology.
-          </Typography>
-          <Typography className={classes.body1} >
-            We have years of experience integrating enterprise blockchain solutions and
-            developing infrastructure for business environments..
-          </Typography>
-          <Box className={classes.buttonBox}>
-            <Button className={classes.buttonSecondary} href={useBaseUrl("/contact-us")}>
-              Development Services
-            </Button>
-            <Button className={classes.buttonSecondary} href={useBaseUrl("/contact-us")}>
-              Blockchain Infrastructure
-            </Button>
-            <Button className={classes.buttonSecondary} href={useBaseUrl("/contact-us")}>
-              Education and Training
-            </Button>
+            the power of this innovative technology. We have years of experience integrating enterprise blockchain solutions and
+            developing infrastructure for business environments.
+          </p>
+          <Box className="doubleSpacingBox">
+            <Grid container spacing={5}>
+              <Grid item xs={12} md={4}>
+                <button className="buttonSecondary" style={{padding:"19px", height:"90px", width:"100%"}} onClick={handleScrollDev}>Development<br/>Services</button>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <button className="buttonSecondary" style={{padding:"19px", height:"90px", width:"100%"}} onClick={handleScrollInfra}>Blockchain<br/>Infrastructure</button>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <button className="buttonSecondary" style={{padding:"19px", height:"90px", width:"100%"}} onClick={handleScrollEdu}>Education<br/>and Training</button>
+              </Grid>
+            </Grid>
           </Box>
         </Box>
         }
         {isMobile && 
-          <Box className={classes.sectionHeroMobile}>
-            <Box className={classes.logoMobileBox}>
-              <img
-                  className={classes.logoMobile}
-                  src={useBaseUrl("img/eoscr-logo.png")}
-                  alt="EOS CR LOGO"
-                />
+          <Box className="sectionHeroMobile">
+            <Box className="titleBox">
+              <h1 >Custom-made <br/> Blockchain Solutions</h1>
             </Box>
-          <Box className={classes.titleBox}>
-            <Typography className={classes.h1}>Custom-made</Typography>
-            <Typography className={classes.h1}>Blockchain Solutions</Typography>
+            <p>
+              Leverage blockchain technology. Our team will help you embrace
+              the power of this innovative technology.
+            <br/>
+            <br/>
+              We have years of experience integrating enterprise blockchain solutions and
+              developing infrastructure for business environments.
+            </p>
+            <Box className="buttonBoxMobile">
+              <button className="buttonPrimary" onClick={() => history.push("/about/")}>
+                Get to Know Us
+              </button>
+            </Box>
           </Box>
-          <Typography className={classes.body1} >
-            Leverage blockchain technology. Our team will help you embrace
-            the power of this innovative technology.
-          </Typography>
-          <br/>
-          <Typography className={classes.body1} >
-            We have years of experience integrating enterprise blockchain solutions and
-            developing infrastructure for business environments..
-          </Typography>
-          <Box className={classes.buttonBoxMobile}>
-            <Button className={classes.buttonPrimary} href={useBaseUrl("/contact-us")}>
-              Contact us
-            </Button>
-          </Box>
-        </Box>
-      }
+        }
       </Box>
     )
   }
 
   const BlockchainDev = () => {
     return (
-      <Box className={classes.container}>
-        <Box className={clsx(classes.section,{[classes.sectionPadding] : isMobile})}>
-          <picture className={classes.pictureStyle}>
-            <source
-              className={styles.defaultImgCarousel}
-              srcSet={useBaseUrl("img/developmentServices.jp2")}
-              type="image/jp2"
-            />
-            <img
-              className={styles.defaultImgCarousel}
-              src={useBaseUrl("img/developmentServices.webp")}
-            />
-          </picture>
-          <picture className={classes.pictureStyle}>
-            <source
-              className={styles.defaultImgCarousel}
-              srcSet={useBaseUrl("img/blockchainInfrastructure.jp2")}
-              type="image/jp2"
-            />
-            <img
-              className={styles.defaultImgCarousel}
-              src={useBaseUrl("img/blockchainInfrastructure.webp")}
-            />
-          </picture>
-          <picture className={classes.pictureStyle}>
-            <source
-              className={styles.defaultImgCarousel}
-              srcSet={useBaseUrl("img/educationTraining.jp2")}
-              type="image/jp2"
-            />
-            <img
-              className={styles.defaultImgCarousel}
-              src={useBaseUrl("img/educationTraining.webp")}
-            />
-          </picture>
-          <Box className={clsx(styles.knowEOSCRBox)}>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <Box className={classes.titleBox}>
-              <Typography className={classes.h2}>Blockchain Development Services</Typography>
-            </Box>
-            <Typography className={classes.body1}>
-              Explore the possibilities that blockchain technology offers. Boost
-              your operations with increased transparency, security, and
-              traceability. We have experience working with large global
-              enterprises and SMEs, government entities and NGOs, and
-              open-source projects. Our team is technology agnostic and will
-              guide you to find the ideal solution. We specialize in the
-              open-source blockchain protocol{" "}
-              <a className={classes.a} href="https://eos.io/" target="_blank">
-                EOSIO
-              </a>
-              , for its adaptability to any industry in both the private and
-              public sectors. Visit our{" "}
-              <a className={classes.a} href={useBaseUrl("/industries")}>industries page</a> to learn
-              more
-            </Typography>
-            <br/>
-            <br/>
-            <br/>
-            <Box className={classes.h3Box}>
-              <Typography className={classes.h3}>Enterprise Blockchain</Typography>
-            </Box>
-            <Typography className={classes.body1}>
-              EOS Costa Rica deploys blockchain technology to design enterprise
-              solutions that can integrate with other systems. Blockchain
-              enables the deployment of smart contracts – computer codes that
-              can execute automatically and autonomously. Smart contracts allow
-              improved efficiency and can reduce transaction-related costs.
-              Learn more about enterprise blockchain:
-            </Typography>
-            <br/>
-            <Box className={styles.colBox}>
-              <Accordion 
-                square expanded={expanded === 'panel_BoostedEfficiency'}
-                style={{backgroundColor:'#ffffff', marginRight:'20px'}}
-                onChange={handleChange('panel_BoostedEfficiency')}
-                className={classes.accordion}
-              >
-                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <Typography  className={classes.h3}>Boosted efficiency</Typography>
-                </AccordionSummary>
-                <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
-                    Smart contracts can help you process transactions quickly,
-                    with added efficiency compared to cloud platforms, and less
-                    costly by reducing administrative fees by cutting the
-                    middleman.
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion 
-                square expanded={expanded === 'panel_BoostedEfficiency'}
-                style={{backgroundColor:'#ffffff', marginLeft: '20px'}}
-                onChange={handleChange('panel_BoostedEfficiency')}
-                className={classes.accordion}
-              >
-                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <Typography  className={classes.h3}>Improved security</Typography>
-                </AccordionSummary>
-                <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
-                    The immutability and encryption capabilities of blockchain
-                    can reduce data manipulation, human error, and cyber frauds.
-                    Blockchains use hash functions – created by a mathematical
-                    function that transforms input data into code lines – that
-                    make blockchains difficult to hack.
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-            </Box>
-            <br/>
-            <Box className={styles.colBox}>
-              <Accordion
-                square expanded={expanded === 'panel_transparency'}
-                style={{backgroundColor:'#ffffff', marginRight:'20px'}}
-                onChange={handleChange('panel_transparency')}
-                className={classes.accordion}
-              >
-                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <Typography  className={classes.h3}>Added transparency</Typography>
-                </AccordionSummary>
-                <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
-                    Blockchain enables a transparent and near real-time registry
-                    of data that can improve the trust and traceability of
-                    processes, such as in supply chain or insurance claims
-                    processing.
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion
-                square expanded={expanded === 'panel_transparency'}
-                style={{backgroundColor:'#ffffff', marginLeft: '20px'}}
-                onChange={handleChange('panel_transparency')}
-                className={classes.accordion}
-              >
-                <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <Typography  className={classes.h3}>Enhanced auditability</Typography>
-                </AccordionSummary>
-                <AccordionDetails className={classes.accordionPadding}>
-                  <Typography className={classes.body1}>
-                    A permissioned blockchain allows an organization to control
-                    accesses and authorizations across the network, increasing
-                    accountability among the team, and facilitating auditability
-                    by external parties.
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-            </Box>
+      <Box ref={refDevelopment} className="containerSec">
+        <Box className={clsx("section",{["sectionPadding"]: isMobile})}>
+          <Box className="titleBox">
+            <h2>Blockchain <br/> Development Services</h2>
           </Box>
-        </Box>
-      </Box>
-    )
-  }
-
-  const DoYouStill = () => {
-    return (
-      <Box className={classes.containerBlack}>
-        <Box className={classes.sectionNoPadding}>
-          <Grid container spacing={5}>
-            <Box className={classes.inquiereBox}>
-              <Box style={{width:'100%'}}>
-                <Typography style={{textAlign:'center'}} className={clsx(classes.h2, classes.white)}>
-                  Do you still have questions on how to integrate blockchain into
-                  your operations?
-                </Typography>
-                <Box style={{width: '100%', display:'flex', justifyContent: 'center'}} className={classes.buttonBox}>
-                  <Button className={classes.buttonPrimary} href={useBaseUrl("/contact-us")} >Contact us</Button>
+          {isMobile && 
+            <Box className="centerBox">
+              <DevelopmentServices width="214.409"/>
+            </Box>
+          }
+          <Grid container>
+            <Grid item xs={12} md={6}>
+              <Box className="spacingBox">
+                <p>
+                  Explore the possibilities that blockchain technology offers. Boost
+                  your operations with increased transparency, security, and
+                  traceability. We have experience working with large global
+                  enterprises and SMEs, government entities and NGOs, and
+                  open-source projects. Our team is technology agnostic and will
+                  guide you to find the ideal solution. We specialize in the
+                  open-source blockchain protocol{" "}
+                  <a href="https://eos.io/" target="_blank">
+                    EOSIO
+                  </a>
+                  , for its adaptability to any industry in both the private and
+                  public sectors. Visit our{" "}
+                  <a href={useBaseUrl("/industries")} target="_blank">industries page</a> to learn
+                  more.
+                </p>
+              </Box>
+            </Grid>
+            {isDesktop && 
+              <Grid item xs={12} md={6}>
+                <Box style={{marginTop:'-40px'}} className="centerBox">
+                  <DevelopmentServices />
                 </Box>
-              </Box>
-            </Box>
-          </Grid>
-        </Box>
-      </Box>
-    )
-  }
-
-  const ASolution = () => {
-    return (
-      <Box className={classes.container}>
-        <Box className={classes.sectionPadding}>
-        <Box className={clsx(styles.enterpriceTitleBox)}>
-          <Box className={classes.h3Box}>
-              <Typography className={classes.h3}>A Solution-based Approach</Typography>
-            </Box>
-            <Typography className={classes.body1}>
-              EOS Costa Rica leverages a cross-functional team that follows an
-              Agile methodology. We seek efficiency and collaboration and
-              prioritize the customer’s needs to develop solutions that add
-              value to their end- users. Also, we adapt to our clients’
-              budgets, without compromising thought leadership or quality.
-              Learn more about our work style:
-            </Typography>
-          </Box>
-          <Box className={styles.colBox}>
-            <Box className={styles.enterpriceInfoBox}>
-              <Box className={classes.h3Box}>
-                <Typography className={classes.h3}>User-centered approach</Typography>
-              </Box>
-              <Typography className={classes.body1}>
-                We focus on the user. We understand the importance of user
-                research to identify their pain points and needs. Good
-                research helps us know who the user is to find the best
-                solution to specific problems.
-              </Typography>
-            </Box>
-            <Box className={styles.enterpriceInfoBox}>
-              <Box className={classes.h3Box}>
-                <Typography className={classes.h3}>Adaptability and innovation</Typography>
-              </Box>
-              <Typography className={classes.body1}>
-                We continually explore the newest trends in blockchain
-                technology to better serve our clients. Also, we offer an
-                open, unlimited platform that enables developers to innovate.
-              </Typography>
-            </Box>
-          </Box>
-
-          <Box className={styles.colBox}>
-            <Box className={styles.enterpriceInfoBox}>
-              <br></br>
-              <Box className={classes.h3Box}>
-                <Typography className={classes.h3}>Agile methodology</Typography>
-              </Box>
-              <Typography className={classes.body1}>
-                We deploy an Agile approach that stimulates cross-functional
-                collaboration, flexibility, and adaptability to encourage
-                constant improvement.
-              </Typography>
-            </Box>
-            <Box className={styles.enterpriceInfoBox}>
-            <br></br>
-              <Box className={classes.h3Box}>
-                <Typography className={classes.h3}>Dynamic tech stack</Typography>
-              </Box>
-              <Typography className={classes.body1}>
-                We deploy the optimum tech stack available to leverage the
-                blockchain protocol we use, which we call the “EOS Dream
-                Stack.” It allows us to explore further the many assets this
-                technology offers.
-              </Typography>
-            </Box>
-          </Box>
-          <Box className={styles.enterpriceTitleBox}>
-            <Box className={classes.h3Box}>
-              <Typography className={classes.h3}>Our Process from Start to Finish</Typography>
-            </Box>
-            <Typography className={classes.body1}>
-              When working on a project, our team follows a combination of
-              Design Thinking, Lean UX, and Agile methodologies. Applying
-              Design Thinking helps us understand the users’ needs and pain
-              points, define a specific problem, and experiment to find
-              potential solutions. Lean UX allows us to learn faster,
-              repeatedly iterate until the product fits its purpose, or pivot
-              entirely when the focus shifts. Moreover, Agile methodology
-              allows us to work flexibly on sprints towards developing
-              user-centered solutions.
-            </Typography>
-          </Box>
-        </Box>
-      </Box> 
-    )
-  }
-
-  const DoYouWant = () => {
-    return (
-      <Box  className={classes.containerBlack}>
-        <Box className={classes.sectionNoPadding}>
-          <Grid container spacing={5}>
-            <Box className={classes.inquiereBox}>
-              <Box style={{width:'100%'}}>
-                <Typography style={{textAlign:'center'}} className={clsx(classes.h2, classes.white)}>
-                  Do you want to learn more about our blockchain development
-                  process?
-                </Typography>
-                <Box style={{width: '100%', display:'flex', justifyContent: 'center'}} className={classes.buttonBox}>
-                  <Button className={classes.buttonPrimary} href={useBaseUrl("/contact-us")} >Contact us</Button>
+              </Grid>
+            }
+            <Grid item xs={12} md={12}>
+              <br/>
+              <br/>
+              <Box className="spacingBox">
+                <Box className="h3Box">
+                  <h3 >Enterprise Blockchain</h3>
                 </Box>
+                <p>
+                  EOS Costa Rica deploys blockchain technology to design enterprise
+                  solutions that can integrate with other systems. Blockchain
+                  enables the deployment of smart contracts – computer codes that
+                  can execute automatically and autonomously. Smart contracts allow
+                  improved efficiency and can reduce transaction-related costs.
+                  Learn more about enterprise blockchain:
+                </p>
               </Box>
-            </Box>
+            </Grid>
           </Grid>
+          <Box className="accordionBox">
+            {isDesktop && 
+                <Grid container spacing={5}>
+                  <Grid item xs={12} md={6} >
+                  <AccordionComp data={enterpriseBlockchainAccordionLeft} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
+                  </Grid>
+                  <Grid item xs={12} md={6} >
+                  <AccordionComp data={enterpriseBlockchainAccordionRight} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
+                  </Grid>
+                </Grid>
+              }
+              {isMobile && 
+                <>
+                  <AccordionComp data={enterpriseBlockchainAccordionLeft} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
+                  <AccordionComp data={enterpriseBlockchainAccordionRight} expanded={expandedEnterprise} handleChange={handleChangeEnterprise} bgColor={'white'}/>
+                </>
+              }
+          </Box>
+          <Box className="doubleSpacingBox">
+            <Grid container>
+              <Grid item xs={12} md={12}>
+                <Box className="h3Box">
+                  <h3>A Solution-based Approach</h3>
+                </Box>
+                <Box className="spacingBox">
+                  <p>
+                    EOS Costa Rica leverages a cross-functional team that follows an
+                    Agile methodology. We seek efficiency and collaboration and
+                    prioritize the customer’s needs to develop solutions that add
+                    value to their end- users. Also, we adapt to our clients’
+                    budgets, without compromising thought leadership or quality.
+                    Learn more about our work style:
+                  </p>
+                </Box>
+              </Grid>
+            </Grid>
+            <Box className="accordionBox">
+            {isDesktop && 
+              <Grid container spacing={5}>
+                <Grid item xs={12} md={6} >
+                  <AccordionComp data={solutionBaseAccordionLeft} expanded={expandedSolution} handleChange={handleChangeSolution} bgColor={'white'}/>
+                </Grid>
+                <Grid item xs={12} md={6} >
+                  <AccordionComp data={solutionBaseAccordionRight} expanded={expandedSolution} handleChange={handleChangeSolution} bgColor={'white'}/>
+                </Grid>
+              </Grid>
+            }
+            {isMobile && 
+              <>
+                <AccordionComp data={solutionBaseAccordionLeft} expanded={expandedSolution} handleChange={handleChangeSolution} bgColor={'white'}/>
+                <AccordionComp data={solutionBaseAccordionRight} expanded={expandedSolution} handleChange={handleChangeSolution} bgColor={'white'}/>
+              </>
+            }
+            </Box>
+          </Box>
+          <Box className="spacingBox">
+            <Box className="h3Box">
+              <h3>Our Process from Start to Finish</h3>
+            </Box>
+            <Box className={isDesktop? clsx("centerBox", "doubleSpacingBox"): clsx("centerBox", "reduceMargin")}>
+              {isDesktop && 
+                <img src={useBaseUrl("/img/process.jpg")}/>
+              }
+              {!isDesktop && 
+                <img src={useBaseUrl("/img/processVertical.gif")}/>
+              }
+            </Box>
+          </Box>
         </Box>
       </Box>
     )
   }
 
-  const WhatWeDo = () => {
+  const BlockchainInfrastructure = () => {
     return (
-      <Box className={classes.containerGray}>
-        <Box className={classes.sectionPadding}>
-          <Box className={clsx(styles.enterpriceTitleBox)}>
-            <Box className={classes.titleBox}>
-              <Typography className={classes.h2}>Blockchain Infrastructure</Typography>
-            </Box>
-            <Box className={classes.h3Box}>
-              <Typography className={classes.h3}>Top-notch Blockchain Infrastructure</Typography>
-            </Box>
-            <Typography className={classes.body1}>
-              Blockchains operate as decentralized peer-to-peer networks where
-              a number of computers or “nodes” are interconnected to one
-              another. These nodes keep a copy of the registers and act as
-              validators of new transactions. These features make it critical
-              to building robust infrastructure networks that comply with the
-              blockchain's requirements.
-            </Typography>
+      <Box ref={refInfraestrcture} className="containerSec">
+        <Box className="section">
+          <Grid container spacing={5}>
+            <Grid item xs={12} md={6}>
+              <Box className="titleBox">
+                <h2>Blockchain <br/> Infrastructure</h2>
+              </Box>
+              <Box className="h3Box">
+                <h3>Top-notch Blockchain Infrastructure</h3>
+              </Box>
+              <p>
+                EOS Costa Rica deploys blockchain technology to design enterprise
+                solutions that can integrate with other systems. Blockchain
+                enables the deployment of smart contracts – computer codes that
+                can execute automatically and autonomously. Smart contracts allow
+                improved efficiency and can reduce transaction-related costs.
+                Learn more about enterprise blockchain:
+              </p>
+            </Grid>
+            {isDesktop && 
+            <Grid item xs={12} md={6}>
+              <br/>
+              <br/>
+              <Box className="centerBox">
+                <Blockchaininfrastructure/>
+              </Box>
+            </Grid>
+            }
+          </Grid>
+          <Box className="topSpacingBox">
+            <Grid container spacing={5}>
+              <Grid item xs={12} md={6}>
+                <Box className="h3Box">
+                  <h4>Blockchain nodes development</h4>
+                </Box>
+                <p>
+                  We configure, host, and maintain blockchain nodes and networks
+                  for private and public use with 24/7 monitoring and uptime.
+                  This allows any organization to deploy a network according to
+                  their requirements and needs.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Box className="h3Box">
+                  <h4>API endpoints</h4>
+                </Box>
+                <p>
+                  Our datacenter network also enables the installation of API
+                  endpoints between blockchains and other tech stacks. An API
+                  endpoint is a touchpoint of communication and interaction
+                  between an API (Application Program Interface) and a server.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Box className="h3Box">
+                  <h4>Ready-to-use infrastructure</h4>
+                </Box>
+                <p>
+                  Also, we developed a robust, top-grade infrastructure ready to
+                  host blockchain networks for our clients and open-source
+                  projects from our datacenter in Costa Rica.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Box className="h3Box">
+                  <h4>Experience deploying networks</h4>
+                </Box>
+                <p>
+                  We have partnered with local public and multilateral
+                  development institutions to participate in developing
+                  blockchain networks and blockchain-as-a-service platforms.
+                </p>
+              </Grid>
+            </Grid>
           </Box>
-          <Box className={styles.colBox}>
-            <Box className={styles.enterpriceInfoBox}>
-              <Box className={classes.h3Box}>
-                <Typography className={classes.h3}>Blockchain nodes development</Typography>
-              </Box>
-              <Typography className={classes.body1}>
-                We configure, host, and maintain blockchain nodes and networks
-                for private and public use with 24/7 monitoring and uptime.
-                This allows any organization to deploy a network according to
-                their requirements and needs.
-              </Typography>
+          <Box className="doubleSpacingBox">
+            <Box className="h3Box">
+              <h3>A Strategic Location</h3>
             </Box>
-            <Box className={styles.enterpriceInfoBox}>
-              <Box className={classes.h3Box}>
-                <Typography className={classes.h3}>Ready-to-use infrastructure</Typography>
-              </Box>
-              <Typography className={classes.body1}>
-                Also, we developed a robust, top-grade infrastructure ready to
-                host blockchain networks for our clients and open-source
-                projects from our datacenter.
-              </Typography>
-            </Box>
-          </Box>
-          <Box className={styles.colBox}>
-            <Box className={styles.enterpriceInfoBox}>
-              <br></br>
-              <Box className={classes.h3Box}>
-                <Typography className={classes.h3}>API endpoints</Typography>
-              </Box>
-              <Typography className={classes.body1}>
-                Our datacenter network also enables the installation of API
-                endpoints between blockchains and other tech stacks. An API
-                endpoint is a touchpoint of communication and interaction
-                between an API (Application Program Interface) and a server.
-              </Typography>
-            </Box>
-            <Box className={styles.enterpriceInfoBox}>
-            <br></br>
-              <Box className={classes.h3Box}>
-                <Typography className={classes.h3}>Experience deploying networks</Typography>
-              </Box>
-              <Typography className={classes.body1}>
-                We have partnered with local public and multilateral
-                development institutions to participate in developing
-                blockchain networks and blockchain-as-a-service platforms.
-              </Typography>
-            </Box>
-          </Box>
-
-          <Box className={styles.enterpriceTitleBox}>
-            <Box className={classes.h3Box}>
-              <Typography className={classes.h3}>A Strategic Location</Typography>
-            </Box>
-            <Typography className={classes.body1}>
+            <p>
               Our datacenter, located in San José, Costa Rica, is
               strategically located in the middle of the American continent,
               allowing convenient network interconnectivity. Costa Rica offers
@@ -465,313 +408,240 @@ const ServicePage = () => {
               education ranks, and flexible corporate structure – all
               appropriate for decentralized networks. These are some of the
               advantages that this country may add to your infrastructure:
-            </Typography>
-            <Box className={clsx(styles.colBox, styles.flexContent)}>
-              <picture className={styles.flexBox}>
-                <source
-                  className={styles.mapLocation}
-                  srcSet={useBaseUrl("img/cr.jp2")}
-                  type="image/jp2"
-                />
-                <img
-                  className={styles.mapLocation}
-                  src={useBaseUrl("img/cr.webp")}
-                />
-              </picture>
-
-              <Box className={styles.accordionBox}>
-                <Accordion
-                  square
-                  expanded={expanded === 'panel_interconnectivity'}
-                  onChange={handleChange('panel_interconnectivity')}
-                  className={classes.accordion}
-                >
-                  <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <Typography  className={classes.h3}>Network interconnectivity</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails className={classes.accordionPadding}>
-                    <Typography className={classes.body1}>
-                      Costa Rica has shores in both the Pacific and Atlantic
-                      oceans and connects three submarine fiber optic cables –
-                      ARCOS-1, MAYA-1, and Pan American Crossing (PAC) – that
-                      provide the majority of the bandwidth in the country.
-                      This interconnection provides real-time fail-over and
-                      redundancy to our infrastructure. Costa Rica is part of
-                      the six Central American nations interconnected via a
-                      terrestrial fiber-optic network (REDCA). Additionally,
-                      having direct connections to all upstream carriers
-                      allows the country’s network to prevent single-point
-                      failures.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  square
-                  expanded={expanded === 'panel_framework'}
-                  onChange={handleChange('panel_framework')}
-                  className={classes.accordion}
-                >
-                  <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <Typography  className={classes.h3}>Stable political framework</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails className={classes.accordionPadding}>
-                    <Typography className={classes.body1}>
-                      Costa Rica is a country that values Human Rights, Peace,
-                      and Democracy. The country is one of the most stable and
-                      longest-lasting Democracies in America. Costa Rica
-                      abolished its army in 1948 to promote education and
-                      wellbeing and stands out on equality and innovation.
-                      Moreover, the Inter-American Institute of Human Rights
-                      based its headquarters in San José.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  square
-                  expanded={expanded === 'panel_awareness'}
-                  onChange={handleChange('panel_awareness')}
-                  className={classes.accordion}
-                >
-                  <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <Typography  className={classes.h3}>Environmental awareness</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails className={classes.accordionPadding}>
-                    <Typography className={classes.body1}>
-                      Despite being a small country, Costa Rica houses more
-                      than 4% of the world’s biodiversity. The country’s
-                      leaders have been promoting ecology and sustainable
-                      development. Leading by example, more than 26% of its
-                      territory comprises of protected areas and National
-                      Parks.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-              </Box>
-            </Box>
+            </p>
           </Box>
-        </Box>
-      </Box>
-    )
-  }
-
-
-  const StartLeveraging = () => {
-    return (
-      <Box  className={classes.containerBlack}>
-        <Box className={classes.sectionNoPadding}>
           <Grid container spacing={5}>
-            <Box className={classes.inquiereBox}>
-              <Box style={{width:'100%'}}>
-                <Typography style={{textAlign:'center'}} className={clsx(classes.h2, classes.white)}>
-                  Start leveraging the power of blockchain infrastructures.
-                </Typography>
-                <Box style={{width: '100%', display:'flex', justifyContent: 'center'}} className={classes.buttonBox}>
-                  <Button className={classes.buttonPrimary} href={useBaseUrl("/contact-us")} >
-                    Contact us
-                  </Button>
-                </Box>
+            <Grid item xs={12} md={6}>
+              <Box className={!isMobile? "centerBox": clsx("centerBox","reduceMargin")}>
+                <img src={useBaseUrl("/img/map-loacation.svg")}/>
               </Box>
-            </Box>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box className="accordionBox">
+                <AccordionComp data={strategicLocationAccordion} expanded={expandedMap} handleChange={handleChangeMap} bgColor={'white'}/>
+              </Box>
+            </Grid>
           </Grid>
         </Box>
       </Box>
     )
   }
 
-
   const EducationTraining = () => {
     return (
-      <Box className={classes.container}>
-        <Box className={classes.sectionPadding}>
-          <Box className={styles.enterpriceTitleBox}>
-            <Typography className={classes.h2}>Education and Training</Typography>
-            <br/>
-            <Box className={styles.colBox}>
-              <Box className={styles.flexBox}>
-              <Accordion 
-                square
-                expanded={expanded === 'panel_Workshops'}
-                style={{backgroundColor:'#ffffff'}}
-                onChange={handleChange('panel_Workshops')} 
-                className={classes.accordion} >
-                  <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <Typography  className={classes.h3}>Executive Workshops</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails className={classes.accordionPadding}>
-                    <Typography className={classes.body1}>
-                      We know that innovative technologies, such as
-                      blockchain, may have a steep learning curve. So, we
-                      offer workshops on blockchain and EOSIO technology to
-                      C-suite executives and teams that want to keep up to
-                      date and learn more about blockchain and enterprise use
-                      cases. These workshops include multimodal content such
-                      as videos, lectures, and use cases. Download the course
-                      information here
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  square
-                  expanded={expanded === 'panel_Developers'}
-                  style={{backgroundColor:'#ffffff'}}
-                  onChange={handleChange('panel_Developers')}
-                  className={classes.accordion}
-                >
-                  <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <Typography  className={classes.h3}>Training for Developers</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails className={classes.accordionPadding}>
-                    <Typography className={classes.body1}>
-                      We also provide training and education resources for new
-                      talents that wish to kickstart their career in
-                      blockchain and in the EOSIO protocol. We have assembled
-                      a web portal that includes learning materials and guides
-                      for developers. Check them out here. Also, ask us about
-                      our training courses for companies and teams.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion
-                  square
-                  expanded={expanded === 'panel_Building'}
-                  style={{backgroundColor:'#ffffff'}}
-                  onChange={handleChange('panel_Building')}
-                  className={classes.accordion}
-                >
-                  <AccordionSummary className={classes.accordionPadding} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <Typography  className={classes.h3}>Community Building</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails className={classes.accordionPadding}>
-                    <Typography className={classes.body1}>
-                      We help promote the blockchain and EOSIO ecosystems by
-                      hosting and attending community activities. We also
-                      speak about blockchain and participate in events related
-                      to technology and innovation. Every year, we host a
-                      team-building event called EOSurf that takes our
-                      operations to the beach for several days to switch
-                      computers and code for surf and yoga lessons.
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-              </Box>
-              <picture className={clsx(classes.flexBox, classes.teamBox)}>
-                <source
-                  className={styles.educationImg}
-                  srcSet={useBaseUrl("img/education.jp2")}
-                  type="image/jp2"
-                />
-                <img
-                  className={styles.educationImg}
-                  src={useBaseUrl("img/education.webp")}
-                />
-              </picture>
-            </Box>
+      <Box ref={refEducation} className="containerGray">
+        <Box className="sectionPadding">
+          <Box className="h3Box">
+            <h2>Education and Training</h2>
           </Box>
-          <br/>
-          <br/>
-          <br/>
-          <Box
-            className={clsx(
-              styles.flexColumn
-            )}
-          >
-            <Box
-              className={clsx(
-                styles.enterpriceTitleBox,
-                styles.deplyblockchainBox
-              )}
-            >
-              <Box className={classes.titleBox}>
-                <Typography className={classes.h2}>
-                  How Can Your Industry Deploy Blockchain?
-                </Typography>
-              </Box>
-              <Typography className={classes.body1}>
-                Blockchain technology has the capabilities to transform many
-                industries, including:
-              </Typography>
-              <Box className={styles.contentDefaultImg}>
-                <picture>
-                  <source
-                    className={styles.defaultImgCarousel}
-                    srcSet={useBaseUrl("img/payments.jp2")}
-                    type="image/jp2"
-                  />
-                  <img
-                    className={styles.defaultImgCarousel}
-                    src={useBaseUrl("img/payments.webp")}
-                  />
-                </picture>
-                <picture>
-                  <source
-                    className={styles.defaultImgCarousel}
-                    srcSet={useBaseUrl("img/logistics.jp2")}
-                    type="image/jp2"
-                  />
-                  <img
-                    className={styles.defaultImgCarousel}
-                    src={useBaseUrl("img/logistics.webp")}
-                  />
-                </picture>
-                <picture>
-                  <source
-                    className={styles.defaultImgCarousel}
-                    srcSet={useBaseUrl("img/gaming.jp2")}
-                    type="image/jp2"
-                  />
-                  <img
-                    className={styles.defaultImgCarousel}
-                    src={useBaseUrl("img/gaming.webp")}
-                  />
-                </picture>
-              </Box>
-              <Typography className={classes.body1}>
-                Learn more about other industries that blockchain is
-                transforming. <a className={classes.a} href={useBaseUrl("/industries")}>Read more.</a>
-              </Typography>
-            </Box>
-          </Box>
+          {isMobile && 
+            <Box className="centerBox">
+              <img src={useBaseUrl("/img/imgCubes/eos-education.svg")}/>
+           </Box>
+          }
+          <Box className="spacingBox">
+            <Grid container spacing={5}>
+              <Grid item xs={12} md={6}>
+                <Box className="accordionBox">
+                  <Accordion
+                    square
+                    expanded={expandedEducation=== 'panel_Workshops'}
+                    onChange={handleChangeEducation('panel_Workshops')}
+                    style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
+                    className="accordion"
+                  >
+                    <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                      <h4 style={{margin:'2px', padding: 0}}>Executive workshops</h4>
+                    </AccordionSummary>
+                    <AccordionDetails style={{padding:1}}>
+                      <p style={{padding: 0}}>
+                        We know that innovative technologies, such as
+                        blockchain, may have a steep learning curve. So, we
+                        offer workshops on blockchain and EOSIO technology to
+                        C-suite executives and teams that want to keep up to
+                        date and learn more about blockchain and enterprise use
+                        cases.
+                      </p>
+                    </AccordionDetails>
+                  </Accordion>
+                  <Accordion
+                    square
+                    expanded={expandedEducation === 'panel_Developers'}
+                    onChange={handleChangeEducation('panel_Developers')}
+                    style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
+                    className="accordion"
+                  >
+                    <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                      <h4 style={{margin:'2px',padding: 0}}>Training for developers</h4>
+                    </AccordionSummary>
+                    <AccordionDetails style={{padding:1}}>
+                      <p style={{padding: 0}}>
+                        We also provide training and education resources for new
+                        talents that wish to kickstart their career in
+                        blockchain and in the EOSIO protocol. We have assembled
+                        a web portal that includes learning materials and guides
+                        for developers. Check them out {" "}  
+                        <a href="https://guide.eoscostarica.io/" target="_blank">
+                        here </a>. Also, <a href={useBaseUrl("/contact-us/")} target="_blank">
+                        ask us </a> about our training courses for companies and teams.
+                      </p>
+                    </AccordionDetails>
+                  </Accordion>
+                  <Accordion
+                    square
+                    expanded={expandedEducation === 'panel_Building'}
+                    onChange={handleChangeEducation('panel_Building')}
+                    style={{backgroundColor:'#f8f8f8',boxShadow:'none'}}
+                    className="accordion"
+                  >
+                    <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                      <h4 style={{margin:'2px',padding:0}}>Community building</h4>
+                    </AccordionSummary>
+                    <AccordionDetails style={{padding:1}}>
+                      <p style={{padding:0}}>
+                        We help promote the blockchain and EOSIO ecosystems by
+                        hosting and attending community activities. We also
+                        speak about blockchain and participate in events related
+                        to technology and innovation. Every year, we host a
+                        team-building event called <a href="https://eosurf.com/" target="_blank">
+                        EOSurf </a> that takes our
+                        operations to the beach for several days to switch
+                        computers and code for surf and yoga lessons.
+                      </p>
+                    </AccordionDetails>
+                  </Accordion>
+                </Box>
+              </Grid>
+              {isDesktop && 
+                <Grid item xs={12} md={6}>
+                  <Box className="centerBox">
+                    <img  src={useBaseUrl("/img/imgCubes/eos-education.svg")}/>
+                  </Box>
+                </Grid>
+              } 
+            </Grid>
+           </Box> 
         </Box>
       </Box> 
     )
   }
 
+  const IndustryBlockchain = () => {
+    return (
+      <Box className="containerSec">
+        <Box className="sectionPadding">
+          <Box className="titleBox">
+            <h2>How Can Your Industry Deploy <br/> Blockchain?</h2>
+          </Box>
+          <p>
+            Blockchain technology has the capabilities to transform many industries, including:
+          </p>
+          <Box className="spacingBox">
+            <Grid container spacing={7}>
+              <Grid item xs={12} md={4}>
+                <Box className="imgBoxServices">
+                  <img
+                   src={useBaseUrl("img/icons/logistics.svg")}
+                   style={{paddingTop:'25px'}}
+                   className="imageIndrustries"
+                   />
+                </Box>
+                <Box className="h3Box">
+                  <h3>Payments and Transfers</h3>
+                </Box>
+                <p>
+                  Blockchain enables an efficient and secure way to register
+                  transactions that can facilitate payments and offer near
+                  real-time auditing with encryption to reduce data breaches.{" "}
+                  <a href="https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-a-great-idea-e384b298a4a8" target="_blank">
+                    Learn more
+                  </a>
+                </p>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Box className="imgBoxServices">
+                  <img 
+                    src={useBaseUrl("img/icons/payments.svg")}
+                    style={{paddingTop:'25px'}}
+                    className="imageIndrustriesLogistics"
+                  />
+                </Box>
+                <Box className="h3Box">
+                  <h3>Logistics and Supply Chain</h3>
+                </Box>
+                <p>
+                  In an industry that involves dozens of 
+                  stakeholders, blockchain's capabilities 
+                  to manage authorizations and automate 
+                  and trace operations can make a great ally.{" "}
+                  <a href={useBaseUrl("/blog/blockchain-logistics")} target="_blank">
+                    Learn more
+                  </a>
+                </p>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                  <Box className="imgBoxServices">
+                    <img 
+                      src={useBaseUrl("img/icons/gaming.svg")}
+                      style={{paddingTop:'20px'}}
+                      className="imageIndrustries"
+                    />
+                  </Box>
+                  <Box className="h3Box">
+                    <h3>Gaming and Esports</h3>
+                  </Box>
+                <p>
+                  Blockchain enables a better way to transfer, valorize, and
+                  collect digital in-game assets. Also, its capabilities to
+                  increase security and offer a more efficient way for
+                  transactions can level-up online gaming.{" "}
+                  <a href={useBaseUrl("/blog/gaming-blockchain")} target="_blank">
+                    Learn more
+                  </a>
+                </p>
+              </Grid>
+            </Grid>
+          </Box>
+          <br/>
+          <p>
+            Learn more about other industries that blockchain is transforming. <a href={useBaseUrl("/industries")}>Read more.</a>
+          </p>
+        </Box>
+      </Box>
+    )
+  }
+
   return (
-    <Layout>
-      <Box className={classes.mainContainer}>
-        {!isMobile && 
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+    > 
+      {isDesktop && 
+        <Box className="mainContainer">
           <Parallax strength={800}>
-            <Background className={classes.bgParallax}>
-                <Box className={classes.imgParallax} />
+            <Background className="bgParallax">
+                <Box className="imgParallax" />
             </Background>
             <HeroSection />
             <BlockchainDev />
           </Parallax>
-        }
-        {isMobile && 
-          <>
-            <HeroSection />
-            <BlockchainDev />
-          </>
-        }
-        <DoYouStill />
-        <ASolution />
-        <DoYouWant />
-        {!isMobile &&
-          <>
-            <WhatWeDo />
-            <StartLeveraging />
-            <EducationTraining />
-          </>
-        }
-        {isMobile && 
-          <>
-            <WhatWeDo />
-            <StartLeveraging />
-            <EducationTraining />
-          </>
-        } 
-      </Box>
+          <BlockchainInfrastructure />
+          <EducationTraining />
+          <IndustryBlockchain />
+          <ContactUsBanner />
+        </Box>
+      }
+      {isMobile && 
+        <Box className="mainContainer">
+          <HeroSection />
+          <BlockchainDev />
+          <BlockchainInfrastructure />
+          <EducationTraining />
+          <IndustryBlockchain />
+          <ContactUsBanner />
+        </Box>
+      }
     </Layout>
   );
 };
