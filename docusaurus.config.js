@@ -32,7 +32,7 @@ module.exports = {
     [
       'docusaurus2-dotenv',
         {
-          path: "./.env", // The path to your environment variables.
+          systemvars: true
       }
     ]
   ],
