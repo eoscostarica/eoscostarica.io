@@ -126,7 +126,7 @@ const ContactUs = () => {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(jsonData)
       };
-      const response = await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${process.env.PORTAL_ID}/${process.env.CONTACT_FORM_ID}`, requestOptions);
+      const response = await fetch("https://api.hsforms.com/submissions/v3/integration/submit/9018734/68e53955-746e-4e74-9812-68153170bf97", requestOptions);
       if(response.ok) setResultsSection(true)
       else setErrorMessage(true)
     }
@@ -193,9 +193,8 @@ const ContactUs = () => {
                 </Box>
             </Grid>
             <Grid item xs={12} md={12}>
-              {console.log("env",process.env.RECAPTCHA_CLIENT_KEY)}
               <ReCAPTCHA
-                sitekey={process.env.RECAPTCHA_CLIENT_KEY}
+                sitekey="6Lf3CXMaAAAAAN8_to0Gc3AYeHGOBtjd6X51GFcb"
                 onChange={(value) => setRecaptchaValue(value)}
               />
             </Grid>
