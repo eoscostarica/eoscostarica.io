@@ -29,7 +29,12 @@ module.exports = {
   ],
   plugins: [
     path.resolve(__dirname, 'src/plugins', 'webpackconfig'),
-    'docusaurus2-dotenv'
+    [
+      'docusaurus2-dotenv',
+        {
+          path: "./.env", // The path to your environment variables.
+      }
+    ]
   ],
   themeConfig: {
     image:"img/metaImgBlack.png",

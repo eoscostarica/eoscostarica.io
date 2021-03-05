@@ -193,6 +193,7 @@ const ContactUs = () => {
                 </Box>
             </Grid>
             <Grid item xs={12} md={12}>
+              {console.log("env",process.env.RECAPTCHA_CLIENT_KEY)}
               <ReCAPTCHA
                 sitekey={process.env.RECAPTCHA_CLIENT_KEY}
                 onChange={(value) => setRecaptchaValue(value)}
