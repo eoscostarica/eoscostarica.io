@@ -23,17 +23,17 @@ const MetaData={
 const moreIndustriesAccordion = 
 [
   {
-    title: 'Asset Management',
+    title: 'Asset management',
     content:' Blockchain technology enables an immutable and secure way to tokenize and manage tangible and intangible assets. Some opportunities include innovative liquidity options and reduced management costs.',
     target: 'panel_AssetManagementy'
   },
   {
-    title: 'Decentralized Finance',
+    title: 'Decentralized finance',
     content:'Also known as DeFi, decentralized finance leverages blockchain technology to explore new liquidity opportunities for citizens. Our team is part of evodex, an open-source DeFi app.',
     target: 'panel_Decentralized'
   },
   {
-    title: 'Digital Identity',
+    title: 'Digital identity',
     content:'Blockchain allows an immutable, transparent, and secure system to manage digital identities that can interconnect with IoT, biometrics, and enterprise management systems.',
     target: 'panel_Identity'
   },
@@ -43,7 +43,7 @@ const moreIndustriesAccordion =
     target: 'panel_Energy'
   },
   {
-    title: 'Legal Tech',
+    title: 'Legal tech',
     content:' Smart contracts are computer codes that can execute automatically and autonomously according to the contract terms. These may transform legal processes by adding transparency, efficiency, and immutable registries.',
     target: 'panel_Tech',
   },
@@ -57,17 +57,17 @@ const moreIndustriesAccordion2 =
     target: 'panel_Government'
   },
   {
-    title: 'Media and Entertainment',
+    title: 'Media and entertainment',
     content:'The blockchain’s capabilities to securely and immutably store registries can help reduce piracy and disputes. Also, blockchain can protect IP and improve traceability of payments and content distribution.',
     target: 'panel_Entertainment'
   },
   {
-    title: 'Healthcare and Insurance',
+    title: 'Healthcare and insurance',
     content:' Blockchain technology offers improved efficiency, traceability, and security to store medical and other sensitive data from patients. Smart contracts help reduce costs for insurance claims processing.',
     target: 'panel_Insurance'
   },
   {
-    title: 'Real Estate',
+    title: 'Real estate',
     content:'Leverage real estate investments with blockchain technology by creating new business models. Blockchain helps integrate digital assets for liquidity and streamline investor relations and portfolio management.',
     target: 'panel_RealEstate'
   },
@@ -184,7 +184,7 @@ const Industries = () => {
                 <Box className="animationBox">
                   <Box>
                     <Box className="h3Box">
-                      <h2>Logistics and <br/> supply chain </h2>
+                      <h2>Logistics and <br/> Supply Chain </h2>
                     </Box>
                     <p>
                       In an industry that involves dozens of stakeholders, the

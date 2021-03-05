@@ -51,12 +51,29 @@ const otherNewsRelease = [
 
 const EOSCRNews = [
   {
+    img:"https://static.coindesk.com/wp-content/uploads/2021/02/roberto-huczek-qS8BH24w7mk-unsplash-710x458.jpg?format=webp",
+    title:"EOS Builder Block.one Joins Enterprise Blockchain Alliance in Latin America",
+    date:"Feb 25, 2021",
+    link:"https://www.coindesk.com/eos-builder-block-one-joins-enterprise-blockchain-alliance-in-latin-america",
+    media:"CoinDesk"
+  },
+  {
+    img:"https://cdn.forbescentroamerica.com/2020/12/bitcoin-2007769_1280-800x450.jpg",
+    title:"Las criptomonedas brillan en Centroamérica",
+    date:"Feb 25, 2021",
+    link:"https://forbescentroamerica.com/2021/02/25/blockchain-crece-en-el-istmo/",
+    media:"Forbes Centroamerica"
+  },
+  {
     img:"https://static.coindesk.com/wp-content/uploads/2019/08/Brendan-Blumer-Option-1-e1569425778122-710x458.jpg?format=webp",
     title:"Block.one Debuts Big-Business Version of EOSIO Blockchain",
     date:"Oct 15, 2020",
     link:"https://www.coindesk.com/block-one-eosio-blockchain-enterprise-eos",
     media:"CoinDesk"
-  },
+  }
+]
+
+const EOSCROtherNews = [
   {
     img:"https://images.cointelegraph.com/images/717_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS9zdG9yYWdlL3VwbG9hZHMvdmlldy8yYjMzMjkxMjZhYWVlZjcyNDQ3ZTU3NjkyYmQ1MGUxMi5qcGc=.jpg",
     title:"Blood on the Blockchain: Tokenizing Can Make Donations More Effective",
@@ -70,10 +87,7 @@ const EOSCRNews = [
     date:"Jul 30, 2020",
     link:"https://healthtechpulse.com/2020/07/30/eos-costa-rica-utilising-blockchain-to-address-global-blood-supply-shortage",
     media:"Health Tech Pulse"
-  }
-]
-
-const EOSCROtherNews = [
+  },
   {
     img:"https://static.coindesk.com/wp-content/uploads/2020/07/debora-tingley-4XWi39Bys8k-unsplash-710x458.jpg?format=webp",
     title:"Ethereum and EOSIO Square Up Over Enterprise Blockchain Business in Latin America",
@@ -139,7 +153,7 @@ const Press = () => {
               in the news. The following are some articles that mention our job.
             </p>
             <Box className="buttonBox">
-                <button className="buttonPrimary" onClick={() => history.push("/services/")} >Contact Us</button>
+              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Contact Us</button>
             </Box>
           </Box>
         }
@@ -149,9 +163,12 @@ const Press = () => {
             <h1>What the Media <br/> Says About Us</h1>
             </Box>
             <p >
-                Our work promotes the benefits of blockchain technology and its use cases
-                in the news. The following are some articles that mention our job.
+              Our work promotes the benefits of blockchain technology and its use cases
+              in the news. The following are some articles that mention our job.
             </p>
+            <Box className="buttonBox">
+              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Contact Us</button>
+            </Box>
           </Box>
         }
       </Box>
@@ -160,7 +177,7 @@ const Press = () => {
 
   const News= ({img, title, media, date, link}) => {
     return(
-      <Grid onClick = {() => window.open(link)} item xs={12} md={4}>
+      <Grid onClick = {() => window.open(link)} style={{marginLeft: isMobile ? '25px' : ' ', marginRight:isMobile ? '25px' : ' '}} item xs={12} md={4}>
         <Card style={{transition: 'all .4s ease-in-out'}} className="card" variant="outlined">
           <CardMedia
             className="media"
@@ -201,7 +218,7 @@ const Press = () => {
               />
             ))}
           </Grid>
-          <Box style={{display: (secondList.length === 0)? 'none': ''}} className={clsx("centerBox","litlePaddingTop")}>
+          <Box style={{display: (secondList.length === 0) ? 'none' : ''}} className={clsx("centerBox","litlePaddingTop")}>
             <Button
               className={clsx(!exp? "expand": "","button-glow")}
               onClick={action}
@@ -216,7 +233,7 @@ const Press = () => {
               >
                 <Box style={{display: 'inline-block', paddingTop:'30px'}}>
                   <p style={{marginBottom:'-15px', fontWeight:'bold'}}>View More</p>
-                  <ExpandMoreIcon style={{width:'50px', height:'50px', display: exp? 'none': ''}}/>
+                  <ExpandMoreIcon style={{width:'50px', height:'50px', display: exp ? 'none' : ''}}/>
                 </Box>
             </Button>
           </Box>
@@ -248,7 +265,7 @@ const Press = () => {
                 display: !exp? 'none': ''}
               }
               >
-              <ExpandLessIcon style={{width:'50px', height:'50px', display: !exp? 'none': ''}}/>
+              <ExpandLessIcon style={{width:'50px', height:'50px', display: !exp ? 'none' : ''}}/>
             </Button>
           </Box>
         </Box>
