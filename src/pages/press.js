@@ -163,9 +163,12 @@ const Press = () => {
             <h1>What the Media <br/> Says About Us</h1>
             </Box>
             <p >
-                Our work promotes the benefits of blockchain technology and its use cases
-                in the news. The following are some articles that mention our job.
+              Our work promotes the benefits of blockchain technology and its use cases
+              in the news. The following are some articles that mention our job.
             </p>
+            <Box className="buttonBox">
+              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Contact Us</button>
+            </Box>
           </Box>
         }
       </Box>
