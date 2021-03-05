@@ -9,6 +9,7 @@ import Alert from '@material-ui/lab/Alert'
 import { withStyles } from '@material-ui/core/styles'
 import { useMediaQuery } from 'react-responsive'
 import { Parallax, Background } from 'react-parallax'
+import ReCAPTCHA from "react-google-recaptcha";
 
 const MetaData={
   title:"EOS Costa Rica: Contact Us",
@@ -40,9 +41,11 @@ const ContactUs = () => {
   const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
   const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
   const [resultsSection, setResultsSection] = useState(false)
+ 
 
   const ContactForm = () =>{
     const [errorMessage, setErrorMessage] = useState(false)
+    const [recaptchaValue, setRecaptchaValue] = useState(false)
     const [contactForm, setContactForm] = useState(
       {
         email: '',
@@ -59,6 +62,10 @@ const ContactUs = () => {
 
     const handleCloseErrorMessage = () =>{
       setErrorMessage(false)
+    }
+
+    const onCaptchaChange = () =>{
+
     }
 
     const validateEmail = (mail) => {
@@ -186,6 +193,12 @@ const ContactUs = () => {
                 </Box>
             </Grid>
             <Grid item xs={12} md={12}>
+              <ReCAPTCHA
+                sitekey="6Lf3CXMaAAAAAN8_to0Gc3AYeHGOBtjd6X51GFcb"
+                onChange={(value) => setRecaptchaValue(value)}
+              />
+            </Grid>
+            <Grid item xs={12} md={12}>
               <Box className={isMobile ? "centerBox" : ""}>   
                   <input type="submit" className="buttonPrimary" value="Submit" 
                   disabled={
@@ -193,6 +206,7 @@ const ContactUs = () => {
                       !contactForm.lastName ||
                       !contactForm.email ||
                       !contactForm.companyName ||
+                      !recaptchaValue ||
                       !validateEmail(contactForm.email)
                   }/>
               </Box>
