@@ -27,7 +27,10 @@ module.exports = {
       },
     ],
   ],
-  plugins: [path.resolve(__dirname, 'src/plugins', 'webpackconfig')],
+  plugins: [
+    path.resolve(__dirname, 'src/plugins', 'webpackconfig'),
+    'docusaurus2-dotenv'
+  ],
   themeConfig: {
     image:"img/metaImgBlack.png",
     footer: {},
