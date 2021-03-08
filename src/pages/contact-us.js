@@ -9,7 +9,8 @@ import Alert from '@material-ui/lab/Alert'
 import { withStyles } from '@material-ui/core/styles'
 import { useMediaQuery } from 'react-responsive'
 import { Parallax, Background } from 'react-parallax'
-import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha"
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 const MetaData={
   title:"EOS Costa Rica: Contact Us",
