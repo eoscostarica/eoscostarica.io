@@ -62,7 +62,7 @@ const SuscribeForm =() => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(jsonData)
             }
-            const response = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/9018734/df605eac-d7d1-44b5-af45-dd93d65d84ee', requestOptions)
+            const response = await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${process.env.HUBSPOT_PORTAL_ID}/${process.env.HUBSPOT_FOOTER_FORM}`, requestOptions)
             setOpen(true)
             setEmail("")
         }
