@@ -27,7 +27,9 @@ module.exports = {
       },
     ],
   ],
-  plugins: [path.resolve(__dirname, 'src/plugins', 'webpackconfig')],
+  plugins: [
+    path.resolve(__dirname, 'src/plugins', 'webpackconfig')
+  ],
   themeConfig: {
     image:"img/metaImgBlack.png",
     footer: {},
