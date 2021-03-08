@@ -89,6 +89,17 @@ p{
   margin-bottom: 0;
 }
 
+label{
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 19px;
+  letter-spacing: -0.05px;
+  line-height: 25px;
+  text-align: justify;
+}
+
 a{
   color: #0091FF;
 }
@@ -120,6 +131,12 @@ a{
 
 .buttonPrimary:hover{
   opacity:0.8;
+}
+
+.buttonPrimary:disabled,
+.buttonPrimary[disabled]{
+  background-color: #cccccc;
+  color: #666666;
 }
 
 .buttonSecondary{
@@ -1214,6 +1231,60 @@ input:checked + .slider:before {
   height: 100%;
 }
 
+.iconStep{
+  background-color: #9E9E9E;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconStepActive{
+  background-color: #5484b3;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconText{
+  color: white;
+  padding: 0;
+  margin-bottom: 1px;
+  font-size: 15px;
+}
+
+.stepText{
+  font-family: 'Gotham',Lato, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 28px;
+  letter-spacing: -0.06px;
+  line-height: 34px;
+}
+
+.formBox{
+  padding: 50px;
+}
+
+.radioBox{
+  margin-top: 10px;
+}
+
+.itemQuestion{
+  text-indent: -46px;
+  padding-left: 46px;
+}
+
+.itemQuestionRadio{
+  margin-right: 50px;
+}
+
 .imgcard {
   display: block;
   width: 150px;
@@ -1476,6 +1547,13 @@ input:checked + .slider:before {
     padding-right: 25px;
   }
 
+  label{
+    line-height: 18px;
+    font-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
   /*blog*/
   .blog-wrapper{
     margin-top: 50px;
@@ -1615,6 +1693,27 @@ input:checked + .slider:before {
   .projectsGridRight{
     padding-top: 50px;
     padding-right: 0;
+  }
+
+  .formBox{
+    padding: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .radioBox{
+    margin-left: 25px;
+  }
+
+  .itemQuestion{
+    text-indent: 0;
+    padding-left: 25px;
+  }
+  
+  .inputFormBox{
+    width: '100%';
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .footerCopyContent{
