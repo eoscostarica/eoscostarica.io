@@ -332,12 +332,11 @@ const ServicePage = () => {
                 <h3>Top-notch Blockchain Infrastructure</h3>
               </Box>
               <p>
-                EOS Costa Rica deploys blockchain technology to design enterprise
-                solutions that can integrate with other systems. Blockchain
-                enables the deployment of smart contracts – computer codes that
-                can execute automatically and autonomously. Smart contracts allow
-                improved efficiency and can reduce transaction-related costs.
-                Learn more about enterprise blockchain:
+                Blockchains operate as decentralized peer-to-peer networks where a
+                number of computers or "nodes" are interconnected to one another. These nodes
+                keep a copy of the registers and act as validators of new transactions. These
+                features make it critical to building robust infrastructure networks that comply
+                with the blockchain's requirements.
               </p>
             </Grid>
             {isDesktop && 
