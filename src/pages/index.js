@@ -151,16 +151,16 @@ const Home = () => {
                 </Grid>
               }
               {isMobile &&
-                <Grid container>
-                    <Grid item xs={5}>
-                      <p>
+                <Grid justify='center' container>
+                    <Grid item xs={11}>
+                      <h4 style={{textAlign:'center'}}>
                         <b>
                         Learn more about how blockchain can improve your operations.
                         </b>
-                      </p>
+                      </h4>
                     </Grid>
-                    <Grid item xs={7}>
-                      <Box className="boxFlexEnd" style={{paddingRight:'25px'}}>
+                    <Grid item xs={12}>
+                      <Box className="centerBox" >
                         <button className={clsx("buttonSecondary","specialButton")} onClick={() => history.push("/contact-us/")} >Find Out How</button>
                       </Box>
                     </Grid>
