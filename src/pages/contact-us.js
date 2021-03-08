@@ -46,6 +46,7 @@ const ContactUs = () => {
   const ContactForm = () =>{
     const [errorMessage, setErrorMessage] = useState(false)
     const [recaptchaValue, setRecaptchaValue] = useState(false)
+    const [submitLoading, setSubmitLoading] = useState(false)
     const [contactForm, setContactForm] = useState(
       {
         email: '',
@@ -64,10 +65,6 @@ const ContactUs = () => {
       setErrorMessage(false)
     }
 
-    const onCaptchaChange = () =>{
-
-    }
-
     const validateEmail = (mail) => {
       const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
       return regex.test(mail)
@@ -75,6 +72,7 @@ const ContactUs = () => {
 
     const onSubmitForms = async (e) => {
       e.preventDefault()
+      setSubmitLoading(true)
       sendData();
     }
 
@@ -129,6 +127,7 @@ const ContactUs = () => {
       const response = await fetch("https://api.hsforms.com/submissions/v3/integration/submit/9018734/68e53955-746e-4e74-9812-68153170bf97", requestOptions);
       if(response.ok) setResultsSection(true)
       else setErrorMessage(true)
+      setSubmitLoading(false)
     }
 
     return(
@@ -193,22 +192,32 @@ const ContactUs = () => {
                 </Box>
             </Grid>
             <Grid item xs={12} md={12}>
+              <p>
+                  We respect your privacy. We will not share any contact information and will only use it to contact you about our services. You may unsubscribe from these communications at any time.
+              </p>
+            </Grid>
+            <Grid item xs={12} md={12}>
               <ReCAPTCHA
                 sitekey="6Lf3CXMaAAAAAN8_to0Gc3AYeHGOBtjd6X51GFcb"
                 onChange={(value) => setRecaptchaValue(value)}
               />
             </Grid>
             <Grid item xs={12} md={12}>
-              <Box className={isMobile ? "centerBox" : ""}>   
-                  <input type="submit" className="buttonPrimary" value="Submit" 
-                  disabled={
+              <Box className={isMobile ? "centerBox" : ""}>
+                {submitLoading && 
+                    <CircularProgress style={{color:'#5484B3'}}/>
+                }
+                {!submitLoading && 
+                    <input type="submit" className="buttonPrimary" value="Submit" 
+                    disabled={
                       !contactForm.firstName ||
                       !contactForm.lastName ||
                       !contactForm.email ||
                       !contactForm.companyName ||
                       !recaptchaValue ||
                       !validateEmail(contactForm.email)
-                  }/>
+                    }/>
+                }
               </Box>
             </Grid>
             <Snackbar open={errorMessage} autoHideDuration={4000} onClose={handleCloseErrorMessage}>
