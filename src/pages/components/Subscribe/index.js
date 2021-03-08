@@ -100,7 +100,7 @@ const SuscribeForm =() => {
             <Box className="litleMarginTop">
             <p style={{color:'white', fontSize:'14px'}}>
                 EOS Costa Rica respects your privacy. We need the contact information you provide to us to contact you about our services.
-                You may unsubscrie from these communications at any time.
+                You may unsubscribe from these communications at any time.
             </p>
             </Box>
             <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>

@@ -54,15 +54,14 @@ const BlockProducer = () => {
             <p>
               We are one of the first companies in Latin America to deploy the EOSIO
               protocol.
-            </p>
             <br/>
-            <p>
+            <br/>
               Innovation is in our DNA. We seek new opportunities to leverage this technology for 
               enterprise use to solve real-world problems. Learn more about how we help to develop the
               EOSIO blockchain ecosystem worldwide.  
             </p>
             <Box className="buttonBoxMobile"> 
-              <button className="buttonPrimary" onClick={() => history.push(" https://t.me/eoscr")} >Learn More</button>
+              <button className="buttonPrimary" onClick={() => history.push(" https://t.me/eoscr")} >Connect with us</button>
             </Box>
           </Box>
         }

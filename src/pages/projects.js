@@ -113,6 +113,7 @@ const OurProjects = () => {
               both the public and private sectors learn and explore the benefits of EOSIO blockchain
               technology.
             <br/>
+            <br/>
               From improving the way a company registers cross-border transactions to
               ensuring immutable traceability of logistics operations, our team has developed top-notch
               solutions to real-world problems. Get to know our latest projects.
