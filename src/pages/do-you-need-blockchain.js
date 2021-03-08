@@ -18,6 +18,8 @@ import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl'
 import Snackbar from '@material-ui/core/Snackbar'
 import Alert from '@material-ui/lab/Alert'
+import CircularProgress from '@material-ui/core/CircularProgress'
+import ReCAPTCHA from "react-google-recaptcha"
 
 import FormComponent from './components/FormComponent'
 import FormPDF from './components/FormPDF'
@@ -530,6 +532,7 @@ const Form = () => {
                                     This tool intends to guide you on your research about blockchain technology. 
                                     The responses provided do not mean any kind of representation of any warranty regarding the accuracy or validity of the information and your decision’s completeness. 
                                     Under no circumstance shall this represent any liability to you for any loss or damage incurred from using this tool. Our team built this template in good faith, and we expect you to make good use of it. 
+                                    The responses will be anonymous and gathered to visualize an overview of statistics. We will not share your personal information with third parties. 
                                     If you have any questions, <a href="/contact-us" target="_blank">contact us</a> directly or join our <a href="https://t.me/eoscr" target="_blank">Telegram channel</a>.
                                 </p>
                             </Box>
@@ -606,6 +609,8 @@ const Form = () => {
         const [thanksMessage, setThanksMessage] = useState(false)
         const [formError, setFormError] = useState(false)
         const [errorMessage, setErrorMessage] = useState(false)
+        const [recaptchaValue, setRecaptchaValue] = useState(false)
+        const [submitLoading, setSubmitLoading] = useState(false)
         
         const handleEmailChange = (e) => {
             setEmail(e.target.value)
@@ -638,8 +643,12 @@ const Form = () => {
 
         const  onSubmitEmailResults = async (e) => {
             e.preventDefault()
+            setSubmitLoading(true)
             if(validateEmail(email)) sendData()
-            else setFormError(true)
+            else {
+                setFormError(true)
+                setSubmitLoading(false)
+            }
         }
 
         const sendData = async (e) => {
@@ -693,6 +702,7 @@ const Form = () => {
             const response = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/9018734/7c668857-b92d-48f8-ad46-94c5a9c2cc86', requestOptions)
             if(response.ok) setThanksMessage(true)
             else setErrorMessage(true)
+            setSubmitLoading(false)
         }
         
         return(
@@ -774,15 +784,27 @@ const Form = () => {
                                 </Grid>
                             }
                             <Grid item xs={12} md={12}>
+                            <ReCAPTCHA
+                                sitekey="6Lf3CXMaAAAAAN8_to0Gc3AYeHGOBtjd6X51GFcb"
+                                onChange={(value) => setRecaptchaValue(value)}
+                            />
+                            </Grid>
+                            <Grid item xs={12} md={12}>
                                 <Box className={isMobile ? "centerBox" : ""}>   
-                                    <input type="submit" className="buttonPrimary" value="Submit" 
-                                    disabled={
-                                        !email ||
-                                        !companyName ||
-                                        !companyIndustry ||
-                                        !companyCountry ||
-                                        !validateEmail(email)
-                                    }/>
+                                    {submitLoading && 
+                                        <CircularProgress style={{color:'#5484B3'}}/>
+                                    }
+                                    {!submitLoading && 
+                                        <input type="submit" className="buttonPrimary" value="Submit" 
+                                        disabled={
+                                            !email ||
+                                            !companyName ||
+                                            !companyIndustry ||
+                                            !companyCountry ||
+                                            !recaptchaValue ||
+                                            !validateEmail(email)
+                                        }/>
+                                    }
                                 </Box>
                             </Grid>
                             <Snackbar open={errorMessage} autoHideDuration={4000} onClose={handleCloseErrorMessage}>
@@ -794,7 +816,7 @@ const Form = () => {
                 {thanksMessage && 
                     <Box>
                         <Box className="spacingBox">
-                            <p>Thanks for use this tool, download file for more details.</p>
+                            <p>Thanks for using this tool, download file for more details.</p>
                             <p>If you have any questions regarding EOSIO and blockchain, please <a href="/contact-us">contact us</a> or go to our <a href="/blog">blog</a>!</p>
                         </Box>            
                         <FormPDF 
