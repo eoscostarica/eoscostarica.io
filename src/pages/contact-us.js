@@ -9,7 +9,8 @@ import Alert from '@material-ui/lab/Alert'
 import { withStyles } from '@material-ui/core/styles'
 import { useMediaQuery } from 'react-responsive'
 import { Parallax, Background } from 'react-parallax'
-import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha"
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 const MetaData={
   title:"EOS Costa Rica: Contact Us",
@@ -124,7 +125,7 @@ const ContactUs = () => {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(jsonData)
       };
-      const response = await fetch("https://api.hsforms.com/submissions/v3/integration/submit/9018734/68e53955-746e-4e74-9812-68153170bf97", requestOptions);
+      const response = await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${process.env.HUBSPOT_PORTAL_ID}/${process.env.HUBSPOT_CONTACT_EN_FORM}`, requestOptions);
       if(response.ok) setResultsSection(true)
       else setErrorMessage(true)
       setSubmitLoading(false)
@@ -198,7 +199,7 @@ const ContactUs = () => {
             </Grid>
             <Grid item xs={12} md={12}>
               <ReCAPTCHA
-                sitekey="6Lf3CXMaAAAAAN8_to0Gc3AYeHGOBtjd6X51GFcb"
+                sitekey={process.env.RECAPTCHA_CLIENT_KEY}
                 onChange={(value) => setRecaptchaValue(value)}
               />
             </Grid>
