@@ -151,7 +151,7 @@ const Home = () => {
                 </Grid>
               }
               {isMobile &&
-                <Grid container spacing={0}>
+                <Grid container>
                     <Grid item xs={5}>
                       <p>
                         <b>
