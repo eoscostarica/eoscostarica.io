@@ -62,7 +62,7 @@ const SuscribeForm =() => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(jsonData)
             }
-            const response = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/9018734/df605eac-d7d1-44b5-af45-dd93d65d84ee', requestOptions)
+            const response = await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${process.env.HUBSPOT_PORTAL_ID}/${process.env.HUBSPOT_FOOTER_FORM}`, requestOptions)
             setOpen(true)
             setEmail("")
         }
@@ -100,7 +100,7 @@ const SuscribeForm =() => {
             <Box className="litleMarginTop">
             <p style={{color:'white', fontSize:'14px'}}>
                 EOS Costa Rica respects your privacy. We need the contact information you provide to us to contact you about our services.
-                You may unsubscrie from these communications at any time.
+                You may unsubscribe from these communications at any time.
             </p>
             </Box>
             <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>

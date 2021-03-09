@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = {
   title: 'EOSIO Enterprise Blockchain Development Services -  EOS Costa Rica',
   tagline: '',
@@ -26,7 +27,16 @@ module.exports = {
       },
     ],
   ],
-
+  plugins: [
+    path.resolve(__dirname, 'src/plugins', 'webpackconfig'),
+    [
+      "docusaurus2-dotenv",
+      {
+        systemvars: true,
+      },
+    ],
+    
+  ],
   themeConfig: {
     image:"img/metaImgBlack.png",
     footer: {},

@@ -54,15 +54,14 @@ const BlockProducer = () => {
             <p>
               We are one of the first companies in Latin America to deploy the EOSIO
               protocol.
-            </p>
             <br/>
-            <p>
+            <br/>
               Innovation is in our DNA. We seek new opportunities to leverage this technology for 
               enterprise use to solve real-world problems. Learn more about how we help to develop the
               EOSIO blockchain ecosystem worldwide.  
             </p>
             <Box className="buttonBoxMobile"> 
-              <button className="buttonPrimary" onClick={() => history.push(" https://t.me/eoscr")} >Learn More</button>
+              <button className="buttonPrimary" onClick={() => history.push(" https://t.me/eoscr")} >Connect with us</button>
             </Box>
           </Box>
         }
@@ -262,7 +261,7 @@ const BlockProducer = () => {
             </Box>
             <Box className="spacingBox">
               <Box className="h3Box">
-                <h3>Code of conduct</h3>
+                <h3>Code of Conduct</h3>
               </Box>
               <p>EOS Costa Rica pledges to:</p>
               <br/>
@@ -296,7 +295,7 @@ const BlockProducer = () => {
             </Box>
             <Box>
               <Box className="h3Box">
-                <h3>Ownership disclosure</h3>
+                <h3>Ownership Disclosure</h3>
               </Box>
               <p className="body1">
                 According to the Block Producer Agreement and values that have
@@ -462,7 +461,7 @@ const BlockProducer = () => {
             <Grid justify="center" container spacing={5}>
               <Grid item xs={12} md={5}>
                 <Box className="specialH3Box">
-                  <h4>Liberty and Peace</h4>
+                  <h4>Liberty and peace</h4>
                 </Box>
                 <p >
                   Costa Rica is one of the most stable and longest-lasting
@@ -483,7 +482,7 @@ const BlockProducer = () => {
               </Grid>
               <Grid item xs={12} md={5}>
                 <Box className="specialH3Box">
-                  <h4>Human Rights</h4>
+                  <h4>Human rights</h4>
                 </Box>
                 <p>
                   Costa Rica is founded on respect to Human Rights, and even the
