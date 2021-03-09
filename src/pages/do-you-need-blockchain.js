@@ -526,7 +526,7 @@ const Form = () => {
                             <p>Please read the <a onClick={handleDisclaimer} style={{cursor:'pointer'}}>disclaimer</a> before filling this form.</p>
                         </Box>
                         {activeDisclaimer && 
-                            <Box className="spacingBox">
+                            <Box className="spacingBox" style={{backgroundColor:'rgb(248,248,248,.7)', padding:'20px'}}>
                                 <p>
                                     Please, use this template as a reference and not an auditing process. 
                                     This tool intends to guide you on your research about blockchain technology. 
