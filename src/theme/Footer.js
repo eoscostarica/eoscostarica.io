@@ -199,7 +199,7 @@ const Footer = () => {
                   </a>
                   <a className={clsx("marginIconsFooter", "socialMediaAnimation")} href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
                     <YouTubeIcon 
-                      style={{ 
+                      style={{
                         width: isDesktop ? '42px' : '45px',
                         height: isDesktop ? '42px' : '45px',
                         cursor:'pointer',

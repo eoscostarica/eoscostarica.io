@@ -415,9 +415,9 @@ const BlockProducer = () => {
                 <Box className="centerBox">
                   <a className="noMarginsTop" href="https://medium.com/@eoscostarica" target="_blank">
                     <img
-                      className="socialMediaAnimation"
+                      className={clsx("socialMediaAnimation")}
                       style={{width:'48px', height:'48px', cursor:'pointer'}}
-                      src={useBaseUrl("img/icons/icon-medium.svg")}
+                      src={useBaseUrl("img/icons/icon-mediumBlack.svg")}
                     />
                   </a>
                   <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
