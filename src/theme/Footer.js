@@ -12,6 +12,7 @@ import YouTubeIcon from '@material-ui/icons/YouTube'
 import GitHubIcon from '@material-ui/icons/GitHub'
 
 import SuscribeForm from '../pages/components/Subscribe'
+import IconMedium from '../pages/SvgComponents/IconMedium'
 
 const Footer = () => {
   const isMobile = useMediaQuery({query:'(max-width: 769px)'})
@@ -186,16 +187,11 @@ const Footer = () => {
             <Grid item xs={12} md={3}>
               <Grid style={{marginTop: isDesktop ? '-3px' : '', marginLeft: isDesktop ? '-20px' : ''}} item xs={12}>
                 <Box className={isMobile ? "centerBox" : "leftBox"}>
-                  <a className="marginIconsFooter" href="https://medium.com/@eoscostarica" target="_blank">
-                    <img
-                      className="socialMediaAnimation"
-                      style={{
-                        width: isDesktop ? '42px' : '45px',
-                        height: isDesktop ? '42px' : '45px',
-                        cursor:'pointer'
-                      }}
-                      src={useBaseUrl("img/icons/icon-medium.svg")}
-                    />
+                  <a className={clsx("marginIconsFooter", "socialMediaAnimation")} href="https://medium.com/@eoscostarica" target="_blank">
+                    <IconMedium
+                      width={isDesktop ? '42px' : '45px'} 
+                      height={isDesktop ? '42px' : '45px'}
+                      className='footerMediumIcon'/>
                   </a>
                   <a className={clsx("marginIconsFooter", "socialMediaAnimation")} href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
                     <YouTubeIcon 

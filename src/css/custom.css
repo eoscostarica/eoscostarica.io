@@ -1198,6 +1198,19 @@ input:checked + .slider:before {
   transform: scale(1.1);
 }
 
+.iconSocialMediaAnimation{
+  color: #000000;
+  transition: all .4s ease-in-out
+}
+
+.iconSocialMediaAnimation:hover{
+  fill: #5484B3;
+}
+
+.footerMediumIcon{
+  fill: #ffffff;
+}
+
 .animationBox{
   display: flex;
   justify-content: center;
