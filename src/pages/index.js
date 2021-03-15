@@ -155,7 +155,7 @@ const Home = () => {
                     <Grid item xs={11}>
                       <h4 style={{textAlign:'center'}}>
                         <b>
-                        Learn more about how blockchain can improve your operations.
+                          Learn more about how blockchain can improve your operations.
                         </b>
                       </h4>
                     </Grid>
