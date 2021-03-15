@@ -183,7 +183,7 @@ a{
 
 /*blog*/
 .blog-wrapper{
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .blog-wrapper a {
@@ -1569,7 +1569,7 @@ input:checked + .slider:before {
 
   /*blog*/
   .blog-wrapper{
-    margin-top: 50px;
+    margin-top: 100px;
     padding-left: 10px;
     padding-right: 10px;
   }
