@@ -97,6 +97,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent:'center',
         alignItems:'center'
+    }, 
+    socialButtonsBoxRigth:{
+        marginTop:'10px',
+        marginBottom:'25px',
+        width:'100%',
+        flexDirection: 'row',
+        justifyContent:'flex-end',
+        alignItems:'flex-end'
     },  
     socialButton:{
         flexDirection: 'column',
@@ -245,13 +253,14 @@ const FormPDF = ( {
                         </View>
                     }
                 </View>
-                <View>
+            </View>
+            <View style={styles.footer}>
                     <View style={styles.paragraphSection}>
                         <Text style={styles.p}>
                             Follow us on social media for more updates and resources about blockchain. Also, <Link style={styles.linkText} src="https://eoscostarica.io/blog/">read our blog</Link> and find more content about blockchain and EOSIO, use cases, and success stories.			
                         </Text> 
                     </View>
-                    <View style={styles.socialButtonsBox}>
+                    <View style={styles.socialButtonsBoxRigth}>
                         <Link src="https://github.com/eoscostarica/" style={styles.socialButton}>
                             <Image src={GitHubImage}/>
                         </Link>
@@ -272,7 +281,6 @@ const FormPDF = ( {
                         </Link>
                     </View>
                 </View>
-            </View>
           </Page>
           <Page style={styles.page}>
             <View style={[styles.paragraphSection, {marginBottom:"20px"}]} >
@@ -340,7 +348,7 @@ const FormPDF = ( {
                 </Link>
             </View>
             <View style={styles.footer}>
-                <Text style={styles.p}>Made by EOS Costa Rica, v.1, 2021</Text>
+                <Text style={styles.p}>Created by EOS Costa Rica, v.1, 2021</Text>
             </View>
           </Page>
         </Document>
