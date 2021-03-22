@@ -4,9 +4,16 @@
         <title>EOSIO Enterprise Blockchain Development Services -  EOS Costa Rica Blog</title>
         <link>https://eoscostarica.io/blog</link>
         <description>EOSIO Enterprise Blockchain Development Services -  EOS Costa Rica Blog</description>
-        <lastBuildDate>Wed, 09 Dec 2020 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 09 Mar 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[How to Tell if Your Organization Needs Blockchain]]></title>
+            <link>https://eoscostarica.io/blog/do-you-need-blockchain</link>
+            <guid>do-you-need-blockchain</guid>
+            <pubDate>Tue, 09 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Why Use Blockchain Technology?]]></description>
+        </item>
         <item>
             <title><![CDATA[Leveling Up the Gaming Industry with Blockchain]]></title>
             <link>https://eoscostarica.io/blog/gaming-blockchain</link>
