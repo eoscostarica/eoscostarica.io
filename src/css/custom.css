@@ -183,7 +183,7 @@ a{
 
 /*blog*/
 .blog-wrapper{
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .blog-wrapper a {
@@ -1198,6 +1198,19 @@ input:checked + .slider:before {
   transform: scale(1.1);
 }
 
+.iconSocialMediaAnimation{
+  color: #000000;
+  transition: all .4s ease-in-out
+}
+
+.iconSocialMediaAnimation:hover{
+  fill: #5484B3;
+}
+
+.footerMediumIcon{
+  fill: #ffffff;
+}
+
 .animationBox{
   display: flex;
   justify-content: center;
@@ -1556,7 +1569,7 @@ input:checked + .slider:before {
 
   /*blog*/
   .blog-wrapper{
-    margin-top: 50px;
+    margin-top: 100px;
     padding-left: 10px;
     padding-right: 10px;
   }

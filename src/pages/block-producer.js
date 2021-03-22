@@ -15,6 +15,7 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 
 import AdditionalResources from './components/AdditionalResources'
 import ContactUsBanner from './components/ContactUsBanner'
+import IconMedium from './SvgComponents/IconMedium'
 
 const MetaData={
   title:"EOS Costa Rica: Block Producer",
@@ -401,30 +402,26 @@ const BlockProducer = () => {
               <Grid className="litlePaddingTop" item xs={12} md={3}>
                 <Box className={isMobile? "centerBox": "boxFlexEnd"}>
                   <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://github.com/eoscostarica" target="_blank">
-                    <GitHubIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                    <GitHubIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
                   </a>
                   <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://twitter.com/EOSCostaRica" target="_blank">
-                    <TwitterIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                    <TwitterIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
                   </a>
                   <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.linkedin.com/company/eoscostarica/mycompany/" target="_blank">
-                    <LinkedInIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                    <LinkedInIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
                   </a>
                 </Box>
               </Grid>
               <Grid className="litlePaddingTop" style={{marginTop:'-7px'}} item xs={12} md={3}>
                 <Box className="centerBox">
-                  <a className="noMarginsTop" href="https://medium.com/@eoscostarica" target="_blank">
-                    <img
-                      className="socialMediaAnimation"
-                      style={{width:'48px', height:'48px', cursor:'pointer', color:'#5484b3'}}
-                      src={useBaseUrl("img/icons/icon-medium.png")}
-                    />
+                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://medium.com/@eoscostarica" target="_blank">
+                    <IconMedium width='48px' height='48px' className='iconSocialMediaAnimation'/>
                   </a>
                   <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
-                    <YouTubeIcon style={{ width:'56px', height:'56px', cursor:'pointer', color:'#5484b3'}}/>
+                    <YouTubeIcon className='iconSocialMediaAnimation' style={{ width:'56px', height:'56px', cursor:'pointer'}}/>
                   </a>
                   <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.instagram.com/eoscostarica/" target="_blank">
-                    <InstagramIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                    <InstagramIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
                   </a>
                 </Box>
               </Grid>
