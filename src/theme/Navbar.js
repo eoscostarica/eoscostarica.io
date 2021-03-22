@@ -22,6 +22,7 @@ import BusinessIcon from '@material-ui/icons/Business'
 import MenuBookIcon from '@material-ui/icons/MenuBook'
 import MailIcon from '@material-ui/icons/Mail'
 import ForumIcon from '@material-ui/icons/Forum'
+import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted'
 
 import CustomListItem from '../pages/components/CustomListItem'
 
@@ -96,11 +97,28 @@ const PATHS = [
     icon: <BusinessIcon style={{width:'20px'}}/>
   },
   {
-    dropDown:false,
+    dropDown:true,
     path: "https://guide.eoscostarica.io/",
+    espPath: "https://guias.eoscostarica.io/",
     label: "Learning",
-    target: '_blank',
-    icon: <MenuBookIcon style={{width:'20px'}}/>
+    target: '_self',
+    markerSize: "70px",
+    subPaths: [
+      {
+        path: "https://guide.eoscostarica.io/",
+        espPath: "https://guias.eoscostarica.io/",
+        label: "Dev resources",
+        target: '_self',
+        icon: <MenuBookIcon style={{width:'20px'}}/> 
+      },
+      {
+        path: "/do-you-need-blockchain/",
+        label: "/do-you-need-blockchain/",
+        label: "Corp resources",
+        target: '_self',
+        icon: <FormatListBulletedIcon style={{width:'20px'}}/>
+      },
+    ]
   },
   {
     dropDown:false,
@@ -271,7 +289,7 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
                                 {item.subPaths.map((subItem) => (
                                   <Link className="navBarItemTab" href={useBaseUrl(subItem.path)} target={subItem.target} key={subItem.label} style={{textDecoration:'none'}}>
                                     <Box>  
-                                      <h5 className={clsx("menuItemDrop",{["menuItemDropActive"]: pathname === subItem.path})} >{subItem.label}</h5>                  
+                                      <h5 className={clsx("menuItemDrop",{["menuItemDropActive"]: pathname === subItem.path})}>{subItem.label}</h5>                  
                                     </Box>
                                   </Link>
                                 ))}
