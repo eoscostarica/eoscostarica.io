@@ -9,20 +9,7 @@ import Drawer from '@material-ui/core/Drawer'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import List from '@material-ui/core/List'
-import Grid from '@material-ui/core/Grid'
 import { useLocation } from 'react-router-dom'
-import HomeIcon from '@material-ui/icons/Home'
-import ComputerIcon from '@material-ui/icons/Computer';
-import ApartmentIcon from '@material-ui/icons/Apartment'
-import GroupIcon from '@material-ui/icons/Group'
-import ListAltIcon from '@material-ui/icons/ListAlt'
-import GridOnIcon from '@material-ui/icons/GridOn'
-import EditIcon from '@material-ui/icons/Edit'
-import BusinessIcon from '@material-ui/icons/Business'
-import MenuBookIcon from '@material-ui/icons/MenuBook'
-import MailIcon from '@material-ui/icons/Mail'
-import ForumIcon from '@material-ui/icons/Forum'
-import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted'
 
 import CustomListItem from '../pages/components/CustomListItem'
 
@@ -33,7 +20,7 @@ const PATHS = [
     espPath: "/",
     label: "Home",
     target: '_self',
-    icon: <HomeIcon style={{width:'20px'}}/>
+    icon: 'img/icons/navbar/home.svg'
   },
   {
     dropDown:true,
@@ -49,42 +36,42 @@ const PATHS = [
         espPath: "/servicios/",
         label: "Services",
         target: '_self',
-        icon: <ComputerIcon style={{width:'20px'}}/> 
+        icon: 'img/icons/navbar/services.svg'
       },
       {
         path: "/the-company/",
         espPath: "/compañia/",
         label: "The company",
         target: '_self',
-        icon: <ApartmentIcon style={{width:'20px'}}/>
+        icon: 'img/icons/navbar/home.svg'
       },
       {
         path: "/team/",
         espPath: "/equipo/",
         label: "Team",
         target: '_self',
-        icon: <GroupIcon style={{width:'20px'}}/> 
+        icon: 'img/icons/navbar/team.svg'
       },
       {
         path: "/projects/",
         espPath: "/proyectos/",
         label: "Projects",
         target: '_self',
-        icon: <ListAltIcon style={{width:'20px'}}/>
+        icon: 'img/icons/navbar/projects.svg'
       },
       {
         path: "/block-producer/",
         espPath: "/productor-de-bloques/",
         label: "Block producer",
         target: '_self',
-        icon: <GridOnIcon style={{width:'20px'}}/>
+        icon: 'img/icons/navbar/blockproducer.svg'
       },
       {
         path: "/press/",
         espPath: "/prensa/",
         label: "Press",
         target: '_self',
-        icon: <ForumIcon style={{width:'20px'}}/>
+        icon: 'img/icons/navbar/press.svg'
       }
     ]
   },
@@ -94,7 +81,7 @@ const PATHS = [
     espPath: "/industrias/",
     label: "Industries",
     target: '_self',
-    icon: <BusinessIcon style={{width:'20px'}}/>
+    icon: 'img/icons/navbar/industries.svg'
   },
   {
     dropDown:true,
@@ -109,14 +96,14 @@ const PATHS = [
         espPath: "https://guias.eoscostarica.io/",
         label: "Dev resources",
         target: '_self',
-        icon: <MenuBookIcon style={{width:'20px'}}/> 
+        icon: 'img/icons/navbar/learning.svg'
       },
       {
         path: "/do-you-need-blockchain/",
         label: "/do-you-need-blockchain/",
         label: "Corp resources",
         target: '_self',
-        icon: <FormatListBulletedIcon style={{width:'20px'}}/>
+        icon: 'img/icons/navbar/archive.svg'
       },
     ]
   },
@@ -126,7 +113,7 @@ const PATHS = [
     espPath: "/blog/",
     label: "Blog",
     target: '_self',
-    icon: <EditIcon style={{width:'20px'}}/>
+    icon: 'img/icons/navbar/blog.svg'
   },
   {
     dropDown:false,
@@ -134,7 +121,7 @@ const PATHS = [
     espPath: "/contactenos/",
     label: "Contact",
     target: '_self',
-    icon: <MailIcon style={{width:'20px'}}/>
+    icon: 'img/icons/navbar/contact.svg'
   },
 ];
 
@@ -224,7 +211,8 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
                   </Box>
                   <Box className="linkGruopBox">
                     <span className="linkGruopLabel">CONTENT FOR YOU</span>
-                    <CustomListItem href={useBaseUrl(PATHS[3].path)} target={PATHS[3].target} label={PATHS[3].label} icon={PATHS[3].icon} isSelected={pathname===PATHS[3].path}/>
+                    <CustomListItem href={useBaseUrl(PATHS[3].subPaths[0].path)} target={PATHS[3].subPaths[0].target} label={PATHS[3].subPaths[0].label} icon={PATHS[3].subPaths[0].icon} isSelected={pathname===PATHS[3].subPaths[0].path}/>
+                    <CustomListItem href={useBaseUrl(PATHS[3].subPaths[1].path)} target={PATHS[3].subPaths[1].target} label={PATHS[3].subPaths[1].label} icon={PATHS[3].subPaths[1].icon} isSelected={pathname===PATHS[3].subPaths[1].path}/>
                     <CustomListItem href={useBaseUrl(PATHS[4].path)} target={PATHS[4].target} label={PATHS[4].label} icon={PATHS[4].icon} isSelected={pathname===PATHS[4].path}/>
                     <CustomListItem href={useBaseUrl(PATHS[1].subPaths[5].path)} 
                     target={PATHS[1].subPaths[5].target} 
