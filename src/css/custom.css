@@ -182,9 +182,6 @@ a{
 }
 
 /*blog*/
-.blog-wrapper{
-  margin-top: 50px;
-}
 
 .blog-wrapper a {
   font-family: Lato, sans-serif;
@@ -192,7 +189,7 @@ a{
   color: #0091FF;
 }
 
-.blog-wrapper h1{
+/*.blog-wrapper h1{
   font-family: Lato, sans-serif;
   font-weight: bold;
   font-weight: bold;
@@ -201,7 +198,7 @@ a{
   font-size: 35px;
   letter-spacing: -0.24px;
   line-height: 35px;
-}
+}*/
 
 .blog-wrapper h2{
   font-family: Lato, sans-serif;
