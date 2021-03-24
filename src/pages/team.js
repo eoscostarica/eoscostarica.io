@@ -361,11 +361,7 @@ const Team = () => {
                                 ))}
                             </Grid>
                         </Box>
-<<<<<<< HEAD
                     </Box>
-=======
-                    </Box>    
->>>>>>> 27e04ec42fdbc80b52dea03f68fc93a37df2bd1f
                 </Box>
             </Box>
         )
