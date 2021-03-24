@@ -11,6 +11,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 import GitHubIcon from '@material-ui/icons/GitHub'
+import IconMedium from './SvgComponents/IconMedium'
 import useBaseUrl from "@docusaurus/useBaseUrl"
 import InputBase from '@material-ui/core/InputBase'
 import Select from '@material-ui/core/Select'
@@ -521,18 +522,18 @@ const Form = () => {
                             <h1 >Do You Need Blockchain?</h1>
                         </Box>
                         <Box className="spacingBox">
-                            <p>This short guide can help you identify if your organization will benefit from implementing this technology</p>
+                            <p>This short guide can help you identify if your organization will benefit from implementing this technology.</p>
                             <br/>
                             <p>Please read the <a onClick={handleDisclaimer} style={{cursor:'pointer'}}>disclaimer</a> before filling this form.</p>
                         </Box>
                         {activeDisclaimer && 
-                            <Box className="spacingBox">
+                            <Box className="spacingBox" style={{backgroundColor:'rgb(84, 132, 179,0.1)', padding:'20px'}}>
                                 <p>
-                                    Please, use this template as a reference and not an auditing process. 
-                                    This tool intends to guide you on your research about blockchain technology. 
-                                    The responses provided do not mean any kind of representation of any warranty regarding the accuracy or validity of the information and your decision’s completeness. 
-                                    Under no circumstance shall this represent any liability to you for any loss or damage incurred from using this tool. Our team built this template in good faith, and we expect you to make good use of it. 
-                                    The responses will be anonymous and gathered to visualize an overview of statistics. We will not share your personal information with third parties. 
+                                    Please, use this template as a reference and not an auditing process. This tool intends to guide you on your research about blockchain technology. 
+                                    The responses provided do not represent any warranty regarding the accuracy or validity of the information and your decision's completeness.
+                                    Under no circumstance shall this mean any liability to you for any loss or damage incurred from using this tool. 
+                                    Our team built this template in good faith, and we expect you to make fair use of it. 
+                                    The responses will be anonymous and gathered to visualize an overview of statistics. We will not share your personal information with third parties.
                                     If you have any questions, <a href="/contact-us" target="_blank">contact us</a> directly or join our <a href="https://t.me/eoscr" target="_blank">Telegram channel</a>.
                                 </p>
                             </Box>
@@ -545,16 +546,17 @@ const Form = () => {
                             <h1 >Do You Need Blockchain?</h1>
                         </Box>
                         <Box className="spacingBox">
-                            <p>This short guide can help you identify if your organization will benefit from implementing this technology</p>
+                            <p>This short guide can help you identify if your organization will benefit from implementing this technology.</p>
                             <br/>
                             <p>Please read the <a onClick={handleDisclaimer} style={{cursor:'pointer'}}>disclaimer</a> before filling this form.</p>
                         </Box>
-                        <Box className="spacingBox">
+                        <Box className="spacingBox" style={{backgroundColor:'rgb(248,248,248)', paddingTop:'25px', paddingBottom:'25px', marginLeft:'25px', marginRight:'25px'}}>
                             <p>
-                                Please, use this template as a reference and not an auditing process. 
-                                This tool intends to guide you on your research about blockchain technology. 
-                                The responses provided do not mean any kind of representation of any warranty regarding the accuracy or validity of the information and your decision’s completeness. 
-                                Under no circumstance shall this represent any liability to you for any loss or damage incurred from using this tool. Our team built this template in good faith, and we expect you to make good use of it. 
+                                Please, use this template as a reference and not an auditing process. This tool intends to guide you on your research about blockchain technology. 
+                                The responses provided do not represent any warranty regarding the accuracy or validity of the information and your decision's completeness.
+                                Under no circumstance shall this mean any liability to you for any loss or damage incurred from using this tool. 
+                                Our team built this template in good faith, and we expect you to make fair use of it. 
+                                The responses will be anonymous and gathered to visualize an overview of statistics. We will not share your personal information with third parties.
                                 If you have any questions, <a href="/contact-us" target="_blank">contact us</a> directly or join our <a href="https://t.me/eoscr" target="_blank">Telegram channel</a>.
                             </p>
                         </Box>
@@ -577,7 +579,7 @@ const Form = () => {
                 <Box className="sectionPadding">
                     <Box className="spacingBox">
                         <h2>How to use this form</h2>
-                        <p>We designed this tool to guide innovation leaders or IT professionals to weigh whether implementing blockchain technology to their organizations will benefit their operations and disrupt the status quo. We suggest you gather a cross-functional team to have insights from different departments.</p>
+                        <p>We designed this tool to guide innovation leaders or IT professionals to weigh whether implementing blockchain technology in their organizations will benefit their operations and disrupt the status quo. We suggest you gather a cross-functional team to have insights from different departments when completing this survey.</p>
                         <br/>
                         <p>Grade from 1 to 5 for each one of the questions below, where: <br/><br/>
                             1 - Not an issue at all <br/>
@@ -587,8 +589,7 @@ const Form = () => {
                             5 - Definitely a priority <br/>
                         </p>
                         <br/>
-                        <p>Take your time to answer them and analyze your response. In the end, you will receive a final score to the answers provided. Make sure to answer all the questions! <br/><br/>
-                            If you have any questions or suggestions regarding this tool, please <a href="/contact-us" target="_blank">contact us</a>.</p>
+                        <p>Take your time to answer and analyze each response. In the end, you will receive a final score which will help determine the benefit your organization will receive from implementing blockchain. Answering all questions will help assure a more accurate score!</p>
                     </Box>
                     <Box className="spacingBox">
                         <FormComponent formQuestions={formQuestions} isDesktop={isDesktop} onSubmit={onSubmitForm}/>
@@ -852,34 +853,30 @@ const Form = () => {
                         <Grid className="litlePaddingTop" item xs={12} md={3}>
                             <Box className={isMobile? "centerBox": "boxFlexEnd"}>
                             <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://github.com/eoscostarica" target="_blank">
-                                <GitHubIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                                <GitHubIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
                             </a>
                             <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://twitter.com/EOSCostaRica" target="_blank">
-                                <TwitterIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                                <TwitterIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
                             </a>
-                            <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://t.me/eoscr" target="_blank">
-                                <LinkedInIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                            <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.linkedin.com/company/eoscostarica/mycompany/" target="_blank">
+                                <LinkedInIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
                             </a>
                             </Box>
                         </Grid>
                         <Grid className="litlePaddingTop" style={{marginTop:'-7px'}} item xs={12} md={3}>
                             <Box className="centerBox">
-                            <a className="noMarginsTop" href="https://medium.com/@eoscostarica" target="_blank">
-                                <img
-                                className="socialMediaAnimation"
-                                style={{width:'48px', height:'48px', cursor:'pointer', color:'#5484b3'}}
-                                src={useBaseUrl("img/icons/icon-medium.png")}
-                                />
+                            <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://medium.com/@eoscostarica" target="_blank">
+                                <IconMedium width='48px' height='48px' className='iconSocialMediaAnimation'/>
                             </a>
                             <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
-                                <YouTubeIcon style={{ width:'56px', height:'56px', cursor:'pointer', color:'#5484b3'}}/>
+                                <YouTubeIcon className='iconSocialMediaAnimation' style={{ width:'56px', height:'56px', cursor:'pointer'}}/>
                             </a>
                             <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.instagram.com/eoscostarica/" target="_blank">
-                                <InstagramIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                                <InstagramIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
                             </a>
                             </Box>
                         </Grid>
-                    </Grid>      
+                        </Grid>   
                 </Box>
             </Box>
         )
