@@ -181,21 +181,21 @@ const InfrastructureNetworkingTeam = [
     },
     {
         img:"",
-        name:"Ronald Gallo",
-        position:"Network Administrator",
-        bio:"",
-        linkedIn:"",
-        twitter:"",
-        color:"#ffffff"
-    },
-    {
-        img:"",
         name:"Andrés Gomez",
         position:"Cybersecurity Developer",
         bio:"I envision and work for a more secure, private, and decentralized world.",
         linkedIn:"https://www.linkedin.com/in/andres-gomez-ramirez-bb7226156/",
         twitter:"https://twitter.com/kuronosec",
         color:"#f8f8f8"
+    },
+    {
+        img:"",
+        name:"Ronald Gallo",
+        position:"Network Administrator",
+        bio:"",
+        linkedIn:"",
+        twitter:"",
+        color:"#ffffff"
     },
     {
         img:"",
@@ -361,7 +361,7 @@ const Team = () => {
                                 ))}
                             </Grid>
                         </Box>
-                    </Box>    
+                    </Box>
                 </Box>
             </Box>
         )
