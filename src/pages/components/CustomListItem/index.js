@@ -13,7 +13,7 @@ const GenericListItem = withStyles({
     borderLeft: 'solid 5px white',
     '&$selected': {
       backgroundColor: 'rgb(84, 132, 179,0.1)',
-    },
+    }
   },
   selected: {
     borderLeft: 'solid 5px #5484b3',
@@ -45,7 +45,7 @@ const CustomListItem = ( {label, href, target, icon, isSelected}) => {
     <Link href={href} target={target} style={{textDecoration: 'none'}}>
       <GenericListItem button selected={isSelected}>
         <GenericListItemIcon >
-        <img src={useBaseUrl(icon)} alt={label} />
+          <img src={useBaseUrl(icon)} alt={label} />
         </GenericListItemIcon>
         <GenericListItemText primary={label} />
       </GenericListItem>
