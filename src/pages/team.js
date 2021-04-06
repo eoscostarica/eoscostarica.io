@@ -78,24 +78,6 @@ const DevelopTeam = [
         color:"#f8f8f8"
     },
     {
-        img:"img/team/allan.jpg",
-        name:"Allan Salazar",
-        bio:"",
-        position:"Network Engineer",
-        linkedIn:"",
-        twitter:"",
-        color:"#ffffff"
-    },
-    {
-        img:"",
-        name:"Andrés Gomez",
-        position:"Cybersecurity Developer",
-        bio:"I envision and work for a more secure, private, and decentralized world.",
-        linkedIn:"https://www.linkedin.com/in/andres-gomez-ramirez-bb7226156/",
-        twitter:"https://twitter.com/kuronosec",
-        color:"#f8f8f8"
-    },
-    {
         img:"img/team/angelo.jpg",
         name:"Angelo Castro",
         position:"Intern",
@@ -168,15 +150,6 @@ const DevelopTeam = [
         color:"#f8f8f8"
     },
     {
-        img:"",
-        name:"Ronald Gallo",
-        position:"Network Administrator",
-        bio:"",
-        linkedIn:"",
-        twitter:"",
-        color:"#ffffff"
-    },
-    {
         img:"img/team/steph.jpg",
         name:"Stephanie Delgado",
         position:"Intern",
@@ -193,6 +166,36 @@ const DevelopTeam = [
         linkedIn:"https://www.linkedin.com/in/terencio-gomez-14784ba3/",
         twitter:"",
         color:"#ffffff"
+    }
+]
+
+const InfrastructureNetworkingTeam = [
+    {
+        img:"img/team/allan.jpg",
+        name:"Allan Salazar",
+        bio:"",
+        position:"Network Engineer",
+        linkedIn:"",
+        twitter:"",
+        color:"#ffffff"
+    },
+    {
+        img:"",
+        name:"Andrés Gomez",
+        position:"Cybersecurity Developer",
+        bio:"I envision and work for a more secure, private, and decentralized world.",
+        linkedIn:"https://www.linkedin.com/in/andres-gomez-ramirez-bb7226156/",
+        twitter:"https://twitter.com/kuronosec",
+        color:"#f8f8f8"
+    },
+    {
+        img:"",
+        name:"Ronald Gallo",
+        position:"Network Administrator",
+        bio:"",
+        linkedIn:"",
+        twitter:"",
+        color:"#ffffff"
     },
     {
         img:"",
@@ -202,7 +205,7 @@ const DevelopTeam = [
         linkedIn:"",
         twitter:"",
         color:"#f8f8f8"
-    },
+    }
 ]
 
 const Team = () => {
@@ -335,7 +338,30 @@ const Team = () => {
                                 ))}
                             </Grid>
                         </Box>
-                    </Box>    
+                    </Box>
+                    <Box className="doubleSpacingBox">
+                        <Box className="spacingBox">
+                            <h2>Infrastructure and Networking</h2>
+                        </Box>
+                        <Box>
+                            <Grid container >
+                                {InfrastructureNetworkingTeam.map((person) => (
+                                    <Grid item xs={12} md={6} key={person.name}>
+                                        <Box className="teamPadding" style={{backgroundColor:isMobile? person.color: ""}}>
+                                            <PersonCard 
+                                                img={useBaseUrl(person.img)}
+                                                name={person.name}
+                                                position={person.position}
+                                                bio={person.bio}
+                                                linkedIn={person.linkedIn}
+                                                twitter={person.twitter}
+                                            />
+                                        </Box>
+                                    </Grid>
+                                ))}
+                            </Grid>
+                        </Box>
+                    </Box>
                 </Box>
             </Box>
         )
