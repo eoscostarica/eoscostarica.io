@@ -1515,6 +1515,7 @@ input:checked + .slider:before {
 
   .animationBox{
     height: 150px;
+    margin-top: 16px;
     margin-bottom: 50px;
   }
   
@@ -1735,6 +1736,13 @@ input:checked + .slider:before {
 
   .marginIconsFooter{
     margin: 18px;
+  }
+
+  .paddingLeft{
+    padding-left: 25%;
+  }
+  .paddingLeft2{
+    padding-left: 35%;
   }
 
 }
