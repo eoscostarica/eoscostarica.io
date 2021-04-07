@@ -16,7 +16,7 @@ const Games = ({ isDesktop }) => {
     <Lottie
       options={defaultOptions}
       width={isDesktop ? '500px' : '250px'}
-      height={isDesktop ? '500px' : '250px'}
+      height={isDesktop ? '500px' : '236px'}
     />
   );
 }
