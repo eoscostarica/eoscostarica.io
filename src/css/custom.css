@@ -1367,6 +1367,10 @@ input:checked + .slider:before {
   box-sizing: border-box;
 }
 
+.marginLeft{
+  margin-left: 25px;
+}
+
 @media only screen and (max-width: 1279px) {
   .menuWrapper{
     width: 960px;
@@ -1398,6 +1402,14 @@ input:checked + .slider:before {
 
   .sectionPadding{
     width: 960px;
+  }
+
+  .paddingLeft{
+    padding-left: 0;
+  }
+
+  .paddingLeft2{
+    padding-left: 0;
   }
 }
 
@@ -1646,7 +1658,7 @@ input:checked + .slider:before {
   }
 
   .resourcesIcon{
-    width: 80px;
+    width: 40px;
   }
 
   .topSpacingBoxIcons{
@@ -1739,18 +1751,45 @@ input:checked + .slider:before {
   }
 
   .paddingLeft{
-    padding-left: 25%;
-  }
-  .paddingLeft2{
-    padding-left: 35%;
+    padding-left: 70%;
   }
 
+  .paddingLeft2{
+    padding-left: 95%;
+  }
+
+  .marginLeft{
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 769px) and (min-width: 540px) {
+  .paddingLeft{
+    padding-left: 40%;
+  }
+
+  .paddingLeft2{
+    padding-left: 52%;
+  }
 }
 
 @media only screen and (max-width: 360px) {
-
   .inputFooter{
     width: 67%;
     margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .paddingLeft{
+    padding-left: 100%;
+  }
+
+  .paddingLeft2{
+    padding-left: 130%;
+  }
+  
+  .marginLeft{
+    margin-left: -15px;
   }
 }
