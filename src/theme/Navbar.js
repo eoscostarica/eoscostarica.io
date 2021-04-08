@@ -130,6 +130,10 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
   useEffect(() => {
     setIsBlog(location.pathname.substring(0,6) === '/blog/')
   }, [location])
+
+  useEffect(() => {
+    if(isBlog) setPathname('/blog/')
+  }, [isBlog])
   
   useLayoutEffect(() => {
     const pathname = window.location.pathname;
