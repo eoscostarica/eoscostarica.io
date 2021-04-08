@@ -1,0 +1,238 @@
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+import React from 'react'
+import Layout from '@theme/Layout'
+import { Parallax, Background } from 'react-parallax'
+import { useMediaQuery } from 'react-responsive'
+import { useHistory, useLocation} from 'react-router-dom'
+import clsx from "clsx"
+import Box from '@material-ui/core/Box'
+import Grid from '@material-ui/core/Grid'
+import Divider from '@material-ui/core/Divider'
+import Avatar from '@material-ui/core/Avatar'
+import useBaseUrl from '@docusaurus/useBaseUrl'
+import Chip from '@material-ui/core/Chip'
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+
+} from "react-share";
+import IconButton from '@material-ui/core/IconButton'
+import FacebookIcon from '@material-ui/icons/Facebook'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import TwitterIcon from '@material-ui/icons/Twitter'
+
+import BlogPostPaginator from '@theme/BlogPostPaginator'
+import TOC from '@theme/TOC'
+import IconEdit from '@theme/IconEdit'
+
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+function BlogPostPage(props) {
+  const {
+    content: BlogPostContents,
+    sidebar
+  } = props;
+  const {
+    frontMatter,
+    metadata
+  } = BlogPostContents;
+  const {
+    title,
+    description,
+    date,
+    readingTime,
+    tags,
+    nextItem,
+    prevItem,
+    editUrl
+  } = metadata;
+  const {
+    hide_table_of_contents: hideTableOfContents,
+    author,
+    image,
+    keywords
+  } = frontMatter;
+  const authorURL = frontMatter.author_url || frontMatter.authorURL;
+  const authorTitle = frontMatter.author_title || frontMatter.authorTitle;
+  const authorImageURL = frontMatter.author_image_url || frontMatter.authorImageURL;
+  const imageUrl = useBaseUrl(image, {
+    absolute: true
+  });
+  const history = useHistory()
+  const location = useLocation()
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
+
+  const HeroSection = () => {
+    return (
+      <Box className="containerSec">
+        {isDesktop && 
+          <Box className="sectionHeroBlog">
+            <Box className="titleBox">
+              <h1>{title}</h1>
+            </Box>
+            <BlogHeader />
+          </Box>
+        }
+        {isMobile && 
+          <Box className="sectionHeroMobileBlog">
+            <Box className="titleBox">
+            <h1>{title}</h1>
+            </Box>
+            <BlogHeader />
+          </Box>
+        }
+      </Box>
+    )
+  }
+
+  const BlogHeader = () => {
+    const match = date.substring(0, 10).split('-');
+    const year = match[0];
+    const month = MONTHS[parseInt(match[1], 10) - 1];
+    const day = parseInt(match[2], 10);
+
+    return (
+      <Box className="subHeaderBlogBox">
+        <p>
+          {month} {day}, {year}{' '}
+          {readingTime && <> · {Math.ceil(readingTime)} min read</>}
+        </p>
+        <Box className="blogAvatarBox">
+          <Avatar src={authorImageURL} alt={author} style={{width: '60px', height: '60px'}} />
+          <Box className="blogAvatarTextBox">
+            <h3 className="blogAuthorTile"><a href={authorURL} target="_blank">{author}</a></h3>
+            <h5 className="blogAuthorTile">{authorTitle}</h5>
+          </Box>
+        </Box>
+      </Box>
+    )
+  }
+
+  const BlogDivider = () => {
+    return(
+      <Box className="containerSec">
+        <Box className={clsx("sectionNoPadding","dividerBlogBox")}>
+          <Grid container>
+            <Grid item md={8} xs={12}>
+              <p>Tags: </p>
+              <Box className="blogTagsBox">
+                {tags.map(({label,permalink: tagPermalink }) => 
+                  <Chip 
+                    style={{marginRight: '5px', marginBottom: '5px', backgroundColor: '#f1f1f1'}}
+                    key={tagPermalink}
+                    onClick={() => history.push(tagPermalink)}
+                    label={label}
+                  />
+                )}
+              </Box>
+            </Grid>
+            <Grid item md={4} xs={12}>
+              <Box className="blogIconsBox">
+                <TwitterShareButton
+                  title={`${title} | `}
+                  via="EOSCostaRica"
+                  hashtags={tags.map(tag => tag.label)}
+                  url={`eoscostarica.io${location.pathname}`}
+                >
+                  <IconButton>
+                    <TwitterIcon />
+                  </IconButton>
+                </TwitterShareButton>
+                <LinkedinShareButton
+                  title={title}
+                  summary={description}
+                  url={`eoscostarica.io${location.pathname}`}
+                >
+                  <IconButton>
+                    <LinkedInIcon />
+                  </IconButton>
+                </LinkedinShareButton>
+                <FacebookShareButton
+                  quote={title}
+                  url={`eoscostarica.io${location.pathname}`}
+                >
+                  <IconButton>
+                    <FacebookIcon />
+                  </IconButton>
+                </FacebookShareButton>
+              </Box>
+            </Grid>
+          </Grid>
+          <Divider />
+        </Box>
+      </Box>
+    )
+  }
+
+  const BlogContent = () => {
+    return(
+      <Box className="containerSec">
+        <Box className="section">
+          <Box className="blogContentBox">
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={8}>
+                <BlogPostContents />
+                <Box style={{marginTop: '20px'}}>
+                  {editUrl && 
+                    <a 
+                      href={editUrl}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <IconEdit /> Edit this page
+                    </a>}
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Box className="blogStickyContentBox">
+                  <TOC toc={BlogPostContents.toc} />
+                </Box>
+              </Grid>
+            </Grid>
+          </Box>
+          {(nextItem || prevItem) && 
+            <Box>
+              <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
+            </Box>
+          }
+        </Box>
+      </Box>
+    )
+  }
+
+  return (
+    <Layout title={title} description={description} wrapperClassName="blog-wrapper">
+      {isDesktop && 
+        <Box className="">
+          <Parallax strength={800} style={{overflow: 'inherit'}}>
+            <Background className="bgParallax">
+                <Box className="imgParallax"/>
+            </Background>
+            <HeroSection />
+            <BlogDivider />
+            <BlogContent />
+          </Parallax>
+          
+          
+        </Box>
+      }
+      {isMobile && 
+        <Box className="mainContainer">
+          <HeroSection />
+          <BlogDivider />
+          <BlogContent />
+        </Box>
+      }
+
+    </Layout>
+  )
+}
+
+export default BlogPostPage;

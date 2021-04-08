@@ -17,6 +17,10 @@
 }
 /*Typographys*/
 
+body{
+  overflow-x: hidden;
+}
+
 h1 {
   font-family: Lato, sans-serif;
   font-weight: bold;
@@ -183,6 +187,61 @@ a{
 
 /*blog*/
 
+.sectionHeroBlog{
+  width: 1100px;
+  padding-top: 250px;
+}
+
+.sectionHeroMobileBlog{
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.subHeaderBlogBox{
+  padding-bottom: 70px;
+}
+
+.dividerBlogBox{
+  padding-bottom: 30px;
+}
+
+.blogAvatarBox{
+  position: relative;
+}
+
+.blogAvatarTextBox{
+  position: absolute;
+  top: 5px;
+  left: 75px;
+}
+
+.blogAuthorTile{
+  margin-bottom: 3px;
+}
+
+.blogTagsBox{
+  margin-bottom: 10px;
+}
+
+.blogIconsBox{
+  height: 95%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end
+}
+
+.blogContentBox{
+  margin-bottom: 30px;
+}
+
+.blogStickyContentBox{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+}
+
 .blog-wrapper a {
   font-family: Lato, sans-serif;
   font-weight: normal;
@@ -211,6 +270,15 @@ a{
   line-height: 30px;
 }
 
+.blog-wrapper h2::before { 
+  display: block; 
+  content: " "; 
+  margin-top: -100px; 
+  height: 100px; 
+  visibility: hidden; 
+  pointer-events: none;
+}
+
 .blog-wrapper h3{
   font-family: Lato, sans-serif;
   font-weight: bold;
@@ -222,6 +290,16 @@ a{
   line-height: 25px;
 }
 
+.blog-wrapper h3::before { 
+  display: block; 
+  content: " "; 
+  margin-top: -100px; 
+  height: 100px; 
+  visibility: hidden; 
+  pointer-events: none;
+}
+
+
 .blog-wrapper h4{
   font-family: Lato, sans-serif;
   font-weight: bold;
@@ -232,6 +310,35 @@ a{
   letter-spacing: -0.24px;
   line-height: 20px;
 }
+
+.blog-wrapper h4::before { 
+  display: block; 
+  content: " "; 
+  margin-top: -100px; 
+  height: 100px; 
+  visibility: hidden; 
+  pointer-events: none;
+}
+
+.blog-wrapper h5{
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: -0.24px;
+  line-height: 20px;
+}
+
+.blog-wrapper h5::before { 
+  display: block; 
+  content: " "; 
+  margin-top: -100px; 
+  height: 100px; 
+  visibility: hidden; 
+  pointer-events: none;
+}
+
 
 .blog-wrapper p{
   font-family: Lato, sans-serif;
@@ -1381,6 +1488,10 @@ input:checked + .slider:before {
     width: 960px;
   }
 
+  .sectionHeroBlog{
+    width: 960px;
+  }
+
   .sectionContact{
     width: 960px;
   }
@@ -1566,9 +1677,29 @@ input:checked + .slider:before {
 
   /*blog*/
   .blog-wrapper{
-    margin-top: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-top: 0px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .subHeaderBlogBox{
+    padding-bottom: 0px;
+  }
+
+  .dividerBlogBox{
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  .blogContentBox{
+    margin-top: 30px;
+  }
+
+  .blogIconsBox{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end
   }
 
   .blog-wrapper a {
