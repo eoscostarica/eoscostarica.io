@@ -12,7 +12,7 @@ import Box from '@material-ui/core/Box'
 import { Parallax, Background } from 'react-parallax'
 import BlogPostItem from '@theme/BlogPostItem'
 
-const colors = ["rgb(255,255,255,0)", "rgb(248, 248, 248)"]
+const colors = ["rgb(255,255,255,0)", "rgb(240,240,240,0.5)"]
 
 const metaData={
   title:"EOS Costa Rica: Blog",

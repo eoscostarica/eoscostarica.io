@@ -1728,6 +1728,7 @@ input:checked + .slider:before {
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 10px;
   }
   
   .blogHeaderListPage{
