@@ -62,7 +62,7 @@ const BlockProducer = () => {
               EOSIO blockchain ecosystem worldwide.  
             </p>
             <Box className="buttonBoxMobile"> 
-              <button className="buttonPrimary" onClick={() => history.push(" https://t.me/eoscr")} >Connect with us</button>
+              <button className="buttonPrimary" onClick={() => window.open(" https://t.me/eoscr")} >Connect with us</button>
             </Box>
           </Box>
         }
