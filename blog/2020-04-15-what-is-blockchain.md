@@ -1,11 +1,14 @@
 ---
 slug: what-is-blockchain
 title: What Is Blockchain? A Quick Guide
+image: /img/blog/what-is-blockchain/What-Is-Blockchain.jpg
 author: Luis Diego Rojas
 author_title: Content Strategist
 author_url: https://twitter.com/ldrojas
 author_image_url: https://avatars0.githubusercontent.com/u/29232417?s=400&u=032f18555bd97e3d90f3ddfb5b2dc72dfcf0d11b&v=4
 tags: [eosio, blockchain, enterprise blockchain, technology]
+metaTitle: Blog post
+metaDescription: Blog post
 ---
 
 ![What Is Blockchain](/img/blog/what-is-blockchain/What-Is-Blockchain.jpg)

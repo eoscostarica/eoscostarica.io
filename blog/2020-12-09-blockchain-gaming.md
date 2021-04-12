@@ -1,11 +1,14 @@
 ---
 slug: gaming-blockchain
 title: Leveling Up the Gaming Industry with Blockchain
+image: /img/blog/gaming/gaming-cover.jpg
 author: Luis Diego Rojas
 author_title: Content Strategist
 author_url: https://twitter.com/ldrojas
 author_image_url: https://avatars0.githubusercontent.com/u/29232417?s=400&u=032f18555bd97e3d90f3ddfb5b2dc72dfcf0d11b&v=4
 tags: [eosio, blockchain, gaming]
+metaTitle: Blog post
+metaDescription: Blog post
 ---
 
 ![Leveling Up the Gaming Industry with Blockchain](/img/blog/gaming/gaming-cover.jpg)
