@@ -15,6 +15,8 @@ import BlogPostItem from '@theme/BlogPostItem';
 import BlogListPaginator from '@theme/BlogListPaginator';
 import BlogSidebar from '@theme/BlogSidebar';
 
+const colors = ["rgb(255,255,255,0)", "rgb(248, 248, 248)"]
+
 function BlogListPage(props) {
   const {
     metadata,
@@ -40,23 +42,17 @@ function BlogListPage(props) {
     return (
       <Box className="containerSec">
         {isDesktop && 
-          <Box className="sectionHero">
+          <Box className="sectionHeroBlog" style={{marginBottom: "100px"}}>
             <Box className="titleBox">
               <h1>Read Our  <br/> Articles</h1>
             </Box>
-            <p >
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            </p>
           </Box>
         }
         {isMobile && 
-          <Box className="sectionHeroMobile">
+          <Box className="sectionHeroMobileBlog">
             <Box className="titleBox">
             <h1>Read Our  <br/> Articles</h1>
             </Box>
-            <p >
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            </p>
           </Box>
         }
       </Box>
@@ -66,18 +62,24 @@ function BlogListPage(props) {
   const ListArticles = () => {
     return(
       <Box className="containerSec">
-        <Box  className={clsx("section",{["sectionPadding"]: isMobile})}>
-          {items.map(({content: BlogPostContent}) => 
-            <BlogPostItem key={BlogPostContent.metadata.permalink} frontMatter={BlogPostContent.frontMatter} metadata={BlogPostContent.metadata} truncated={BlogPostContent.metadata.truncated}>
-              <BlogPostContent />
-            </BlogPostItem>)}
+        <Box className="section">
+          {items.map(({content: BlogPostContent},index ) => 
+            <BlogPostItem 
+              key={BlogPostContent.metadata.permalink}
+              frontMatter={BlogPostContent.frontMatter}
+              metadata={BlogPostContent.metadata}
+              truncated={BlogPostContent.metadata.truncated}
+              color={colors[index%2]}
+              isMobile={isMobile}
+            />
+          )}
         </Box>
       </Box>
     )
   }
 
   return(
-    <Layout title={title} description={blogDescription} wrapperClassName="blog-wrapper">
+    <Layout title={title} description={blogDescription} >
       {isDesktop && 
         <Box className="mainContainer">
           <Parallax strength={800}>
@@ -92,6 +94,7 @@ function BlogListPage(props) {
       {isMobile && 
         <Box className="mainContainer">
           <HeroSection />
+          <ListArticles />
         </Box>
       }
     </Layout>
