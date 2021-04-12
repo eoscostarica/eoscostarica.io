@@ -45,7 +45,7 @@ const TheCompany = () => {
             </Box>
             <p>Years of experience developing innovative technologies speak for us. Unleash the power of blockchain technology with the help of our agile team.</p>
             <Box className="buttonBoxMobile">
-              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Contact Us</button>
+              <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact Us</button>
             </Box>
         </Box>
       }

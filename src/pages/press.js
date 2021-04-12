@@ -153,7 +153,7 @@ const Press = () => {
               in the news. The following are some articles that mention our job.
             </p>
             <Box className="buttonBox">
-              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Contact Us</button>
+              <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact Us</button>
             </Box>
           </Box>
         }
@@ -167,7 +167,7 @@ const Press = () => {
               in the news. The following are some articles that mention our job.
             </p>
             <Box className="buttonBox">
-              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Contact Us</button>
+              <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact Us</button>
             </Box>
           </Box>
         }
