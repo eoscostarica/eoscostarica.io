@@ -1751,11 +1751,11 @@ input:checked + .slider:before {
   }
 
   .paddingLeft{
-    padding-left: 70%;
+    padding-left: 95px;
   }
 
   .paddingLeft2{
-    padding-left: 95%;
+    padding-left: 125px;
   }
 
   .marginLeft{
@@ -1777,6 +1777,10 @@ input:checked + .slider:before {
   .inputFooter{
     width: 67%;
     margin-right: 0;
+  }
+  
+  .resourcesIcon{
+    width: 35px;
   }
 }
 
