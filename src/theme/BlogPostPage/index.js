@@ -36,7 +36,6 @@ const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 function BlogPostPage(props) {
   const {
     content: BlogPostContents,
-    sidebar
   } = props;
   const {
     frontMatter,
@@ -53,17 +52,16 @@ function BlogPostPage(props) {
     editUrl
   } = metadata;
   const {
-    hide_table_of_contents: hideTableOfContents,
     author,
     image,
-    keywords
+    metaTitle,
+    metaDescription
   } = frontMatter;
   const authorURL = frontMatter.author_url || frontMatter.authorURL;
   const authorTitle = frontMatter.author_title || frontMatter.authorTitle;
   const authorImageURL = frontMatter.author_image_url || frontMatter.authorImageURL;
-  const imageUrl = useBaseUrl(image, {
-    absolute: true
-  });
+  const imageUrl = useBaseUrl(image);
+  const tempImage = useBaseUrl("img/metaImgBlack.png")
   const history = useHistory()
   const location = useLocation()
   const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
@@ -208,7 +206,12 @@ function BlogPostPage(props) {
   }
 
   return (
-    <Layout title={title} description={description} wrapperClassName="blog-wrapper">
+    <Layout
+      title={metaTitle}
+      description={metaDescription}
+      image={imageUrl || tempImage}
+      wrapperClassName="blog-wrapper"
+    >
       {isDesktop && 
         <Box className="">
           <Parallax strength={800} style={{overflow: 'inherit'}}>

@@ -10,18 +10,21 @@ import Layout from '@theme/Layout'
 import { useMediaQuery } from 'react-responsive'
 import Box from '@material-ui/core/Box'
 import { Parallax, Background } from 'react-parallax'
-import clsx from "clsx"
-import BlogPostItem from '@theme/BlogPostItem';
-import BlogListPaginator from '@theme/BlogListPaginator';
-import BlogSidebar from '@theme/BlogSidebar';
+import BlogPostItem from '@theme/BlogPostItem'
 
 const colors = ["rgb(255,255,255,0)", "rgb(248, 248, 248)"]
+
+const metaData={
+  title:"EOS Costa Rica: Blog",
+  description:"",
+  img:"img/metaImgBlack.png",
+}
+
 
 function BlogListPage(props) {
   const {
     metadata,
     items,
-    sidebar
   } = props;
   const {
     siteConfig: {
@@ -79,7 +82,11 @@ function BlogListPage(props) {
   }
 
   return(
-    <Layout title={title} description={blogDescription} >
+    <Layout
+      title={metaData.title}
+      description={metaData.description}
+      image={metaData.img}
+    >
       {isDesktop && 
         <Box className="mainContainer">
           <Parallax strength={800}>
