@@ -58,11 +58,13 @@ const Home = () => {
             <Box className="titleBox">
                 <h1>Enterprise Blockchain <br /> Solutions That <br /> Fit Your Needs</h1>
             </Box>
-            <p>Deploy EOSIO blockchain technology to improve transparency, boost efficiency, and reduce costs.</p>
-            <br/>
-            <p>Start transforming your organization by leveraging enterprise blockchain networks.</p>
+            <p>
+              Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> 
+              to improve transparency, boost efficiency, and reduce costs. Start transforming your organization
+              by leveraging enterprise blockchain networks.
+            </p>
             <Box className="buttonBoxMobile">
-              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Learn More</button>
+              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Explore our services</button>
             </Box>
           </Box>
       }
@@ -87,7 +89,7 @@ const Home = () => {
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
                 <Box className="h3Box">
-                  <h3>Improve transparency and traceability</h3>
+                  <h3>Improve Transparency and Traceability</h3>
                 </Box>
                 <p>
                   A <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain</a> registers transactions in chronological order,
@@ -99,7 +101,7 @@ const Home = () => {
               </Grid>
               <Grid item xs={12} md={6}>
                 <Box className="h3Box">
-                  <h3 >Boost efficiency and reduce costs</h3>
+                  <h3 >Boost Efficiency and Reduce Costs</h3>
                 </Box>
                 <p>
                   Smart contracts in blockchain technology allow improved
@@ -111,7 +113,7 @@ const Home = () => {
               </Grid>
               <Grid item xs={12} md={6}>
                 <Box className="h3Box">
-                  <h3>Enhance security and trust</h3>
+                  <h3>Enhance Security and Trust</h3>
                 </Box>
                 <p>
                   Blockchain’s encryption capabilities offer new layers of
@@ -123,7 +125,7 @@ const Home = () => {
               </Grid>
               <Grid item xs={12} md={6}>
                 <Box className="h3Box">
-                  <h3>Integrate with other technologies</h3>
+                  <h3>Integrate With Other Technologies</h3>
                 </Box>
                 <p>
                   We define blockchain as a fundamental technology that can
@@ -149,16 +151,16 @@ const Home = () => {
                 </Grid>
               }
               {isMobile &&
-                <Grid container spacing={0}>
-                    <Grid item xs={5}>
-                      <p>
+                <Grid justify='center' container>
+                    <Grid item xs={11}>
+                      <h4 style={{textAlign:'center'}}>
                         <b>
-                        Learn more about how blockchain can improve your operations.
+                          Learn more about how blockchain can improve your operations.
                         </b>
-                      </p>
+                      </h4>
                     </Grid>
-                    <Grid item xs={7}>
-                      <Box className="boxFlexEnd" style={{paddingRight:'25px'}}>
+                    <Grid item xs={12}>
+                      <Box className="centerBox" >
                         <button className={clsx("buttonSecondary","specialButton")} onClick={() => history.push("/contact-us/")} >Find Out How</button>
                       </Box>
                     </Grid>
@@ -194,7 +196,7 @@ const Home = () => {
                   className="accordion"
                   style={{backgroundColor:'#F8F8F8', boxShadow:'none'}} >
                   <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h4 style={{margin:'2px', padding: 0}}>Software Development</h4>
+                    <h4 style={{margin:'2px', padding: 0}}>Software development</h4>
                   </AccordionSummary>
                   <AccordionDetails style={{padding:1, marginTop:'-15px'}}>
                     <p style={{padding: 0}}>
@@ -217,7 +219,7 @@ const Home = () => {
                   className="accordion"
                   style={{backgroundColor:'#F8F8F8',boxShadow:'none'}}>
                   <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h4 style={{margin:'2px', padding: 0}}>Blockchain Infrastructure</h4>
+                    <h4 style={{margin:'2px', padding: 0}}>Blockchain infrastructure</h4>
                   </AccordionSummary>
                   <AccordionDetails style={{padding:0, marginTop:'-15px'}}>
                     <p style={{padding: 0}}>
@@ -234,7 +236,7 @@ const Home = () => {
                 </Accordion>
                 <Accordion square expanded={expanded === 'panel_Education'}  onChange={handleChange('panel_Education')} className="accordion" style={{backgroundColor:'#F8F8F8',boxShadow:'none',borderColor:'s\\#f1f1f1'}}>
                   <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                    <h4 style={{margin:'2px', padding: 0}}>Education and Training</h4>
+                    <h4 style={{margin:'2px', padding: 0}}>Education and training</h4>
                   </AccordionSummary>
                   <AccordionDetails style={{padding:0, marginTop:'-15px'}}>
                     <p style={{padding: 0}}>
@@ -362,7 +364,7 @@ const Home = () => {
             <Grid item xs={12} md={6}>
               <Box className="inquiereBox">
                 <Box style={{width:'100%'}}>
-                  <h2 className={clsx("white","centerTextOnMobile")}>Do you have inquiries <br /> about blockchain? </h2>
+                  <h2 className={clsx("white","centerTextOnMobile")}>Do you Have Inquiries <br /> About Blockchain? </h2>
                   <Box className="buttonBox">
                     <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Drop us a line</button>
                   </Box>
@@ -429,7 +431,7 @@ const Home = () => {
                 }
                 <Grid item md={6}>
                   <Box className="h3Box">
-                    <h3>The company</h3>
+                    <h3>The Company</h3>
                   </Box>
                   <p>
                     During the 1980s, we developed the first BBS in the country, a
@@ -462,7 +464,7 @@ const Home = () => {
               <Grid container spacing={5} >
                 <Grid item md={6}>
                   <Box className="h3Box">
-                    <h3>The technology</h3>
+                    <h3>The Technology</h3>
                   </Box>
                   <p>
                     We focus on deploying{" "}

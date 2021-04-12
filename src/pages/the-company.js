@@ -31,7 +31,7 @@ const TheCompany = () => {
           <Box className="titleBox">
             <h1>We Develop Enterprise <br/> Blockchain Solutions</h1>
           </Box>
-          <p >Years of experience developing innovative technologies speak for us.Unleash the power of blockchain technology with the help of our agile team.</p>
+          <p >Years of experience developing innovative technologies speak for us. Unleash the power of blockchain technology with the help of our agile team.</p>
           <br/>
           <Box className="buttonBox">
             <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact Us</button>
@@ -41,13 +41,11 @@ const TheCompany = () => {
         {isMobile && 
           <Box className="sectionHeroMobile">
             <Box className="titleBox">
-                <h1>We Develop Enterprise <br/> Blockchain Solutions</h1>
+              <h1>We Develop Enterprise <br/> Blockchain Solutions</h1>
             </Box>
-            <p>Years of experience developing innovative technologies speak for us.</p>
-            <br/>
-            <p>Unleash the power of blockchain technology with the help of our agile team.</p>
+            <p>Years of experience developing innovative technologies speak for us. Unleash the power of blockchain technology with the help of our agile team.</p>
             <Box className="buttonBoxMobile">
-              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Learn More</button>
+              <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact Us</button>
             </Box>
         </Box>
       }
@@ -201,10 +199,12 @@ const TheCompany = () => {
                 <Carousel animation="slide" timeout={500} indicators={false}>
                   <img
                     alt="Crew image"
+                    style={{height:'227px'}}
                     src={useBaseUrl("img/team/crew1.jpg")}
                   />
                   <img
                       alt="Crew image 2"
+                      style={{height:'227px'}}
                       src={useBaseUrl("img/team/crew2.jpg")}
                   />
                 </Carousel>
@@ -281,11 +281,10 @@ const TheCompany = () => {
                   <h4>Cost-effective</h4>
                 </Box>
                 <p>
-                  Developers build smart contracts in EOSIO using C++,
-                  a general-purpose programming language with widespread
-                  adoption, thus eliminating the need to learn new languages
-                  to begin deploying the technology. Also, there are many
-                  learning resources available online and a dynamic support community.
+                  EOSIO offers a flexible and favorable cost model that
+                  eliminates the need for transaction fees. This model is
+                  ideal for developers who seek a solution with low operation
+                  costs and still offers an experience free to the user.
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>

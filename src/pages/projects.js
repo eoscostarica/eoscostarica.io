@@ -66,7 +66,7 @@ const ProjectsList = [
   },
   {
     img:"img/imagenotavailable.png",
-    name:"Undisclosed enterprise project",
+    name:"Undisclosed Enterprise Project",
     details:" We developed an app for a US-based client in the accounting and tax industry for improved traceability of intercompany transactions. ",
     link:"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-a-great-idea-e384b298a4a8",
     color:"#ffffff",
@@ -112,6 +112,7 @@ const OurProjects = () => {
               Over the past years, we have helped organizations in
               both the public and private sectors learn and explore the benefits of EOSIO blockchain
               technology.
+            <br/>
             <br/>
               From improving the way a company registers cross-border transactions to
               ensuring immutable traceability of logistics operations, our team has developed top-notch
