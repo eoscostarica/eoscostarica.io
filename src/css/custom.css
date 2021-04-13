@@ -203,6 +203,12 @@ a{
   padding-bottom: 70px;
 }
 
+.blogLanguageAvailableBox{
+  display: flex;
+  margin-bottom: 30px;
+  align-content: center;
+}
+
 .dividerBlogBox{
   padding-bottom: 30px;
 }
@@ -1719,6 +1725,10 @@ input:checked + .slider:before {
 
   .subHeaderBlogBox{
     padding-bottom: 0px;
+  }
+
+  .blogLanguageAvailableBox{
+    margin-bottom: 10px;
   }
 
   .dividerBlogBox{

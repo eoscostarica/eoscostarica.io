@@ -26,6 +26,7 @@ import IconButton from '@material-ui/core/IconButton'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import TwitterIcon from '@material-ui/icons/Twitter'
+import LanguageIcon from '@material-ui/icons/Language'
 
 import BlogPostPaginator from '@theme/BlogPostPaginator'
 import TOC from '@theme/TOC'
@@ -55,7 +56,8 @@ function BlogPostPage(props) {
     author,
     image,
     metaTitle,
-    metaDescription
+    metaDescription,
+    langPost
   } = frontMatter;
   const authorURL = frontMatter.author_url || frontMatter.authorURL;
   const authorTitle = frontMatter.author_title || frontMatter.authorTitle;
@@ -72,17 +74,33 @@ function BlogPostPage(props) {
       <Box className="containerSec">
         {isDesktop && 
           <Box className="sectionHeroBlog">
-            <Box className="titleBox">
+            <Box style={{marginBottom: '30px'}}>
               <h1>{title}</h1>
             </Box>
+            {langPost && (
+              <Box className="blogLanguageAvailableBox">
+                <LanguageIcon style={{marginRight: '5px', color: '#0091FF'}}/>
+                <p>
+                  <a rel="alternate" href={langPost} hreflang="es-us">Post Available on Spanish</a>
+                </p>
+              </Box>
+            )}
             <BlogHeader />
           </Box>
         }
         {isMobile && 
           <Box className="sectionHeroMobileBlog">
             <Box className="titleBox">
-            <h1>{title}</h1>
+              <h1>{title}</h1>
             </Box>
+            {langPost && (
+              <Box className="blogLanguageAvailableBox">
+                <LanguageIcon style={{marginRight: '5px', color: '#0091FF'}}/>
+                <p style={{lineHeight:'25px'}}>
+                  <a rel="alternate" href={langPost} hreflang="es-us">Post Available on Spanish</a>
+                </p>
+              </Box>
+            )}
             <BlogHeader />
           </Box>
         }
