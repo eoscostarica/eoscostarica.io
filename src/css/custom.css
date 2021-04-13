@@ -219,7 +219,7 @@ a{
 
 .blogAvatarTextBox{
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 60px;
 }
 
@@ -298,12 +298,12 @@ a{
   line-height: 30px;
 }
 
-.blog-wrapper h2::before { 
-  display: block; 
-  content: " "; 
-  margin-top: -100px; 
-  height: 100px; 
-  visibility: hidden; 
+.blog-wrapper h2::before {
+  display: block;
+  content: " ";
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -318,12 +318,12 @@ a{
   line-height: 25px;
 }
 
-.blog-wrapper h3::before { 
-  display: block; 
+.blog-wrapper h3::before {
+  display: block;
   content: " "; 
-  margin-top: -100px; 
-  height: 100px; 
-  visibility: hidden; 
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -339,12 +339,12 @@ a{
   line-height: 20px;
 }
 
-.blog-wrapper h4::before { 
-  display: block; 
-  content: " "; 
-  margin-top: -100px; 
-  height: 100px; 
-  visibility: hidden; 
+.blog-wrapper h4::before {
+  display: block;
+  content: " ";
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -358,12 +358,12 @@ a{
   line-height: 20px;
 }
 
-.blog-wrapper h5::before { 
-  display: block; 
-  content: " "; 
-  margin-top: -100px; 
-  height: 100px; 
-  visibility: hidden; 
+.blog-wrapper h5::before {
+  display: block;
+  content: " ";
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -378,6 +378,10 @@ a{
   line-height: 25px;
   text-align: justify;
   margin-bottom: 15px;
+}
+
+.blog-wrapper ul{
+  font-family: Lato, sans-serif;
 }
 
 .blog-wrapper h1 a{
@@ -1718,13 +1722,13 @@ input:checked + .slider:before {
 
   /*blog*/
   .blog-wrapper{
-    margin-top: 0px;
+    margin-top: 0;
     padding-left: 25px;
     padding-right: 25px;
   }
 
   .subHeaderBlogBox{
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   .blogLanguageAvailableBox{
