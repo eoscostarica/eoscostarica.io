@@ -7,8 +7,8 @@ author_title: Content Strategist
 author_url: https://www.linkedin.com/in/ldrojas/
 author_image_url: https://avatars0.githubusercontent.com/u/29232417?s=400&u=032f18555bd97e3d90f3ddfb5b2dc72dfcf0d11b&v=4
 tags: [eosio, blockchain, logistics, supply chain]
-metaTitle: Blog post
-metaDescription: Blog post
+metaTitle: "EOS Costa Rica Blog: Blockchain in Logistics"
+metaDescription: The logistics and supply chain industries are very demanding and complex. Blockchain in logistics can improve efficiency, traceability and transparency.
 ---
 
 ![Blockchain in Logistics](/img/blog/logistics/blockchain-logistics.jpg)

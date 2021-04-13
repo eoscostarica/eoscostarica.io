@@ -7,8 +7,9 @@ author_title: Content Strategist
 author_url: https://twitter.com/ldrojas
 author_image_url: https://avatars0.githubusercontent.com/u/29232417?s=400&u=032f18555bd97e3d90f3ddfb5b2dc72dfcf0d11b&v=4
 tags: [eosio, blockchain, enterprise blockchain, technology]
-metaTitle: Blog post
-metaDescription: Blog post
+metaTitle: "EOS Costa Rica Blog: What Is Blockchain? A Quick Guide"
+metaDescription: Learn what is blockchain and how to implement it to your organization. Blockchain may offer improved security, traceability, and efficiency to your company.
+langPost: https://es.eoscostarica.io/blog/que-es-blockchain
 ---
 
 ![What Is Blockchain](/img/blog/what-is-blockchain/What-Is-Blockchain.jpg)
