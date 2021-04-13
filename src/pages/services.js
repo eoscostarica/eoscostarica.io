@@ -172,14 +172,13 @@ const ServicePage = () => {
             <p>
               Leverage blockchain technology. Our team will help you embrace
               the power of this innovative technology.
-            </p>
             <br/>
-            <p>
+            <br/>
               We have years of experience integrating enterprise blockchain solutions and
               developing infrastructure for business environments.
             </p>
             <Box className="buttonBoxMobile">
-              <button className="buttonPrimary" onClick={() => history.push("/about/")}>
+              <button className="buttonPrimary" onClick={() => history.push("/the-company/")}>
                 Get to Know Us
               </button>
             </Box>
@@ -333,12 +332,11 @@ const ServicePage = () => {
                 <h3>Top-notch Blockchain Infrastructure</h3>
               </Box>
               <p>
-                EOS Costa Rica deploys blockchain technology to design enterprise
-                solutions that can integrate with other systems. Blockchain
-                enables the deployment of smart contracts – computer codes that
-                can execute automatically and autonomously. Smart contracts allow
-                improved efficiency and can reduce transaction-related costs.
-                Learn more about enterprise blockchain:
+                Blockchains operate as decentralized peer-to-peer networks where a
+                number of computers or "nodes" are interconnected to one another. These nodes
+                keep a copy of the registers and act as validators of new transactions. These
+                features make it critical to building robust infrastructure networks that comply
+                with the blockchain's requirements.
               </p>
             </Grid>
             {isDesktop && 
@@ -452,7 +450,7 @@ const ServicePage = () => {
                     className="accordion"
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                      <h4 style={{margin:'2px', padding: 0}}>Executive Workshops</h4>
+                      <h4 style={{margin:'2px', padding: 0}}>Executive workshops</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
                       <p style={{padding: 0}}>
@@ -473,7 +471,7 @@ const ServicePage = () => {
                     className="accordion"
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                      <h4 style={{margin:'2px',padding: 0}}>Training for Developers</h4>
+                      <h4 style={{margin:'2px',padding: 0}}>Training for developers</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
                       <p style={{padding: 0}}>
@@ -496,7 +494,7 @@ const ServicePage = () => {
                     className="accordion"
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                      <h4 style={{margin:'2px',padding:0}}>Community Building</h4>
+                      <h4 style={{margin:'2px',padding:0}}>Community building</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
                       <p style={{padding:0}}>
@@ -607,29 +605,6 @@ const ServicePage = () => {
           <p>
             Learn more about other industries that blockchain is transforming. <a href={useBaseUrl("/industries")}>Read more.</a>
           </p>
-        </Box>
-      </Box>
-    )
-  }
-
-  const ContactUs = () => {
-    return (
-      <Box className={"containerGray"}>
-        <Box className={"sectionPadding"}>
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={8}>
-                <Box>
-                  <h2 className={"centerTextOnMobile"}>Start working with us</h2>
-                  <h2 className={"centerTextOnMobile"}>and implement</h2>
-                  <h2 className={"centerTextOnMobile"}>blockchain technology.</h2>
-                </Box>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Box className={"buttonBox"}>
-                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
-              </Box>
-            </Grid>
-          </Grid>
         </Box>
       </Box>
     )
