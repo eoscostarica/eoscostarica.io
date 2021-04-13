@@ -14,8 +14,8 @@ import BlogPostItem from '@theme/BlogPostItem'
 const colors = ["rgb(240,240,240,0.5)", "rgb(255,255,255,0)"]
 
 const metaData={
-  title:"EOS Costa Rica: Blog",
-  description:"",
+  title:"EOS Costa Rica: Blog - Read About Blockchain",
+  description:"Find useful articles about how blockchain technology can improve security and transparency in enterprise operations.",
   img:"img/metaImgBlack.png",
 }
 
