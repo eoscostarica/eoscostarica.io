@@ -60,6 +60,8 @@ export default function LayoutHead(props) {
     // See react-helmet doc
       >
         {metadatas.map((metadata, i) => <meta key={`metadata_${i}`} {...metadata} />)}
+      </Head>
+      <Head>
         <JSONLD>
           <Generic
             type="Organization"
