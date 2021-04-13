@@ -178,7 +178,7 @@ const ServicePage = () => {
               developing infrastructure for business environments.
             </p>
             <Box className="buttonBoxMobile">
-              <button className="buttonPrimary" onClick={() => history.push("/about/")}>
+              <button className="buttonPrimary" onClick={() => history.push("/the-company/")}>
                 Get to Know Us
               </button>
             </Box>
