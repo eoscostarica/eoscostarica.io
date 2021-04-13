@@ -1493,6 +1493,10 @@ input:checked + .slider:before {
   box-sizing: border-box;
 }
 
+.marginLeft{
+  margin-left: 25px;
+}
+
 @media only screen and (max-width: 1279px) {
   .menuWrapper{
     width: 960px;
@@ -1528,6 +1532,14 @@ input:checked + .slider:before {
 
   .sectionPadding{
     width: 960px;
+  }
+
+  .paddingLeft{
+    padding-left: 0;
+  }
+
+  .paddingLeft2{
+    padding-left: 0;
   }
 }
 
@@ -1645,6 +1657,7 @@ input:checked + .slider:before {
 
   .animationBox{
     height: 150px;
+    margin-top: 16px;
     margin-bottom: 50px;
   }
   
@@ -1828,7 +1841,7 @@ input:checked + .slider:before {
   }
 
   .resourcesIcon{
-    width: 80px;
+    width: 40px;
   }
 
   .topSpacingBoxIcons{
@@ -1920,12 +1933,50 @@ input:checked + .slider:before {
     margin: 18px;
   }
 
+  .paddingLeft{
+    padding-left: 95px;
+  }
+
+  .paddingLeft2{
+    padding-left: 125px;
+  }
+
+  .marginLeft{
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 769px) and (min-width: 540px) {
+  .paddingLeft{
+    padding-left: 40%;
+  }
+
+  .paddingLeft2{
+    padding-left: 52%;
+  }
 }
 
 @media only screen and (max-width: 360px) {
-
   .inputFooter{
     width: 67%;
     margin-right: 0;
+  }
+  
+  .resourcesIcon{
+    width: 35px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .paddingLeft{
+    padding-left: 100%;
+  }
+
+  .paddingLeft2{
+    padding-left: 130%;
+  }
+  
+  .marginLeft{
+    margin-left: -15px;
   }
 }
