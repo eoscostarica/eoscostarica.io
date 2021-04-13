@@ -213,8 +213,8 @@ a{
 
 .blogAvatarTextBox{
   position: absolute;
-  top: 5px;
-  left: 75px;
+  top: 0px;
+  left: 60px;
 }
 
 .blogAuthorTile{
@@ -1752,6 +1752,10 @@ input:checked + .slider:before {
     padding: 0;
   }
 
+  .blogChipTagsBox{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 
   .blog-wrapper a {
     /*color: #5484b3;*/

@@ -5,26 +5,39 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from 'react'
-import Layout from '@theme/Layout'
 import { useMediaQuery } from 'react-responsive'
-import Box from '@material-ui/core/Box'
+import { useHistory } from 'react-router-dom'
 import { Parallax, Background } from 'react-parallax'
+import Box from '@material-ui/core/Box'
+import Layout from '@theme/Layout'
 import BlogPostItem from '@theme/BlogPostItem'
-
-const colors = ["rgb(240,240,240,0.5)", "rgb(255,255,255,0)"]
+import Grid from '@material-ui/core/Grid'
 
 const metaData={
-  title:"EOS Costa Rica: Blog",
+  title:"EOS Costa Rica: Blog Tags",
   description:"",
   img:"img/metaImgBlack.png",
 }
 
-function BlogListPage(props) {
+const colors = ["rgb(240,240,240,0.5)","rgb(255,255,255,0)"]
+
+function pluralize(count, word) {
+  return count > 1 ? `${word}s` : word;
+}
+
+function BlogTagsPostPage(props) {
   const {
-    items,
+    metadata,
+    items
   } = props;
+  const {
+    name: tagName,
+    count
+  } = metadata;
+
   const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
   const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
+  const history = useHistory()
 
   const HeroSection = () => {
     return (
@@ -32,14 +45,47 @@ function BlogListPage(props) {
         {isDesktop && 
           <Box className="sectionHeroBlog" style={{marginBottom: "10px"}}>
             <Box className="titleBox">
-              <h1>Blog</h1>
+              <h1>
+                {count} {pluralize(count, 'post')} tagged with &quot;{tagName}
+                &quot;
+              </h1>
+            </Box>
+            <Box className="doubleSpacingBox">
+              <Grid container spacing={5}>
+                <Grid item xs={12} md={4}>
+                  <button 
+                    className="buttonSecondary" 
+                    style={{padding:"19px", height:"90px", width:"100%"}}
+                    onClick={() => history.push("/blog/tags")}
+                  >
+                    View All Tags
+                  </button>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                  <button
+                    className="buttonSecondary"
+                    style={{padding:"19px", height:"90px", width:"100%"}}
+                    onClick={() => history.push("/blog/")}
+                  >
+                    View All Posts
+                  </button>
+                </Grid> 
+              </Grid>
             </Box>
           </Box>
         }
         {isMobile && 
-          <Box className="sectionHeroMobileBlog">
+          <Box className="sectionHeroMobileBlog" style={{marginBottom: "50px"}}>
             <Box className="titleBox">
-              <h1>Blog</h1>
+              <h1>
+                {count} {pluralize(count, 'post')} tagged with &quot;{tagName}
+                &quot;
+              </h1>
+            </Box>
+            <Box className="buttonBoxMobile">
+              <button className="buttonPrimary" onClick={() => history.push("/blog/tags")}>
+                View All Tags
+              </button>
             </Box>
           </Box>
         }
@@ -93,4 +139,4 @@ function BlogListPage(props) {
   )
 }
 
-export default BlogListPage;
+export default BlogTagsPostPage;

@@ -52,7 +52,7 @@ function BlogPostItem(props) {
           </p>
         </Box>
         <Box className="blogAvatarBox">
-          <Avatar src={authorImageURL} alt={author} style={{width: '60px', height: '60px'}} />
+          <Avatar src={authorImageURL} alt={author} style={{width: '48px', height: '48px'}} />
           <Box className="blogAvatarTextBox">
             <h4 className="blogAuthorTile"><a href={authorURL} target="_blank">{author}</a></h4>
             <h5 className="blogAuthorTile">{authorTitle}</h5>
