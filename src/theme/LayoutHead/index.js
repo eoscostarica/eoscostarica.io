@@ -61,7 +61,7 @@ export default function LayoutHead(props) {
       >
         {metadatas.map((metadata, i) => <meta key={`metadata_${i}`} {...metadata} />)}
       </Head>
-      <Head>
+      <script>
         <JSONLD>
           <Generic
             type="Organization"
@@ -163,6 +163,6 @@ export default function LayoutHead(props) {
             </GenericCollection>
           </Generic>
         </JSONLD>
-      </Head>
+      </script>
     </>;
 }
