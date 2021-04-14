@@ -298,20 +298,6 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
             <Box className="boxRight"> 
               <Box className={"boxLanguages"}>
                 <LanguagueSelector />
-                {/*<Grid component="label" container alignItems="center" spacing={1}>
-                  <Grid item><span className="languageLabel">Esp</span></Grid>
-                  <Grid item>
-                    <label className="switch">
-                      <input 
-                        type="checkbox" 
-                        checked
-                        onChange={translateSite}
-                      />
-                      <span className="slider round"></span>
-                    </label>
-                  </Grid>
-                  <Grid item><span className="languageLabelActive">Eng</span></Grid>
-                </Grid>*/}
               </Box>
               <Box className="boxMenuItems" id="boxMenuItems">
                 {PATHS.map((item) => (
