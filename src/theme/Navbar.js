@@ -103,6 +103,7 @@ const PATHS = [
     label: "Learning",
     target: '_self',
     markerSize: "70px",
+    icon: <MenuBookIcon style={{width:'20px'}}/>,
     subPaths: [
       {
         path: "https://guide.eoscostarica.io/",
