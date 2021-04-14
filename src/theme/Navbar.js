@@ -7,15 +7,12 @@ import Box from '@material-ui/core/Box'
 import Link from '@material-ui/core/Link'
 import Drawer from '@material-ui/core/Drawer'
 import IconButton from '@material-ui/core/IconButton'
-import LanguageIcon from '@material-ui/icons/Language';
 import MenuIcon from '@material-ui/icons/Menu'
-import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem'
 import List from '@material-ui/core/List'
-import Grid from '@material-ui/core/Grid'
 import { useLocation } from 'react-router-dom'
 import HomeIcon from '@material-ui/icons/Home'
-import ComputerIcon from '@material-ui/icons/Computer';
+import ComputerIcon from '@material-ui/icons/Computer'
 import ApartmentIcon from '@material-ui/icons/Apartment'
 import GroupIcon from '@material-ui/icons/Group'
 import ListAltIcon from '@material-ui/icons/ListAlt'
