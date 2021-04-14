@@ -81,7 +81,7 @@ function BlogPostPage(props) {
               <Box className="blogLanguageAvailableBox">
                 <LanguageIcon style={{marginRight: '5px', color: '#0091FF'}}/>
                 <p>
-                  <a rel="alternate" href={langPost} hreflang="es-us">Post Available in Spanish</a>
+                  <a rel="alternate" href={langPost} hrefLang="es-us">Post Available in Spanish</a>
                 </p>
               </Box>
             )}
@@ -97,7 +97,7 @@ function BlogPostPage(props) {
               <Box className="blogLanguageAvailableBox">
                 <LanguageIcon style={{marginRight: '5px', color: '#0091FF'}}/>
                 <p style={{lineHeight:'25px'}}>
-                  <a rel="alternate" href={langPost} hreflang="es-us">Post Available in Spanish</a>
+                  <a rel="alternate" href={langPost} hrefLang="es-us">Post Available in Spanish</a>
                 </p>
               </Box>
             )}
