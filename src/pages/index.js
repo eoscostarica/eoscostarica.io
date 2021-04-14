@@ -445,7 +445,7 @@ const Home = () => {
                     </a>{" "}
                     protocol since its launch, accruing decades of experience with
                     innovative technologies.
-                    <a href={useBaseUrl("/the-company")} target="_blank"> Get to know us.</a>
+                    <a href={useBaseUrl("/the-company")}> Get to know us.</a>
                   </p>
                 </Grid>
                 {isMobile && 

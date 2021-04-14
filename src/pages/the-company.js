@@ -211,7 +211,7 @@ const TheCompany = () => {
               </Box>
             }
             <Box className="boxFlexEnd">
-              <button className="buttonPrimary" onClick={() => window.open("/team/")} >Meet our team</button>
+              <button className="buttonPrimary" onClick={() => history.push("/team/")} >Meet our team</button>
             </Box>
           </Box>
         </Box>
