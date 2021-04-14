@@ -16,6 +16,7 @@ const MetaData={
   title:"EOS Costa Rica: Company Page",
   description:"EOS Costa Rica is part of a company with more than three decades of experience developing innovative solutions.",
   img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/la-empresa/"
 }
 
 const TheCompany = () => {
@@ -426,6 +427,7 @@ const TheCompany = () => {
       title={MetaData.title}
       description={MetaData.description}
       image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
     > 
       {isDesktop &&
         <Box className="mainContainer">
