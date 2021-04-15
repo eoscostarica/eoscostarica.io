@@ -224,7 +224,15 @@ a{
 }
 
 .blogAuthorTile{
-  margin-bottom: 3px;
+  margin-bottom: 0;
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: -0.24px;
+  line-height: 25px;
+  color: black;
 }
 
 .blogReadMoreText{
@@ -301,8 +309,8 @@ a{
 .blog-wrapper h2::before {
   display: block;
   content: " ";
-  margin-top: -100px;
-  height: 100px;
+  margin-top: -120px;
+  height: 120px;
   visibility: hidden;
   pointer-events: none;
 }
@@ -321,8 +329,8 @@ a{
 .blog-wrapper h3::before {
   display: block;
   content: " "; 
-  margin-top: -100px;
-  height: 100px;
+  margin-top: -120px;
+  height: 120px;
   visibility: hidden;
   pointer-events: none;
 }
@@ -342,8 +350,8 @@ a{
 .blog-wrapper h4::before {
   display: block;
   content: " ";
-  margin-top: -100px;
-  height: 100px;
+  margin-top: -120px;
+  height: 120px;
   visibility: hidden;
   pointer-events: none;
 }
@@ -361,8 +369,8 @@ a{
 .blog-wrapper h5::before {
   display: block;
   content: " ";
-  margin-top: -100px;
-  height: 100px;
+  margin-top: -120px;
+  height: 120px;
   visibility: hidden;
   pointer-events: none;
 }
@@ -1748,6 +1756,11 @@ input:checked + .slider:before {
     margin-top: 30px;
   }
 
+  .blogAuthorTile{
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+
   .blogIconsBox{
     height: 100%;
     display: flex;
@@ -1804,16 +1817,32 @@ input:checked + .slider:before {
     padding: 0;
   }
 
+  .blog-wrapper h2::before {
+    content: none;
+  }
+
   .blog-wrapper h3{
     font-size: 20px;
     text-align: left;
     padding: 0;
   }
 
+  .blog-wrapper h3::before {
+    content: none;
+  }
+
   .blog-wrapper h4{
     font-size: 15px;
     padding: 0;
     text-align: left;
+  }
+
+  .blog-wrapper h4::before {
+    content: none;
+  }
+
+  .blog-wrapper h5::before {
+    content: none;
   }
 
   .blog-wrapper p{

@@ -123,9 +123,16 @@ function BlogPostPage(props) {
         <Box className="blogAvatarBox">
           <Avatar src={authorImageURL} alt={author} style={{width: '48px', height: '48px'}} />
           <Box className="blogAvatarTextBox">
-            <h3 className="blogAuthorTile"><a href={authorURL} target="_blank">{author}</a></h3>
-            <h5 className="blogAuthorTile">{authorTitle}</h5>
-          </Box>
+              <a 
+                className="blogAuthorTile"
+                style={{fontWeight: 'bold', color: 'black'}}
+                href={authorURL}
+                target="_blank"
+              >
+                {author}
+              </a>
+              <h5>{authorTitle}</h5>
+           </Box>
         </Box>
       </Box>
     )
