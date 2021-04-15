@@ -1,20 +1,6 @@
 
 /*Fonts*/
-@font-face {
-  font-family: 'Lato';
-  src:  url('/fonts/Lato-Bold.ttf') format('truetype');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url('/fonts/Lato-Regular.ttf') format('truetype');
-  font-weight: normal;
-}
-
-:root {
-  --ifm-font-family-base: 'Lato';
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 /*Typographys*/
 
 h1 {
