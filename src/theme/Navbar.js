@@ -23,6 +23,7 @@ import MenuBookIcon from '@material-ui/icons/MenuBook'
 import MailIcon from '@material-ui/icons/Mail'
 import ForumIcon from '@material-ui/icons/Forum'
 import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted'
+import LanguageIcon from '@material-ui/icons/Language'
 
 import GlobalIcon from '../../static/img/icons/globalBlack.svg'
 import CustomListItem from '../pages/components/CustomListItem'
@@ -274,6 +275,10 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
                   <Box className="linkGruopBox">
                     <span className="linkGruopLabel">CONTACT</span>
                     <CustomListItem href={useBaseUrl(PATHS[5].path)} target={PATHS[5].target} label={PATHS[5].label} icon={PATHS[5].icon} isSelected={pathname===PATHS[5].path}/>
+                  </Box>
+                  <Box className="linkGruopBox">
+                    <span className="linkGruopLabel">OPTIONS</span>
+                    <CustomListItem href="https://es.eoscostarica.io/" target="_blank" label="Spanish website" icon={<LanguageIcon style={{width:'20px'}}/>} isSelected={false}/>
                   </Box>
                 </List>
               </Box>
