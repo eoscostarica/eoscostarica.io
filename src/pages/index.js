@@ -20,11 +20,12 @@ const MetaData={
   title:"Enterprise Blockchain Solutions | EOSIO",
   description:"EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
   img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/"
 }
 
 const Home = () => {
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
   const [expanded, setExpanded] = useState('panel_SoftDev')
   const history = useHistory()
   
@@ -42,7 +43,7 @@ const Home = () => {
         {isDesktop && 
           <Box className="sectionHero">
           <Box className="titleBox">
-              <h1>Enterprise Blockchain Solutions <br /> That Fit Your Needs</h1>
+            <h1>Enterprise Blockchain Solutions <br /> That Fit Your Needs</h1>
           </Box>
           <p>
             Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.
@@ -58,11 +59,13 @@ const Home = () => {
             <Box className="titleBox">
                 <h1>Enterprise Blockchain <br /> Solutions That <br /> Fit Your Needs</h1>
             </Box>
-            <p>Deploy EOSIO blockchain technology to improve transparency, boost efficiency, and reduce costs.</p>
-            <br/>
-            <p>Start transforming your organization by leveraging enterprise blockchain networks.</p>
+            <p>
+              Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> 
+              to improve transparency, boost efficiency, and reduce costs. Start transforming your organization
+              by leveraging enterprise blockchain networks.
+            </p>
             <Box className="buttonBoxMobile">
-              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Learn More</button>
+              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Explore our services</button>
             </Box>
           </Box>
       }
@@ -87,7 +90,7 @@ const Home = () => {
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
                 <Box className="h3Box">
-                  <h3>Improve transparency and traceability</h3>
+                  <h3>Improve Transparency and Traceability</h3>
                 </Box>
                 <p>
                   A <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain</a> registers transactions in chronological order,
@@ -99,7 +102,7 @@ const Home = () => {
               </Grid>
               <Grid item xs={12} md={6}>
                 <Box className="h3Box">
-                  <h3 >Boost efficiency and reduce costs</h3>
+                  <h3 >Boost Efficiency and Reduce Costs</h3>
                 </Box>
                 <p>
                   Smart contracts in blockchain technology allow improved
@@ -111,7 +114,7 @@ const Home = () => {
               </Grid>
               <Grid item xs={12} md={6}>
                 <Box className="h3Box">
-                  <h3>Enhance security and trust</h3>
+                  <h3>Enhance Security and Trust</h3>
                 </Box>
                 <p>
                   Blockchain’s encryption capabilities offer new layers of
@@ -123,7 +126,7 @@ const Home = () => {
               </Grid>
               <Grid item xs={12} md={6}>
                 <Box className="h3Box">
-                  <h3>Integrate with other technologies</h3>
+                  <h3>Integrate With Other Technologies</h3>
                 </Box>
                 <p>
                   We define blockchain as a fundamental technology that can
@@ -149,16 +152,16 @@ const Home = () => {
                 </Grid>
               }
               {isMobile &&
-                <Grid container spacing={0}>
-                    <Grid item xs={5}>
-                      <p>
+                <Grid justify='center' container>
+                    <Grid item xs={11}>
+                      <h4 style={{textAlign:'center'}}>
                         <b>
-                        Learn more about how blockchain can improve your operations.
+                          Learn more about how blockchain can improve your operations.
                         </b>
-                      </p>
+                      </h4>
                     </Grid>
-                    <Grid item xs={7}>
-                      <Box className="boxFlexEnd" style={{paddingRight:'25px'}}>
+                    <Grid item xs={12}>
+                      <Box className="centerBox" >
                         <button className={clsx("buttonSecondary","specialButton")} onClick={() => history.push("/contact-us/")} >Find Out How</button>
                       </Box>
                     </Grid>
@@ -174,90 +177,90 @@ const Home = () => {
     return (
       <Box className="containerGray">
         <Box className="sectionPadding">
-        <Grid container spacing={5}>
-          <Grid item xs={12} md={6}>
-            <Box className="titleBox">
-              <h2>What We Do</h2>
-            </Box>
-            <p>
-              We make the most of enterprise blockchain technology and design
-              solutions for the real world. Our team offers services tailored
-              to our clients’ needs and expectations.{" "}
-              <a href={useBaseUrl("/contact-us")}>Contact us</a> and get the conversation
-              started!
-            </p>
-            <Box className="accordionBox" style={{ marginTop:'20px'}}>
-              <Accordion 
-                square
-                expanded={expanded === 'panel_SoftDev'} 
-                onChange={handleChange('panel_SoftDev')} 
-                className="accordion"
-                style={{backgroundColor:'#F8F8F8', boxShadow:'none'}} >
-                <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h4 style={{margin:'2px', padding: 0}}>Software Development</h4>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:1, marginTop:'-15px'}}>
-                  <p style={{padding: 0}}>
-                    Our value proposition is to develop blockchain-based
-                    software to solve real-life problems. We have experience
-                    working with large global enterprises and SMEs, government
-                    entities and NGOs, and open-source projects across many
-                    industries. We adapt to our clients’ budgets and needs,
-                    without compromising thought leadership or quality. Our team
-                    is technology agnostic but specializes in the open-source
-                    blockchain technology <a href={"https://eos.io/"} target="_blank">EOSIO</a>, launched by leading company
-                    <a href={"https://block.one/"} target="_blank"> block.one</a>.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion 
-                square
-                expanded={expanded === 'panel_BlockInfrac'}
-                onChange={handleChange('panel_BlockInfrac')}
-                className="accordion"
-                style={{backgroundColor:'#F8F8F8',boxShadow:'none'}}>
-                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h4 style={{margin:'2px', padding: 0}}>Blockchain Infrastructure</h4>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:0, marginTop:'-15px'}}>
-                  <p style={{padding: 0}}>
-                    We offer top-grade infrastructure for blockchain networks
-                    and API endpoints from our datacenter in San José, Costa
-                    Rica. Costa Rica is a country with high political stability
-                    and a long-lasting democracy. Our strategic location in the
-                    middle of the American continent offers convenient network
-                    interconnectivity. We also configure, host, and maintain
-                    blockchain nodes available for private and public networks
-                    with 24/7 monitoring and uptime. <a href={useBaseUrl("/the-company")} target="_blank"> Read more about this</a>.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion square expanded={expanded === 'panel_Education'}  onChange={handleChange('panel_Education')} className="accordion" style={{backgroundColor:'#F8F8F8',boxShadow:'none',borderColor:'s\\#f1f1f1'}}>
-                <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                  <h4 style={{margin:'2px', padding: 0}}>Education and Training</h4>
-                </AccordionSummary>
-                <AccordionDetails style={{padding:0, marginTop:'-15px'}}>
-                  <p style={{padding: 0}}>
-                    In today’s world, new technologies are leading the way to
-                    transform many industries. We offer workshops on blockchain
-                    and EOSIO to C-suite executives and teams that want to keep
-                    up to date and learn more about what is blockchain and
-                    enterprise use cases. We also provide training and education
-                    resources for new talents that wish to kickstart their
-                    career in blockchain.
-                  </p>
-                </AccordionDetails>
-              </Accordion>
-            </Box>
-          </Grid>
-          {isDesktop && 
-            <Grid item  md={6}>
-              <Box style={{paddingLeft:'50px'}}>
-                <WhatWeDoSvg />
-              </Box>  
+          <Grid container spacing={5}>
+            <Grid item xs={12} md={6}>
+              <Box className="titleBox">
+                <h2>What We Do</h2>
+              </Box>
+              <p>
+                We make the most of enterprise blockchain technology and design
+                solutions for the real world. Our team offers services tailored
+                to our clients’ needs and expectations.{" "}
+                <a href={useBaseUrl("/contact-us")}>Contact us</a> and get the conversation
+                started!
+              </p>
+              <Box className="accordionBox" style={{ marginTop:'20px'}}>
+                <Accordion 
+                  square
+                  expanded={expanded === 'panel_SoftDev'} 
+                  onChange={handleChange('panel_SoftDev')} 
+                  className="accordion"
+                  style={{backgroundColor:'#F8F8F8', boxShadow:'none'}} >
+                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h4 style={{margin:'2px', padding: 0}}>Software development</h4>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:1, marginTop:'-15px'}}>
+                    <p style={{padding: 0}}>
+                      Our value proposition is to develop blockchain-based
+                      software to solve real-life problems. We have experience
+                      working with large global enterprises and SMEs, government
+                      entities and NGOs, and open-source projects across many
+                      industries. We adapt to our clients’ budgets and needs,
+                      without compromising thought leadership or quality. Our team
+                      is technology agnostic but specializes in the open-source
+                      blockchain technology <a href={"https://eos.io/"} target="_blank">EOSIO</a>, launched by leading company
+                      <a href={"https://block.one/"} target="_blank"> block.one</a>.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion 
+                  square
+                  expanded={expanded === 'panel_BlockInfrac'}
+                  onChange={handleChange('panel_BlockInfrac')}
+                  className="accordion"
+                  style={{backgroundColor:'#F8F8F8',boxShadow:'none'}}>
+                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h4 style={{margin:'2px', padding: 0}}>Blockchain infrastructure</h4>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:0, marginTop:'-15px'}}>
+                    <p style={{padding: 0}}>
+                      We offer top-grade infrastructure for blockchain networks
+                      and API endpoints from our datacenter in San José, Costa
+                      Rica. Costa Rica is a country with high political stability
+                      and a long-lasting democracy. Our strategic location in the
+                      middle of the American continent offers convenient network
+                      interconnectivity. We also configure, host, and maintain
+                      blockchain nodes available for private and public networks
+                      with 24/7 monitoring and uptime. <a href={useBaseUrl("/the-company")} target="_blank"> Read more about this</a>.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion square expanded={expanded === 'panel_Education'}  onChange={handleChange('panel_Education')} className="accordion" style={{backgroundColor:'#F8F8F8',boxShadow:'none',borderColor:'s\\#f1f1f1'}}>
+                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h4 style={{margin:'2px', padding: 0}}>Education and training</h4>
+                  </AccordionSummary>
+                  <AccordionDetails style={{padding:0, marginTop:'-15px'}}>
+                    <p style={{padding: 0}}>
+                      In today’s world, new technologies are leading the way to
+                      transform many industries. We offer workshops on blockchain
+                      and EOSIO to C-suite executives and teams that want to keep
+                      up to date and learn more about what is blockchain and
+                      enterprise use cases. We also provide training and education
+                      resources for new talents that wish to kickstart their
+                      career in blockchain.
+                    </p>
+                  </AccordionDetails>
+                </Accordion>
+              </Box>
             </Grid>
-          }
-        </Grid>
+            {isDesktop && 
+              <Grid item  md={6}>
+                <Box style={{paddingLeft:'50px'}}>
+                  <WhatWeDoSvg />
+                </Box>  
+              </Grid>
+            }
+          </Grid>
         </Box>
       </Box>
     )
@@ -284,7 +287,7 @@ const Home = () => {
                     <img
                     src={useBaseUrl("img/icons/logistics.svg")}
                     style={{paddingTop: '25px'}}
-                    className = {"imageIndrustries"}
+                    className ="imageIndrustries"
                     />
                   </Box>
                   <Box className="h3Box">
@@ -305,7 +308,7 @@ const Home = () => {
                     <img 
                       src={useBaseUrl("img/icons/payments.svg")}
                       style={{paddingTop: '25px'}}
-                      className = {"imageIndrustriesLogistics"}
+                      className="imageIndrustriesLogistics"
                     />
                   </Box>
                   <Box className="h3Box">
@@ -324,7 +327,7 @@ const Home = () => {
                     <img 
                       src={useBaseUrl("img/icons/gaming.svg")}
                       style={{paddingTop: '15px'}}
-                      className = {"imageIndrustries"}
+                      className = "imageIndrustries"
                     />
                   </Box>
                   <Box className="h3Box">
@@ -362,7 +365,7 @@ const Home = () => {
             <Grid item xs={12} md={6}>
               <Box className="inquiereBox">
                 <Box style={{width:'100%'}}>
-                  <h2 className={clsx("white","centerTextOnMobile")}>Do you have inquiries <br /> about blockchain? </h2>
+                  <h2 className={clsx("white","centerTextOnMobile")}>Do you Have Inquiries <br /> About Blockchain? </h2>
                   <Box className="buttonBox">
                     <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Drop us a line</button>
                   </Box>
@@ -429,7 +432,7 @@ const Home = () => {
                 }
                 <Grid item md={6}>
                   <Box className="h3Box">
-                    <h3>The company</h3>
+                    <h3>The Company</h3>
                   </Box>
                   <p>
                     During the 1980s, we developed the first BBS in the country, a
@@ -443,7 +446,7 @@ const Home = () => {
                     </a>{" "}
                     protocol since its launch, accruing decades of experience with
                     innovative technologies.
-                    <a href={useBaseUrl("/the-company")} target="_blank"> Get to know us.</a>
+                    <a href={useBaseUrl("/the-company")}> Get to know us.</a>
                   </p>
                 </Grid>
                 {isMobile && 
@@ -462,7 +465,7 @@ const Home = () => {
               <Grid container spacing={5} >
                 <Grid item md={6}>
                   <Box className="h3Box">
-                    <h3>The technology</h3>
+                    <h3>The Technology</h3>
                   </Box>
                   <p>
                     We focus on deploying{" "}
@@ -512,93 +515,96 @@ const Home = () => {
             </p>
           </Box>
           <Box className={isDesktop? "doubleSpacingBox": ""}>
-            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingTop:'20px',paddingBottom:'20px'}} container spacing={5}>
-              <Grid xs={12} item md={6}>
-                <Box className="centerBox" style={{height:'100%'}}>
-                  <img
-                    className="sizeImageTheCompany"
-                    src={useBaseUrl("img/logos/Group47.svg")}
-                  />
-                </Box>
-              </Grid>
-              <Grid xs={12} item md={6}>
-                <br/>
-                <Box className="h3Box">
-                  <h3>LatamLink</h3>
-                </Box>
-                <p>
-                  We are part of this voluntary regional alliance, led by Latin
-                  American technology companies to offer an EOSIO-based testnet
-                  to the{" "}
-                  <a href="https://www.lacchain.net/" target="_blank">
-                    LACChain
-                  </a>{" "}
-                  initiative, a program to accelerate the development of the
-                  blockchain ecosystem in the region.{" "}
-                  <a href="https://latamlink.io/" target="_blank">
-                    Discover more about LatamLink.
-                  </a>
-                </p>
-              </Grid>
-            </Grid>
-            <Grid container style={{paddingTop:'25px',paddingBottom:'25px'}} spacing={5}>
-                <Grid xs={12} item md={6}>
-                  <Box className="centerBox" style={{height:'100%'}}>
+            <Grid container>
+              <Grid item xs={12} md={6}>
+                <Box className="projectsGridLeft">
+                  <Box className="imgBoxProjects">
                     <img
+                      alt="LatamLink"
                       className="sizeImageTheCompany"
-                      src={useBaseUrl("img/logos/lifebank.svg")}
+                      src={useBaseUrl("img/logos/Group47.svg")}
                     />
                   </Box>
-                </Grid>
-                <Grid xs={12} item md={6}>
-                  <br/>
+                </Box>
+              </Grid>
+              <Grid  item xs={12} md={6}>
+                <Box className="projectsGridRight">
                   <Box className="h3Box">
-                    <h3>Lifebank</h3>
+                    <h3 >LatamLink</h3>
                   </Box>
                   <p>
-                    An open-source blockchain-based app that incentivizes blood
-                    donations by creating a virtuous circle of value between
-                    donors, blood banks, and local businesses, leveraged by a
-                    token economy. Winner of the{" "}
-                    <a
-                      href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
-                      target="_blank"
-                    >
-                      “Coding for Change”
-                    </a>{" "}
-                    challenge by{" "}
-                    <a href="https://block.one/" target="_blank">
-                      block.one.
-                    </a>{" "}
-                    <a href=" https://lifebank.io/" target="_blank">
-                      Find out more about Lifebank.
+                    We are part of this voluntary regional alliance, led by Latin
+                    American technology companies to offer an EOSIO-based testnet to
+                    the <a href="https://www.lacchain.net/" target="_blank"> LACChain</a>{" "} 
+                    initiative, a program to accelerate the development
+                    of the blockchain ecosystem in the region.{" "}
+                    <a href="http://latamlink.io/" target="_blank">
+                      Discover more about LatamLink.
                     </a>
                   </p>
-                </Grid>
+                </Box>
               </Grid>
-              <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingTop:'20px',paddingBottom:'20px'}} container spacing={5}>
-                <Grid xs={12} item md={6}>
-                  <Box className="centerBox" style={{height:'100%'}}>
-                    <img
-                      className="sizeImageTheCompany"
-                      src={useBaseUrl("img/logos/smartgate.svg")}
-                    />
-                  </Box> 
-                </Grid>
-                <Grid xs={12} item md={6}>
-                  <br/>
-                  <Box className="h3Box">
-                    <h3>SMARTGATE</h3>
-                  </Box>
-                  <p>
-                    A blockchain-based platform that provides solutions for in-out
-                    gate activity for the container industry and real-time
-                    transmission of relevant data required for proper interchange
-                    in port logistics. <a href="https://smartgate.tech/" target="_blank">Learn more about SMARTGATE.</a>
-                  </p>
-                  <br/>
-                </Grid>
-              </Grid>
+            <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+              <Box className="projectsGridLeft">
+                <Box className="imgBoxProjects">
+                  <img
+                    alt="Lifebank"
+                    src={useBaseUrl("img/logos/lifebank.svg")}
+                  />
+                </Box>
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+              <Box className="projectsGridRight">
+                <Box className="h3Box">
+                  <h3 >Lifebank</h3>
+                </Box>
+                <p>
+                  An open-source blockchain-based app that incentivizes blood
+                  donations by creating a virtuous circle of value between donors,
+                  blood banks, and local businesses, leveraged by a token economy.
+                  Winner of the “
+                  <a
+                    href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
+                    target="_blank"
+                  >
+                    Coding for Change
+                  </a>{"” "} challenge by {" "}
+                  <a href="https://block.one/" target="_blank">
+                    block.one.
+                  </a>{" "}
+                  <a href="http://lifebank.io/" target="_blank">
+                    Find out more about Lifebank.
+                  </a>
+                </p>
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor:'#ffffff'}} item xs={12} md={6}>
+              <Box className="projectsGridLeft">
+                <Box className="imgBoxProjects">
+                  <img
+                    alt="SMARTGATE"
+                    src={useBaseUrl("img/logos/smartgate.svg")}
+                  />
+                </Box>
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor:'#ffffff'}} item xs={12} md={6}>
+              <Box className="projectsGridRight">
+                <Box className="h3Box">
+                  <h3 >SMARTGATE</h3>
+                </Box>
+                <p>
+                  A blockchain-based platform that provides solutions for in-out gate activity for the container 
+                  industry and real-time transmission of relevant data required for proper interchange in port logistics. 
+                  {" "}
+                  <a href="https://smartgate.tech/" target="_blank">
+                    Learn more about SMARTGATE.
+                  </a>
+                </p>
+              </Box>
+            </Grid>
+          </Grid>
           </Box>
         </Box>
       </Box>
@@ -610,6 +616,7 @@ const Home = () => {
       title={MetaData.title}
       description={MetaData.description}
       image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
     > 
       {isDesktop && 
         <Box className="mainContainer">

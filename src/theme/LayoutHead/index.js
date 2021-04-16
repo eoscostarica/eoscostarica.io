@@ -8,6 +8,8 @@ import React from 'react';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import { JSONLD, Generic, GenericCollection } from 'react-structured-data'
+import { useLocation } from 'react-router-dom'
 export default function LayoutHead(props) {
   const {
     siteConfig,
@@ -25,6 +27,7 @@ export default function LayoutHead(props) {
     title,
     description,
     image,
+    hrefLangPath,
     keywords,
     permalink,
   } = props;
@@ -35,6 +38,7 @@ export default function LayoutHead(props) {
   });
   const faviconUrl = useBaseUrl(favicon);
   const htmlLang = "en"
+  const location = useLocation()
   return <>
       <Head>
         <html lang={htmlLang} />
@@ -51,6 +55,11 @@ export default function LayoutHead(props) {
         {permalink && <link rel="canonical" href={siteUrl + permalink} />}
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <Head>
+        <link rel="alternate" href={`https://eoscostarica.io${location.pathname}`} hreflang="en-us" />
+        {hrefLangPath && <link rel="alternate" href={hrefLangPath} hreflang="es-us" />}
+        <link rel="canonical" href={`https://eoscostarica.io${location.pathname}`} />
+      </Head>
 
       <Head // it's important to have an additional <Head> element here,
     // as it allows react-helmet to override values set in previous <Head>
@@ -60,5 +69,106 @@ export default function LayoutHead(props) {
     >
         {metadatas.map((metadata, i) => <meta key={`metadata_${i}`} {...metadata} />)}
       </Head>
+      <JSONLD>
+        <Generic
+          type="Organization"
+          jsonldtype="Organization"
+          schema={{
+            legalName: "EOS Costa Rica",
+            logo: "https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/logos/eoscr-logo.png",
+            email: "contact@eosio.cr",
+            image: "https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/metaImgBlack.png",
+            url: "https://eoscostarica.io/",
+            telephone: "+506 2256-3944",
+            description: "EOS Costa Rica develops blockchain-based enterprise solutions by deploying the EOSIO protocol to solve real-world problems",
+            foundingDate: "22-05-2018"
+          }}
+        >
+          <Generic
+            type="address"
+            jsonldtype="PostalAddress"
+            schema={{
+                addressLocality: "San Jose, Costa Rica",
+                addressCountry: "CR",
+                postalCode: "11801",
+                streetAddress: "Real Cariari Autopista General Cañas, Cruce de San Antonio de Belén San José, SJ 40104"
+            }}
+          />
+          <Generic
+            type="parentOrganization"
+            jsonldtype="Organization"
+            schema={{
+              name: "SISTEMAS EDENIA INTERNACIONAL S.A.",
+              url: "https://www.edenia.com/"
+            }}
+          />
+          <GenericCollection type="founders">
+            <Generic
+              jsonldtype="Person"
+              schema={{
+                name: "Edgar Fernández",
+                sameAs: "https://www.linkedin.com/in/edgarafernandez/"
+              }}
+            />
+            <Generic
+              jsonldtype="Person"
+              schema={{
+                name: "Xavier Fernández",
+                sameAs: "https://www.linkedin.com/in/xaviercr/"
+              }}
+              />
+          </GenericCollection >
+          <GenericCollection type="sameAs">
+            <Generic
+              jsonldtype="sameAs"
+              schema={{
+                url: "https://www.linkedin.com/company/eoscostarica/mycompany/"
+              }}
+            />
+            <Generic
+              jsonldtype="sameAs"
+              schema={{
+                url: "https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ"
+              }}
+            />
+            <Generic
+              jsonldtype="sameAs"
+              schema={{
+                url: "https://twitter.com/EOSCostaRica"
+              }}
+            />
+            <Generic
+              jsonldtype="sameAs"
+              schema={{
+                url: "https://www.facebook.com/costaricaeos"
+              }}
+            />
+            <Generic
+              jsonldtype="sameAs"
+              schema={{
+                url: "https://t.me/eoscr"
+              }}
+            />
+            <Generic
+              jsonldtype="sameAs"
+              schema={{
+                url: "https://github.com/eoscostarica"
+              }}
+            />
+            <Generic
+              jsonldtype="sameAs"
+              schema={{
+                url: "https://eoscostarica.medium.com/"
+              }}
+            />
+            <Generic
+              jsonldtype="sameAs"
+              schema={{
+                url: "https://www.instagram.com/eoscostarica/"
+              }}
+            />
+          </GenericCollection>
+        </Generic>
+      </JSONLD>
     </>;
 }

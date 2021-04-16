@@ -14,9 +14,15 @@ jobs:
 
     - name: Install and Build 🔧
       run: |
-        npm install 
+        npm install
         npm run build
-    
+      env:
+        RECAPTCHA_CLIENT_KEY: ${{ secrets.RECAPTCHA_CLIENT_KEY }}
+        HUBSPOT_PORTAL_ID: ${{ secrets.HUBSPOT_PORTAL_ID }}
+        HUBSPOT_FOOTER_FORM: ${{ secrets.HUBSPOT_FOOTER_FORM }}
+        HUBSPOT_CONTACT_EN_FORM: ${{ secrets.HUBSPOT_CONTACT_EN_FORM }}
+        HUBSPOT_CONTACT_ES_FORM: ${{ secrets.HUBSPOT_CONTACT_ES_FORM }}
+        HUBSPOT_BLOCKCHAIN_FORM: ${{ secrets.HUBSPOT_BLOCKCHAIN_FORM }}
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:

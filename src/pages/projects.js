@@ -1,5 +1,4 @@
 import React from "react"
-import { useHistory } from 'react-router-dom'
 import { Parallax, Background } from 'react-parallax'
 import clsx from "clsx"
 import Grid from '@material-ui/core/Grid'
@@ -14,6 +13,7 @@ const MetaData={
   title:"EOS Costa Rica: Our Projects",
   description:"EOS Costa Rica has developed solutions for many industries and open-source projects for the blockchain community.",
   img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/proyectos/"
 }
 
 const ProjectsList = [
@@ -67,7 +67,7 @@ const ProjectsList = [
   },
   {
     img:"img/imagenotavailable.png",
-    name:"Undisclosed enterprise project",
+    name:"Undisclosed Enterprise Project",
     details:" We developed an app for a US-based client in the accounting and tax industry for improved traceability of intercompany transactions. ",
     link:"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-a-great-idea-e384b298a4a8",
     color:"#ffffff",
@@ -84,8 +84,8 @@ const ProjectsList = [
 ]
 
 const OurProjects = () => {
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
 
   const HeroSection = () => {
     return (
@@ -113,6 +113,7 @@ const OurProjects = () => {
               Over the past years, we have helped organizations in
               both the public and private sectors learn and explore the benefits of EOSIO blockchain
               technology.
+            <br/>
             <br/>
               From improving the way a company registers cross-border transactions to
               ensuring immutable traceability of logistics operations, our team has developed top-notch
@@ -242,6 +243,7 @@ const OurProjects = () => {
       title={MetaData.title}
       description={MetaData.description}
       image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
     > 
       {isDesktop && 
         <Box className="mainContainer">

@@ -15,17 +15,19 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 
 import AdditionalResources from './components/AdditionalResources'
 import ContactUsBanner from './components/ContactUsBanner'
+import IconMedium from './SvgComponents/IconMedium'
 
 const MetaData={
   title:"EOS Costa Rica: Block Producer",
   description:"Get to know EOS Costa Rica – a technically proven EOS block producer candidate that develops dapps and smart contracts.",
   img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/block-producer/"
 }
 
 const BlockProducer = () => {
   const history = useHistory()
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
 
   const HeroSection = () => {
     return (
@@ -54,15 +56,14 @@ const BlockProducer = () => {
             <p>
               We are one of the first companies in Latin America to deploy the EOSIO
               protocol.
-            </p>
             <br/>
-            <p>
+            <br/>
               Innovation is in our DNA. We seek new opportunities to leverage this technology for 
               enterprise use to solve real-world problems. Learn more about how we help to develop the
               EOSIO blockchain ecosystem worldwide.  
             </p>
             <Box className="buttonBoxMobile"> 
-              <button className="buttonPrimary" onClick={() => history.push(" https://t.me/eoscr")} >Learn More</button>
+              <button className="buttonPrimary" onClick={() => window.open(" https://t.me/eoscr")} >Connect with us</button>
             </Box>
           </Box>
         }
@@ -262,7 +263,7 @@ const BlockProducer = () => {
             </Box>
             <Box className="spacingBox">
               <Box className="h3Box">
-                <h3>Code of conduct</h3>
+                <h3>Code of Conduct</h3>
               </Box>
               <p>EOS Costa Rica pledges to:</p>
               <br/>
@@ -296,7 +297,7 @@ const BlockProducer = () => {
             </Box>
             <Box>
               <Box className="h3Box">
-                <h3>Ownership disclosure</h3>
+                <h3>Ownership Disclosure</h3>
               </Box>
               <p className="body1">
                 According to the Block Producer Agreement and values that have
@@ -402,34 +403,30 @@ const BlockProducer = () => {
               <Grid className="litlePaddingTop" item xs={12} md={3}>
                 <Box className={isMobile? "centerBox": "boxFlexEnd"}>
                   <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://github.com/eoscostarica" target="_blank">
-                    <GitHubIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                    <GitHubIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
                   </a>
                   <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://twitter.com/EOSCostaRica" target="_blank">
-                    <TwitterIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                    <TwitterIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
                   </a>
-                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://t.me/eoscr" target="_blank">
-                    <LinkedInIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.linkedin.com/company/eoscostarica/mycompany/" target="_blank">
+                    <LinkedInIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
                   </a>
                 </Box>
               </Grid>
               <Grid className="litlePaddingTop" style={{marginTop:'-7px'}} item xs={12} md={3}>
                 <Box className="centerBox">
-                  <a className="noMarginsTop" href="https://medium.com/@eoscostarica" target="_blank">
-                    <img
-                      className="socialMediaAnimation"
-                      style={{width:'48px', height:'48px', cursor:'pointer', color:'#5484b3'}}
-                      src={useBaseUrl("img/icons/icon-medium.png")}
-                    />
+                  <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://medium.com/@eoscostarica" target="_blank">
+                    <IconMedium width='48px' height='48px' className='iconSocialMediaAnimation'/>
                   </a>
                   <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.youtube.com/channel/UCvYinCH3O1iKpi-_dNfQAGQ" target="_blank">
-                    <YouTubeIcon style={{ width:'56px', height:'56px', cursor:'pointer', color:'#5484b3'}}/>
+                    <YouTubeIcon className='iconSocialMediaAnimation' style={{ width:'56px', height:'56px', cursor:'pointer'}}/>
                   </a>
                   <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.instagram.com/eoscostarica/" target="_blank">
-                    <InstagramIcon style={{width:'45px', height:'45px', cursor:'pointer', color:'#5484b3'}}/>
+                    <InstagramIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
                   </a>
                 </Box>
               </Grid>
-            </Grid>       
+            </Grid> 
           </Box>
         </Box>
       </Box>
@@ -462,7 +459,7 @@ const BlockProducer = () => {
             <Grid justify="center" container spacing={5}>
               <Grid item xs={12} md={5}>
                 <Box className="specialH3Box">
-                  <h4>Liberty and Peace</h4>
+                  <h4>Liberty and peace</h4>
                 </Box>
                 <p >
                   Costa Rica is one of the most stable and longest-lasting
@@ -483,7 +480,7 @@ const BlockProducer = () => {
               </Grid>
               <Grid item xs={12} md={5}>
                 <Box className="specialH3Box">
-                  <h4>Human Rights</h4>
+                  <h4>Human rights</h4>
                 </Box>
                 <p>
                   Costa Rica is founded on respect to Human Rights, and even the
@@ -587,6 +584,7 @@ const BlockProducer = () => {
       title={MetaData.title}
       description={MetaData.description}
       image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
     > 
       {isDesktop && 
         <Box className="mainContainer">
