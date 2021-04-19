@@ -20,6 +20,7 @@ const MetaData={
   title:"Enterprise Blockchain Solutions | EOSIO",
   description:"EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
   img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/"
 }
 
 const Home = () => {
@@ -445,7 +446,7 @@ const Home = () => {
                     </a>{" "}
                     protocol since its launch, accruing decades of experience with
                     innovative technologies.
-                    <a href={useBaseUrl("/the-company")} target="_blank"> Get to know us.</a>
+                    <a href={useBaseUrl("/the-company")}> Get to know us.</a>
                   </p>
                 </Grid>
                 {isMobile && 
@@ -615,6 +616,7 @@ const Home = () => {
       title={MetaData.title}
       description={MetaData.description}
       image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
     > 
       {isDesktop && 
         <Box className="mainContainer">

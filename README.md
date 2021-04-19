@@ -38,8 +38,9 @@ we are on version 2.0
 
  - React.js - React 17, React Router 5
  - Docusaurus 2.0.0
- - Material-ui/core - React components for faster and easier web development universal-authenticator-library - A library for allowing apps to easily use different auth providers
- - Core - React components for faster and easier web development
+ - Material-ui/core - React components for faster and easier web development.
+ - Universal-authenticator-library - A library for allowing apps to easily use different auth providers.
+ - Core - React components for faster and easier web development.
  - Lint - ESlint
  - Styles - Material-UI Theme (customizable)
 
