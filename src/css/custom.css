@@ -987,6 +987,12 @@ a{
   width: 1100px;
 }
 
+.sectionPaddingTop{
+  padding-top: 140px;
+  padding-bottom: 55px;
+  width: 1100px;
+}
+
 .sectionNoPadding{
   width: 1100px;
 }
@@ -1485,6 +1491,10 @@ a{
     width: 960px;
   }
 
+  .sectionPaddingTop{
+    width: 960px;
+  }
+
   .sectionNoPadding{
     width: 960px;
   }
@@ -1538,6 +1548,10 @@ a{
   }
 
   .section{
+    width: 100%;
+  }
+
+  .sectionPaddingTop{
     width: 100%;
   }
 
