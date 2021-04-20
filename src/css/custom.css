@@ -196,7 +196,7 @@ a{
 }
 
 .dividerBlogBox{
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 
 .blogAvatarBox{
@@ -240,6 +240,10 @@ a{
 
 .blogContentBox{
   margin-bottom: 30px;
+}
+
+.blogMarkdown a{
+  text-decoration: underline;
 }
 
 .blogStickyContentBox{

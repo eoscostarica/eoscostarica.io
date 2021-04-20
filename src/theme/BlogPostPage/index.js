@@ -201,16 +201,18 @@ function BlogPostPage(props) {
           <Box className="blogContentBox">
             <Grid container spacing={2}>
               <Grid item xs={12} md={8}>
-                <BlogPostContents />
-                <Box style={{marginTop: '20px'}}>
-                  {editUrl && 
-                    <a 
-                      href={editUrl}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      <IconEdit /> Edit this page
-                    </a>}
+                <Box className="blogMarkdown">
+                  <BlogPostContents />
+                  <Box style={{marginTop: '20px'}}>
+                    {editUrl && 
+                      <a 
+                        href={editUrl}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <IconEdit /> Edit this page
+                      </a>}
+                  </Box>
                 </Box>
               </Grid>
               <Grid item xs={12} md={4}>
