@@ -180,7 +180,7 @@ const TheCompany = () => {
   const MeetTeam = () => {
     return (
       <Box className="containerSec">
-        <Box className="sectionPadding">
+        <Box className="sectionPaddingTop">
           <Box>
             <Box className="titleBox">
               <h2>Meet the Team</h2>
@@ -213,6 +213,27 @@ const TheCompany = () => {
             }
             <Box className="boxFlexEnd">
               <button className="buttonPrimary" onClick={() => history.push("/team/")} >Meet our team</button>
+            </Box>
+          </Box>
+        </Box>
+      </Box> 
+    )
+  }
+
+  const WorkWithUS = () => {
+    return (
+      <Box className="containerSec">
+        <Box className="section">
+          <Box>
+            <Box className="h3Box">
+              <h3>Do you want to work with us?</h3>
+            </Box>
+            <Box className="spacingBox">
+              <p>
+                We're constantly looking for talent.{" "}
+                <a href={`mailto:${'jobs@eoscostarica.io'}?subject=${'My CV – I want to work for your company'}`}>Send us your CV</a>
+                , and we'll communicate with you once we have open positions.
+              </p>
             </Box>
           </Box>
         </Box>
@@ -440,8 +461,9 @@ const TheCompany = () => {
           </Parallax>
           <WeAreOneGroup />
           <MeetTeam />
-          <TheTechnology/>
-          <SomeOurProjects/>
+          <WorkWithUS />
+          <TheTechnology />
+          <SomeOurProjects />
           <ContactUsBanner />
         </Box>
       }
@@ -451,8 +473,9 @@ const TheCompany = () => {
           <EOSCR />
           <WeAreOneGroup />
           <MeetTeam />
-          <TheTechnology/>
-          <SomeOurProjects/>
+          <WorkWithUS />
+          <TheTechnology />
+          <SomeOurProjects />
           <ContactUsBanner />
         </Box>
       }
