@@ -21,6 +21,7 @@ const MetaData={
   title:"EOS Costa Rica: Block Producer",
   description:"Get to know EOS Costa Rica – a technically proven EOS block producer candidate that develops dapps and smart contracts.",
   img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/block-producer/"
 }
 
 const BlockProducer = () => {
@@ -583,6 +584,7 @@ const BlockProducer = () => {
       title={MetaData.title}
       description={MetaData.description}
       image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
     > 
       {isDesktop && 
         <Box className="mainContainer">
