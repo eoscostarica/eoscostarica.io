@@ -249,8 +249,6 @@ function BlogPostPage(props) {
             <BlogDivider />
             <BlogContent />
           </Parallax>
-          
-          
         </Box>
       }
       {isMobile && 
@@ -260,7 +258,6 @@ function BlogPostPage(props) {
           <BlogContent />
         </Box>
       }
-
     </Layout>
   )
 }

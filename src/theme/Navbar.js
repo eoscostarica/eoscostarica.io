@@ -198,16 +198,16 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
 
     const handleClickMenuLang = () => {
       seLangMenuHandler(true)
-    };
+    }
   
     const handleCloseMenuLang = () => {
       seLangMenuHandler(false)
-    };
+    }
 
     const handleChangeLang = () => {
       seLangMenuHandler(false)
       translateSite()
-    };
+    }
 
     const LangItem = ({label, handleClick, classN}) =>{
       return (
