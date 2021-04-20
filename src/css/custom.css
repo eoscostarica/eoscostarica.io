@@ -500,19 +500,40 @@ a{
 .boxLanguagesSelector{
   z-index: 500;
   position: absolute;
-  right: 0;
-  top: 5px;
-  background-color: white;
-  border: solid 1px lightgray;
+  right: 35px;
+  top: -5px;
+  display: flex;
   border-radius: 5px;
   visibility: hidden;
   opacity: 0;
-  transition:visibility 0.1s linear,opacity 0.1s linear;
+  transition:visibility 0.1s linear, opacity 0.1s linear;
 }
 
 .boxLanguagesSelectorActive{
+
   visibility: visible;
   opacity: 1;
+}
+
+.langItemBox{
+  padding: 5px;
+}
+
+.langItem{
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+
+.langItem:hover{
+  font-weight: bold;
+}
+
+.langItemActive{
+  font-family: Lato, sans-serif;
+  padding-bottom: 3px;
+  border-bottom: solid 4px #5484b3;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .boxMenuItems{
