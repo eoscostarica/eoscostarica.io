@@ -196,7 +196,7 @@ a{
 }
 
 .dividerBlogBox{
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 
 .blogAvatarBox{
@@ -242,6 +242,10 @@ a{
   margin-bottom: 30px;
 }
 
+.blogMarkdown a{
+  text-decoration: underline;
+}
+
 .blogStickyContentBox{
   position: -webkit-sticky;
   position: sticky;
@@ -269,17 +273,6 @@ a{
   font-weight: normal;
   color: #0091FF;
 }
-
-/*.blog-wrapper h1{
-  font-family: Lato, sans-serif;
-  font-weight: bold;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  font-size: 35px;
-  letter-spacing: -0.24px;
-  line-height: 35px;
-}*/
 
 .blog-wrapper h2{
   font-family: Lato, sans-serif;
@@ -500,19 +493,40 @@ a{
 .boxLanguagesSelector{
   z-index: 500;
   position: absolute;
-  right: 0;
-  top: 5px;
-  background-color: white;
-  border: solid 1px lightgray;
+  right: 35px;
+  top: -5px;
+  display: flex;
   border-radius: 5px;
   visibility: hidden;
   opacity: 0;
-  transition:visibility 0.1s linear,opacity 0.1s linear;
+  transition:visibility 0.1s linear, opacity 0.1s linear;
 }
 
 .boxLanguagesSelectorActive{
+
   visibility: visible;
   opacity: 1;
+}
+
+.langItemBox{
+  padding: 5px;
+}
+
+.langItem{
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+
+.langItem:hover{
+  font-weight: bold;
+}
+
+.langItemActive{
+  font-family: Lato, sans-serif;
+  padding-bottom: 3px;
+  border-bottom: solid 4px #5484b3;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .boxMenuItems{
@@ -1754,10 +1768,6 @@ a{
   .blogChipTagsBox{
     padding-left: 25px;
     padding-right: 25px;
-  }
-
-  .blog-wrapper a {
-    /*color: #5484b3;*/
   }
 
   .blog-wrapper h1{
