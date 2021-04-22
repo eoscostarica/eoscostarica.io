@@ -1,11 +1,15 @@
 ---
 slug: what-is-blockchain
 title: What Is Blockchain? A Quick Guide
+image: /img/blog/what-is-blockchain/What-Is-Blockchain.jpg
 author: Luis Diego Rojas
 author_title: Content Strategist
 author_url: https://twitter.com/ldrojas
 author_image_url: https://avatars0.githubusercontent.com/u/29232417?s=400&u=032f18555bd97e3d90f3ddfb5b2dc72dfcf0d11b&v=4
 tags: [eosio, blockchain, enterprise blockchain, technology]
+metaTitle: "EOS Costa Rica Blog: What Is Blockchain? A Quick Guide"
+metaDescription: Learn what is blockchain and how to implement it to your organization. Blockchain may offer improved security, traceability, and efficiency to your company.
+langPost: https://es.eoscostarica.io/blog/que-es-blockchain
 ---
 
 ![What Is Blockchain](/img/blog/what-is-blockchain/What-Is-Blockchain.jpg)
@@ -72,12 +76,12 @@ Some use cases of blockchain are:
 
 ** Follow us on social media:**
 
-*   Website:https://eoscostarica.io
-*   Twitter: https://twitter.com/eoscostarica
-*   Telegram: https://t.me/eoscr
-*   Facebook: https://www.facebook.com/costaricaeos/
-*   LinkedIn: https://www.linkedin.com/company/eoscostarica/
-*   Medium: medium/@eoscostarica
+*   [Website](https://eoscostarica.io)
+*   [Twitter](https://twitter.com/eoscostarica)
+*   [Telegram](https://t.me/eoscr)
+*   [Facebook](https://www.facebook.com/costaricaeos/)
+*   [LinkedIn](https://www.linkedin.com/company/eoscostarica/)
+*   [Medium](https://medium.com/@eoscostarica)
 
 ## TL;DR
 
