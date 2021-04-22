@@ -154,7 +154,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
  <br/>
   <p align="center">
     <a href="https://es.eoscostarica.io/">
-      <img src="https://raw.githubusercontent.com/eoscostarica/design-assets/master/logos/eosCR/fullColor-horizontal-transparent-white.png" width="300">
+      <img src="https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/logos/eoscr-logo.png" width="300">
     </a>
   </p>
   <br/>
