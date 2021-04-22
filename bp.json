@@ -36,8 +36,8 @@
 		"location": {
 			"name": "San Jose",
 			"country": "CR",
-			"latitude": 9.936377,
-			"longitude": -84.078155
+			"latitude": "9.936377",
+			"longitude": "-84.078155"
 		},
 		"social": {
 			"keybase": "eoscostarica",

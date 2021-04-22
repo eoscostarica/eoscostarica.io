@@ -4,9 +4,16 @@
         <title>EOSIO Enterprise Blockchain Development Services -  EOS Costa Rica Blog</title>
         <link>https://eoscostarica.io/blog</link>
         <description>EOSIO Enterprise Blockchain Development Services -  EOS Costa Rica Blog</description>
-        <lastBuildDate>Tue, 09 Mar 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 22 Apr 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[The Role of NFTs for Enterprise]]></title>
+            <link>https://eoscostarica.io/blog/nfts-for-enterprise</link>
+            <guid>nfts-for-enterprise</guid>
+            <pubDate>Thu, 22 Apr 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Role of NFTs for Enterprise]]></description>
+        </item>
         <item>
             <title><![CDATA[How to Tell if Your Organization Needs Blockchain]]></title>
             <link>https://eoscostarica.io/blog/do-you-need-blockchain</link>
@@ -48,6 +55,13 @@
             <guid>open-source</guid>
             <pubDate>Mon, 27 Jan 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Why Get Involved in Open Source]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Blockchain in Agriculture: Growing Better Systems]]></title>
+            <link>https://eoscostarica.io/blog/blockchain-in-agriculture</link>
+            <guid>blockchain-in-agriculture</guid>
+            <pubDate>Wed, 27 Nov 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[Blockchain in Agriculture: Growing Better Systems]]></description>
         </item>
     </channel>
 </rss>
