@@ -1096,13 +1096,16 @@ a{
 }
 
 .imgKnow{
-  width: 90%;
+  width: 100%;
   height: 300px;
+  object-fit: cover;
 }
 
 .imgKnowCompany{
-  width: 90%;
+  width: 100%;
   height: 500px;
+  object-fit: cover;
+  object-position: left;
 }
 
 .imgProjects{
