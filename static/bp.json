@@ -56,8 +56,8 @@
 			"location": {
 				"name": "San Jose",
 				"country": "CR",
-				"latitude": "9.936377",
-				"longitude": "-84.078155"
+				"latitude": 9.936377,
+				"longitude": -84.078155
 			},
 			"node_type": "query",
 			"p2p_endpoint": "",
@@ -71,8 +71,8 @@
 			"location": {
 				"name": "San Jose",
 				"country": "CR",
-				"latitude": "9.936377",
-				"longitude": "-84.078155"
+				"latitude": 9.936377,
+				"longitude": -84.078155
 			},
 			"node_type": "seed",
 			"p2p_endpoint": "p2p.eosio.cr:9876",
@@ -84,8 +84,8 @@
 			"location": {
 				"name": "San Jose",
 				"country": "CR",
-				"latitude": "-84.078155",
-				"longitude": "9.936377"
+				"latitude": -84.078155,
+				"longitude": 9.936377
 			},
 			"node_type": "producer",
 			"p2p_endpoint": "",
