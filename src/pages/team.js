@@ -382,7 +382,7 @@ const Team = () => {
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={4}>
-                            <Box >
+                            <Box className='centerTextOnMobile'>
                                 <button className="buttonPrimary" onClick={() => window.open(`mailto:${'jobs@eoscostarica.io'}?subject=${'My CV – I want to work for your company'}`)} >Send your CV</button>
                             </Box>
                         </Grid>
