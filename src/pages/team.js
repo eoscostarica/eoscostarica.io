@@ -9,7 +9,6 @@ import clsx from "clsx"
 import Avatar from '@material-ui/core/Avatar'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import TwitterIcon from '@material-ui/icons/Twitter'
-import { useHistory } from 'react-router-dom'
 
 const MetaData={
     title:"EOS Costa Rica: Our Team",
@@ -370,7 +369,6 @@ const Team = () => {
     }
 
     const SendCV = () => {
-        const history = useHistory()
     
         return (
             <Box className="containerGray">
