@@ -368,6 +368,28 @@ const Team = () => {
         )
     }
 
+    const SendCV = () => {
+    
+        return (
+            <Box className="containerGray">
+                <Box className="sectionPadding">
+                    <Grid container spacing={5}>
+                        <Grid item xs={12} md={8}> 
+                            <Box>
+                                <h2 className="centerTextOnMobile">Do you want to work with us? </h2>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={4}>
+                            <Box className='centerTextOnMobile'>
+                                <button className="buttonPrimary" onClick={() => window.open(`mailto:${'jobs@eoscostarica.io'}?subject=${'My CV – I want to work for your company'}`)} >Send your CV</button>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Box>
+            </Box>
+        );
+    };
+
     return (
         <Layout
             title={MetaData.title}
@@ -382,6 +404,7 @@ const Team = () => {
                             <Box className="imgParallax"/>
                         </Background>
                         <HeroSection />
+                        <SendCV />
                     </Parallax>
                 </Box>
             }
@@ -389,6 +412,7 @@ const Team = () => {
                 <Box className="mainContainer">
                     <HeroSection />
                     <TeamSection />
+                    <SendCV />
                 </Box>
             }
         </Layout>
