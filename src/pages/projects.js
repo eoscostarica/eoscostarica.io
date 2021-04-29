@@ -18,14 +18,6 @@ const MetaData={
 
 const ProjectsList = [
   {
-    img:"img/logos/smartgate.svg",
-    name:"SMARTGATE",
-    details:"A blockchain-based platform that provides solutions for in-out gate activity for the container industry and real-time transmission of relevant data required for proper interchange in port logistics. ",
-    link:"https://smartgate.tech/",
-    color:"#ffffff",
-    linkText:"Learn more about SMARTGATE."
-  },
-  {
     img:"img/logos/eosio.svg",
     name:"EOSIO Dashboard",
     details:"The EOSIO Dashboard is an open-source project that allows users to visualize the rewards distribution along the EOS network to seek accountability and transparency. ",
@@ -34,11 +26,19 @@ const ProjectsList = [
     linkText:"Read more about EOSIO Dashboard."
   },
   {
+    img:"img/imagenotavailable.png",
+    name:"gGoods",
+    details:"gGoods is an open-source NFT standard that lets organizations create tokens to seek funding. The patron can then use their NFTs as assets in games and apps. ",
+    link:"https://ggoods.io/",
+    color:"#ffffff",
+    linkText:"Read more about gGoods."
+  },
+  {
     img:"img/logos/eosrate.svg",
     name:"EOS Rate",
     details:"EOS Rate is an open- source app that allows EOS token holders to access a rating system and voting portal for block producers and proxies in the EOS blockchain. ",
     link:"https://eosrate.io/",
-    color:"#ffffff",
+    color:"#f8f8f8",
     linkText:"Explore EOS Rate."
   },
   {
@@ -46,7 +46,7 @@ const ProjectsList = [
     name:"Enterprise EOSIO Forum",
     details:"We are part of the Enterprise EOSIO Forum, a community-driven initiative to discuss enterprise blockchain solutions deploying EOSIO technology. ",
     link:"https://www.linkedin.com/company/enterprise-eosio-forum/",
-    color:"#f8f8f8",
+    color:"#ffffff",
     linkText:"More about Enterprise EOSIO Forum."
   },
   {
@@ -54,7 +54,7 @@ const ProjectsList = [
     name:"Evodex",
     details:"Evodex is the front-end user interface for a liquidity pool protocol where users vote on the pool liquidity fees and pay zero gas. We were in charge of UX and front-end design. ",
     link:"https://evodex.io/",
-    color:"#ffffff",
+    color:"#f8f8f8",
     linkText: "Try Evodex now."
   },
   {
@@ -62,7 +62,7 @@ const ProjectsList = [
     name:"EOS Foundation",
     details:"We are part of the EOS Foundation proof of concept. It is an autonomous, decentralized, non-profit organization that will enable self-representation and promotion of the EOS community. ",
     link:"http://eos-foundation.eosio.cr/",
-    color:"#f8f8f8",
+    color:"#ffffff",
     linkText:"Check EOS Foundation."
   },
   {
@@ -70,7 +70,7 @@ const ProjectsList = [
     name:"Undisclosed Enterprise Project",
     details:" We developed an app for a US-based client in the accounting and tax industry for improved traceability of intercompany transactions. ",
     link:"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-a-great-idea-e384b298a4a8",
-    color:"#ffffff",
+    color:"#f8f8f8",
     linkText:"Read more here."
   },
   {
@@ -78,7 +78,7 @@ const ProjectsList = [
     name:"Notario Digital",
     details:"Notario Digital is an open-source project that generates a hash of any file to register it immutably on an EOSIO network. ",
     link:"https://notarize.eosio.cr/dashboard/notary",
-    color:"#f8f8f8",
+    color:"#ffffff",
     linkText:"Take a look at it."
   }
 ]
@@ -186,7 +186,33 @@ const OurProjects = () => {
                   </p>
                 </Box>
               </Grid>
-            <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+              <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+                <Box className="projectsGridLeft">
+                  <Box className="imgBoxProjects">
+                    <img
+                      alt="SMARTGATE"
+                      src={useBaseUrl("img/logos/smartgate.svg")}
+                    />
+                  </Box>
+                </Box>
+              </Grid>
+              <Grid  style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+                <Box className="projectsGridRight">
+                  <Box className="h3Box">
+                    <h3 >SMARTGATE</h3>
+                  </Box>
+                  <p>
+                    A blockchain-based platform that provides solutions
+                    for in-out gate activity for the container industry
+                    and real-time transmission of relevant data required
+                    for proper interchange in port logistics.{" "}
+                    <a href="https://smartgate.tech/" target="_blank">
+                      Learn more about SMARTGATE.
+                    </a>
+                  </p>
+                </Box>
+              </Grid>
+            <Grid item xs={12} md={6}>
               <Box className="projectsGridLeft">
                 <Box className="imgBoxProjects">
                   <img
@@ -196,7 +222,7 @@ const OurProjects = () => {
                 </Box>
               </Box>
             </Grid>
-            <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+            <Grid item xs={12} md={6}>
               <Box className="projectsGridRight">
                 <Box className="h3Box">
                   <h3 >Lifebank</h3>

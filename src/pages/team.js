@@ -124,7 +124,7 @@ const DevelopTeam = [
         color:"#ffffff"
     },
     {
-        img:"",
+        img:"img/team/justin.jpg",
         name:"Justin Castillo",
         position:"Intern",
         bio:"I strive to be part of the change, not just a distant gear.",
@@ -181,7 +181,7 @@ const InfrastructureNetworkingTeam = [
         color:"#ffffff"
     },
     {
-        img:"",
+        img:"img/team/andres.jpg",
         name:"Andrés Gomez",
         position:"Cybersecurity Developer",
         bio:"I envision and work for a more secure, private, and decentralized world.",
@@ -190,7 +190,7 @@ const InfrastructureNetworkingTeam = [
         color:"#f8f8f8"
     },
     {
-        img:"",
+        img:"img/team/ronald.jpg",
         name:"Ronald Gallo",
         position:"Network Administrator",
         bio:"",
@@ -199,7 +199,7 @@ const InfrastructureNetworkingTeam = [
         color:"#ffffff"
     },
     {
-        img:"",
+        img:"img/team/julio.jpg",
         name:"Victor Julio Madrigal",
         position:"Web Developer",
         bio:"What I like the most is to develop innovative projects that move forward with the newest technologies.",
