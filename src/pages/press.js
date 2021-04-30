@@ -18,7 +18,8 @@ import ContactUsBanner from './components/ContactUsBanner'
 const MetaData={
   title:"",
   description:"",
-  img:"img/metaImgBlack.png"
+  img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/prensa/"
 }
 
 const firtsNewsRelease = [
@@ -153,7 +154,7 @@ const Press = () => {
               in the news. The following are some articles that mention our job.
             </p>
             <Box className="buttonBox">
-              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Contact Us</button>
+              <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact Us</button>
             </Box>
           </Box>
         }
@@ -167,7 +168,7 @@ const Press = () => {
               in the news. The following are some articles that mention our job.
             </p>
             <Box className="buttonBox">
-              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Contact Us</button>
+              <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact Us</button>
             </Box>
           </Box>
         }
@@ -278,6 +279,7 @@ const Press = () => {
       title={MetaData.title}
       description={MetaData.description}
       image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
     > 
       {isDesktop && 
         <Box className="mainContainer">

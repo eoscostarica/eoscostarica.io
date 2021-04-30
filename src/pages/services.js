@@ -21,6 +21,7 @@ const MetaData={
   title:"EOS Costa Rica: Services",
   description:"EOS Costa Rica leverages the enterprise blockchain protocol EOSIO to develop real-world solutions.",
   img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/servicios/"
 }
 
 const strategicLocationAccordion = 
@@ -178,7 +179,7 @@ const ServicePage = () => {
               developing infrastructure for business environments.
             </p>
             <Box className="buttonBoxMobile">
-              <button className="buttonPrimary" onClick={() => history.push("/about/")}>
+              <button className="buttonPrimary" onClick={() => history.push("/the-company/")}>
                 Get to Know Us
               </button>
             </Box>
@@ -615,6 +616,7 @@ const ServicePage = () => {
       title={MetaData.title}
       description={MetaData.description}
       image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
     > 
       {isDesktop && 
         <Box className="mainContainer">

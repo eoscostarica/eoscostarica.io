@@ -1,11 +1,14 @@
 ---
 slug: gaming-blockchain
 title: Leveling Up the Gaming Industry with Blockchain
+image: /img/blog/gaming/gaming-cover.jpg
 author: Luis Diego Rojas
 author_title: Content Strategist
 author_url: https://twitter.com/ldrojas
 author_image_url: https://avatars0.githubusercontent.com/u/29232417?s=400&u=032f18555bd97e3d90f3ddfb5b2dc72dfcf0d11b&v=4
 tags: [eosio, blockchain, gaming]
+metaTitle: "EOS Costa Rica Blog: Leveling Up the Gaming Industry with Blockchain"
+metaDescription: The video games industry has been evolving with new technologies. In this article, we explore how blockchain technology impacts the gaming industry.
 ---
 
 ![Leveling Up the Gaming Industry with Blockchain](/img/blog/gaming/gaming-cover.jpg)
@@ -92,9 +95,9 @@ Blockchain in video games is an exciting endeavor that is only getting started. 
 
 ** Follow us on social media:**
 
-*   Website: https://eoscostarica.io
-*   Twitter: https://twitter.com/eoscostarica
-*   Telegram: https://t.me/eoscr
-*   Facebook: https://www.facebook.com/costaricaeos/
-*   LinkedIn: https://www.linkedin.com/company/eoscostarica/
-*   Medium: https://medium.com/@eoscostarica
+*   [Website](https://eoscostarica.io)
+*   [Twitter](https://twitter.com/eoscostarica)
+*   [Telegram](https://t.me/eoscr)
+*   [Facebook](https://www.facebook.com/costaricaeos/)
+*   [LinkedIn](https://www.linkedin.com/company/eoscostarica/)
+*   [Medium](https://medium.com/@eoscostarica)

@@ -4,7 +4,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
- ![EOS Costa Rica](static\img\screenshot_home.png)
+ ![EOS Costa Rica](https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/screenshot_home.png)
 
  ## About the Project
 
@@ -38,8 +38,9 @@ we are on version 2.0
 
  - React.js - React 17, React Router 5
  - Docusaurus 2.0.0
- - Material-ui/core - React components for faster and easier web development universal-authenticator-library - A library for allowing apps to easily use different auth providers
- - Core - React components for faster and easier web development
+ - Material-ui/core - React components for faster and easier web development.
+ - Universal-authenticator-library - A library for allowing apps to easily use different auth providers.
+ - Core - React components for faster and easier web development.
  - Lint - ESlint
  - Styles - Material-UI Theme (customizable)
 
@@ -150,9 +151,13 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
  ## About EOS Costa Rica
 
- <div style={{ display: "block", textAlign: "center" }}>
- <img style={{ width: "50%" }} src="https://raw.githubusercontent.com/eoscostarica/design-assets/master/logos/eosCR/fullColor-horizontal-transparent-white.png" />
- </div>
+ <br/>
+  <p align="center">
+    <a href="https://es.eoscostarica.io/">
+      <img src="https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/logos/eoscr-logo.png" width="300">
+    </a>
+  </p>
+  <br/>
 
  EOS Costa Rica is an independently-owned, self-funded, bare-metal Genesis block producer that provides stable and secure infrastructure for EOSIO blockchains. We support open source software for our community while offering enterprise blockchain development and custom smart contract development for our clients.
 
