@@ -8,13 +8,13 @@ module.exports = function () {
           rules: [
             { 
                 test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
-                loader: 'url-loader?limit=100000'
+                use: ['url-loader', 'limit=100000']
             }
           ],
         },
         plugins: [
           new webpack.ProvidePlugin({
-              Buffer: ['buffer', 'Buffer'],
+              Buffer: ['buffer', 'Buffer']
           })
         ],
       };
