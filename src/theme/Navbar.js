@@ -1,27 +1,46 @@
 import React, { useLayoutEffect, useState, useEffect } from "react"
 import clsx from "clsx"
 import useBaseUrl from "@docusaurus/useBaseUrl"
-import { useMediaQuery } from 'react-responsive'
+import PropTypes from 'prop-types'
 import useScrollTrigger from '@material-ui/core/useScrollTrigger'
 import Box from '@material-ui/core/Box'
 import Link from '@material-ui/core/Link'
 import Drawer from '@material-ui/core/Drawer'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
+import MenuItem from '@material-ui/core/MenuItem'
 import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
 import { useLocation } from 'react-router-dom'
+import HomeIcon from '@material-ui/icons/Home'
+import ComputerIcon from '@material-ui/icons/Computer'
+import ApartmentIcon from '@material-ui/icons/Apartment'
+import GroupIcon from '@material-ui/icons/Group'
+import ListAltIcon from '@material-ui/icons/ListAlt'
+import GridOnIcon from '@material-ui/icons/GridOn'
+import EditIcon from '@material-ui/icons/Edit'
+import BusinessIcon from '@material-ui/icons/Business'
+import MenuBookIcon from '@material-ui/icons/MenuBook'
+import MailIcon from '@material-ui/icons/Mail'
+import ForumIcon from '@material-ui/icons/Forum'
+import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted'
+import LanguageIcon from '@material-ui/icons/Language'
+
+import GlobalIcon from '../../static/img/icons/globalBlack.svg'
+import CustomListItem from '../pages/components/CustomListItem'
 
 const PATHS = [
   {
     dropDown:false,
     path: "/",
+    espPath: "/",
     label: "Home",
-    target: '_self'
+    target: '_self',
+    icon: <HomeIcon style={{width:'20px'}}/>
   },
   {
     dropDown:true,
     path: "/services/",
+    espPath: "/servicios/",
     label: "About us",
     target: '_self',
     markerSize: "70px",
@@ -29,66 +48,100 @@ const PATHS = [
     [
       {
         path: "/services/",
+        espPath: "/servicios/",
         label: "Services",
-        target: '_self'
+        target: '_self',
+        icon: <ComputerIcon style={{width:'20px'}}/> 
       },
       {
         path: "/the-company/",
+        espPath: "/compañia/",
         label: "The company",
-        target: '_self'
+        target: '_self',
+        icon: <ApartmentIcon style={{width:'20px'}}/>
       },
       {
         path: "/team/",
+        espPath: "/equipo/",
         label: "Team",
-        target: '_self'
+        target: '_self',
+        icon: <GroupIcon style={{width:'20px'}}/> 
       },
       {
         path: "/projects/",
+        espPath: "/proyectos/",
         label: "Projects",
-        target: '_self'
+        target: '_self',
+        icon: <ListAltIcon style={{width:'20px'}}/>
       },
       {
         path: "/block-producer/",
+        espPath: "/productor-de-bloques/",
         label: "Block producer",
-        target: '_self'
+        target: '_self',
+        icon: <GridOnIcon style={{width:'20px'}}/>
       },
-      /*{
+      {
         path: "/press/",
+        espPath: "/prensa/",
         label: "Press",
-        target: '_self'
-      },
-      */
+        target: '_self',
+        icon: <ForumIcon style={{width:'20px'}}/>
+      }
     ]
   },
   {
     dropDown:false,
     path: "/industries/",
+    espPath: "/industrias/",
     label: "Industries",
-    target: '_self'
+    target: '_self',
+    icon: <BusinessIcon style={{width:'20px'}}/>
   },
   {
-    dropDown:false,
+    dropDown:true,
     path: "https://guide.eoscostarica.io/",
+    espPath: "https://guias.eoscostarica.io/",
     label: "Learning",
-    target: '_blank'
+    target: '_self',
+    markerSize: "70px",
+    icon: <MenuBookIcon style={{width:'20px'}}/>,
+    subPaths: [
+      {
+        path: "https://guide.eoscostarica.io/",
+        espPath: "https://guias.eoscostarica.io/",
+        label: "Dev resources",
+        target: '_self',
+        icon: <MenuBookIcon style={{width:'20px'}}/> 
+      },
+      {
+        path: "/do-you-need-blockchain/",
+        label: "/do-you-need-blockchain/",
+        label: "Corp resources",
+        target: '_self',
+        icon: <FormatListBulletedIcon style={{width:'20px'}}/>
+      },
+    ]
   },
   {
     dropDown:false,
     path: "/blog/",
+    espPath: "/blog/",
     label: "Blog",
-    target: '_self'
+    target: '_self',
+    icon: <EditIcon style={{width:'20px'}}/>
   },
   {
     dropDown:false,
     path: "/contact-us/",
+    espPath: "/contactenos/",
     label: "Contact",
-    target: '_self'
+    target: '_self',
+    icon: <MailIcon style={{width:'20px'}}/>
   },
 ];
 
-const NavbarMenu = () => {
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+const NavbarMenu = ({isMobile, isDesktop}) => {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
   const [isBlog, setIsBlog] =  useState()
@@ -98,6 +151,10 @@ const NavbarMenu = () => {
   useEffect(() => {
     setIsBlog(location.pathname.substring(0,6) === '/blog/')
   }, [location])
+
+  useEffect(() => {
+    if(isBlog) setPathname('/blog/')
+  }, [isBlog])
   
   useLayoutEffect(() => {
     const pathname = window.location.pathname;
@@ -116,17 +173,90 @@ const NavbarMenu = () => {
     return res
   }
 
+  const getSpanishPath = (path) => {
+    let espPath
+
+    PATHS.map((item) => {
+      if(item.dropDown){
+        item.subPaths.map((subitem) => {
+          if(subitem.path===path) espPath=subitem.espPath
+        })
+      }else{
+        if(item.path===path) espPath=item.espPath
+      }
+    })
+
+    return espPath
+  }
+
+  const translateSite = () => {
+    window.open(`https://es.eoscostarica.io${getSpanishPath(pathname)}`,'_self')
+  }
+
+  const LanguagueSelector = () => {
+    const [langMenuHandler, seLangMenuHandler] = useState(false);
+
+    const handleClickMenuLang = () => {
+      seLangMenuHandler(true)
+    }
+  
+    const handleCloseMenuLang = () => {
+      seLangMenuHandler(false)
+    }
+
+    const handleChangeLang = () => {
+      seLangMenuHandler(false)
+      translateSite()
+    }
+
+    const LangItem = ({label, handleClick, classN}) =>{
+      return (
+        <Box className="langItemBox" onClick={handleClick}>
+          <span className={classN} style={{fontSize: '15px'}}>{label}</span>
+        </Box>
+      )
+    }
+
+    return (
+      <>
+        <IconButton
+          style={{padding: '5px'}}
+          onClick={handleClickMenuLang}
+        >
+          <img src={GlobalIcon} style={{width:'20px', height: '20px'}}/>
+        </IconButton>
+        {true && (
+          <Box  className={clsx("boxLanguagesSelector",{["boxLanguagesSelectorActive"]: langMenuHandler})} onMouseLeave={handleCloseMenuLang}>
+            <LangItem
+              label="ES"
+              handleClick={handleChangeLang}
+              classN="langItem"
+            />
+            <span style={{fontSize: '15px', padding: '5px'}}>|</span>
+            <LangItem 
+              label="EN"
+              handleClick={handleCloseMenuLang}
+              classN="langItemActive"
+            />
+          </Box>
+        )}
+      </>
+    )
+  }
+
   return (
-    <Box className={isBlog? clsx("navBar","navBarScroll"): clsx("navBar",{["navBarScroll"]: (trigger || isMobile)})} >
+    <Box className={clsx("navBar",{["navBarScroll"]: (trigger || isMobile)})} >
       <Box className="menuWrapper">
         {isMobile && 
           <>
             <Box className="imgLogoBoxMobile">
-              <img
-                className="imgLogoScroll"
-                src={useBaseUrl("img/eoscr-logo.png")}
-                alt="EOS CR LOGO"
-              />
+              <a href={useBaseUrl("/")} alt="EOS CR LOGO">
+                <img
+                  className="imgLogoScroll"
+                  src={useBaseUrl("img/logos/eoscr-logo.png")}
+                  alt="EOS CR LOGO"
+                />
+              </a>
             </Box>
             <Box  className="btnDrawer">
               <IconButton onClick={handlerDrawer}>
@@ -136,24 +266,38 @@ const NavbarMenu = () => {
             <Drawer anchor={'right'} open={isOpen} onClose={handlerDrawer} >
               <Box className="drawerContent">
                 <List>
-                  {PATHS.map((item) => (
-                    <Box  key={item.label}>
-                      {item.dropDown && 
-                        <>
-                          {item.subPaths.map((subItem) => (
-                            <Link href={useBaseUrl(subItem.path)} target={subItem.target} key={subItem.label} style={{textDecoration: 'none'}}>
-                              <ListItem button><span className="linkItem">{subItem.label}</span></ListItem>
-                          </Link>
-                          ))}
-                        </>
-                      }
-                      {!item.dropDown && 
-                        <Link href={useBaseUrl(item.path)} target={item.target} style={{textDecoration: 'none'}}>
-                            <ListItem button><span className="linkItem">{item.label}</span></ListItem>
-                        </Link>
-                      } 
-                    </Box>
-                  ))}
+                  <Box className="linkGruopBox">
+                    <CustomListItem href={useBaseUrl(PATHS[0].path)} target={PATHS[0].target} label={PATHS[0].label} icon={PATHS[0].icon} isSelected={pathname===PATHS[0].path}/>
+                  </Box>
+                  <Box className="linkGruopBox">
+                    <span className="linkGruopLabel">ABOUT US</span>
+                    {PATHS[1].subPaths.map((subItem) => (
+                      <Box key={subItem.label}>
+                        {subItem.label!="Press" &&
+                          <CustomListItem  href={useBaseUrl(subItem.path)} target={subItem.target} label={subItem.label} icon={subItem.icon} isSelected={pathname===subItem.path}/>
+                        }
+                      </Box>
+                    ))}
+                    <CustomListItem href={useBaseUrl(PATHS[2].path)} target={PATHS[2].target} label={PATHS[2].label} icon={PATHS[2].icon} isSelected={pathname===PATHS[2].path}/>
+                  </Box>
+                  <Box className="linkGruopBox">
+                    <span className="linkGruopLabel">CONTENT FOR YOU</span>
+                    <CustomListItem href={useBaseUrl(PATHS[3].path)} target={PATHS[3].target} label={PATHS[3].label} icon={PATHS[3].icon} isSelected={pathname===PATHS[3].path}/>
+                    <CustomListItem href={useBaseUrl(PATHS[4].path)} target={PATHS[4].target} label={PATHS[4].label} icon={PATHS[4].icon} isSelected={pathname===PATHS[4].path}/>
+                    <CustomListItem href={useBaseUrl(PATHS[1].subPaths[5].path)} 
+                    target={PATHS[1].subPaths[5].target} 
+                    label={PATHS[1].subPaths[5].label} 
+                    icon={PATHS[1].subPaths[5].icon} 
+                    isSelected={pathname===PATHS[1].subPaths[5].path}/>
+                  </Box>
+                  <Box className="linkGruopBox">
+                    <span className="linkGruopLabel">CONTACT</span>
+                    <CustomListItem href={useBaseUrl(PATHS[5].path)} target={PATHS[5].target} label={PATHS[5].label} icon={PATHS[5].icon} isSelected={pathname===PATHS[5].path}/>
+                  </Box>
+                  <Box className="linkGruopBox">
+                    <span className="linkGruopLabel">OPTIONS</span>
+                    <CustomListItem href="https://es.eoscostarica.io/" target="_blank" label="Spanish website" icon={<LanguageIcon style={{width:'20px'}}/>} isSelected={false}/>
+                  </Box>
                 </List>
               </Box>
             </Drawer>
@@ -162,57 +306,46 @@ const NavbarMenu = () => {
           <>
             <Box className="boxLeft">
               <Box  className="imgLogoBox">
-                <img
-                  className={isBlog? "imgLogoScroll": clsx("imgLogo",{["imgLogoScroll"]: trigger})}
-                  src={useBaseUrl("img/eoscr-logo.png")}
-                  alt="EOS CR LOGO"
-                />
+                <a href={useBaseUrl("/")}>
+                  <img
+                    className={clsx("imgLogo",{["imgLogoScroll"]: trigger})}
+                    src={useBaseUrl("img/logos/eoscr-logo.png")}
+                    alt="EOS CR LOGO"
+                  />
+                </a>
               </Box>
             </Box>
-            <Box className="boxRight">
-                {/*!isMobile && (
-                    <Box className={"boxLanguages"}>
-                      <Grid component="label" container alignItems="center" spacing={1}>
-                        <Grid item>Español</Grid>
-                        <Grid item>
-                          <label className="switch">
-                            <input type="checkbox" checked onChange={() => window.open("https://es.eoscostarica.io/","_self")}/>
-                            <span className="slider round"></span>
-                          </label>
-                        </Grid>
-                        <Grid item>English</Grid>
-                      </Grid>
-                    </Box>
-                )*/}
-                  <Box className="boxMenuItems" id="boxMenuItems">
-                    {PATHS.map((item) => (
-                      <Box key={item.label}>
-                        {!item.dropDown && 
-                          <Link className="navBarItemTab" href={useBaseUrl(item.path)} target={item.target} key={item.label} style={{textDecoration:'none'}}>
-                            <Box className="menuItem">  
-                              <h5 className={clsx("link",{["linkActive"]: pathname === item.path})}>{item.label}</h5>                  
-                            </Box>
-                          </Link>
-                        }
-                        {item.dropDown && 
-                          <Link className="navBarItemTab" href={useBaseUrl(item.path)} style={{textDecoration:'none'}}>
-                            <Box className="menuItem">  
-                                <h5 className={clsx("link",{["linkActive"]: isCurrentPath(item.subPaths)})}>{item.label}</h5>
-                              <Box className={clsx("dropDownMenu",{["dropDownMenuActive"]: isCurrentPath(item.subPaths)})} style={{width:item.markerSize}}>
-                                  {item.subPaths.map((subItem) => (
-                                    <Link className="navBarItemTab" href={useBaseUrl(subItem.path)} target={subItem.target} key={subItem.label} style={{textDecoration:'none'}}>
-                                      <Box>  
-                                        <h5 className={clsx("menuItemDrop",{["menuItemDropActive"]: pathname === subItem.path})} >{subItem.label}</h5>                  
-                                      </Box>
-                                    </Link>
-                                  ))}
-                              </Box>                    
-                            </Box>
-                          </Link>
-                        }
+            <Box className="boxRight"> 
+              <Box className={"boxLanguages"}>
+                <LanguagueSelector />
+              </Box>
+              <Box className="boxMenuItems" id="boxMenuItems">
+                {PATHS.map((item) => (
+                  <Box key={item.label}>
+                    {!item.dropDown && 
+                      <Link className="navBarItemTab" href={useBaseUrl(item.path)} target={item.target} key={item.label} style={{textDecoration:'none'}}>
+                        <Box className="menuItem">  
+                          <h5 className={clsx("link",{["linkActive"]: pathname === item.path})}>{item.label}</h5>                  
+                        </Box>
+                      </Link>
+                    }
+                    {item.dropDown && 
+                      <Box tabIndex="0" className={clsx("menuItem","navBarItemTab")} >  
+                          <h5 className={clsx("link",{["linkActive"]: isCurrentPath(item.subPaths)})}>{item.label}</h5>
+                        <Box className={clsx("dropDownMenu",{["dropDownMenuActive"]: isCurrentPath(item.subPaths)})} style={{width:item.markerSize}}>
+                            {item.subPaths.map((subItem) => (
+                              <Link className="navBarItemTab" href={useBaseUrl(subItem.path)} target={subItem.target} key={subItem.label} style={{textDecoration:'none'}}>
+                                <Box>  
+                                  <h5 className={clsx("menuItemDrop",{["menuItemDropActive"]: pathname === subItem.path})}>{subItem.label}</h5>                  
+                                </Box>
+                              </Link>
+                            ))}
+                        </Box>                    
                       </Box>
-                    ))}
-                </Box> 
+                    }
+                  </Box>
+                ))}
+              </Box> 
             </Box>
           </>
         }
@@ -220,5 +353,10 @@ const NavbarMenu = () => {
     </Box> 
   );
 };
+
+NavbarMenu.propTypes = {
+  isDesktop:PropTypes.bool,
+  isMobile:PropTypes.bool,
+}
 
 export default NavbarMenu;

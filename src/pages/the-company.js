@@ -9,9 +9,19 @@ import useBaseUrl from "@docusaurus/useBaseUrl"
 import Box from '@material-ui/core/Box'
 import Carousel from 'react-material-ui-carousel'
 
+import ContactUsBanner from './components/ContactUsBanner'
+import WeAreOneGroup from './components/WeAreOneGroup'
+
+const MetaData={
+  title:"EOS Costa Rica: Company Page",
+  description:"EOS Costa Rica is part of a company with more than three decades of experience developing innovative solutions.",
+  img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/la-empresa/"
+}
+
 const TheCompany = () => {
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
   const history = useHistory();
 
   const HeroSection = () => {
@@ -22,7 +32,7 @@ const TheCompany = () => {
           <Box className="titleBox">
             <h1>We Develop Enterprise <br/> Blockchain Solutions</h1>
           </Box>
-          <p >Years of experience developing innovative technologies speak for us.Unleash the power of blockchain technology with the help of our agile team.</p>
+          <p >Years of experience developing innovative technologies speak for us. Unleash the power of blockchain technology with the help of our agile team.</p>
           <br/>
           <Box className="buttonBox">
             <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact Us</button>
@@ -32,13 +42,11 @@ const TheCompany = () => {
         {isMobile && 
           <Box className="sectionHeroMobile">
             <Box className="titleBox">
-                <h1>We Develop Enterprise <br/> Blockchain Solutions</h1>
+              <h1>We Develop Enterprise <br/> Blockchain Solutions</h1>
             </Box>
-            <p>Years of experience developing innovative technologies speak for us.</p>
-            <br/>
-            <p>Unleash the power of blockchain technology with the help of our agile team.</p>
+            <p>Years of experience developing innovative technologies speak for us. Unleash the power of blockchain technology with the help of our agile team.</p>
             <Box className="buttonBoxMobile">
-              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Learn More</button>
+              <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact Us</button>
             </Box>
         </Box>
       }
@@ -83,8 +91,8 @@ const TheCompany = () => {
               <Grid item md={6}>
                 <Box className="imgBoxRight">
                   <img
-                    className="imgKnow"
-                    src={useBaseUrl("img/ourstory.jpg")}
+                    className="imgKnowCompany"
+                    src={useBaseUrl("img/website_03.jpg")}
                   />
                 </Box>  
               </Grid>
@@ -96,15 +104,15 @@ const TheCompany = () => {
                 <Grid item md={6}>
                   <Box className="imgBoxLeft">
                     <img
-                      className="imgKnow"
-                      src={useBaseUrl("img/ourvision.jpg")}
+                      className="imgKnowCompany"
+                      src={useBaseUrl("img/website_04.jpg")}
                     />
                   </Box>  
                 </Grid>
               }
               <Grid item md={6}>
                 <Box className="titleBox">
-                  <h2>Our vision</h2>
+                  <h2>Our Vision</h2>
                 </Box>
                 <p>
                   We founded EOS Costa Rica two years ago — before the 
@@ -128,8 +136,8 @@ const TheCompany = () => {
                 <Grid item md={6}>
                   <Box className="imgBoxLeft">
                     <img
-                      className="imgKnow"
-                      src={useBaseUrl("img/company.webp")}
+                      className="imgKnowCompany"
+                      src={useBaseUrl("img/website_04.jpg")}
                     />
                   </Box>  
                 </Grid>
@@ -139,19 +147,23 @@ const TheCompany = () => {
           <Box className="spacingBox">
             <Grid container spacing={5} >
               <Grid item xs={12} md={12}>
+                <Box className="titleBox">
+                  <h2>What Can We Do for You?</h2>
+                </Box>
                 <p>
                   We can co-ideate and develop the ideal solution 
                   that integrates blockchain technology into your 
                   operations following an agile and lean approach 
                   that will help you explore blockchain’s features 
-                  within a restricted budget and schedule. We 
-                  provide top-notch, ready-to-use blockchain 
+                  within a restricted budget and schedule.
+                  <br/>
+                  <br/>
+                  We provide top-notch, ready-to-use blockchain 
                   infrastructures. Also, we configure, host, 
                   and maintain blockchain nodes and networks that 
-                  can meet your organization’s requirements and needs. 
-                </p>
-                <br/>
-                <p>
+                  can meet your organization’s requirements and needs.
+                  <br/>
+                  <br/>
                   We offer workshops to C-suite executives and teams. 
                   We also provide training for new talents and promote 
                   the region’s blockchain ecosystem by participating 
@@ -165,102 +177,63 @@ const TheCompany = () => {
     )
   }
 
-  const WeAreOneGroup = () => {
-    return (
-      <Box className="containerSec">
-      <Box className="sectionNoPadding">
-        <Box className="h3Box">
-          <h3 style={{textAlign:'center'}}>We Are One Group</h3>
-        </Box>
-        <Box className="spacingBox">
-          <Grid container>
-            <Grid item xs={12} md={3}>
-              <Box className="imgBoxLogos">
-                <a target="_blank" href="http://latamlink.io/">
-                  <img
-                    className="oneGroupLogo"
-                    alt="LatamLink"
-                    src={useBaseUrl("img/Group47.svg")}
-                  />
-                </a>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={3}>
-              <Box className="imgBoxLogos">
-                <a target="_blank" href="https://www.edenia.com/">
-                  <img
-                    className="oneGroupLogo"
-                    alt="Edenia"
-                    src={useBaseUrl("img/Group17.svg")}
-                  />
-                </a>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={3}>
-              <Box className="imgBoxLogos">
-                <a target="_blank" href="https://eosurf.com/">
-                  <img
-                    className="oneGroupLogo"
-                    alt="Eossurf"
-                    src={useBaseUrl("img/Group11.svg")}
-                  />
-                </a>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={3}>
-              <Box className="imgBoxLogos">
-                <a target="_blank" href="https://ticoblockchain.cr/">
-                  <img
-                    className="oneGroupLogo"
-                    alt="Ticoblockchain"
-                    src={useBaseUrl("img/Group55.svg")}
-                  />
-                </a>
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-    </Box>
-    )
-  }
-
   const MeetTeam = () => {
     return (
       <Box className="containerSec">
-        <Box className="sectionPadding">
-            <Box>
-                <Box className="titleBox">
-                    <h2>Meet the Team</h2>
-                </Box>
-                <Box className="spacingBox">
-                    <p>
-                        We have assembled a Latin American team with 
-                        a problem-solving mindset and expertise in 
-                        their areas of knowledge. Our distributed 
-                        team operates in an Agile environment that 
-                        encourages participation, self- accountability, 
-                        and innovation. Get to know us!
-                    </p>
-                </Box>
-                {isDesktop &&
-                    <Box className="spacingBox">
-                        <Carousel animation="slide" timeout={500} indicators={false}>
-                            <img
-                                alt="Crew image"
-                                src={useBaseUrl("img/team/crew1.jpg")}
-                            />
-                            <img
-                                alt="Crew image 2"
-                                src={useBaseUrl("img/team/crew2.jpg")}
-                            />
-                        </Carousel>
-                    </Box>
-                }
-                <Box className="boxFlexEnd">
-                    <button className="buttonPrimary" onClick={() => window.open("/team/")} >Meet our team</button>
-                </Box>       
+        <Box className="sectionPaddingTop">
+          <Box>
+            <Box className="titleBox">
+              <h2>Meet the Team</h2>
             </Box>
+            <Box className="spacingBox">
+              <p>
+                  We have assembled a Latin American team with 
+                  a problem-solving mindset and expertise in 
+                  their areas of knowledge. Our distributed 
+                  team operates in an Agile environment that 
+                  encourages participation, self- accountability, 
+                  and innovation. Get to know us!
+              </p>
+            </Box>
+            {isDesktop &&
+              <Box className="spacingBox">
+                <Carousel animation="slide" timeout={500} indicators={false}>
+                  <img
+                    alt="Crew image"
+                    src={useBaseUrl("img/team/crew1.jpg")}
+                  />
+                  <img
+                      alt="Crew image 2"
+                      src={useBaseUrl("img/team/crew2.jpg")}
+                  />
+                </Carousel>
+              </Box>
+            }
+            <Box className="boxFlexEnd">
+              <button className="buttonPrimary" onClick={() => history.push("/team/")} >Meet our team</button>
+            </Box>
+          </Box>
+        </Box>
+      </Box> 
+    )
+  }
+
+  const WorkWithUS = () => {
+    return (
+      <Box className="containerSec">
+        <Box className="section">
+          <Box>
+            <Box className="h3Box">
+              <h3>Do you want to work with us?</h3>
+            </Box>
+            <Box className="spacingBox">
+              <p>
+                We're constantly looking for talent.{" "}
+                <a href={`mailto:${'jobs@eoscostarica.io'}?subject=${'My CV – I want to work for your company'}`}>Send us your CV</a>
+                , and we'll communicate with you once we have open positions.
+              </p>
+            </Box>
+          </Box>
         </Box>
       </Box> 
     )
@@ -271,10 +244,10 @@ const TheCompany = () => {
       <Box className="containerSec"> 
         <Box className="sectionNoPadding">
             <Box className="titleBox">
-                <h2>The Technology</h2>
+              <h2>The Technology</h2>
             </Box>
             <Box className="spacingBox">
-                <p>
+              <p>
                 Our team specializes in the blockchain protocol
                 <a href=" https://eos.io/" target='_blank'> EOSIO</a>, launched by 
                 <a href=" https://block.one/" target='_blank' > block.one</a> in 2018, 
@@ -283,13 +256,13 @@ const TheCompany = () => {
                 (DPoS). In DPoS, computers do not compete over 
                 computational power to solve algorithms. 
                 The following are some key features of EOSIO:
-                </p>
+              </p>
             </Box>
             <Box className="doubleSpacingBox">
             <Grid justify="center" container spacing={5}>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Scalability</h3>
+                <Box className="specialH3Box">
+                  <h4>Scalability</h4>
                 </Box>
                 <p >
                   EOSIO deploys the DPoS mechanism to achieve higher throughput
@@ -300,8 +273,8 @@ const TheCompany = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Flexibility</h3>
+                <Box className="specialH3Box">
+                  <h4>Flexibility</h4>
                 </Box>
                 <p>
                   EOSIO enables adaptability for public and private networks
@@ -312,31 +285,8 @@ const TheCompany = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Cost-effective</h3>
-                </Box>
-                <p>
-                  EOSIO offers a flexible and favorable cost model that
-                  eliminates the need for transaction fees. This model is
-                  ideal for developers who seek a solution with low operation
-                  costs and still offers an experience free to the user.
-                </p>
-              </Grid>
-              <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Eco-friendly</h3>
-                </Box>
-                <p>
-                  The DPoS mechanism enables a sustainable blockchain
-                  solution requiring less electricity to run nodes and
-                  confirm transactions. For example, EOSIO is 66,000 times
-                  more energy-efficient than Bitcoin and 17,000 times more
-                  energy-efficient than Ethereum.
-                </p>
-              </Grid>
-              <Grid item xs={12} md={10}>
-                <Box className="h3Box">
-                  <h3>Faster adoption </h3>
+                <Box className="specialH3Box">
+                  <h4>Faster adoption</h4>
                 </Box>
                 <p>
                   Developers build smart contracts in EOSIO using C++,
@@ -346,28 +296,60 @@ const TheCompany = () => {
                   learning resources available online and a dynamic support community.
                 </p>
               </Grid>
+              <Grid item xs={12} md={5}>
+                <Box className="specialH3Box">
+                  <h4>Cost-effective</h4>
+                </Box>
+                <p>
+                  EOSIO offers a flexible and favorable cost model that
+                  eliminates the need for transaction fees. This model is
+                  ideal for developers who seek a solution with low operation
+                  costs and still offers an experience free to the user.
+                </p>
+              </Grid>
+              <Grid item xs={12} md={5}>
+                <Box className="specialH3Box">
+                  <h4>Eco-friendly</h4>
+                </Box>
+                <p>
+                  The DPoS mechanism enables a sustainable blockchain
+                  solution requiring less electricity to run nodes and
+                  confirm transactions. For example, EOSIO is 66,000 times
+                  more energy-efficient than Bitcoin and 17,000 times more
+                  energy-efficient than Ethereum.
+                </p>
+              </Grid>
+              <Grid md={5}>
+                <Box className="centerBox">
+                  <img
+                    style={{width: isDesktop ? '40%' : '35%', paddingTop:'30px'}}
+                    alt={'Carbon Neutral Block Producer Badge'}
+                    src={useBaseUrl('img/badge.png')}
+                  />
+                </Box>
+              </Grid>
             </Grid>
           </Box>
             {isDesktop &&
-                <Box className="doubleSpacingBox">
-                    <Grid  justify="center" container spacing={10}>
-                        <Grid item xs={12} md={7}>
-                            <Box className="boxFlexEnd">
-                                <h4>We can help you explore EOSIO technology.</h4>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} md={3}>
-                            <Box className="boxFlexEnd">
-                                <button 
-                                    className="buttonPrimary" 
-                                    onClick={() => history.push("/contact-us/")}
-                                >
-                                    Drop Us a Line
-                                </button>
-                            </Box>
-                        </Grid>
-                    </Grid>     
-                </Box>    
+              <Box className="doubleSpacingBox">
+                <Grid  justify="center" container spacing={5}>
+                  <Grid item xs={12} md={7}>
+                    <Box className="boxFlexEnd">
+                      <h3>We can help you explore EOSIO technology.</h3>
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} md={3}>
+                      <Box className="boxFlexEnd">
+                        <button 
+                          className="buttonPrimary" 
+                          onClick={() => history.push("/contact-us/")}
+                        >
+                          Drop Us a Line
+                        </button>
+                      </Box>
+                  </Grid>
+                </Grid>
+              </Box>
             } 
         </Box>
       </Box>
@@ -378,7 +360,7 @@ const TheCompany = () => {
     return ( 
       <Box className="containerSec"> 
         <Box className="section">
-          <Box className="spacingBox">
+          <Box className="buttonBox">
             <h2>Some of Our Projects</h2>
             <br />
           </Box>
@@ -388,7 +370,7 @@ const TheCompany = () => {
                 <Box className="imgBoxTheCompany">
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/Group47.svg")}
+                    src={useBaseUrl("img/logos/Group47.svg")}
                   />
                 </Box>
                 <p>
@@ -399,16 +381,14 @@ const TheCompany = () => {
                     LACChain
                   </a>{" "}
                   initiative, a program to accelerate the development of the
-                  blockchain ecosystem in the region.<a href="https://latamlink.io/" target="_blank"> Read more.</a>
-                </p>
-                <p>
+                  blockchain ecosystem in the region.<a href="https://latamlink.io/" target="_blank"> Discover more about LatamLink.</a>
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
                 <Box className="imgBoxTheCompany">
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/lifebank.svg")}
+                    src={useBaseUrl("img/logos/lifebank.svg")}
                   />
                 </Box>
                 <p>
@@ -427,7 +407,7 @@ const TheCompany = () => {
                     block.one.
                   </a>{" "}
                   <a href=" https://lifebank.io/" target="_blank">
-                    Read more.
+                    Find out more about Lifebank.
                   </a>
                 </p>
               </Grid>
@@ -435,14 +415,14 @@ const TheCompany = () => {
                 <Box className="imgBoxTheCompany">
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/smartgate.svg")}
+                    src={useBaseUrl("img/logos/smartgate.svg")}
                   />
                 </Box>
                 <p>
                   A blockchain-based platform that provides solutions for in-out
                   gate activity for the container industry and real-time
                   transmission of relevant data required for proper interchange
-                  in port logistics.<a href="https://smartgate.tech/" target="_blank"> Read more</a>
+                  in port logistics.<a href="https://smartgate.tech/" target="_blank"> Learn more about SMARTGATE.</a>
                 </p>
               </Grid>
               <Grid item xs={12} md={12} >
@@ -454,70 +434,50 @@ const TheCompany = () => {
                   </a>.
                 </p>
               </Grid>
-            </Grid>         
+            </Grid>
           </Box>
-        </Box>
-      </Box>
-    )
-  }
-
-  const ContactUs = () => {
-    return (
-      <Box className="containerGray">
-        <Box className="sectionPadding">
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={8}>
-                <Box>
-                  <h2 className="centerTextOnMobile">Start working with us</h2>
-                  <h2 className="centerTextOnMobile">and implement</h2>
-                  <h2 className="centerTextOnMobile">blockchain technology.</h2>
-                </Box>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Box className="buttonBox">
-                <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Contact us</button>
-              </Box>
-            </Grid>
-          </Grid>
         </Box>
       </Box>
     )
   }
 
   return (
-    <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
+    > 
       {isDesktop &&
-        <Layout>
-          <Box className="mainContainer">
-            <Parallax strength={800}>
-              <Background className="bgParallax">
-                  <Box className="imgParallax"/>
-              </Background>
-              <HeroSection />
-              <EOSCR />
-            </Parallax>
-            <WeAreOneGroup />
-            <MeetTeam />
-            <TheTechnology/>
-            <SomeOurProjects/>
-            <ContactUs />
-          </Box>
-        </Layout>
-      }
-      {isMobile &&
-        <Layout>
-          <Box className="mainContainer">
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+            <Background className="bgParallax">
+                <Box className="imgParallax"/>
+            </Background>
             <HeroSection />
             <EOSCR />
-            <WeAreOneGroup />
-            <MeetTeam />
-            <TheTechnology/>
-            <SomeOurProjects/>
-            <ContactUs />
-          </Box>
-        </Layout>
+          </Parallax>
+          <WeAreOneGroup />
+          <MeetTeam />
+          <WorkWithUS />
+          <TheTechnology />
+          <SomeOurProjects />
+          <ContactUsBanner />
+        </Box>
       }
-    </>
+      {isMobile &&
+        <Box className="mainContainer">
+          <HeroSection />
+          <EOSCR />
+          <WeAreOneGroup />
+          <MeetTeam />
+          <WorkWithUS />
+          <TheTechnology />
+          <SomeOurProjects />
+          <ContactUsBanner />
+        </Box>
+      }
+    </Layout>
   );    
 };
 

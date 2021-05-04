@@ -5,29 +5,35 @@ import Grid from '@material-ui/core/Grid'
 import { useMediaQuery } from 'react-responsive'
 import clsx from "clsx"
 import Layout from "@theme/Layout"
-import useBaseUrl from "@docusaurus/useBaseUrl"
 import Box from '@material-ui/core/Box'
-import ScrollTrigger from 'react-scroll-trigger'
 
+import AdditionalResources from './components/AdditionalResources'
 import AccordionComp from './components/AccordionComp'
 import Payments from './Animations/Payments'
 import Logistic from './Animations/Logistic'
 import Games from './Animations/Games'
 
+const MetaData={
+  title:"EOS Costa Rica: Industries",
+  description:"",
+  img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/industrias/"
+}
+
 const moreIndustriesAccordion = 
 [
   {
-    title: 'Asset Managementy',
+    title: 'Asset management',
     content:' Blockchain technology enables an immutable and secure way to tokenize and manage tangible and intangible assets. Some opportunities include innovative liquidity options and reduced management costs.',
     target: 'panel_AssetManagementy'
   },
   {
-    title: 'Decentralized Finance',
+    title: 'Decentralized finance',
     content:'Also known as DeFi, decentralized finance leverages blockchain technology to explore new liquidity opportunities for citizens. Our team is part of evodex, an open-source DeFi app.',
     target: 'panel_Decentralized'
   },
   {
-    title: 'Digital Identity',
+    title: 'Digital identity',
     content:'Blockchain allows an immutable, transparent, and secure system to manage digital identities that can interconnect with IoT, biometrics, and enterprise management systems.',
     target: 'panel_Identity'
   },
@@ -37,7 +43,7 @@ const moreIndustriesAccordion =
     target: 'panel_Energy'
   },
   {
-    title: 'Legal Tech',
+    title: 'Legal tech',
     content:' Smart contracts are computer codes that can execute automatically and autonomously according to the contract terms. These may transform legal processes by adding transparency, efficiency, and immutable registries.',
     target: 'panel_Tech',
   },
@@ -51,17 +57,17 @@ const moreIndustriesAccordion2 =
     target: 'panel_Government'
   },
   {
-    title: 'Media and Entertainment',
+    title: 'Media and entertainment',
     content:'The blockchain’s capabilities to securely and immutably store registries can help reduce piracy and disputes. Also, blockchain can protect IP and improve traceability of payments and content distribution.',
     target: 'panel_Entertainment'
   },
   {
-    title: 'Healthcare and Insurance',
+    title: 'Healthcare and insurance',
     content:' Blockchain technology offers improved efficiency, traceability, and security to store medical and other sensitive data from patients. Smart contracts help reduce costs for insurance claims processing.',
     target: 'panel_Insurance'
   },
   {
-    title: 'Real Estate',
+    title: 'Real estate',
     content:'Leverage real estate investments with blockchain technology by creating new business models. Blockchain helps integrate digital assets for liquidity and streamline investor relations and portfolio management.',
     target: 'panel_RealEstate'
   },
@@ -73,11 +79,10 @@ const moreIndustriesAccordion2 =
 ]
 
 const Industries = () => {
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
   const history = useHistory();
   const [expanded, setExpanded] = useState();
-  const [stateAnimation,setStateAnimation] = useState(false)
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -86,14 +91,6 @@ const Industries = () => {
   useEffect(() => {
     handleChange('panel_AssetManagementy')
   }, [])
-
-  const handleScrollEnter = () => {
-    setStateAnimation(true)
-  }
-
-  const handleScrollExit = () => {
-    setStateAnimation(false)
-  }
 
   const HeroSection = () => {
     return (
@@ -130,7 +127,7 @@ const Industries = () => {
               healthcare.
             </p>
             <Box className="buttonBoxMobile">
-              <button className="buttonPrimary" href={useBaseUrl("/contact-us")}>
+              <button className="buttonPrimary" onClick={() => history.push("/contact-us/")}>
                 Contact us
               </button>
             </Box>
@@ -147,79 +144,98 @@ const Industries = () => {
           <Box className={isDesktop? "doubleSpacingBox": ""}>
             <Grid container spacing={5}>
               <Grid item xs={12} md={4}>
-                <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
-                  <Box className="imgBox">
-                    <Payments state={stateAnimation}/>
+                  <Box className="animationBox">
+                    <Payments isDesktop={isDesktop} />
                   </Box>
-                </ScrollTrigger>
               </Grid>
               <Grid item xs={12} md={8}>
-                <h2>Payments and <br/> Transfers</h2>
-                <p style={{marginTop: '30px'}}>
-                  Blockchain enables an efficient and secure way to register
-                  transactions that can facilitate payments and offer near
-                  real-time auditing with encryption to reduce data breaches.
-                  Blockchain may also promote alternate financial applications,
-                  such as new liquidity solutions and microloans management, and
-                  improved payment structures.
-                  <a
-                    href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
-                    target="_blank"
-                  >
-                    Read More
-                  </a>
-                </p>
-              </Grid>
-              <Grid style={{marginTop:'50px'}} item xs={12} md={4}>
-                <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
-                  <Box className="imgBox">
-                    <Logistic state={stateAnimation}/>
+                <Box className="animationBox">
+                  <Box>
+                    <Box className="h3Box">
+                      <h2>Payments and <br/> Transfers</h2>
+                    </Box>
+                    <p>
+                      Blockchain enables an efficient and secure way to register
+                      transactions that can facilitate payments and offer near
+                      real-time auditing with encryption to reduce data breaches.
+                      Blockchain may also promote alternate financial applications,
+                      such as new liquidity solutions and microloans management, and
+                      improved payment structures. {" "}
+                      <a
+                        href={"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-agreat-idea-e384b298a4a8"}
+                        target="_blank"
+                      >
+                        Read More
+                      </a>
+                    </p>
                   </Box>
-                </ScrollTrigger>
-              </Grid>
-              <Grid item xs={12} md={8}>
-                <h2>Logistics and <br/> supply chain </h2>
-                <p style={{marginTop: '30px'}}>
-                  In an industry that involves dozens of stakeholders, the
-                  capabilities of blockchain and smart contracts for traceability,
-                  authorizations management, and automation can make a great ally.
-                  Blockchain can integrate different technologies, such as IoT and
-                  AI, to create comprehensive solutions and streamline processes
-                  in the logistics and supply chain industry.  
-                  <a
-                    href={"https://eoscostarica.io/blog/blockchain-logistics"} 
-                    target="_blank"
-                  >
-                    Read More
-                  </a>
-                </p>
-                
-              </Grid>
-              <Grid style={{marginTop:'-40px'}} item xs={12} md={4}>
-                <ScrollTrigger onEnter={handleScrollEnter} onExit={handleScrollExit}>
-                  <Box className="imgBox">
-                    <Games state={stateAnimation}/>
-                  </Box>
-                </ScrollTrigger>
-              </Grid>
-              <Grid style={{paddingTop:'110px'}} item xs={12} md={8}>
-                <h2>Gaming and <br/> Esports</h2>
-                <p style={{marginTop: '30px'}}>
-                  The gaming industry is booming—nearly 40% of the total world's
-                  population play video games. Blockchain enables a better way to
-                  transfer, valorize, and collect digital in-game assets. Its
-                  capabilities to increase security and offer a more efficient way
-                  for transactions can level-up online gaming. 
-                  <a
-                    href={"https://eoscostarica.io/blog/gaming-blockchain"}
-                    target="_blank"
-                  >
-                    Read More
-                  </a>
-                </p>
+                </Box>  
               </Grid>
             </Grid>
           </Box>
+          <Box className={isDesktop? "doubleSpacingBox": ""}>
+            <Grid container spacing={5}>
+              <Grid item xs={12} md={4}>
+                <Box className="animationBox">
+                  <Logistic isDesktop={isDesktop}/>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={8}>
+                <Box className="animationBox">
+                  <Box>
+                    <Box className="h3Box">
+                      <h2>Logistics and <br/> Supply Chain </h2>
+                    </Box>
+                    <p>
+                      In an industry that involves dozens of stakeholders, the
+                      capabilities of blockchain and smart contracts for traceability,
+                      authorizations management, and automation can make a great ally.
+                      Blockchain can integrate different technologies, such as IoT and
+                      AI, to create comprehensive solutions and streamline processes
+                      in the logistics and supply chain industry. {" "}
+                      <a
+                        href={"https://eoscostarica.io/blog/blockchain-logistics"} 
+                        target="_blank"
+                      >
+                        Read More
+                      </a>
+                    </p>
+                  </Box>
+                </Box>
+              </Grid>
+            </Grid>
+          </Box>
+          <Box className={isDesktop? "doubleSpacingBox": ""}>
+            <Grid container spacing={5}>
+              <Grid item xs={12} md={4}>
+                <Box className="animationBox">
+                  <Games isDesktop={isDesktop}/>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={8}>
+                <Box className="animationBox">
+                  <Box>
+                    <Box className="h3Box">
+                      <h2>Gaming and <br/> Esports</h2>
+                    </Box>
+                    <p>
+                      The gaming industry is booming—nearly 40% of the total world's
+                      population play video games. Blockchain enables a better way to
+                      transfer, valorize, and collect digital in-game assets. Its
+                      capabilities to increase security and offer a more efficient way
+                      for transactions can level-up online gaming. {" "} 
+                      <a
+                        href={"https://eoscostarica.io/blog/gaming-blockchain"}
+                        target="_blank"
+                      >
+                        Read More
+                      </a>
+                    </p>
+                  </Box>
+                </Box>
+              </Grid>
+            </Grid>
+          </Box>                 
         </Box>
       </Box>
     )
@@ -279,8 +295,8 @@ const Industries = () => {
           <Box>
             <Grid justify="center" container spacing={5}>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Quick adoption</h3>
+                <Box className="specialH3Box">
+                  <h4>Quick adoption</h4>
                 </Box>
                 <p >
                   Can your team use their experience with programming
@@ -288,8 +304,8 @@ const Industries = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Cost-efficiency</h3>
+                <Box className="specialH3Box">
+                  <h4>Cost-efficiency</h4>
                 </Box>
                 <p>
                   Would the organization see a significant reduction in costs
@@ -298,9 +314,8 @@ const Industries = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Privacy and transparency</h3>
-                  <h3></h3>
+                <Box className="specialH3Box">
+                  <h4>Privacy and transparency</h4>
                 </Box>
                 <p>
                   How are the blockchain’s security and confidentiality
@@ -309,8 +324,8 @@ const Industries = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={5}>
-                <Box className="h3Box">
-                  <h3>Speed or throughput</h3>
+                <Box className="specialH3Box">
+                  <h4>Speed or throughput</h4>
                 </Box>
                 <p>
                   How quickly does your solution need to be? Are you a
@@ -334,80 +349,37 @@ const Industries = () => {
     )
   }
 
-  const AdditionalResources = () => {
-    return (
-      <Box className="containerSec">
-        <Box className={"section"}>
-          <Box className="titleBox">
-            <h2>Additional Resources</h2>
-          </Box>
-          <p>
-            Find more interesting reads and resources to continue learning
-            about
-            <a href={"https://eoscostarica.medium.com/how-to-choose-an-enterprise-blockchainplatform-7c3665994ad6"}
-              target="_blank"
-              > enterprise blockchain</a> and
-              <a href={" https://eos.io/"} target="_blank"> EOSIO</a>.
-          </p>
-          <br/>
-          <Grid className={"topSpacingBoxIcons"} style={{justifyContent:'space-evenly'}} container>
-            <Grid onClick={() => window.open("/blog/")} className={"gridButton"} item xs={12} md={4}>
-              <img srcSet={useBaseUrl("img/blog.svg")}/>
-              <h3 className={"titleBlog"}>Blog</h3>
-            </Grid>
-            <Grid onClick = {() => window.open('https://guias.eoscostarica.io/')} className={"gridButton"} item xs={12} md={4}>
-              <img srcSet={useBaseUrl("img/press.svg")}/>
-              <h3 style={{marginTop:'30px', marginLeft:'20px'}}>Press</h3>
-            </Grid>
-          </Grid>
-          <br/>
-          <Grid className={"topSpacingBoxIcons"} style={{justifyContent:'space-evenly'}} container>
-            <Grid onClick = {() => window.open('https://guide.eoscostarica.io/')} className={"gridButton"} item xs={12} md={4}>
-              <img srcSet={useBaseUrl("img/decs.svg")}/>
-              <h3 className={"titleDevs1"}>Devs</h3>
-              <h3 className={"titleDevs2"}>Portal</h3>
-            </Grid>
-            <Grid onClick={() => window.open('https://github.com/eoscostarica')} className={"gridButton"} item xs={12} md={4}>
-              <img srcSet={useBaseUrl("img/github-ours.svg")}/>
-              <h3 className={"titleGit1"}>Our</h3>
-              <h3 className={"titleGit2"}>Github</h3>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-    )
-  }
-
   return (
-    <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
+    > 
       {isDesktop &&
-        <Layout>
-          <Box className="mainContainer">
-            <Parallax strength={800}>
-                <Background className="bgParallax">
-                    <Box className="imgParallax" />
-                </Background>
-                <HeroSection />
-                <PrincipalIndustries />
-            </Parallax>
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+              <Background className="bgParallax">
+                  <Box className="imgParallax" />
+              </Background>
+              <HeroSection />
+              <PrincipalIndustries />
+          </Parallax>
+          <BlockchainMoreIndustries />
+          <ChoosingEnterprise />
+          <AdditionalResources />
+        </Box>
+      }
+      {isMobile &&
+        <Box className="mainContainer">
+            <HeroSection />
+            <PrincipalIndustries />
             <BlockchainMoreIndustries />
             <ChoosingEnterprise />
             <AdditionalResources />
-          </Box>
-        </Layout>
+        </Box>
       }
-      {isMobile &&
-        <Layout>
-          <Box className="mainContainer">
-              <HeroSection />
-              <PrincipalIndustries />
-              <BlockchainMoreIndustries />
-              <ChoosingEnterprise />
-              <AdditionalResources />
-          </Box>
-        </Layout>
-      }
-    </>
+    </Layout>
   );
   
 };

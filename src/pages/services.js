@@ -13,8 +13,16 @@ import AccordionSummary from '@material-ui/core/AccordionSummary'
 import { useHistory } from 'react-router-dom'
 
 import AccordionComp from './components/AccordionComp'
+import ContactUsBanner from './components/ContactUsBanner'
 import DevelopmentServices from './SvgComponents/DevelopmentServices'
 import Blockchaininfrastructure from './SvgComponents/Blockchaininfrastructure'
+
+const MetaData={
+  title:"EOS Costa Rica: Services",
+  description:"EOS Costa Rica leverages the enterprise blockchain protocol EOSIO to develop real-world solutions.",
+  img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/servicios/"
+}
 
 const strategicLocationAccordion = 
 [
@@ -92,8 +100,8 @@ const solutionBaseAccordionRight =
 ]
 
 const ServicePage = () => {
-  const isMobile = useMediaQuery({query:'(max-width: 767px)'})
-  const isDesktop = useMediaQuery({query:'(min-width: 767px)'})
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
   const [expandedMap, setExpandedMap] = useState('panel_interconnectivity')
   const [expandedSolution, setExpandedSolution] = useState()
   const [expandedEnterprise, setExpandedEnterprise] = useState()
@@ -139,10 +147,7 @@ const ServicePage = () => {
           </Box>
           <p >
             Leverage blockchain technology. Our team will help you embrace
-            the power of this innovative technology.
-          </p>
-          <p>
-            We have years of experience integrating enterprise blockchain solutions and
+            the power of this innovative technology. We have years of experience integrating enterprise blockchain solutions and
             developing infrastructure for business environments.
           </p>
           <Box className="doubleSpacingBox">
@@ -168,14 +173,13 @@ const ServicePage = () => {
             <p>
               Leverage blockchain technology. Our team will help you embrace
               the power of this innovative technology.
-            </p>
             <br/>
-            <p>
+            <br/>
               We have years of experience integrating enterprise blockchain solutions and
               developing infrastructure for business environments.
             </p>
             <Box className="buttonBoxMobile">
-              <button className="buttonPrimary" onClick={() => history.push("/about/")}>
+              <button className="buttonPrimary" onClick={() => history.push("/the-company/")}>
                 Get to Know Us
               </button>
             </Box>
@@ -302,12 +306,12 @@ const ServicePage = () => {
             <Box className="h3Box">
               <h3>Our Process from Start to Finish</h3>
             </Box>
-            <Box className={clsx("centerBox","doubleSpacingBox")}>
+            <Box className={isDesktop? clsx("centerBox", "doubleSpacingBox"): clsx("centerBox", "reduceMargin")}>
               {isDesktop && 
                 <img src={useBaseUrl("/img/process.jpg")}/>
               }
               {!isDesktop && 
-                <img src={useBaseUrl("/img/process.jpg")}/>
+                <img src={useBaseUrl("/img/processVertical.gif")}/>
               }
             </Box>
           </Box>
@@ -318,8 +322,8 @@ const ServicePage = () => {
 
   const BlockchainInfrastructure = () => {
     return (
-      <Box ref={refInfraestrcture} className={clsx("containerSec","reduceDobleMarginTop")}>
-        <Box className="sectionPadding">
+      <Box ref={refInfraestrcture} className="containerSec">
+        <Box className="section">
           <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
               <Box className="titleBox">
@@ -329,12 +333,11 @@ const ServicePage = () => {
                 <h3>Top-notch Blockchain Infrastructure</h3>
               </Box>
               <p>
-                EOS Costa Rica deploys blockchain technology to design enterprise
-                solutions that can integrate with other systems. Blockchain
-                enables the deployment of smart contracts – computer codes that
-                can execute automatically and autonomously. Smart contracts allow
-                improved efficiency and can reduce transaction-related costs.
-                Learn more about enterprise blockchain:
+                Blockchains operate as decentralized peer-to-peer networks where a
+                number of computers or "nodes" are interconnected to one another. These nodes
+                keep a copy of the registers and act as validators of new transactions. These
+                features make it critical to building robust infrastructure networks that comply
+                with the blockchain's requirements.
               </p>
             </Grid>
             {isDesktop && 
@@ -378,7 +381,7 @@ const ServicePage = () => {
                 <p>
                   Also, we developed a robust, top-grade infrastructure ready to
                   host blockchain networks for our clients and open-source
-                  projects from our datacenter.
+                  projects from our datacenter in Costa Rica.
                 </p>
               </Grid>
               <Grid item xs={12} md={6}>
@@ -399,17 +402,17 @@ const ServicePage = () => {
             </Box>
             <p>
               Our datacenter, located in San José, Costa Rica, is
-                strategically located in the middle of the American continent,
-                allowing convenient network interconnectivity. Costa Rica offers
-                high political stability, a long-lasting democracy, high
-                education ranks, and flexible corporate structure – all
-                appropriate for decentralized networks. These are some of the
-                advantages that this country may add to your infrastructure:
+              strategically located in the middle of the American continent,
+              allowing convenient network interconnectivity. Costa Rica offers
+              high political stability, a long-lasting democracy, high
+              education ranks, and flexible corporate structure – all
+              appropriate for decentralized networks. These are some of the
+              advantages that this country may add to your infrastructure:
             </p>
           </Box>
           <Grid container spacing={5}>
             <Grid item xs={12} md={6}>
-              <Box className="centerBox">
+              <Box className={!isMobile? "centerBox": clsx("centerBox","reduceMargin")}>
                 <img src={useBaseUrl("/img/map-loacation.svg")}/>
               </Box>
             </Grid>
@@ -448,7 +451,7 @@ const ServicePage = () => {
                     className="accordion"
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                      <h4 style={{margin:'2px', padding: 0}}>Executive Workshops</h4>
+                      <h4 style={{margin:'2px', padding: 0}}>Executive workshops</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
                       <p style={{padding: 0}}>
@@ -469,7 +472,7 @@ const ServicePage = () => {
                     className="accordion"
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                      <h4 style={{margin:'2px',padding: 0}}>Training for Developers</h4>
+                      <h4 style={{margin:'2px',padding: 0}}>Training for developers</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
                       <p style={{padding: 0}}>
@@ -479,11 +482,8 @@ const ServicePage = () => {
                         a web portal that includes learning materials and guides
                         for developers. Check them out {" "}  
                         <a href="https://guide.eoscostarica.io/" target="_blank">
-                            here
-                        </a>. Also, <a href={useBaseUrl("/contact-us/")} target="_blank">
-                            ask us
-                        </a> about
-                        our training courses for companies and teams.
+                        here </a>. Also, <a href={useBaseUrl("/contact-us/")} target="_blank">
+                        ask us </a> about our training courses for companies and teams.
                       </p>
                     </AccordionDetails>
                   </Accordion>
@@ -495,7 +495,7 @@ const ServicePage = () => {
                     className="accordion"
                   >
                     <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
-                      <h4 style={{margin:'2px',padding:0}}>Community Building</h4>
+                      <h4 style={{margin:'2px',padding:0}}>Community building</h4>
                     </AccordionSummary>
                     <AccordionDetails style={{padding:1}}>
                       <p style={{padding:0}}>
@@ -504,8 +504,7 @@ const ServicePage = () => {
                         speak about blockchain and participate in events related
                         to technology and innovation. Every year, we host a
                         team-building event called <a href="https://eosurf.com/" target="_blank">
-                            EOSurf
-                        </a> that takes our
+                        EOSurf </a> that takes our
                         operations to the beach for several days to switch
                         computers and code for surf and yoga lessons.
                       </p>
@@ -542,7 +541,7 @@ const ServicePage = () => {
               <Grid item xs={12} md={4}>
                 <Box className="imgBoxServices">
                   <img
-                   src={useBaseUrl("img/logistics.svg")}
+                   src={useBaseUrl("img/icons/logistics.svg")}
                    style={{paddingTop:'25px'}}
                    className="imageIndrustries"
                    />
@@ -562,7 +561,7 @@ const ServicePage = () => {
               <Grid item xs={12} md={4}>
                 <Box className="imgBoxServices">
                   <img 
-                    src={useBaseUrl("img/payments.svg")}
+                    src={useBaseUrl("img/icons/payments.svg")}
                     style={{paddingTop:'25px'}}
                     className="imageIndrustriesLogistics"
                   />
@@ -571,10 +570,10 @@ const ServicePage = () => {
                   <h3>Logistics and Supply Chain</h3>
                 </Box>
                 <p>
-                  In an industry that involves dozens of stakeholders, the
-                  capabilities of blockchain and smart contracts for
-                  traceability, authorizations management, and automation can
-                  make a great ally.{" "}
+                  In an industry that involves dozens of 
+                  stakeholders, blockchain's capabilities 
+                  to manage authorizations and automate 
+                  and trace operations can make a great ally.{" "}
                   <a href={useBaseUrl("/blog/blockchain-logistics")} target="_blank">
                     Learn more
                   </a>
@@ -583,7 +582,7 @@ const ServicePage = () => {
               <Grid item xs={12} md={4}>
                   <Box className="imgBoxServices">
                     <img 
-                      src={useBaseUrl("img/gaming.svg")}
+                      src={useBaseUrl("img/icons/gaming.svg")}
                       style={{paddingTop:'20px'}}
                       className="imageIndrustries"
                     />
@@ -612,61 +611,39 @@ const ServicePage = () => {
     )
   }
 
-  const ContactUs = () => {
-    return (
-      <Box className={"containerGray"}>
-        <Box className={"sectionPadding"}>
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={8}>
-                <Box>
-                  <h2 className={"centerTextOnMobile"}>Start working with us</h2>
-                  <h2 className={"centerTextOnMobile"}>and implement</h2>
-                  <h2 className={"centerTextOnMobile"}>blockchain technology.</h2>
-                </Box>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Box className={"buttonBox"}>
-                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
-              </Box>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-    )
-  }
-
   return (
-    <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
+    > 
       {isDesktop && 
-        <Layout>
-          <Box className="mainContainer">
-            <Parallax strength={800}>
-              <Background className="bgParallax">
-                  <Box className="imgParallax" />
-              </Background>
-              <HeroSection />
-              <BlockchainDev />
-            </Parallax>
-            <BlockchainInfrastructure />
-            <EducationTraining />
-            <IndustryBlockchain />
-            <ContactUs />
-          </Box>
-        </Layout>
-      }
-      {isMobile && 
-        <Layout>
-          <Box className="mainContainer">
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+            <Background className="bgParallax">
+                <Box className="imgParallax" />
+            </Background>
             <HeroSection />
             <BlockchainDev />
-            <BlockchainInfrastructure />
-            <EducationTraining />
-            <IndustryBlockchain />
-            <ContactUs />
-          </Box>
-        </Layout>
+          </Parallax>
+          <BlockchainInfrastructure />
+          <EducationTraining />
+          <IndustryBlockchain />
+          <ContactUsBanner />
+        </Box>
       }
-    </>
+      {isMobile && 
+        <Box className="mainContainer">
+          <HeroSection />
+          <BlockchainDev />
+          <BlockchainInfrastructure />
+          <EducationTraining />
+          <IndustryBlockchain />
+          <ContactUsBanner />
+        </Box>
+      }
+    </Layout>
   );
 };
 

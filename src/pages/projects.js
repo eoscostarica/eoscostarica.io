@@ -128,6 +128,9 @@ const OurProjects = () => {
                 src={useBaseUrl(img)}
               />
             </Box>
+            <p>
+              {details}<a href={link} target="_blank">{linkText}</a>
+            </p>
           </Box>
         </Grid>
         <Grid style={{backgroundColor:color}} item xs={12} md={6}>

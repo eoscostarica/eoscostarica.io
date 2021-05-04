@@ -1,61 +1,71 @@
-import React, { useState, useEffect } from "react";
-import { useHistory } from 'react-router-dom';
-import { Parallax, Background } from 'react-parallax';
+import React, { useState, useEffect } from "react"
+import { useHistory } from 'react-router-dom'
+import { Parallax, Background } from 'react-parallax'
 import { useMediaQuery } from 'react-responsive'
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import clsx from "clsx";
-import Layout from "@theme/Layout";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import Accordion from '@material-ui/core/Accordion';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Box from '@material-ui/core/Box'
+import Grid from '@material-ui/core/Grid'
+import clsx from "clsx"
+import Layout from "@theme/Layout"
+import useBaseUrl from "@docusaurus/useBaseUrl"
+import Accordion from '@material-ui/core/Accordion'
+import AccordionDetails from '@material-ui/core/AccordionDetails'
+import AccordionSummary from '@material-ui/core/AccordionSummary'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
-import WhatWeDoSvg from "./SvgComponents/WhatWeDo";
+import WhatWeDoSvg from "./SvgComponents/WhatWeDo"
+import ContactUsBanner from './components/ContactUsBanner'
+import WeAreOneGroup from './components/WeAreOneGroup'
+
+const MetaData={
+  title:"Enterprise Blockchain Solutions | EOSIO",
+  description:"EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
+  img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/"
+}
 
 const Home = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
-  const isDesktop = useMediaQuery({ query:'(min-width: 767px)'})
-  const [expanded, setExpanded] = useState('panel_SoftDev');
-  const history = useHistory();
+  const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
+  const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
+  const [expanded, setExpanded] = useState('panel_SoftDev')
+  const history = useHistory()
   
   const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
+    setExpanded(newExpanded? panel: false)
+  }
   
   useEffect(() => {
     handleChange('panel_SoftDev')
-  }, []);
+  }, [])
 
   const HeroSection = () => {
     return (
-      <Box className={"containerSec"}>
+      <Box className="containerSec">
         {isDesktop && 
-          <Box className={"sectionHero"}>
-          <Box className={"titleBox"}>
-              <h1>Enterprise Blockchain Solutions</h1>
-              <h1>That Fit Your Needs</h1>
+          <Box className="sectionHero">
+          <Box className="titleBox">
+            <h1>Enterprise Blockchain Solutions <br /> That Fit Your Needs</h1>
           </Box>
-          <p >Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.</p>
-          <p>Start transforming your organization by leveraging enterprise blockchain networks.</p>
-          <Box className={"buttonBox"}>
-            <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Explore our services</button>
+          <p>
+            Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.
+            Start transforming your organization by leveraging enterprise blockchain networks.
+          </p>
+          <Box className="buttonBox">
+            <button className="buttonPrimary" onClick={() => history.push("/services/")} >Explore our services</button>
           </Box>
         </Box>
         }
         {isMobile && 
-          <Box className={"sectionHeroMobile"}>
-            <Box className={"titleBox"}>
-                <h1>Enterprise Blockchain </h1>
-                <h1>Solutions That</h1>
-                <h1>Fit Your Needs</h1>
+          <Box className="sectionHeroMobile">
+            <Box className="titleBox">
+                <h1>Enterprise Blockchain <br /> Solutions That <br /> Fit Your Needs</h1>
             </Box>
-            <p>Deploy EOSIO blockchain technology to improve transparency, boost efficiency, and reduce costs.</p>
-            <br/>
-            <p>Start transforming your organization by leveraging enterprise blockchain networks.</p>
-            <Box className={"buttonBoxMobile"}>
-              <button className={"buttonPrimary"} onClick={() => history.push("/services/")} >Learn More</button>
+            <p>
+              Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> 
+              to improve transparency, boost efficiency, and reduce costs. Start transforming your organization
+              by leveraging enterprise blockchain networks.
+            </p>
+            <Box className="buttonBoxMobile">
+              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Explore our services</button>
             </Box>
           </Box>
       }
@@ -65,23 +75,22 @@ const Home = () => {
 
   const BlockchainCanDo = () => {
     return (
-      <Box className={"containerSec"}>
-          <Box className={clsx("section",{["sectionPadding"] : isMobile})}>
-            <Box className={"titleBox"}>
+      <Box className="containerSec">
+          <Box className={clsx("section",{["sectionPadding"]: isMobile})}>
+            <Box className="titleBox">
                 {isDesktop &&
                   <h2>What Enterprise Blockchain Can Do</h2>
                 }
                 {isMobile && 
                   <>
-                    <h2>What Enterprise</h2>
-                    <h2>Blockchain Can Do</h2>
+                    <h2>What Enterprise <br /> Blockchain Can Do</h2>
                   </> 
                 }  
             </Box>
             <Grid container spacing={5}>
               <Grid item xs={12} md={6}>
-                <Box className={"h3Box"}>
-                  <h3>Improve transparency and traceability</h3>
+                <Box className="h3Box">
+                  <h3>Improve Transparency and Traceability</h3>
                 </Box>
                 <p>
                   A <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain</a> registers transactions in chronological order,
@@ -92,8 +101,8 @@ const Home = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Box className={"h3Box"}>
-                  <h3 >Boost efficiency and reduce costs</h3>
+                <Box className="h3Box">
+                  <h3 >Boost Efficiency and Reduce Costs</h3>
                 </Box>
                 <p>
                   Smart contracts in blockchain technology allow improved
@@ -104,8 +113,8 @@ const Home = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Box className={"h3Box"}>
-                  <h3>Enhance security and trust</h3>
+                <Box className="h3Box">
+                  <h3>Enhance Security and Trust</h3>
                 </Box>
                 <p>
                   Blockchain’s encryption capabilities offer new layers of
@@ -116,8 +125,8 @@ const Home = () => {
                 </p>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Box className={"h3Box"}>
-                  <h3>Integrate with other technologies</h3>
+                <Box className="h3Box">
+                  <h3>Integrate With Other Technologies</h3>
                 </Box>
                 <p>
                   We define blockchain as a fundamental technology that can
@@ -127,34 +136,32 @@ const Home = () => {
                 </p>
               </Grid>
             </Grid>
-            <Box className={"topSpacingBox"}>
+            <Box className="paddingTop">
               {isDesktop &&
-                <Grid container spacing={5}>
-                  <Grid item xs={12} md={6}></Grid>
-                  <Grid item xs={12} md={3}>
-                    <p>
+                <Grid justify="center" container spacing={5}>
+                  <Grid item xs={12} md={7}>
+                    <h3>
                       Learn more about how blockchain can improve your operations.
-                    </p>
+                    </h3>
                   </Grid>
                   <Grid item xs={12} md={3}>
-                    <Box className={"boxFlexEnd"}>
+                    <Box className="boxFlexEnd">
                       <button className={clsx("buttonSecondary","specialButton")} onClick={() => history.push("/contact-us/")} >Find Out How</button>
                     </Box>
                   </Grid>
                 </Grid>
-
               }
               {isMobile &&
-                <Grid container spacing={0}>
-                    <Grid item xs={5}>
-                      <p>
+                <Grid justify='center' container>
+                    <Grid item xs={11}>
+                      <h4 style={{textAlign:'center'}}>
                         <b>
-                        Learn more about how blockchain can improve your operations.
+                          Learn more about how blockchain can improve your operations.
                         </b>
-                      </p>
+                      </h4>
                     </Grid>
-                    <Grid item xs={7}>
-                      <Box className={"boxFlexEnd"} style={{paddingRight:'25px'}}>
+                    <Grid item xs={12}>
+                      <Box className="centerBox" >
                         <button className={clsx("buttonSecondary","specialButton")} onClick={() => history.push("/contact-us/")} >Find Out How</button>
                       </Box>
                     </Grid>
@@ -168,31 +175,31 @@ const Home = () => {
 
   const WhatWeDo = () => {
     return (
-      <Box className={"containerGray"}>
-        <Box className={"sectionPadding"}>
-        <Grid container spacing={5}>
-          <Grid item xs={12} md={6}>
-            <Box className={"titleBox"}>
-              <h2>What We Do</h2>
-            </Box>
-            <p>
-              We make the most of enterprise blockchain technology and design
-              solutions for the real world. Our team offers services tailored
-              to our clients’ needs and expectations.{" "}
-              <a href={useBaseUrl("/contact-us")}>Contact us</a> and get the conversation
-              started!
-            </p>
-            <Box className={"accordionBox"}>
+      <Box className="containerGray">
+        <Box className="sectionPadding">
+          <Grid container spacing={5}>
+            <Grid item xs={12} md={6}>
+              <Box className="titleBox">
+                <h2>What We Do</h2>
+              </Box>
+              <p>
+                We make the most of enterprise blockchain technology and design
+                solutions for the real world. Our team offers services tailored
+                to our clients’ needs and expectations.{" "}
+                <a href={useBaseUrl("/contact-us")}>Contact us</a> and get the conversation
+                started!
+              </p>
+              <Box className="accordionBox" style={{ marginTop:'20px'}}>
                 <Accordion 
-                  square 
+                  square
                   expanded={expanded === 'panel_SoftDev'} 
                   onChange={handleChange('panel_SoftDev')} 
-                  className={"accordion"} 
-                  style={{backgroundColor:'#F8F8F8',marginTop:'20px',boxShadow:'none'}} >
-                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
-                    <h3 style={{padding: 0}}>Software Development</h3>
+                  className="accordion"
+                  style={{backgroundColor:'#F8F8F8', boxShadow:'none'}} >
+                  <AccordionSummary style={{padding:1}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h4 style={{margin:'2px', padding: 0}}>Software development</h4>
                   </AccordionSummary>
-                  <AccordionDetails style={{padding:0}}>
+                  <AccordionDetails style={{padding:1, marginTop:'-15px'}}>
                     <p style={{padding: 0}}>
                       Our value proposition is to develop blockchain-based
                       software to solve real-life problems. We have experience
@@ -210,12 +217,12 @@ const Home = () => {
                   square
                   expanded={expanded === 'panel_BlockInfrac'}
                   onChange={handleChange('panel_BlockInfrac')}
-                  className={"accordion"}
+                  className="accordion"
                   style={{backgroundColor:'#F8F8F8',boxShadow:'none'}}>
-                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
-                    <h3 style={{padding: 0}}>Blockchain Infrastructure</h3>
+                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h4 style={{margin:'2px', padding: 0}}>Blockchain infrastructure</h4>
                   </AccordionSummary>
-                  <AccordionDetails style={{padding:0}}>
+                  <AccordionDetails style={{padding:0, marginTop:'-15px'}}>
                     <p style={{padding: 0}}>
                       We offer top-grade infrastructure for blockchain networks
                       and API endpoints from our datacenter in San José, Costa
@@ -228,11 +235,11 @@ const Home = () => {
                     </p>
                   </AccordionDetails>
                 </Accordion>
-                <Accordion square expanded={expanded === 'panel_Education'}  onChange={handleChange('panel_Education')} className={"accordion"} style={{backgroundColor:'#F8F8F8',boxShadow:'none',borderColor:'s\\#f1f1f1'}}>
-                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3', marginTop:'-10px'}}/>}>
-                    <h3 style={{padding: 0}}>Education and Training</h3>
+                <Accordion square expanded={expanded === 'panel_Education'}  onChange={handleChange('panel_Education')} className="accordion" style={{backgroundColor:'#F8F8F8',boxShadow:'none',borderColor:'s\\#f1f1f1'}}>
+                  <AccordionSummary style={{padding:0}} expandIcon={<ExpandMoreIcon style={{color:'#5484B3'}}/>}>
+                    <h4 style={{margin:'2px', padding: 0}}>Education and training</h4>
                   </AccordionSummary>
-                  <AccordionDetails style={{padding:0}}>
+                  <AccordionDetails style={{padding:0, marginTop:'-15px'}}>
                     <p style={{padding: 0}}>
                       In today’s world, new technologies are leading the way to
                       transform many industries. We offer workshops on blockchain
@@ -245,15 +252,15 @@ const Home = () => {
                   </AccordionDetails>
                 </Accordion>
               </Box>
-          </Grid>
-          {isDesktop && 
-            <Grid item  md={6}>
-              <Box style={{paddingLeft:'50px'}}>
-                <WhatWeDoSvg />
-              </Box>  
             </Grid>
-          }
-        </Grid>
+            {isDesktop && 
+              <Grid item  md={6}>
+                <Box style={{paddingLeft:'50px'}}>
+                  <WhatWeDoSvg />
+                </Box>  
+              </Grid>
+            }
+          </Grid>
         </Box>
       </Box>
     )
@@ -261,30 +268,29 @@ const Home = () => {
 
   const EnterpriseBlockchain = () => {
     return (
-      <Box className={"containerSec"}>
-        <Box className={"sectionPadding"}>
-          <Box className={"titleBox"}>
+      <Box className="containerSec">
+        <Box className="sectionPadding">
+          <Box className="titleBox">
             {isDesktop &&
               <h2>Industries to Deploy Enterprise Blockchain</h2>
             }
             {isMobile && 
               <>
-                <h2>Industries to Deploy</h2>
-                <h2>Enterprise Blockchain</h2>
+                <h2>Industries to Deploy <br /> Enterprise Blockchain</h2>
               </> 
             }     
           </Box>
-            <Box className={"spacingBox"}>
+            <Box className="spacingBox">
               <Grid container spacing={5}>
                 <Grid item md={4}>
-                  <Box className={"imgBoxServices"}>
+                  <Box className="imgBoxServices">
                     <img
-                    src={useBaseUrl("img/logistics.svg")}
+                    src={useBaseUrl("img/icons/logistics.svg")}
                     style={{paddingTop: '25px'}}
-                    className = {"imageIndrustries"}
+                    className ="imageIndrustries"
                     />
                   </Box>
-                  <Box className={"h3Box"}>
+                  <Box className="h3Box">
                     <h3>Payments and Transfers</h3>
                   </Box>
                   <p>
@@ -298,33 +304,33 @@ const Home = () => {
                   </p>
                 </Grid>
                 <Grid item md={4}>
-                  <Box className={"imgBoxServices"}>
+                  <Box className="imgBoxServices">
                     <img 
-                      src={useBaseUrl("img/payments.svg")}
+                      src={useBaseUrl("img/icons/payments.svg")}
                       style={{paddingTop: '25px'}}
-                      className = {"imageIndrustriesLogistics"}
+                      className="imageIndrustriesLogistics"
                     />
                   </Box>
-                  <Box className={"h3Box"}>
+                  <Box className="h3Box">
                     <h3>Logistics and Supply Chain</h3>
                   </Box>
                   <p>
-                    In an industry that involves dozens of stakeholders, the
-                    capabilities of blockchain and smart contracts for
-                    traceability, authorizations management, and automation can
-                    make a great ally. 
+                    In an industry that involves dozens of 
+                    stakeholders, blockchain's capabilities 
+                    to manage authorizations and automate 
+                    and trace operations can make a great ally.{" "}
                     <a href={"https://eoscostarica.io/blog/blockchain-logistics"}> Read more</a>
                   </p>
                 </Grid>
                 <Grid item md={4}>
-                  <Box className={"imgBoxServices"}>
+                  <Box className="imgBoxServices">
                     <img 
-                      src={useBaseUrl("img/gaming.svg")}
+                      src={useBaseUrl("img/icons/gaming.svg")}
                       style={{paddingTop: '15px'}}
-                      className = {"imageIndrustries"}
+                      className = "imageIndrustries"
                     />
                   </Box>
-                  <Box className={"h3Box"}>
+                  <Box className="h3Box">
                     <h3>Gaming and Esports</h3>
                   </Box>
                   <p>
@@ -348,8 +354,8 @@ const Home = () => {
 
   const Inquieres = () => {
     return (
-      <Box  className={"containerBlack"}>
-        <Box className={"sectionNoPadding"}>
+      <Box  className="containerBlack">
+        <Box className="sectionNoPadding">
           <Grid container spacing={5}>
             {isMobile &&
                 <Grid item xs={12} md={6}>
@@ -357,12 +363,11 @@ const Home = () => {
                 </Grid>
             }
             <Grid item xs={12} md={6}>
-              <Box className={"inquiereBox"}>
+              <Box className="inquiereBox">
                 <Box style={{width:'100%'}}>
-                  <h2 className={clsx("white","centerTextOnMobile")}>Do you have inquiries</h2>
-                  <h2 className={clsx("white","centerTextOnMobile")}>about blockchain?</h2>
-                  <Box className={"buttonBox"}>
-                    <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Drop us a line</button>
+                  <h2 className={clsx("white","centerTextOnMobile")}>Do you Have Inquiries <br /> About Blockchain? </h2>
+                  <Box className="buttonBox">
+                    <button className="buttonPrimary" onClick={() => history.push("/contact-us/")} >Drop us a line</button>
                   </Box>
                 </Box>
               </Box>
@@ -380,21 +385,21 @@ const Home = () => {
 
   const GetToKnow = () => {
     return (
-      <Box className={"containerSec"}>
-        <Box className={"sectionPadding"}>
-          <Box className={"spacingBox"}>
-            <Box className={"titleBox"}>
+      <Box className="containerSec">
+        <Box className="sectionPadding">
+          <Box className="spacingBox">
+            <Box className="titleBox">
               <h2>Get to Know EOS Costa Rica</h2>
             </Box>
           </Box>
-          <Box className={"spacingBox"}>
-            <Box className={"spacingBox"}>
+          <Box className="spacingBox">
+            <Box className="spacingBox">
               <Grid container spacing={5}>
                 <Grid item md={6}>
-                  <Box className={"h3Box"}>
+                  <Box className="h3Box">
                     <h3>The Team</h3>
                   </Box>
-                  <p className={"body1"}>
+                  <p>
                       We have assembled a Latin American team with a problem-solving
                       mindset and expertise in their knowledge areas. We operate as
                       a distributed team in an Agile environment and make a
@@ -404,30 +409,30 @@ const Home = () => {
                   </p>
                 </Grid>
                 <Grid item md={6}>
-                  <Box className={"imgBoxRight"}>
+                  <Box className="imgBoxRight">
                     <img
-                      className={"imgKnow"}
-                      src={useBaseUrl("img/team.webp")}
+                      className="imgKnow"
+                      src={useBaseUrl("img/website_01.jpg")}
                     />
                   </Box>  
                 </Grid>
               </Grid>
             </Box>
-            <Box className={"spacingBox"}>
+            <Box className="spacingBox">
               <Grid container spacing={5}>
                 {isDesktop && 
                   <Grid item md={6}>
-                    <Box className={"imgBoxLeft"}>
+                    <Box className="imgBoxLeft">
                       <img
-                        className={"imgKnow"}
-                        src={useBaseUrl("img/company.webp")}
+                        className="imgKnow"
+                        src={useBaseUrl("img/website_02.jpg")}
                       />
                     </Box>  
                   </Grid>
                 }
                 <Grid item md={6}>
-                  <Box className={"h3Box"}>
-                    <h3>The company</h3>
+                  <Box className="h3Box">
+                    <h3>The Company</h3>
                   </Box>
                   <p>
                     During the 1980s, we developed the first BBS in the country, a
@@ -441,26 +446,26 @@ const Home = () => {
                     </a>{" "}
                     protocol since its launch, accruing decades of experience with
                     innovative technologies.
-                    <a href={useBaseUrl("/the-company")} target="_blank"> Get to know us.</a>
+                    <a href={useBaseUrl("/the-company")}> Get to know us.</a>
                   </p>
                 </Grid>
                 {isMobile && 
                   <Grid item md={6}>
-                    <Box className={"imgBoxLeft"}>
+                    <Box className="imgBoxLeft">
                       <img
-                        className={"imgKnow"}
-                        src={useBaseUrl("img/company.webp")}
+                        className="imgKnow"
+                        src={useBaseUrl("img/website_02.jpg")}
                       />
                     </Box>  
                   </Grid>
                 }
               </Grid>
             </Box>
-            <Box className={"spacingBox"}>
+            <Box className="spacingBox">
               <Grid container spacing={5} >
                 <Grid item md={6}>
-                  <Box className={"h3Box"}>
-                    <h3>The technology</h3>
+                  <Box className="h3Box">
+                    <h3>The Technology</h3>
                   </Box>
                   <p>
                     We focus on deploying{" "}
@@ -480,10 +485,10 @@ const Home = () => {
                   </p>
                 </Grid>
                 <Grid item md={6}>
-                  <Box className={"imgBoxRight"}>
+                  <Box className="imgBoxRight">
                     <img
-                      className={"imgKnow"}
-                      src={useBaseUrl("img/technology.webp")}
+                      className="imgKnow"
+                      src={useBaseUrl("img/technology.png")}
                     />
                   </Box>  
                 </Grid>
@@ -495,241 +500,161 @@ const Home = () => {
     )
   }
 
-  const WeAreOneGroup = () => {
-    return (
-      <Box className={clsx("containerSec")}>
-        <Box className={clsx("sectionNoPadding")}>
-          <Box className={"h3Box"}>
-            <h3 style={{textAlign:'center'}}>We Are One Group</h3>
-          </Box>
-          <Box className={"spacingBox"}>
-            <Grid container>
-              <Grid item xs={12} md={3}>
-                <Box className={"imgBoxLogos"}>
-                  <a target="_blank" href="http://latamlink.io/">
-                    <img
-                      className={"oneGroupLogo"}
-                      alt="LatamLink"
-                      src={useBaseUrl("img/Group47.svg")}
-                    />
-                  </a>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Box className={"imgBoxLogos"}>
-                  <a target="_blank" href="https://www.edenia.com/">
-                    <img
-                      className={"oneGroupLogo"}
-                      alt="Edenia"
-                      src={useBaseUrl("img/Group17.svg")}
-                    />
-                  </a>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Box className={"imgBoxLogos"}>
-                  <a target="_blank" href="https://eosurf.com/">
-                    <img
-                      className={"oneGroupLogo"}
-                      alt="Eossurf"
-                      src={useBaseUrl("img/Group11.svg")}
-                    />
-                  </a>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Box className={"imgBoxLogos"}>
-                  <a target="_blank" href="https://ticoblockchain.cr/">
-                    <img
-                      className={"oneGroupLogo"}
-                      alt="Ticoblockchain"
-                      src={useBaseUrl("img/Group55.svg")}
-                    />
-                  </a>
-                </Box>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
-      </Box>
-    )
-  }
 
   const SomeProjects = () => {
     return (
-      <Box className={"containerSec"}>
-        <Box className={clsx("sectionNoPadding",{["sectionPadding"] : isMobile})}>
-          <Box className={"titleBox"}>
+      <Box className="containerSec">
+        <Box className={clsx("sectionNoPadding",{["sectionPadding"]: isMobile})}>
+          <Box className="titleBox">
               <h2 >Some of Our Projects</h2>
           </Box>
-          <Box className={"spacingBox"}> 
+          <Box className="spacingBox"> 
             <p>
-              Get to know some of our latest projects deploying the EOSIO
-              blockchain protocol.
+              Get to know some of our latest projects deploying the EOSIO blockchain protocol.
               <a href={useBaseUrl("/projects")} target="_blank"> Visit the full list here.</a>
             </p>
           </Box>
-          <Box className={isDesktop? "doubleSpacingBox" : ""}>
-            <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingTop:'20px',paddingBottom:'20px'}} container spacing={5}>
-              <Grid xs={12} item md={6}>
-                <Box className={"centerBox"} style={{height:'100%'}}>
-                  <img
-                    className = {"sizeImageTheCompany"}
-                    src={useBaseUrl("img/Group47.svg")}
-                  />
-                </Box>
-              </Grid>
-              <Grid xs={12} item md={6}>
-                <br/>
-                <Box className={"h3Box"}>
-                  <h3>LatamLink</h3>
-                </Box>
-                <p>
-                  We are part of this voluntary regional alliance, led by Latin
-                  American technology companies to offer an EOSIO-based testnet
-                  to the{" "}
-                  <a href="https://www.lacchain.net/" target="_blank">
-                    LACChain
-                  </a>{" "}
-                  initiative, a program to accelerate the development of the
-                  blockchain ecosystem in the region.{" "}
-                  <a href="https://latamlink.io/" target="_blank">
-                    Read more.
-                  </a>
-                </p>
-              </Grid>
-            </Grid>
-            <Grid container style={{paddingTop:'25px',paddingBottom:'25px'}} spacing={5}>
-                <Grid xs={12} item md={6}>
-                  <Box className={"centerBox"} style={{height:'100%'}}>
+          <Box className={isDesktop? "doubleSpacingBox": ""}>
+            <Grid container>
+              <Grid item xs={12} md={6}>
+                <Box className="projectsGridLeft">
+                  <Box className="imgBoxProjects">
                     <img
-                      className = {"sizeImageTheCompany"}
-                      src={useBaseUrl("img/lifebank.svg")}
+                      alt="LatamLink"
+                      className="sizeImageTheCompany"
+                      src={useBaseUrl("img/logos/Group47.svg")}
                     />
                   </Box>
-                </Grid>
-                <Grid xs={12} item md={6}>
-                  <br/>
-                  <Box className={"h3Box"}>
-                    <h3>Lifebank</h3>
+                </Box>
+              </Grid>
+              <Grid  item xs={12} md={6}>
+                <Box className="projectsGridRight">
+                  <Box className="h3Box">
+                    <h3 >LatamLink</h3>
                   </Box>
                   <p>
-                    An open-source blockchain-based app that incentivizes blood
-                    donations by creating a virtuous circle of value between
-                    donors, blood banks, and local businesses, leveraged by a
-                    token economy. Winner of the{" "}
-                    <a
-                      href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
-                      target="_blank"
-                    >
-                      “Coding for Change”
-                    </a>{" "}
-                    challenge by{" "}
-                    <a href="https://block.one/" target="_blank">
-                      block.one.
-                    </a>{" "}
-                    <a href=" https://lifebank.io/" target="_blank">
-                      Read more.
+                    We are part of this voluntary regional alliance, led by Latin
+                    American technology companies to offer an EOSIO-based testnet to
+                    the <a href="https://www.lacchain.net/" target="_blank"> LACChain</a>{" "} 
+                    initiative, a program to accelerate the development
+                    of the blockchain ecosystem in the region.{" "}
+                    <a href="http://latamlink.io/" target="_blank">
+                      Discover more about LatamLink.
                     </a>
                   </p>
-                </Grid>
-              </Grid>
-              <Grid style={{backgroundColor: 'rgba(241, 241, 241, 0.5)', paddingTop:'20px',paddingBottom:'20px'}} container spacing={5}>
-                <Grid xs={12} item md={6}>
-                  <Box className={"centerBox"} style={{height:'100%'}}>
-                    <img
-                      className = {"sizeImageTheCompany"} 
-                      src={useBaseUrl("img/smartgate.svg")}
-                    />
-                  </Box> 
-                </Grid>
-                <Grid xs={12} item md={6}>
-                  <br/>
-                  <Box className={"h3Box"}>
-                    <h3>SMARTGATE</h3>
-                  </Box>
-                  <p>
-                    A blockchain-based platform that provides solutions for in-out
-                    gate activity for the container industry and real-time
-                    transmission of relevant data required for proper interchange
-                    in port logistics. <a href="https://smartgate.tech/" target="_blank">Read more.</a>
-                  </p>
-                  <br/>
-                </Grid>
-              </Grid>
-          </Box>
-
-        </Box>
-      </Box>
-    )
-  }
-
-  const ContactUs = () => {
-    return (
-      <Box className={"containerGray"}>
-        <Box className={"sectionPadding"}>
-          <Grid container spacing={5}>
-            <Grid item xs={12} md={8}>
-                <Box>
-                  <h2 className={"centerTextOnMobile"}>Start working with us</h2>
-                  <h2 className={"centerTextOnMobile"}>and implement</h2>
-                  <h2 className={"centerTextOnMobile"}>blockchain technology.</h2>
                 </Box>
+              </Grid>
+            <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+              <Box className="projectsGridLeft">
+                <Box className="imgBoxProjects">
+                  <img
+                    alt="Lifebank"
+                    src={useBaseUrl("img/logos/lifebank.svg")}
+                  />
+                </Box>
+              </Box>
             </Grid>
-            <Grid item xs={12} md={4}>
-              <Box className={"buttonBox"}>
-                <button className={"buttonPrimary"} onClick={() => history.push("/contact-us/")} >Contact us</button>
+            <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+              <Box className="projectsGridRight">
+                <Box className="h3Box">
+                  <h3 >Lifebank</h3>
+                </Box>
+                <p>
+                  An open-source blockchain-based app that incentivizes blood
+                  donations by creating a virtuous circle of value between donors,
+                  blood banks, and local businesses, leveraged by a token economy.
+                  Winner of the “
+                  <a
+                    href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
+                    target="_blank"
+                  >
+                    Coding for Change
+                  </a>{"” "} challenge by {" "}
+                  <a href="https://block.one/" target="_blank">
+                    block.one.
+                  </a>{" "}
+                  <a href="http://lifebank.io/" target="_blank">
+                    Find out more about Lifebank.
+                  </a>
+                </p>
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor:'#ffffff'}} item xs={12} md={6}>
+              <Box className="projectsGridLeft">
+                <Box className="imgBoxProjects">
+                  <img
+                    alt="SMARTGATE"
+                    src={useBaseUrl("img/logos/smartgate.svg")}
+                  />
+                </Box>
+              </Box>
+            </Grid>
+            <Grid style={{backgroundColor:'#ffffff'}} item xs={12} md={6}>
+              <Box className="projectsGridRight">
+                <Box className="h3Box">
+                  <h3 >SMARTGATE</h3>
+                </Box>
+                <p>
+                  A blockchain-based platform that provides solutions for in-out gate activity for the container 
+                  industry and real-time transmission of relevant data required for proper interchange in port logistics. 
+                  {" "}
+                  <a href="https://smartgate.tech/" target="_blank">
+                    Learn more about SMARTGATE.
+                  </a>
+                </p>
               </Box>
             </Grid>
           </Grid>
+          </Box>
         </Box>
       </Box>
     )
   }
 
   return (
-   <>
+    <Layout
+      title={MetaData.title}
+      description={MetaData.description}
+      image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
+    > 
       {isDesktop && 
-        <Layout>
-          <Box className={"mainContainer"}>
-            <Parallax strength={800}>
-              <Background className={"bgParallax"}>
-                  <Box className={"imgParallax"} />
-              </Background>
-              <HeroSection />
-              <BlockchainCanDo />
-            </Parallax>
-            <WhatWeDo />
-            <EnterpriseBlockchain />
-            <Inquieres />
-            <Parallax strength={800}>
-            <GetToKnow />
-            <WeAreOneGroup />
-            <Background className={"bgParallaxSecondary"}>
-                <Box className={"imgParallax"} />
+        <Box className="mainContainer">
+          <Parallax strength={800}>
+            <Background className="bgParallax">
+                <Box className="imgParallax"/>
             </Background>
-            <SomeProjects />
-            </Parallax>
-           <ContactUs />
-          </Box>
-        </Layout>
-      }
-      {isMobile && 
-        <Layout>
-          <Box className={"mainContainer"}>
             <HeroSection />
             <BlockchainCanDo />
-            <WhatWeDo />
-            <EnterpriseBlockchain />
-            <Inquieres />
-            <GetToKnow />
-            <WeAreOneGroup />
-            <SomeProjects />
-            <ContactUs />
-          </Box>
-        </Layout>
-      } 
-    </>
+          </Parallax>
+          <WhatWeDo />
+          <EnterpriseBlockchain />
+          <Inquieres />
+          <Parallax strength={800}>
+          <GetToKnow />
+          <WeAreOneGroup />
+          <Background className="bgParallaxSecondary">
+              <Box className="imgParallax"/>
+          </Background>
+          <SomeProjects />
+          </Parallax>
+          <ContactUsBanner />
+        </Box>
+      }
+      {isMobile && 
+        <Box className="mainContainer">
+          <HeroSection />
+          <BlockchainCanDo />
+          <WhatWeDo />
+          <EnterpriseBlockchain />
+          <Inquieres />
+          <GetToKnow />
+          <WeAreOneGroup />
+          <SomeProjects />
+          <ContactUsBanner />
+        </Box>
+      }
+    </Layout>
   );
 };
 
