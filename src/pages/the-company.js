@@ -16,6 +16,7 @@ const MetaData={
   title:"EOS Costa Rica: Company Page",
   description:"EOS Costa Rica is part of a company with more than three decades of experience developing innovative solutions.",
   img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/la-empresa/"
 }
 
 const TheCompany = () => {
@@ -91,7 +92,7 @@ const TheCompany = () => {
                 <Box className="imgBoxRight">
                   <img
                     className="imgKnowCompany"
-                    src={useBaseUrl("img/ourstory.jpg")}
+                    src={useBaseUrl("img/website_03.jpg")}
                   />
                 </Box>  
               </Grid>
@@ -104,7 +105,7 @@ const TheCompany = () => {
                   <Box className="imgBoxLeft">
                     <img
                       className="imgKnowCompany"
-                      src={useBaseUrl("img/ourvision.jpg")}
+                      src={useBaseUrl("img/website_04.jpg")}
                     />
                   </Box>  
                 </Grid>
@@ -136,7 +137,7 @@ const TheCompany = () => {
                   <Box className="imgBoxLeft">
                     <img
                       className="imgKnowCompany"
-                      src={useBaseUrl("img/company.png")}
+                      src={useBaseUrl("img/website_04.jpg")}
                     />
                   </Box>  
                 </Grid>
@@ -179,7 +180,7 @@ const TheCompany = () => {
   const MeetTeam = () => {
     return (
       <Box className="containerSec">
-        <Box className="sectionPadding">
+        <Box className="sectionPaddingTop">
           <Box>
             <Box className="titleBox">
               <h2>Meet the Team</h2>
@@ -199,12 +200,10 @@ const TheCompany = () => {
                 <Carousel animation="slide" timeout={500} indicators={false}>
                   <img
                     alt="Crew image"
-                    style={{height:'227px'}}
                     src={useBaseUrl("img/team/crew1.jpg")}
                   />
                   <img
                       alt="Crew image 2"
-                      style={{height:'227px'}}
                       src={useBaseUrl("img/team/crew2.jpg")}
                   />
                 </Carousel>
@@ -212,6 +211,27 @@ const TheCompany = () => {
             }
             <Box className="boxFlexEnd">
               <button className="buttonPrimary" onClick={() => history.push("/team/")} >Meet our team</button>
+            </Box>
+          </Box>
+        </Box>
+      </Box> 
+    )
+  }
+
+  const WorkWithUS = () => {
+    return (
+      <Box className="containerSec">
+        <Box className="section">
+          <Box>
+            <Box className="h3Box">
+              <h3>Do you want to work with us?</h3>
+            </Box>
+            <Box className="spacingBox">
+              <p>
+                We're constantly looking for talent.{" "}
+                <a href={`mailto:${'jobs@eoscostarica.io'}?subject=${'My CV – I want to work for your company'}`}>Send us your CV</a>
+                , and we'll communicate with you once we have open positions.
+              </p>
             </Box>
           </Box>
         </Box>
@@ -426,6 +446,7 @@ const TheCompany = () => {
       title={MetaData.title}
       description={MetaData.description}
       image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
     > 
       {isDesktop &&
         <Box className="mainContainer">
@@ -438,8 +459,9 @@ const TheCompany = () => {
           </Parallax>
           <WeAreOneGroup />
           <MeetTeam />
-          <TheTechnology/>
-          <SomeOurProjects/>
+          <WorkWithUS />
+          <TheTechnology />
+          <SomeOurProjects />
           <ContactUsBanner />
         </Box>
       }
@@ -449,8 +471,9 @@ const TheCompany = () => {
           <EOSCR />
           <WeAreOneGroup />
           <MeetTeam />
-          <TheTechnology/>
-          <SomeOurProjects/>
+          <WorkWithUS />
+          <TheTechnology />
+          <SomeOurProjects />
           <ContactUsBanner />
         </Box>
       }

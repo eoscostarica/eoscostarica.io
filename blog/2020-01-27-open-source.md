@@ -1,11 +1,15 @@
 ---
 slug: open-source
 title: Why Get Involved in an Open-Source Project?
+image: /img/blog/open-source/why-open-source.jpg
 author: Luis Diego Rojas
 author_title: Content Strategist
 author_url: https://twitter.com/ldrojas
 author_image_url: https://avatars0.githubusercontent.com/u/29232417?s=400&u=032f18555bd97e3d90f3ddfb5b2dc72dfcf0d11b&v=4
 tags: [eosio, blockchain, open-source, software development]
+metaTitle:
+metaDescription:
+langPost: https://es.eoscostarica.io/blog/proyectos-open-source
 ---
 
 ![Why Get Involved in Open Source ](/img/blog/open-source/why-open-source.jpg)
@@ -50,9 +54,9 @@ We believe in the importance of rating Block Producers and candidates to measure
 
 ** Follow us on social media:**
 
-*   Website:https://eoscostarica.io
-*   Twitter: https://twitter.com/eoscostarica
-*   Telegram: https://t.me/eoscr
-*   Facebook: https://www.facebook.com/costaricaeos/
-*   LinkedIn: https://www.linkedin.com/company/eoscostarica/
-*   Medium: https://medium.com/@eoscostarica
+*   [Website](https://eoscostarica.io)
+*   [Twitter](https://twitter.com/eoscostarica)
+*   [Telegram](https://t.me/eoscr)
+*   [Facebook](https://www.facebook.com/costaricaeos/)
+*   [LinkedIn](https://www.linkedin.com/company/eoscostarica/)
+*   [Medium](https://medium.com/@eoscostarica)

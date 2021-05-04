@@ -16,6 +16,7 @@ const MetaData={
   title:"EOS Costa Rica: Contact Us",
   description:"Ask us how to integrate EOSIO blockchain technology into your organization.",
   img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/contactenos/"
 }
 
 const GenericInput = withStyles({
@@ -235,6 +236,7 @@ const ContactUs = () => {
       title={MetaData.title}
       description={MetaData.description}
       image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
     > 
       {isDesktop && 
         <Parallax strength={800}>
