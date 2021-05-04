@@ -28,14 +28,12 @@ module.exports = {
     ],
   ],
   plugins: [
-    path.resolve(__dirname, 'src/plugins', 'webpackconfig'),
     [
       "docusaurus2-dotenv",
       {
         systemvars: true,
       },
     ],
-    
   ],
   themeConfig: {
     image:"img/metaImgBlack.png",
