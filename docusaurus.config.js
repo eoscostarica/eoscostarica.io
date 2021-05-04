@@ -27,14 +27,6 @@ module.exports = {
       },
     ],
   ],
-  plugins: [
-    [
-      "docusaurus2-dotenv",
-      {
-        systemvars: true,
-      },
-    ],
-  ],
   themeConfig: {
     image:"img/metaImgBlack.png",
     footer: {},
