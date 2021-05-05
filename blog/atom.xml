@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eoscostarica.io/blog</id>
-    <title>EOSIO Enterprise Blockchain Development Services -  EOS Costa Rica Blog</title>
+    <title>EOSIO Enterprise Blockchain Development Services - EOS Costa Rica Blog</title>
     <updated>2021-04-22T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eoscostarica.io/blog"/>
-    <subtitle>EOSIO Enterprise Blockchain Development Services -  EOS Costa Rica Blog</subtitle>
+    <subtitle>EOSIO Enterprise Blockchain Development Services - EOS Costa Rica Blog</subtitle>
     <icon>https://eoscostarica.io/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[The Role of NFTs for Enterprise]]></title>
