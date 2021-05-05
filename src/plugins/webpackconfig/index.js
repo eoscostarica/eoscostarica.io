@@ -1,5 +1,4 @@
 const webpack = require('webpack')
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 module.exports = function () {
   return {
     name: 'custom-docusaurus-plugin',
@@ -16,8 +15,7 @@ module.exports = function () {
         plugins: [
           new webpack.ProvidePlugin({
               Buffer: ['buffer', 'Buffer'],
-          },
-          new NodePolyfillPlugin()
+          }
           )
         ],
       };
