@@ -52,6 +52,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "all-contributors-cli": "^6.19.0"
+    "all-contributors-cli": "^6.19.0",
+    "node-polyfill-webpack-plugin": "^1.1.1"
   }
 }
