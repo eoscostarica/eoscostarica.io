@@ -381,7 +381,6 @@ const Industries = () => {
       }
     </Layout>
   );
-  
 };
 
 export default Industries;
