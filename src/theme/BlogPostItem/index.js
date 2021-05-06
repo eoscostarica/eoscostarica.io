@@ -71,7 +71,7 @@ function BlogPostItem(props) {
             </>
           )}     
           <p>
-            <a className="blogReadMoreText" href={permalink}>Read more</a>
+            <a className="blogReadMoreText" href={permalink}>Read more ❯</a>
           </p>
         </Box>
       </Box>
