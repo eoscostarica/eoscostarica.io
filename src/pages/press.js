@@ -18,7 +18,8 @@ import ContactUsBanner from './components/ContactUsBanner'
 const MetaData={
   title:"",
   description:"",
-  img:"img/metaImgBlack.png"
+  img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/prensa/"
 }
 
 const firtsNewsRelease = [
@@ -278,6 +279,7 @@ const Press = () => {
       title={MetaData.title}
       description={MetaData.description}
       image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
     > 
       {isDesktop && 
         <Box className="mainContainer">

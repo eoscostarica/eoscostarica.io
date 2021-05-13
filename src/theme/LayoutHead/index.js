@@ -9,6 +9,7 @@ import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { JSONLD, Generic, GenericCollection } from 'react-structured-data'
+import { useLocation } from 'react-router-dom'
 export default function LayoutHead(props) {
   const {
     siteConfig,
@@ -26,6 +27,7 @@ export default function LayoutHead(props) {
     title,
     description,
     image,
+    hrefLangPath,
     keywords,
     permalink,
   } = props;
@@ -36,6 +38,7 @@ export default function LayoutHead(props) {
   });
   const faviconUrl = useBaseUrl(favicon);
   const htmlLang = "en"
+  const location = useLocation()
   return <>
       <Head>
         <html lang={htmlLang} />
@@ -51,6 +54,11 @@ export default function LayoutHead(props) {
         {permalink && <meta property="og:url" content={siteUrl + permalink} />}
         {permalink && <link rel="canonical" href={siteUrl + permalink} />}
         <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      <Head>
+        <link rel="alternate" href={`https://eoscostarica.io${location.pathname}`} hreflang="en-us" />
+        {hrefLangPath && <link rel="alternate" href={hrefLangPath} hreflang="es-us" />}
+        <link rel="canonical" href={`https://eoscostarica.io${location.pathname}`} />
       </Head>
 
       <Head // it's important to have an additional <Head> element here,
