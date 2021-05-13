@@ -21,7 +21,7 @@ const PATHS = [
     espPath: "/",
     label: "Home",
     target: '_self',
-    icon: 'img/icons/navbar/home.svg'
+    icon: 'img/icons/navbar/home.png'
   },
   {
     dropDown:true,
@@ -37,42 +37,42 @@ const PATHS = [
         espPath: "/servicios/",
         label: "Services",
         target: '_self',
-        icon: 'img/icons/navbar/services.svg'
+        icon: 'img/icons/navbar/services.png'
       },
       {
         path: "/the-company/",
         espPath: "/compañia/",
         label: "The company",
         target: '_self',
-        icon: 'img/icons/navbar/home.svg'
+        icon: 'img/icons/navbar/home.png'
       },
       {
         path: "/team/",
         espPath: "/equipo/",
         label: "Team",
         target: '_self',
-        icon: 'img/icons/navbar/team.svg'
+        icon: 'img/icons/navbar/team.png'
       },
       {
         path: "/projects/",
         espPath: "/proyectos/",
         label: "Projects",
         target: '_self',
-        icon: 'img/icons/navbar/projects.svg'
+        icon: 'img/icons/navbar/projects.png'
       },
       {
         path: "/block-producer/",
         espPath: "/productor-de-bloques/",
         label: "Block producer",
         target: '_self',
-        icon: 'img/icons/navbar/blockproducer.svg'
+        icon: 'img/icons/navbar/blockproducer.png'
       },
       {
         path: "/press/",
         espPath: "/prensa/",
         label: "Press",
         target: '_self',
-        icon: 'img/icons/navbar/press.svg'
+        icon: 'img/icons/navbar/press.png'
       }
     ]
   },
@@ -82,7 +82,7 @@ const PATHS = [
     espPath: "/industrias/",
     label: "Industries",
     target: '_self',
-    icon: 'img/icons/navbar/industries.svg'
+    icon: 'img/icons/navbar/industries.png'
   },
   {
     dropDown:true,
@@ -91,21 +91,21 @@ const PATHS = [
     label: "Learning",
     target: '_self',
     markerSize: "70px",
-    icon: 'img/icons/navbar/learning.svg',
+    icon: 'img/icons/navbar/learning.png',
     subPaths: [
       {
         path: "https://guide.eoscostarica.io/",
         espPath: "https://guias.eoscostarica.io/",
         label: "Dev resources",
         target: '_self',
-        icon: 'img/icons/navbar/learning.svg'
+        icon: 'img/icons/navbar/learning.png'
       },
       {
         path: "/do-you-need-blockchain/",
         label: "/do-you-need-blockchain/",
         label: "Corp resources",
         target: '_self',
-        icon: 'img/icons/navbar/archive.svg'
+        icon: 'img/icons/navbar/archive.png'
       },
     ]
   },
@@ -115,7 +115,7 @@ const PATHS = [
     espPath: "/blog/",
     label: "Blog",
     target: '_self',
-    icon: 'img/icons/navbar/blog.svg'
+    icon: 'img/icons/navbar/blog.png'
   },
   {
     dropDown:false,
@@ -123,7 +123,7 @@ const PATHS = [
     espPath: "/contactenos/",
     label: "Contact",
     target: '_self',
-    icon: 'img/icons/navbar/contact.svg'
+    icon: 'img/icons/navbar/contact.png'
   },
 ];
 
@@ -283,7 +283,7 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
                   </Box>
                   <Box className="linkGruopBox">
                     <span className="linkGruopLabel">OPTIONS</span>
-                    <CustomListItem href="https://es.eoscostarica.io/" target="_blank" label="Spanish website" icon={'img/icons/navbar/global.svg'} isSelected={false}/>
+                    <CustomListItem href="https://es.eoscostarica.io/" target="_blank" label="Spanish website" icon={'img/icons/navbar/global.png'} isSelected={false}/>
                   </Box>
                 </List>
               </Box>
