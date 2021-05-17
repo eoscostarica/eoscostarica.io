@@ -11,11 +11,9 @@
 			"tetogomez",
 			"kecoco16",
 			"murillojorge",
-			"justincast",
 			"kuronosec",
 			"xavier506",
 			"ldrojas",
-			"JeanVegaD",
 			"AngeloCG97",
 			"kriskoin",
 			"leisterfrancisco"
@@ -36,8 +34,8 @@
 		"location": {
 			"name": "San Jose",
 			"country": "CR",
-			"latitude": "9.936377",
-			"longitude": "-84.078155"
+			"latitude": 9.936377,
+			"longitude": -84.078155
 		},
 		"social": {
 			"keybase": "eoscostarica",
@@ -60,9 +58,7 @@
 				"longitude": -84.078155
 			},
 			"node_type": "query",
-			"p2p_endpoint": "",
-			"api_endpoint": "http://api.eosio.cr",
-			"ssl_endpoint": "http://api.eosio.cr",
+			"ssl_endpoint": "https://api.eosio.cr",
 			"features": [
 				"chain-api"
 			]
@@ -75,10 +71,7 @@
 				"longitude": -84.078155
 			},
 			"node_type": "seed",
-			"p2p_endpoint": "p2p.eosio.cr:9876",
-			"api_endpoint": "",
-			"ssl_endpoint": "",
-			"features": []
+			"p2p_endpoint": "p2p.eosio.cr:9876"
 		},
 		{
 			"location": {
@@ -87,11 +80,7 @@
 				"latitude": -84.078155,
 				"longitude": 9.936377
 			},
-			"node_type": "producer",
-			"p2p_endpoint": "",
-			"api_endpoint": "",
-			"ssl_endpoint": "",
-			"features": []
+			"node_type": "producer"
 		}
 	],
 	"producer_account_name": "costaricaeos"
