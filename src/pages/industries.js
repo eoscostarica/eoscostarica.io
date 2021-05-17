@@ -17,6 +17,7 @@ const MetaData={
   title:"EOS Costa Rica: Industries",
   description:"",
   img:"img/metaImgBlack.png",
+  hrefLangPath: "https://es.eoscostarica.io/industrias/"
 }
 
 const moreIndustriesAccordion = 
@@ -353,6 +354,7 @@ const Industries = () => {
       title={MetaData.title}
       description={MetaData.description}
       image={MetaData.img}
+      hrefLangPath={MetaData.hrefLangPath}
     > 
       {isDesktop &&
         <Box className="mainContainer">
@@ -379,7 +381,6 @@ const Industries = () => {
       }
     </Layout>
   );
-  
 };
 
 export default Industries;

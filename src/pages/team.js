@@ -14,6 +14,7 @@ const MetaData={
     title:"EOS Costa Rica: Our Team",
     description:"Meet the team behind EOS Costa Rica that develops blockchain solutions for business innovation.",
     img:"img/metaImgBlack.png",
+    hrefLangPath: "https://es.eoscostarica.io/equipo/"
 }
 
 const ManagementTeam = [
@@ -123,7 +124,7 @@ const DevelopTeam = [
         color:"#ffffff"
     },
     {
-        img:"",
+        img:"img/team/justin.jpg",
         name:"Justin Castillo",
         position:"Intern",
         bio:"I strive to be part of the change, not just a distant gear.",
@@ -180,7 +181,7 @@ const InfrastructureNetworkingTeam = [
         color:"#ffffff"
     },
     {
-        img:"",
+        img:"img/team/andres.jpg",
         name:"Andrés Gomez",
         position:"Cybersecurity Developer",
         bio:"I envision and work for a more secure, private, and decentralized world.",
@@ -189,7 +190,7 @@ const InfrastructureNetworkingTeam = [
         color:"#f8f8f8"
     },
     {
-        img:"",
+        img:"img/team/ronald.jpg",
         name:"Ronald Gallo",
         position:"Network Administrator",
         bio:"",
@@ -198,7 +199,7 @@ const InfrastructureNetworkingTeam = [
         color:"#ffffff"
     },
     {
-        img:"",
+        img:"img/team/julio.jpg",
         name:"Victor Julio Madrigal",
         position:"Web Developer",
         bio:"What I like the most is to develop innovative projects that move forward with the newest technologies.",
@@ -367,11 +368,34 @@ const Team = () => {
         )
     }
 
+    const SendCV = () => {
+    
+        return (
+            <Box className="containerGray">
+                <Box className="sectionPadding">
+                    <Grid container spacing={5}>
+                        <Grid item xs={12} md={8}> 
+                            <Box>
+                                <h2 className="centerTextOnMobile">Do you want to work with us? </h2>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={4}>
+                            <Box className='centerTextOnMobile'>
+                                <button className="buttonPrimary" onClick={() => window.open(`mailto:${'jobs@eoscostarica.io'}?subject=${'My CV – I want to work for your company'}`)} >Send your CV</button>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Box>
+            </Box>
+        );
+    };
+
     return (
         <Layout
             title={MetaData.title}
             description={MetaData.description}
             image={MetaData.img}
+            hrefLangPath={MetaData.hrefLangPath}
         > 
             {isDesktop &&
                 <Box className="mainContainer">
@@ -380,6 +404,7 @@ const Team = () => {
                             <Box className="imgParallax"/>
                         </Background>
                         <HeroSection />
+                        <SendCV />
                     </Parallax>
                 </Box>
             }
@@ -387,6 +412,7 @@ const Team = () => {
                 <Box className="mainContainer">
                     <HeroSection />
                     <TeamSection />
+                    <SendCV />
                 </Box>
             }
         </Layout>
