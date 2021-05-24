@@ -21,9 +21,9 @@ const ProjectsList = [
     img:"img/logos/eosio.svg",
     name:"EOSIO Dashboard",
     details:"The EOSIO Dashboard is an open-source project that allows users to visualize the rewards distribution along the EOS network to seek accountability and transparency. ",
-    link:"https://mainnet.eosio.cr/",
+    link:"https://mainnet.eosio.online/",
     color:"#f8f8f8",
-    linkText:"Read more about EOSIO Dashboard."
+    linkText:"See the EOS Mainnet Dashboard."
   },
   {
     img:"img/imagenotavailable.png",
