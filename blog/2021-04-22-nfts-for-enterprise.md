@@ -19,7 +19,7 @@ On March 11th, 2021, a relatively unrecognized artist made history by [selling a
 
 Beeple’s historic achievement leveraged NFTs to certify true ownership of this digital asset. In that sense, Beeple transferred his artwork to the buyer, and even if it’s in digital format, Beeple is no longer the owner of his work. The transfer was registered on the blockchain, immutably to certifying its new ownership. 
 
-![How to blockchain works](/img/blog/nfts-for-enterprise/How blockchain works.jpeg)
+![How to blockchain works](https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/blog/nfts-for-enterprise/How%20blockchain%20works.jpeg)
 
 What Beeple did is the same as in the physical world. A painter would sell the original artwork to a buyer and have no other means to claim ownership. The painter might keep the jars of paint and brushes, but the piece belongs now to the buyer. It’s complicated thinking of this in the digital world. That’s when NFTs and blockchain technology appeared to solve a very known problem in the digital art world. 
 
