@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { useHistory } from 'react-router-dom'
 import { Parallax, Background } from 'react-parallax'
 import { useMediaQuery } from 'react-responsive'
@@ -25,6 +25,9 @@ const LacchainLanding = () => {
   const isMobile = useMediaQuery( {query:'(max-width: 960px)'} )
   const isDesktop = useMediaQuery( {query:'(min-width: 960px)'} )
   const history = useHistory()
+  const refLacchainForm = useRef(null)
+
+  const handleScrollLacchainForm= () => refLacchainForm.current.scrollIntoView({behavior:'smooth', block:'start', inline:'nearest'})
   
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded? panel: false)
@@ -43,27 +46,27 @@ const LacchainLanding = () => {
             <h1>EOS Costa Rica: Partner of <br /> LACChain EOSIO</h1>
           </Box>
           <p>
-            LACChain EOSIO is a blockchain network that deploys a public  <br />
-            permissioned version of EOSIO technology and integrates it into the IDB- <br />
+            LACChain EOSIO is a blockchain network that deploys a public
+            permissioned version of EOSIO technology and integrates it into the IDB-
             backed program LACChain.
           </p>
           <Box className="buttonBox">
-            <button className="buttonPrimary" onClick={() => history.push("/services/")} >Create Account</button>
+            <button className="buttonPrimary" onClick={handleScrollLacchainForm} >Create Account</button>
           </Box>
         </Box>
         }
         {isMobile && 
           <Box className="sectionHeroMobile">
             <Box className="titleBox">
-                <h1>EOS Costa Rica: Partner of <br /> LACChain EOSIO</h1>
+                <h1>EOS Costa Rica: Partner of LACChain EOSIO</h1>
             </Box>
             <p>
-                LACChain EOSIO is a blockchain network that deploys a public  <br />
-                permissioned version of EOSIO technology and integrates it into the IDB- <br />
+                LACChain EOSIO is a blockchain network that deploys a public
+                permissioned version of EOSIO technology and integrates it into the IDB-
                 backed program LACChain.
             </p>
             <Box className="buttonBoxMobile">
-              <button className="buttonPrimary" onClick={() => history.push("/services/")} >Create Account</button>
+              <button className="buttonPrimary" onClick={handleScrollLacchainForm} >Create Account</button>
             </Box>
           </Box>
       }
@@ -124,31 +127,31 @@ const LacchainLanding = () => {
 
   const SocialMediaBanner = () => {
       return(
-        <Box className="containerSec"> 
-            <Box className="section">
-                <Grid className="paddingTop" container justify='center'>
+        <Box className="containerBlack"> 
+            <Box className="sectionPadding">
+                <Grid container justify='center'>
                     <Grid item xs={12} md={4}>
-                        <Box className={isMobile? "spacingBox": ""}>
-                            <h3 className={isMobile? "centerText": ""}>Follow LACChain EOSIO</h3>
-                        </Box>
+                      <Box className={isMobile? "spacingBox": ""}>
+                        <h3 className={clsx("white","centerTextOnMobile")}>Follow LACChain EOSIO</h3>
+                      </Box>
                     </Grid>
                     <Grid item xs={12} md={2}>
-                        <Box className={isMobile? "centerBox": "boxFlexEnd"}>
-                            <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://twitter.com/EOSCostaRica" target="_blank">
-                                <TwitterIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
-                            </a>
-                            <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.instagram.com/eoscostarica/" target="_blank">
-                                <TelegramIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
-                            </a>
-                        </Box>
+                      <Box className={isMobile? "centerBox": "boxFlexEnd"}>
+                        <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://twitter.com/EOSCostaRica" target="_blank">
+                            <TwitterIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer', color:'#ffffff'}}/>
+                        </a>
+                        <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.instagram.com/eoscostarica/" target="_blank">
+                          <TelegramIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer', color:'#ffffff'}}/>
+                        </a>
+                      </Box>
                     </Grid>
                     <Grid item xs={12} md={2}>
                         <Box className="centerBox">
                             <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://www.linkedin.com/company/eoscostarica/mycompany/" target="_blank">
-                                <LinkedInIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
+                                <LinkedInIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer', color:'#ffffff'}}/>
                             </a>
                             <a className={clsx("noMarginsTop","socialMediaAnimation")} href="https://github.com/eoscostarica" target="_blank">
-                                <GitHubIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer'}}/>
+                                <GitHubIcon className='iconSocialMediaAnimation' style={{width:'45px', height:'45px', cursor:'pointer', color:'#ffffff'}}/>
                             </a>
                         </Box>
                     </Grid>
@@ -161,7 +164,7 @@ const LacchainLanding = () => {
   const GeneralInfo = () => {
     return (
         <Box className="containerSec">
-            <Box className={isDesktop ? 'sectionPadding' : 'sectionNoPadding'}>
+            <Box className='sectionPadding'>
                 <Box className="spacingBox">
                     <Box className="spacingBox">
                         <Grid container spacing={5}>
@@ -187,16 +190,19 @@ const LacchainLanding = () => {
                                     their decentralized applications and infrastructure
                                     within a testing environment.
                                 </p>
+                                <Box className={isMobile ? 'centerBox' : ''} style={{marginTop:'30px', marginBottom:'30px'}}>
+                                  <button className="buttonSecondary" onClick={() => window.open('https://eosio.lacchain.net/en')}>Learn More</button>
+                                </Box>
                             </Grid>
                             {isMobile && 
-                                <Grid item md={6}>
-                                    <Box className="imgBoxLeft">
-                                        <img
-                                            className="imgKnow"
-                                            src={useBaseUrl("img/landingLacchain1.jpg")}
-                                        />
-                                    </Box>  
-                                </Grid>
+                              <Grid item md={6}>
+                                  <Box className="imgBoxLeft">
+                                      <img
+                                          className="imgKnow"
+                                          src={useBaseUrl("img/landingLacchain1.jpg")}
+                                      />
+                                  </Box>
+                              </Grid>
                             }
                         </Grid>
                     </Box>
@@ -247,7 +253,9 @@ const LacchainLanding = () => {
             <SocialMediaBanner />
           </Parallax>
           <GeneralInfo />
-          <LacchainForm />
+          <Box ref={refLacchainForm}>
+            <LacchainForm />
+          </Box>
         </Box>
       }
       {isMobile && 
@@ -256,7 +264,9 @@ const LacchainLanding = () => {
           <JoinLacchainEosio />
           <SocialMediaBanner />
           <GeneralInfo />
-          <LacchainForm />
+          <Box ref={refLacchainForm}>
+            <LacchainForm />
+          </Box>
         </Box>
       }
     </Layout>
