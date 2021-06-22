@@ -191,7 +191,7 @@ const LacchainForm = () => {
             </Grid>
             <Grid item xs={12} md={12}>
               <ReCAPTCHA
-                sitekey={'dsdsdsd453'}
+                sitekey={process.env.RECAPTCHA_CLIENT_KEY}
                 onChange={(value) => setRecaptchaValue(value)}
               />
             </Grid>
