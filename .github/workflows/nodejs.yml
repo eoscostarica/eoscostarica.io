@@ -23,6 +23,7 @@ jobs:
         HUBSPOT_CONTACT_EN_FORM: ${{ secrets.HUBSPOT_CONTACT_EN_FORM }}
         HUBSPOT_CONTACT_ES_FORM: ${{ secrets.HUBSPOT_CONTACT_ES_FORM }}
         HUBSPOT_BLOCKCHAIN_FORM: ${{ secrets.HUBSPOT_BLOCKCHAIN_FORM }}
+        HUBSPOT_LACCHAIN_FORM: ${{ secrets.HUBSPOT_LACCHAIN_FORM }}
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
