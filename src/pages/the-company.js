@@ -369,19 +369,17 @@ const TheCompany = () => {
               <Grid item xs={12} md={4}>
                 <Box className="imgBoxTheCompany">
                   <img
-                    className="sizeImageTheCompany"
-                    src={useBaseUrl("img/logos/Group47.svg")}
+                    style={{width:'450px'}}
+                    src={useBaseUrl("img/logos/lacchain-eosio.svg")}
                   />
                 </Box>
                 <p>
-                  We are part of this voluntary regional alliance, led by Latin
-                  American technology companies to offer an EOSIO-based testnet
-                  to the{" "}
-                  <a href="https://www.lacchain.net/" target="_blank">
-                    LACChain
-                  </a>{" "}
-                  initiative, a program to accelerate the development of the
-                  blockchain ecosystem in the region.<a href="https://latamlink.io/" target="_blank"> Discover more about LatamLink.</a>
+                  We are part of LACChain EOSIO, an open-source
+                  initiative that offers an EOSIO blockchain
+                  network that integrates into LACChain. {' '}
+                  <a href="https://eosio.lacchain.net/en/" target="_blank"> 
+                    Discover more about LACChain EOSIO.
+                  </a>
                 </p>
               </Grid>
               <Grid item xs={12} md={4}>
