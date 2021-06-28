@@ -555,7 +555,7 @@ const BlockProducer = () => {
                 </Box>
                 <p>
                   We develop and support open- source projects such as EOS Rate,
-                  LatamLink, Lifebank, EOSIO Dashboard, and many more that strive
+                  LACChain EOSIO, Lifebank, EOSIO Dashboard, and many more that strive
                   to push the EOSIO ecosystem forward. These projects are built by
                   talented developers and professionals that believe in the
                   benefits of the network.
