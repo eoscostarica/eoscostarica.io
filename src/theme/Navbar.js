@@ -8,24 +8,9 @@ import Link from '@material-ui/core/Link'
 import Drawer from '@material-ui/core/Drawer'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
-import MenuItem from '@material-ui/core/MenuItem'
 import List from '@material-ui/core/List'
 import { useLocation } from 'react-router-dom'
-import HomeIcon from '@material-ui/icons/Home'
-import ComputerIcon from '@material-ui/icons/Computer'
-import ApartmentIcon from '@material-ui/icons/Apartment'
-import GroupIcon from '@material-ui/icons/Group'
-import ListAltIcon from '@material-ui/icons/ListAlt'
-import GridOnIcon from '@material-ui/icons/GridOn'
-import EditIcon from '@material-ui/icons/Edit'
-import BusinessIcon from '@material-ui/icons/Business'
-import MenuBookIcon from '@material-ui/icons/MenuBook'
-import MailIcon from '@material-ui/icons/Mail'
-import ForumIcon from '@material-ui/icons/Forum'
-import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted'
-import LanguageIcon from '@material-ui/icons/Language'
 
-import GlobalIcon from '../../static/img/icons/globalBlack.svg'
 import CustomListItem from '../pages/components/CustomListItem'
 
 const PATHS = [
@@ -35,7 +20,7 @@ const PATHS = [
     espPath: "/",
     label: "Home",
     target: '_self',
-    icon: <HomeIcon style={{width:'20px'}}/>
+    icon: 'img/icons/navbar/home.png'
   },
   {
     dropDown:true,
@@ -51,42 +36,42 @@ const PATHS = [
         espPath: "/servicios/",
         label: "Services",
         target: '_self',
-        icon: <ComputerIcon style={{width:'20px'}}/> 
+        icon: 'img/icons/navbar/services.png'
       },
       {
         path: "/the-company/",
         espPath: "/compañia/",
         label: "The company",
         target: '_self',
-        icon: <ApartmentIcon style={{width:'20px'}}/>
+        icon: 'img/icons/navbar/company.png'
       },
       {
         path: "/team/",
         espPath: "/equipo/",
         label: "Team",
         target: '_self',
-        icon: <GroupIcon style={{width:'20px'}}/> 
+        icon: 'img/icons/navbar/team.png'
       },
       {
         path: "/projects/",
         espPath: "/proyectos/",
         label: "Projects",
         target: '_self',
-        icon: <ListAltIcon style={{width:'20px'}}/>
+        icon: 'img/icons/navbar/projects.png'
       },
       {
         path: "/block-producer/",
         espPath: "/productor-de-bloques/",
         label: "Block producer",
         target: '_self',
-        icon: <GridOnIcon style={{width:'20px'}}/>
+        icon: 'img/icons/navbar/blockproducer.png'
       },
       {
         path: "/press/",
         espPath: "/prensa/",
         label: "Press",
         target: '_self',
-        icon: <ForumIcon style={{width:'20px'}}/>
+        icon: 'img/icons/navbar/press.png'
       }
     ]
   },
@@ -96,7 +81,7 @@ const PATHS = [
     espPath: "/industrias/",
     label: "Industries",
     target: '_self',
-    icon: <BusinessIcon style={{width:'20px'}}/>
+    icon: 'img/icons/navbar/industries.png'
   },
   {
     dropDown:true,
@@ -105,21 +90,21 @@ const PATHS = [
     label: "Learning",
     target: '_self',
     markerSize: "70px",
-    icon: <MenuBookIcon style={{width:'20px'}}/>,
+    icon: 'img/icons/navbar/learning.png',
     subPaths: [
       {
         path: "https://guide.eoscostarica.io/",
         espPath: "https://guias.eoscostarica.io/",
         label: "Dev resources",
         target: '_self',
-        icon: <MenuBookIcon style={{width:'20px'}}/> 
+        icon: 'img/icons/navbar/dev-resource.png'
       },
       {
         path: "/do-you-need-blockchain/",
         label: "/do-you-need-blockchain/",
         label: "Corp resources",
         target: '_self',
-        icon: <FormatListBulletedIcon style={{width:'20px'}}/>
+        icon: 'img/icons/navbar/archive.png'
       },
     ]
   },
@@ -129,7 +114,7 @@ const PATHS = [
     espPath: "/blog/",
     label: "Blog",
     target: '_self',
-    icon: <EditIcon style={{width:'20px'}}/>
+    icon: 'img/icons/navbar/blog.png'
   },
   {
     dropDown:false,
@@ -137,7 +122,7 @@ const PATHS = [
     espPath: "/contactenos/",
     label: "Contact",
     target: '_self',
-    icon: <MailIcon style={{width:'20px'}}/>
+    icon: 'img/icons/navbar/contact.png'
   },
 ];
 
@@ -220,10 +205,10 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
     return (
       <>
         <IconButton
-          style={{padding: '5px'}}
+          style={{padding:'0', marginTop:'-10px'}}
           onClick={handleClickMenuLang}
         >
-          <img src={GlobalIcon} style={{width:'20px', height: '20px'}}/>
+          <img src={useBaseUrl('img/icons/navbar/global.png')} style={{width:'45px', height: '45px'}}/>
         </IconButton>
         {true && (
           <Box  className={clsx("boxLanguagesSelector",{["boxLanguagesSelectorActive"]: langMenuHandler})} onMouseLeave={handleCloseMenuLang}>
@@ -282,7 +267,8 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
                   </Box>
                   <Box className="linkGruopBox">
                     <span className="linkGruopLabel">CONTENT FOR YOU</span>
-                    <CustomListItem href={useBaseUrl(PATHS[3].path)} target={PATHS[3].target} label={PATHS[3].label} icon={PATHS[3].icon} isSelected={pathname===PATHS[3].path}/>
+                    <CustomListItem href={useBaseUrl(PATHS[3].subPaths[0].path)} target={PATHS[3].subPaths[0].target} label={PATHS[3].subPaths[0].label} icon={PATHS[3].subPaths[0].icon} isSelected={pathname===PATHS[3].subPaths[0].path}/>
+                    <CustomListItem href={useBaseUrl(PATHS[3].subPaths[1].path)} target={PATHS[3].subPaths[1].target} label={PATHS[3].subPaths[1].label} icon={PATHS[3].subPaths[1].icon} isSelected={pathname===PATHS[3].subPaths[1].path}/>
                     <CustomListItem href={useBaseUrl(PATHS[4].path)} target={PATHS[4].target} label={PATHS[4].label} icon={PATHS[4].icon} isSelected={pathname===PATHS[4].path}/>
                     <CustomListItem href={useBaseUrl(PATHS[1].subPaths[5].path)} 
                     target={PATHS[1].subPaths[5].target} 
@@ -296,7 +282,7 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
                   </Box>
                   <Box className="linkGruopBox">
                     <span className="linkGruopLabel">OPTIONS</span>
-                    <CustomListItem href="https://es.eoscostarica.io/" target="_blank" label="Spanish website" icon={<LanguageIcon style={{width:'20px'}}/>} isSelected={false}/>
+                    <CustomListItem href="https://es.eoscostarica.io/" target="_blank" label="Spanish website" icon={'img/icons/navbar/global.png'} isSelected={false}/>
                   </Box>
                 </List>
               </Box>

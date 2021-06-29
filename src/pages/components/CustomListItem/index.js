@@ -4,15 +4,18 @@ import Link from '@material-ui/core/Link'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
+import useBaseUrl from "@docusaurus/useBaseUrl"
 
 const GenericListItem = withStyles({
   root: {
     paddingLeft:'20px',
     paddingRight: 0,
     borderLeft: 'solid 5px white',
+    '&$selected': {
+      backgroundColor: 'rgb(84, 132, 179,0.1)',
+    }
   },
   selected: {
-    backgroundColor: '#F8F8F8',
     borderLeft: 'solid 5px #5484b3',
   }
 })((props) => <ListItem {...props} />);
@@ -41,8 +44,8 @@ const CustomListItem = ( {label, href, target, icon, isSelected}) => {
   return (
     <Link href={href} target={target} style={{textDecoration: 'none'}}>
       <GenericListItem button selected={isSelected}>
-        <GenericListItemIcon >
-         {icon}
+        <GenericListItemIcon style={{width:'50px'}}>
+          <img src={useBaseUrl(icon)} alt={label} />
         </GenericListItemIcon>
         <GenericListItemText primary={label} />
       </GenericListItem>
