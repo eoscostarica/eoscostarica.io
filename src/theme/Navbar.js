@@ -11,7 +11,6 @@ import MenuIcon from '@material-ui/icons/Menu'
 import List from '@material-ui/core/List'
 import { useLocation } from 'react-router-dom'
 
-import GlobalIcon from '../../static/img/icons/globalBlack.svg'
 import CustomListItem from '../pages/components/CustomListItem'
 
 const PATHS = [
@@ -44,7 +43,7 @@ const PATHS = [
         espPath: "/compañia/",
         label: "The company",
         target: '_self',
-        icon: 'img/icons/navbar/home.png'
+        icon: 'img/icons/navbar/company.png'
       },
       {
         path: "/team/",
@@ -98,7 +97,7 @@ const PATHS = [
         espPath: "https://guias.eoscostarica.io/",
         label: "Dev resources",
         target: '_self',
-        icon: 'img/icons/navbar/learning.png'
+        icon: 'img/icons/navbar/dev-resource.png'
       },
       {
         path: "/do-you-need-blockchain/",
@@ -206,10 +205,10 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
     return (
       <>
         <IconButton
-          style={{padding: '5px'}}
+          style={{padding:'0', marginTop:'-10px'}}
           onClick={handleClickMenuLang}
         >
-          <img src={GlobalIcon} style={{width:'20px', height: '20px'}}/>
+          <img src={'../../static/img/icons/navbar/global.png'} style={{width:'45px', height: '45px'}}/>
         </IconButton>
         {true && (
           <Box  className={clsx("boxLanguagesSelector",{["boxLanguagesSelectorActive"]: langMenuHandler})} onMouseLeave={handleCloseMenuLang}>

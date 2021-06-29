@@ -44,7 +44,7 @@ const CustomListItem = ( {label, href, target, icon, isSelected}) => {
   return (
     <Link href={href} target={target} style={{textDecoration: 'none'}}>
       <GenericListItem button selected={isSelected}>
-        <GenericListItemIcon >
+        <GenericListItemIcon style={{width:'50px'}}>
           <img src={useBaseUrl(icon)} alt={label} />
         </GenericListItemIcon>
         <GenericListItemText primary={label} />

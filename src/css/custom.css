@@ -493,8 +493,8 @@ a{
 .boxLanguagesSelector{
   z-index: 500;
   position: absolute;
-  right: 35px;
-  top: -5px;
+  right: 40px;
+  top: -7px;
   display: flex;
   border-radius: 5px;
   visibility: hidden;
