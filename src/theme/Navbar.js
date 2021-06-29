@@ -208,7 +208,7 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
           style={{padding:'0', marginTop:'-10px'}}
           onClick={handleClickMenuLang}
         >
-          <img src={'../../static/img/icons/navbar/global.png'} style={{width:'45px', height: '45px'}}/>
+          <img src={useBaseUrl('img/icons/navbar/global.png')} style={{width:'45px', height: '45px'}}/>
         </IconButton>
         {true && (
           <Box  className={clsx("boxLanguagesSelector",{["boxLanguagesSelectorActive"]: langMenuHandler})} onMouseLeave={handleCloseMenuLang}>
