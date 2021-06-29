@@ -75,7 +75,7 @@ p{
   font-size: 19px;
   letter-spacing: -0.05px;
   line-height: 25px;
-  text-align: justify;
+  text-align: left;
   margin-bottom: 0;
 }
 
@@ -1285,7 +1285,7 @@ a{
 }
 
 .sizeImageTheCompany{
-  width: 300px;
+  width: 250px;
   height: 100px;
 }
 
@@ -1687,7 +1687,7 @@ a{
   }
 
   p{
-    line-height: 18px;
+    line-height: 20px;
     font-size: 15px;
     padding-left: 25px;
     padding-right: 25px;

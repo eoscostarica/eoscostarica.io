@@ -14,11 +14,11 @@ const WeAreOneGroup = () => {
                 <Grid container>
                     <Grid item xs={12} md={3}>
                         <Box className="imgBoxLogos">
-                            <a target="_blank" href="http://latamlink.io/">
+                            <a target="_blank" href="https://eosio.lacchain.net/en/">
                                 <img
                                     className="oneGroupLogo"
-                                    alt="LatamLink"
-                                    src={useBaseUrl("img/logos/Group47.svg")}
+                                    alt="LACChain EOSIO"
+                                    src={useBaseUrl("img/logos/lacchain-eosio.png")}
                                 />
                             </a>
                         </Box>
