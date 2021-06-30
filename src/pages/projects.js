@@ -26,7 +26,7 @@ const ProjectsList = [
     linkText:"See the EOS Mainnet Dashboard."
   },
   {
-    img:"img/imagenotavailable.png",
+    img:"img/logos/ggoods.svg",
     name:"gGoods",
     details:"gGoods is an open-source NFT standard that lets organizations create tokens to seek funding. The patron can then use their NFTs as assets in games and apps. ",
     link:"https://ggoods.io/",
