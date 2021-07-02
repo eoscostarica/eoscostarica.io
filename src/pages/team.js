@@ -112,7 +112,7 @@ const DevelopTeam = [
         bio:"Understanding the people's needs is crucial to create user interfaces for hi-tech apps and mediate among users, designers, and developers.",
         linkedIn:"https://www.linkedin.com/in/jmurilloux/",
         twitter:"https://twitter.com/Oquedo",
-        color:"#ffffff"
+        color:"#f8f8f8"
     },
     {
         img:"img/team/kevin.jpg",
@@ -139,7 +139,7 @@ const DevelopTeam = [
         bio:"The tech world is always evolving, so I believe one must be fearless.",
         linkedIn:"https://www.linkedin.com/in/stephaniedelgadobrenes/",
         twitter:"",
-        color:"#f8f8f8"
+        color:"#ffffff"
     },
     {
         img:"img/team/teto.jpg",
@@ -148,7 +148,7 @@ const DevelopTeam = [
         bio:"Keeping a happy team will most likely guarantee a successful final result.",
         linkedIn:"https://www.linkedin.com/in/terencio-gomez-14784ba3/",
         twitter:"",
-        color:"#ffffff"
+        color:"#f8f8f8"
     }
 ]
 
