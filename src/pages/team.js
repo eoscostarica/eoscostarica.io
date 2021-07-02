@@ -55,7 +55,7 @@ const MarketingSalesTeam = [
         bio:"I believe that creativity and innovation are indispensable to propose efficient and disruptive solutions.",
         linkedIn:"https://www.linkedin.com/in/johanna-yee-bonilla-abab2017a/",
         twitter:"",
-        color:"#ffffff"
+        color:"#f8f8f8"
     },
     {
         img:"img/team/luisD.jpg",
@@ -64,7 +64,7 @@ const MarketingSalesTeam = [
         bio:"I believe that communicating new techs plays a crucial role in widespread adoption.",
         linkedIn:"https://www.linkedin.com/in/ldrojas/",
         twitter:"https://twitter.com/ldrojas",
-        color:"#f8f8f8"
+        color:"#ffffff"
     }
 ]
 
