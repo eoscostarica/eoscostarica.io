@@ -49,6 +49,15 @@ const ManagementTeam = [
 
 const MarketingSalesTeam = [
     {
+        img:"img/team/johanna.jpg",
+        name:"Johanna Yee",
+        position:"Art Director & Brand Manager",
+        bio:"I believe that creativity and innovation are indispensable to propose efficient and disruptive solutions.",
+        linkedIn:"https://www.linkedin.com/in/johanna-yee-bonilla-abab2017a/",
+        twitter:"",
+        color:"#ffffff"
+    },
+    {
         img:"img/team/luisD.jpg",
         name:"Luis Diego Rojas",
         position:"Communications and Content Strategist",
@@ -56,16 +65,7 @@ const MarketingSalesTeam = [
         linkedIn:"https://www.linkedin.com/in/ldrojas/",
         twitter:"https://twitter.com/ldrojas",
         color:"#f8f8f8"
-    },
-    {
-        img:"img/team/rodolfo.jpg",
-        name:"Rodolfo Perez",
-        position:"Art Director & Brand Manager",
-        bio:"Like people, every company also has to develop its own essence, a soul, this is what really compounds an identity.",
-        linkedIn:"https://www.linkedin.com/in/rodolfo-eduardo-p%C3%ABrez-nava-73442164/",
-        twitter:"https://twitter.com/monsieurRoaf",
-        color:"#ffffff"
-    },
+    }
 ]
 
 const DevelopTeam = [
@@ -81,7 +81,7 @@ const DevelopTeam = [
     {
         img:"img/team/angelo.jpg",
         name:"Angelo Castro",
-        position:"Intern",
+        position:"Jr Full Stack Developer",
         bio:"I’m ready to develop innovative ideas and face new challenges.",
         linkedIn:"https://www.linkedin.com/in/angelo-castro-gamboa/",
         twitter:"",
@@ -106,15 +106,6 @@ const DevelopTeam = [
         color:"#ffffff"
     },
     {
-        img:"img/team/jean.jpg",
-        name:"Jean Vega",
-        position:"Intern",
-        bio:"I enjoy learning and experimenting with new tech, especially to acquire knowledge in different application areas.",
-        linkedIn:"https://www.linkedin.com/in/jeanvegad/",
-        twitter:"",
-        color:"#f8f8f8"
-    },
-    {
         img:"img/team/jorge.jpg",
         name:"Jorge Murillo",
         position:"Sr. UX Designer",
@@ -122,15 +113,6 @@ const DevelopTeam = [
         linkedIn:"https://www.linkedin.com/in/jmurilloux/",
         twitter:"https://twitter.com/Oquedo",
         color:"#ffffff"
-    },
-    {
-        img:"img/team/justin.jpg",
-        name:"Justin Castillo",
-        position:"Intern",
-        bio:"I strive to be part of the change, not just a distant gear.",
-        linkedIn:"https://www.linkedin.com/in/jacv/",
-        twitter:"https://twitter.com/_JustinCast",
-        color:"#f8f8f8"
     },
     {
         img:"img/team/kevin.jpg",
@@ -147,7 +129,7 @@ const DevelopTeam = [
         position:"Intern",
         bio:"Programming reflects who we are; let's do something awesome.",
         linkedIn:"https://www.linkedin.com/in/leister-francisco-alvarez-campos-65b7801bb/",
-        twitter:"",
+        twitter:"https://twitter.com/leisterac",
         color:"#f8f8f8"
     },
     {
