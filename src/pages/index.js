@@ -43,7 +43,7 @@ const Home = () => {
         {isDesktop && 
           <Box className="sectionHero">
           <Box className="titleBox">
-            <h1>Enterprise Blockchain Development <br /> to Fit Your Needs</h1>
+            <h1>Enterprise Blockchain Solutions <br/> That Fit Your Needs</h1>
           </Box>
           <p>
             Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.
@@ -57,7 +57,7 @@ const Home = () => {
         {isMobile && 
           <Box className="sectionHeroMobile">
             <Box className="titleBox">
-                <h1>Enterprise Blockchain <br /> Development to <br /> Fit Your Needs</h1>
+                <h1>Enterprise Blockchain <br/> Solutions That <br/> Fit Your Needs</h1>
             </Box>
             <p>
               Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> 
