@@ -4,9 +4,16 @@
         <title>EOSIO Enterprise Blockchain Development Services - EOS Costa Rica Blog</title>
         <link>https://eoscostarica.io/blog</link>
         <description>EOSIO Enterprise Blockchain Development Services - EOS Costa Rica Blog</description>
-        <lastBuildDate>Thu, 22 Apr 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 16 Jul 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Official Launch of EOSIO Dashboard: EOSIO Networks Data Visualization]]></title>
+            <link>https://eoscostarica.io/blog/eosio-dashboard-launch</link>
+            <guid>eosio-dashboard-launch</guid>
+            <pubDate>Fri, 16 Jul 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Role of NFTs for Enterprise]]></description>
+        </item>
         <item>
             <title><![CDATA[The Role of NFTs for Enterprise]]></title>
             <link>https://eoscostarica.io/blog/nfts-for-enterprise</link>
