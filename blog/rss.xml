@@ -4,9 +4,16 @@
         <title>EOSIO Enterprise Blockchain Development Services - EOS Costa Rica Blog</title>
         <link>https://eoscostarica.io/blog</link>
         <description>EOSIO Enterprise Blockchain Development Services - EOS Costa Rica Blog</description>
-        <lastBuildDate>Fri, 16 Jul 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 29 Jul 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[What LACChain EOSIO, the New EOSIO Network, Will Represent for Latin America]]></title>
+            <link>https://eoscostarica.io/blog/lacchain-eosio-launch</link>
+            <guid>lacchain-eosio-launch</guid>
+            <pubDate>Thu, 29 Jul 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Get to Know LACChain EOSIO]]></description>
+        </item>
         <item>
             <title><![CDATA[Official Launch of EOSIO Dashboard: EOSIO Networks Data Visualization]]></title>
             <link>https://eoscostarica.io/blog/eosio-dashboard-launch</link>
