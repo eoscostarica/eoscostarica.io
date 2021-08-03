@@ -175,7 +175,6 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
   }
 
   const translateSite = () => {
-    console.log('pathname: ', pathname)
     window.open(`https://es.eoscostarica.io${getSpanishPath(pathname)}`,'_self')
   }
 
