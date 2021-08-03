@@ -390,7 +390,7 @@ const BlockProducer = () => {
                   The EOSIO Dashboard is an open-source project that allows
                   users to visualize the rewards distribution along the EOS
                   network to seek accountability and transparency.{" "}
-                  <a href="https://mainnet.eosio.cr/" target="_blank"> Read more about EOSIO Dashboard.</a>
+                  <a href="https://mainnet.eosio.online/" target="_blank">See the EOS Mainnet Dashboard.</a>
                 </p>
               </Grid>
             </Grid>
@@ -555,7 +555,7 @@ const BlockProducer = () => {
                 </Box>
                 <p>
                   We develop and support open- source projects such as EOS Rate,
-                  LatamLink, Lifebank, EOSIO Dashboard, and many more that strive
+                  LACChain EOSIO, Lifebank, EOSIO Dashboard, and many more that strive
                   to push the EOSIO ecosystem forward. These projects are built by
                   talented developers and professionals that believe in the
                   benefits of the network.

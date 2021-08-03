@@ -6,9 +6,9 @@
 		"code_of_conduct": "https://eoscostarica.io/block-producer/#code-of-conduct",
 		"ownership_disclosure": "https://eoscostarica.io/block-producer/#ownership-disclosure",
 		"email": "bp@eosio.cr",
-		"github_user": ["edgar-eoscostarica", "adriexnet", "tetogomez", "kecoco16", "murillojorge","justincast", "kuronosec", "xavier506", "ldrojas"],
+		"github_user": ["edgar-eoscostarica", "adriexnet", "tetogomez", "kecoco16", "murillojorge", "kuronosec", "xavier506", "ldrojas"],
 		"chain_resources": "",
-		"other_resources": ["https://eosrate.io", "https://guide.eoscostarica.io", "https://guias.eoscostarica.io"],
+		"other_resources": ["https://jungle.eosio.online","https://eosrate.io", "https://guide.eoscostarica.io", "https://guias.eoscostarica.io"],
 		"branding": {
 			"logo_256": "https://eoscostarica.io/img/logos/eos-CostaRica-256x256.png",
 			"logo_1024": "https://eoscostarica.io/img/logos/eos-CostaRica-1024x1024.png",

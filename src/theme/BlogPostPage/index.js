@@ -30,7 +30,6 @@ import LanguageIcon from '@material-ui/icons/Language'
 
 import BlogPostPaginator from '@theme/BlogPostPaginator'
 import TOC from '@theme/TOC'
-import IconEdit from '@theme/IconEdit'
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
@@ -49,8 +48,7 @@ function BlogPostPage(props) {
     readingTime,
     tags,
     nextItem,
-    prevItem,
-    editUrl
+    prevItem
   } = metadata;
   const {
     author,
@@ -203,16 +201,6 @@ function BlogPostPage(props) {
               <Grid item xs={12} md={8}>
                 <Box className="blogMarkdown">
                   <BlogPostContents />
-                  <Box style={{marginTop: '20px'}}>
-                    {editUrl && 
-                      <a 
-                        href={editUrl}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                      >
-                        <IconEdit /> Edit this page
-                      </a>}
-                  </Box>
                 </Box>
               </Grid>
               <Grid item xs={12} md={4}>

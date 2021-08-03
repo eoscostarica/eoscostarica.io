@@ -21,12 +21,12 @@ const ProjectsList = [
     img:"img/logos/eosio.svg",
     name:"EOSIO Dashboard",
     details:"The EOSIO Dashboard is an open-source project that allows users to visualize the rewards distribution along the EOS network to seek accountability and transparency. ",
-    link:"https://mainnet.eosio.cr/",
+    link:"https://mainnet.eosio.online/",
     color:"#f8f8f8",
-    linkText:"Read more about EOSIO Dashboard."
+    linkText:"See the EOS Mainnet Dashboard."
   },
   {
-    img:"img/imagenotavailable.png",
+    img:"img/logos/ggoods.svg",
     name:"gGoods",
     details:"gGoods is an open-source NFT standard that lets organizations create tokens to seek funding. The patron can then use their NFTs as assets in games and apps. ",
     link:"https://ggoods.io/",
@@ -162,9 +162,9 @@ const OurProjects = () => {
                 <Box className="projectsGridLeft">
                   <Box className="imgBoxProjects">
                     <img
-                      alt="LatamLink"
-                      className="sizeImageTheCompany"
-                      src={useBaseUrl("img/logos/Group47.svg")}
+                      alt="LACChain EOSIO"
+                      style={{width:'450px'}}
+                      src={useBaseUrl("img/logos/lacchain-eosio.svg")}
                     />
                   </Box>
                 </Box>
@@ -172,16 +172,14 @@ const OurProjects = () => {
               <Grid  item xs={12} md={6}>
                 <Box className="projectsGridRight">
                   <Box className="h3Box">
-                    <h3 >LatamLink</h3>
+                    <h3 >LACChain EOSIO</h3>
                   </Box>
                   <p>
-                    We are part of this voluntary regional alliance, led by Latin
-                    American technology companies to offer an EOSIO-based testnet to
-                    the <a href="https://www.lacchain.net/" target="_blank"> LACChain</a>{" "} 
-                    initiative, a program to accelerate the development
-                    of the blockchain ecosystem in the region.{" "}
-                    <a href="http://latamlink.io/" target="_blank">
-                      Discover more about LatamLink.
+                    We are part of LACChain EOSIO, an open-source
+                    initiative that offers an EOSIO blockchain
+                    network that integrates into LACChain.{" "}
+                    <a href="https://eosio.lacchain.net/en/" target="_blank">
+                      Discover more about LACChain EOSIO.
                     </a>
                   </p>
                 </Box>

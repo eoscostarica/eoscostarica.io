@@ -17,7 +17,7 @@ import ContactUsBanner from './components/ContactUsBanner'
 import WeAreOneGroup from './components/WeAreOneGroup'
 
 const MetaData={
-  title:"Enterprise Blockchain Solutions | EOSIO",
+  title:"Enterprise Blockchain Development | EOSIO",
   description:"EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
   img:"img/metaImgBlack.png",
   hrefLangPath: "https://es.eoscostarica.io/"
@@ -43,7 +43,7 @@ const Home = () => {
         {isDesktop && 
           <Box className="sectionHero">
           <Box className="titleBox">
-            <h1>Enterprise Blockchain Solutions <br /> That Fit Your Needs</h1>
+            <h1>Enterprise Blockchain Solutions <br/> That Fit Your Needs</h1>
           </Box>
           <p>
             Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.
@@ -57,7 +57,7 @@ const Home = () => {
         {isMobile && 
           <Box className="sectionHeroMobile">
             <Box className="titleBox">
-                <h1>Enterprise Blockchain <br /> Solutions That <br /> Fit Your Needs</h1>
+                <h1>Enterprise Blockchain <br/> Solutions That <br/> Fit Your Needs</h1>
             </Box>
             <p>
               Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> 
@@ -500,7 +500,6 @@ const Home = () => {
     )
   }
 
-
   const SomeProjects = () => {
     return (
       <Box className="containerSec">
@@ -520,9 +519,9 @@ const Home = () => {
                 <Box className="projectsGridLeft">
                   <Box className="imgBoxProjects">
                     <img
-                      alt="LatamLink"
-                      className="sizeImageTheCompany"
-                      src={useBaseUrl("img/logos/Group47.svg")}
+                      alt="LACChain EOSIO"
+                      style={{width: '450px'}}
+                      src={useBaseUrl("img/logos/lacchain-eosio.svg")}
                     />
                   </Box>
                 </Box>
@@ -530,16 +529,14 @@ const Home = () => {
               <Grid  item xs={12} md={6}>
                 <Box className="projectsGridRight">
                   <Box className="h3Box">
-                    <h3 >LatamLink</h3>
+                    <h3 >LACChain EOSIO</h3>
                   </Box>
                   <p>
-                    We are part of this voluntary regional alliance, led by Latin
-                    American technology companies to offer an EOSIO-based testnet to
-                    the <a href="https://www.lacchain.net/" target="_blank"> LACChain</a>{" "} 
-                    initiative, a program to accelerate the development
-                    of the blockchain ecosystem in the region.{" "}
-                    <a href="http://latamlink.io/" target="_blank">
-                      Discover more about LatamLink.
+                    We are part of LACChain EOSIO, an open-source
+                    initiative that offers an EOSIO blockchain
+                    network that integrates into LACChain.{" "}
+                    <a href="https://eosio.lacchain.net/en/" target="_blank">
+                      Discover more about LACChain EOSIO
                     </a>
                   </p>
                 </Box>
