@@ -1,32 +1,25 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[43,5,16,17,78,92,93],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[53,5,17,78,92,93],{
 
-/***/ 115:
+/***/ 122:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var react_parallax__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(234);
-/* harmony import */ var react_parallax__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_parallax__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(173);
-/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_responsive__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(728);
-/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(794);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(152);
-/* harmony import */ var _theme_Layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(233);
-/* harmony import */ var _material_ui_icons_Telegram__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(756);
-/* harmony import */ var _material_ui_icons_Telegram__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Telegram__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _material_ui_icons_LinkedIn__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(213);
-/* harmony import */ var _material_ui_icons_LinkedIn__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_LinkedIn__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(212);
-/* harmony import */ var _material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _material_ui_icons_GitHub__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(217);
-/* harmony import */ var _material_ui_icons_GitHub__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_GitHub__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(166);
-/* harmony import */ var _components_LacchainForm__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(69);
-var MetaData={title:"EOS Costa Rica: Create a LACChain EOSIO account",description:"LACChain EOSIO is a blockchain network for Latin America and the Caribbean powered by EOSIO technology. Contact EOS Costa Rica to create an account.",img:"img/metaImgBlack.png",hrefLangPath:"https://es.eoscostarica.io/lacchain"};var LacchainLanding=function LacchainLanding(){var isMobile=Object(react_responsive__WEBPACK_IMPORTED_MODULE_3__["useMediaQuery"])({query:'(max-width: 960px)'});var isDesktop=Object(react_responsive__WEBPACK_IMPORTED_MODULE_3__["useMediaQuery"])({query:'(min-width: 960px)'});var history=Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[/* useHistory */ "k"])();var refLacchainForm=Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);var handleScrollLacchainForm=function handleScrollLacchainForm(){return refLacchainForm.current.scrollIntoView({behavior:'smooth',block:'start',inline:'nearest'});};var handleChange=function handleChange(panel){return function(event,newExpanded){setExpanded(newExpanded?panel:false);};};Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function(){handleChange('panel_SoftDev');},[]);var HeroSection=function HeroSection(){return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"containerSec"},isDesktop&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"sectionHero"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"titleBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1",null,"EOS Costa Rica: Partner of ",/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br",null)," LACChain EOSIO")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"LACChain EOSIO is a blockchain network that deploys a public permissioned version of EOSIO technology and integrates it into the IDB- backed program LACChain."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"buttonBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button",{className:"buttonPrimary",onClick:handleScrollLacchainForm},"Create Account"))),isMobile&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"sectionHeroMobile"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"titleBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1",null,"EOS Costa Rica: Partner of LACChain EOSIO")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"LACChain EOSIO is a blockchain network that deploys a public permissioned version of EOSIO technology and integrates it into the IDB- backed program LACChain."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"buttonBoxMobile"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button",{className:"buttonPrimary",onClick:handleScrollLacchainForm},"Create Account"))));};var JoinLacchainEosio=function JoinLacchainEosio(){var _clsx;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"containerSec"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:Object(clsx__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"])("section",(_clsx={},_clsx["sectionPadding"]=isMobile,_clsx))},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"titleBox"},isDesktop&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2",null,"Why Join LACChain EOSIO?"),isMobile&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment,null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2",null,"Why Join LACChain EOSIO?"))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{container:true,spacing:4},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,xs:12,md:4},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"h3Box"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",null,"Test and build your apps")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"LACChain EOSIO enables you to build and test blockchain apps and infrastructure. It provides a faucet and local environment for developers.")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,xs:12,md:4},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"h3Box"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",null,"Learning resources")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"It offers documentation, tutorials, and resources for you to learn about blockchain technology. You will belong to a regional community of developers and organizations.")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,xs:12,md:4},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"h3Box"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",null,"Free EOSIO developer tools")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"LACChain EOSIO provides a monitor to visualize network data, a block explorer with data about accounts, and the dfuse API integrator.")))));};var SocialMediaBanner=function SocialMediaBanner(){return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"containerBlack"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"sectionPadding"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{container:true,justify:"center"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,xs:12,md:4},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:isMobile?"spacingBox":""},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{className:Object(clsx__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"])("white","centerTextOnMobile")},"Follow LACChain EOSIO"))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,xs:12,md:2},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:isMobile?"centerBox":"boxFlexEnd"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{className:Object(clsx__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"])("noMarginsTop","socialMediaAnimation"),href:"https://twitter.com/EOSCostaRica",target:"_blank"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Twitter__WEBPACK_IMPORTED_MODULE_10___default.a,{className:"iconSocialMediaAnimation",style:{width:'45px',height:'45px',cursor:'pointer',color:'#ffffff'}})),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{className:Object(clsx__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"])("noMarginsTop","socialMediaAnimation"),href:"https://www.instagram.com/eoscostarica/",target:"_blank"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Telegram__WEBPACK_IMPORTED_MODULE_8___default.a,{className:"iconSocialMediaAnimation",style:{width:'45px',height:'45px',cursor:'pointer',color:'#ffffff'}})))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,xs:12,md:2},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"centerBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{className:Object(clsx__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"])("noMarginsTop","socialMediaAnimation"),href:"https://www.linkedin.com/company/eoscostarica/mycompany/",target:"_blank"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_LinkedIn__WEBPACK_IMPORTED_MODULE_9___default.a,{className:"iconSocialMediaAnimation",style:{width:'45px',height:'45px',cursor:'pointer',color:'#ffffff'}})),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{className:Object(clsx__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"])("noMarginsTop","socialMediaAnimation"),href:"https://github.com/eoscostarica",target:"_blank"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_GitHub__WEBPACK_IMPORTED_MODULE_11___default.a,{className:"iconSocialMediaAnimation",style:{width:'45px',height:'45px',cursor:'pointer',color:'#ffffff'}})))))));};var GeneralInfo=function GeneralInfo(){return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"containerSec"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"sectionPadding"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"spacingBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"spacingBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{container:true,spacing:5},isDesktop&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,md:6},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"imgBoxRight"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img",{className:"imgKnow",src:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_12__[/* default */ "a"])("img/landingLacchain1.jpg")}))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,md:6},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"h3Box"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",null,"LACChain EOSIO at a Glance")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"LACChain EOSIO offers a blockchain public permissioned version of EOSIO technology-based network that integrates into LACChain. It enables developers and organizations to test their decentralized applications and infrastructure within a testing environment."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:isMobile?'centerBox':'',style:{marginTop:'30px',marginBottom:'30px'}},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button",{className:"buttonSecondary",onClick:function onClick(){return window.open('https://eosio.lacchain.net/en');}},"Learn More"))),isMobile&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,md:6},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"imgBoxLeft"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img",{className:"imgKnow",src:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_12__[/* default */ "a"])("img/landingLacchain1.jpg")}))))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"doubleSpacingBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{container:true,spacing:5},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{style:{paddingTop:'80px'},item:true,md:6},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"h3Box"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",null,"The Members of LACChain EOSIO")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"LACChain EOSIO is developed by EOS Costa Rica and EOS Argentina, with the support of LACChain, a program of the IDB Lab (part of the Inter-American Development Bank). Some additional supporters include EOS Venezuela, Block.one, dfuse, and EOS Detroit.")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,md:6},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"imgBoxLeft"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img",{className:"imgKnow",src:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_12__[/* default */ "a"])("img/landingLacchain2.jpg")}))))))));};return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_theme_Layout__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"],{title:MetaData.title,description:MetaData.description,image:MetaData.img,hrefLangPath:MetaData.hrefLangPath},isDesktop&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"mainContainer"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_parallax__WEBPACK_IMPORTED_MODULE_2__["Parallax"],{strength:800},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_parallax__WEBPACK_IMPORTED_MODULE_2__["Background"],{className:"bgParallax"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"imgParallax"})),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeroSection,null),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(JoinLacchainEosio,null),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SocialMediaBanner,null)),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GeneralInfo,null),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{ref:refLacchainForm},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_LacchainForm__WEBPACK_IMPORTED_MODULE_13__["default"],null))),isMobile&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"mainContainer"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeroSection,null),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(JoinLacchainEosio,null),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SocialMediaBanner,null),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GeneralInfo,null),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{ref:refLacchainForm},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_LacchainForm__WEBPACK_IMPORTED_MODULE_13__["default"],null))));};/* harmony default export */ __webpack_exports__["default"] = (LacchainLanding);
+/* harmony import */ var _theme_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(233);
+/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(173);
+/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_responsive__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(728);
+/* harmony import */ var react_parallax__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(234);
+/* harmony import */ var react_parallax__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_parallax__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _theme_BlogPostItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(720);
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */var colors=["rgb(240,240,240,0.5)","rgb(255,255,255,0)"];var metaData={title:"EOS Costa Rica: Blog - Read About Blockchain",description:"Find useful articles about how blockchain technology can improve security and transparency in enterprise operations.",img:"img/metaImgBlack.png"};function BlogListPage(props){var items=props.items;var isMobile=Object(react_responsive__WEBPACK_IMPORTED_MODULE_2__["useMediaQuery"])({query:'(max-width: 960px)'});var isDesktop=Object(react_responsive__WEBPACK_IMPORTED_MODULE_2__["useMediaQuery"])({query:'(min-width: 960px)'});var HeroSection=function HeroSection(){return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{className:"containerSec"},isDesktop&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{className:"sectionHeroBlog",style:{marginBottom:"10px"}},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{className:"titleBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1",null,"Blog"))),isMobile&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{className:"sectionHeroMobileBlog"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{className:"titleBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1",null,"Blog"))));};var ListArticles=function ListArticles(){return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{className:"containerSec"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{className:"section"},items.map(function(_ref,index){var BlogPostContent=_ref.content;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_theme_BlogPostItem__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{key:BlogPostContent.metadata.permalink,frontMatter:BlogPostContent.frontMatter,metadata:BlogPostContent.metadata,truncated:BlogPostContent.metadata.truncated,color:colors[index%2],isMobile:isMobile});})));};return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_theme_Layout__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"],{title:metaData.title,description:metaData.description,image:metaData.img},isDesktop&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{className:"mainContainer"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_parallax__WEBPACK_IMPORTED_MODULE_4__["Parallax"],{strength:800},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_parallax__WEBPACK_IMPORTED_MODULE_4__["Background"],{className:"bgParallax"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{className:"imgParallax"})),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeroSection,null),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListArticles,null))),isMobile&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{className:"mainContainer"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeroSection,null),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ListArticles,null)));}/* harmony default export */ __webpack_exports__["default"] = (BlogListPage);
 
 /***/ }),
 
@@ -3439,7 +3432,7 @@ var react_router = __webpack_require__(2);
 var CustomListItem = __webpack_require__(58);
 
 // CONCATENATED MODULE: ./src/theme/Navbar.js
-var Navbar_ref;var PATHS=[{dropDown:false,path:"/",espPath:"/",label:"Home",target:'_self',icon:'img/icons/navbar/home.png'},{dropDown:true,path:"/services/",espPath:"/servicios/",label:"About us",target:'_self',markerSize:"70px",subPaths:[{path:"/services/",espPath:"/servicios/",label:"Services",target:'_self',icon:'img/icons/navbar/services.png'},{path:"/the-company/",espPath:"/compañia/",label:"The company",target:'_self',icon:'img/icons/navbar/company.png'},{path:"/team/",espPath:"/equipo/",label:"Team",target:'_self',icon:'img/icons/navbar/team.png'},{path:"/projects/",espPath:"/proyectos/",label:"Projects",target:'_self',icon:'img/icons/navbar/projects.png'},{path:"/block-producer/",espPath:"/productor-de-bloques/",label:"Block producer",target:'_self',icon:'img/icons/navbar/blockproducer.png'},{path:"/press/",espPath:"/prensa/",label:"Press",target:'_self',icon:'img/icons/navbar/press.png'}]},{dropDown:false,path:"/industries/",espPath:"/industrias/",label:"Industries",target:'_self',icon:'img/icons/navbar/industries.png'},{dropDown:true,path:"https://guide.eoscostarica.io/",espPath:"https://guias.eoscostarica.io/",label:"Learning",target:'_self',markerSize:"70px",icon:'img/icons/navbar/learning.png',subPaths:[{path:"https://guide.eoscostarica.io/",espPath:"https://guias.eoscostarica.io/",label:"Dev resources",target:'_self',icon:'img/icons/navbar/dev-resource.png'},(Navbar_ref={path:"/do-you-need-blockchain/",label:"/do-you-need-blockchain/"},Navbar_ref["label"]="Corp resources",Navbar_ref.target='_self',Navbar_ref.icon='img/icons/navbar/archive.png',Navbar_ref)]},{dropDown:false,path:"/blog/",espPath:"/blog/",label:"Blog",target:'_self',icon:'img/icons/navbar/blog.png'},{dropDown:false,path:"/contact-us/",espPath:"/contactenos/",label:"Contact",target:'_self',icon:'img/icons/navbar/contact.png'}];var Navbar_NavbarMenu=function NavbarMenu(_ref2){var _clsx2,_clsx3;var isMobile=_ref2.isMobile,isDesktop=_ref2.isDesktop;var _useState=Object(react["useState"])(false),isOpen=_useState[0],setIsOpen=_useState[1];var location=Object(react_router["l" /* useLocation */])();var _useState2=Object(react["useState"])(),isBlog=_useState2[0],setIsBlog=_useState2[1];var _useState3=Object(react["useState"])(""),pathname=_useState3[0],setPathname=_useState3[1];var trigger=useScrollTrigger({disableHysteresis:true});Object(react["useEffect"])(function(){setIsBlog(location.pathname.substring(0,6)==='/blog/');},[location]);Object(react["useEffect"])(function(){if(isBlog)setPathname('/blog/');},[isBlog]);Object(react["useLayoutEffect"])(function(){var pathname=window.location.pathname;setPathname(pathname);},[]);var handlerDrawer=function handlerDrawer(){setIsOpen(!isOpen);};var isCurrentPath=function isCurrentPath(subPaths){var res=false;subPaths.map(function(item){if(pathname===item.path)res=true;});return res;};var getSpanishPath=function getSpanishPath(path){var espPath;PATHS.map(function(item){if(item.dropDown){item.subPaths.map(function(subitem){if(subitem.path===path)espPath=subitem.espPath;});}else{if(item.path===path)espPath=item.espPath;}});return espPath;};var translateSite=function translateSite(){window.open("https://es.eoscostarica.io"+getSpanishPath(pathname),'_self');};var LanguagueSelector=function LanguagueSelector(){var _clsx;var _useState4=Object(react["useState"])(false),langMenuHandler=_useState4[0],seLangMenuHandler=_useState4[1];var handleClickMenuLang=function handleClickMenuLang(){seLangMenuHandler(true);};var handleCloseMenuLang=function handleCloseMenuLang(){seLangMenuHandler(false);};var handleChangeLang=function handleChangeLang(){seLangMenuHandler(false);translateSite();};var LangItem=function LangItem(_ref3){var label=_ref3.label,handleClick=_ref3.handleClick,classN=_ref3.classN;return/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"langItemBox",onClick:handleClick},/*#__PURE__*/react_default.a.createElement("span",{className:classN,style:{fontSize:'15px'}},label));};return/*#__PURE__*/react_default.a.createElement(react_default.a.Fragment,null,/*#__PURE__*/react_default.a.createElement(IconButton["a" /* default */],{style:{padding:'0',marginTop:'-10px'},onClick:handleClickMenuLang},/*#__PURE__*/react_default.a.createElement("img",{src:Object(useBaseUrl["a" /* default */])('img/icons/navbar/global.png'),style:{width:'45px',height:'45px'}})), true&&/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:Object(clsx_m["a" /* default */])("boxLanguagesSelector",(_clsx={},_clsx["boxLanguagesSelectorActive"]=langMenuHandler,_clsx)),onMouseLeave:handleCloseMenuLang},/*#__PURE__*/react_default.a.createElement(LangItem,{label:"ES",handleClick:handleChangeLang,classN:"langItem"}),/*#__PURE__*/react_default.a.createElement("span",{style:{fontSize:'15px',padding:'5px'}},"|"),/*#__PURE__*/react_default.a.createElement(LangItem,{label:"EN",handleClick:handleCloseMenuLang,classN:"langItemActive"})));};return/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:Object(clsx_m["a" /* default */])("navBar",(_clsx2={},_clsx2["navBarScroll"]=trigger||isMobile,_clsx2))},/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"menuWrapper"},isMobile&&/*#__PURE__*/react_default.a.createElement(react_default.a.Fragment,null,/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"imgLogoBoxMobile"},/*#__PURE__*/react_default.a.createElement("a",{href:Object(useBaseUrl["a" /* default */])("/"),alt:"EOS CR LOGO"},/*#__PURE__*/react_default.a.createElement("img",{className:"imgLogoScroll",src:Object(useBaseUrl["a" /* default */])("img/logos/eoscr-logo.png"),alt:"EOS CR LOGO"}))),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"btnDrawer"},/*#__PURE__*/react_default.a.createElement(IconButton["a" /* default */],{onClick:handlerDrawer},/*#__PURE__*/react_default.a.createElement(Menu_default.a,{fontSize:"large"}))),/*#__PURE__*/react_default.a.createElement(esm_Drawer_Drawer,{anchor:'right',open:isOpen,onClose:handlerDrawer},/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"drawerContent"},/*#__PURE__*/react_default.a.createElement(List["a" /* default */],null,/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"linkGruopBox"},/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(PATHS[0].path),target:PATHS[0].target,label:PATHS[0].label,icon:PATHS[0].icon,isSelected:pathname===PATHS[0].path})),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"linkGruopBox"},/*#__PURE__*/react_default.a.createElement("span",{className:"linkGruopLabel"},"ABOUT US"),PATHS[1].subPaths.map(function(subItem){return/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{key:subItem.label},subItem.label!="Press"&&/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(subItem.path),target:subItem.target,label:subItem.label,icon:subItem.icon,isSelected:pathname===subItem.path}));}),/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(PATHS[2].path),target:PATHS[2].target,label:PATHS[2].label,icon:PATHS[2].icon,isSelected:pathname===PATHS[2].path})),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"linkGruopBox"},/*#__PURE__*/react_default.a.createElement("span",{className:"linkGruopLabel"},"CONTENT FOR YOU"),/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(PATHS[3].subPaths[0].path),target:PATHS[3].subPaths[0].target,label:PATHS[3].subPaths[0].label,icon:PATHS[3].subPaths[0].icon,isSelected:pathname===PATHS[3].subPaths[0].path}),/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(PATHS[3].subPaths[1].path),target:PATHS[3].subPaths[1].target,label:PATHS[3].subPaths[1].label,icon:PATHS[3].subPaths[1].icon,isSelected:pathname===PATHS[3].subPaths[1].path}),/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(PATHS[4].path),target:PATHS[4].target,label:PATHS[4].label,icon:PATHS[4].icon,isSelected:pathname===PATHS[4].path}),/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(PATHS[1].subPaths[5].path),target:PATHS[1].subPaths[5].target,label:PATHS[1].subPaths[5].label,icon:PATHS[1].subPaths[5].icon,isSelected:pathname===PATHS[1].subPaths[5].path})),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"linkGruopBox"},/*#__PURE__*/react_default.a.createElement("span",{className:"linkGruopLabel"},"CONTACT"),/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(PATHS[5].path),target:PATHS[5].target,label:PATHS[5].label,icon:PATHS[5].icon,isSelected:pathname===PATHS[5].path})),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"linkGruopBox"},/*#__PURE__*/react_default.a.createElement("span",{className:"linkGruopLabel"},"OPTIONS"),/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:"https://es.eoscostarica.io/",target:"_blank",label:"Spanish website",icon:'img/icons/navbar/global.png',isSelected:false})))))),isDesktop&&/*#__PURE__*/react_default.a.createElement(react_default.a.Fragment,null,/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"boxLeft"},/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"imgLogoBox"},/*#__PURE__*/react_default.a.createElement("a",{href:Object(useBaseUrl["a" /* default */])("/")},/*#__PURE__*/react_default.a.createElement("img",{className:Object(clsx_m["a" /* default */])("imgLogo",(_clsx3={},_clsx3["imgLogoScroll"]=trigger,_clsx3)),src:Object(useBaseUrl["a" /* default */])("img/logos/eoscr-logo.png"),alt:"EOS CR LOGO"})))),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"boxRight"},/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"boxLanguages"},/*#__PURE__*/react_default.a.createElement(LanguagueSelector,null)),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"boxMenuItems",id:"boxMenuItems"},PATHS.map(function(item){var _clsx4,_clsx5,_clsx6;return/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{key:item.label},!item.dropDown&&/*#__PURE__*/react_default.a.createElement(Link["a" /* default */],{className:"navBarItemTab",href:Object(useBaseUrl["a" /* default */])(item.path),target:item.target,key:item.label,style:{textDecoration:'none'}},/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"menuItem"},/*#__PURE__*/react_default.a.createElement("h5",{className:Object(clsx_m["a" /* default */])("link",(_clsx4={},_clsx4["linkActive"]=pathname===item.path,_clsx4))},item.label))),item.dropDown&&/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{tabIndex:"0",className:Object(clsx_m["a" /* default */])("menuItem","navBarItemTab")},/*#__PURE__*/react_default.a.createElement("h5",{className:Object(clsx_m["a" /* default */])("link",(_clsx5={},_clsx5["linkActive"]=isCurrentPath(item.subPaths),_clsx5))},item.label),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:Object(clsx_m["a" /* default */])("dropDownMenu",(_clsx6={},_clsx6["dropDownMenuActive"]=isCurrentPath(item.subPaths),_clsx6)),style:{width:item.markerSize}},item.subPaths.map(function(subItem){var _clsx7;return/*#__PURE__*/react_default.a.createElement(Link["a" /* default */],{className:"navBarItemTab",href:Object(useBaseUrl["a" /* default */])(subItem.path),target:subItem.target,key:subItem.label,style:{textDecoration:'none'}},/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],null,/*#__PURE__*/react_default.a.createElement("h5",{className:Object(clsx_m["a" /* default */])("menuItemDrop",(_clsx7={},_clsx7["menuItemDropActive"]=pathname===subItem.path,_clsx7))},subItem.label)));}))));}))))));};Navbar_NavbarMenu.propTypes={isDesktop:prop_types_default.a.bool,isMobile:prop_types_default.a.bool};/* harmony default export */ var Navbar = (Navbar_NavbarMenu);
+var Navbar_ref;var PATHS=[{dropDown:false,path:"/",espPath:"/",label:"Home",target:'_self',icon:'img/icons/navbar/home.png'},{dropDown:true,path:"/services/",espPath:"/servicios/",label:"About us",target:'_self',markerSize:"70px",subPaths:[{path:"/services/",espPath:"/servicios/",label:"Services",target:'_self',icon:'img/icons/navbar/services.png'},{path:"/the-company/",espPath:"/compañia/",label:"The company",target:'_self',icon:'img/icons/navbar/company.png'},{path:"/team/",espPath:"/equipo/",label:"Team",target:'_self',icon:'img/icons/navbar/team.png'},{path:"/projects/",espPath:"/proyectos/",label:"Projects",target:'_self',icon:'img/icons/navbar/projects.png'},{path:"/block-producer/",espPath:"/productor-de-bloques/",label:"Block producer",target:'_self',icon:'img/icons/navbar/blockproducer.png'},{path:"/press/",espPath:"/prensa/",label:"Press",target:'_self',icon:'img/icons/navbar/press.png'}]},{dropDown:false,path:"/industries/",espPath:"/industrias/",label:"Industries",target:'_self',icon:'img/icons/navbar/industries.png'},{dropDown:true,path:"https://guide.eoscostarica.io/",espPath:"https://guias.eoscostarica.io/",label:"Learning",target:'_self',markerSize:"70px",icon:'img/icons/navbar/learning.png',subPaths:[{path:"https://guide.eoscostarica.io/",espPath:"https://guias.eoscostarica.io/",label:"Dev resources",target:'_self',icon:'img/icons/navbar/dev-resource.png'},(Navbar_ref={path:"/do-you-need-blockchain/",label:"/do-you-need-blockchain/"},Navbar_ref["label"]="Corp resources",Navbar_ref.target='_self',Navbar_ref.icon='img/icons/navbar/archive.png',Navbar_ref)]},{dropDown:false,path:"/blog/",espPath:"/blog/",label:"Blog",target:'_self',icon:'img/icons/navbar/blog.png'},{dropDown:false,path:"/contact-us/",espPath:"/contactenos/",label:"Contact",target:'_self',icon:'img/icons/navbar/contact.png'}];var Navbar_NavbarMenu=function NavbarMenu(_ref2){var _clsx2,_clsx3;var isMobile=_ref2.isMobile,isDesktop=_ref2.isDesktop;var _useState=Object(react["useState"])(false),isOpen=_useState[0],setIsOpen=_useState[1];var location=Object(react_router["l" /* useLocation */])();var _useState2=Object(react["useState"])(),isBlog=_useState2[0],setIsBlog=_useState2[1];var _useState3=Object(react["useState"])(""),pathname=_useState3[0],setPathname=_useState3[1];var trigger=useScrollTrigger({disableHysteresis:true});Object(react["useEffect"])(function(){setIsBlog(location.pathname.substring(0,6)==='/blog/');},[location]);Object(react["useEffect"])(function(){if(isBlog)setPathname('/blog/');},[isBlog]);Object(react["useLayoutEffect"])(function(){var pathname=window.location.pathname;setPathname(pathname);},[]);var handlerDrawer=function handlerDrawer(){setIsOpen(!isOpen);};var isCurrentPath=function isCurrentPath(subPaths){var res=false;subPaths.map(function(item){if(pathname===item.path)res=true;});return res;};var getSpanishPath=function getSpanishPath(path){var espPath=path;PATHS.map(function(item){if(item.dropDown){item.subPaths.map(function(subitem){if(subitem.path===path)espPath=subitem.espPath;});}else{if(item.path===path)espPath=item.espPath;}});return espPath;};var translateSite=function translateSite(){window.open("https://es.eoscostarica.io"+getSpanishPath(pathname),'_self');};var LanguagueSelector=function LanguagueSelector(){var _clsx;var _useState4=Object(react["useState"])(false),langMenuHandler=_useState4[0],seLangMenuHandler=_useState4[1];var handleClickMenuLang=function handleClickMenuLang(){seLangMenuHandler(true);};var handleCloseMenuLang=function handleCloseMenuLang(){seLangMenuHandler(false);};var handleChangeLang=function handleChangeLang(){seLangMenuHandler(false);translateSite();};var LangItem=function LangItem(_ref3){var label=_ref3.label,handleClick=_ref3.handleClick,classN=_ref3.classN;return/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"langItemBox",onClick:handleClick},/*#__PURE__*/react_default.a.createElement("span",{className:classN,style:{fontSize:'15px'}},label));};return/*#__PURE__*/react_default.a.createElement(react_default.a.Fragment,null,/*#__PURE__*/react_default.a.createElement(IconButton["a" /* default */],{style:{padding:'0',marginTop:'-10px'},onClick:handleClickMenuLang},/*#__PURE__*/react_default.a.createElement("img",{src:Object(useBaseUrl["a" /* default */])('img/icons/navbar/global.png'),style:{width:'45px',height:'45px'}})), true&&/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:Object(clsx_m["a" /* default */])("boxLanguagesSelector",(_clsx={},_clsx["boxLanguagesSelectorActive"]=langMenuHandler,_clsx)),onMouseLeave:handleCloseMenuLang},/*#__PURE__*/react_default.a.createElement(LangItem,{label:"ES",handleClick:handleChangeLang,classN:"langItem"}),/*#__PURE__*/react_default.a.createElement("span",{style:{fontSize:'15px',padding:'5px'}},"|"),/*#__PURE__*/react_default.a.createElement(LangItem,{label:"EN",handleClick:handleCloseMenuLang,classN:"langItemActive"})));};return/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:Object(clsx_m["a" /* default */])("navBar",(_clsx2={},_clsx2["navBarScroll"]=trigger||isMobile,_clsx2))},/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"menuWrapper"},isMobile&&/*#__PURE__*/react_default.a.createElement(react_default.a.Fragment,null,/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"imgLogoBoxMobile"},/*#__PURE__*/react_default.a.createElement("a",{href:Object(useBaseUrl["a" /* default */])("/"),alt:"EOS CR LOGO"},/*#__PURE__*/react_default.a.createElement("img",{className:"imgLogoScroll",src:Object(useBaseUrl["a" /* default */])("img/logos/eoscr-logo.png"),alt:"EOS CR LOGO"}))),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"btnDrawer"},/*#__PURE__*/react_default.a.createElement(IconButton["a" /* default */],{onClick:handlerDrawer},/*#__PURE__*/react_default.a.createElement(Menu_default.a,{fontSize:"large"}))),/*#__PURE__*/react_default.a.createElement(esm_Drawer_Drawer,{anchor:'right',open:isOpen,onClose:handlerDrawer},/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"drawerContent"},/*#__PURE__*/react_default.a.createElement(List["a" /* default */],null,/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"linkGruopBox"},/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(PATHS[0].path),target:PATHS[0].target,label:PATHS[0].label,icon:PATHS[0].icon,isSelected:pathname===PATHS[0].path})),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"linkGruopBox"},/*#__PURE__*/react_default.a.createElement("span",{className:"linkGruopLabel"},"ABOUT US"),PATHS[1].subPaths.map(function(subItem){return/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{key:subItem.label},subItem.label!="Press"&&/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(subItem.path),target:subItem.target,label:subItem.label,icon:subItem.icon,isSelected:pathname===subItem.path}));}),/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(PATHS[2].path),target:PATHS[2].target,label:PATHS[2].label,icon:PATHS[2].icon,isSelected:pathname===PATHS[2].path})),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"linkGruopBox"},/*#__PURE__*/react_default.a.createElement("span",{className:"linkGruopLabel"},"CONTENT FOR YOU"),/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(PATHS[3].subPaths[0].path),target:PATHS[3].subPaths[0].target,label:PATHS[3].subPaths[0].label,icon:PATHS[3].subPaths[0].icon,isSelected:pathname===PATHS[3].subPaths[0].path}),/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(PATHS[3].subPaths[1].path),target:PATHS[3].subPaths[1].target,label:PATHS[3].subPaths[1].label,icon:PATHS[3].subPaths[1].icon,isSelected:pathname===PATHS[3].subPaths[1].path}),/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(PATHS[4].path),target:PATHS[4].target,label:PATHS[4].label,icon:PATHS[4].icon,isSelected:pathname===PATHS[4].path}),/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(PATHS[1].subPaths[5].path),target:PATHS[1].subPaths[5].target,label:PATHS[1].subPaths[5].label,icon:PATHS[1].subPaths[5].icon,isSelected:pathname===PATHS[1].subPaths[5].path})),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"linkGruopBox"},/*#__PURE__*/react_default.a.createElement("span",{className:"linkGruopLabel"},"CONTACT"),/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:Object(useBaseUrl["a" /* default */])(PATHS[5].path),target:PATHS[5].target,label:PATHS[5].label,icon:PATHS[5].icon,isSelected:pathname===PATHS[5].path})),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"linkGruopBox"},/*#__PURE__*/react_default.a.createElement("span",{className:"linkGruopLabel"},"OPTIONS"),/*#__PURE__*/react_default.a.createElement(CustomListItem["default"],{href:"https://es.eoscostarica.io/",target:"_blank",label:"Spanish website",icon:'img/icons/navbar/global.png',isSelected:false})))))),isDesktop&&/*#__PURE__*/react_default.a.createElement(react_default.a.Fragment,null,/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"boxLeft"},/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"imgLogoBox"},/*#__PURE__*/react_default.a.createElement("a",{href:Object(useBaseUrl["a" /* default */])("/")},/*#__PURE__*/react_default.a.createElement("img",{className:Object(clsx_m["a" /* default */])("imgLogo",(_clsx3={},_clsx3["imgLogoScroll"]=trigger,_clsx3)),src:Object(useBaseUrl["a" /* default */])("img/logos/eoscr-logo.png"),alt:"EOS CR LOGO"})))),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"boxRight"},/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"boxLanguages"},/*#__PURE__*/react_default.a.createElement(LanguagueSelector,null)),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"boxMenuItems",id:"boxMenuItems"},PATHS.map(function(item){var _clsx4,_clsx5,_clsx6;return/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{key:item.label},!item.dropDown&&/*#__PURE__*/react_default.a.createElement(Link["a" /* default */],{className:"navBarItemTab",href:Object(useBaseUrl["a" /* default */])(item.path),target:item.target,key:item.label,style:{textDecoration:'none'}},/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:"menuItem"},/*#__PURE__*/react_default.a.createElement("h5",{className:Object(clsx_m["a" /* default */])("link",(_clsx4={},_clsx4["linkActive"]=pathname===item.path,_clsx4))},item.label))),item.dropDown&&/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{tabIndex:"0",className:Object(clsx_m["a" /* default */])("menuItem","navBarItemTab")},/*#__PURE__*/react_default.a.createElement("h5",{className:Object(clsx_m["a" /* default */])("link",(_clsx5={},_clsx5["linkActive"]=isCurrentPath(item.subPaths),_clsx5))},item.label),/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],{className:Object(clsx_m["a" /* default */])("dropDownMenu",(_clsx6={},_clsx6["dropDownMenuActive"]=isCurrentPath(item.subPaths),_clsx6)),style:{width:item.markerSize}},item.subPaths.map(function(subItem){var _clsx7;return/*#__PURE__*/react_default.a.createElement(Link["a" /* default */],{className:"navBarItemTab",href:Object(useBaseUrl["a" /* default */])(subItem.path),target:subItem.target,key:subItem.label,style:{textDecoration:'none'}},/*#__PURE__*/react_default.a.createElement(Box["a" /* default */],null,/*#__PURE__*/react_default.a.createElement("h5",{className:Object(clsx_m["a" /* default */])("menuItemDrop",(_clsx7={},_clsx7["menuItemDropActive"]=pathname===subItem.path,_clsx7))},subItem.label)));}))));}))))));};Navbar_NavbarMenu.propTypes={isDesktop:prop_types_default.a.bool,isMobile:prop_types_default.a.bool};/* harmony default export */ var Navbar = (Navbar_NavbarMenu);
 // EXTERNAL MODULE: ./node_modules/react-responsive/dist/react-responsive.js
 var react_responsive = __webpack_require__(173);
 
@@ -8374,792 +8367,6 @@ var Modal_Modal = /*#__PURE__*/react["forwardRef"](function Modal(inProps, ref) 
 
 /***/ }),
 
-/***/ 323:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return useFormControl; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/**
- * @ignore - internal component.
- */
-
-var FormControlContext = react__WEBPACK_IMPORTED_MODULE_0__["createContext"]();
-
-if (false) {}
-
-function useFormControl() {
-  return react__WEBPACK_IMPORTED_MODULE_0__["useContext"](FormControlContext);
-}
-/* harmony default export */ __webpack_exports__["a"] = (FormControlContext);
-
-/***/ }),
-
-/***/ 324:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export hasValue */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return isFilled; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return isAdornedStart; });
-// Supports determination of isControlled().
-// Controlled input accepts its current value as a prop.
-//
-// @see https://facebook.github.io/react/docs/forms.html#controlled-components
-// @param value
-// @returns {boolean} true if string (including '') or number (including zero)
-function hasValue(value) {
-  return value != null && !(Array.isArray(value) && value.length === 0);
-} // Determine if field is empty or filled.
-// Response determines if label is presented above field or as placeholder.
-//
-// @param obj
-// @param SSR
-// @returns {boolean} False when not present or empty string.
-//                    True when any number or string with length.
-
-function isFilled(obj) {
-  var SSR = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-  return obj && (hasValue(obj.value) && obj.value !== '' || SSR && hasValue(obj.defaultValue) && obj.defaultValue !== '');
-} // Determine if an Input is adorned on start.
-// It's corresponding to the left with LTR.
-//
-// @param obj
-// @returns {boolean} False when no adornments.
-//                    True when adorned at the start.
-
-function isAdornedStart(obj) {
-  return obj.startAdornment;
-}
-
-/***/ }),
-
-/***/ 340:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return formControlState; });
-function formControlState(_ref) {
-  var props = _ref.props,
-      states = _ref.states,
-      muiFormControl = _ref.muiFormControl;
-  return states.reduce(function (acc, state) {
-    acc[state] = props[state];
-
-    if (muiFormControl) {
-      if (typeof props[state] === 'undefined') {
-        acc[state] = muiFormControl[state];
-      }
-    }
-
-    return acc;
-  }, {});
-}
-
-/***/ }),
-
-/***/ 412:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// UNUSED EXPORTS: ReCAPTCHA
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(0);
-var react_default = /*#__PURE__*/__webpack_require__.n(react);
-
-// EXTERNAL MODULE: ./node_modules/prop-types/index.js
-var prop_types = __webpack_require__(1);
-var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
-
-// CONCATENATED MODULE: ./node_modules/react-google-recaptcha/lib/esm/recaptcha.js
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
-
-
-
-
-var recaptcha_ReCAPTCHA =
-/*#__PURE__*/
-function (_React$Component) {
-  _inheritsLoose(ReCAPTCHA, _React$Component);
-
-  function ReCAPTCHA() {
-    var _this;
-
-    _this = _React$Component.call(this) || this;
-    _this.handleExpired = _this.handleExpired.bind(_assertThisInitialized(_this));
-    _this.handleErrored = _this.handleErrored.bind(_assertThisInitialized(_this));
-    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
-    _this.handleRecaptchaRef = _this.handleRecaptchaRef.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  var _proto = ReCAPTCHA.prototype;
-
-  _proto.getValue = function getValue() {
-    if (this.props.grecaptcha && this._widgetId !== undefined) {
-      return this.props.grecaptcha.getResponse(this._widgetId);
-    }
-
-    return null;
-  };
-
-  _proto.getWidgetId = function getWidgetId() {
-    if (this.props.grecaptcha && this._widgetId !== undefined) {
-      return this._widgetId;
-    }
-
-    return null;
-  };
-
-  _proto.execute = function execute() {
-    var grecaptcha = this.props.grecaptcha;
-
-    if (grecaptcha && this._widgetId !== undefined) {
-      return grecaptcha.execute(this._widgetId);
-    } else {
-      this._executeRequested = true;
-    }
-  };
-
-  _proto.executeAsync = function executeAsync() {
-    var _this2 = this;
-
-    return new Promise(function (resolve, reject) {
-      _this2.executionResolve = resolve;
-      _this2.executionReject = reject;
-
-      _this2.execute();
-    });
-  };
-
-  _proto.reset = function reset() {
-    if (this.props.grecaptcha && this._widgetId !== undefined) {
-      this.props.grecaptcha.reset(this._widgetId);
-    }
-  };
-
-  _proto.handleExpired = function handleExpired() {
-    if (this.props.onExpired) {
-      this.props.onExpired();
-    } else {
-      this.handleChange(null);
-    }
-  };
-
-  _proto.handleErrored = function handleErrored() {
-    if (this.props.onErrored) {
-      this.props.onErrored();
-    }
-
-    if (this.executionReject) {
-      this.executionReject();
-      delete this.executionResolve;
-      delete this.executionReject;
-    }
-  };
-
-  _proto.handleChange = function handleChange(token) {
-    if (this.props.onChange) {
-      this.props.onChange(token);
-    }
-
-    if (this.executionResolve) {
-      this.executionResolve(token);
-      delete this.executionReject;
-      delete this.executionResolve;
-    }
-  };
-
-  _proto.explicitRender = function explicitRender() {
-    if (this.props.grecaptcha && this.props.grecaptcha.render && this._widgetId === undefined) {
-      var wrapper = document.createElement("div");
-      this._widgetId = this.props.grecaptcha.render(wrapper, {
-        sitekey: this.props.sitekey,
-        callback: this.handleChange,
-        theme: this.props.theme,
-        type: this.props.type,
-        tabindex: this.props.tabindex,
-        "expired-callback": this.handleExpired,
-        "error-callback": this.handleErrored,
-        size: this.props.size,
-        stoken: this.props.stoken,
-        hl: this.props.hl,
-        badge: this.props.badge
-      });
-      this.captcha.appendChild(wrapper);
-    }
-
-    if (this._executeRequested && this.props.grecaptcha && this._widgetId !== undefined) {
-      this._executeRequested = false;
-      this.execute();
-    }
-  };
-
-  _proto.componentDidMount = function componentDidMount() {
-    this.explicitRender();
-  };
-
-  _proto.componentDidUpdate = function componentDidUpdate() {
-    this.explicitRender();
-  };
-
-  _proto.componentWillUnmount = function componentWillUnmount() {
-    if (this._widgetId !== undefined) {
-      this.delayOfCaptchaIframeRemoving();
-      this.reset();
-    }
-  };
-
-  _proto.delayOfCaptchaIframeRemoving = function delayOfCaptchaIframeRemoving() {
-    var temporaryNode = document.createElement("div");
-    document.body.appendChild(temporaryNode);
-    temporaryNode.style.display = "none"; // move of the recaptcha to a temporary node
-
-    while (this.captcha.firstChild) {
-      temporaryNode.appendChild(this.captcha.firstChild);
-    } // delete the temporary node after reset will be done
-
-
-    setTimeout(function () {
-      document.body.removeChild(temporaryNode);
-    }, 5000);
-  };
-
-  _proto.handleRecaptchaRef = function handleRecaptchaRef(elem) {
-    this.captcha = elem;
-  };
-
-  _proto.render = function render() {
-    // consume properties owned by the reCATPCHA, pass the rest to the div so the user can style it.
-
-    /* eslint-disable no-unused-vars */
-    var _this$props = this.props,
-        sitekey = _this$props.sitekey,
-        onChange = _this$props.onChange,
-        theme = _this$props.theme,
-        type = _this$props.type,
-        tabindex = _this$props.tabindex,
-        onExpired = _this$props.onExpired,
-        onErrored = _this$props.onErrored,
-        size = _this$props.size,
-        stoken = _this$props.stoken,
-        grecaptcha = _this$props.grecaptcha,
-        badge = _this$props.badge,
-        hl = _this$props.hl,
-        childProps = _objectWithoutPropertiesLoose(_this$props, ["sitekey", "onChange", "theme", "type", "tabindex", "onExpired", "onErrored", "size", "stoken", "grecaptcha", "badge", "hl"]);
-    /* eslint-enable no-unused-vars */
-
-
-    return react_default.a.createElement("div", _extends({}, childProps, {
-      ref: this.handleRecaptchaRef
-    }));
-  };
-
-  return ReCAPTCHA;
-}(react_default.a.Component);
-
-
-recaptcha_ReCAPTCHA.displayName = "ReCAPTCHA";
-recaptcha_ReCAPTCHA.propTypes = {
-  sitekey: prop_types_default.a.string.isRequired,
-  onChange: prop_types_default.a.func,
-  grecaptcha: prop_types_default.a.object,
-  theme: prop_types_default.a.oneOf(["dark", "light"]),
-  type: prop_types_default.a.oneOf(["image", "audio"]),
-  tabindex: prop_types_default.a.number,
-  onExpired: prop_types_default.a.func,
-  onErrored: prop_types_default.a.func,
-  size: prop_types_default.a.oneOf(["compact", "normal", "invisible"]),
-  stoken: prop_types_default.a.string,
-  hl: prop_types_default.a.string,
-  badge: prop_types_default.a.oneOf(["bottomright", "bottomleft", "inline"])
-};
-recaptcha_ReCAPTCHA.defaultProps = {
-  onChange: function onChange() {},
-  theme: "light",
-  type: "image",
-  tabindex: 0,
-  size: "normal",
-  badge: "bottomright"
-};
-// EXTERNAL MODULE: ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
-var hoist_non_react_statics_cjs = __webpack_require__(26);
-var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
-
-// CONCATENATED MODULE: ./node_modules/react-async-script/lib/esm/async-script-loader.js
-function async_script_loader_extends() { async_script_loader_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return async_script_loader_extends.apply(this, arguments); }
-
-function async_script_loader_objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-function async_script_loader_inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
-
-
-
-
-var SCRIPT_MAP = {}; // A counter used to generate a unique id for each component that uses the function
-
-var idCount = 0;
-function makeAsyncScript(getScriptURL, options) {
-  options = options || {};
-  return function wrapWithAsyncScript(WrappedComponent) {
-    var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || "Component";
-
-    var AsyncScriptLoader =
-    /*#__PURE__*/
-    function (_Component) {
-      async_script_loader_inheritsLoose(AsyncScriptLoader, _Component);
-
-      function AsyncScriptLoader(props, context) {
-        var _this;
-
-        _this = _Component.call(this, props, context) || this;
-        _this.state = {};
-        _this.__scriptURL = "";
-        return _this;
-      }
-
-      var _proto = AsyncScriptLoader.prototype;
-
-      _proto.asyncScriptLoaderGetScriptLoaderID = function asyncScriptLoaderGetScriptLoaderID() {
-        if (!this.__scriptLoaderID) {
-          this.__scriptLoaderID = "async-script-loader-" + idCount++;
-        }
-
-        return this.__scriptLoaderID;
-      };
-
-      _proto.setupScriptURL = function setupScriptURL() {
-        this.__scriptURL = typeof getScriptURL === "function" ? getScriptURL() : getScriptURL;
-        return this.__scriptURL;
-      };
-
-      _proto.asyncScriptLoaderHandleLoad = function asyncScriptLoaderHandleLoad(state) {
-        var _this2 = this;
-
-        // use reacts setState callback to fire props.asyncScriptOnLoad with new state/entry
-        this.setState(state, function () {
-          return _this2.props.asyncScriptOnLoad && _this2.props.asyncScriptOnLoad(_this2.state);
-        });
-      };
-
-      _proto.asyncScriptLoaderTriggerOnScriptLoaded = function asyncScriptLoaderTriggerOnScriptLoaded() {
-        var mapEntry = SCRIPT_MAP[this.__scriptURL];
-
-        if (!mapEntry || !mapEntry.loaded) {
-          throw new Error("Script is not loaded.");
-        }
-
-        for (var obsKey in mapEntry.observers) {
-          mapEntry.observers[obsKey](mapEntry);
-        }
-
-        delete window[options.callbackName];
-      };
-
-      _proto.componentDidMount = function componentDidMount() {
-        var _this3 = this;
-
-        var scriptURL = this.setupScriptURL();
-        var key = this.asyncScriptLoaderGetScriptLoaderID();
-        var _options = options,
-            globalName = _options.globalName,
-            callbackName = _options.callbackName,
-            scriptId = _options.scriptId; // check if global object already attached to window
-
-        if (globalName && typeof window[globalName] !== "undefined") {
-          SCRIPT_MAP[scriptURL] = {
-            loaded: true,
-            observers: {}
-          };
-        } // check if script loading already
-
-
-        if (SCRIPT_MAP[scriptURL]) {
-          var entry = SCRIPT_MAP[scriptURL]; // if loaded or errored then "finish"
-
-          if (entry && (entry.loaded || entry.errored)) {
-            this.asyncScriptLoaderHandleLoad(entry);
-            return;
-          } // if still loading then callback to observer queue
-
-
-          entry.observers[key] = function (entry) {
-            return _this3.asyncScriptLoaderHandleLoad(entry);
-          };
-
-          return;
-        }
-        /*
-         * hasn't started loading
-         * start the "magic"
-         * setup script to load and observers
-         */
-
-
-        var observers = {};
-
-        observers[key] = function (entry) {
-          return _this3.asyncScriptLoaderHandleLoad(entry);
-        };
-
-        SCRIPT_MAP[scriptURL] = {
-          loaded: false,
-          observers: observers
-        };
-        var script = document.createElement("script");
-        script.src = scriptURL;
-        script.async = true;
-
-        for (var attribute in options.attributes) {
-          script.setAttribute(attribute, options.attributes[attribute]);
-        }
-
-        if (scriptId) {
-          script.id = scriptId;
-        }
-
-        var callObserverFuncAndRemoveObserver = function callObserverFuncAndRemoveObserver(func) {
-          if (SCRIPT_MAP[scriptURL]) {
-            var mapEntry = SCRIPT_MAP[scriptURL];
-            var observersMap = mapEntry.observers;
-
-            for (var obsKey in observersMap) {
-              if (func(observersMap[obsKey])) {
-                delete observersMap[obsKey];
-              }
-            }
-          }
-        };
-
-        if (callbackName && typeof window !== "undefined") {
-          window[callbackName] = function () {
-            return _this3.asyncScriptLoaderTriggerOnScriptLoaded();
-          };
-        }
-
-        script.onload = function () {
-          var mapEntry = SCRIPT_MAP[scriptURL];
-
-          if (mapEntry) {
-            mapEntry.loaded = true;
-            callObserverFuncAndRemoveObserver(function (observer) {
-              if (callbackName) {
-                return false;
-              }
-
-              observer(mapEntry);
-              return true;
-            });
-          }
-        };
-
-        script.onerror = function () {
-          var mapEntry = SCRIPT_MAP[scriptURL];
-
-          if (mapEntry) {
-            mapEntry.errored = true;
-            callObserverFuncAndRemoveObserver(function (observer) {
-              observer(mapEntry);
-              return true;
-            });
-          }
-        };
-
-        document.body.appendChild(script);
-      };
-
-      _proto.componentWillUnmount = function componentWillUnmount() {
-        // Remove tag script
-        var scriptURL = this.__scriptURL;
-
-        if (options.removeOnUnmount === true) {
-          var allScripts = document.getElementsByTagName("script");
-
-          for (var i = 0; i < allScripts.length; i += 1) {
-            if (allScripts[i].src.indexOf(scriptURL) > -1) {
-              if (allScripts[i].parentNode) {
-                allScripts[i].parentNode.removeChild(allScripts[i]);
-              }
-            }
-          }
-        } // Clean the observer entry
-
-
-        var mapEntry = SCRIPT_MAP[scriptURL];
-
-        if (mapEntry) {
-          delete mapEntry.observers[this.asyncScriptLoaderGetScriptLoaderID()];
-
-          if (options.removeOnUnmount === true) {
-            delete SCRIPT_MAP[scriptURL];
-          }
-        }
-      };
-
-      _proto.render = function render() {
-        var globalName = options.globalName; // remove asyncScriptOnLoad from childProps
-
-        var _this$props = this.props,
-            asyncScriptOnLoad = _this$props.asyncScriptOnLoad,
-            forwardedRef = _this$props.forwardedRef,
-            childProps = async_script_loader_objectWithoutPropertiesLoose(_this$props, ["asyncScriptOnLoad", "forwardedRef"]); // eslint-disable-line no-unused-vars
-
-
-        if (globalName && typeof window !== "undefined") {
-          childProps[globalName] = typeof window[globalName] !== "undefined" ? window[globalName] : undefined;
-        }
-
-        childProps.ref = forwardedRef;
-        return Object(react["createElement"])(WrappedComponent, childProps);
-      };
-
-      return AsyncScriptLoader;
-    }(react["Component"]); // Note the second param "ref" provided by React.forwardRef.
-    // We can pass it along to AsyncScriptLoader as a regular prop, e.g. "forwardedRef"
-    // And it can then be attached to the Component.
-
-
-    var ForwardedComponent = Object(react["forwardRef"])(function (props, ref) {
-      return Object(react["createElement"])(AsyncScriptLoader, async_script_loader_extends({}, props, {
-        forwardedRef: ref
-      }));
-    });
-    ForwardedComponent.displayName = "AsyncScriptLoader(" + wrappedComponentName + ")";
-    ForwardedComponent.propTypes = {
-      asyncScriptOnLoad: prop_types_default.a.func
-    };
-    return hoist_non_react_statics_cjs_default()(ForwardedComponent, WrappedComponent);
-  };
-}
-// CONCATENATED MODULE: ./node_modules/react-google-recaptcha/lib/esm/recaptcha-wrapper.js
-
-
-var callbackName = "onloadcallback";
-var recaptcha_wrapper_globalName = "grecaptcha";
-
-function getOptions() {
-  return typeof window !== "undefined" && window.recaptchaOptions || {};
-}
-
-function getURL() {
-  var dynamicOptions = getOptions();
-  var hostname = dynamicOptions.useRecaptchaNet ? "recaptcha.net" : "www.google.com";
-  return "https://" + hostname + "/recaptcha/api.js?onload=" + callbackName + "&render=explicit";
-}
-
-/* harmony default export */ var recaptcha_wrapper = (makeAsyncScript(getURL, {
-  callbackName: callbackName,
-  globalName: recaptcha_wrapper_globalName
-})(recaptcha_ReCAPTCHA));
-// CONCATENATED MODULE: ./node_modules/react-google-recaptcha/lib/esm/index.js
-
-
-/* harmony default export */ var esm = __webpack_exports__["a"] = (recaptcha_wrapper);
-
-
-/***/ }),
-
-/***/ 509:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export styles */
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(151);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(152);
-/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(153);
-/* harmony import */ var _utils_capitalize__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(161);
-
-
-
-
-
-
-
-
-var SIZE = 44;
-var styles = function styles(theme) {
-  return {
-    /* Styles applied to the root element. */
-    root: {
-      display: 'inline-block'
-    },
-
-    /* Styles applied to the root element if `variant="static"`. */
-    static: {
-      transition: theme.transitions.create('transform')
-    },
-
-    /* Styles applied to the root element if `variant="indeterminate"`. */
-    indeterminate: {
-      animation: '$circular-rotate 1.4s linear infinite'
-    },
-
-    /* Styles applied to the root element if `variant="determinate"`. */
-    determinate: {
-      transition: theme.transitions.create('transform')
-    },
-
-    /* Styles applied to the root element if `color="primary"`. */
-    colorPrimary: {
-      color: theme.palette.primary.main
-    },
-
-    /* Styles applied to the root element if `color="secondary"`. */
-    colorSecondary: {
-      color: theme.palette.secondary.main
-    },
-
-    /* Styles applied to the `svg` element. */
-    svg: {
-      display: 'block' // Keeps the progress centered
-
-    },
-
-    /* Styles applied to the `circle` svg path. */
-    circle: {
-      stroke: 'currentColor' // Use butt to follow the specification, by chance, it's already the default CSS value.
-      // strokeLinecap: 'butt',
-
-    },
-
-    /* Styles applied to the `circle` svg path if `variant="static"`. */
-    circleStatic: {
-      transition: theme.transitions.create('stroke-dashoffset')
-    },
-
-    /* Styles applied to the `circle` svg path if `variant="indeterminate"`. */
-    circleIndeterminate: {
-      animation: '$circular-dash 1.4s ease-in-out infinite',
-      // Some default value that looks fine waiting for the animation to kicks in.
-      strokeDasharray: '80px, 200px',
-      strokeDashoffset: '0px' // Add the unit to fix a Edge 16 and below bug.
-
-    },
-
-    /* Styles applied to the `circle` svg path if `variant="determinate"`. */
-    circleDeterminate: {
-      transition: theme.transitions.create('stroke-dashoffset')
-    },
-    '@keyframes circular-rotate': {
-      '0%': {
-        // Fix IE 11 wobbly
-        transformOrigin: '50% 50%'
-      },
-      '100%': {
-        transform: 'rotate(360deg)'
-      }
-    },
-    '@keyframes circular-dash': {
-      '0%': {
-        strokeDasharray: '1px, 200px',
-        strokeDashoffset: '0px'
-      },
-      '50%': {
-        strokeDasharray: '100px, 200px',
-        strokeDashoffset: '-15px'
-      },
-      '100%': {
-        strokeDasharray: '100px, 200px',
-        strokeDashoffset: '-125px'
-      }
-    },
-
-    /* Styles applied to the `circle` svg path if `disableShrink={true}`. */
-    circleDisableShrink: {
-      animation: 'none'
-    }
-  };
-};
-/**
- * ## ARIA
- *
- * If the progress bar is describing the loading progress of a particular region of a page,
- * you should use `aria-describedby` to point to the progress bar, and set the `aria-busy`
- * attribute to `true` on that region until it has finished loading.
- */
-
-var CircularProgress = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function CircularProgress(props, ref) {
-  var classes = props.classes,
-      className = props.className,
-      _props$color = props.color,
-      color = _props$color === void 0 ? 'primary' : _props$color,
-      _props$disableShrink = props.disableShrink,
-      disableShrink = _props$disableShrink === void 0 ? false : _props$disableShrink,
-      _props$size = props.size,
-      size = _props$size === void 0 ? 40 : _props$size,
-      style = props.style,
-      _props$thickness = props.thickness,
-      thickness = _props$thickness === void 0 ? 3.6 : _props$thickness,
-      _props$value = props.value,
-      value = _props$value === void 0 ? 0 : _props$value,
-      _props$variant = props.variant,
-      variant = _props$variant === void 0 ? 'indeterminate' : _props$variant,
-      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(props, ["classes", "className", "color", "disableShrink", "size", "style", "thickness", "value", "variant"]);
-
-  var circleStyle = {};
-  var rootStyle = {};
-  var rootProps = {};
-
-  if (variant === 'determinate' || variant === 'static') {
-    var circumference = 2 * Math.PI * ((SIZE - thickness) / 2);
-    circleStyle.strokeDasharray = circumference.toFixed(3);
-    rootProps['aria-valuenow'] = Math.round(value);
-    circleStyle.strokeDashoffset = "".concat(((100 - value) / 100 * circumference).toFixed(3), "px");
-    rootStyle.transform = 'rotate(-90deg)';
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("div", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({
-    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])(classes.root, className, color !== 'inherit' && classes["color".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"])(color))], {
-      'determinate': classes.determinate,
-      'indeterminate': classes.indeterminate,
-      'static': classes.static
-    }[variant]),
-    style: Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({
-      width: size,
-      height: size
-    }, rootStyle, style),
-    ref: ref,
-    role: "progressbar"
-  }, rootProps, other), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("svg", {
-    className: classes.svg,
-    viewBox: "".concat(SIZE / 2, " ").concat(SIZE / 2, " ").concat(SIZE, " ").concat(SIZE)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("circle", {
-    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])(classes.circle, disableShrink && classes.circleDisableShrink, {
-      'determinate': classes.circleDeterminate,
-      'indeterminate': classes.circleIndeterminate,
-      'static': classes.circleStatic
-    }[variant]),
-    style: circleStyle,
-    cx: SIZE,
-    cy: SIZE,
-    r: (SIZE - thickness) / 2,
-    fill: "none",
-    strokeWidth: thickness
-  })));
-});
- false ? undefined : void 0;
-/* harmony default export */ __webpack_exports__["a"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"])(styles, {
-  name: 'MuiCircularProgress',
-  flip: false
-})(CircularProgress));
-
-/***/ }),
-
 /***/ 57:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -9207,46 +8414,39 @@ var SuscribeForm=function SuscribeForm(){var isMobile=Object(react_responsive__W
 
 /***/ }),
 
-/***/ 69:
+/***/ 720:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _home_runner_work_eoscostarica_io_eoscostarica_io_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(207);
-/* harmony import */ var _home_runner_work_eoscostarica_io_eoscostarica_io_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(203);
-/* harmony import */ var _home_runner_work_eoscostarica_io_eoscostarica_io_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_runner_work_eoscostarica_io_eoscostarica_io_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(152);
-/* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(728);
-/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(794);
-/* harmony import */ var _material_ui_core_InputBase__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(730);
-/* harmony import */ var _material_ui_core_Snackbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(285);
-/* harmony import */ var _material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(284);
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(153);
-/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(173);
-/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_responsive__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_google_recaptcha__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(412);
-/* harmony import */ var _material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(509);
-var GenericInput=Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_9__[/* default */ "a"])({root:{width:'100%',padding:'10px',border:'solid 1px gray'},input:{fontFamily:'Lato',fontSize:19,fontWeight:'normal','&:-webkit-autofill':{transitionDelay:'9999s',transitionProperty:'background-color, color'}},focused:{border:'solid 1px #5484b3'}})(function(props){return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_InputBase__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"],props);});var LacchainForm=function LacchainForm(){var isMobile=Object(react_responsive__WEBPACK_IMPORTED_MODULE_10__["useMediaQuery"])({query:'(max-width: 960px)'});var isDesktop=Object(react_responsive__WEBPACK_IMPORTED_MODULE_10__["useMediaQuery"])({query:'(min-width: 960px)'});var _useState=Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),resultsSection=_useState[0],setResultsSection=_useState[1];var ContactForm=function ContactForm(){var _useState2=Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),errorMessage=_useState2[0],setErrorMessage=_useState2[1];var _useState3=Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),recaptchaValue=_useState3[0],setRecaptchaValue=_useState3[1];var _useState4=Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),submitLoading=_useState4[0],setSubmitLoading=_useState4[1];var _useState5=Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({email:'',firstName:'',lastName:'',companyName:'',additionalComments:''}),contactForm=_useState5[0],setContactForm=_useState5[1];var handleSetField=function handleSetField(field,value){var _Object$assign;setContactForm(Object.assign({},contactForm,(_Object$assign={},_Object$assign[field]=value,_Object$assign)));};var handleCloseErrorMessage=function handleCloseErrorMessage(){setErrorMessage(false);};var validateEmail=function validateEmail(mail){var regex=/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;return regex.test(mail);};var onSubmitForms=/*#__PURE__*/function(){var _ref=Object(_home_runner_work_eoscostarica_io_eoscostarica_io_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(/*#__PURE__*/_home_runner_work_eoscostarica_io_eoscostarica_io_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee(e){return _home_runner_work_eoscostarica_io_eoscostarica_io_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context){while(1){switch(_context.prev=_context.next){case 0:e.preventDefault();setSubmitLoading(true);sendData();case 3:case"end":return _context.stop();}}},_callee);}));return function onSubmitForms(_x){return _ref.apply(this,arguments);};}();var sendData=/*#__PURE__*/function(){var _ref2=Object(_home_runner_work_eoscostarica_io_eoscostarica_io_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(/*#__PURE__*/_home_runner_work_eoscostarica_io_eoscostarica_io_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2(){var jsonData,requestOptions,response;return _home_runner_work_eoscostarica_io_eoscostarica_io_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2){while(1){switch(_context2.prev=_context2.next){case 0:jsonData={"fields":[{"name":"email","value":contactForm.email},{"name":"company","value":contactForm.companyName},{"name":"firstname","value":contactForm.firstName},{"name":"lastname","value":contactForm.lastName},{"name":"message","value":contactForm.additionalComments}],"context":{"pageUri":"https://eoscostarica.io/lacchain","pageName":"EOS Costa Rica: LACChain EOSIO"},"legalConsentOptions":{"consent":{"consentToProcess":true,"text":"I agree to allow Example Company to store and process my personal data.","communications":[{"value":true,"subscriptionTypeId":999,"text":"I agree to receive marketing communications from Example Company."}]}}};requestOptions={method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(jsonData)};_context2.next=4;return fetch("https://api.hsforms.com/submissions/v3/integration/submit/"+"9018734"+"/"+"d7b0ed21-e084-44f1-921b-4221223eb40c",requestOptions);case 4:response=_context2.sent;if(response.ok)setResultsSection(true);else setErrorMessage(true);setSubmitLoading(false);case 7:case"end":return _context2.stop();}}},_callee2);}));return function sendData(){return _ref2.apply(this,arguments);};}();return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("form",{onSubmit:onSubmitForms,noValidate:true},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{container:true,spacing:2},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,xs:12,md:6},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label",{htmlFor:"firstName_contact"},"First name *"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"inputFormBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(GenericInput,{id:"firstName_contact",value:contactForm.firstName||'',onChange:function onChange(event){return handleSetField('firstName',event.target.value);},required:true}))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,xs:12,md:6},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label",{htmlFor:"lastName_contact"},"Last name *"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"inputFormBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(GenericInput,{id:"lastName_contact",value:contactForm.lastName||'',onChange:function onChange(event){return handleSetField('lastName',event.target.value);},required:true}))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,xs:12,md:6},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label",{htmlFor:"email_contact"},"Email *"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"inputFormBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(GenericInput,{id:"email_contact",value:contactForm.email||'',onChange:function onChange(event){return handleSetField('email',event.target.value);},required:true}))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,xs:12,md:6},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label",{htmlFor:"companyName_contact"},"Organization or company"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"inputFormBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(GenericInput,{id:"companyName_contact",value:contactForm.companyName||'',onChange:function onChange(event){return handleSetField('companyName',event.target.value);},required:true}))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,xs:12,md:12},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label",{htmlFor:"additionalComments_contact"},"Additional comments"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"inputFormBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(GenericInput,{id:"additionalComments_contact",value:contactForm.additionalComments||'',onChange:function onChange(event){return handleSetField('additionalComments',event.target.value);},required:true,multiline:true,rows:3}))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,xs:12,md:12},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p",null,"We respect your privacy. We will not share any contact information and will only use it to contact you about our services. You may unsubscribe from these communications at any time.")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,xs:12,md:12},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_google_recaptcha__WEBPACK_IMPORTED_MODULE_11__[/* default */ "a"],{sitekey:"6Lf3CXMaAAAAAN8_to0Gc3AYeHGOBtjd6X51GFcb",onChange:function onChange(value){return setRecaptchaValue(value);}})),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"],{item:true,xs:12,md:12},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:isMobile?"centerBox":""},submitLoading&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_CircularProgress__WEBPACK_IMPORTED_MODULE_12__[/* default */ "a"],{style:{color:'#5484B3'}}),!submitLoading&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input",{type:"submit",className:"buttonPrimary",value:"Submit",disabled:!contactForm.firstName||!contactForm.lastName||!contactForm.email||!contactForm.companyName||!recaptchaValue||!validateEmail(contactForm.email)}))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Snackbar__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"],{open:errorMessage,autoHideDuration:4000,onClose:handleCloseErrorMessage},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_lab_Alert__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"],{severity:"error"},"Something happened! please try again")))));};return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment,null,isDesktop&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"containerSec"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"section"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"h3Box"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1",null,"Create a LACChain EOSIO Account")),!resultsSection&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"contactFormBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"spacingBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p",null,"Ready to create an account and start using LACChain EOSIO? Contact us!")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ContactForm,null)),resultsSection&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"contactFormBox",style:{height:'120px'}},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p",null,"Thanks for contacting EOS Costa Rica. We will reply shortly")))),isMobile&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"sectionHeroMobile"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"h3Box"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1",null,"Contact Us")),!resultsSection&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"contactFormBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"spacingBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p",{style:{padding:0}},"Let\u2019s get the conversation started. Ask us how we can help you implement blockchain technology into your organization.")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ContactForm,null)),resultsSection&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{className:"contactFormBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p",{style:{padding:0}},"Thanks for contacting EOS Costa Rica. We will reply shortly"))));};/* harmony default export */ __webpack_exports__["default"] = (LacchainForm);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(166);
+/* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(728);
+/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(794);
+/* harmony import */ var _material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(732);
+/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(173);
+/* harmony import */ var react_responsive__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_responsive__WEBPACK_IMPORTED_MODULE_5__);
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];function BlogPostItem(props){var frontMatter=props.frontMatter,metadata=props.metadata,color=props.color,isMobile=props.isMobile;var date=metadata.date,permalink=metadata.permalink,readingTime=metadata.readingTime;var author=frontMatter.author,title=frontMatter.title,image=frontMatter.image;var authorURL=frontMatter.author_url||frontMatter.authorURL;var authorTitle=frontMatter.author_title||frontMatter.authorTitle;var authorImageURL=frontMatter.author_image_url||frontMatter.authorImageURL;var imageUrl=Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(image);var tempImage=Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])("img/metaImgBlack.png");var isXS=Object(react_responsive__WEBPACK_IMPORTED_MODULE_5__["useMediaQuery"])({query:'(min-width: 400px)'});var BlogHeader=function BlogHeader(){var match=date.substring(0,10).split('-');var year=match[0];var month=MONTHS[parseInt(match[1],10)-1];var day=parseInt(match[2],10);return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"],{className:"blogHeaderListPage",style:{width:'100%'}},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"],null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",null,title),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",{style:{marginBottom:'20px',marginTop:'10px'}},month," ",day,", ",year,' ',readingTime&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment,null," \xB7 ",Math.ceil(readingTime)," min read"))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"],{className:"blogAvatarBox"},isXS&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment,null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Avatar__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"],{src:authorImageURL,alt:author,style:{width:'48px',height:'48px'}}),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"],{className:"blogAvatarTextBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{className:"blogAuthorTile",style:{fontWeight:'bold',color:'black'},href:authorURL,target:"_blank"},author),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5",null,authorTitle))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{className:"blogReadMoreText",href:permalink},"Read more \u276F"))));};return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"],{style:{backgroundColor:color},className:"blogPostItemBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{container:true,spacing:isMobile?0:4},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{item:true,xs:12,md:5},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"],{className:"centerBox"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img",{src:imageUrl||tempImage,alt:"blog post image",className:"imgListBlogPost"}))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{item:true,xs:12,md:7},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"],{className:"blogCenterHeaderItem"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(BlogHeader,null)))));}/* harmony default export */ __webpack_exports__["a"] = (BlogPostItem);
 
 /***/ }),
 
-/***/ 730:
+/***/ 732:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // UNUSED EXPORTS: styles
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
-var objectWithoutProperties = __webpack_require__(151);
-
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
 var esm_extends = __webpack_require__(3);
 
-// EXTERNAL MODULE: ./node_modules/@material-ui/utils/esm/formatMuiErrorMessage.js
-var formatMuiErrorMessage = __webpack_require__(793);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+var objectWithoutProperties = __webpack_require__(151);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(0);
@@ -9257,673 +8457,186 @@ var prop_types = __webpack_require__(1);
 // EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
 var clsx_m = __webpack_require__(152);
 
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/FormControl/formControlState.js
-var formControlState = __webpack_require__(340);
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/FormControl/FormControlContext.js
-var FormControlContext = __webpack_require__(323);
-
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/withStyles.js + 1 modules
 var withStyles = __webpack_require__(153);
 
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/capitalize.js
-var capitalize = __webpack_require__(161);
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/createSvgIcon.js + 1 modules
+var createSvgIcon = __webpack_require__(182);
 
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/useForkRef.js
-var useForkRef = __webpack_require__(159);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/internal/svg-icons/Person.js
 
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/debounce.js
-var debounce = __webpack_require__(177);
 
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/TextareaAutosize/TextareaAutosize.js
-
-
-
-
-
-
-
-
-function getStyleValue(computedStyle, property) {
-  return parseInt(computedStyle[property], 10) || 0;
-}
-
-var useEnhancedEffect = typeof window !== 'undefined' ? react["useLayoutEffect"] : react["useEffect"];
-var TextareaAutosize_styles = {
-  /* Styles applied to the shadow textarea element. */
-  shadow: {
-    // Visibility needed to hide the extra text area on iPads
-    visibility: 'hidden',
-    // Remove from the content flow
-    position: 'absolute',
-    // Ignore the scrollbar width
-    overflow: 'hidden',
-    height: 0,
-    top: 0,
-    left: 0,
-    // Create a new layer, increase the isolation of the computed values
-    transform: 'translateZ(0)'
-  }
-};
-var TextareaAutosize_TextareaAutosize = /*#__PURE__*/react["forwardRef"](function TextareaAutosize(props, ref) {
-  var onChange = props.onChange,
-      rows = props.rows,
-      rowsMax = props.rowsMax,
-      rowsMinProp = props.rowsMin,
-      maxRowsProp = props.maxRows,
-      _props$minRows = props.minRows,
-      minRowsProp = _props$minRows === void 0 ? 1 : _props$minRows,
-      style = props.style,
-      value = props.value,
-      other = Object(objectWithoutProperties["a" /* default */])(props, ["onChange", "rows", "rowsMax", "rowsMin", "maxRows", "minRows", "style", "value"]);
-
-  var maxRows = maxRowsProp || rowsMax;
-  var minRows = rows || rowsMinProp || minRowsProp;
-
-  var _React$useRef = react["useRef"](value != null),
-      isControlled = _React$useRef.current;
-
-  var inputRef = react["useRef"](null);
-  var handleRef = Object(useForkRef["a" /* default */])(ref, inputRef);
-  var shadowRef = react["useRef"](null);
-  var renders = react["useRef"](0);
-
-  var _React$useState = react["useState"]({}),
-      state = _React$useState[0],
-      setState = _React$useState[1];
-
-  var syncHeight = react["useCallback"](function () {
-    var input = inputRef.current;
-    var computedStyle = window.getComputedStyle(input);
-    var inputShallow = shadowRef.current;
-    inputShallow.style.width = computedStyle.width;
-    inputShallow.value = input.value || props.placeholder || 'x';
-
-    if (inputShallow.value.slice(-1) === '\n') {
-      // Certain fonts which overflow the line height will cause the textarea
-      // to report a different scrollHeight depending on whether the last line
-      // is empty. Make it non-empty to avoid this issue.
-      inputShallow.value += ' ';
-    }
-
-    var boxSizing = computedStyle['box-sizing'];
-    var padding = getStyleValue(computedStyle, 'padding-bottom') + getStyleValue(computedStyle, 'padding-top');
-    var border = getStyleValue(computedStyle, 'border-bottom-width') + getStyleValue(computedStyle, 'border-top-width'); // The height of the inner content
-
-    var innerHeight = inputShallow.scrollHeight - padding; // Measure height of a textarea with a single row
-
-    inputShallow.value = 'x';
-    var singleRowHeight = inputShallow.scrollHeight - padding; // The height of the outer content
-
-    var outerHeight = innerHeight;
-
-    if (minRows) {
-      outerHeight = Math.max(Number(minRows) * singleRowHeight, outerHeight);
-    }
-
-    if (maxRows) {
-      outerHeight = Math.min(Number(maxRows) * singleRowHeight, outerHeight);
-    }
-
-    outerHeight = Math.max(outerHeight, singleRowHeight); // Take the box sizing into account for applying this value as a style.
-
-    var outerHeightStyle = outerHeight + (boxSizing === 'border-box' ? padding + border : 0);
-    var overflow = Math.abs(outerHeight - innerHeight) <= 1;
-    setState(function (prevState) {
-      // Need a large enough difference to update the height.
-      // This prevents infinite rendering loop.
-      if (renders.current < 20 && (outerHeightStyle > 0 && Math.abs((prevState.outerHeightStyle || 0) - outerHeightStyle) > 1 || prevState.overflow !== overflow)) {
-        renders.current += 1;
-        return {
-          overflow: overflow,
-          outerHeightStyle: outerHeightStyle
-        };
-      }
-
-      if (false) {}
-
-      return prevState;
-    });
-  }, [maxRows, minRows, props.placeholder]);
-  react["useEffect"](function () {
-    var handleResize = Object(debounce["a" /* default */])(function () {
-      renders.current = 0;
-      syncHeight();
-    });
-    window.addEventListener('resize', handleResize);
-    return function () {
-      handleResize.clear();
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [syncHeight]);
-  useEnhancedEffect(function () {
-    syncHeight();
-  });
-  react["useEffect"](function () {
-    renders.current = 0;
-  }, [value]);
-
-  var handleChange = function handleChange(event) {
-    renders.current = 0;
-
-    if (!isControlled) {
-      syncHeight();
-    }
-
-    if (onChange) {
-      onChange(event);
-    }
-  };
-
-  return /*#__PURE__*/react["createElement"](react["Fragment"], null, /*#__PURE__*/react["createElement"]("textarea", Object(esm_extends["a" /* default */])({
-    value: value,
-    onChange: handleChange,
-    ref: handleRef // Apply the rows prop to get a "correct" first SSR paint
-    ,
-    rows: minRows,
-    style: Object(esm_extends["a" /* default */])({
-      height: state.outerHeightStyle,
-      // Need a large enough difference to allow scrolling.
-      // This prevents infinite rendering loop.
-      overflow: state.overflow ? 'hidden' : null
-    }, style)
-  }, other)), /*#__PURE__*/react["createElement"]("textarea", {
-    "aria-hidden": true,
-    className: props.className,
-    readOnly: true,
-    ref: shadowRef,
-    tabIndex: -1,
-    style: Object(esm_extends["a" /* default */])({}, TextareaAutosize_styles.shadow, style)
-  }));
-});
- false ? undefined : void 0;
-/* harmony default export */ var esm_TextareaAutosize_TextareaAutosize = (TextareaAutosize_TextareaAutosize);
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/InputBase/utils.js
-var utils = __webpack_require__(324);
-
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/InputBase/InputBase.js
-
-
-
-
-/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
-
-
-
-
-
-
-
-
-
-
-
-var InputBase_styles = function styles(theme) {
-  var light = theme.palette.type === 'light';
-  var placeholder = {
-    color: 'currentColor',
-    opacity: light ? 0.42 : 0.5,
-    transition: theme.transitions.create('opacity', {
-      duration: theme.transitions.duration.shorter
-    })
-  };
-  var placeholderHidden = {
-    opacity: '0 !important'
-  };
-  var placeholderVisible = {
-    opacity: light ? 0.42 : 0.5
-  };
-  return {
-    '@global': {
-      '@keyframes mui-auto-fill': {},
-      '@keyframes mui-auto-fill-cancel': {}
-    },
-
-    /* Styles applied to the root element. */
-    root: Object(esm_extends["a" /* default */])({}, theme.typography.body1, {
-      color: theme.palette.text.primary,
-      lineHeight: '1.1876em',
-      // Reset (19px), match the native input line-height
-      boxSizing: 'border-box',
-      // Prevent padding issue with fullWidth.
-      position: 'relative',
-      cursor: 'text',
-      display: 'inline-flex',
-      alignItems: 'center',
-      '&$disabled': {
-        color: theme.palette.text.disabled,
-        cursor: 'default'
-      }
-    }),
-
-    /* Styles applied to the root element if the component is a descendant of `FormControl`. */
-    formControl: {},
-
-    /* Styles applied to the root element if the component is focused. */
-    focused: {},
-
-    /* Styles applied to the root element if `disabled={true}`. */
-    disabled: {},
-
-    /* Styles applied to the root element if `startAdornment` is provided. */
-    adornedStart: {},
-
-    /* Styles applied to the root element if `endAdornment` is provided. */
-    adornedEnd: {},
-
-    /* Pseudo-class applied to the root element if `error={true}`. */
-    error: {},
-
-    /* Styles applied to the `input` element if `margin="dense"`. */
-    marginDense: {},
-
-    /* Styles applied to the root element if `multiline={true}`. */
-    multiline: {
-      padding: "".concat(8 - 2, "px 0 ").concat(8 - 1, "px"),
-      '&$marginDense': {
-        paddingTop: 4 - 1
-      }
-    },
-
-    /* Styles applied to the root element if the color is secondary. */
-    colorSecondary: {},
-
-    /* Styles applied to the root element if `fullWidth={true}`. */
-    fullWidth: {
-      width: '100%'
-    },
-
-    /* Styles applied to the `input` element. */
-    input: {
-      font: 'inherit',
-      letterSpacing: 'inherit',
-      color: 'currentColor',
-      padding: "".concat(8 - 2, "px 0 ").concat(8 - 1, "px"),
-      border: 0,
-      boxSizing: 'content-box',
-      background: 'none',
-      height: '1.1876em',
-      // Reset (19px), match the native input line-height
-      margin: 0,
-      // Reset for Safari
-      WebkitTapHighlightColor: 'transparent',
-      display: 'block',
-      // Make the flex item shrink with Firefox
-      minWidth: 0,
-      width: '100%',
-      // Fix IE 11 width issue
-      animationName: 'mui-auto-fill-cancel',
-      animationDuration: '10ms',
-      '&::-webkit-input-placeholder': placeholder,
-      '&::-moz-placeholder': placeholder,
-      // Firefox 19+
-      '&:-ms-input-placeholder': placeholder,
-      // IE 11
-      '&::-ms-input-placeholder': placeholder,
-      // Edge
-      '&:focus': {
-        outline: 0
-      },
-      // Reset Firefox invalid required input style
-      '&:invalid': {
-        boxShadow: 'none'
-      },
-      '&::-webkit-search-decoration': {
-        // Remove the padding when type=search.
-        '-webkit-appearance': 'none'
-      },
-      // Show and hide the placeholder logic
-      'label[data-shrink=false] + $formControl &': {
-        '&::-webkit-input-placeholder': placeholderHidden,
-        '&::-moz-placeholder': placeholderHidden,
-        // Firefox 19+
-        '&:-ms-input-placeholder': placeholderHidden,
-        // IE 11
-        '&::-ms-input-placeholder': placeholderHidden,
-        // Edge
-        '&:focus::-webkit-input-placeholder': placeholderVisible,
-        '&:focus::-moz-placeholder': placeholderVisible,
-        // Firefox 19+
-        '&:focus:-ms-input-placeholder': placeholderVisible,
-        // IE 11
-        '&:focus::-ms-input-placeholder': placeholderVisible // Edge
-
-      },
-      '&$disabled': {
-        opacity: 1 // Reset iOS opacity
-
-      },
-      '&:-webkit-autofill': {
-        animationDuration: '5000s',
-        animationName: 'mui-auto-fill'
-      }
-    },
-
-    /* Styles applied to the `input` element if `margin="dense"`. */
-    inputMarginDense: {
-      paddingTop: 4 - 1
-    },
-
-    /* Styles applied to the `input` element if `multiline={true}`. */
-    inputMultiline: {
-      height: 'auto',
-      resize: 'none',
-      padding: 0
-    },
-
-    /* Styles applied to the `input` element if `type="search"`. */
-    inputTypeSearch: {
-      // Improve type search style.
-      '-moz-appearance': 'textfield',
-      '-webkit-appearance': 'textfield'
-    },
-
-    /* Styles applied to the `input` element if `startAdornment` is provided. */
-    inputAdornedStart: {},
-
-    /* Styles applied to the `input` element if `endAdornment` is provided. */
-    inputAdornedEnd: {},
-
-    /* Styles applied to the `input` element if `hiddenLabel={true}`. */
-    inputHiddenLabel: {}
-  };
-};
-var InputBase_useEnhancedEffect = typeof window === 'undefined' ? react["useEffect"] : react["useLayoutEffect"];
 /**
- * `InputBase` contains as few styles as possible.
- * It aims to be a simple building block for creating an input.
- * It contains a load of style reset and some state logic.
+ * @ignore - internal component.
  */
 
-var InputBase_InputBase = /*#__PURE__*/react["forwardRef"](function InputBase(props, ref) {
-  var ariaDescribedby = props['aria-describedby'],
-      autoComplete = props.autoComplete,
-      autoFocus = props.autoFocus,
-      classes = props.classes,
-      className = props.className,
-      color = props.color,
-      defaultValue = props.defaultValue,
-      disabled = props.disabled,
-      endAdornment = props.endAdornment,
-      error = props.error,
-      _props$fullWidth = props.fullWidth,
-      fullWidth = _props$fullWidth === void 0 ? false : _props$fullWidth,
-      id = props.id,
-      _props$inputComponent = props.inputComponent,
-      inputComponent = _props$inputComponent === void 0 ? 'input' : _props$inputComponent,
-      _props$inputProps = props.inputProps,
-      inputPropsProp = _props$inputProps === void 0 ? {} : _props$inputProps,
-      inputRefProp = props.inputRef,
-      margin = props.margin,
-      _props$multiline = props.multiline,
-      multiline = _props$multiline === void 0 ? false : _props$multiline,
-      name = props.name,
-      onBlur = props.onBlur,
-      onChange = props.onChange,
-      onClick = props.onClick,
-      onFocus = props.onFocus,
-      onKeyDown = props.onKeyDown,
-      onKeyUp = props.onKeyUp,
-      placeholder = props.placeholder,
-      readOnly = props.readOnly,
-      renderSuffix = props.renderSuffix,
-      rows = props.rows,
-      rowsMax = props.rowsMax,
-      rowsMin = props.rowsMin,
-      maxRows = props.maxRows,
-      minRows = props.minRows,
-      startAdornment = props.startAdornment,
-      _props$type = props.type,
-      type = _props$type === void 0 ? 'text' : _props$type,
-      valueProp = props.value,
-      other = Object(objectWithoutProperties["a" /* default */])(props, ["aria-describedby", "autoComplete", "autoFocus", "classes", "className", "color", "defaultValue", "disabled", "endAdornment", "error", "fullWidth", "id", "inputComponent", "inputProps", "inputRef", "margin", "multiline", "name", "onBlur", "onChange", "onClick", "onFocus", "onKeyDown", "onKeyUp", "placeholder", "readOnly", "renderSuffix", "rows", "rowsMax", "rowsMin", "maxRows", "minRows", "startAdornment", "type", "value"]);
+/* harmony default export */ var Person = (Object(createSvgIcon["a" /* default */])( /*#__PURE__*/react["createElement"]("path", {
+  d: "M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+}), 'Person'));
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Avatar/Avatar.js
 
-  var value = inputPropsProp.value != null ? inputPropsProp.value : valueProp;
 
-  var _React$useRef = react["useRef"](value != null),
-      isControlled = _React$useRef.current;
 
-  var inputRef = react["useRef"]();
-  var handleInputRefWarning = react["useCallback"](function (instance) {
-    if (false) {}
-  }, []);
-  var handleInputPropsRefProp = Object(useForkRef["a" /* default */])(inputPropsProp.ref, handleInputRefWarning);
-  var handleInputRefProp = Object(useForkRef["a" /* default */])(inputRefProp, handleInputPropsRefProp);
-  var handleInputRef = Object(useForkRef["a" /* default */])(inputRef, handleInputRefProp);
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      position: 'relative',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flexShrink: 0,
+      width: 40,
+      height: 40,
+      fontFamily: theme.typography.fontFamily,
+      fontSize: theme.typography.pxToRem(20),
+      lineHeight: 1,
+      borderRadius: '50%',
+      overflow: 'hidden',
+      userSelect: 'none'
+    },
+
+    /* Styles applied to the root element if not `src` or `srcSet`. */
+    colorDefault: {
+      color: theme.palette.background.default,
+      backgroundColor: theme.palette.type === 'light' ? theme.palette.grey[400] : theme.palette.grey[600]
+    },
+
+    /* Styles applied to the root element if `variant="circle"`. */
+    circle: {},
+
+    /* Styles applied to the root element if `variant="circular"`. */
+    circular: {},
+
+    /* Styles applied to the root element if `variant="rounded"`. */
+    rounded: {
+      borderRadius: theme.shape.borderRadius
+    },
+
+    /* Styles applied to the root element if `variant="square"`. */
+    square: {
+      borderRadius: 0
+    },
+
+    /* Styles applied to the img element if either `src` or `srcSet` is defined. */
+    img: {
+      width: '100%',
+      height: '100%',
+      textAlign: 'center',
+      // Handle non-square image. The property isn't supported by IE 11.
+      objectFit: 'cover',
+      // Hide alt text.
+      color: 'transparent',
+      // Hide the image broken icon, only works on Chrome.
+      textIndent: 10000
+    },
+
+    /* Styles applied to the fallback icon */
+    fallback: {
+      width: '75%',
+      height: '75%'
+    }
+  };
+};
+
+function useLoaded(_ref) {
+  var src = _ref.src,
+      srcSet = _ref.srcSet;
 
   var _React$useState = react["useState"](false),
-      focused = _React$useState[0],
-      setFocused = _React$useState[1];
-
-  var muiFormControl = Object(FormControlContext["b" /* useFormControl */])();
-
-  if (false) {}
-
-  var fcs = Object(formControlState["a" /* default */])({
-    props: props,
-    muiFormControl: muiFormControl,
-    states: ['color', 'disabled', 'error', 'hiddenLabel', 'margin', 'required', 'filled']
-  });
-  fcs.focused = muiFormControl ? muiFormControl.focused : focused; // The blur won't fire when the disabled state is set on a focused input.
-  // We need to book keep the focused state manually.
+      loaded = _React$useState[0],
+      setLoaded = _React$useState[1];
 
   react["useEffect"](function () {
-    if (!muiFormControl && disabled && focused) {
-      setFocused(false);
-
-      if (onBlur) {
-        onBlur();
-      }
-    }
-  }, [muiFormControl, disabled, focused, onBlur]);
-  var onFilled = muiFormControl && muiFormControl.onFilled;
-  var onEmpty = muiFormControl && muiFormControl.onEmpty;
-  var checkDirty = react["useCallback"](function (obj) {
-    if (Object(utils["b" /* isFilled */])(obj)) {
-      if (onFilled) {
-        onFilled();
-      }
-    } else if (onEmpty) {
-      onEmpty();
-    }
-  }, [onFilled, onEmpty]);
-  InputBase_useEnhancedEffect(function () {
-    if (isControlled) {
-      checkDirty({
-        value: value
-      });
-    }
-  }, [value, checkDirty, isControlled]);
-
-  var handleFocus = function handleFocus(event) {
-    // Fix a bug with IE 11 where the focus/blur events are triggered
-    // while the input is disabled.
-    if (fcs.disabled) {
-      event.stopPropagation();
-      return;
+    if (!src && !srcSet) {
+      return undefined;
     }
 
-    if (onFocus) {
-      onFocus(event);
-    }
+    setLoaded(false);
+    var active = true;
+    var image = new Image();
+    image.src = src;
+    image.srcSet = srcSet;
 
-    if (inputPropsProp.onFocus) {
-      inputPropsProp.onFocus(event);
-    }
-
-    if (muiFormControl && muiFormControl.onFocus) {
-      muiFormControl.onFocus(event);
-    } else {
-      setFocused(true);
-    }
-  };
-
-  var handleBlur = function handleBlur(event) {
-    if (onBlur) {
-      onBlur(event);
-    }
-
-    if (inputPropsProp.onBlur) {
-      inputPropsProp.onBlur(event);
-    }
-
-    if (muiFormControl && muiFormControl.onBlur) {
-      muiFormControl.onBlur(event);
-    } else {
-      setFocused(false);
-    }
-  };
-
-  var handleChange = function handleChange(event) {
-    if (!isControlled) {
-      var element = event.target || inputRef.current;
-
-      if (element == null) {
-        throw new Error( false ? undefined : Object(formatMuiErrorMessage["a" /* default */])(1));
+    image.onload = function () {
+      if (!active) {
+        return;
       }
 
-      checkDirty({
-        value: element.value
-      });
-    }
+      setLoaded('loaded');
+    };
 
-    for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      args[_key - 1] = arguments[_key];
-    }
+    image.onerror = function () {
+      if (!active) {
+        return;
+      }
 
-    if (inputPropsProp.onChange) {
-      inputPropsProp.onChange.apply(inputPropsProp, [event].concat(args));
-    } // Perform in the willUpdate
+      setLoaded('error');
+    };
 
+    return function () {
+      active = false;
+    };
+  }, [src, srcSet]);
+  return loaded;
+}
 
-    if (onChange) {
-      onChange.apply(void 0, [event].concat(args));
-    }
-  }; // Check the input state on mount, in case it was filled by the user
-  // or auto filled by the browser before the hydration (for SSR).
+var Avatar_Avatar = /*#__PURE__*/react["forwardRef"](function Avatar(props, ref) {
+  var alt = props.alt,
+      childrenProp = props.children,
+      classes = props.classes,
+      className = props.className,
+      _props$component = props.component,
+      Component = _props$component === void 0 ? 'div' : _props$component,
+      imgProps = props.imgProps,
+      sizes = props.sizes,
+      src = props.src,
+      srcSet = props.srcSet,
+      _props$variant = props.variant,
+      variant = _props$variant === void 0 ? 'circular' : _props$variant,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["alt", "children", "classes", "className", "component", "imgProps", "sizes", "src", "srcSet", "variant"]);
 
+  var children = null; // Use a hook instead of onError on the img element to support server-side rendering.
 
-  react["useEffect"](function () {
-    checkDirty(inputRef.current);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  var handleClick = function handleClick(event) {
-    if (inputRef.current && event.currentTarget === event.target) {
-      inputRef.current.focus();
-    }
-
-    if (onClick) {
-      onClick(event);
-    }
-  };
-
-  var InputComponent = inputComponent;
-
-  var inputProps = Object(esm_extends["a" /* default */])({}, inputPropsProp, {
-    ref: handleInputRef
+  var loaded = useLoaded({
+    src: src,
+    srcSet: srcSet
   });
+  var hasImg = src || srcSet;
+  var hasImgNotFailing = hasImg && loaded !== 'error';
 
-  if (typeof InputComponent !== 'string') {
-    inputProps = Object(esm_extends["a" /* default */])({
-      // Rename ref to inputRef as we don't know the
-      // provided `inputComponent` structure.
-      inputRef: handleInputRef,
-      type: type
-    }, inputProps, {
-      ref: null
-    });
-  } else if (multiline) {
-    if (rows && !maxRows && !minRows && !rowsMax && !rowsMin) {
-      InputComponent = 'textarea';
-    } else {
-      inputProps = Object(esm_extends["a" /* default */])({
-        minRows: rows || minRows,
-        rowsMax: rowsMax,
-        maxRows: maxRows
-      }, inputProps);
-      InputComponent = esm_TextareaAutosize_TextareaAutosize;
-    }
+  if (hasImgNotFailing) {
+    children = /*#__PURE__*/react["createElement"]("img", Object(esm_extends["a" /* default */])({
+      alt: alt,
+      src: src,
+      srcSet: srcSet,
+      sizes: sizes,
+      className: classes.img
+    }, imgProps));
+  } else if (childrenProp != null) {
+    children = childrenProp;
+  } else if (hasImg && alt) {
+    children = alt[0];
   } else {
-    inputProps = Object(esm_extends["a" /* default */])({
-      type: type
-    }, inputProps);
+    children = /*#__PURE__*/react["createElement"](Person, {
+      className: classes.fallback
+    });
   }
 
-  var handleAutoFill = function handleAutoFill(event) {
-    // Provide a fake value as Chrome might not let you access it for security reasons.
-    checkDirty(event.animationName === 'mui-auto-fill-cancel' ? inputRef.current : {
-      value: 'x'
-    });
-  };
-
-  react["useEffect"](function () {
-    if (muiFormControl) {
-      muiFormControl.setAdornedStart(Boolean(startAdornment));
-    }
-  }, [muiFormControl, startAdornment]);
-  return /*#__PURE__*/react["createElement"]("div", Object(esm_extends["a" /* default */])({
-    className: Object(clsx_m["a" /* default */])(classes.root, classes["color".concat(Object(capitalize["a" /* default */])(fcs.color || 'primary'))], className, fcs.disabled && classes.disabled, fcs.error && classes.error, fullWidth && classes.fullWidth, fcs.focused && classes.focused, muiFormControl && classes.formControl, multiline && classes.multiline, startAdornment && classes.adornedStart, endAdornment && classes.adornedEnd, fcs.margin === 'dense' && classes.marginDense),
-    onClick: handleClick,
+  return /*#__PURE__*/react["createElement"](Component, Object(esm_extends["a" /* default */])({
+    className: Object(clsx_m["a" /* default */])(classes.root, classes.system, classes[variant], className, !hasImgNotFailing && classes.colorDefault),
     ref: ref
-  }, other), startAdornment, /*#__PURE__*/react["createElement"](FormControlContext["a" /* default */].Provider, {
-    value: null
-  }, /*#__PURE__*/react["createElement"](InputComponent, Object(esm_extends["a" /* default */])({
-    "aria-invalid": fcs.error,
-    "aria-describedby": ariaDescribedby,
-    autoComplete: autoComplete,
-    autoFocus: autoFocus,
-    defaultValue: defaultValue,
-    disabled: fcs.disabled,
-    id: id,
-    onAnimationStart: handleAutoFill,
-    name: name,
-    placeholder: placeholder,
-    readOnly: readOnly,
-    required: fcs.required,
-    rows: rows,
-    value: value,
-    onKeyDown: onKeyDown,
-    onKeyUp: onKeyUp
-  }, inputProps, {
-    className: Object(clsx_m["a" /* default */])(classes.input, inputPropsProp.className, fcs.disabled && classes.disabled, multiline && classes.inputMultiline, fcs.hiddenLabel && classes.inputHiddenLabel, startAdornment && classes.inputAdornedStart, endAdornment && classes.inputAdornedEnd, type === 'search' && classes.inputTypeSearch, fcs.margin === 'dense' && classes.inputMarginDense),
-    onBlur: handleBlur,
-    onChange: handleChange,
-    onFocus: handleFocus
-  }))), endAdornment, renderSuffix ? renderSuffix(Object(esm_extends["a" /* default */])({}, fcs, {
-    startAdornment: startAdornment
-  })) : null);
+  }, other), children);
 });
  false ? undefined : void 0;
-/* harmony default export */ var esm_InputBase_InputBase = __webpack_exports__["a"] = (Object(withStyles["a" /* default */])(InputBase_styles, {
-  name: 'MuiInputBase'
-})(InputBase_InputBase));
-
-/***/ }),
-
-/***/ 756:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(157);
-
-var _interopRequireWildcard = __webpack_require__(154);
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(0));
-
-var _createSvgIcon = _interopRequireDefault(__webpack_require__(164));
-
-var _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement("path", {
-  d: "M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"
-}), 'Telegram');
-
-exports.default = _default;
+/* harmony default export */ var esm_Avatar_Avatar = __webpack_exports__["a"] = (Object(withStyles["a" /* default */])(styles, {
+  name: 'MuiAvatar'
+})(Avatar_Avatar));
 
 /***/ })
 
