@@ -42,11 +42,19 @@ const ProjectsList = [
     linkText:"Explore EOS Rate."
   },
   {
+    img:"img/logos/inmutrust.svg",
+    name:"InmuTrust",
+    details:"InmuTrust is a platform developed in collaboration with LACChain. It deploys EOSIO blockchain technology to improve transparency and trust in the distribution of COVID-19 vaccines. ",
+    link:"https://inmutrust.com/",
+    color:"#ffffff",
+    linkText:"Explore InmuTrust."
+  },
+  {
     img:"img/logos/eosioforum.svg",
     name:"Enterprise EOSIO Forum",
     details:"We are part of the Enterprise EOSIO Forum, a community-driven initiative to discuss enterprise blockchain solutions deploying EOSIO technology. ",
     link:"https://www.linkedin.com/company/enterprise-eosio-forum/",
-    color:"#ffffff",
+    color:"#f8f8f8",
     linkText:"More about Enterprise EOSIO Forum."
   },
   {
@@ -54,7 +62,7 @@ const ProjectsList = [
     name:"Evodex",
     details:"Evodex is the front-end user interface for a liquidity pool protocol where users vote on the pool liquidity fees and pay zero gas. We were in charge of UX and front-end design. ",
     link:"https://evodex.io/",
-    color:"#f8f8f8",
+    color:"#ffffff",
     linkText: "Try Evodex now."
   },
   {
@@ -62,7 +70,7 @@ const ProjectsList = [
     name:"EOS Foundation",
     details:"We are part of the EOS Foundation proof of concept. It is an autonomous, decentralized, non-profit organization that will enable self-representation and promotion of the EOS community. ",
     link:"http://eos-foundation.eosio.cr/",
-    color:"#ffffff",
+    color:"#f8f8f8",
     linkText:"Check EOS Foundation."
   },
   {
@@ -70,7 +78,7 @@ const ProjectsList = [
     name:"Undisclosed Enterprise Project",
     details:" We developed an app for a US-based client in the accounting and tax industry for improved traceability of intercompany transactions. ",
     link:"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-a-great-idea-e384b298a4a8",
-    color:"#f8f8f8",
+    color:"#ffffff",
     linkText:"Read more here."
   },
   {
@@ -78,7 +86,7 @@ const ProjectsList = [
     name:"Notario Digital",
     details:"Notario Digital is an open-source project that generates a hash of any file to register it immutably on an EOSIO network. ",
     link:"https://notarize.eosio.cr/dashboard/notary",
-    color:"#ffffff",
+    color:"#f8f8f8",
     linkText:"Take a look at it."
   }
 ]
@@ -133,6 +141,7 @@ const OurProjects = () => {
           <Box className="projectsGridLeft">
             <Box className="imgBoxProjects">
               <img
+                style={{maxWidth: '50%'}}
                 alt={name}
                 src={useBaseUrl(img)}
               />
