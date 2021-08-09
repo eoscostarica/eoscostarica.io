@@ -37,7 +37,7 @@ export default function LayoutHead(props) {
     absolute: true
   });
   const faviconUrl = useBaseUrl(favicon);
-  const htmlLang = "en"
+  const htmlLang = "en-us"
   const location = useLocation()
   return <>
       <Head>
