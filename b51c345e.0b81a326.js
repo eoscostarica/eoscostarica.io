@@ -9044,9 +9044,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _react = __webpack_require__(0);
 
@@ -9086,11 +9086,15 @@ var _reactSwipeable = __webpack_require__(772);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var styles = {
     root: {
@@ -9164,11 +9168,16 @@ var styles = {
     }
 };
 
-var sanitizeStyleProps = function sanitizeStyleProps(props) {
-    return props !== undefined ? {
+var sanitizeNavProps = function sanitizeNavProps(props) {
+    var _ref = props || {},
+        className = _ref.className,
+        style = _ref.style,
+        rest = _objectWithoutProperties(_ref, ['className', 'style']);
+
+    return props !== undefined ? _extends({
         style: props.style !== undefined ? props.style : {},
         className: props.className !== undefined ? props.className : ""
-    } : { style: {}, className: "" };
+    }, rest) : _extends({ style: {}, className: "" }, rest);
 };
 
 var sanitizeProps = function sanitizeProps(props) {
@@ -9187,6 +9196,7 @@ var sanitizeProps = function sanitizeProps(props) {
         interval: props.interval !== undefined ? props.interval : 4000,
 
         animation: animation,
+        reverseEdgeAnimationDirection: props.reverseEdgeAnimationDirection !== undefined ? props.reverseEdgeAnimationDirection : true,
         timeout: timeout,
 
         swipe: props.swipe !== undefined ? props.swipe : true,
@@ -9195,17 +9205,17 @@ var sanitizeProps = function sanitizeProps(props) {
         navButtonsAlwaysVisible: props.navButtonsAlwaysVisible !== undefined ? props.navButtonsAlwaysVisible : false,
         cycleNavigation: props.cycleNavigation !== undefined ? props.cycleNavigation : true,
         fullHeightHover: props.fullHeightHover !== undefined ? props.fullHeightHover : true,
-        navButtonsWrapperProps: sanitizeStyleProps(props.navButtonsWrapperProps),
-        navButtonsProps: sanitizeStyleProps(props.navButtonsProps),
+        navButtonsWrapperProps: sanitizeNavProps(props.navButtonsWrapperProps),
+        navButtonsProps: sanitizeNavProps(props.navButtonsProps),
         NavButton: props.NavButton,
 
         NextIcon: props.NextIcon !== undefined ? props.NextIcon : _react2.default.createElement(_NavigateNext2.default, null),
         PrevIcon: props.PrevIcon !== undefined ? props.PrevIcon : _react2.default.createElement(_NavigateBefore2.default, null),
 
         indicators: props.indicators !== undefined ? props.indicators : true,
-        indicatorContainerProps: sanitizeStyleProps(props.indicatorContainerProps),
-        indicatorIconButtonProps: sanitizeStyleProps(props.indicatorIconButtonProps),
-        activeIndicatorIconButtonProps: sanitizeStyleProps(props.activeIndicatorIconButtonProps),
+        indicatorContainerProps: sanitizeNavProps(props.indicatorContainerProps),
+        indicatorIconButtonProps: sanitizeNavProps(props.indicatorIconButtonProps),
+        activeIndicatorIconButtonProps: sanitizeNavProps(props.activeIndicatorIconButtonProps),
         IndicatorIcon: props.IndicatorIcon,
 
         onChange: props.onChange !== undefined ? props.onChange : function () {},
@@ -9388,6 +9398,7 @@ var Carousel = function (_Component) {
                 className = _sanitizeProps8.className,
                 stopAutoPlayOnHover = _sanitizeProps8.stopAutoPlayOnHover,
                 animation = _sanitizeProps8.animation,
+                reverseEdgeAnimationDirection = _sanitizeProps8.reverseEdgeAnimationDirection,
                 timeout = _sanitizeProps8.timeout,
                 swipe = _sanitizeProps8.swipe,
                 navButtonsAlwaysInvisible = _sanitizeProps8.navButtonsAlwaysInvisible,
@@ -9407,17 +9418,25 @@ var Carousel = function (_Component) {
 
             var classes = this.props.classes;
 
+            var buttonsClass = navButtonsProps.className,
+                buttonsStyle = navButtonsProps.style,
+                buttonsProps = _objectWithoutProperties(navButtonsProps, ['className', 'style']);
+
+            var buttonsWrapperClass = navButtonsWrapperProps.className,
+                buttonsWrapperStyle = navButtonsWrapperProps.style,
+                buttonsWrapperProps = _objectWithoutProperties(navButtonsWrapperProps, ['className', 'style']);
+
             var buttonVisibilityClassValue = '' + (navButtonsAlwaysVisible ? classes.buttonVisible : classes.buttonHidden);
-            var buttonCssClassValue = classes.button + ' ' + buttonVisibilityClassValue + ' ' + (fullHeightHover ? classes.fullHeightHoverButton : "") + ' ' + navButtonsProps.className;
-            var buttonWrapperCssClassValue = classes.buttonWrapper + ' ' + (fullHeightHover ? classes.fullHeightHoverWrapper : "") + ' ' + navButtonsWrapperProps.className;
+            var buttonCssClassValue = classes.button + ' ' + buttonVisibilityClassValue + ' ' + (fullHeightHover ? classes.fullHeightHoverButton : "") + ' ' + buttonsClass;
+            var buttonWrapperCssClassValue = classes.buttonWrapper + ' ' + (fullHeightHover ? classes.fullHeightHoverWrapper : "") + ' ' + buttonsWrapperClass;
 
             var compareActiveDisplayed = function compareActiveDisplayed() {
                 if (_this3.state.active === 0 && _this3.state.prevActive === children.length - 1) {
-                    return false;
+                    return reverseEdgeAnimationDirection ? false : true;
                 }
 
                 if (_this3.state.active === children.length - 1 && _this3.state.prevActive === 0) {
-                    return true;
+                    return reverseEdgeAnimationDirection ? true : false;
                 }
 
                 if (_this3.state.active > _this3.state.prevActive) {
@@ -9472,19 +9491,19 @@ var Carousel = function (_Component) {
                 }),
                 !navButtonsAlwaysInvisible && showButton(true) && _react2.default.createElement(
                     'div',
-                    { className: buttonWrapperCssClassValue + ' ' + classes.next, style: navButtonsWrapperProps.style },
-                    NavButton !== undefined ? NavButton({ onClick: this.next, className: buttonCssClassValue, style: navButtonsProps.style, next: true, prev: false }) : _react2.default.createElement(
+                    _extends({ className: buttonWrapperCssClassValue + ' ' + classes.next, style: buttonsWrapperStyle }, buttonsWrapperProps),
+                    NavButton !== undefined ? NavButton(_extends({ onClick: this.next, className: buttonCssClassValue, style: buttonsStyle, next: true, prev: false }, buttonsProps)) : _react2.default.createElement(
                         _IconButton2.default,
-                        { className: '' + buttonCssClassValue, onClick: this.next, 'aria-label': 'Next', style: navButtonsProps.style },
+                        _extends({ className: '' + buttonCssClassValue, onClick: this.next, 'aria-label': 'Next', style: buttonsStyle }, buttonsProps),
                         NextIcon
                     )
                 ),
                 !navButtonsAlwaysInvisible && showButton(false) && _react2.default.createElement(
                     'div',
-                    { className: buttonWrapperCssClassValue + ' ' + classes.prev, style: navButtonsWrapperProps.style },
-                    NavButton !== undefined ? NavButton({ onClick: this.prev, className: buttonCssClassValue, style: navButtonsProps.style, next: false, prev: true }) : _react2.default.createElement(
+                    _extends({ className: buttonWrapperCssClassValue + ' ' + classes.prev, style: buttonsWrapperStyle }, buttonsWrapperProps),
+                    NavButton !== undefined ? NavButton.apply(undefined, [{ onClick: this.prev, className: buttonCssClassValue, style: navButtonsProps.style, next: false, prev: true }].concat(_toConsumableArray(buttonsProps))) : _react2.default.createElement(
                         _IconButton2.default,
-                        { className: '' + buttonCssClassValue, onClick: this.prev, 'aria-label': 'Previous', style: navButtonsProps.style },
+                        _extends({ className: '' + buttonCssClassValue, onClick: this.prev, 'aria-label': 'Previous', style: navButtonsProps.style }, buttonsProps),
                         PrevIcon
                     )
                 ),
@@ -9547,16 +9566,30 @@ function Indicators(props) {
         className: classes.indicatorIcon
     });
 
+    var _props$indicatorIconB = props.indicatorIconButtonProps,
+        indicatorIconButtonClass = _props$indicatorIconB.className,
+        indicatorIconButtonStyle = _props$indicatorIconB.style,
+        indicatorIconButtonProps = _objectWithoutProperties(_props$indicatorIconB, ['className', 'style']);
+
+    var _props$activeIndicato = props.activeIndicatorIconButtonProps,
+        activeIndicatorIconButtonClass = _props$activeIndicato.className,
+        activeIndicatorIconButtonStyle = _props$activeIndicato.style,
+        activeIndicatorIconButtonProps = _objectWithoutProperties(_props$activeIndicato, ['className', 'style']);
+
     var indicators = [];
 
     var _loop = function _loop(i) {
-        var className = i === props.active ? classes.indicator + ' ' + props.indicatorIconButtonProps.className + ' ' + classes.active + ' ' + props.activeIndicatorIconButtonProps.className : classes.indicator + ' ' + props.indicatorIconButtonProps.className;
+        var className = i === props.active ? classes.indicator + ' ' + indicatorIconButtonClass + ' ' + classes.active + ' ' + activeIndicatorIconButtonClass : classes.indicator + ' ' + indicatorIconButtonClass;
 
-        var style = i === props.active ? Object.assign({}, props.indicatorIconButtonProps.style, props.activeIndicatorIconButtonProps.style) : props.indicatorIconButtonProps.style;
+        var style = i === props.active ? Object.assign({}, indicatorIconButtonStyle, activeIndicatorIconButtonStyle) : indicatorIconButtonStyle;
+
+        var restProps = i === props.active ? Object.assign({}, indicatorIconButtonProps, activeIndicatorIconButtonProps) : indicatorIconButtonProps;
+
+        if (restProps['aria-label'] === undefined) restProps['aria-label'] = 'carousel indicator';
 
         var item = _react2.default.createElement(
             _IconButton2.default,
-            {
+            _extends({
                 key: i,
                 className: className,
                 style: style,
@@ -9564,7 +9597,10 @@ function Indicators(props) {
                     props.press(i);
                 },
                 size: 'small'
-            },
+            }, restProps, {
+                // Always add the index to any given aria label
+                'aria-label': restProps['aria-label'] + ' ' + (i + 1)
+            }),
             IndicatorIcon
         );
 
@@ -9575,12 +9611,14 @@ function Indicators(props) {
         _loop(i);
     }
 
-    var wrapperStyle = props.indicatorContainerProps !== undefined ? props.indicatorContainerProps.style : undefined;
-    var wrapperClassName = props.indicatorContainerProps !== undefined ? props.indicatorContainerProps.className : "";
+    var _props$indicatorConta = props.indicatorContainerProps,
+        indicatorContainerClass = _props$indicatorConta.className,
+        indicatorContainerStyle = _props$indicatorConta.style,
+        indicatorContainerProps = _objectWithoutProperties(_props$indicatorConta, ['className', 'style']);
 
     return _react2.default.createElement(
         'div',
-        { className: classes.indicators + ' ' + wrapperClassName, style: wrapperStyle },
+        _extends({ className: classes.indicators + ' ' + indicatorContainerClass, style: indicatorContainerStyle }, indicatorContainerProps),
         indicators
     );
 }
