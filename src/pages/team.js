@@ -97,22 +97,13 @@ const DevelopTeam = [
         color:"#f8f8f8"
     },
     {
-        img:"img/team/edgarParra.jpg",
-        name:"Edgar Parra",
-        position:"Intern",
-        bio:"I believe technology is a constant learning process that should be done together.",
-        linkedIn:"https://www.linkedin.com/in/edgar-parra-barillas-078883161/",
-        twitter:"",
-        color:"#ffffff"
-    },
-    {
         img:"img/team/jorge.jpg",
         name:"Jorge Murillo",
         position:"Sr. UX Designer",
         bio:"Understanding the people's needs is crucial to create user interfaces for hi-tech apps and mediate among users, designers, and developers.",
         linkedIn:"https://www.linkedin.com/in/jmurilloux/",
         twitter:"https://twitter.com/Oquedo",
-        color:"#f8f8f8"
+        color:"#ffffff"
     },
     {
         img:"img/team/kevin.jpg",
@@ -121,24 +112,15 @@ const DevelopTeam = [
         bio:"Software development has given me the opportunity to learn and create new things everyday.",
         linkedIn:"https://www.linkedin.com/in/kevin-castillo-mora/",
         twitter:"",
-        color:"#ffffff"
+        color:"#f8f8f8"
     },
     {
         img:"img/team/leister.jpg",
         name:"Leister Álvarez",
-        position:"Intern",
+        position:"Jr Backend Developer",
         bio:"Programming reflects who we are; let's do something awesome.",
         linkedIn:"https://www.linkedin.com/in/leister-francisco-alvarez-campos-65b7801bb/",
         twitter:"https://twitter.com/leisterac",
-        color:"#f8f8f8"
-    },
-    {
-        img:"img/team/steph.jpg",
-        name:"Stephanie Delgado",
-        position:"Intern",
-        bio:"The tech world is always evolving, so I believe one must be fearless.",
-        linkedIn:"https://www.linkedin.com/in/stephaniedelgadobrenes/",
-        twitter:"",
         color:"#ffffff"
     },
     {
