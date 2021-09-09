@@ -9,6 +9,7 @@ author_image_url: https://avatars0.githubusercontent.com/u/29232417?s=400&u=032f
 tags: [eosio, blockchain, blockchain technology, lacchain, healthcare]
 metaTitle: "EOS Costa Rica: InmuTrust - EOSIO Blockchain for Vaccine Distribution"
 metaDescription: Learn about InmuTrust, a platform that deploys EOSIO blockchain technology to improve transparency and trust in the distribution of COVID-19 vaccines.
+langPost: https://es.eoscostarica.io/blog/inmutrust-anuncio
 ---
 
 ![Get to Know LACChain EOSIO](/img/blog/inmutrust-blog/inmutrust.jpg)
