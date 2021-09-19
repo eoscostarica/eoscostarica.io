@@ -18,7 +18,7 @@
 			"kriskoin",
 			"leisterfrancisco"
 		],
-		"chain_resources": "",
+		"chain_resources": "https://archive.eosio.cr",
 		"other_resources": [
 			"https://wax.eosio.online",
 			"https://guide.eoscostarica.io",

@@ -701,7 +701,7 @@ function merge(acc, item) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RuleList; });
 /* unused harmony export SheetsManager */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return SheetsRegistry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return create; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return createJss; });
 /* unused harmony export createGenerateId */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return createRule; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getDynamicStyles; });
@@ -770,15 +770,16 @@ var join = function join(value, by) {
 
   return result;
 };
-
 /**
- * Converts array values to string.
+ * Converts JSS array value to a CSS string.
  *
  * `margin: [['5px', '10px']]` > `margin: 5px 10px;`
  * `border: ['1px', '2px']` > `border: 1px, 2px;`
  * `margin: [['5px', '10px'], '!important']` > `margin: 5px 10px !important;`
  * `color: ['red', !important]` > `color: red !important;`
  */
+
+
 var toCssValue = function toCssValue(value, ignoreImportant) {
   if (ignoreImportant === void 0) {
     ignoreImportant = false;
@@ -803,10 +804,25 @@ var toCssValue = function toCssValue(value, ignoreImportant) {
   return cssValue;
 };
 
+function getWhitespaceSymbols(options) {
+  if (options && options.format === false) {
+    return {
+      linebreak: '',
+      space: ''
+    };
+  }
+
+  return {
+    linebreak: '\n',
+    space: ' '
+  };
+}
+
 /**
  * Indent a string.
  * http://jsperf.com/array-join-vs-for
  */
+
 function indentStr(str, indent) {
   var result = '';
 
@@ -832,6 +848,15 @@ function toCss(selector, style, options) {
       _options$indent = _options.indent,
       indent = _options$indent === void 0 ? 0 : _options$indent;
   var fallbacks = style.fallbacks;
+
+  if (options.format === false) {
+    indent = -Infinity;
+  }
+
+  var _getWhitespaceSymbols = getWhitespaceSymbols(options),
+      linebreak = _getWhitespaceSymbols.linebreak,
+      space = _getWhitespaceSymbols.space;
+
   if (selector) indent++; // Apply fallbacks first.
 
   if (fallbacks) {
@@ -844,8 +869,8 @@ function toCss(selector, style, options) {
           var value = fallback[prop];
 
           if (value != null) {
-            if (result) result += '\n';
-            result += indentStr(prop + ": " + toCssValue(value) + ";", indent);
+            if (result) result += linebreak;
+            result += indentStr(prop + ":" + space + toCssValue(value) + ";", indent);
           }
         }
       }
@@ -855,8 +880,8 @@ function toCss(selector, style, options) {
         var _value = fallbacks[_prop];
 
         if (_value != null) {
-          if (result) result += '\n';
-          result += indentStr(_prop + ": " + toCssValue(_value) + ";", indent);
+          if (result) result += linebreak;
+          result += indentStr(_prop + ":" + space + toCssValue(_value) + ";", indent);
         }
       }
     }
@@ -866,8 +891,8 @@ function toCss(selector, style, options) {
     var _value2 = style[_prop2];
 
     if (_value2 != null && _prop2 !== 'fallbacks') {
-      if (result) result += '\n';
-      result += indentStr(_prop2 + ": " + toCssValue(_value2) + ";", indent);
+      if (result) result += linebreak;
+      result += indentStr(_prop2 + ":" + space + toCssValue(_value2) + ";", indent);
     }
   } // Allow empty style in this case, because properties will be added dynamically.
 
@@ -876,8 +901,8 @@ function toCss(selector, style, options) {
 
   if (!selector) return result;
   indent--;
-  if (result) result = "\n" + result + "\n";
-  return indentStr(selector + " {" + result, indent) + indentStr('}', indent);
+  if (result) result = "" + linebreak + result + linebreak;
+  return indentStr("" + selector + space + "{" + result, indent) + indentStr('}', indent);
 }
 
 var escapeRegex = /([[\].#*$><+~=|^:(),"'`\s])/g;
@@ -891,12 +916,7 @@ var BaseStyleRule =
 function () {
   function BaseStyleRule(key, style, options) {
     this.type = 'style';
-    this.key = void 0;
     this.isProcessed = false;
-    this.style = void 0;
-    this.renderer = void 0;
-    this.renderable = void 0;
-    this.options = void 0;
     var sheet = options.sheet,
         Renderer = options.Renderer;
     this.key = key;
@@ -956,9 +976,6 @@ function (_BaseStyleRule) {
     var _this;
 
     _this = _BaseStyleRule.call(this, key, style, options) || this;
-    _this.selectorText = void 0;
-    _this.id = void 0;
-    _this.renderable = void 0;
     var selector = options.selector,
         scoped = options.scoped,
         sheet = options.sheet,
@@ -1055,12 +1072,12 @@ function (_BaseStyleRule) {
   return StyleRule;
 }(BaseStyleRule);
 var pluginStyleRule = {
-  onCreateRule: function onCreateRule(name, style, options) {
-    if (name[0] === '@' || options.parent && options.parent.type === 'keyframes') {
+  onCreateRule: function onCreateRule(key, style, options) {
+    if (key[0] === '@' || options.parent && options.parent.type === 'keyframes') {
       return null;
     }
 
-    return new StyleRule(name, style, options);
+    return new StyleRule(key, style, options);
   }
 };
 
@@ -1078,13 +1095,7 @@ var ConditionalRule =
 function () {
   function ConditionalRule(key, styles, options) {
     this.type = 'conditional';
-    this.at = void 0;
-    this.key = void 0;
-    this.query = void 0;
-    this.rules = void 0;
-    this.options = void 0;
     this.isProcessed = false;
-    this.renderable = void 0;
     this.key = key;
     var atMatch = key.match(atRegExp);
     this.at = atMatch ? atMatch[1] : 'unknown'; // Key might contain a unique suffix in case the `name` passed by user was duplicate.
@@ -1140,6 +1151,9 @@ function () {
       options = defaultToStringOptions;
     }
 
+    var _getWhitespaceSymbols = getWhitespaceSymbols(options),
+        linebreak = _getWhitespaceSymbols.linebreak;
+
     if (options.indent == null) options.indent = defaultToStringOptions.indent;
     if (options.children == null) options.children = defaultToStringOptions.children;
 
@@ -1148,7 +1162,7 @@ function () {
     }
 
     var children = this.rules.toString(options);
-    return children ? this.query + " {\n" + children + "\n}" : '';
+    return children ? this.query + " {" + linebreak + children + linebreak + "}" : '';
   };
 
   return ConditionalRule;
@@ -1175,13 +1189,7 @@ function () {
   function KeyframesRule(key, frames, options) {
     this.type = 'keyframes';
     this.at = '@keyframes';
-    this.key = void 0;
-    this.name = void 0;
-    this.id = void 0;
-    this.rules = void 0;
-    this.options = void 0;
     this.isProcessed = false;
-    this.renderable = void 0;
     var nameMatch = key.match(nameRegExp);
 
     if (nameMatch && nameMatch[1]) {
@@ -1221,6 +1229,9 @@ function () {
       options = defaultToStringOptions$1;
     }
 
+    var _getWhitespaceSymbols = getWhitespaceSymbols(options),
+        linebreak = _getWhitespaceSymbols.linebreak;
+
     if (options.indent == null) options.indent = defaultToStringOptions$1.indent;
     if (options.children == null) options.children = defaultToStringOptions$1.children;
 
@@ -1229,7 +1240,7 @@ function () {
     }
 
     var children = this.rules.toString(options);
-    if (children) children = "\n" + children + "\n";
+    if (children) children = "" + linebreak + children + linebreak;
     return this.at + " " + this.id + " {" + children + "}";
   };
 
@@ -1266,7 +1277,7 @@ var replaceRef = function replaceRef(style, prop, keyframes) {
   }
 };
 
-var plugin = {
+var pluginKeyframesRule = {
   onCreateRule: function onCreateRule(key, frames, options) {
     return typeof key === 'string' && keyRegExp$1.test(key) ? new KeyframesRule(key, frames, options) : null;
   },
@@ -1303,15 +1314,7 @@ function (_BaseStyleRule) {
   Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])(KeyframeRule, _BaseStyleRule);
 
   function KeyframeRule() {
-    var _this;
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _BaseStyleRule.call.apply(_BaseStyleRule, [this].concat(args)) || this;
-    _this.renderable = void 0;
-    return _this;
+    return _BaseStyleRule.apply(this, arguments) || this;
   }
 
   var _proto = KeyframeRule.prototype;
@@ -1346,11 +1349,7 @@ function () {
   function FontFaceRule(key, style, options) {
     this.type = 'font-face';
     this.at = '@font-face';
-    this.key = void 0;
-    this.style = void 0;
-    this.options = void 0;
     this.isProcessed = false;
-    this.renderable = void 0;
     this.key = key;
     this.style = style;
     this.options = options;
@@ -1363,12 +1362,15 @@ function () {
   var _proto = FontFaceRule.prototype;
 
   _proto.toString = function toString(options) {
+    var _getWhitespaceSymbols = getWhitespaceSymbols(options),
+        linebreak = _getWhitespaceSymbols.linebreak;
+
     if (Array.isArray(this.style)) {
       var str = '';
 
       for (var index = 0; index < this.style.length; index++) {
         str += toCss(this.at, this.style[index]);
-        if (this.style[index + 1]) str += '\n';
+        if (this.style[index + 1]) str += linebreak;
       }
 
       return str;
@@ -1392,11 +1394,7 @@ function () {
   function ViewportRule(key, style, options) {
     this.type = 'viewport';
     this.at = '@viewport';
-    this.key = void 0;
-    this.style = void 0;
-    this.options = void 0;
     this.isProcessed = false;
-    this.renderable = void 0;
     this.key = key;
     this.style = style;
     this.options = options;
@@ -1425,11 +1423,7 @@ var SimpleRule =
 function () {
   function SimpleRule(key, value, options) {
     this.type = 'simple';
-    this.key = void 0;
-    this.value = void 0;
-    this.options = void 0;
     this.isProcessed = false;
-    this.renderable = void 0;
     this.key = key;
     this.value = value;
     this.options = options;
@@ -1470,7 +1464,7 @@ var pluginSimpleRule = {
   }
 };
 
-var plugins = [pluginStyleRule, pluginConditionalRule, plugin, pluginKeyframeRule, pluginFontFaceRule, pluginViewportRule, pluginSimpleRule];
+var plugins = [pluginStyleRule, pluginConditionalRule, pluginKeyframesRule, pluginKeyframeRule, pluginFontFaceRule, pluginViewportRule, pluginSimpleRule];
 
 var defaultUpdateOptions = {
   process: true
@@ -1497,9 +1491,6 @@ function () {
     this.raw = {};
     this.index = [];
     this.counter = 0;
-    this.options = void 0;
-    this.classes = void 0;
-    this.keyframes = void 0;
     this.options = options;
     this.classes = options.classes;
     this.keyframes = options.keyframes;
@@ -1638,14 +1629,11 @@ function () {
     var options;
 
     if (typeof (arguments.length <= 0 ? undefined : arguments[0]) === 'string') {
-      name = arguments.length <= 0 ? undefined : arguments[0]; // $FlowFixMe[invalid-tuple-index]
-
-      data = arguments.length <= 1 ? undefined : arguments[1]; // $FlowFixMe[invalid-tuple-index]
-
+      name = arguments.length <= 0 ? undefined : arguments[0];
+      data = arguments.length <= 1 ? undefined : arguments[1];
       options = arguments.length <= 2 ? undefined : arguments[2];
     } else {
-      data = arguments.length <= 0 ? undefined : arguments[0]; // $FlowFixMe[invalid-tuple-index]
-
+      data = arguments.length <= 0 ? undefined : arguments[0];
       options = arguments.length <= 1 ? undefined : arguments[1];
       name = null;
     }
@@ -1677,32 +1665,31 @@ function () {
       return;
     }
 
-    var styleRule = rule;
-    var style = styleRule.style;
+    var style = rule.style;
     plugins.onUpdate(data, rule, sheet, options); // We rely on a new `style` ref in case it was mutated during onUpdate hook.
 
-    if (options.process && style && style !== styleRule.style) {
+    if (options.process && style && style !== rule.style) {
       // We need to run the plugins in case new `style` relies on syntax plugins.
-      plugins.onProcessStyle(styleRule.style, styleRule, sheet); // Update and add props.
+      plugins.onProcessStyle(rule.style, rule, sheet); // Update and add props.
 
-      for (var prop in styleRule.style) {
-        var nextValue = styleRule.style[prop];
+      for (var prop in rule.style) {
+        var nextValue = rule.style[prop];
         var prevValue = style[prop]; // We need to use `force: true` because `rule.style` has been updated during onUpdate hook, so `rule.prop()` will not update the CSSOM rule.
         // We do this comparison to avoid unneeded `rule.prop()` calls, since we have the old `style` object here.
 
         if (nextValue !== prevValue) {
-          styleRule.prop(prop, nextValue, forceUpdateOptions);
+          rule.prop(prop, nextValue, forceUpdateOptions);
         }
       } // Remove props.
 
 
       for (var _prop in style) {
-        var _nextValue = styleRule.style[_prop];
+        var _nextValue = rule.style[_prop];
         var _prevValue = style[_prop]; // We need to use `force: true` because `rule.style` has been updated during onUpdate hook, so `rule.prop()` will not update the CSSOM rule.
         // We do this comparison to avoid unneeded `rule.prop()` calls, since we have the old `style` object here.
 
         if (_nextValue == null && _nextValue !== _prevValue) {
-          styleRule.prop(_prop, null, forceUpdateOptions);
+          rule.prop(_prop, null, forceUpdateOptions);
         }
       }
     }
@@ -1717,12 +1704,15 @@ function () {
     var sheet = this.options.sheet;
     var link = sheet ? sheet.options.link : false;
 
+    var _getWhitespaceSymbols = getWhitespaceSymbols(options),
+        linebreak = _getWhitespaceSymbols.linebreak;
+
     for (var index = 0; index < this.index.length; index++) {
       var rule = this.index[index];
       var css = rule.toString(options); // No need to render an empty rule.
 
       if (!css && !link) continue;
-      if (str) str += '\n';
+      if (str) str += linebreak;
       str += css;
     }
 
@@ -1736,14 +1726,6 @@ var StyleSheet =
 /*#__PURE__*/
 function () {
   function StyleSheet(styles, options) {
-    this.options = void 0;
-    this.deployed = void 0;
-    this.attached = void 0;
-    this.rules = void 0;
-    this.renderer = void 0;
-    this.classes = void 0;
-    this.keyframes = void 0;
-    this.queue = void 0;
     this.attached = false;
     this.deployed = false;
     this.classes = {};
@@ -1945,7 +1927,7 @@ function () {
       internal: [],
       external: []
     };
-    this.registry = void 0;
+    this.registry = {};
   }
 
   var _proto = PluginsRegistry.prototype;
@@ -1984,7 +1966,6 @@ function () {
 
   _proto.onProcessStyle = function onProcessStyle(style, rule, sheet) {
     for (var i = 0; i < this.registry.onProcessStyle.length; i++) {
-      // $FlowFixMe[prop-missing]
       rule.style = this.registry.onProcessStyle[i](rule.style, rule, sheet);
     }
   }
@@ -2065,8 +2046,9 @@ function () {
 }();
 
 /**
- * Sheets registry to access them all at one place.
+ * Sheets registry to access all instances in one place.
  */
+
 var SheetsRegistry =
 /*#__PURE__*/
 function () {
@@ -2124,6 +2106,9 @@ function () {
         attached = _ref.attached,
         options = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"])(_ref, ["attached"]);
 
+    var _getWhitespaceSymbols = getWhitespaceSymbols(options),
+        linebreak = _getWhitespaceSymbols.linebreak;
+
     var css = '';
 
     for (var i = 0; i < this.registry.length; i++) {
@@ -2133,7 +2118,7 @@ function () {
         continue;
       }
 
-      if (css) css += '\n';
+      if (css) css += linebreak;
       css += sheet.toString(options);
     }
 
@@ -2161,7 +2146,7 @@ function () {
  * each request in order to not leak sheets across requests.
  */
 
-var registry = new SheetsRegistry();
+var sheets = new SheetsRegistry();
 
 /* eslint-disable */
 
@@ -2186,12 +2171,12 @@ if (globalThis$1[ns] == null) globalThis$1[ns] = 0; // Bundle may contain multip
 var moduleId = globalThis$1[ns]++;
 
 var maxRules = 1e10;
-
 /**
  * Returns a function which generates unique class names based on counters.
  * When new generator function is created, rule counter is reseted.
  * We need to reset the rule counter for SSR for each request.
  */
+
 var createGenerateId = function createGenerateId(options) {
   if (options === void 0) {
     options = {};
@@ -2233,6 +2218,7 @@ var createGenerateId = function createGenerateId(options) {
 /**
  * Cache the value from the first time a function is called.
  */
+
 var memoize = function memoize(fn) {
   var value;
   return function () {
@@ -2240,10 +2226,11 @@ var memoize = function memoize(fn) {
     return value;
   };
 };
-
 /**
  * Get a style property value.
  */
+
+
 var getPropertyValue = function getPropertyValue(cssRule, prop) {
   try {
     // Support CSSTOM.
@@ -2257,10 +2244,11 @@ var getPropertyValue = function getPropertyValue(cssRule, prop) {
     return '';
   }
 };
-
 /**
  * Set a style property.
  */
+
+
 var setProperty = function setProperty(cssRule, prop, value) {
   try {
     var cssValue = value;
@@ -2287,10 +2275,11 @@ var setProperty = function setProperty(cssRule, prop, value) {
 
   return true;
 };
-
 /**
  * Remove a style property.
  */
+
+
 var removeProperty = function removeProperty(cssRule, prop) {
   try {
     // Support CSSTOM.
@@ -2303,10 +2292,11 @@ var removeProperty = function removeProperty(cssRule, prop) {
      false ? undefined : void 0;
   }
 };
-
 /**
  * Set the selector.
  */
+
+
 var setSelector = function setSelector(cssRule, selectorText) {
   cssRule.selectorText = selectorText; // Return false if setter was not successful.
   // Currently works in chrome only.
@@ -2371,16 +2361,17 @@ function findCommentNode(text) {
 
   return null;
 }
-
 /**
  * Find a node before which we can insert the sheet.
  */
-function findPrevNode(options) {
-  var registry$1 = registry.registry;
 
-  if (registry$1.length > 0) {
+
+function findPrevNode(options) {
+  var registry = sheets.registry;
+
+  if (registry.length > 0) {
     // Try to insert before the next higher sheet.
-    var sheet = findHigherSheet(registry$1, options);
+    var sheet = findHigherSheet(registry, options);
 
     if (sheet && sheet.renderer) {
       return {
@@ -2390,7 +2381,7 @@ function findPrevNode(options) {
     } // Otherwise insert after the last attached.
 
 
-    sheet = findHighestSheet(registry$1, options);
+    sheet = findHighestSheet(registry, options);
 
     if (sheet && sheet.renderer) {
       return {
@@ -2436,7 +2427,6 @@ function insertStyle(style, options) {
 
 
   if (insertionPoint && typeof insertionPoint.nodeType === 'number') {
-    // https://stackoverflow.com/questions/41328728/force-casting-in-flow
     var insertionPointElement = insertionPoint;
     var parentNode = insertionPointElement.parentNode;
     if (parentNode) parentNode.insertBefore(style, insertionPointElement.nextSibling);else  false ? undefined : void 0;
@@ -2458,13 +2448,10 @@ var getNonce = memoize(function () {
 var _insertRule = function insertRule(container, rule, index) {
   try {
     if ('insertRule' in container) {
-      var c = container;
-      c.insertRule(rule, index);
+      container.insertRule(rule, index);
     } // Keyframes rule.
     else if ('appendRule' in container) {
-        var _c = container;
-
-        _c.appendRule(rule);
+        container.appendRule(rule);
       }
   } catch (err) {
      false ? undefined : void 0;
@@ -2497,7 +2484,6 @@ var createStyle = function createStyle() {
 var DomRenderer =
 /*#__PURE__*/
 function () {
-  // HTMLStyleElement needs fixing https://github.com/facebook/flow/issues/2696
   // Will be empty if link: true option is not set, because
   // it is only for use together with insertRule API.
   function DomRenderer(sheet) {
@@ -2505,12 +2491,10 @@ function () {
     this.setProperty = setProperty;
     this.removeProperty = removeProperty;
     this.setSelector = setSelector;
-    this.element = void 0;
-    this.sheet = void 0;
     this.hasInsertedRules = false;
     this.cssRules = [];
     // There is no sheet when the renderer is used from a standalone StyleRule.
-    if (sheet) registry.add(sheet);
+    if (sheet) sheets.add(sheet);
     this.sheet = sheet;
 
     var _ref = this.sheet ? this.sheet.options : {},
@@ -2697,7 +2681,7 @@ var Jss =
 function () {
   function Jss(options) {
     this.id = instanceCounter++;
-    this.version = "10.7.1";
+    this.version = "10.8.0";
     this.plugins = new PluginsRegistry();
     this.options = {
       id: {
@@ -2769,7 +2753,7 @@ function () {
         index = _options.index;
 
     if (typeof index !== 'number') {
-      index = registry.index === 0 ? 0 : registry.index + 1;
+      index = sheets.index === 0 ? 0 : sheets.index + 1;
     }
 
     var sheet = new StyleSheet(styles, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({}, options, {
@@ -2789,7 +2773,7 @@ function () {
 
   _proto.removeStyleSheet = function removeStyleSheet(sheet) {
     sheet.detach();
-    registry.remove(sheet);
+    sheets.remove(sheet);
     return this;
   }
   /**
@@ -2809,10 +2793,8 @@ function () {
 
     // Enable rule without name for inline styles.
     if (typeof name === 'object') {
-      // $FlowFixMe[incompatible-call]
       return this.createRule(undefined, name, style);
-    } // $FlowFixMe[incompatible-type]
-
+    }
 
     var ruleOptions = Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({}, options, {
       name: name,
@@ -2850,36 +2832,16 @@ function () {
   return Jss;
 }();
 
-/**
- * Extracts a styles object with only props that contain function values.
- */
-function getDynamicStyles(styles) {
-  var to = null;
-
-  for (var key in styles) {
-    var value = styles[key];
-    var type = typeof value;
-
-    if (type === 'function') {
-      if (!to) to = {};
-      to[key] = value;
-    } else if (type === 'object' && value !== null && !Array.isArray(value)) {
-      var extracted = getDynamicStyles(value);
-
-      if (extracted) {
-        if (!to) to = {};
-        to[key] = extracted;
-      }
-    }
-  }
-
-  return to;
-}
+var createJss = function createJss(options) {
+  return new Jss(options);
+};
 
 /**
  * SheetsManager is like a WeakMap which is designed to count StyleSheet
  * instances and attach/detach automatically.
+ * Used in react-jss.
  */
+
 var SheetsManager =
 /*#__PURE__*/
 function () {
@@ -2944,32 +2906,47 @@ function () {
 }();
 
 /**
+* Export a constant indicating if this browser has CSSTOM support.
+* https://developers.google.com/web/updates/2018/03/cssom
+*/
+var hasCSSTOMSupport = typeof CSS === 'object' && CSS != null && 'number' in CSS;
+
+/**
+ * Extracts a styles object with only props that contain function values.
+ */
+function getDynamicStyles(styles) {
+  var to = null;
+
+  for (var key in styles) {
+    var value = styles[key];
+    var type = typeof value;
+
+    if (type === 'function') {
+      if (!to) to = {};
+      to[key] = value;
+    } else if (type === 'object' && value !== null && !Array.isArray(value)) {
+      var extracted = getDynamicStyles(value);
+
+      if (extracted) {
+        if (!to) to = {};
+        to[key] = extracted;
+      }
+    }
+  }
+
+  return to;
+}
+
+/**
  * A better abstraction over CSS.
  *
  * @copyright Oleg Isonen (Slobodskoi) / Isonen 2014-present
  * @website https://github.com/cssinjs/jss
  * @license MIT
  */
+var index = createJss();
 
-/**
- * Export a constant indicating if this browser has CSSTOM support.
- * https://developers.google.com/web/updates/2018/03/cssom
- */
-var hasCSSTOMSupport = typeof CSS === 'object' && CSS != null && 'number' in CSS;
-/**
- * Creates a new instance of Jss.
- */
-
-var create = function create(options) {
-  return new Jss(options);
-};
-/**
- * A global Jss instance.
- */
-
-var jss = create();
-
-/* unused harmony default export */ var _unused_webpack_default_export = (jss);
+/* unused harmony default export */ var _unused_webpack_default_export = (index);
 
 
 
@@ -4257,15 +4234,13 @@ var jss_plugin_rule_value_function_esm_functionPlugin = function functionPlugin(
         if (typeof value !== 'function') continue;
         delete style[prop];
         fnValues[prop] = value;
-      } // $FlowFixMe[prop-missing]
-
+      }
 
       rule[fnValuesNs] = fnValues;
       return style;
     },
     onUpdate: function onUpdate(data, rule, sheet, options) {
-      var styleRule = rule; // $FlowFixMe[prop-missing]
-
+      var styleRule = rule;
       var fnRule = styleRule[fnRuleNs]; // If we have a style function, the entire rule is dynamic and style object
       // will be returned from that function.
 
@@ -4275,8 +4250,7 @@ var jss_plugin_rule_value_function_esm_functionPlugin = function functionPlugin(
         styleRule.style = fnRule(data) || {};
 
         if (false) { var prop; }
-      } // $FlowFixMe[prop-missing]
-
+      }
 
       var fnValues = styleRule[fnValuesNs]; // If we have a fn values map, it is a rule with function values.
 
@@ -4307,9 +4281,6 @@ function () {
   function GlobalContainerRule(key, styles, options) {
     this.type = 'global';
     this.at = at;
-    this.rules = void 0;
-    this.options = void 0;
-    this.key = void 0;
     this.isProcessed = false;
     this.key = key;
     this.options = options;
@@ -4369,10 +4340,7 @@ function () {
   function GlobalPrefixedRule(key, style, options) {
     this.type = 'global';
     this.at = at;
-    this.options = void 0;
-    this.rule = void 0;
     this.isProcessed = false;
-    this.key = void 0;
     this.key = key;
     this.options = options;
     var selector = key.substr(atPrefix.length);
@@ -4434,9 +4402,6 @@ function handlePrefixedGlobalRule(rule, sheet) {
 }
 /**
  * Convert nested rules to separate, remove them from original styles.
- *
- * @param {Rule} rule
- * @api public
  */
 
 
@@ -4490,9 +4455,6 @@ var parentRegExp = /&/g;
 var refRegExp = /\$([\w-]+)/g;
 /**
  * Convert nested rules to separate, remove them from original styles.
- *
- * @param {Rule} rule
- * @api public
  */
 
 function jssNested() {
@@ -4502,7 +4464,6 @@ function jssNested() {
       var rule = container.getRule(key) || sheet && sheet.getRule(key);
 
       if (rule) {
-        rule = rule;
         return rule.selector;
       }
 
@@ -4533,8 +4494,7 @@ function jssNested() {
   function getOptions(rule, container, prevOptions) {
     // Options has been already created, now we only increase index.
     if (prevOptions) return Object(esm_extends["a" /* default */])({}, prevOptions, {
-      index: prevOptions.index + 1 // $FlowFixMe[prop-missing]
-
+      index: prevOptions.index + 1
     });
     var nestingLevel = rule.options.nestingLevel;
     nestingLevel = nestingLevel === undefined ? 1 : nestingLevel + 1;
@@ -4574,11 +4534,7 @@ function jssNested() {
         }));
       } else if (isNestedConditional) {
         // Place conditional right after the parent rule to ensure right ordering.
-        container.addRule(prop, {}, options) // Flow expects more options but they aren't required
-        // And flow doesn't know this will always be a StyleRule which has the addRule method
-        // $FlowFixMe[incompatible-use]
-        // $FlowFixMe[prop-missing]
-        .addRule(styleRule.key, style[prop], {
+        container.addRule(prop, {}, options).addRule(styleRule.key, style[prop], {
           selector: styleRule.selector
         });
       }
@@ -4622,9 +4578,6 @@ function hyphenateStyleName(name) {
 
 /**
  * Convert camel cased property names to dash separated.
- *
- * @param {Object} style
- * @return {Object}
  */
 
 function convertCase(style) {
@@ -4643,8 +4596,6 @@ function convertCase(style) {
 }
 /**
  * Allow camel cased property names by converting them back to dasherized.
- *
- * @param {Rule} rule
  */
 
 
@@ -4691,8 +4642,6 @@ var ms = jss_esm["f" /* hasCSSTOMSupport */] && CSS ? CSS.ms : 'ms';
 var percent = jss_esm["f" /* hasCSSTOMSupport */] && CSS ? CSS.percent : '%';
 /**
  * Generated jss-plugin-default-unit CSS property units
- *
- * @type object
  */
 
 var defaultUnits = {
@@ -4851,6 +4800,7 @@ var defaultUnits = {
 /**
  * Clones the object and adds a camel cased property version.
  */
+
 function addCamelCasedVersion(obj) {
   var regExp = /(-[a-z])/g;
 
@@ -4860,9 +4810,9 @@ function addCamelCasedVersion(obj) {
 
   var newObj = {};
 
-  for (var _key in obj) {
-    newObj[_key] = obj[_key];
-    newObj[_key.replace(regExp, replace)] = obj[_key];
+  for (var key in obj) {
+    newObj[key] = obj[key];
+    newObj[key.replace(regExp, replace)] = obj[key];
   }
 
   return newObj;
@@ -5524,8 +5474,6 @@ function supportedValue(property, value) {
 
 /**
  * Add vendor prefix to a property name when needed.
- *
- * @api public
  */
 
 function jssVendorPrefixer() {
