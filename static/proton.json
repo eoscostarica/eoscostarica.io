@@ -59,7 +59,8 @@
 			"node_type": "query",
 			"ssl_endpoint": "https://proton.eosio.cr",
 			"features": [
-				"chain-api"
+				"chain-api",
+				"account-query"
 			]
 		},
 		{
