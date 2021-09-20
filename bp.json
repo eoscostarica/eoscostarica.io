@@ -18,13 +18,14 @@
 			"kriskoin",
 			"leisterfrancisco"
 		],
-		"chain_resources": "",
+		"chain_resources": "https://archive.eosio.cr",
 		"other_resources": [
 			"https://mainnet.eosio.online",
 			"https://eosrate.io",
 			"https://guide.eoscostarica.io",
 			"https://guias.eoscostarica.io",
-			"https://evodex.io"
+			"https://evodex.io",
+			"https://github.com/eoscostarica/eos-local"
 		],
 		"branding": {
 			"logo_256": "https://eoscostarica.io/img/eoscr-logo-256.png",
@@ -60,7 +61,8 @@
 			"node_type": "query",
 			"ssl_endpoint": "https://api.eosio.cr",
 			"features": [
-				"chain-api"
+				"chain-api",
+				"account-query"
 			]
 		},
 		{
