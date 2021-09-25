@@ -1,6 +1,6 @@
 {
 	"org": {
-		"candidate_name": "EOS Costa Rica",
+		"candidate_name": "Edenia",
 		"website": "https://eoscostarica.io",
 		"code_of_conduct": "https://eoscostarica.io/block-producer/#code-of-conduct",
 		"ownership_disclosure": "https://eoscostarica.io/block-producer/#ownership-disclosure",
@@ -20,17 +20,15 @@
 		],
 		"chain_resources": "https://archive.eosio.cr",
 		"other_resources": [
-			"https://mainnet.eosio.online",
-			"https://eosrate.io",
+			"https://earnproton.com",
+            "https://proton.eosio.online",
 			"https://guide.eoscostarica.io",
-			"https://guias.eoscostarica.io",
-			"https://evodex.io",
-			"https://github.com/eoscostarica/eos-local"
+			"https://guias.eoscostarica.io"
 		],
 		"branding": {
-			"logo_256": "https://eoscostarica.io/img/eoscr-logo-256.png",
-			"logo_1024": "https://eoscostarica.io/img/eoscr-logo-1024.png",
-			"logo_svg": "https://eoscostarica.io/img/eoscr-logo.svg"
+            "logo_256": "https://eoscostarica.io/img/eoscr-logo-256.png",
+            "logo_1024": "https://eoscostarica.io/img/eoscr-logo-1024.png",
+            "logo_svg": "https://eoscostarica.io/img/eoscr-logo.svg"
 		},
 		"location": {
 			"name": "San Jose",
@@ -59,7 +57,7 @@
 				"longitude": -84.078155
 			},
 			"node_type": "query",
-			"ssl_endpoint": "https://api.eosio.cr",
+			"ssl_endpoint": "https://proton.eosio.cr",
 			"features": [
 				"chain-api",
 				"account-query"
@@ -73,7 +71,7 @@
 				"longitude": -84.078155
 			},
 			"node_type": "seed",
-			"p2p_endpoint": "p2p.eosio.cr:9876"
+			"p2p_endpoint": "proton.eosio.cr:9879"
 		},
 		{
 			"location": {
@@ -85,5 +83,5 @@
 			"node_type": "producer"
 		}
 	],
-	"producer_account_name": "costaricaeos"
+	"producer_account_name": "edenia"
 }

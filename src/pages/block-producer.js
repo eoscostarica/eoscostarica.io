@@ -308,7 +308,7 @@ const BlockProducer = () => {
                 various stakeholders, including but not limited to: developers,
                 security engineers, community managers, system administrators, and
                 financial staff, the Block Producer Keys are ultimately owned and
-                controlled by Sistemas Edenia Internacional, S.A.
+                controlled by Edenia Labs S.A.
               </p>
             </Box>
 
