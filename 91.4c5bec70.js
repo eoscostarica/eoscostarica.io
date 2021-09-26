@@ -43215,7 +43215,7 @@ var transformText = function transformText(text, transformation) {
   }
 };
 
-var getFragments = function getFragments(instance) {
+var getFragments = function getFragments(instance, parentLink) {
   if (!instance) return [{
     string: ''
   }];
@@ -43254,7 +43254,7 @@ var getFragments = function getFragments(instance) {
     backgroundColor: backgroundColor,
     align: textAlign,
     indent: textIndent,
-    link: instance.src,
+    link: parentLink || instance.src,
     characterSpacing: letterSpacing,
     underlineStyle: textDecorationStyle,
     underline: textDecoration === 'underline',
@@ -43285,7 +43285,7 @@ var getFragments = function getFragments(instance) {
       if (child) {
         var _fragments;
 
-        (_fragments = fragments).push.apply(_fragments, getFragments(child));
+        (_fragments = fragments).push.apply(_fragments, getFragments(child, attributes.link));
       }
     }
   });
@@ -45188,7 +45188,7 @@ var PDFRenderer = react_reconciler__WEBPACK_IMPORTED_MODULE_7___default()({
   }
 });
 
-var version = "1.6.16";
+var version = "1.6.17";
 
 var View$1 = 'VIEW';
 var Text$1 = 'TEXT';

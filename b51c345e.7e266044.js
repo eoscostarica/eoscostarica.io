@@ -9141,6 +9141,7 @@ var styles = {
         height: "100%", // This is 100% - indicator height - indicator margin
         top: "0"
     },
+    fullHeightHoverButton: {},
     buttonVisible: {
         opacity: "1"
     },
@@ -9432,11 +9433,11 @@ var Carousel = function (_Component) {
 
             var compareActiveDisplayed = function compareActiveDisplayed() {
                 if (_this3.state.active === 0 && _this3.state.prevActive === children.length - 1) {
-                    return reverseEdgeAnimationDirection ? false : true;
+                    return reverseEdgeAnimationDirection; // ? false : true;
                 }
 
                 if (_this3.state.active === children.length - 1 && _this3.state.prevActive === 0) {
-                    return reverseEdgeAnimationDirection ? true : false;
+                    return reverseEdgeAnimationDirection; // ? true : false;
                 }
 
                 if (_this3.state.active > _this3.state.prevActive) {
@@ -9471,9 +9472,9 @@ var Carousel = function (_Component) {
                 Array.isArray(children) ? children.map(function (child, index) {
                     return _react2.default.createElement(CarouselItem, {
                         key: 'carousel-item' + index,
-                        display: index === _this3.state.displayed ? true : false,
-                        active: index === _this3.state.active ? true : false,
-                        isNext: compareActiveDisplayed(),
+                        display: index === _this3.state.displayed // ? true : false
+                        , active: index === _this3.state.active // ? true : false
+                        , isNext: compareActiveDisplayed(),
                         child: child,
                         animation: animation,
                         timeout: timeout,
