@@ -11,7 +11,7 @@ metaTitle: "Edenia / EOS Costa Rica partners with Game X Change"
 metaDescription: To integrate the Game X Change platform into the WAX to convert NFTs and other assets across multiple blockchains.
 ---
 
-![Logo w](/img/blog/game-x-change/logo-w-colour.png)
+![Game x Change](/img/blog/game-x-change/game-x.jpg)
 
 ## About the Announcement
 
@@ -25,7 +25,7 @@ Edenia, the parent company of [EOS Costa Rica](https://eoscostarica.io/) – a b
 
 ## Get to Know Game X Change
 
-IMAGEN 2
+![Logo w](/img/blog/game-x-change/logo-w-colour.png)
 
 Game X Change offers gamers a service to safely move assets such as virtual cash and NFTs between platforms, games, or blockchains. It uses a utility token known as EXP (previously TTT) that rewards users for playing games linked to their platform. Furthermore, gamers can use EXP to purchase in-game assets such as weapons. 
 
