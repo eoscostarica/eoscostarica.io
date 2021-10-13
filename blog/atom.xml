@@ -2,11 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eoscostarica.io/blog</id>
     <title>EOSIO Enterprise Blockchain Development Services - EOS Costa Rica Blog</title>
-    <updated>2021-08-05T00:00:00.000Z</updated>
+    <updated>2021-10-13T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eoscostarica.io/blog"/>
     <subtitle>EOSIO Enterprise Blockchain Development Services - EOS Costa Rica Blog</subtitle>
     <icon>https://eoscostarica.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Project Announcement: Game X Change on WAX]]></title>
+        <id>gamexchange-announcement</id>
+        <link href="https://eoscostarica.io/blog/gamexchange-announcement"/>
+        <updated>2021-10-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Game x Change]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[InmuTrust: EOSIO Blockchain for Vaccine Distribution]]></title>
         <id>inmutrust-announcement</id>

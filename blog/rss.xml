@@ -4,9 +4,16 @@
         <title>EOSIO Enterprise Blockchain Development Services - EOS Costa Rica Blog</title>
         <link>https://eoscostarica.io/blog</link>
         <description>EOSIO Enterprise Blockchain Development Services - EOS Costa Rica Blog</description>
-        <lastBuildDate>Thu, 05 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 13 Oct 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Project Announcement: Game X Change on WAX]]></title>
+            <link>https://eoscostarica.io/blog/gamexchange-announcement</link>
+            <guid>gamexchange-announcement</guid>
+            <pubDate>Wed, 13 Oct 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Game x Change]]></description>
+        </item>
         <item>
             <title><![CDATA[InmuTrust: EOSIO Blockchain for Vaccine Distribution]]></title>
             <link>https://eoscostarica.io/blog/inmutrust-announcement</link>
