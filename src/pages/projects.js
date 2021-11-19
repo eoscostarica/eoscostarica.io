@@ -16,7 +16,14 @@ const MetaData={
   hrefLangPath: "https://es.eoscostarica.io/proyectos/"
 }
 
-const ProjectsList = [
+const ProjectsList1 = [
+  {
+    img:"img/logos/eosrate.svg",
+    name:"EOS Rate",
+    details:"EOS Rate is an open- source app that allows EOS token holders to access a rating system and voting portal for block producers and proxies in the EOS blockchain. ",
+    link:"https://eosrate.io/",
+    linkText:"Explore EOS Rate."
+  },
   {
     img:"img/logos/eosio.svg",
     name:"EOSIO Dashboard",
@@ -24,22 +31,17 @@ const ProjectsList = [
     link:"https://mainnet.eosio.online/",
     color:"#f8f8f8",
     linkText:"See the EOS Mainnet Dashboard."
-  },
+  }
+]
+
+const ProjectsList2 = [
   {
     img:"img/logos/ggoods.svg",
     name:"gGoods",
     details:"gGoods is an open-source NFT standard that lets organizations create tokens to seek funding. The patron can then use their NFTs as assets in games and apps. ",
     link:"https://ggoods.io/",
-    color:"#ffffff",
-    linkText:"Read more about gGoods."
-  },
-  {
-    img:"img/logos/eosrate.svg",
-    name:"EOS Rate",
-    details:"EOS Rate is an open- source app that allows EOS token holders to access a rating system and voting portal for block producers and proxies in the EOS blockchain. ",
-    link:"https://eosrate.io/",
     color:"#f8f8f8",
-    linkText:"Explore EOS Rate."
+    linkText:"Read more about gGoods."
   },
   {
     img:"img/logos/inmutrust.svg",
@@ -167,6 +169,17 @@ const OurProjects = () => {
       <Box className={clsx("containerSec", "reduceMarginTop")}>
         <Box className={clsx("section",{["sectionPadding"]: isMobile})}>
           <Grid container>
+              {ProjectsList1.map((project) => (
+                <Projects
+                  key={project.name}
+                  img={useBaseUrl(project.img)}
+                  name={project.name}
+                  details={project.details}
+                  link={project.link}
+                  color={project?.color}
+                  linkText={project.linkText}
+                />
+              ))}
               <Grid item xs={12} md={6}>
                 <Box className="projectsGridLeft">
                   <Box className="imgBoxProjects">
@@ -178,7 +191,7 @@ const OurProjects = () => {
                   </Box>
                 </Box>
               </Grid>
-              <Grid  item xs={12} md={6}>
+              <Grid item xs={12} md={6}>
                 <Box className="projectsGridRight">
                   <Box className="h3Box">
                     <h3 >LACChain EOSIO</h3>
@@ -203,7 +216,7 @@ const OurProjects = () => {
                   </Box>
                 </Box>
               </Grid>
-              <Grid  style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+              <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
                 <Box className="projectsGridRight">
                   <Box className="h3Box">
                     <h3 >SMARTGATE</h3>
@@ -255,7 +268,7 @@ const OurProjects = () => {
               </Box>
             </Grid>
           </Grid>
-          {ProjectsList.map((project) => (
+          {ProjectsList2.map((project) => (
             <Projects
               key={project.name}
               img={useBaseUrl(project.img)}
