@@ -210,8 +210,8 @@ const OurProjects = () => {
                 <Box className="projectsGridLeft">
                   <Box className="imgBoxProjects">
                     <img
-                      alt="SMARTGATE"
-                      src={useBaseUrl("img/logos/smartgate.svg")}
+                      alt="Smart EIR"
+                      src={useBaseUrl("img/logos/smarteir.png")}
                     />
                   </Box>
                 </Box>
@@ -219,7 +219,7 @@ const OurProjects = () => {
               <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
                 <Box className="projectsGridRight">
                   <Box className="h3Box">
-                    <h3 >SMARTGATE</h3>
+                    <h3 >Smart EIR</h3>
                   </Box>
                   <p>
                     A blockchain-based platform that provides solutions
@@ -227,7 +227,7 @@ const OurProjects = () => {
                     and real-time transmission of relevant data required
                     for proper interchange in port logistics.{" "}
                     <a href="https://smartgate.tech/" target="_blank">
-                      Learn more about SMARTGATE.
+                      Learn more about Smart EIR.
                     </a>
                   </p>
                 </Box>

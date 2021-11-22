@@ -386,26 +386,16 @@ const TheCompany = () => {
                 <Box className="imgBoxTheCompany">
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/logos/lifebank.svg")}
+                    alt="EOS Rate"
+                    src={useBaseUrl("img/logos/eosrate.svg")}
                   />
                 </Box>
                 <p>
-                  An open-source blockchain-based app that incentivizes blood
-                  donations by creating a virtuous circle of value between
-                  donors, blood banks, and local businesses, leveraged by a
-                  token economy. Winner of the{" "}
-                  <a
-                    href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
-                    target="_blank"
-                  >
-                    “Coding for Change”
-                  </a>{" "}
-                  challenge by{" "}
-                  <a href="https://block.one/" target="_blank">
-                    block.one.
-                  </a>{" "}
-                  <a href=" https://lifebank.io/" target="_blank">
-                    Find out more about Lifebank.
+                  EOS Rate is an open- source app that allows EOS token holders to access a rating
+                  system and voting portal for block producers and proxies in the EOS blockchain.
+                  {" "}
+                  <a href="https://eosrate.io/" target="_blank">
+                    Explore EOS Rate.
                   </a>
                 </p>
               </Grid>
@@ -413,14 +403,18 @@ const TheCompany = () => {
                 <Box className="imgBoxTheCompany">
                   <img
                     className="sizeImageTheCompany"
-                    src={useBaseUrl("img/logos/smartgate.svg")}
+                    alt="EOSIO Dashboard"
+                    src={useBaseUrl("img/logos/eosio.svg")}
                   />
                 </Box>
                 <p>
-                  A blockchain-based platform that provides solutions for in-out
-                  gate activity for the container industry and real-time
-                  transmission of relevant data required for proper interchange
-                  in port logistics.<a href="https://smartgate.tech/" target="_blank"> Learn more about SMARTGATE.</a>
+                  The EOSIO Dashboard is an open-source project that allows
+                  users to visualize the rewards distribution along the EOS
+                  network to seek accountability and transparency. 
+                  {" "}
+                  <a href="https://mainnet.eosio.online/" target="_blank">
+                  See the EOS Mainnet Dashboard.
+                  </a>
                 </p>
               </Grid>
               <Grid item xs={12} md={12} >
