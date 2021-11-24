@@ -211,7 +211,7 @@ const OurProjects = () => {
                   <Box className="imgBoxProjects">
                     <img
                       alt="Smart EIR"
-                      src={useBaseUrl("img/logos/smarteir.png")}
+                      src={useBaseUrl("img/logos/smarteir.svg")}
                     />
                   </Box>
                 </Box>
