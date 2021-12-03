@@ -200,7 +200,7 @@ const TheCompany = () => {
                 <Carousel animation="slide" timeout={500} indicators={false}>
                   <img
                     alt="Crew image"
-                    src={useBaseUrl("img/team/crew1.jpg")}
+                    src={useBaseUrl("img/team/crew1.png")}
                   />
                   <img
                       alt="Crew image 2"
