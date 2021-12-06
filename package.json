@@ -11,21 +11,25 @@
     "serve": "docusaurus serve"
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-alpha.70",
-    "@docusaurus/preset-classic": "2.0.0-alpha.70",
+    "@docusaurus/core": "2.0.0-beta.9",
+    "@docusaurus/preset-classic": "2.0.0-beta.9",
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "@mdx-js/react": "^1.6.19",
-    "@react-pdf/renderer": "^1.6.13",
+    "@react-pdf/renderer": "^2.0.21",
+    "assert": "^2.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
     "clsx": "^1.1.1",
     "docusaurus2-dotenv": "^1.4.0",
     "file-saver": "^2.0.5",
     "jquery": "^3.5.1",
     "lottie-ios": "3.1.8",
-    "react": "^17.0.2",
+    "process": "^0.11.10",
+    "react": "^16.14.0",
     "react-alice-carousel": "^2.2.1",
-    "react-dom": "^17.0.2",
+    "react-dom": "^17.0.1",
     "react-google-recaptcha": "^2.1.0",
     "react-hubspot": "^1.0.4",
     "react-hubspot-form": "^1.3.7",
@@ -36,7 +40,9 @@
     "react-responsive": "^8.1.0",
     "react-scroll-trigger": "^0.6.10",
     "react-share": "^4.4.0",
-    "react-structured-data": "^0.0.14"
+    "react-structured-data": "^0.0.14",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.4"
   },
   "browserslist": {
     "production": [
