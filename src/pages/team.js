@@ -102,7 +102,7 @@ const DevelopTeam = [
         position:"Sr. UX Designer",
         bio:"Understanding the people's needs is crucial to create user interfaces for hi-tech apps and mediate among users, designers, and developers.",
         linkedIn:"https://www.linkedin.com/in/jmurilloux/",
-        twitter:"https://twitter.com/Oquedo",
+        twitter:"https://twitter.com/jmur1ll0",
         color:"#ffffff"
     },
     {
