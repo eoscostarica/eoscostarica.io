@@ -205,7 +205,7 @@ function BlogPostPage(props) {
               </Grid>
               <Grid item xs={12} md={4}>
                 <Box className="blogStickyContentBox">
-                  <TOC toc={BlogPostContents.toc} />
+                  {/* <TOC toc={BlogPostContents.toc} /> On review */}
                 </Box>
               </Grid>
             </Grid>
@@ -228,7 +228,7 @@ function BlogPostPage(props) {
       wrapperClassName="blog-wrapper"
     >
       {isDesktop && 
-        <Box className="">
+        <Box>
           <Parallax strength={800} style={{overflow: 'inherit'}}>
             <Background className="bgParallax">
                 <Box className="imgParallax"/>
