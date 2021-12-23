@@ -227,9 +227,8 @@ const Home = () => {
                       We offer top-grade infrastructure for blockchain networks
                       and API endpoints from our datacenter in San José, Costa
                       Rica. Costa Rica is a country with high political stability
-                      and a long-lasting democracy. Our strategic location in the
-                      middle of the American continent offers convenient network
-                      interconnectivity. We also configure, host, and maintain
+                      and a long-lasting democracy. Our strategic location in Central America
+                      offers convenient network interconnectivity. We also configure, host, and maintain
                       blockchain nodes available for private and public networks
                       with 24/7 monitoring and uptime. <a href={useBaseUrl("/the-company")} target="_blank"> Read more about this</a>.
                     </p>
