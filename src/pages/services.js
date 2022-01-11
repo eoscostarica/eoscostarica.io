@@ -61,7 +61,7 @@ const enterpriseBlockchainAccordionRight =
 [
   {
     title: 'Boosted efficiency',
-    content:'Smart contracts can help you process transactions quickly, with added efficiency compared to cloud platforms, and less costly by reducing administrative fees by cutting the middleman.',
+    content:'Smart contracts can help you process transactions quickly and more efficiently compared to cloud platforms. They also become less costly by reducing administrative fees.',
     target: 'panel_boostedEfficiency'
   },
   {

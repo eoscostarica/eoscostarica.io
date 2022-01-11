@@ -228,7 +228,7 @@ function BlogPostPage(props) {
       wrapperClassName="blog-wrapper"
     >
       {isDesktop && 
-        <Box className="">
+        <Box>
           <Parallax strength={800} style={{overflow: 'inherit'}}>
             <Background className="bgParallax">
                 <Box className="imgParallax"/>
