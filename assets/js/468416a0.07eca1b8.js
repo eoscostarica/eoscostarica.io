@@ -4,7 +4,7 @@
 /***/ 49557:
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/blockchain","name":"blockchain","count":13,"permalink":"/blog/tags/blockchain"}');
+module.exports = JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/blockchain","name":"blockchain","count":14,"permalink":"/blog/tags/blockchain"}');
 
 /***/ })
 
