@@ -4,7 +4,7 @@
 /***/ 68958:
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/proton","name":"Proton","count":2,"permalink":"/blog/tags/proton"}');
+module.exports = JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/proton","name":"Proton","count":1,"permalink":"/blog/tags/proton"}');
 
 /***/ })
 

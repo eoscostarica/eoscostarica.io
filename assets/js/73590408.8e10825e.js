@@ -4,7 +4,7 @@
 /***/ 50237:
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/eosio","name":"eosio","count":14,"permalink":"/blog/tags/eosio"}');
+module.exports = JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/eosio","name":"eosio","count":13,"permalink":"/blog/tags/eosio"}');
 
 /***/ })
 
