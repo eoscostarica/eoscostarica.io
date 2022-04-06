@@ -14,7 +14,7 @@
 		"leisterfrancisco",
 		"AngeloCG97"
 	  ],
-	  "chain_resources": "https://archive.eosio.cr",
+	  "chain_resources": "https://archive.edenia.cloud",
 	  "other_resources": [
 		"https://earnproton.com",
 		"https://proton.eosio.online",
@@ -53,7 +53,7 @@
 		  "longitude": -84.078155
 		},
 		"node_type": "query",
-		"ssl_endpoint": "https://proton.eosio.cr",
+		"ssl_endpoint": "https://proton.edenia.cloud",
 		"features": ["chain-api", "account-query"]
 	  },
 	  {
@@ -64,7 +64,7 @@
 		  "longitude": -84.078155
 		},
 		"node_type": "seed",
-		"p2p_endpoint": "proton.eosio.cr:9879"
+		"p2p_endpoint": "proton.edenia.cloud:9879"
 	  },
 	  {
 		"location": {

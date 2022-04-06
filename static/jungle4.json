@@ -15,7 +15,7 @@
 			"leisterfrancisco",
 			"AngeloCG97"
 		  ],
-		"chain_resources": "https://archive.eosio.cr",
+		"chain_resources": "https://archive.edenia.cloud",
 		"other_resources": ["https://jungle.eosio.online","https://jungle.eosrate.io", "https://guide.eoscostarica.io", "https://guias.eoscostarica.io"],
 		"branding": {
 			"logo_256": "https://eoscostarica.io/img/eoscr-logo-256.png",
@@ -48,7 +48,7 @@
 			"latitude": 9.936377,
 			"longitude": -84.078155
 		},
-		"ssl_endpoint": "https://jungle.eosio.cr",
+		"ssl_endpoint": "https://jungle.edenia.cloud",
 		"features": ["chain-api", "account-query"]
 	}, {
 		"node_type": "seed",
@@ -58,7 +58,7 @@
 			"latitude": 9.936377,
 			"longitude": -84.078155
 		},
-		"p2p_endpoint": "jungle.eosio.cr:9876"
+		"p2p_endpoint": "jungle.edenia.cloud:9876"
 	}, {
 		"node_type": "producer",
 		"location": {
