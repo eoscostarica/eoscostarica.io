@@ -14,7 +14,7 @@
 		  "leisterfrancisco",
 		  "AngeloCG97"
 		],
-		"chain_resources": "https://archive.eosio.cr",
+		"chain_resources": "https://archive.edenia.cloud",
 		"other_resources": [
 			"https://wax-testnet.eosio.online",
 			"https://guide.eoscostarica.io",
@@ -52,7 +52,7 @@
 				"longitude": -84.078155
 			},
 			"node_type": "query",
-			"ssl_endpoint": "https://wax-testnet.eosio.cr",
+			"ssl_endpoint": "https://wax-testnet.edenia.cloud",
 			"features": [
 				"chain-api",
 				"account-query"
@@ -66,7 +66,7 @@
 				"longitude": -84.078155
 			},
 			"node_type": "seed",
-			"p2p_endpoint": "wax-testnet.eosio.cr:9880"
+			"p2p_endpoint": "wax-testnet.edenia.cloud:9880"
 		},
 		{
 			"location": {
