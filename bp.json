@@ -14,7 +14,7 @@
 			"leisterfrancisco",
 			"AngeloCG97"
 		],
-		"chain_resources": "https://archive.eosio.cr",
+		"chain_resources": "https://archive.edenia.cloud",
 		"other_resources": [
 			"https://mainnet.eosio.online",
 			"https://eosrate.io",
@@ -55,7 +55,7 @@
 				"longitude": -84.078155
 			},
 			"node_type": "query",
-			"ssl_endpoint": "https://api.eosio.cr",
+			"ssl_endpoint": "https://eos.edenia.cloud",
 			"features": [
 				"chain-api",
 				"account-query"
@@ -69,7 +69,7 @@
 				"longitude": -84.078155
 			},
 			"node_type": "seed",
-			"p2p_endpoint": "p2p.eosio.cr:9876"
+			"p2p_endpoint": "eos.edenia.cloud:9876"
 		},
 		{
 			"location": {

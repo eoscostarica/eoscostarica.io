@@ -14,7 +14,7 @@
 		  "leisterfrancisco",
 		  "AngeloCG97"
 		],
-		"chain_resources": "https://archive.eosio.cr",
+		"chain_resources": "https://archive.edenia.cloud",
 		"other_resources": [
 			"https://telos.eosio.online",
 			"https://guide.eoscostarica.io",
@@ -52,7 +52,7 @@
 				"longitude": -84.078155
 			},
 			"node_type": "query",
-			"ssl_endpoint": "https://telos.eosio.cr",
+			"ssl_endpoint": "https://telos.edenia.cloud",
 			"features": [
 				"chain-api",
 				"account-query"
@@ -66,7 +66,7 @@
 				"longitude": -84.078155
 			},
 			"node_type": "seed",
-			"p2p_endpoint": "telos.eosio.cr:9878"
+			"p2p_endpoint": "telos.edenia.cloud:9878"
 		},
 		{
 			"location": {
