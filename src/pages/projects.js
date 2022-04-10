@@ -11,7 +11,7 @@ import ContactUsBanner from './components/ContactUsBanner'
 
 const MetaData={
   title:"EOS Costa Rica: Our Projects",
-  description:"EOS Costa Rica has developed solutions for many industries and open-source projects for the blockchain community.",
+  description:"EOS Costa Rica has developed solutions for many industries and open-source projects for the blockchain community. ",
   img:"img/metaImgBlack.png",
   hrefLangPath: "https://es.eoscostarica.io/proyectos/"
 }
@@ -38,7 +38,7 @@ const ProjectsList2 = [
   {
     img:"img/logos/myvoteeos.png",
     name:"#MyVoteEOS",
-    details:"MyvoteEOS Proxy is an EOS BP voting proxy that aims to properly represent the uncompromised will of EOS holders on and off chain.",
+    details:"MyvoteEOS Proxy is an EOS BP voting proxy that aims to properly represent the uncompromised will of EOS holders on and off chain. ",
     link:"https://myvoteeos.com/",
     color:"#f8f8f8",
     linkText:"Check out #MyVoteEOS Website."
@@ -53,11 +53,11 @@ const ProjectsList2 = [
   },
   {
     img:"img/logos/inmutrust.svg",
-    name:"InmuTrust",
-    details:"InmuTrust is a platform developed in collaboration with LACChain. It deploys EOSIO blockchain technology to improve transparency and trust in the distribution of COVID-19 vaccines. ",
-    link:"https://inmutrust.com/",
+    name:"InmuTrust - Supply Chain Management",
+    details:"InmuTrust is a supply chain traceability proof-of-concept developed in collaboration with LACChain. It uses EOSIO blockchain technology and NFTs to improve transparency and trust in the distribution and logistics of products. Initially focused on the supply chain of vaccines, it can also used to trace the supply chain of any product. ",
+    link:"https://github.com/eoscostarica/supply-chain-poc",
     color:"#f8f8f8",
-    linkText:"Explore InmuTrust."
+    linkText:"Supply Chain POC"
   },
   {
     img:"img/logos/eosioforum.svg",
