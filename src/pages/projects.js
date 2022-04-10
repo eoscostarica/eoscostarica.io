@@ -16,7 +16,14 @@ const MetaData={
   hrefLangPath: "https://es.eoscostarica.io/proyectos/"
 }
 
-const ProjectsList = [
+const ProjectsList1 = [
+  {
+    img:"img/logos/eosrate.svg",
+    name:"EOS Rate",
+    details:"EOS Rate is an open- source app that allows EOS token holders to access a rating system and voting portal for block producers and proxies in the EOS blockchain. ",
+    link:"https://eosrate.io/",
+    linkText:"Explore EOS Rate."
+  },
   {
     img:"img/logos/eosio.svg",
     name:"EOSIO Dashboard",
@@ -24,9 +31,20 @@ const ProjectsList = [
     link:"https://mainnet.eosio.online/",
     color:"#f8f8f8",
     linkText:"See the EOS Mainnet Dashboard."
+  }
+]
+
+const ProjectsList2 = [
+  {
+    img:"img/logos/myvoteeos.png",
+    name:"#MyVoteEOS",
+    details:"MyvoteEOS Proxy is an EOS BP voting proxy that aims to properly represent the uncompromised will of EOS holders on and off chain.",
+    link:"https://myvoteeos.com/",
+    color:"#f8f8f8",
+    linkText:"Check out #MyVoteEOS Website."
   },
   {
-    img:"img/imagenotavailable.png",
+    img:"img/logos/ggoods.svg",
     name:"gGoods",
     details:"gGoods is an open-source NFT standard that lets organizations create tokens to seek funding. The patron can then use their NFTs as assets in games and apps. ",
     link:"https://ggoods.io/",
@@ -34,12 +52,12 @@ const ProjectsList = [
     linkText:"Read more about gGoods."
   },
   {
-    img:"img/logos/eosrate.svg",
-    name:"EOS Rate",
-    details:"EOS Rate is an open- source app that allows EOS token holders to access a rating system and voting portal for block producers and proxies in the EOS blockchain. ",
-    link:"https://eosrate.io/",
+    img:"img/logos/inmutrust.svg",
+    name:"InmuTrust",
+    details:"InmuTrust is a platform developed in collaboration with LACChain. It deploys EOSIO blockchain technology to improve transparency and trust in the distribution of COVID-19 vaccines. ",
+    link:"https://inmutrust.com/",
     color:"#f8f8f8",
-    linkText:"Explore EOS Rate."
+    linkText:"Explore InmuTrust."
   },
   {
     img:"img/logos/eosioforum.svg",
@@ -59,18 +77,10 @@ const ProjectsList = [
   },
   {
     img:"img/imagenotavailable.png",
-    name:"EOS Foundation",
-    details:"We are part of the EOS Foundation proof of concept. It is an autonomous, decentralized, non-profit organization that will enable self-representation and promotion of the EOS community. ",
-    link:"http://eos-foundation.eosio.cr/",
-    color:"#ffffff",
-    linkText:"Check EOS Foundation."
-  },
-  {
-    img:"img/imagenotavailable.png",
     name:"Undisclosed Enterprise Project",
     details:" We developed an app for a US-based client in the accounting and tax industry for improved traceability of intercompany transactions. ",
     link:"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-a-great-idea-e384b298a4a8",
-    color:"#f8f8f8",
+    color:"#ffffff",
     linkText:"Read more here."
   },
   {
@@ -78,7 +88,7 @@ const ProjectsList = [
     name:"Notario Digital",
     details:"Notario Digital is an open-source project that generates a hash of any file to register it immutably on an EOSIO network. ",
     link:"https://notarize.eosio.cr/dashboard/notary",
-    color:"#ffffff",
+    color:"#f8f8f8",
     linkText:"Take a look at it."
   }
 ]
@@ -133,6 +143,7 @@ const OurProjects = () => {
           <Box className="projectsGridLeft">
             <Box className="imgBoxProjects">
               <img
+                style={{maxWidth: '50%'}}
                 alt={name}
                 src={useBaseUrl(img)}
               />
@@ -158,6 +169,17 @@ const OurProjects = () => {
       <Box className={clsx("containerSec", "reduceMarginTop")}>
         <Box className={clsx("section",{["sectionPadding"]: isMobile})}>
           <Grid container>
+              {ProjectsList1.map((project) => (
+                <Projects
+                  key={project.name}
+                  img={useBaseUrl(project.img)}
+                  name={project.name}
+                  details={project.details}
+                  link={project.link}
+                  color={project?.color}
+                  linkText={project.linkText}
+                />
+              ))}
               <Grid item xs={12} md={6}>
                 <Box className="projectsGridLeft">
                   <Box className="imgBoxProjects">
@@ -169,7 +191,7 @@ const OurProjects = () => {
                   </Box>
                 </Box>
               </Grid>
-              <Grid  item xs={12} md={6}>
+              <Grid item xs={12} md={6}>
                 <Box className="projectsGridRight">
                   <Box className="h3Box">
                     <h3 >LACChain EOSIO</h3>
@@ -188,16 +210,16 @@ const OurProjects = () => {
                 <Box className="projectsGridLeft">
                   <Box className="imgBoxProjects">
                     <img
-                      alt="SMARTGATE"
-                      src={useBaseUrl("img/logos/smartgate.svg")}
+                      alt="Smart EIR"
+                      src={useBaseUrl("img/logos/smarteir.svg")}
                     />
                   </Box>
                 </Box>
               </Grid>
-              <Grid  style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+              <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
                 <Box className="projectsGridRight">
                   <Box className="h3Box">
-                    <h3 >SMARTGATE</h3>
+                    <h3 >Smart EIR</h3>
                   </Box>
                   <p>
                     A blockchain-based platform that provides solutions
@@ -205,7 +227,7 @@ const OurProjects = () => {
                     and real-time transmission of relevant data required
                     for proper interchange in port logistics.{" "}
                     <a href="https://smartgate.tech/" target="_blank">
-                      Learn more about SMARTGATE.
+                      Learn more about Smart EIR.
                     </a>
                   </p>
                 </Box>
@@ -246,7 +268,7 @@ const OurProjects = () => {
               </Box>
             </Grid>
           </Grid>
-          {ProjectsList.map((project) => (
+          {ProjectsList2.map((project) => (
             <Projects
               key={project.name}
               img={useBaseUrl(project.img)}

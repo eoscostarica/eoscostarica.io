@@ -28,7 +28,7 @@ const ManagementTeam = [
         color:"#ffffff"
     },
     {
-        img:"img/team/edgar.jpg",
+        img:"img/team/edgar.png",
         name:"Edgar Fernández",
         position:"Co-founder & Finance and Enterprise",
         bio:"I thrive on developing the entrepreneurial spirit and using tech to create decentralized networks.",
@@ -37,7 +37,7 @@ const ManagementTeam = [
         color:"#f8f8f8"
     },
     {
-        img:"img/team/xavier.jpg",
+        img:"img/team/xavier.png",
         name:"Xavier Fernández",
         position:"Co-founder & Tech Lead",
         bio:"Blockchain technology helps promote trust among stakeholders through transparency and decentralization.",
@@ -49,23 +49,23 @@ const ManagementTeam = [
 
 const MarketingSalesTeam = [
     {
+        img:"img/team/johanna.jpg",
+        name:"Johanna Yee",
+        position:"Art Director & Brand Manager",
+        bio:"I believe that creativity and innovation are indispensable to propose efficient and disruptive solutions.",
+        linkedIn:"https://www.linkedin.com/in/johanna-yee-bonilla-abab2017a/",
+        twitter:"",
+        color:"#f8f8f8"
+    },
+    {
         img:"img/team/luisD.jpg",
         name:"Luis Diego Rojas",
         position:"Communications and Content Strategist",
         bio:"I believe that communicating new techs plays a crucial role in widespread adoption.",
         linkedIn:"https://www.linkedin.com/in/ldrojas/",
         twitter:"https://twitter.com/ldrojas",
-        color:"#f8f8f8"
-    },
-    {
-        img:"img/team/rodolfo.jpg",
-        name:"Rodolfo Perez",
-        position:"Art Director & Brand Manager",
-        bio:"Like people, every company also has to develop its own essence, a soul, this is what really compounds an identity.",
-        linkedIn:"https://www.linkedin.com/in/rodolfo-eduardo-p%C3%ABrez-nava-73442164/",
-        twitter:"https://twitter.com/monsieurRoaf",
         color:"#ffffff"
-    },
+    }
 ]
 
 const DevelopTeam = [
@@ -81,7 +81,7 @@ const DevelopTeam = [
     {
         img:"img/team/angelo.jpg",
         name:"Angelo Castro",
-        position:"Intern",
+        position:"Jr Full Stack Developer",
         bio:"I’m ready to develop innovative ideas and face new challenges.",
         linkedIn:"https://www.linkedin.com/in/angelo-castro-gamboa/",
         twitter:"",
@@ -97,40 +97,13 @@ const DevelopTeam = [
         color:"#f8f8f8"
     },
     {
-        img:"img/team/edgarParra.jpg",
-        name:"Edgar Parra",
-        position:"Intern",
-        bio:"I believe technology is a constant learning process that should be done together.",
-        linkedIn:"https://www.linkedin.com/in/edgar-parra-barillas-078883161/",
-        twitter:"",
-        color:"#ffffff"
-    },
-    {
-        img:"img/team/jean.jpg",
-        name:"Jean Vega",
-        position:"Intern",
-        bio:"I enjoy learning and experimenting with new tech, especially to acquire knowledge in different application areas.",
-        linkedIn:"https://www.linkedin.com/in/jeanvegad/",
-        twitter:"",
-        color:"#f8f8f8"
-    },
-    {
         img:"img/team/jorge.jpg",
         name:"Jorge Murillo",
         position:"Sr. UX Designer",
         bio:"Understanding the people's needs is crucial to create user interfaces for hi-tech apps and mediate among users, designers, and developers.",
         linkedIn:"https://www.linkedin.com/in/jmurilloux/",
-        twitter:"https://twitter.com/Oquedo",
+        twitter:"https://twitter.com/jmur1ll0",
         color:"#ffffff"
-    },
-    {
-        img:"img/team/justin.jpg",
-        name:"Justin Castillo",
-        position:"Intern",
-        bio:"I strive to be part of the change, not just a distant gear.",
-        linkedIn:"https://www.linkedin.com/in/jacv/",
-        twitter:"https://twitter.com/_JustinCast",
-        color:"#f8f8f8"
     },
     {
         img:"img/team/kevin.jpg",
@@ -139,25 +112,16 @@ const DevelopTeam = [
         bio:"Software development has given me the opportunity to learn and create new things everyday.",
         linkedIn:"https://www.linkedin.com/in/kevin-castillo-mora/",
         twitter:"",
-        color:"#ffffff"
+        color:"#f8f8f8"
     },
     {
         img:"img/team/leister.jpg",
         name:"Leister Álvarez",
-        position:"Intern",
+        position:"Jr Backend Developer",
         bio:"Programming reflects who we are; let's do something awesome.",
         linkedIn:"https://www.linkedin.com/in/leister-francisco-alvarez-campos-65b7801bb/",
-        twitter:"",
-        color:"#f8f8f8"
-    },
-    {
-        img:"img/team/steph.jpg",
-        name:"Stephanie Delgado",
-        position:"Intern",
-        bio:"The tech world is always evolving, so I believe one must be fearless.",
-        linkedIn:"https://www.linkedin.com/in/stephaniedelgadobrenes/",
-        twitter:"",
-        color:"#f8f8f8"
+        twitter:"https://twitter.com/leisterac",
+        color:"#ffffff"
     },
     {
         img:"img/team/teto.jpg",
@@ -166,7 +130,7 @@ const DevelopTeam = [
         bio:"Keeping a happy team will most likely guarantee a successful final result.",
         linkedIn:"https://www.linkedin.com/in/terencio-gomez-14784ba3/",
         twitter:"",
-        color:"#ffffff"
+        color:"#f8f8f8"
     }
 ]
 

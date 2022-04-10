@@ -17,7 +17,7 @@ import ContactUsBanner from './components/ContactUsBanner'
 import WeAreOneGroup from './components/WeAreOneGroup'
 
 const MetaData={
-  title:"Enterprise Blockchain Solutions | EOSIO",
+  title:"Enterprise Blockchain Development | EOSIO",
   description:"EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
   img:"img/metaImgBlack.png",
   hrefLangPath: "https://es.eoscostarica.io/"
@@ -43,7 +43,7 @@ const Home = () => {
         {isDesktop && 
           <Box className="sectionHero">
           <Box className="titleBox">
-            <h1>Enterprise Blockchain Solutions <br /> That Fit Your Needs</h1>
+            <h1>Enterprise Blockchain Solutions <br/> That Fit Your Needs</h1>
           </Box>
           <p>
             Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.
@@ -57,7 +57,7 @@ const Home = () => {
         {isMobile && 
           <Box className="sectionHeroMobile">
             <Box className="titleBox">
-                <h1>Enterprise Blockchain <br /> Solutions That <br /> Fit Your Needs</h1>
+                <h1>Enterprise Blockchain <br/> Solutions That <br/> Fit Your Needs</h1>
             </Box>
             <p>
               Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> 
@@ -227,9 +227,8 @@ const Home = () => {
                       We offer top-grade infrastructure for blockchain networks
                       and API endpoints from our datacenter in San José, Costa
                       Rica. Costa Rica is a country with high political stability
-                      and a long-lasting democracy. Our strategic location in the
-                      middle of the American continent offers convenient network
-                      interconnectivity. We also configure, host, and maintain
+                      and a long-lasting democracy. Our strategic location in Central America
+                      offers convenient network interconnectivity. We also configure, host, and maintain
                       blockchain nodes available for private and public networks
                       with 24/7 monitoring and uptime. <a href={useBaseUrl("/the-company")} target="_blank"> Read more about this</a>.
                     </p>
@@ -541,67 +540,58 @@ const Home = () => {
                   </p>
                 </Box>
               </Grid>
-            <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
-              <Box className="projectsGridLeft">
-                <Box className="imgBoxProjects">
-                  <img
-                    alt="Lifebank"
-                    src={useBaseUrl("img/logos/lifebank.svg")}
-                  />
+              <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+                <Box className="projectsGridLeft">
+                  <Box className="imgBoxProjects">
+                    <img
+                      alt="EOS Rate"
+                      src={useBaseUrl("img/logos/eosrate.svg")}
+                    />
+                  </Box>
                 </Box>
-              </Box>
-            </Grid>
-            <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
-              <Box className="projectsGridRight">
-                <Box className="h3Box">
-                  <h3 >Lifebank</h3>
+              </Grid>
+              <Grid style={{backgroundColor:'#f8f8f8'}} item xs={12} md={6}>
+                <Box className="projectsGridRight">
+                  <Box className="h3Box">
+                    <h3 >EOS Rate</h3>
+                  </Box>
+                  <p>
+                    EOS Rate is an open- source app that allows EOS token holders to access a rating
+                    system and voting portal for block producers and proxies in the EOS blockchain.
+                    {" "}
+                    <a href="https://eosrate.io/" target="_blank">
+                      Explore EOS Rate.
+                    </a>
+                  </p>
                 </Box>
-                <p>
-                  An open-source blockchain-based app that incentivizes blood
-                  donations by creating a virtuous circle of value between donors,
-                  blood banks, and local businesses, leveraged by a token economy.
-                  Winner of the “
-                  <a
-                    href="https://eos.io/news/winner-of-coding-for-change-virtual-hackathon-lifebank/"
-                    target="_blank"
-                  >
-                    Coding for Change
-                  </a>{"” "} challenge by {" "}
-                  <a href="https://block.one/" target="_blank">
-                    block.one.
-                  </a>{" "}
-                  <a href="http://lifebank.io/" target="_blank">
-                    Find out more about Lifebank.
-                  </a>
-                </p>
-              </Box>
-            </Grid>
-            <Grid style={{backgroundColor:'#ffffff'}} item xs={12} md={6}>
-              <Box className="projectsGridLeft">
-                <Box className="imgBoxProjects">
-                  <img
-                    alt="SMARTGATE"
-                    src={useBaseUrl("img/logos/smartgate.svg")}
-                  />
+              </Grid>
+              <Grid style={{backgroundColor:'#ffffff'}} item xs={12} md={6}>
+                <Box className="projectsGridLeft">
+                  <Box className="imgBoxProjects">
+                    <img
+                      alt="EOSIO Dashboard"
+                      src={useBaseUrl("img/logos/eosio.svg")}
+                    />
+                  </Box>
                 </Box>
-              </Box>
-            </Grid>
-            <Grid style={{backgroundColor:'#ffffff'}} item xs={12} md={6}>
-              <Box className="projectsGridRight">
-                <Box className="h3Box">
-                  <h3 >SMARTGATE</h3>
+              </Grid>
+              <Grid style={{backgroundColor:'#ffffff'}} item xs={12} md={6}>
+                <Box className="projectsGridRight">
+                  <Box className="h3Box">
+                    <h3 >EOSIO Dashboard</h3>
+                  </Box>
+                  <p>
+                    The EOSIO Dashboard is an open-source project that allows
+                    users to visualize the rewards distribution along the EOS
+                    network to seek accountability and transparency. 
+                    {" "}
+                    <a href="https://mainnet.eosio.online/" target="_blank">
+                    See the EOS Mainnet Dashboard.
+                    </a>
+                  </p>
                 </Box>
-                <p>
-                  A blockchain-based platform that provides solutions for in-out gate activity for the container 
-                  industry and real-time transmission of relevant data required for proper interchange in port logistics. 
-                  {" "}
-                  <a href="https://smartgate.tech/" target="_blank">
-                    Learn more about SMARTGATE.
-                  </a>
-                </p>
-              </Box>
+              </Grid>
             </Grid>
-          </Grid>
           </Box>
         </Box>
       </Box>
