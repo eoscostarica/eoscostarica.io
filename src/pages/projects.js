@@ -11,7 +11,7 @@ import ContactUsBanner from './components/ContactUsBanner'
 
 const MetaData={
   title:"EOS Costa Rica: Our Projects",
-  description:"EOS Costa Rica has developed solutions for many industries and open-source projects for the blockchain community.",
+  description:"EOS Costa Rica has developed solutions for many industries and open-source projects for the blockchain community. ",
   img:"img/metaImgBlack.png",
   hrefLangPath: "https://es.eoscostarica.io/proyectos/"
 }
@@ -36,27 +36,35 @@ const ProjectsList1 = [
 
 const ProjectsList2 = [
   {
+    img:"img/logos/myvoteeos.png",
+    name:"#MyVoteEOS",
+    details:"MyvoteEOS Proxy is an EOS BP voting proxy that aims to properly represent the uncompromised will of EOS holders on and off chain. ",
+    link:"https://myvoteeos.com/",
+    color:"#f8f8f8",
+    linkText:"Check out #MyVoteEOS Website."
+  },
+  {
     img:"img/logos/ggoods.svg",
     name:"gGoods",
     details:"gGoods is an open-source NFT standard that lets organizations create tokens to seek funding. The patron can then use their NFTs as assets in games and apps. ",
     link:"https://ggoods.io/",
-    color:"#f8f8f8",
+    color:"#ffffff",
     linkText:"Read more about gGoods."
   },
   {
     img:"img/logos/inmutrust.svg",
-    name:"InmuTrust",
-    details:"InmuTrust is a platform developed in collaboration with LACChain. It deploys EOSIO blockchain technology to improve transparency and trust in the distribution of COVID-19 vaccines. ",
-    link:"https://inmutrust.com/",
-    color:"#ffffff",
-    linkText:"Explore InmuTrust."
+    name:"InmuTrust - Supply Chain Management",
+    details:"InmuTrust is a supply chain traceability proof-of-concept developed in collaboration with LACChain. It uses EOSIO blockchain technology and NFTs to improve transparency and trust in the distribution and logistics of products. Initially focused on the supply chain of vaccines, it can also used to trace the supply chain of any product. ",
+    link:"https://github.com/eoscostarica/supply-chain-poc",
+    color:"#f8f8f8",
+    linkText:"Supply Chain POC"
   },
   {
     img:"img/logos/eosioforum.svg",
     name:"Enterprise EOSIO Forum",
     details:"We are part of the Enterprise EOSIO Forum, a community-driven initiative to discuss enterprise blockchain solutions deploying EOSIO technology. ",
     link:"https://www.linkedin.com/company/enterprise-eosio-forum/",
-    color:"#f8f8f8",
+    color:"#ffffff",
     linkText:"More about Enterprise EOSIO Forum."
   },
   {
@@ -64,16 +72,8 @@ const ProjectsList2 = [
     name:"Evodex",
     details:"Evodex is the front-end user interface for a liquidity pool protocol where users vote on the pool liquidity fees and pay zero gas. We were in charge of UX and front-end design. ",
     link:"https://evodex.io/",
-    color:"#ffffff",
-    linkText: "Try Evodex now."
-  },
-  {
-    img:"img/imagenotavailable.png",
-    name:"EOS Foundation",
-    details:"We are part of the EOS Foundation proof of concept. It is an autonomous, decentralized, non-profit organization that will enable self-representation and promotion of the EOS community. ",
-    link:"http://eos-foundation.eosio.cr/",
     color:"#f8f8f8",
-    linkText:"Check EOS Foundation."
+    linkText: "Try Evodex now."
   },
   {
     img:"img/imagenotavailable.png",

@@ -76,7 +76,7 @@ export default function LayoutHead(props) {
           schema={{
             legalName: "EOS Costa Rica",
             logo: "https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/logos/eoscr-logo.png",
-            email: "contact@eosio.cr",
+            email: "bp@edenia.com",
             image: "https://raw.githubusercontent.com/eoscostarica/eoscostarica.io/master/static/img/metaImgBlack.png",
             url: "https://eoscostarica.io/",
             telephone: "+506 2256-3944",
