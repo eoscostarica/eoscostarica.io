@@ -65,7 +65,16 @@ const MarketingSalesTeam = [
         linkedIn:"https://www.linkedin.com/in/ldrojas/",
         twitter:"https://twitter.com/ldrojas",
         color:"#ffffff"
-    }
+    },
+    {
+        img: "img/team/leo.jpg",
+        name: "Leonardo Calderón",
+        position: "bussinesAnalyst",
+        bio: "I'm multitask - oustanding professional who is trying to lead changelles everyday, enjoying Web3.",
+        linkedIn: "https://www.linkedin.com/in/calderonurenas/",
+        twitter: "https://twitter.com/btcurenas",
+        color:"#f8f8f8"
+      }
 ]
 
 const DevelopTeam = [
@@ -76,7 +85,7 @@ const DevelopTeam = [
         bio:"Proud father and full stack developer",
         linkedIn:"https://www.linkedin.com/in/adriel-d%C3%ADaz-08226384/",
         twitter:"",
-        color:"#f8f8f8"
+        color:"#ffffff"
     },
     {
         img:"img/team/angelo.jpg",
@@ -84,15 +93,6 @@ const DevelopTeam = [
         position:"Jr Full Stack Developer",
         bio:"I’m ready to develop innovative ideas and face new challenges.",
         linkedIn:"https://www.linkedin.com/in/angelo-castro-gamboa/",
-        twitter:"",
-        color:"#ffffff"
-    },
-    {
-        img:"img/team/cristian.jpg",
-        name:"Cristian Castro",
-        position:"C++ Developer",
-        bio:"We're creating the new technologies that will free people for good.",
-        linkedIn:"https://www.linkedin.com/in/cristian-castro-95193a3a/",
         twitter:"",
         color:"#f8f8f8"
     },
@@ -106,22 +106,13 @@ const DevelopTeam = [
         color:"#ffffff"
     },
     {
-        img:"img/team/kevin.jpg",
-        name:"Kevin Castillo",
-        position:"Full Stack Developer",
-        bio:"Software development has given me the opportunity to learn and create new things everyday.",
-        linkedIn:"https://www.linkedin.com/in/kevin-castillo-mora/",
-        twitter:"",
-        color:"#f8f8f8"
-    },
-    {
         img:"img/team/leister.jpg",
         name:"Leister Álvarez",
         position:"Jr Backend Developer",
         bio:"Programming reflects who we are; let's do something awesome.",
         linkedIn:"https://www.linkedin.com/in/leister-francisco-alvarez-campos-65b7801bb/",
         twitter:"https://twitter.com/leisterac",
-        color:"#ffffff"
+        color:"#f8f8f8"
     },
     {
         img:"img/team/teto.jpg",
@@ -130,7 +121,7 @@ const DevelopTeam = [
         bio:"Keeping a happy team will most likely guarantee a successful final result.",
         linkedIn:"https://www.linkedin.com/in/terencio-gomez-14784ba3/",
         twitter:"",
-        color:"#f8f8f8"
+        color:"#ffffff"
     }
 ]
 
@@ -142,7 +133,7 @@ const InfrastructureNetworkingTeam = [
         position:"Network Engineer",
         linkedIn:"",
         twitter:"",
-        color:"#ffffff"
+        color:"#f8f8f8"
     },
     {
         img:"img/team/andres.jpg",
@@ -151,7 +142,7 @@ const InfrastructureNetworkingTeam = [
         bio:"I envision and work for a more secure, private, and decentralized world.",
         linkedIn:"https://www.linkedin.com/in/andres-gomez-ramirez-bb7226156/",
         twitter:"https://twitter.com/kuronosec",
-        color:"#f8f8f8"
+        color:"#ffffff"
     },
     {
         img:"img/team/ronald.jpg",
@@ -160,7 +151,7 @@ const InfrastructureNetworkingTeam = [
         bio:"",
         linkedIn:"",
         twitter:"",
-        color:"#ffffff"
+        color:"#f8f8f8"
     },
     {
         img:"img/team/julio.jpg",
@@ -169,7 +160,7 @@ const InfrastructureNetworkingTeam = [
         bio:"What I like the most is to develop innovative projects that move forward with the newest technologies.",
         linkedIn:"",
         twitter:"",
-        color:"#f8f8f8"
+        color:"#ffffff"
     }
 ]
 
