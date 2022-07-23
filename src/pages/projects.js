@@ -87,7 +87,7 @@ const ProjectsList2 = [
     img:"img/imagenotavailable.png",
     name:"Notario Digital",
     details:"Notario Digital is an open-source project that generates a hash of any file to register it immutably on an EOSIO network. ",
-    link:"https://notarize.eosio.cr/dashboard/notary",
+    link:"https://notarize.edenia.cloud/dashboard/notary",
     color:"#f8f8f8",
     linkText:"Take a look at it."
   }

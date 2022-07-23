@@ -14,8 +14,8 @@ jobs:
 
     - name: Install and Build 🔧
       run: |
-        npm install
-        npm run build
+        yarn
+        yarn build
       env:
         RECAPTCHA_CLIENT_KEY: ${{ secrets.RECAPTCHA_CLIENT_KEY }}
         HUBSPOT_PORTAL_ID: ${{ secrets.HUBSPOT_PORTAL_ID }}
