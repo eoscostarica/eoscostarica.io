@@ -193,7 +193,7 @@ const BlockProducer = () => {
               <p>
                 We defend individual sovereignty among the EOS community,
                 replicating Costa Rica’s premise of freedom and peace as the
-                lengthiest democracy in Latin America.
+                longest-lasting democracy in Latin America.
               </p>
               <br/>
             </Grid>
@@ -204,7 +204,7 @@ const BlockProducer = () => {
                   src={useBaseUrl("img/icons/icon_tolerance.svg")}
                 />
               </Box>
-              <Box className={clsx("h3Box","centerText")}>
+              <Box className={clsx("h3Box", "centerText")}>
                 <h4>Tolerance</h4>
               </Box>
               <p>
@@ -221,7 +221,7 @@ const BlockProducer = () => {
                   src={useBaseUrl("img/icons/icon_accountability.svg")}
                 />
               </Box>
-              <Box className={clsx("h3Box","centerText")}>
+              <Box className={clsx("h3Box", "centerText")}>
                 <h4>Accountability</h4>
               </Box>
               <p>
@@ -237,7 +237,7 @@ const BlockProducer = () => {
                   src={useBaseUrl("img/icons/icon_prudence.svg")}
                 />
               </Box>
-              <Box className={clsx("h3Box","centerText")}>
+              <Box className={clsx("h3Box", "centerText")}>
                 <h4>Prudence</h4>
               </Box>
               <p>
@@ -308,7 +308,7 @@ const BlockProducer = () => {
                 various stakeholders, including but not limited to: developers,
                 security engineers, community managers, system administrators, and
                 financial staff, the Block Producer Keys are ultimately owned and
-                controlled by Sistemas Edenia Internacional, S.A.
+                controlled by Edenia Labs S.A.
               </p>
             </Box>
 

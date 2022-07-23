@@ -159,7 +159,7 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
   }
 
   const getSpanishPath = (path) => {
-    let espPath
+    let espPath = path
 
     PATHS.map((item) => {
       if(item.dropDown){
@@ -230,7 +230,7 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
   }
 
   return (
-    <Box className={clsx("navBar",{["navBarScroll"]: (trigger || isMobile)})} >
+    <Box className={clsx("navbar",{["navBarScroll"]: (trigger || isMobile)})} >
       <Box className="menuWrapper">
         {isMobile && 
           <>

@@ -1,33 +1,30 @@
 {
 	"org": {
-		"candidate_name": "EOS Costa Rica",
-		"website": "https://eoscostarica.io",
+		"candidate_name": "Edenia",
+		"website": "https://edenia.com",
 		"code_of_conduct": "https://edenia.com/block-producer/#code-of-conduct",
 		"ownership_disclosure": "https://edenia.com/block-producer/#ownership-disclosure",
 		"email": "bp@edenia.com",
 		"github_user": [
-			"edgarithm",
-			"xavier506",
-			"murillojorge",
-			"tetogomez",
-			"kuronosec",
-			"leisterfrancisco",
-			"AngeloCG97"
+		  "edgarithm",
+		  "xavier506",
+		  "murillojorge",
+		  "tetogomez",
+		  "kuronosec",
+		  "leisterfrancisco",
+		  "AngeloCG97"
 		],
 		"chain_resources": "https://archive.edenia.cloud",
 		"other_resources": [
-			"https://mainnet.eosio.online",
-			"https://eosrate.io",
+			"https://wax.eosio.online",
 			"https://guide.eoscostarica.io",
-			"https://guias.eoscostarica.io",
-			"https://evodex.io",
-			"https://github.com/eoscostarica/eos-local"
+			"https://guias.eoscostarica.io"
 		],
 		"branding": {
-			"logo_256": "https://eoscostarica.io/img/eoscr-logo-256.png",
-			"logo_1024": "https://eoscostarica.io/img/eoscr-logo-1024.png",
-			"logo_svg": "https://eoscostarica.io/img/eoscr-logo.svg"
-		},
+			"logo_256": "https://edenia.com/logos/edenia-bp-logo-256.png",
+			"logo_1024": "https://edenia.com/logos/edenia-bp-logo-1024.png",
+			"logo_svg": "https://edenia.com/logos/edenia-bp-logo.svg"
+		  },
 		"location": {
 			"name": "San Jose",
 			"country": "CR",
@@ -55,7 +52,7 @@
 				"longitude": -84.078155
 			},
 			"node_type": "query",
-			"ssl_endpoint": "https://eos.edenia.cloud",
+			"ssl_endpoint": "https://wax.edenia.cloud",
 			"features": [
 				"chain-api",
 				"account-query"
@@ -69,7 +66,7 @@
 				"longitude": -84.078155
 			},
 			"node_type": "seed",
-			"p2p_endpoint": "eos.edenia.cloud:9876"
+			"p2p_endpoint": "wax.edenia.cloud:9880"
 		},
 		{
 			"location": {
@@ -81,5 +78,5 @@
 			"node_type": "producer"
 		}
 	],
-	"producer_account_name": "costaricaeos"
+	"producer_account_name": "edeniaedenia"
 }
