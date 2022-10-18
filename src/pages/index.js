@@ -202,7 +202,7 @@ const Home = () => {
                   <AccordionDetails style={{padding:1, marginTop:'-15px'}}>
                     <p style={{padding: 0}}>
                     Our value proposition is to develop blockchain-based software to solve real-life problems. We have experience working with large global enterprises and SMEs, government entities and NGOs, and open-source projects across many industries. We adapt to our clients’ budgets and needs, without compromising thought leadership or quality. Our team is technology agnostic but specializes in the open-source blockchain technology 
-                    <a href={"https://antelope.io/#features"} target="_blank">Antelope</a>.
+                    <a href={"https://antelope.io/#features"} target="_blank"> Antelope</a>.
                     </p>
                   </AccordionDetails>
                 </Accordion>
@@ -521,7 +521,7 @@ const Home = () => {
                   </Box>
                   <p>
                     We are part of LACChain EOSIO, an open-source
-                    initiative that offers an EOSIO blockchain
+                    initiative that offers an EOSIO + Antelope blockchain
                     network that integrates into LACChain.{" "}
                     <a href="https://eosio.lacchain.net/en/" target="_blank">
                       Discover more about LACChain EOSIO

@@ -379,7 +379,7 @@ const TheCompany = () => {
                 </Box>
                 <p>
                   We are part of LACChain EOSIO, an open-source
-                  initiative that offers an EOSIO blockchain
+                  initiative that offers an EOSIO + Antelope blockchain
                   network that integrates into LACChain. {' '}
                   <a href="https://eosio.lacchain.net/en/" target="_blank"> 
                     Discover more about LACChain EOSIO.
