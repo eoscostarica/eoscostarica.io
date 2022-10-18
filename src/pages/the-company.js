@@ -80,7 +80,7 @@ const TheCompany = () => {
                   In 2013, we began providing infrastructure for public 
                   blockchain networks and learned first-hand 
                   how blockchains work. Then, in 2018 when 
-                  the EOSIO protocol was launched, we investigated 
+                  the EOSIO + Antelope protocol was launched, we investigated 
                   the advantages of this technology and started 
                   learning how to deploy it in the real world. 
                   Our presence grew during the genesis of the 
@@ -118,7 +118,7 @@ const TheCompany = () => {
                   We founded EOS Costa Rica two years ago — before the 
                   release of EOS… and quickly realized this was a marathon, 
                   not a sprint. We have experimented with different use 
-                  cases for EOSIO blockchain technology, especially 
+                  cases for EOSIO + Antelope blockchain technology, especially 
                   for enterprise use.
                 </p>
                 <br/>
@@ -249,13 +249,17 @@ const TheCompany = () => {
             <Box className="spacingBox">
               <p>
                 Our team specializes in the blockchain protocol
-                <a href=" https://eos.io/" target='_blank'> EOSIO</a>, launched by 
-                <a href=" https://block.one/" target='_blank' > block.one</a> in 2018, 
+                <a href=" https://eos.io/" target='_blank'> 
+                  EOSIO
+                </a>{" + "}
+                <a href="https://antelope.io/#features" target="_blank">
+                  Antelope
+                </a>{" "}, launched in 2018, 
                 as an open-source blockchain technology that deploys
                 a consensus model known as Delegated Proof-of-Stake
                 (DPoS). In DPoS, computers do not compete over 
                 computational power to solve algorithms. 
-                The following are some key features of EOSIO:
+                The following are some key features of EOSIO + Antelope:
               </p>
             </Box>
             <Box className="doubleSpacingBox">
@@ -265,7 +269,7 @@ const TheCompany = () => {
                   <h4>Scalability</h4>
                 </Box>
                 <p >
-                  EOSIO deploys the DPoS mechanism to achieve higher throughput
+                  EOSIO + Antelope deploys the DPoS mechanism to achieve higher throughput
                   and efficiency, becoming the blockchain protocol with the
                   largest number of transactions per second at 4,000 on its
                   public blockchain. In contrast, the average in other
@@ -277,7 +281,7 @@ const TheCompany = () => {
                   <h4>Flexibility</h4>
                 </Box>
                 <p>
-                  EOSIO enables adaptability for public and private networks
+                  EOSIO + Antelope enables adaptability for public and private networks
                   and can be customized according to the business requirements.
                   This blockchain technology offers low latency, meaning that
                   a user won't have to wait for a long time for a transaction
@@ -289,7 +293,7 @@ const TheCompany = () => {
                   <h4>Faster adoption</h4>
                 </Box>
                 <p>
-                  Developers build smart contracts in EOSIO using C++,
+                  Developers build smart contracts in EOSIO + Antelope using C++,
                   a general-purpose programming language with widespread
                   adoption, thus eliminating the need to learn new languages
                   to begin deploying the technology. Also, there are many
@@ -301,7 +305,7 @@ const TheCompany = () => {
                   <h4>Cost-effective</h4>
                 </Box>
                 <p>
-                  EOSIO offers a flexible and favorable cost model that
+                  EOSIO + Antelope offers a flexible and favorable cost model that
                   eliminates the need for transaction fees. This model is
                   ideal for developers who seek a solution with low operation
                   costs and still offers an experience free to the user.
@@ -314,7 +318,7 @@ const TheCompany = () => {
                 <p>
                   The DPoS mechanism enables a sustainable blockchain
                   solution requiring less electricity to run nodes and
-                  confirm transactions. For example, EOSIO is 66,000 times
+                  confirm transactions. For example, EOSIO + Antelope is 66,000 times
                   more energy-efficient than Bitcoin and 17,000 times more
                   energy-efficient than Ethereum.
                 </p>
@@ -335,7 +339,7 @@ const TheCompany = () => {
                 <Grid  justify="center" container spacing={5}>
                   <Grid item xs={12} md={7}>
                     <Box className="boxFlexEnd">
-                      <h3>We can help you explore EOSIO technology.</h3>
+                      <h3>We can help you explore Antelope technology.</h3>
                     </Box>
                   </Grid>
                   <Grid item xs={12} md={3}>
@@ -375,7 +379,7 @@ const TheCompany = () => {
                 </Box>
                 <p>
                   We are part of LACChain EOSIO, an open-source
-                  initiative that offers an EOSIO blockchain
+                  initiative that offers an EOSIO + Antelope blockchain
                   network that integrates into LACChain. {' '}
                   <a href="https://eosio.lacchain.net/en/" target="_blank"> 
                     Discover more about LACChain EOSIO.

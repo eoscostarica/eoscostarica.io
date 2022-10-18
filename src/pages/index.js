@@ -46,7 +46,7 @@ const Home = () => {
             <h1>Enterprise Blockchain Solutions <br/> That Fit Your Needs</h1>
           </Box>
           <p>
-            Deploy EOSIO <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.
+            Deploy EOSIO + Antelope <a href="https://eoscostarica.io/blog/what-is-blockchain">blockchain technology</a> to improve transparency, boost efficiency, and reduce costs.
             Start transforming your organization by leveraging enterprise blockchain networks.
           </p>
           <Box className="buttonBox">
@@ -201,15 +201,8 @@ const Home = () => {
                   </AccordionSummary>
                   <AccordionDetails style={{padding:1, marginTop:'-15px'}}>
                     <p style={{padding: 0}}>
-                      Our value proposition is to develop blockchain-based
-                      software to solve real-life problems. We have experience
-                      working with large global enterprises and SMEs, government
-                      entities and NGOs, and open-source projects across many
-                      industries. We adapt to our clients’ budgets and needs,
-                      without compromising thought leadership or quality. Our team
-                      is technology agnostic but specializes in the open-source
-                      blockchain technology <a href={"https://eos.io/"} target="_blank">EOSIO</a>, launched by leading company
-                      <a href={"https://block.one/"} target="_blank"> block.one</a>.
+                    Our value proposition is to develop blockchain-based software to solve real-life problems. We have experience working with large global enterprises and SMEs, government entities and NGOs, and open-source projects across many industries. We adapt to our clients’ budgets and needs, without compromising thought leadership or quality. Our team is technology agnostic but specializes in the open-source blockchain technology 
+                    <a href={"https://antelope.io/#features"} target="_blank"> Antelope</a>.
                     </p>
                   </AccordionDetails>
                 </Accordion>
@@ -242,7 +235,7 @@ const Home = () => {
                     <p style={{padding: 0}}>
                       In today’s world, new technologies are leading the way to
                       transform many industries. We offer workshops on blockchain
-                      and EOSIO to C-suite executives and teams that want to keep
+                      and EOSIO + Antelope to C-suite executives and teams that want to keep
                       up to date and learn more about what is blockchain and
                       enterprise use cases. We also provide training and education
                       resources for new talents that wish to kickstart their
@@ -442,6 +435,9 @@ const Home = () => {
                     deploying the{" "}
                     <a href="https://eos.io/" target="_blank">
                       EOSIO
+                    </a>{" + "}
+                    <a href="https://antelope.io/#features" target="_blank">
+                      Antelope
                     </a>{" "}
                     protocol since its launch, accruing decades of experience with
                     innovative technologies.
@@ -470,17 +466,10 @@ const Home = () => {
                     We focus on deploying{" "}
                     <a href="https://eos.io/" target="_blank">
                       EOSIO
-                    </a> technology, an open-source protocol launched in 2018 by
-                    leading tech company{" "}
-                    <a href="https://block.one/" target="_blank">
-                      block.one.
-                    </a>{" "}
-                    <a href="https://eos.io/" target="_blank">
-                      EOSIO
-                    </a> is powered by the native token EOS and offers improved
-                    scalability due to its high transaction speed, flexibility in
-                    public and private networks, and energy efficiency compared to
-                    other blockchains, making it a more eco-friendly option.
+                    </a>{" + "}
+                    <a href="https://antelope.io/#features" target="_blank">
+                      Antelope
+                    </a>{" "} technology, an open-source protocol launched in 2018. Antelope offers improved scalability due to its high transaction speed, flexibility in public and private networks, and energy efficiency compared to other blockchains, making it a more eco-friendly option.
                   </p>
                 </Grid>
                 <Grid item md={6}>
@@ -508,7 +497,7 @@ const Home = () => {
           </Box>
           <Box className="spacingBox"> 
             <p>
-              Get to know some of our latest projects deploying the EOSIO blockchain protocol.
+              Get to know some of our latest projects deploying the Antelope blockchain protocol.
               <a href={useBaseUrl("/projects")} target="_blank"> Visit the full list here.</a>
             </p>
           </Box>
@@ -532,7 +521,7 @@ const Home = () => {
                   </Box>
                   <p>
                     We are part of LACChain EOSIO, an open-source
-                    initiative that offers an EOSIO blockchain
+                    initiative that offers an EOSIO + Antelope blockchain
                     network that integrates into LACChain.{" "}
                     <a href="https://eosio.lacchain.net/en/" target="_blank">
                       Discover more about LACChain EOSIO

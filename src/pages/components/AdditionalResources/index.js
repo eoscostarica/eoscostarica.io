@@ -18,8 +18,7 @@ const AdditionalResources = () => {
             Find more interesting reads and resources to continue learning about {" "}
             <a href="https://eoscostarica.medium.com/how-to-choose-an-enterprise-blockchainplatform-7c3665994ad6"
             target="_blank"
-            > enterprise blockchain</a> and 
-            <a href="https://eos.io/" target="_blank"> EOSIO</a>.
+            > enterprise blockchain</a>.
           </p>
         </Box>
         <br/>

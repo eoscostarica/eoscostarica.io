@@ -54,18 +54,10 @@ const ProjectsList2 = [
   {
     img:"img/logos/inmutrust.svg",
     name:"InmuTrust - Supply Chain Management",
-    details:"InmuTrust is a supply chain traceability proof-of-concept developed in collaboration with LACChain. It uses EOSIO blockchain technology and NFTs to improve transparency and trust in the distribution and logistics of products. Initially focused on the supply chain of vaccines, it can also used to trace the supply chain of any product. ",
+    details:"InmuTrust is a supply chain traceability proof-of-concept developed in collaboration with LACChain. It uses EOSIO + Antelope blockchain technologies and NFTs to improve transparency and trust in the distribution and logistics of products. Initially focused on the supply chain of vaccines, it can also used to trace the supply chain of any product. ",
     link:"https://github.com/eoscostarica/supply-chain-poc",
     color:"#f8f8f8",
     linkText:"Supply Chain POC"
-  },
-  {
-    img:"img/logos/eosioforum.svg",
-    name:"Enterprise EOSIO Forum",
-    details:"We are part of the Enterprise EOSIO Forum, a community-driven initiative to discuss enterprise blockchain solutions deploying EOSIO technology. ",
-    link:"https://www.linkedin.com/company/enterprise-eosio-forum/",
-    color:"#ffffff",
-    linkText:"More about Enterprise EOSIO Forum."
   },
   {
     img:"img/logos/evodex.svg",
@@ -86,7 +78,7 @@ const ProjectsList2 = [
   {
     img:"img/imagenotavailable.png",
     name:"Notario Digital",
-    details:"Notario Digital is an open-source project that generates a hash of any file to register it immutably on an EOSIO network. ",
+    details:"Notario Digital is an open-source project that generates a hash of any file to register it immutably on a blockchain network. ",
     link:"https://notarize.edenia.cloud/dashboard/notary",
     color:"#f8f8f8",
     linkText:"Take a look at it."
@@ -107,7 +99,7 @@ const OurProjects = () => {
             </Box>
             <p >
               Over the past years, we have helped organizations in
-              both the public and private sectors learn and explore the benefits of EOSIO blockchain
+              both the public and private sectors learn and explore the benefits of EOSIO + Antelope blockchain
               technology. From improving the way a company registers cross-border transactions to
               ensuring immutable traceability of logistics operations, our team has developed top-notch
               solutions to real-world problems. Get to know our latest projects.
@@ -121,7 +113,7 @@ const OurProjects = () => {
             </Box>
             <p >
               Over the past years, we have helped organizations in
-              both the public and private sectors learn and explore the benefits of EOSIO blockchain
+              both the public and private sectors learn and explore the benefits of EOSIO + Antelope blockchain
               technology.
             <br/>
             <br/>
@@ -198,7 +190,7 @@ const OurProjects = () => {
                   </Box>
                   <p>
                     We are part of LACChain EOSIO, an open-source
-                    initiative that offers an EOSIO blockchain
+                    initiative that offers an EOSIO + Antelope blockchain
                     network that integrates into LACChain.{" "}
                     <a href="https://eosio.lacchain.net/en/" target="_blank">
                       Discover more about LACChain EOSIO.
@@ -257,10 +249,7 @@ const OurProjects = () => {
                     target="_blank"
                   >
                     Coding for Change
-                  </a>{"” "} challenge by {" "}
-                  <a href="https://block.one/" target="_blank">
-                    block.one.
-                  </a>{" "}
+                  </a>{"” "} challenge.
                   <a href="http://lifebank.io/" target="_blank">
                     Find out more about Lifebank.
                   </a>
