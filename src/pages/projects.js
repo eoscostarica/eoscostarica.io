@@ -64,7 +64,7 @@ const ProjectsList2 = [
     name:"Evodex",
     details:"Evodex is the front-end user interface for a liquidity pool protocol where users vote on the pool liquidity fees and pay zero gas. We were in charge of UX and front-end design. ",
     link:"https://evodex.io/",
-    color:"#f8f8f8",
+    color:"#ffffff",
     linkText: "Try Evodex now."
   },
   {
@@ -72,7 +72,7 @@ const ProjectsList2 = [
     name:"Undisclosed Enterprise Project",
     details:" We developed an app for a US-based client in the accounting and tax industry for improved traceability of intercompany transactions. ",
     link:"https://eoscostarica.medium.com/why-integrating-erp-systems-into-blockchain-is-a-great-idea-e384b298a4a8",
-    color:"#ffffff",
+    color:"#f8f8f8",
     linkText:"Read more here."
   },
   {
@@ -80,7 +80,7 @@ const ProjectsList2 = [
     name:"Notario Digital",
     details:"Notario Digital is an open-source project that generates a hash of any file to register it immutably on a blockchain network. ",
     link:"https://notarize.edenia.cloud/dashboard/notary",
-    color:"#f8f8f8",
+    color:"#ffffff",
     linkText:"Take a look at it."
   }
 ]
