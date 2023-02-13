@@ -171,7 +171,7 @@ const NavbarMenu = ({isMobile, isDesktop}) => {
       }
     })
 
-    return espPath
+    return espPath || ''
   }
 
   const translateSite = () => {
