@@ -211,7 +211,7 @@ const Team = () => {
     return (
       <Box className="containerSec">
         {isDesktop && (
-          <Box className="sectionHero" style={{ height: "auto" }}>
+          <Box className="sectionHero" height='auto'>
             <Box className="titleBox">
               <h1>Meet the Essence of Our Company</h1>
             </Box>
@@ -219,7 +219,7 @@ const Team = () => {
           </Box>
         )}
         {isMobile && (
-          <Box className="sectionHeroMobile" style={{ paddingBottom: 0 }}>
+          <Box className="sectionHeroMobile" pb={0}>
             <Box className="titleBox">
               <h1>Meet the Essence of Our Company</h1>
             </Box>
