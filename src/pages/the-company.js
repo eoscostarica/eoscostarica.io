@@ -248,7 +248,7 @@ const TheCompany = () => {
             </Box>
             <Box className="spacingBox">
               <p>
-                Our team specializes in the blockchain protocol
+                Our team specializes in the blockchain protocol{" "}
                 <a href=" https://eos.io/" target='_blank'> 
                   EOSIO
                 </a>{" + "}

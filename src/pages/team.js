@@ -73,7 +73,7 @@ const MarketingSalesTeam = [
     position: "Business Analyst & Op",
     bio: " I'm a multitasking professional trying to tackle daily challenges while enjoying Web3.",
     linkedIn: "https://www.linkedin.com/in/calderonurenas/",
-    twitter: "https://twitter.com/btcurenas",
+    twitter: "https://twitter.com/maemultichain",
     color: "#f8f8f8",
   },
 ];
@@ -82,7 +82,7 @@ const DevelopTeam = [
   {
     img: "img/team/Angelo.png",
     name: "Angelo Castro",
-    position: "Jr Full Stack Developer",
+    position: "Mid Full Stack Developer",
     bio: "I’m ready to develop innovative ideas and face new challenges.",
     linkedIn: "https://www.linkedin.com/in/angelo-castro-gamboa/",
     twitter: "",
@@ -98,22 +98,13 @@ const DevelopTeam = [
     color: "#f8f8f8",
   },
   {
-    img: "img/team/Fabian.png",
-    name: "Fabián Vives",
-    position: "Software Development Intern",
-    bio: "Passionate about technology, always looking for new ways to improve as a developer and as a person.",
-    linkedIn: "https://www.linkedin.com/in/fabian-vives-21a9351b6/",
-    twitter: "",
-    color: "#ffffff",
-  },
-  {
     img: "img/team/Helberson.png",
     name: "Helbertson Torres",
-    position: "Software Development Intern",
+    position: "Jr Software Development",
     bio: "As a developer, my goal is to provide useful and quality software solutions through continuous learning and adaptation to new technologies.",
     linkedIn: "",
     twitter: "",
-    color: "#f8f8f8",
+    color: "#ffffff",
   },
   {
     img: "img/team/Jorge.png",
@@ -122,34 +113,25 @@ const DevelopTeam = [
     bio: "Understanding the people's needs is crucial to create user interfaces for hi-tech apps and mediate among users, designers, and developers.",
     linkedIn: "https://www.linkedin.com/in/jmurilloux/",
     twitter: "https://twitter.com/jmur1ll0",
-    color: "#ffffff",
+    color: "#f8f8f8",
   },
   {
     img: "img/team/Josue.png",
     name: "Josue Alvarado",
-    position: "Software Development Intern",
+    position: "Jr Software Development",
     bio: "Wishing to see how our work is reflected in society and allows us to improve it.",
     linkedIn: "https://www.linkedin.com/in/josue-alvarado-mares-0a24a3238/",
     twitter: "https://twitter.com/Josue__Mares",
-    color: "#f8f8f8",
+    color: "#ffffff",
   },
   {
     img: "img/team/Leister.png",
     name: "Leister Álvarez",
-    position: "Jr Backend Developer",
+    position: "Mid Backend and Smart Contract Developer",
     bio: "Programming reflects who we are; let's do something awesome.",
     linkedIn:
       "https://www.linkedin.com/in/leister-francisco-alvarez-campos-65b7801bb/",
     twitter: "https://twitter.com/leisterac",
-    color: "#ffffff",
-  },
-  {
-    img: "img/team/Paola.png",
-    name: "Paola Espinoza",
-    position: "Software Development Intern",
-    bio: "Programming isn't about what you know; it's about what you can figure out.",
-    linkedIn: "https://www.linkedin.com/in/paola-espinoza-94147b126/",
-    twitter: "https://twitter.com/hanak00ri",
     color: "#f8f8f8",
   },
   {
@@ -164,7 +146,7 @@ const DevelopTeam = [
   {
     img: "img/team/Warner.png",
     name: "Warner Hurtado",
-    position: "Software Development Intern",
+    position: "Jr Software Development",
     bio: "Open to learning new technologies and willing to take on new challenges.",
     linkedIn: "https://www.linkedin.com/in/warner-hurtado/",
     twitter: "https://twitter.com/WarnerLaguna",
@@ -229,7 +211,7 @@ const Team = () => {
     return (
       <Box className="containerSec">
         {isDesktop && (
-          <Box className="sectionHero" style={{ height: "auto" }}>
+          <Box className="sectionHero" height='auto'>
             <Box className="titleBox">
               <h1>Meet the Essence of Our Company</h1>
             </Box>
@@ -237,7 +219,7 @@ const Team = () => {
           </Box>
         )}
         {isMobile && (
-          <Box className="sectionHeroMobile" style={{ paddingBottom: 0 }}>
+          <Box className="sectionHeroMobile" pb={0}>
             <Box className="titleBox">
               <h1>Meet the Essence of Our Company</h1>
             </Box>
