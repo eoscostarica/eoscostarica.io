@@ -100,7 +100,7 @@ const DevelopTeam = [
   {
     img: "img/team/Helberson.png",
     name: "Helbertson Torres",
-    position: "Jr Software Development",
+    position: "Jr Software Developer",
     bio: "As a developer, my goal is to provide useful and quality software solutions through continuous learning and adaptation to new technologies.",
     linkedIn: "",
     twitter: "",
@@ -118,7 +118,7 @@ const DevelopTeam = [
   {
     img: "img/team/Josue.png",
     name: "Josue Alvarado",
-    position: "Jr Software Development",
+    position: "Jr Software Developer",
     bio: "Wishing to see how our work is reflected in society and allows us to improve it.",
     linkedIn: "https://www.linkedin.com/in/josue-alvarado-mares-0a24a3238/",
     twitter: "https://twitter.com/Josue__Mares",
@@ -146,7 +146,7 @@ const DevelopTeam = [
   {
     img: "img/team/Warner.png",
     name: "Warner Hurtado",
-    position: "Jr Software Development",
+    position: "Jr Software Developer",
     bio: "Open to learning new technologies and willing to take on new challenges.",
     linkedIn: "https://www.linkedin.com/in/warner-hurtado/",
     twitter: "https://twitter.com/WarnerLaguna",
