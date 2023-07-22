@@ -1,71 +1,86 @@
 {
 	"producer_account_name": "eoscostarica",
 	"org": {
-		"candidate_name": "EOS Costa Rica",
-		"website": "https://eoscostarica.io",
-        "code_of_conduct": "https://edenia.com/block-producer/#code-of-conduct",
-        "ownership_disclosure": "https://edenia.com/block-producer/#ownership-disclosure",
-        "email": "bp@edenia.com",
-		"github_user": [
-			"edgarithm",
-			"xavier506",
-			"murillojorge",
-			"tetogomez",
-			"kuronosec",
-			"leisterfrancisco",
-			"AngeloCG97"
-		  ],
-		"chain_resources": "https://archive.edenia.cloud",
-		"other_resources": ["https://jungle.eosio.online","https://jungle.eosrate.io", "https://guide.eoscostarica.io", "https://guias.eoscostarica.io"],
-		"branding": {
-			"logo_256": "https://eoscostarica.io/img/eoscr-logo-256.png",
-			"logo_1024": "https://eoscostarica.io/img/eoscr-logo-1024.png",
-			"logo_svg": "https://eoscostarica.io/img/eoscr-logo.svg"
-		},
-		"location": {
-			"name": "San Jose",
-			"country": "CR",
-			"latitude": 9.936377,
-			"longitude": -84.078155
-		},
-		"social": {
-			"hive": "eos-costarica",
-			"twitter": "EOSCostaRica",
-			"youtube": "channel/UCvYinCH3O1iKpi-_dNfQAGQ",
-			"facebook": "costaricaeos",
-			"github": "eoscostarica",
-			"reddit": "eoscostarica",
-			"keybase": "eoscostarica",
-			"telegram": "eoscr",
-			"wechat": ""
-		}
+	  "candidate_name": "Edenia",
+	  "website": "https://edenia.com",
+	  "code_of_conduct": "https://edenia.com/block-producer/#code-of-conduct",
+	  "ownership_disclosure": "https://edenia.com/block-producer/#ownership-disclosure",
+	  "email": "bp@edenia.com",
+	  "github_user": [
+		"edgarithm",
+		"adriexnet",
+		"tetogomez",
+		"murillojorge",
+		"kuronosec",
+		"xavier506",
+		"AngeloCG97",
+		"leisterfrancisco"
+	  ],
+	  "chain_resources": "https://archive.edenia.cloud",
+	  "other_resources": [
+		"https://jungle.antelope.tools",
+		"https://jungle.eosrate.io",
+		"https://guide.eoscostarica.io",
+		"https://guias.eoscostarica.io"
+	  ],
+	  "branding": {
+		"logo_256": "https://edenia.com/logos/edenia-bp-logo-256.png",
+		"logo_1024": "https://edenia.com/logos/edenia-bp-logo-1024.png",
+		"logo_svg": "https://edenia.com/logos/edenia-bp-logo.svg"
+	  },
+	  "location": {
+		"name": "San Jose",
+		"country": "CR",
+		"latitude": 9.936377,
+		"longitude": -84.078155
+	  },
+	  "social": {
+		"keybase": "",
+		"telegram": "eoscr",
+		"twitter": "EdeniaWeb3",
+		"github": "edenia",
+		"youtube": "channel/UCvYinCH3O1iKpi-_dNfQAGQ",
+		"facebook": "costaricaeos",
+		"hive": "eos-costarica",
+		"reddit": "eoscostarica",
+		"wechat": ""
+	  }
 	},
-	"nodes": [{
+	"nodes": [
+	  {
 		"node_type": "query",
+		"full": true,
 		"location": {
-			"name": "San Jose",
-			"country": "CR",
-			"latitude": 9.936377,
-			"longitude": -84.078155
+		  "name": "San Jose",
+		  "country": "CR",
+		  "latitude": 9.936377,
+		  "longitude": -84.078155
 		},
+		"api_endpoint": "http://jungle.edenia.cloud",
 		"ssl_endpoint": "https://jungle.edenia.cloud",
 		"features": ["chain-api", "account-query"]
-	}, {
+	  },
+	  {
 		"node_type": "seed",
+		"full": true,
 		"location": {
-			"name": "San Jose",
-			"country": "CR",
-			"latitude": 9.936377,
-			"longitude": -84.078155
+		  "name": "San Jose",
+		  "country": "CR",
+		  "latitude": 9.936377,
+		  "longitude": -84.078155
 		},
-		"p2p_endpoint": "jungle.edenia.cloud:9876"
-	}, {
+		"p2p_endpoint": "jungle.edenia.cloud:9877"
+	  },
+	  {
 		"node_type": "producer",
+		"full": true,
 		"location": {
-			"name": "San Jose",
-			"country": "CR",
-			"latitude": 9.936377,
-			"longitude": -84.078155
+		  "name": "San Jose",
+		  "country": "CR",
+		  "latitude": 9.936377,
+		  "longitude": -84.078155
 		}
-	}]
-}
+	  }
+	]
+  }
+  

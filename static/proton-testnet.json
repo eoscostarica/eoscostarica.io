@@ -1,83 +1,86 @@
 {
 	"org": {
-		"candidate_name": "Edenia",
-		"website": "https://edenia.com",
-		"code_of_conduct": "https://edenia.com/block-producer/#code-of-conduct",
-		"ownership_disclosure": "https://edenia.com/block-producer/#ownership-disclosure",
-		"email": "bp@edenia.com",
-		"github_user": [
-		  "edgarithm",
-		  "xavier506",
-		  "murillojorge",
-		  "tetogomez",
-		  "kuronosec",
-		  "leisterfrancisco",
-		  "AngeloCG97"
-		],
-		"chain_resources": "https://archive.edenia.cloud",
-		"other_resources": [
-            "https://test.earnproton.com",
-			"https://proton-testnet.eosio.online",
-			"https://guide.eoscostarica.io",
-			"https://guias.eoscostarica.io"
-		],
-		"branding": {
-			"logo_256": "https://edenia.com/logos/edenia-bp-logo-256.png",
-			"logo_1024": "https://edenia.com/logos/edenia-bp-logo-1024.png",
-			"logo_svg": "https://edenia.com/logos/edenia-bp-logo.svg"
-		  },
-		"location": {
-			"name": "San Jose",
-			"country": "CR",
-			"latitude": 9.936377,
-			"longitude": -84.078155
-		},
-		"social": {
-			"keybase": "eoscostarica",
-			"telegram": "eoscr",
-			"twitter": "EOSCostaRica",
-			"github": "eoscostarica",
-			"youtube": "channel/UCvYinCH3O1iKpi-_dNfQAGQ",
-			"facebook": "costaricaeos",
-			"hive": "eos-costarica",
-			"reddit": "eoscostarica",
-			"wechat": ""
-		}
+	  "candidate_name": "Edenia",
+	  "website": "https://edenia.com",
+	  "code_of_conduct": "https://edenia.com/block-producer/#code-of-conduct",
+	  "ownership_disclosure": "https://edenia.com/block-producer/#ownership-disclosure",
+	  "email": "bp@edenia.com",
+	  "github_user": [
+		"edgarithm",
+		"adriexnet",
+		"tetogomez",
+		"murillojorge",
+		"kuronosec",
+		"xavier506",
+		"AngeloCG97",
+		"leisterfrancisco"
+	  ],
+	  "chain_resources": "https://archive.edenia.cloud",
+	  "other_resources": [
+		"https://test.earnproton.com",
+		"https://proton-testnet.antelope.tools",
+		"https://guide.eoscostarica.io",
+		"https://guias.eoscostarica.io"
+	  ],
+	  "branding": {
+		"logo_256": "https://edenia.com/logos/edenia-bp-logo-256.png",
+		"logo_1024": "https://edenia.com/logos/edenia-bp-logo-1024.png",
+		"logo_svg": "https://edenia.com/logos/edenia-bp-logo.svg"
+	  },
+	  "location": {
+		"name": "San Jose",
+		"country": "CR",
+		"latitude": 9.936377,
+		"longitude": -84.078155
+	  },
+	  "social": {
+		"keybase": "",
+		"telegram": "eoscr",
+		"twitter": "EdeniaWeb3",
+		"github": "edenia",
+		"youtube": "channel/UCvYinCH3O1iKpi-_dNfQAGQ",
+		"facebook": "costaricaeos",
+		"hive": "eos-costarica",
+		"reddit": "eoscostarica",
+		"wechat": ""
+	  }
 	},
 	"nodes": [
-		{
-			"location": {
-				"name": "San Jose",
-				"country": "CR",
-				"latitude": 9.936377,
-				"longitude": -84.078155
-			},
-			"node_type": "query",
-			"ssl_endpoint": "https://proton-testnet.edenia.cloud",
-			"features": [
-				"chain-api",
-				"account-query"
-			]
+	  {
+		"location": {
+		  "name": "San Jose",
+		  "country": "CR",
+		  "latitude": 9.936377,
+		  "longitude": -84.078155
 		},
-		{
-			"location": {
-				"name": "San Jose",
-				"country": "CR",
-				"latitude": 9.936377,
-				"longitude": -84.078155
-			},
-			"node_type": "seed",
-			"p2p_endpoint": "proton-testnet.edenia.cloud:9879"
+		"node_type": "query",
+		"full": true,
+		"api_endpoint": "http://proton-testnet.edenia.cloud",
+		"ssl_endpoint": "https://proton-testnet.edenia.cloud",
+		"features": ["chain-api", "account-query"]
+	  },
+	  {
+		"location": {
+		  "name": "San Jose",
+		  "country": "CR",
+		  "latitude": 9.936377,
+		  "longitude": -84.078155
 		},
-		{
-			"location": {
-				"name": "San Jose",
-				"country": "CR",
-				"latitude": -84.078155,
-				"longitude": 9.936377
-			},
-			"node_type": "producer"
-		}
+		"node_type": "seed",
+		"full": true,
+		"p2p_endpoint": "proton-testnet.edenia.cloud:9878"
+	  },
+	  {
+		"location": {
+		  "name": "San Jose",
+		  "country": "CR",
+		  "latitude": -84.078155,
+		  "longitude": 9.936377
+		},
+		"node_type": "producer",
+		"full": true
+	  }
 	],
 	"producer_account_name": "edenia"
-}
+  }
+  

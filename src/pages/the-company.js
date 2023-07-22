@@ -412,7 +412,7 @@ const TheCompany = () => {
                   users to visualize the rewards distribution along the EOS
                   network to seek accountability and transparency. 
                   {" "}
-                  <a href="https://mainnet.eosio.online/" target="_blank">
+                  <a href="https://eos.antelope.tools/" target="_blank">
                   See the EOS Mainnet Dashboard.
                   </a>
                 </p>

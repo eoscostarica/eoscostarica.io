@@ -16,11 +16,10 @@
 		],
 		"chain_resources": "https://archive.edenia.cloud",
 		"other_resources": [
-			"https://mainnet.eosio.online",
+			"https://eos.antelope.tools",
 			"https://eosrate.io",
 			"https://guide.eoscostarica.io",
 			"https://guias.eoscostarica.io",
-			"https://evodex.io",
 			"https://github.com/eoscostarica/eos-local"
 		],
 		"branding": {
@@ -55,6 +54,8 @@
 				"longitude": -84.078155
 			},
 			"node_type": "query",
+			"full": false,
+			"api_endpoint": "http://eos.edenia.cloud",
 			"ssl_endpoint": "https://eos.edenia.cloud",
 			"features": [
 				"chain-api",
@@ -69,6 +70,7 @@
 				"longitude": -84.078155
 			},
 			"node_type": "seed",
+			"full": false,
 			"p2p_endpoint": "eos.edenia.cloud:9876"
 		},
 		{
@@ -78,7 +80,8 @@
 				"latitude": -84.078155,
 				"longitude": 9.936377
 			},
-			"node_type": "producer"
+			"node_type": "producer",
+			"full": false
 		}
 	],
 	"producer_account_name": "costaricaeos"
