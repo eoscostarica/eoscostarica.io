@@ -27,8 +27,8 @@ const ProjectsList1 = [
   {
     img:"img/logos/eosio.svg",
     name:"Antelope Tools",
-    details:"The Antelope Tools is an open-source project that allows users to visualize the rewards distribution along the EOS network to seek accountability and transparency. ",
-    link:"https://mainnet.eosio.online/",
+    details:"Antelope Tools is an open-source project that allows users to visualize the rewards distribution along the EOS network to seek accountability and transparency. ",
+    link:"https://eos.antelope.tools/",
     color:"#f8f8f8",
     linkText:"See the EOS Mainnet Dashboard."
   }

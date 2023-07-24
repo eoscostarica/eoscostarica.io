@@ -17,9 +17,9 @@ import ContactUsBanner from "./components/ContactUsBanner";
 import WeAreOneGroup from "./components/WeAreOneGroup";
 
 const MetaData = {
-  title: "Enterprise Blockchain Development | EOSIO",
+  title: "Enterprise Blockchain Development | EOSIO + Antelope",
   description:
-    "EOS Costa Rica develops blockchain solutions. We deploy the EOSIO protocol to improve business efficiency, traceability, and transparency.",
+    "EOS Costa Rica develops blockchain solutions. We deploy the EOSIO + Antelope protocol to improve business efficiency, traceability, and transparency.",
   img: "img/metaImgBlack.png",
   hrefLangPath: "https://es.eoscostarica.io/",
 };
@@ -688,14 +688,14 @@ const Home = () => {
               <Grid style={{ backgroundColor: "#ffffff" }} item xs={12} md={6}>
                 <Box className="projectsGridRight">
                   <Box className="h3Box">
-                    <h3>Antelope Tools</h3>
+                    <h3 >Antelope Tools</h3>
                   </Box>
                   <p>
-                    The Antelope Tools is an open-source project that allows
+                    Antelope Tools is an open-source project that allows
                     users to visualize the rewards distribution along the EOS
                     network to seek accountability and transparency.{" "}
-                    <a href="https://mainnet.eosio.online/" target="_blank">
-                      See the EOS Mainnet Dashboard.
+                    <a href="https://eos.antelope.tools/" target="_blank">
+                    See the EOS Mainnet Dashboard.
                     </a>
                   </p>
                 </Box>

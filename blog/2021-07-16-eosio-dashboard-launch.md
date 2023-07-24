@@ -15,7 +15,7 @@ metaDescription: Antelope Tools enables users to visualize data of EOSIO blockch
 
 ## Bringing Transparency and Accountability to EOSIO Blockchain Networks
 
-Today, [EOS Costa Rica](https://eoscostarica.io/) announced the release of [Antelope Tools](https://eosio.online/), an open-source platform that enables users to visualize relevant data of blockchain networks deploying EOSIO technology. Antelope Tools offers connectivity to several leading EOSIO-powered blockchain networks: [LACChain EOSIO](https://lacchain.eosio.online/), [Proton Mainnet](https://proton.eosio.online/), [Telos Mainnet](https://telos.eosio.online/), [Wax Mainnet](https://wax.eosio.online/), [Jungle Testnet](https://jungle.eosio.online/), and the [EOS Mainnet](https://mainnet.eosio.online/).
+Today, [EOS Costa Rica](https://eoscostarica.io/) announced the release of [Antelope Tools](https://antelope.tools/), an open-source platform that enables users to visualize relevant data of blockchain networks deploying EOSIO technology. Antelope Tools offers connectivity to several leading EOSIO-powered blockchain networks: [LACChain EOSIO](https://lacchain.antelope.tools/), [Proton Mainnet](https://proton.antelope.tools/), [Telos Mainnet](https://telos.antelope.tools/), [Wax Mainnet](https://wax.antelope.tools/), [Jungle Testnet](https://jungle.antelope.tools/), and the [EOS Mainnet](https://eos.antelope.tools/).
 
 “Antelope Tools started with an idea to bring better trust and accountability to networks such as the EOS Mainnet where users can now visualize the rewards distribution for Block Producers,” said Xavier Fernández, a co-founder and tech lead of EOS Costa Rica. “On the EOS Mainnet, token holders must vote for Block Producers to oversee the network, so Antelope Tools can help improve and objectively measure node transparency.”
 
@@ -30,7 +30,7 @@ Antelope Tools is adaptable to EOSIO networks to provide easy-to-read data and h
 
 “Antelope Tools adds to the suite of tools we are developing to improve transparency in EOSIO blockchain networks,” mentioned Edgar Fernández, a co-founder and business manager of EOS Costa Rica. “We aim to grant users and token holders access to reliable data in real-time, keeping accountability of Block Producers who receive rewards and helping to build more accountable networks.”
 
-Getting started is a very straightforward process so a user can access all that data in just a few clicks. For more information and to try it out, visit the [Antelope Tools website](https://eosio.online/). 
+Getting started is a very straightforward process so a user can access all that data in just a few clicks. For more information and to try it out, visit the [Antelope Tools website](https://antelope.tools/). 
 
 Antelope Tools is not the first project of our team to promote EOSIO blockchain transparency. Check [EOS Rate](https://eosrate.io/), an open-source tool for EOS token holders to rate Block Producers and capture global collective opinion. Read more about it [here](https://eoscostarica.io/blog/eos-rate/).
 

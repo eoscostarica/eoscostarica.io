@@ -384,10 +384,10 @@ const BlockProducer = () => {
                 <br/>
                 <br/>
                 <p>
-                  The Antelope Tools is an open-source project that allows
+                  Antelope Tools is an open-source project that allows
                   users to visualize the rewards distribution along the EOS
                   network to seek accountability and transparency.{" "}
-                  <a href="https://mainnet.eosio.online/" target="_blank">See the EOS Mainnet Dashboard.</a>
+                  <a href="https://eos.antelope.tools/" target="_blank">See the EOS Mainnet Dashboard.</a>
                 </p>
               </Grid>
             </Grid>
