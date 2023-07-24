@@ -11,7 +11,7 @@
 EOS Costa Rica is part of a company with over three decades of developing innovative technologies. During the 80s, we launched the first BBS (bulletin board service) in the country, a precursor to the internet. Later on, the company shifted to educating new users on using the email and browsing the web! Then, we started offering internet infrastructure, hosting, and development services.
 
 
-In 2013, we began providing infrastructure for public blockchain networks and learned first-hand how blockchains work. Then, in 2018 when the EOSIO protocol was launched, we investigated the advantages of this technology and started learning how to deploy it in the real world. Our presence grew during the genesis of the EOS Mainnet and will continue to be there throughout its growth.
+In 2013, we began providing infrastructure for public blockchain networks and learned first-hand how blockchains work. Then, in 2018 when the EOSIO + Antelope protocol was launched, we investigated the advantages of this technology and started learning how to deploy it in the real world. Our presence grew during the genesis of the EOS Mainnet and will continue to be there throughout its growth.
 
  ## Table of Contents
 

@@ -38,7 +38,7 @@ const BlockProducer = () => {
             <h1>EOS Block Producer</h1>
           </Box>
           <p >
-            We are one of the first companies in Latin America to deploy the EOSIO
+            We are one of the first companies in Latin America to deploy the EOSIO + Antelope
             protocol. Innovation is in our DNA. We seek new opportunities to leverage this technology for 
             enterprise use to solve real-world problems. Learn more about how we help to develop the
             EOSIO blockchain ecosystem worldwide.
@@ -54,7 +54,7 @@ const BlockProducer = () => {
               <h1>EOS Block Producer</h1>
             </Box>
             <p>
-              We are one of the first companies in Latin America to deploy the EOSIO
+              We are one of the first companies in Latin America to deploy the EOSIO + Antelope
               protocol.
             <br/>
             <br/>
@@ -94,7 +94,7 @@ const BlockProducer = () => {
                 <p className="body1">
                   In 2013, we began providing infrastructure for public blockchain
                   networks and learned first-hand how blockchains work. Then, in
-                  2018 when EOSIO was launched, we investigated the advantages of
+                  2018 when EOSIO + Antelope was launched, we investigated the advantages of
                   this technology and started learning how to deploy it in the real
                   world. We were there during the genesis of the EOS Mainnet and
                   will continue to be there throughout its growth.
@@ -144,7 +144,7 @@ const BlockProducer = () => {
               </Box>
               <p>
                 We recognize and acknowledge everyone’s unique talents and seek
-                to build loyalty by empowering the EOSIO community.
+                to build loyalty by empowering the EOSIO + Antelope community.
               </p>
               <br/>
             </Grid>
@@ -353,10 +353,7 @@ const BlockProducer = () => {
                   >
                     “Coding for Change”
                   </a>{" "}
-                  challenge by{" "}
-                  <a href="https://block.one/" target="_blank">
-                    block.one.
-                  </a>{" "}
+                  challenge.
                   <a href=" https://lifebank.io/" target="_blank">
                   Find out more about Lifebank.
                   </a>
@@ -533,7 +530,7 @@ const BlockProducer = () => {
                   We focus on building strong relationships with strategic
                   partners and the enterprise sector. We constantly seek new
                   business opportunities and strive to educate executives in both
-                  the public and private sectors about the EOSIO protocol and
+                  the public and private sectors about the EOSIO + Antelope protocol and
                   blockchain technology.
                 </p>
               </Grid>
@@ -556,7 +553,7 @@ const BlockProducer = () => {
                 <p>
                   We develop and support open- source projects such as EOS Rate,
                   LACChain EOSIO, Lifebank, Antelope Tools, and many more that strive
-                  to push the EOSIO ecosystem forward. These projects are built by
+                  to push the EOSIO + Antelope ecosystem forward. These projects are built by
                   talented developers and professionals that believe in the
                   benefits of the network.
                 </p>
@@ -566,7 +563,7 @@ const BlockProducer = () => {
                   <h4>Strong community building</h4>
                 </Box>
                 <p>
-                  We are part of local and global ecosystems to promote EOSIO
+                  We are part of local and global ecosystems to promote EOSIO + Antelope
                   adoption. We attend events such as the EOS Conferences, events
                   by Block.one, and take an active part in the community’s digital
                   conversations.
