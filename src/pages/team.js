@@ -24,8 +24,8 @@ const ManagementTeam = [
     name: "Rodrigo Fernández",
     position: "Founder, Chairman & Chief Strategist",
     bio: "I believe in fostering truth and transparency to pursue individual freedom.",
-    linkedIn: "https://www.linkedin.com/in/rodrigo-fernandez-57b8b72a/",
-    twitter: "https://twitter.com/rjfescazu",
+    linkedIn: "",
+    twitter: "",
     color: "#ffffff",
   },
   {
@@ -50,15 +50,6 @@ const ManagementTeam = [
 
 const MarketingSalesTeam = [
   {
-    img: "img/team/Johanna.png",
-    name: "Johanna Yee",
-    position: "Art Director & Brand Manager",
-    bio: "I believe that creativity and innovation are indispensable to propose efficient and disruptive solutions.",
-    linkedIn: "https://www.linkedin.com/in/johanna-yee-bonilla-abab2017a/",
-    twitter: "",
-    color: "#f8f8f8",
-  },
-  {
     img: "img/team/LuisDiego.png",
     name: "Luis Diego Rojas",
     position: "Communications and Content Strategist",
@@ -66,16 +57,7 @@ const MarketingSalesTeam = [
     linkedIn: "https://www.linkedin.com/in/ldrojas/",
     twitter: "https://twitter.com/ldrojas",
     color: "#ffffff",
-  },
-  {
-    img: "img/team/Leo.png",
-    name: "Leonardo Calderón",
-    position: "Business Analyst & Op",
-    bio: " I'm a multitasking professional trying to tackle daily challenges while enjoying Web3.",
-    linkedIn: "https://www.linkedin.com/in/calderonurenas/",
-    twitter: "https://twitter.com/maemultichain",
-    color: "#f8f8f8",
-  },
+  }
 ];
 
 const DevelopTeam = [
@@ -142,16 +124,7 @@ const DevelopTeam = [
     linkedIn: "https://www.linkedin.com/in/terencio-gomez-14784ba3/",
     twitter: "",
     color: "#ffffff",
-  },
-  {
-    img: "img/team/Warner.png",
-    name: "Warner Hurtado",
-    position: "Jr Software Developer",
-    bio: "Open to learning new technologies and willing to take on new challenges.",
-    linkedIn: "https://www.linkedin.com/in/warner-hurtado/",
-    twitter: "https://twitter.com/WarnerLaguna",
-    color: "#f8f8f8",
-  },
+  }
 ];
 
 const InfrastructureNetworkingTeam = [
