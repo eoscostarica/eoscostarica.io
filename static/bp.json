@@ -5,15 +5,7 @@
 		"code_of_conduct": "https://edenia.com/block-producer/#code-of-conduct",
 		"ownership_disclosure": "https://edenia.com/block-producer/#ownership-disclosure",
 		"email": "bp@edenia.com",
-		"github_user": [
-			"edgarithm",
-			"xavier506",
-			"murillojorge",
-			"tetogomez",
-			"kuronosec",
-			"leisterfrancisco",
-			"AngeloCG97"
-		],
+		"github_user": "eoscostarica",
 		"chain_resources": "https://archive.edenia.cloud",
 		"other_resources": [
 			"https://eos.antelope.tools",
